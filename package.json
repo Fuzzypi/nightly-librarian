@@ -1,0 +1,22 @@
+{
+  "name": "nightly-librarian",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "nightly:fetch": "bun run src/index.ts fetch",
+    "nightly:score": "bun run src/index.ts score",
+    "nightly:draft": "bun run src/index.ts draft",
+    "nightly:verify": "bun run src/index.ts verify",
+    "nightly:run": "bun run src/index.ts run",
+    "nightly:inspect": "bun run src/index.ts inspect",
+    "test": "bun test",
+    "typecheck": "bun run tsc --noEmit"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/bun": "^1.2.0"
+  }
+}
