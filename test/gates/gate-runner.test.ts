@@ -92,4 +92,91 @@ describe("gate runner integration", () => {
     const vendorGate = report.results.find(r => r.gateId === "VG-VENDOR");
     expect(vendorGate?.passed).toBe(false);
   });
+
+  test("VG-WORTH: golden brief passes (all signals have BUILDER IMPACT)", () => {
+    const brief = readFileSync(join(import.meta.dir, "..", "fixtures", "brief-clean.md"), "utf-8");
+    const selection = makeSelection(scoredFixture);
+    const report = runGates(brief, selection, editorial, {});
+    const gate = report.results.find(r => r.gateId === "VG-WORTH");
+    expect(gate?.passed).toBe(true);
+  });
+
+  test("VG-WORTH: signal missing BUILDER IMPACT fails even if other signals have two", () => {
+    let brief = readFileSync(join(import.meta.dir, "..", "fixtures", "brief-clean.md"), "utf-8");
+    brief = brief.replace(
+      "BUILDER IMPACT: New model capabilities may unlock new solo-dev workflows or products.",
+      "This signal has no impact section."
+    );
+    const selection = makeSelection(scoredFixture);
+    const report = runGates(brief, selection, editorial, {});
+    const gate = report.results.find(r => r.gateId === "VG-WORTH");
+    expect(gate?.passed).toBe(false);
+    expect(gate?.violations.some(v => v.includes("GPT-5"))).toBe(true);
+  });
+
+  test("VG-WORTH: multiple missing BUILDER IMPACT sections produce per-signal violations", () => {
+    let brief = readFileSync(join(import.meta.dir, "..", "fixtures", "brief-clean.md"), "utf-8");
+    brief = brief
+      .replace(
+        "BUILDER IMPACT: Directly affects tools solo developers use daily. Highly actionable — concrete steps available.",
+        "No impact here."
+      )
+      .replace(
+        "BUILDER IMPACT: New model capabilities may unlock new solo-dev workflows or products.",
+        "No impact here either."
+      );
+    const selection = makeSelection(scoredFixture);
+    const report = runGates(brief, selection, editorial, {});
+    const gate = report.results.find(r => r.gateId === "VG-WORTH");
+    expect(gate?.passed).toBe(false);
+    expect(gate?.violations.length).toBeGreaterThanOrEqual(2);
+  });
+
+  test("VG-WORTH: empty signals section reports no signals found", () => {
+    const brief = readFileSync(join(import.meta.dir, "..", "fixtures", "brief-clean.md"), "utf-8")
+      .replace(
+        /─── THE 5 SIGNALS ─+\n[\s\S]*?(?=─── TRY THIS)/,
+        "─── THE 5 SIGNALS ─────────────────────────\n\n"
+      );
+    const selection = makeSelection(scoredFixture);
+    const report = runGates(brief, selection, editorial, {});
+    const gate = report.results.find(r => r.gateId === "VG-WORTH");
+    expect(gate?.passed).toBe(false);
+    expect(gate?.violations[0]).toContain("No signals found");
+  });
+
+  test("VG-SPONSOR-EXPLAIN: 'we partnered with' triggers violation", () => {
+    const brief = readFileSync(join(import.meta.dir, "..", "fixtures", "brief-clean.md"), "utf-8")
+      .replace("A day of tooling updates.", "We partnered with this vendor for today's coverage.");
+    const selection = makeSelection(scoredFixture);
+    const report = runGates(brief, selection, editorial, {});
+    const gate = report.results.find(r => r.gateId === "VG-SPONSOR-EXPLAIN");
+    expect(gate?.passed).toBe(false);
+  });
+
+  test("VG-SPONSOR-EXPLAIN: 'we chose' triggers violation", () => {
+    const brief = readFileSync(join(import.meta.dir, "..", "fixtures", "brief-clean.md"), "utf-8")
+      .replace("A day of tooling updates.", "We chose this sponsor because of their product.");
+    const selection = makeSelection(scoredFixture);
+    const report = runGates(brief, selection, editorial, {});
+    const gate = report.results.find(r => r.gateId === "VG-SPONSOR-EXPLAIN");
+    expect(gate?.passed).toBe(false);
+  });
+
+  test("VG-SPONSOR-EXPLAIN: 'because they' triggers violation", () => {
+    const brief = readFileSync(join(import.meta.dir, "..", "fixtures", "brief-clean.md"), "utf-8")
+      .replace("A day of tooling updates.", "We feature them because they build great tools.");
+    const selection = makeSelection(scoredFixture);
+    const report = runGates(brief, selection, editorial, {});
+    const gate = report.results.find(r => r.gateId === "VG-SPONSOR-EXPLAIN");
+    expect(gate?.passed).toBe(false);
+  });
+
+  test("VG-SPONSOR-EXPLAIN: clean brief with no sponsor language passes", () => {
+    const brief = readFileSync(join(import.meta.dir, "..", "fixtures", "brief-clean.md"), "utf-8");
+    const selection = makeSelection(scoredFixture);
+    const report = runGates(brief, selection, editorial, {});
+    const gate = report.results.find(r => r.gateId === "VG-SPONSOR-EXPLAIN");
+    expect(gate?.passed).toBe(true);
+  });
 });

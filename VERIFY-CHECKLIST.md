@@ -6,30 +6,35 @@ This checklist must pass before any issue is published. An agent or human review
 
 ## BLOCKING GATES (all must pass)
 
-### Source Integrity
+### Signal Structure
 
-- [ ] **VG-SOURCE**: Every signal (1–5) has at least one source reference with a valid URL
-- [ ] **VG-STALE**: No source is older than 28 hours unless explicitly marked `[CONTEXT]`
-- [ ] **VG-DEDUP**: No two signals refer to the same underlying event or announcement
-
-### Editorial Contract
-
-- [ ] **VG-IMPACT**: Every signal has a `BUILDER IMPACT:` section with ≥10 words
-- [ ] **VG-ENTERPRISE**: No signal is enterprise-only without documented solo-builder relevance
-- [ ] **VG-POLITICS**: No political or culture-war framing detected
-- [ ] **VG-SUPERLATIVE**: No unsupported superlatives ("best," "revolutionary," "game-changing," "unprecedented") — each instance must have adjacent evidence
+- [ ] **VG-COUNT**: Exactly 5 signals present
+- [ ] **VG-SOURCE**: Every signal (1–5) has at least one `Source:` URL
+- [ ] **VG-WORTH**: Every signal has a `BUILDER IMPACT:` section
+- [ ] **VG-RELEVANCE**: Every `BUILDER IMPACT:` section has ≥10 words
+- [ ] **VG-EVIDENCE**: Every signal has an `Evidence:` level (not "rumor")
 
 ### Sponsorship
 
-- [ ] **VG-SPONSOR**: Sponsor text appears ONLY in the allowed slot (first line after header)
-- [ ] **VG-SPONSOR**: No sponsored content, affiliate links, or paid placement inside editorial body
+- [ ] **VG-SPONSOR-POS**: Sponsor text appears ONLY in the allowed slot (first line after header)
+- [ ] **VG-SPONSOR-EXPLAIN**: No unexplained sponsor language in editorial body
+- [ ] **VG-AFFILIATE**: No affiliate links, discount codes, or paid placement language
 
-### Format
+### Tone & Framing
 
-- [ ] **VG-COUNT**: Exactly 5 signals present
-- [ ] **VG-FORMAT**: All required sections present: header, sponsor line, The 5 Signals, Try This, Ignore This, Librarian's Verdict, footer
-- [ ] **VG-TRY-CONCRETE**: "Try This" names a specific tool/API/technique AND includes a time estimate
-- [ ] **VG-IGNORE-WHY**: "Ignore This" includes a causal explanation (≥15 words explaining why it's safe to skip)
+- [ ] **VG-TRY-NEXT**: "Try This" section uses neutral framing (no "must-have," "you need this")
+- [ ] **VG-SUPERLATIVE**: No unsupported superlatives ("best," "revolutionary," "game-changing")
+- [ ] **VG-HYPE**: No hype language ("changes everything," "paradigm shift")
+- [ ] **VG-CULTURE**: No culture-war framing
+- [ ] **VG-PARTISAN**: No partisan political framing
+- [ ] **VG-PANIC**: No moral-panic framing ("threat to humanity," "doomsday")
+- [ ] **VG-VENDOR**: No vendor cheerleading ("thrilled," "excited to announce")
+
+### Cross-Signal Checks
+
+- [ ] **VG-DEDUP**: No two signals refer to the same event (entity overlap, title similarity, or same source+category)
+- [ ] **VG-STALE**: No source is older than 28 hours
+- [ ] **VG-NO-IGNORE**: Brief does not contain an "IGNORE THIS" pile section
 
 ---
 
@@ -67,7 +72,7 @@ This checklist must pass before any issue is published. An agent or human review
 Date:          ____-__-__
 Issue:         #___
 Reviewer:      [human | agent]
-Blocking:      __ / 13 passed
+Blocking:      __ / 18 passed
 Advisory:      __ / 5 passed
 Cross-issue:   __ / 3 passed
 Manual:        __ / 5 passed (MVP only)
