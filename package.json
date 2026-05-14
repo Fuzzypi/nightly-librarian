@@ -5,7 +5,10 @@
   "description": "Nightly intelligence pipeline for solo developers",
   "scripts": {
     "fetch": "node src/index.js fetch",
-    "triage": "node src/index.js triage",
+    "triage:claim": "node src/index.js triage:claim",
+    "triage:complete": "node src/index.js triage:complete",
+    "triage:fail": "node src/index.js triage:fail",
+    "triage:latest": "node src/index.js triage:latest",
     "migrate": "node scripts/migrate.js",
     "test-source": "node scripts/test-source.js",
     "test-all": "node scripts/test-all.js"
