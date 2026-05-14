@@ -1,22 +1,19 @@
 {
   "name": "nightly-librarian",
-  "version": "1.0.0",
-  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nightly intelligence pipeline for solo developers",
   "scripts": {
-    "nightly:fetch": "bun run src/index.ts fetch",
-    "nightly:score": "bun run src/index.ts score",
-    "nightly:draft": "bun run src/index.ts draft",
-    "nightly:verify": "bun run src/index.ts verify",
-    "nightly:run": "bun run src/index.ts run",
-    "nightly:inspect": "bun run src/index.ts inspect",
-    "test": "bun test",
-    "typecheck": "bun run tsc --noEmit"
+    "fetch": "node src/index.js fetch",
+    "triage": "node src/index.js triage",
+    "migrate": "node scripts/migrate.js",
+    "test-source": "node scripts/test-source.js",
+    "test-all": "node scripts/test-all.js"
   },
   "dependencies": {
-    "fast-xml-parser": "^5.0.1"
-  },
-  "devDependencies": {
-    "typescript": "^5.7.0",
-    "@types/bun": "^1.2.0"
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.7",
+    "pg": "^8.13.1",
+    "rss-parser": "^3.13.0"
   }
 }
