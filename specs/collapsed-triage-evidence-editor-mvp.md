@@ -150,7 +150,7 @@ Architecture decision note required:
 
 Required runtime path:
 
-`raw_items` rows with `processed_at IS NULL` and `published_at/discovered_at >= now() - interval '24 hours'` must be reachable through the new nightly command.
+`raw_items` rows with `processed_at IS NULL` and `published_at/discovered_at >= run_started_at - interval '24 hours'` must be reachable through the new nightly command. The 24-hour predicate defines the run's initial eligibility snapshot, not a reason to drop unprocessed rows after they have been claimed for that run.
 
 Required entrypoint:
 
@@ -170,6 +170,8 @@ Data enters:
 
 Data transforms:
 
+- The job creates a `nightly_runs` row first, then claims eligible `raw_items` before calling Claude.
+- Claimed rows are selected with row-locking semantics such as `FOR UPDATE SKIP LOCKED`, or an equivalent compare-and-set claim update, so concurrent runs cannot process the same rows.
 - Batch packing sanitizes title/content/source metadata.
 - Claude returns structured scored candidate decisions and memo sections.
 - Local code validates and maps Claude output to DB rows.
@@ -185,9 +187,10 @@ Data persists:
 Required proof:
 
 - Unit: prompt schema, response parser, row mapping.
-- Integration: transaction inserts candidates and nightly run, then marks raw items processed.
+- Integration: transaction claims raw items, inserts candidates and nightly run, then marks raw items processed.
 - Negative: malformed Claude output is rejected and leaves raw items unprocessed.
-- Idempotency: rerun does not duplicate candidates for already processed raw items.
+- Idempotency/concurrency: rerun does not duplicate candidates for already processed raw items, and concurrent runs cannot claim the same unprocessed rows.
+- Backlog drain: a run with more eligible rows than `TRIAGE_BATCH_LIMIT` processes them in bounded pages or records the unprocessed claimed rows as deferred for a later continuation.
 - Smoke: real command works with at least fixture/test rows.
 
 ### Usage Proof
@@ -197,6 +200,7 @@ Minimum READY evidence:
 - Command output showing selected raw item count, candidate insert count, run id, and processed item count.
 - SQL verification showing matching `nightly_runs` and `candidates` rows.
 - SQL verification showing processed raw item ids now have `processed_at`.
+- SQL verification showing no eligible claimed rows were silently abandoned because of the batch page limit.
 - Test output from `bun run typecheck` and `bun test`.
 
 ### No-Orphan-Code Check
@@ -220,6 +224,9 @@ If the deployed schema already has these columns, use them. If not, add the narr
 
 - `processed_at timestamptz null`
 - `processed_run_id uuid null references nightly_runs(id)`
+- `processing_run_id uuid null references nightly_runs(id)`
+- `processing_started_at timestamptz null`
+- `processing_status text null`
 - Optional `processing_error text null`
 
 `candidates` minimum fields:
@@ -250,6 +257,8 @@ If the deployed schema already has these columns, use them. If not, add the narr
 - `status text`
 - `raw_item_count integer`
 - `candidate_count integer`
+- `claimed_item_count integer`
+- `deferred_item_count integer`
 - `memo_markdown text`
 - `model text`
 - `prompt_version text`
@@ -297,6 +306,7 @@ Validation rules:
 - `builder_impact` is required when `worth_mentioning` is true.
 - Unknown categories or evidence levels fail validation.
 - Missing items fail the run unless explicitly listed as rejected candidates.
+- Claude responses are validated only against the rows in the current claimed page. The run-level code owns page iteration and must not ask Claude to reason about rows omitted because of page size.
 
 ## Implementation Plan
 
@@ -327,26 +337,36 @@ Deliverable:
 
 ### Phase 2: Add DB Query + Transaction
 
-1. Query candidate raw rows:
-   - unprocessed
-   - discovered or published in last 24 hours
+1. Insert a `nightly_runs` row with `status='running'` and capture `run_started_at`.
+2. Claim the run's eligible raw rows before any Claude call:
+   - unprocessed deferred rows from prior runs first, regardless of age
+   - then unprocessed fresh rows discovered or published in the 24 hours before `run_started_at`
+   - not currently claimed by another active run, or claimed by a stale failed/abandoned run older than the configured recovery window
    - has non-empty title/content/url
    - deterministic order by source tier, published time, discovered time
-   - limit by `TRIAGE_BATCH_LIMIT`
-2. Insert a `nightly_runs` row with `status='running'`.
-3. Call Claude.
-4. In one transaction:
-   - insert candidate rows
-   - store memo and usage metadata on `nightly_runs`
-   - mark raw items `processed_at` and `processed_run_id`
-   - set run `status='completed'`
-5. On failure:
+   - use `FOR UPDATE SKIP LOCKED` or an equivalent atomic claim update
+   - set `processing_run_id`, `processing_started_at`, and `processing_status='claimed'`
+3. Process claimed rows in pages where `TRIAGE_BATCH_LIMIT` is the page size, not the maximum run size.
+4. For each claimed page:
+   - call Claude only with that page
+   - validate the structured response against that page's raw item ids
+   - in one transaction, insert candidate rows and mark that page's raw items `processed_at`, `processed_run_id`, and `processing_status='processed'`
+5. After all claimed pages are processed, store memo and aggregate usage metadata on `nightly_runs`, set final counts, and set run `status='completed'`.
+6. If max runtime or API budget prevents finishing all claimed pages:
+   - keep unfinished claimed rows with `processing_status='deferred'`
+   - increment `nightly_runs.deferred_item_count`
+   - make the next run pick up deferred rows before claiming fresh rows
+   - do not let deferred rows age out because they are older than 24 hours
+7. On failure:
    - set run `status='failed'` if a run row exists
-   - do not mark raw items processed
+   - do not mark unfinished raw items processed
+   - release claims or mark them stale-recoverable so a later run can retry them
 
 Deliverable:
 
 - Integration test with seeded raw rows.
+- Concurrency/idempotency test proving two simultaneous runs cannot process the same raw item.
+- Backlog test proving more eligible rows than `TRIAGE_BATCH_LIMIT` are drained in multiple pages or explicitly deferred.
 
 ### Phase 3: Wire CLI + Cron Path
 
@@ -383,9 +403,11 @@ Deliverable:
 |---|---|---|---|---|
 | Claude editorial pass | `src/pipeline/triage-editor.*` or equivalent | Nightly triage command | command logs model, run id, candidate count | mocked Claude schema tests |
 | Raw item query | DB repository/module | Real `raw_items` table | SQL shows unprocessed rows selected | integration seeded rows |
+| Raw item claim | DB transaction with row locks or atomic claim update | Real `raw_items` processing fields | SQL shows claimed rows have one `processing_run_id` before Claude call | concurrency/idempotency test |
 | Candidate persistence | DB transaction | Real `candidates` table | SQL shows inserted scored candidates | transaction test |
 | Memo persistence | DB transaction | Real `nightly_runs` table | SQL shows `memo_markdown` on completed run | integration assertion |
 | Processed marking | DB transaction | Real `raw_items` table | SQL shows `processed_at` and `processed_run_id` | idempotency test |
+| Backlog paging | Claimed-row page loop | `TRIAGE_BATCH_LIMIT` as page size only | SQL shows all claimed rows processed or deferred | over-limit backlog test |
 | CLI script | `src/index.*`, `package.json` | Cron/manual runtime | `bun run nightly:triage` succeeds | smoke command |
 
 ## Verify Gate
@@ -415,6 +437,11 @@ select count(*)
 from raw_items
 where processed_run_id = '<latest_run_id>'
   and processed_at is not null;
+
+select processing_status, count(*)
+from raw_items
+where processing_run_id = '<latest_run_id>'
+group by processing_status;
 ```
 
 PASS criteria:
@@ -426,19 +453,24 @@ PASS criteria:
 - Candidate count matches persisted candidate rows.
 - Processed raw item count matches the intended input rows.
 - Re-running immediately does not duplicate candidate rows.
+- A seeded over-limit run proves `TRIAGE_BATCH_LIMIT` pages through all eligible rows or records unfinished rows as deferred.
+- A concurrent-run test proves two runs cannot claim or process the same raw item.
 
 FAIL criteria:
 
 - Claude output can be malformed without failing the run.
 - Candidates are inserted but raw items are not marked processed.
 - Raw items are marked processed before candidate/memo persistence succeeds.
+- Raw items are sent to Claude before they are claimed/locked for the current run.
+- Rows omitted by `TRIAGE_BATCH_LIMIT` can age out of future runs without being processed or explicitly deferred.
 - The memo exists only as a file and not in `nightly_runs`.
 - The command is not reachable through a package script or cron-compatible entrypoint.
 
 Forbidden shortcuts:
 
 - Do not mark all 24h items processed if only a subset was sent to Claude.
-- Do not silently truncate Claude input without recording omitted item count.
+- Do not treat `TRIAGE_BATCH_LIMIT` as a total run cap; it is a page size. If the run stops early, record deferred rows and keep them eligible.
+- Do not silently truncate Claude input without processing or deferring omitted rows.
 - Do not write candidates from freeform markdown parsing.
 - Do not hard-code a Claude model; require config with a sane default only if the project already uses one.
 
@@ -460,7 +492,7 @@ Build one DB-backed nightly job that reads unprocessed `raw_items` from the last
 
 Before editing, reconcile repo reality. The local checkout currently has a Bun/TypeScript archive pipeline, but the Second Brain says the deployed VPS at `/opt/nightly-librarian/` has PostgreSQL-backed fetch code and tables. Inspect the real schema/code and work on the actual runtime path. Do not create an archive-only parallel path.
 
-Use Anthropic structured outputs or an equivalent strict JSON schema. Validate the response locally before DB writes. Wrap candidate inserts, memo persistence, and raw item processed marking in one transaction. On failure, raw items remain unprocessed.
+Use Anthropic structured outputs or an equivalent strict JSON schema. Validate the response locally before DB writes. Claim raw items before calling Claude, using `FOR UPDATE SKIP LOCKED` or an equivalent atomic claim update so concurrent runs cannot process the same rows. Treat `TRIAGE_BATCH_LIMIT` as page size, not a total run cap: drain all claimed pages, or mark unfinished claimed rows deferred and keep them eligible for continuation. Wrap candidate inserts, memo persistence, and raw item processed marking in transactions. On failure, unfinished raw items must remain unprocessed and retryable.
 
 Likely files/modules:
 
@@ -486,6 +518,7 @@ Run and report:
 - `bun run nightly:triage -- --dry-run`
 - `bun run nightly:triage -- --limit 5`
 - SQL evidence for latest `nightly_runs`, matching `candidates`, and processed `raw_items`.
+- SQL evidence for claimed/deferred raw item statuses and an over-limit paging/concurrency proof.
 
 READY is forbidden until the Verify Gate passes legitimately.
 
@@ -495,7 +528,8 @@ READY is forbidden until the Verify Gate passes legitimately.
 - Actual table schemas are not present in this checkout.
 - Claude API key/model may exist only on the VPS.
 - Existing source quality issues may produce thin memos until fetch gaps are fixed.
-- Large raw item batches can exceed context or cost limits; MVP needs a conservative batch limit and omitted-count logging.
+- Large raw item batches can exceed context or cost limits; MVP needs a conservative page size and deferred-count logging.
+- Row claims need stale-run recovery; otherwise a crashed run can strand `raw_items` in `processing_status='claimed'`.
 
 ## Source Links
 
