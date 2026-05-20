@@ -1,12 +1,5 @@
 const logger = require('./utils/logger');
-
-const fetchers = {
-  rss: require('./fetchers/rss'),
-  github_release: require('./fetchers/github-release'),
-  hn_api: require('./fetchers/hn-api'),
-  reddit_json: require('./fetchers/reddit-json'),
-  scrape: require('./fetchers/scraper'),
-};
+const fetchers = require('./fetchers');
 
 const INSERT_RAW_ITEM = `
   INSERT INTO raw_items (source_id, external_id, title, url, content, raw_data, published_at)

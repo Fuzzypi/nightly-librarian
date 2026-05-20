@@ -226,7 +226,7 @@ async function completeAgentTriage(pool, argv = []) {
   try {
     await client.query('BEGIN');
     const claimed = await client.query(
-      `SELECT id, source_id, title, url
+      `SELECT id, source_id, title, url, content
        FROM raw_items
        WHERE processed_run_id = $1
          AND processed_at IS NULL
@@ -289,7 +289,7 @@ async function completeAgentTriage(pool, argv = []) {
       if (candidate.verdict === 'publish_public' || candidate.verdict === 'publish_private') published++;
     }
 
-    const privateMemo = stringOrFallback(payload.private_memo, buildPrivateMemo(runId, scored, rejected, []));
+    const privateMemo = stringOrFallback(payload.private_memo, buildPrivateMemo(runId, scored, rejected, [], claimed.rows));
     await client.query(
       `UPDATE raw_items
        SET processed = true,
@@ -356,6 +356,85 @@ async function failAgentTriage(pool, argv = []) {
   return { run_id: options.runId, status: 'failed', claims_released: true };
 }
 
+async function reportAgentTriage(pool, argv = []) {
+  const options = parseArgs(argv);
+  if (!options.runId) throw new Error('--run-id is required');
+
+  const runResult = await pool.query(
+    `SELECT id, started_at, completed_at, private_memo, items_triaged, items_scored, items_rejected, items_published
+     FROM nightly_runs
+     WHERE id = $1`,
+    [options.runId]
+  );
+  const run = runResult.rows[0];
+  if (!run) throw new Error(`Run not found: ${options.runId}`);
+
+  const candidateResult = await pool.query(
+    `SELECT c.raw_item_id, c.title, c.summary, c.verdict, c.verdict_reason,
+            c.score_worth_mentioning, c.score_decision_impact,
+            ri.source_id, ri.url, ri.content, ri.fetched_at, ri.published_at
+     FROM candidates c
+     JOIN raw_items ri ON ri.id = c.raw_item_id
+     WHERE c.run_id = $1
+     ORDER BY ri.fetched_at ASC, ri.id ASC`,
+    [options.runId]
+  );
+
+  const rows = candidateResult.rows;
+  const worthAttention = rows
+    .filter((row) => row.verdict === 'publish_private' || row.verdict === 'publish_public' || row.verdict === 'monitor')
+    .sort((a, b) => (b.score_worth_mentioning - a.score_worth_mentioning) || (b.score_decision_impact - a.score_decision_impact))
+    .slice(0, 12);
+
+  const lines = [];
+  lines.push('# Nightly Librarian — Newsletter draft');
+  lines.push('');
+  lines.push(`Run: ${run.id}`);
+  if (run.started_at) lines.push(`Started: ${new Date(run.started_at).toISOString()}`);
+  if (run.completed_at) lines.push(`Completed: ${new Date(run.completed_at).toISOString()}`);
+  lines.push('');
+
+  lines.push('## Worth attention');
+  lines.push('');
+  if (worthAttention.length === 0) {
+    lines.push('- (No items cleared the bar.)');
+  } else {
+    for (const item of worthAttention) {
+      const summary = (item.summary || '').trim() || textSnippetFromHtml(item.content || '', 280) || '(No summary available.)';
+      const url = item.url ? `\n  ${item.url}` : '';
+      lines.push(`- **${item.title || '(untitled)'}**${url}\n  ${summary}`);
+    }
+  }
+  lines.push('');
+
+  lines.push('## Full digest');
+  lines.push('');
+  for (const item of rows) {
+    const tag = item.verdict === 'publish_private' || item.verdict === 'publish_public'
+      ? 'P'
+      : item.verdict === 'monitor'
+        ? 'M'
+        : 'R';
+    const url = item.url ? ` — ${item.url}` : '';
+    const summary = (item.summary || '').trim() || textSnippetFromHtml(item.content || '', 140) || (item.verdict_reason || '').trim();
+    const suffix = summary ? ` — ${summary}` : '';
+    const source = item.source_id ? `[${item.source_id}] ` : '';
+    lines.push(`- [${tag}] ${source}${item.title || '(untitled)'}${url}${suffix}`);
+  }
+
+  const markdown = lines.join('\n').trim() + '\n';
+
+  return {
+    run_id: run.id,
+    status: 'reported',
+    items_triaged: run.items_triaged,
+    items_scored: run.items_scored,
+    items_rejected: run.items_rejected,
+    items_published: run.items_published,
+    markdown,
+  };
+}
+
 async function latestMemo(pool) {
   const result = await pool.query(
     `SELECT id, started_at, completed_at, private_memo
@@ -370,11 +449,23 @@ async function latestMemo(pool) {
 function completionContract(runId, items) {
   return {
     run_id: runId,
-    private_memo: 'Markdown memo for the morning reader. Include only items worth attention; no ignore pile.',
+    private_memo:
+      [
+        'Markdown memo for the morning reader.',
+        '',
+        'Required sections:',
+        '1) Worth attention (curated): 5–12 items max.',
+        '   - For each included item: 2–4 sentence plain-English summary of what happened, why it matters, and what to do (if anything).',
+        '   - Prefer decision-changing items (security, pricing, API changes, workflow leverage).',
+        '2) Full digest: one line per claimed item with verdict tag ([P]/[M]/[R]), link, and a <=140 char summary.',
+        '   - If you did not open/read the link, say so implicitly by keeping the summary title-based and mark evidence_level accordingly.',
+        'Also include fetch/source failures at the top if any were observed.',
+        'No hype, no cheerleading, no padding.',
+      ].join('\n'),
     results: items.map((item) => ({
       raw_item_id: item.id,
       title: item.title || '(untitled)',
-      summary: '',
+      summary: extractSummarySeed(item),
       raw_claim: '',
       category: 'builder_report',
       evidence_level: 'early_signal',
@@ -405,7 +496,8 @@ function editorialRules() {
     'Filter aggressively. No hype, vendor cheerleading, affiliate framing, moral panic, culture-war bait, generic trend filler, or "what to try next" padding.',
     'Prefer evidence that changes a practical decision: API/platform change, pricing/cost shift, credible security risk, reproducible builder report, open source release with real leverage, or workflow change for agentic/dev tooling.',
     'Reject duplicate, thin, speculative, purely promotional, or low-relevance items.',
-    'The private memo should be compact markdown and should include only items that deserve attention. Do not include an ignore pile.',
+    'Write in newsletter format. For curated items, summarize what happened + why it matters + what to do (if anything) in plain English.',
+    'The private memo should be useful even on quiet days: include (1) a short curated "Worth attention" list and (2) a "Full digest" section that lists every claimed item with a verdict label, link, and a short summary (one line each). Include any fetch/source failures at the top.',
   ];
 }
 
@@ -420,6 +512,30 @@ function formatRawItem(item) {
     fetched_at: item.fetched_at,
     published_at: item.published_at,
   };
+}
+
+function extractSummarySeed(item) {
+  const content = typeof item.content === 'string' ? item.content : '';
+  const snippet = textSnippetFromHtml(content, 240);
+  return snippet || '';
+}
+
+function textSnippetFromHtml(html, maxLength) {
+  if (!html) return '';
+  const stripped = html
+    .replace(/<!--([\s\S]*?)-->/g, ' ')
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (!stripped) return '';
+  return stripped.length > maxLength ? `${stripped.slice(0, maxLength).trim()}…` : stripped;
 }
 
 function normalizeCandidate(raw) {
@@ -460,10 +576,25 @@ function defaultReject(item, reason) {
   });
 }
 
-function buildPrivateMemo(runId, scored, rejected, memoParts) {
+function buildPrivateMemo(runId, scored, rejected, memoParts, digestItems = []) {
   const body = memoParts.length > 0
     ? memoParts.join('\n\n---\n\n')
     : 'No items cleared the worth-mentioning bar.';
+
+  const digestLines = Array.isArray(digestItems) && digestItems.length
+    ? [
+        '## Full digest',
+        '',
+        ...digestItems.map((item) => {
+          const source = item.source_id ? `[${item.source_id}] ` : '';
+          const title = item.title || '(untitled)';
+          const url = item.url ? ` — ${item.url}` : '';
+          const snippetText = item.content ? textSnippetFromHtml(item.content, 140) : '';
+          const snippet = snippetText ? ` — ${snippetText}` : '';
+          return `- ${source}${title}${url}${snippet}`;
+        }),
+      ]
+    : [];
 
   return [
     '# Nightly Librarian private memo',
@@ -473,6 +604,8 @@ function buildPrivateMemo(runId, scored, rejected, memoParts) {
     `Rejected: ${rejected}`,
     '',
     body,
+    '',
+    ...digestLines,
   ].join('\n');
 }
 
@@ -507,5 +640,12 @@ module.exports = {
   claimForAgent,
   completeAgentTriage,
   failAgentTriage,
+  reportAgentTriage,
   latestMemo,
+  __test: {
+    completionContract,
+    editorialRules,
+    buildPrivateMemo,
+    textSnippetFromHtml,
+  },
 };

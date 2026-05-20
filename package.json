@@ -8,15 +8,19 @@
     "triage:claim": "node src/index.js triage:claim",
     "triage:complete": "node src/index.js triage:complete",
     "triage:fail": "node src/index.js triage:fail",
+    "triage:report": "node src/index.js triage:report",
     "triage:latest": "node src/index.js triage:latest",
     "migrate": "node scripts/migrate.js",
+    "test": "node --test test",
     "test-source": "node scripts/test-source.js",
     "test-all": "node scripts/test-all.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
+    "cloakbrowser": "^0.3.28",
     "dotenv": "^16.4.7",
     "pg": "^8.13.1",
+    "playwright-core": "^1.60.0",
     "rss-parser": "^3.13.0"
   }
 }

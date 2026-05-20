@@ -1,14 +1,7 @@
 require('dotenv').config();
 
 const { createPool } = require('../src/db');
-
-const fetchers = {
-  rss: require('../src/fetchers/rss'),
-  github_release: require('../src/fetchers/github-release'),
-  hn_api: require('../src/fetchers/hn-api'),
-  reddit_json: require('../src/fetchers/reddit-json'),
-  scrape: require('../src/fetchers/scraper'),
-};
+const fetchers = require('../src/fetchers');
 
 async function main() {
   const pool = createPool();

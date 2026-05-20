@@ -1,5 +1,6 @@
 const cheerio = require('cheerio');
 const crypto = require('crypto');
+const { fetchRenderedHtml, resolveBrowserConfig } = require('./cloakbrowser');
 const logger = require('../utils/logger');
 
 function hashId(str) {
@@ -90,17 +91,28 @@ function tryParseDate(str) {
   return isNaN(d.getTime()) ? null : d.toISOString();
 }
 
-async function fetchSource(source) {
+async function fetchSource(source, deps = {}) {
   const ua = process.env.USER_AGENT || 'NightlyLibrarian/0.1';
-  logger.info(source.id, `Scraping: ${source.url}`);
+  const resolveBrowserConfigImpl = deps.resolveBrowserConfig || resolveBrowserConfig;
+  const fetchRenderedHtmlImpl = deps.fetchRenderedHtml || fetchRenderedHtml;
+  const fetchImpl = deps.fetchImpl || fetch;
+  const browserConfig = resolveBrowserConfigImpl(source);
+  let html = '';
 
-  const res = await fetch(source.url, {
-    headers: { 'User-Agent': ua },
-  });
+  if (browserConfig.enabled) {
+    logger.info(source.id, `Rendering with CloakBrowser: ${source.url}`);
+    html = await fetchRenderedHtmlImpl(source, browserConfig);
+  } else {
+    logger.info(source.id, `Scraping: ${source.url}`);
 
-  if (!res.ok) throw new Error(`Scrape ${res.status}: ${res.statusText}`);
+    const res = await fetchImpl(source.url, {
+      headers: { 'User-Agent': ua },
+    });
 
-  const html = await res.text();
+    if (!res.ok) throw new Error(`Scrape ${res.status}: ${res.statusText}`);
+    html = await res.text();
+  }
+
   const $ = cheerio.load(html);
 
   const config = source.extraction_config;
@@ -114,4 +126,12 @@ async function fetchSource(source) {
   return items;
 }
 
-module.exports = { fetchSource };
+module.exports = {
+  fetchSource,
+  __test: {
+    extractGeneric,
+    extractWithConfig,
+    hashId,
+    tryParseDate,
+  },
+};

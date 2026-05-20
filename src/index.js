@@ -6,6 +6,7 @@ const {
   claimForAgent,
   completeAgentTriage,
   failAgentTriage,
+  reportAgentTriage,
   latestMemo,
 } = require('./triage');
 const logger = require('./utils/logger');
@@ -27,6 +28,9 @@ async function main() {
       console.log(JSON.stringify(result, null, 2));
     } else if (command === 'triage:fail') {
       const result = await failAgentTriage(pool, process.argv.slice(3));
+      console.log(JSON.stringify(result, null, 2));
+    } else if (command === 'triage:report') {
+      const result = await reportAgentTriage(pool, process.argv.slice(3));
       console.log(JSON.stringify(result, null, 2));
     } else if (command === 'triage:latest') {
       const result = await latestMemo(pool);
