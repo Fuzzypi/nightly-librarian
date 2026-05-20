@@ -8,6 +8,7 @@ Authorized work in this repo:
 
 - docs for strategy, architecture, redundancy, operations, and content policy
 - safe local verification
+- upstream digest import/normalization
 - social draft generation contracts and non-posting local generators
 - static archive and landing-page preparation
 - approval-gate design

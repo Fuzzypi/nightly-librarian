@@ -12,8 +12,11 @@
 
 ```bash
 npm run verify
+npm run digest:import -- --date YYYY-MM-DD --source path/to/upstream.json --dry-run
 npm run social:generate -- --date YYYY-MM-DD --dry-run
 ```
+
+`digest:import` reads one explicit local upstream JSON artifact and normalizes it into `artifacts/digests/YYYY-MM-DD.json`. It does not discover production paths, connect to databases, read credentials, or call the network.
 
 `social:generate` reads a completed local digest artifact and writes draft artifacts under `dist/`. It does not post, create paid-service dependencies, read credentials, or call the network.
 
@@ -43,6 +46,7 @@ Future archive publishing may choose a deliberate tracked/static output path, bu
 If a digest is missing, failed, partial, stale, or untrusted:
 
 - do not publish normal social output
+- do not import markdown-only reports as if they contained source facts
 - label fallback output clearly if fallback generation is allowed
 - preserve source links and status metadata
 - record the failure before retrying

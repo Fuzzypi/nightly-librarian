@@ -28,6 +28,7 @@ git diff --check
 
 For artifact-generation changes, preserve checks for:
 
+- explicit digest import paths
 - trusted digest input status
 - source-link preservation
 - fallback labeling

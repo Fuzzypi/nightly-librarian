@@ -1,0 +1,59 @@
+{
+  "schema": "nightly-librarian.triage-candidate-export/v1",
+  "date": "2026-05-20",
+  "status": "reported",
+  "run_status": "completed",
+  "mode": "primary",
+  "title": "Nightly Librarian - 2026-05-20",
+  "summary": "Agent infrastructure moved from experiments toward deployment paths builders can actually test.",
+  "completed_at": "2026-05-20T07:00:00.000Z",
+  "run_id": "upstream-run-2026-05-20",
+  "items": [
+    {
+      "raw_item_id": "cloudflare-managed-agents",
+      "title": "Cloudflare adds Claude Managed Agents support",
+      "url": "https://blog.cloudflare.com/claude-managed-agents/",
+      "source_id": "Cloudflare Blog",
+      "published_at": "2026-05-20T00:00:00Z",
+      "category": "agent_workflow",
+      "verdict": "publish_public",
+      "raw_claim": "Cloudflare says Claude Managed Agents can run tool calls inside isolated Firecracker microVMs near private backends.",
+      "worth_mentioning_reason": "Builders can test agent execution closer to production infrastructure without managing the full agent runtime themselves.",
+      "score_worth_mentioning": 5,
+      "score_decision_impact": 5,
+      "evidence_level": "vendor_claim",
+      "labels": ["launch", "api-change"],
+      "product_relevance": ["CalenCall"]
+    },
+    {
+      "raw_item_id": "forge-guardrails",
+      "title": "Forge publishes local-agent guardrails",
+      "evidence_sources": ["https://github.com/antoinezambelli/forge"],
+      "source_id": "GitHub",
+      "published_at": "2026-05-20T01:15:00Z",
+      "category": "agent_workflow",
+      "verdict": "monitor",
+      "raw_claim": "Forge ships an evaluation harness for local LLM tool-calling reliability.",
+      "worth_mentioning_reason": "Local-agent builders get a concrete benchmark target before trusting an 8B model with multi-step tool use.",
+      "score_worth_mentioning": 4,
+      "score_decision_impact": 3,
+      "evidence_level": "builder_reported",
+      "labels": ["benchmark", "tools"]
+    },
+    {
+      "raw_item_id": "vercel-flat-cdn",
+      "title": "Vercel tests flat-rate CDN pricing",
+      "source_url": "https://vercel.com/changelog/flat-rate-cdn-in-limited-beta",
+      "source_id": "Vercel Changelog",
+      "published_at": "2026-05-20T02:00:00Z",
+      "category": "pricing_cost",
+      "verdict": "reject",
+      "raw_claim": "Vercel opened a limited beta for flat-rate CDN pricing on Pro teams.",
+      "worth_mentioning_reason": "Cost-sensitive operators should watch whether this removes spike-bill risk before moving high-traffic archives.",
+      "score_worth_mentioning": 2,
+      "score_decision_impact": 2,
+      "labels": ["pricing"],
+      "product_relevance": ["Veremun"]
+    }
+  ]
+}

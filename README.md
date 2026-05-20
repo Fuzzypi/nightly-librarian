@@ -11,6 +11,7 @@ The core product is not a generic newsletter business. It is an AI/dev intellige
 This repo owns:
 
 - distribution-layer documentation and operating policy
+- upstream digest artifact import and normalization
 - static archive and landing-page direction
 - generated social drafts for X and LinkedIn
 - approval gates before anything public is posted
@@ -57,11 +58,12 @@ CalenCall and Veremun are downstream product funnels. They may inform examples a
 - `docs/redundancy.md` - primary AI-assisted path and VPS watchdog fallback rules
 - `docs/operations.md` - safe operating procedures
 - `docs/content-policy.md` - trust, sourcing, labeling, and factual-claim policy
-- `docs/social-generation-contract.md` - `social:generate` artifact contract
+- `docs/social-generation-contract.md` - `digest:import` and `social:generate` artifact contracts
 - `docs/decisions/0001-cheap-first-distribution.md` - cheap/free-first distribution decision record
 - `ROADMAP.md` - staged implementation path
 - `VERIFY.md` - local verification gates
 - `scripts/verify.sh` - safe local verification command
+- `scripts/digest-import.js` - deterministic upstream artifact normalizer
 - `scripts/social-generate.js` - deterministic non-posting artifact generator
 
 ## Local Verification

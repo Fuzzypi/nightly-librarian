@@ -14,6 +14,39 @@ Generation command:
 npm run social:generate -- --date YYYY-MM-DD
 ```
 
+## Import Command
+
+Phase 2 adds a local importer that converts explicit upstream JSON artifacts into the `social:generate` input contract:
+
+```bash
+npm run digest:import -- --date YYYY-MM-DD --source path/to/upstream.json --out artifacts/digests/YYYY-MM-DD.json --dry-run
+npm run digest:import -- --date YYYY-MM-DD --source path/to/upstream.json --out artifacts/digests/YYYY-MM-DD.json
+```
+
+If `--out` is omitted, the default output is:
+
+```text
+artifacts/digests/YYYY-MM-DD.json
+```
+
+Importer rules:
+
+- reads only the explicit local `--source` path
+- does not discover production paths
+- does not call the network
+- does not read credentials or environment secrets
+- does not require a database connection
+- does not modify the upstream source artifact
+- refuses to overwrite differing output unless `--force` is passed
+- rejects failed, partial, markdown-only, or source-fact-free artifacts
+
+Supported source shapes:
+
+- `phase1-digest`: an already-normalized artifact matching the input shape below.
+- `triage-candidate-export`: a structured candidate export with `items`, `candidates`, or `results` entries containing source URLs, source facts or `raw_claim`, builder/operator interpretation, category, status, and mode. If the wrapper status is `reported`, it must also include `run_status: "completed"`.
+
+Markdown-only reports are intentionally not importable. They are useful for humans, but they do not preserve enough structure to distinguish source facts from interpretation safely.
+
 ## Input Artifact
 
 Expected source path:
@@ -78,6 +111,8 @@ Supported status and mode values:
 - `mode`: `primary` or `fallback`.
 
 Generation rejects `failed`, `partial`, missing, date-mismatched, or malformed artifacts. Fallback mode is allowed only when the artifact is still `completed`; generated brief and manifest output label it as fallback.
+
+The importer may add an `imported_from` metadata object containing importer version and source artifact hash. `social:generate` ignores this metadata for rendering, but the raw artifact hash still changes when the import provenance changes.
 
 ## Output Artifacts
 
