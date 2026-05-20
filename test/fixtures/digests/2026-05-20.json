@@ -1,0 +1,56 @@
+{
+  "date": "2026-05-20",
+  "status": "completed",
+  "mode": "primary",
+  "title": "Nightly Librarian - 2026-05-20",
+  "summary": "Agent infrastructure moved from experiments toward deployment paths builders can actually test.",
+  "generated_at": "2026-05-20T07:00:00.000Z",
+  "run_id": "fixture-run-2026-05-20",
+  "items": [
+    {
+      "id": "cloudflare-managed-agents",
+      "title": "Cloudflare adds Claude Managed Agents support",
+      "url": "https://blog.cloudflare.com/claude-managed-agents/",
+      "source": "Cloudflare Blog",
+      "published_at": "2026-05-20T00:00:00Z",
+      "category": "AI Operations / Agent Control",
+      "importance": "lead",
+      "source_facts": [
+        "Cloudflare says Claude Managed Agents can run tool calls inside isolated Firecracker microVMs near private backends."
+      ],
+      "builder_takeaway": "Builders can test agent execution closer to production infrastructure without managing the full agent runtime themselves.",
+      "product_relevance": ["CalenCall"],
+      "labels": ["launch", "api-change"]
+    },
+    {
+      "id": "forge-guardrails",
+      "title": "Forge publishes local-agent guardrails",
+      "url": "https://github.com/antoinezambelli/forge",
+      "source": "GitHub",
+      "published_at": "2026-05-20T01:15:00Z",
+      "category": "AI Operations / Agent Control",
+      "importance": "supporting",
+      "source_facts": [
+        "Forge ships an evaluation harness for local LLM tool-calling reliability."
+      ],
+      "builder_takeaway": "Local-agent builders get a concrete benchmark target before trusting an 8B model with multi-step tool use.",
+      "product_relevance": [],
+      "labels": ["benchmark", "tools"]
+    },
+    {
+      "id": "vercel-flat-cdn",
+      "title": "Vercel tests flat-rate CDN pricing",
+      "url": "https://vercel.com/changelog/flat-rate-cdn-in-limited-beta",
+      "source": "Vercel Changelog",
+      "published_at": "2026-05-20T02:00:00Z",
+      "category": "Small Business Automation",
+      "importance": "archive-only",
+      "source_facts": [
+        "Vercel opened a limited beta for flat-rate CDN pricing on Pro teams."
+      ],
+      "builder_takeaway": "Cost-sensitive operators should watch whether this removes spike-bill risk before moving high-traffic archives.",
+      "product_relevance": ["Veremun"],
+      "labels": ["pricing"]
+    }
+  ]
+}

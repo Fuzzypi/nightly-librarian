@@ -12,8 +12,8 @@ This repo owns:
 
 - distribution-layer documentation and operating policy
 - static archive and landing-page direction
-- future generated social drafts for X and LinkedIn
-- future approval gates before anything public is posted
+- generated social drafts for X and LinkedIn
+- approval gates before anything public is posted
 - redundancy and watchdog expectations around digest artifacts
 - local verification checks that do not require credentials or network access
 
@@ -57,12 +57,12 @@ CalenCall and Veremun are downstream product funnels. They may inform examples a
 - `docs/redundancy.md` - primary AI-assisted path and VPS watchdog fallback rules
 - `docs/operations.md` - safe operating procedures
 - `docs/content-policy.md` - trust, sourcing, labeling, and factual-claim policy
-- `docs/social-generation-contract.md` - future `social:generate` artifact contract
+- `docs/social-generation-contract.md` - `social:generate` artifact contract
 - `docs/decisions/0001-cheap-first-distribution.md` - cheap/free-first distribution decision record
 - `ROADMAP.md` - staged implementation path
 - `VERIFY.md` - local verification gates
 - `scripts/verify.sh` - safe local verification command
-- `scripts/social-generate.js` - non-posting contract stub for the future generator
+- `scripts/social-generate.js` - deterministic non-posting artifact generator
 
 ## Local Verification
 
@@ -76,4 +76,4 @@ The verification command is safe to run repeatedly. It does not require secrets 
 
 ## Posting Policy
 
-No public posting is implemented in this baseline. Future posting must wait until tone, trust policy, source preservation, approval gates, and idempotence rules are proven locally with generated drafts.
+No public posting is implemented in this baseline. Posting must wait until tone, trust policy, source preservation, approval gates, and idempotence rules are proven locally with generated drafts.

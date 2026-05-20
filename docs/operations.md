@@ -15,7 +15,7 @@ npm run verify
 npm run social:generate -- --date YYYY-MM-DD --dry-run
 ```
 
-`social:generate` is currently a contract stub. It does not post, create paid-service dependencies, or write public-channel output.
+`social:generate` reads a completed local digest artifact and writes draft artifacts under `dist/`. It does not post, create paid-service dependencies, read credentials, or call the network.
 
 ## Secrets
 

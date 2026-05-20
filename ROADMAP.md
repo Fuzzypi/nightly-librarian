@@ -5,13 +5,15 @@
 Status: current.
 
 - Keep the public GitHub repo clean and Codex-ready.
-- Document strategy, architecture, redundancy, operations, content policy, and the future social-generation contract.
+- Document strategy, architecture, redundancy, operations, content policy, and the social-generation contract.
 - Add a local verification command that does not need secrets or network access.
 - Keep generated reports, logs, credentials, and machine-local files out of source control.
 
 ## Phase 1: Static Archive and Draft Outputs
 
-- Define the completed digest artifact schema used by distribution.
+Status: implemented locally; no posting.
+
+- Defined the completed digest artifact schema used by distribution.
 - Generate static markdown briefs from trusted completed digest artifacts.
 - Generate X and LinkedIn draft files without posting.
 - Keep all generation idempotent by date and source artifact fingerprint.

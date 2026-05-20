@@ -26,7 +26,7 @@ git status --short --branch
 git diff --check
 ```
 
-For any future artifact-generation implementation, add checks for:
+For artifact-generation changes, preserve checks for:
 
 - trusted digest input status
 - source-link preservation

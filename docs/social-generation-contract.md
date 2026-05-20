@@ -1,14 +1,14 @@
 # Social Generation Contract
 
-This document defines the future `social:generate` contract. It is not an external posting implementation.
+This document defines the implemented local `social:generate` contract. It is not an external posting implementation.
 
-Current safe stub:
+Dry-run command:
 
 ```bash
 npm run social:generate -- --date YYYY-MM-DD --dry-run
 ```
 
-Future generation command:
+Generation command:
 
 ```bash
 npm run social:generate -- --date YYYY-MM-DD
@@ -28,43 +28,56 @@ Expected input shape:
 {
   "date": "YYYY-MM-DD",
   "status": "completed",
-  "trust": "trusted",
+  "mode": "primary",
+  "title": "Nightly Librarian - YYYY-MM-DD",
+  "summary": "Short digest summary",
   "run_id": "string",
   "generated_at": "ISO-8601 timestamp",
-  "source_artifact_sha256": "hex string",
-  "fallback": false,
-  "lead_story": {
-    "title": "string",
-    "category": "Model + API Changes",
-    "source_url": "https://example.com/source",
-    "source_facts": ["string"],
-    "interpretation": "string",
-    "builder_action": "string",
-    "uncertainty": "string or null"
-  },
-  "supporting_stories": [],
-  "archive_only": []
+  "items": [
+    {
+      "id": "stable-item-id",
+      "title": "Story title",
+      "url": "https://source.example/item",
+      "source": "Source Name",
+      "published_at": "2026-05-20T00:00:00Z",
+      "category": "Voice AI / Realtime Agents",
+      "importance": "lead",
+      "source_facts": ["Fact attributed to source."],
+      "builder_takeaway": "Why this matters to builders/operators.",
+      "product_relevance": ["CalenCall"],
+      "labels": ["launch", "api-change"]
+    }
+  ]
 }
 ```
 
-Required story fields:
+Required top-level fields:
 
+- `date`
+- `status`
+- `mode`
 - `title`
+- `summary`
+- `items`
+
+Required item fields:
+
+- `id`
+- `title`
+- `url`
+- `source`
+- `published_at`
 - `category`
-- `source_url`
+- `importance`
 - `source_facts`
-- `interpretation`
-- `builder_action`
-- `uncertainty`
+- `builder_takeaway`
 
-Allowed status values:
+Supported status and mode values:
 
-- `completed`
-- `fallback`
-- `failed`
-- `partial`
+- `status`: only `completed` is accepted for generation.
+- `mode`: `primary` or `fallback`.
 
-Generation must reject `failed`, `partial`, missing, stale, or untrusted artifacts unless explicitly run under a fallback policy.
+Generation rejects `failed`, `partial`, missing, date-mismatched, or malformed artifacts. Fallback mode is allowed only when the artifact is still `completed`; generated brief and manifest output label it as fallback.
 
 ## Output Artifacts
 
@@ -87,6 +100,7 @@ dist/social/YYYY-MM-DD.linkedin.md
   "input_sha256": "hex string",
   "generated_at": "ISO-8601 timestamp",
   "generator_version": "string",
+  "mode": "primary",
   "approved": false,
   "fallback": false,
   "channels": {
@@ -106,8 +120,9 @@ dist/social/YYYY-MM-DD.linkedin.md
   "sources": [
     {
       "title": "string",
+      "source": "string",
       "url": "https://example.com/source",
-      "claim_type": "source_fact | interpretation | benchmark | rumor | launch | opinion"
+      "claim_type": "source_fact | benchmark | rumor | launch | opinion"
     }
   ]
 }
@@ -152,6 +167,7 @@ Dry run must:
 - avoid public posting
 - print planned input and output paths
 - report gating status
+- not write files
 - not mutate approval state
 
 ## Approval Gate
