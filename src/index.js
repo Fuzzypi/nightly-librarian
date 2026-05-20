@@ -32,6 +32,9 @@ async function main() {
     } else if (command === 'triage:report') {
       const result = await reportAgentTriage(pool, process.argv.slice(3));
       console.log(JSON.stringify(result, null, 2));
+    } else if (command === 'triage:export') {
+      const result = await reportAgentTriage(pool, [...process.argv.slice(3), '--format=structured-json']);
+      console.log(JSON.stringify(result, null, 2));
     } else if (command === 'triage:latest') {
       const result = await latestMemo(pool);
       console.log(JSON.stringify(result, null, 2));

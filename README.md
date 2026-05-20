@@ -11,6 +11,7 @@ The core product is not a generic newsletter business. It is an AI/dev intellige
 This repo owns:
 
 - distribution-layer documentation and operating policy
+- completed-run producer export shape for the existing local triage/report path
 - upstream digest artifact import and normalization
 - static archive and landing-page direction
 - generated social drafts for X and LinkedIn
@@ -63,6 +64,7 @@ CalenCall and Veremun are downstream product funnels. They may inform examples a
 - `ROADMAP.md` - staged implementation path
 - `VERIFY.md` - local verification gates
 - `scripts/verify.sh` - safe local verification command
+- `src/triage.js` - existing producer triage/report logic plus completed-run structured export
 - `scripts/digest-import.js` - deterministic upstream artifact normalizer
 - `scripts/social-generate.js` - deterministic non-posting artifact generator
 

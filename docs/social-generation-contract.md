@@ -14,6 +14,65 @@ Generation command:
 npm run social:generate -- --date YYYY-MM-DD
 ```
 
+## Producer Export Command
+
+Phase 3 adds a structured export mode to the existing producer report path:
+
+```bash
+mkdir -p artifacts/upstream
+npm run triage:export -- --run-id RUN_ID --date YYYY-MM-DD > artifacts/upstream/YYYY-MM-DD.producer.json
+```
+
+`triage:export` emits JSON to stdout. It preserves the existing `triage:report` markdown behavior by using a separate command that internally selects `--format structured-json`.
+
+Producer export rules:
+
+- exports completed producer runs only
+- rejects failed, partial, running, or unknown run states before import
+- preserves source URLs through `url` and `evidence_sources`
+- preserves source claims through `raw_claim`
+- includes category, verdict, evidence level, uncertainty, scores, and builder/operator relevance fields
+- does not post to public channels
+- does not create paid-service dependencies
+- does not add a new database or credential path
+
+Producer export shape:
+
+```json
+{
+  "schema": "nightly-librarian.triage-candidate-export/v1",
+  "date": "YYYY-MM-DD",
+  "status": "reported",
+  "run_status": "completed",
+  "mode": "primary",
+  "title": "Nightly Librarian - YYYY-MM-DD",
+  "summary": "Completed Nightly Librarian run with promoted/scored/rejected counts.",
+  "completed_at": "2026-05-20T07:00:00.000Z",
+  "run_id": "producer-run-id",
+  "items": [
+    {
+      "raw_item_id": "stable-raw-item-id",
+      "title": "Story title",
+      "url": "https://source.example/item",
+      "source_id": "Source Name",
+      "published_at": "2026-05-20T00:00:00.000Z",
+      "fetched_at": "2026-05-20T00:05:00.000Z",
+      "category": "agent_workflow",
+      "verdict": "publish_public",
+      "raw_claim": "Fact attributed to the source.",
+      "summary": "Producer summary.",
+      "worth_mentioning_reason": "Why this matters to builders/operators.",
+      "evidence_level": "vendor_claim",
+      "evidence_sources": ["https://source.example/item"],
+      "uncertainty": "",
+      "verdict_reason": "Why the producer assigned this verdict.",
+      "score_worth_mentioning": 5,
+      "score_decision_impact": 5
+    }
+  ]
+}
+```
+
 ## Import Command
 
 Phase 2 adds a local importer that converts explicit upstream JSON artifacts into the `social:generate` input contract:

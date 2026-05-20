@@ -7,6 +7,7 @@ Nightly Librarian already exists as a digest-producing system. This repository d
 This repo owns the distribution layer around completed digest artifacts:
 
 - artifact contract
+- completed-run structured export for the existing triage/report producer path
 - upstream artifact import and normalization
 - social draft generation
 - static archive and landing-page outputs
@@ -31,6 +32,7 @@ The distribution layer consumes only completed, trusted artifacts or explicitly 
 
 Planned components:
 
+- `triage:export` command: emits structured JSON from an existing completed producer run
 - `digest:import` contract: turns one explicit local upstream JSON artifact into the completed digest artifact shape
 - `social:generate` contract: turns one trusted digest artifact into markdown and JSON draft outputs
 - static archive generator: produces `dist/briefs/YYYY-MM-DD.md`
@@ -42,6 +44,8 @@ Planned components:
 
 ```text
 Upstream fetch/triage/editor
+  -> completed producer run
+  -> triage:export structured JSON
   -> explicit local upstream JSON artifact
   -> digest:import
   -> completed digest artifact

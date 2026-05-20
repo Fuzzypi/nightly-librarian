@@ -28,19 +28,29 @@ Status: implemented locally; explicit path only.
 - Reject markdown-only, failed, partial, or source-fact-free artifacts.
 - Keep import local, deterministic, no-network, no-credentials, and no-database.
 
-## Phase 3: Approval Gates
+## Phase 3: Producer Structured Export
+
+Status: implemented locally; completed runs only.
+
+- Add `npm run triage:export` as a structured JSON export mode for the existing triage report path.
+- Preserve default markdown report behavior for `npm run triage:report`.
+- Export source URLs, raw source claims, categories, verdicts, evidence levels, scores, and builder/operator relevance fields.
+- Reject non-completed producer runs before import.
+- Prove the exported JSON round-trips through `digest:import` and `social:generate --dry-run`.
+
+## Phase 4: Approval Gates
 
 - Add local policy checks for source citation preservation, factual labeling, fallback labeling, and stale artifact prevention.
 - Add an approval manifest for each date.
 - Require approved output before public posting is even technically possible.
 
-## Phase 4: Cheap-First Distribution
+## Phase 5: Cheap-First Distribution
 
 - Publish a static archive/landing page first.
 - Use generated social drafts manually or semi-manually for 2-4 weeks.
 - Track engagement and email demand before paying for newsletter or scheduling tools.
 
-## Phase 5: Optional Integrations
+## Phase 6: Optional Integrations
 
 - Consider Buffer, Beehiiv, or equivalent tools only after the manual draft workflow proves useful.
 - Keep external posting behind dry-run defaults, approval gates, idempotence checks, and explicit credentials.

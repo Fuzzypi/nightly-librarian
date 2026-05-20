@@ -28,9 +28,19 @@ git diff --check
 
 For artifact-generation changes, preserve checks for:
 
+- producer structured JSON export fixtures
 - explicit digest import paths
 - trusted digest input status
 - source-link preservation
 - fallback labeling
 - idempotent output paths
 - no public-posting side effects in dry-run mode
+
+Phase 3 round-trip verification shape:
+
+```bash
+npm run digest:import -- --date 2026-05-20 --source test/fixtures/producer/completed-structured-export-2026-05-20.json
+npm run social:generate -- --date 2026-05-20 --input artifacts/digests/2026-05-20.json --dry-run
+```
+
+Remove generated `artifacts/` and `dist/` outputs after manual verification unless a future task explicitly asks to preserve them.

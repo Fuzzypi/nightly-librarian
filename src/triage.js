@@ -106,18 +106,58 @@ const INSERT_CANDIDATE = `
 
 function parseArgs(argv) {
   const options = {
+    date: null,
+    format: 'report',
     limit: integerFromEnv('TRIAGE_BATCH_LIMIT', DEFAULT_BATCH_LIMIT),
+    mode: 'primary',
     runId: null,
     input: '-',
   };
 
-  for (const arg of argv) {
-    if (arg.startsWith('--limit=')) options.limit = parsePositiveInt(arg.slice(8), 'limit');
-    if (arg.startsWith('--run-id=')) options.runId = arg.slice(9);
-    if (arg.startsWith('--input=')) options.input = arg.slice(8);
+  for (let index = 0; index < argv.length; index += 1) {
+    const arg = argv[index];
+    if (arg === '--date') {
+      options.date = nextOptionValue(argv, index, '--date');
+      index += 1;
+    } else if (arg.startsWith('--date=')) {
+      options.date = arg.slice(7);
+    } else if (arg === '--format') {
+      options.format = nextOptionValue(argv, index, '--format');
+      index += 1;
+    } else if (arg.startsWith('--format=')) {
+      options.format = arg.slice(9);
+    } else if (arg === '--limit') {
+      options.limit = parsePositiveInt(nextOptionValue(argv, index, '--limit'), 'limit');
+      index += 1;
+    } else if (arg.startsWith('--limit=')) {
+      options.limit = parsePositiveInt(arg.slice(8), 'limit');
+    } else if (arg === '--mode') {
+      options.mode = nextOptionValue(argv, index, '--mode');
+      index += 1;
+    } else if (arg.startsWith('--mode=')) {
+      options.mode = arg.slice(7);
+    } else if (arg === '--run-id') {
+      options.runId = nextOptionValue(argv, index, '--run-id');
+      index += 1;
+    } else if (arg.startsWith('--run-id=')) {
+      options.runId = arg.slice(9);
+    } else if (arg === '--input') {
+      options.input = nextOptionValue(argv, index, '--input');
+      index += 1;
+    } else if (arg.startsWith('--input=')) {
+      options.input = arg.slice(8);
+    }
   }
 
   return options;
+}
+
+function nextOptionValue(argv, index, flag) {
+  const value = argv[index + 1];
+  if (!value || value.startsWith('--')) {
+    throw new Error(`Expected value after ${flag}.`);
+  }
+  return value;
 }
 
 function integerFromEnv(name, fallback) {
@@ -359,9 +399,12 @@ async function failAgentTriage(pool, argv = []) {
 async function reportAgentTriage(pool, argv = []) {
   const options = parseArgs(argv);
   if (!options.runId) throw new Error('--run-id is required');
+  if (!['report', 'structured-json'].includes(options.format)) {
+    throw new Error('--format must be report or structured-json');
+  }
 
   const runResult = await pool.query(
-    `SELECT id, started_at, completed_at, private_memo, items_triaged, items_scored, items_rejected, items_published
+    `SELECT id, status, started_at, completed_at, private_memo, items_triaged, items_scored, items_rejected, items_published
      FROM nightly_runs
      WHERE id = $1`,
     [options.runId]
@@ -371,7 +414,14 @@ async function reportAgentTriage(pool, argv = []) {
 
   const candidateResult = await pool.query(
     `SELECT c.raw_item_id, c.title, c.summary, c.verdict, c.verdict_reason,
-            c.score_worth_mentioning, c.score_decision_impact,
+            c.raw_claim, c.category, c.evidence_level, c.evidence_sources,
+            c.uncertainty, c.worth_mentioning_reason,
+            c.score_worth_mentioning, c.score_solo_dev_relevance,
+            c.score_owner_work_relevance, c.score_future_work_relevance,
+            c.score_decision_impact, c.score_evidence_strength,
+            c.score_cost_time_leverage, c.score_risk_reduction,
+            c.score_business_opportunity, c.score_hype_risk,
+            c.score_novelty_penalty,
             ri.source_id, ri.url, ri.content, ri.fetched_at, ri.published_at
      FROM candidates c
      JOIN raw_items ri ON ri.id = c.raw_item_id
@@ -381,6 +431,10 @@ async function reportAgentTriage(pool, argv = []) {
   );
 
   const rows = candidateResult.rows;
+  if (options.format === 'structured-json') {
+    return buildStructuredExport(run, rows, options);
+  }
+
   const worthAttention = rows
     .filter((row) => row.verdict === 'publish_private' || row.verdict === 'publish_public' || row.verdict === 'monitor')
     .sort((a, b) => (b.score_worth_mentioning - a.score_worth_mentioning) || (b.score_decision_impact - a.score_decision_impact))
@@ -433,6 +487,101 @@ async function reportAgentTriage(pool, argv = []) {
     items_published: run.items_published,
     markdown,
   };
+}
+
+function buildStructuredExport(run, rows, options = {}) {
+  if (run.status !== 'completed') {
+    throw new Error(`Cannot export structured digest for run ${run.id}: status is ${run.status || 'unknown'}.`);
+  }
+
+  if (!['primary', 'fallback'].includes(options.mode)) {
+    throw new Error('--mode must be primary or fallback');
+  }
+
+  const date = options.date || dateFromRun(run);
+  validateDateString(date);
+
+  const items = rows.map(formatStructuredCandidate);
+
+  return {
+    schema: 'nightly-librarian.triage-candidate-export/v1',
+    date,
+    status: 'reported',
+    run_status: 'completed',
+    mode: options.mode,
+    title: `Nightly Librarian - ${date}`,
+    summary: buildStructuredSummary(run, items),
+    completed_at: isoString(run.completed_at),
+    run_id: String(run.id),
+    items,
+  };
+}
+
+function dateFromRun(run) {
+  const timestamp = isoString(run.completed_at || run.started_at);
+  if (!timestamp) {
+    throw new Error('Cannot derive export date from run timestamps; pass --date=YYYY-MM-DD.');
+  }
+  return timestamp.slice(0, 10);
+}
+
+function validateDateString(date) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+    throw new Error('Expected --date YYYY-MM-DD.');
+  }
+  const parsed = new Date(`${date}T00:00:00.000Z`);
+  if (Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== date) {
+    throw new Error(`Invalid calendar date: ${date}`);
+  }
+}
+
+function buildStructuredSummary(run, items) {
+  const promoted = items.filter((item) => item.verdict === 'publish_public' || item.verdict === 'publish_private' || item.verdict === 'monitor');
+  const scored = Number(run.items_scored) || items.length;
+  const rejected = Number(run.items_rejected) || items.filter((item) => item.verdict === 'reject').length;
+  return `Completed Nightly Librarian run with ${promoted.length} promoted item(s), ${scored} scored item(s), and ${rejected} rejected item(s).`;
+}
+
+function formatStructuredCandidate(row) {
+  return {
+    raw_item_id: String(row.raw_item_id || ''),
+    title: row.title || '(untitled)',
+    url: row.url || '',
+    source_id: row.source_id || '',
+    published_at: isoString(row.published_at || row.fetched_at),
+    fetched_at: isoString(row.fetched_at),
+    category: row.category || 'builder_report',
+    verdict: row.verdict || 'reject',
+    raw_claim: row.raw_claim || '',
+    summary: row.summary || '',
+    worth_mentioning_reason: row.worth_mentioning_reason || row.summary || row.verdict_reason || '',
+    evidence_level: row.evidence_level || 'early_signal',
+    evidence_sources: arrayOfStrings(row.evidence_sources),
+    uncertainty: row.uncertainty || '',
+    verdict_reason: row.verdict_reason || '',
+    score_worth_mentioning: scoreOrZero(row.score_worth_mentioning),
+    score_solo_dev_relevance: scoreOrZero(row.score_solo_dev_relevance),
+    score_owner_work_relevance: scoreOrZero(row.score_owner_work_relevance),
+    score_future_work_relevance: scoreOrZero(row.score_future_work_relevance),
+    score_decision_impact: scoreOrZero(row.score_decision_impact),
+    score_evidence_strength: scoreOrZero(row.score_evidence_strength),
+    score_cost_time_leverage: scoreOrZero(row.score_cost_time_leverage),
+    score_risk_reduction: scoreOrZero(row.score_risk_reduction),
+    score_business_opportunity: scoreOrZero(row.score_business_opportunity),
+    score_hype_risk: scoreOrZero(row.score_hype_risk),
+    score_novelty_penalty: scoreOrZero(row.score_novelty_penalty),
+  };
+}
+
+function arrayOfStrings(value) {
+  return Array.isArray(value) ? value.map(String).filter(Boolean) : [];
+}
+
+function isoString(value) {
+  if (!value) return '';
+  if (value instanceof Date) return value.toISOString();
+  const parsed = new Date(value);
+  return Number.isNaN(parsed.getTime()) ? '' : parsed.toISOString();
 }
 
 async function latestMemo(pool) {
@@ -645,6 +794,7 @@ module.exports = {
   __test: {
     completionContract,
     editorialRules,
+    buildStructuredExport,
     buildPrivateMemo,
     textSnippetFromHtml,
   },
