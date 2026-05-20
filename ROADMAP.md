@@ -40,9 +40,13 @@ Status: implemented locally; completed runs only.
 
 ## Phase 4: Approval Gates
 
-- Add local policy checks for source citation preservation, factual labeling, fallback labeling, and stale artifact prevention.
-- Add an approval manifest for each date.
-- Require approved output before public posting is even technically possible.
+Status: implemented locally; no posting.
+
+- Add `approval:create` for explicit local approval artifacts under `artifacts/approvals/YYYY-MM-DD.json`.
+- Add `approval:validate` to fail closed unless approval matches the digest hash and deterministic generated social output hashes.
+- Reject missing, wrong-date, stale, malformed, digest-mismatched, or social-mismatched approval artifacts.
+- Keep approval validation local, deterministic, no-network, no-credentials, no-database, and non-publishing.
+- Preserve `digest:import` and `social:generate` behavior.
 
 ## Phase 5: Cheap-First Distribution
 

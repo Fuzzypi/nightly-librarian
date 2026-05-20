@@ -12,7 +12,7 @@ Authorized work in this repo:
 - upstream digest import/normalization
 - social draft generation contracts and non-posting local generators
 - static archive and landing-page preparation
-- approval-gate design
+- approval-gate design and local approval validation
 
 Do not rebuild the existing Nightly Librarian content engine. Treat the upstream digest pipeline as an external producer.
 

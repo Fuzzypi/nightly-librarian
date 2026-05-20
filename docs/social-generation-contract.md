@@ -266,7 +266,95 @@ Dry run must:
 
 ## Approval Gate
 
-Generated output defaults to `approved: false`.
+Generated output defaults to `approved: false`. Approval is a separate explicit local artifact, not a side effect of generation.
+
+Approval create command:
+
+```bash
+npm run approval:create -- \
+  --date YYYY-MM-DD \
+  --digest artifacts/digests/YYYY-MM-DD.json \
+  --approval artifacts/approvals/YYYY-MM-DD.json \
+  --approver "Name" \
+  --approved-at YYYY-MM-DDTHH:MM:SS.sssZ
+```
+
+Approval validation command:
+
+```bash
+npm run approval:validate -- \
+  --date YYYY-MM-DD \
+  --digest artifacts/digests/YYYY-MM-DD.json \
+  --approval artifacts/approvals/YYYY-MM-DD.json
+```
+
+Approval artifacts live under:
+
+```text
+artifacts/approvals/YYYY-MM-DD.json
+```
+
+Expected approval shape:
+
+```json
+{
+  "schema": "nightly-librarian.approval/v1",
+  "approval_version": "approval/v1",
+  "date": "YYYY-MM-DD",
+  "status": "approved",
+  "approved": true,
+  "approver": "Name",
+  "approved_at": "2026-05-20T08:00:00.000Z",
+  "channels_approved": ["brief", "x", "linkedin"],
+  "digest": {
+    "path": "artifacts/digests/YYYY-MM-DD.json",
+    "sha256": "hex string",
+    "status": "completed",
+    "mode": "primary",
+    "generated_at": "2026-05-20T07:00:00.000Z"
+  },
+  "social": {
+    "generator_version": "social-generate/v1",
+    "manifest": {
+      "path": "dist/social/YYYY-MM-DD.json",
+      "sha256": "hex string"
+    },
+    "brief": {
+      "path": "dist/briefs/YYYY-MM-DD.md",
+      "sha256": "hex string"
+    },
+    "x": {
+      "path": "dist/social/YYYY-MM-DD.x.md",
+      "sha256": "hex string",
+      "post_count": 0
+    },
+    "linkedin": {
+      "path": "dist/social/YYYY-MM-DD.linkedin.md",
+      "sha256": "hex string",
+      "character_count": 0
+    }
+  },
+  "policy_checks": {
+    "digest_completed": true,
+    "source_links_preserved": true,
+    "facts_labeled": true,
+    "fallback_labeled": true,
+    "not_stale": true,
+    "draft_not_published": true
+  }
+}
+```
+
+Validation rules:
+
+- approval must exist; absence means not approved
+- `date` must match the requested date
+- `status` must be `approved` and `approved` must be `true`
+- `approved_at` must be at or after the digest `generated_at`
+- digest path and SHA-256 must match the requested digest
+- generator version and deterministic social draft hashes must match what `social:generate` would produce
+- every required policy check must be true
+- validation must not write `dist/`, post publicly, call the network, read credentials, connect to databases, or schedule anything
 
 Future posting commands may only consume approved artifacts. Approval must record:
 

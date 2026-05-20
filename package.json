@@ -4,6 +4,8 @@
   "private": true,
   "description": "Distribution coordination for the Nightly Librarian Audience Engine",
   "scripts": {
+    "approval:create": "node scripts/approval.js create",
+    "approval:validate": "node scripts/approval.js validate",
     "digest:import": "node scripts/digest-import.js",
     "fetch": "node src/index.js fetch",
     "social:generate": "node scripts/social-generate.js",

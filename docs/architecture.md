@@ -11,7 +11,7 @@ This repo owns the distribution layer around completed digest artifacts:
 - upstream artifact import and normalization
 - social draft generation
 - static archive and landing-page outputs
-- approval gates
+- local approval artifact creation and validation
 - operations documentation
 - redundancy policy
 
@@ -37,7 +37,7 @@ Planned components:
 - `social:generate` contract: turns one trusted digest artifact into markdown and JSON draft outputs
 - static archive generator: produces `dist/briefs/YYYY-MM-DD.md`
 - social draft writer: produces X and LinkedIn drafts under `dist/social/`
-- approval manifest: records whether output is approved for public use
+- approval artifact: records explicit approval for a date, digest hash, generator version, and social output hashes
 - policy verifier: blocks stale, failed, partial, or untrusted output from being treated as normal content
 
 ## Data Flow
@@ -53,6 +53,7 @@ Upstream fetch/triage/editor
   -> static brief draft
   -> X and LinkedIn draft files
   -> human or policy approval
+  -> approval:validate
   -> future public posting or manual copy/paste
 ```
 

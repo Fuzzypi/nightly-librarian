@@ -15,7 +15,7 @@ This repo owns:
 - upstream digest artifact import and normalization
 - static archive and landing-page direction
 - generated social drafts for X and LinkedIn
-- approval gates before anything public is posted
+- local approval artifacts and validation gates before anything public is posted
 - redundancy and watchdog expectations around digest artifacts
 - local verification checks that do not require credentials or network access
 
@@ -67,6 +67,7 @@ CalenCall and Veremun are downstream product funnels. They may inform examples a
 - `src/triage.js` - existing producer triage/report logic plus completed-run structured export
 - `scripts/digest-import.js` - deterministic upstream artifact normalizer
 - `scripts/social-generate.js` - deterministic non-posting artifact generator
+- `scripts/approval.js` - explicit local approval artifact creator and validator
 
 ## Local Verification
 
