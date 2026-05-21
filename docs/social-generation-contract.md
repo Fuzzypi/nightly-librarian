@@ -226,29 +226,29 @@ dist/social/YYYY-MM-DD.linkedin.md
 
 The X thread draft should:
 
-- start with the lead story
-- preserve source links
-- label facts, interpretation, and actions
+- be a teaser (1–2 posts) summarizing the most important themes
+- avoid dumping 40 links into social
 - keep each post within platform limits
 - avoid unmarked rumors or unsupported benchmark claims
-- end with a link to the static brief/archive when available
+- end with a single link to the public landing page / brief (which contains the full index of researched links)
 
 ## LinkedIn Output
 
 The LinkedIn draft should:
 
-- use one concise opening claim
-- explain practical builder/operator impact
-- include source links
+- be 1–3 short paragraphs: what's happening + why it matters for builders/operators
+- avoid including per-item source links (use the landing-page link instead)
 - avoid engagement bait
 - avoid pretending CalenCall or Veremun are the topic unless directly relevant
+- end with a single link to the public landing page / brief
 
 ## Landing Page / Archive Output
 
 The static brief should:
 
-- preserve lead/supporting/archive hierarchy
-- include source links for each promoted item
+- start with a short daily synthesis (1–2 paragraphs)
+- summarize every “worth mentioning” item (publish + monitor) with source facts + takeaway
+- include a complete link index of every researched item (including rejects) for transparency
 - label fallback status if applicable
 - distinguish source facts from Nightly Librarian interpretation
 
@@ -314,7 +314,7 @@ Expected approval shape:
     "generated_at": "2026-05-20T07:00:00.000Z"
   },
   "social": {
-    "generator_version": "social-generate/v1",
+    "generator_version": "social-generate/v2",
     "manifest": {
       "path": "dist/social/YYYY-MM-DD.json",
       "sha256": "hex string"

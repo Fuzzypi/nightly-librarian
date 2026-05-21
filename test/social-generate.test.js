@@ -38,23 +38,22 @@ test('generate writes deterministic brief, social drafts, and manifest', () => {
 
   const brief = read(root, 'dist/briefs/2026-05-20.md');
   assert.match(brief, /# Nightly Librarian - 2026-05-20/);
-  assert.match(brief, /## Lead Story/);
-  assert.match(brief, /## Supporting Stories/);
-  assert.match(brief, /## Archive-Only Items/);
-  assert.match(brief, /\[Cloudflare Blog\]\(https:\/\/blog.cloudflare.com\/claude-managed-agents\/\)/);
-  assert.match(brief, /Builder\/operator takeaway:/);
+  assert.match(brief, /## Daily summary/);
+  assert.match(brief, /Landing page: https:\/\/thenightlylibrarian\.com\/briefs\/2026-05-20/);
+  assert.match(brief, /## All researched links \(complete index\)/);
+  assert.match(brief, /\[R\] \[Cloudflare adds Claude Managed Agents support\]/);
 
   const x = read(root, 'dist/social/2026-05-20.x.md');
   const xPosts = x.trimEnd().split('\n\n---\n\n');
-  assert.equal(xPosts.length, 3);
+  assert.equal(xPosts.length, 1);
   assert.ok(xPosts.every((post) => post.length <= social.X_LIMIT));
-  assert.match(xPosts[0], /^1\/3 Cloudflare adds Claude Managed Agents support/);
-  assert.match(x, /https:\/\/github.com\/antoinezambelli\/forge/);
+  assert.match(xPosts[0], /^Nightly Librarian \(2026-05-20\)/);
+  assert.match(x, /https:\/\/thenightlylibrarian\.com\/briefs\/2026-05-20/);
 
   const linkedin = read(root, 'dist/social/2026-05-20.linkedin.md');
   assert.match(linkedin, /# LinkedIn Draft - 2026-05-20/);
-  assert.match(linkedin, /What changed:/);
-  assert.match(linkedin, /Supporting signals:/);
+  assert.match(linkedin, /Read the full brief/);
+  assert.match(linkedin, /https:\/\/thenightlylibrarian\.com\/briefs\/2026-05-20/);
   assert.match(linkedin, /Draft status: not approved for posting\./);
 
   const manifest = JSON.parse(read(root, 'dist/social/2026-05-20.json'));
@@ -62,8 +61,9 @@ test('generate writes deterministic brief, social drafts, and manifest', () => {
   assert.equal(manifest.generated_at, '2026-05-20T07:00:00.000Z');
   assert.equal(manifest.generator_version, social.GENERATOR_VERSION);
   assert.equal(manifest.input_artifact, 'artifacts/digests/2026-05-20.json');
-  assert.equal(manifest.channels.x.post_count, 3);
+  assert.equal(manifest.channels.x.post_count, 1);
   assert.deepEqual(manifest.channels.x.character_counts, xPosts.map((post) => post.length));
+  assert.equal(manifest.landing_url, 'https://thenightlylibrarian.com/briefs/2026-05-20');
   assert.equal(manifest.sources[0].claim_type, 'launch');
   assert.equal(manifest.sources[1].claim_type, 'benchmark');
 });
@@ -154,7 +154,7 @@ test('generate labels completed fallback artifacts', () => {
   const manifest = JSON.parse(read(root, 'dist/social/2026-05-20.json'));
 
   assert.match(brief, /Fallback digest:/);
-  assert.match(x, /Fallback digest\. Review before public use\./);
+  assert.match(x, /Fallback digest/);
   assert.equal(manifest.fallback, true);
   assert.equal(manifest.mode, 'fallback');
 });
