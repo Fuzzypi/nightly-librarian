@@ -1,6 +1,6 @@
 # Codex Handoff — Nightly Librarian Synthesis Workflow
 
-**As of: 2026-05-23 | HEAD: `944deb8`**
+**Introduced: 2026-05-23**
 
 This document is for the Codex cron agent. Read it before your next triage run.
 
