@@ -19,11 +19,18 @@
 
 const fs = require("node:fs");
 const path = require("node:path");
+const {
+  parseDailyReportMarkdown,
+  parseLegacyReportMarkdown,
+} = require("../src/report-archive.js");
 
 const REPO_ROOT = path.join(__dirname, "..");
 const BRIEFS_MD_DIR = path.join(REPO_ROOT, "dist", "briefs");
+const REPORTS_MD_DIR = path.join(REPO_ROOT, "reports");
+const LEGACY_RUNS_DIR = path.join(REPO_ROOT, "archive", "runs");
 const SITE_DIR = path.join(REPO_ROOT, "site");
 const SITE_BRIEFS_DIR = path.join(SITE_DIR, "briefs");
+const SITE_REPORTS_DIR = path.join(SITE_DIR, "reports");
 
 const DRY_RUN = process.argv.includes("--dry-run");
 
@@ -76,6 +83,30 @@ function write(filePath, content) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
   fs.writeFileSync(filePath, content, "utf8");
   console.log(`wrote ${path.relative(REPO_ROOT, filePath)}`);
+}
+
+function formatIsoDateTime(timestamp) {
+  if (!timestamp) return "";
+  const parsed = new Date(timestamp);
+  if (Number.isNaN(parsed.getTime())) return timestamp;
+  return parsed.toLocaleString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    timeZone: "America/New_York",
+  });
+}
+
+function listLegacyBriefFiles() {
+  if (!fs.existsSync(LEGACY_RUNS_DIR)) return [];
+
+  return fs.readdirSync(LEGACY_RUNS_DIR, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => path.join(LEGACY_RUNS_DIR, entry.name, "brief.md"))
+    .filter((filePath) => fs.existsSync(filePath))
+    .sort();
 }
 
 // ─── Parser ───────────────────────────────────────────────────────────────────
@@ -402,6 +433,56 @@ const SHARED_CSS = `
   .back-link:hover { color: var(--text); text-decoration: none; }
   .back-link::before { content: "← "; }
 
+  .summary-card {
+    margin-top: 1.25rem;
+    padding: 1.1rem 1.15rem;
+    background: linear-gradient(180deg, rgba(240, 192, 64, 0.08), rgba(240, 192, 64, 0.02));
+    border: 1px solid rgba(240, 192, 64, 0.18);
+    border-radius: 10px;
+  }
+
+  .summary-card p {
+    margin-top: 0.35rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .raw-report {
+    margin-top: 0.9rem;
+    white-space: pre-wrap;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.78rem;
+    line-height: 1.65;
+    color: var(--text-dim);
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .item-stack {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .compact-list {
+    margin-top: 0.75rem;
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .compact-list .item {
+    padding: 0.9rem 0;
+  }
+
   footer {
     border-top: 1px solid var(--border);
     padding: 1.5rem;
@@ -411,6 +492,25 @@ const SHARED_CSS = `
     line-height: 1.8;
   }
 `;
+
+function siteNav(active = "") {
+  const items = [
+    { href: "/", label: "Archive", key: "archive" },
+    { href: "/reports/", label: "Reports", key: "reports" },
+  ];
+
+  return items.map((item) => {
+    const style = item.key === active ? ` style="color:#fff"` : "";
+    return `<a href="${item.href}"${style}>${item.label}</a>`;
+  }).join("");
+}
+
+function renderRawMarkdown(markdown) {
+  return `<details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report">${esc(markdown)}</pre>
+    </details>`;
+}
 
 // ─── Brief page renderer ──────────────────────────────────────────────────────
 
@@ -483,9 +583,7 @@ function renderBriefPage(brief) {
   <header class="site-header">
     <a class="brand" href="/">The Nightly Librarian</a>
     <span class="brand-tagline">AI signal without the noise</span>
-    <nav class="site-nav">
-      <a href="/">Archive</a>
-    </nav>
+    <nav class="site-nav">${siteNav("archive")}</nav>
   </header>
   <main>
     <a class="back-link" href="/">All briefs</a>
@@ -510,12 +608,201 @@ function renderBriefPage(brief) {
 `;
 }
 
+// ─── Report renderers ──────────────────────────────────────────────────────────
+
+function renderDailyReportPage(report) {
+  const worthAttentionHtml = report.worthAttention.length
+    ? `<h2>Worth attention</h2>
+    <div class="item-stack">
+      ${report.worthAttention.map((item) => `
+      <div class="item">
+        <div class="item-title">${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a>` : esc(item.title)}</div>
+        ${item.summary ? `<div class="item-takeaway">${renderText(item.summary)}</div>` : ""}
+      </div>`).join("\n")}
+    </div>`
+    : "";
+
+  const digestHtml = report.fullDigest.length
+    ? `<h2>Full digest</h2>
+    <div class="compact-list">
+      ${report.fullDigest.map((item) => `
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-${esc(item.tag.toLowerCase())}">${esc(item.tag)}</span>
+          ${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a>` : esc(item.title)}
+        </div>
+        ${item.summary ? `<div class="item-takeaway">${renderText(item.summary)}</div>` : ""}
+        <div class="item-meta">
+          ${item.source ? `<span>${esc(item.source)}</span>` : ""}
+        </div>
+      </div>`).join("\n")}
+    </div>`
+    : "";
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${esc(report.date)} report log — The Nightly Librarian</title>
+  <meta name="description" content="${esc(report.summary.text)}">
+  <style>${SHARED_CSS}</style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">The Nightly Librarian</a>
+    <span class="brand-tagline">AI signal without the noise</span>
+    <nav class="site-nav">${siteNav("reports")}</nav>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>${esc(formatDate(report.date))}</h1>
+    <div class="meta">
+      ${report.completedAt ? `<span>${esc(formatIsoDateTime(report.completedAt))}</span>` : ""}
+      ${report.runId ? `<span>run ${esc(report.runId.slice(0, 8))}</span>` : ""}
+    </div>
+    <div class="summary-card">
+      <div class="eyebrow">Report Summary</div>
+      <p>${esc(report.summary.text)}</p>
+      <div class="meta">
+        ${report.summary.stats.map((item) => `<span>${esc(item)}</span>`).join("")}
+      </div>
+    </div>
+    ${worthAttentionHtml}
+    ${digestHtml}
+    ${renderRawMarkdown(report.rawMarkdown)}
+  </main>
+  <footer>
+    Nightly report log for the Codex morning memo workflow.<br>
+    <a href="/reports/">← Back to reports</a>
+  </footer>
+</body>
+</html>
+`;
+}
+
+function renderLegacyReportPage(report) {
+  const signalsHtml = report.signals.length
+    ? `<h2>Signals</h2>
+    <div class="item-stack">
+      ${report.signals.map((item, index) => `
+      <div class="item">
+        <div class="item-title">${index + 1}. ${esc(item.title)}</div>
+        ${item.body ? `<div class="item-takeaway">${renderText(item.body)}</div>` : ""}
+      </div>`).join("\n")}
+    </div>`
+    : "";
+
+  const tryThisHtml = report.tryThis
+    ? `<h2>Try this</h2><div class="item"><div class="item-takeaway">${renderText(report.tryThis)}</div></div>`
+    : "";
+
+  const verdictHtml = report.verdict
+    ? `<h2>Librarian's verdict</h2><div class="item"><div class="item-takeaway">${renderText(report.verdict)}</div></div>`
+    : "";
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${esc(report.date)} legacy archive — The Nightly Librarian</title>
+  <meta name="description" content="${esc(report.summary.text)}">
+  <style>${SHARED_CSS}</style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">The Nightly Librarian</a>
+    <span class="brand-tagline">AI signal without the noise</span>
+    <nav class="site-nav">${siteNav("reports")}</nav>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>${esc(formatDate(report.date))}</h1>
+    <div class="meta">
+      <span>${esc(report.issue || "Legacy archive")}</span>
+      <span>${esc(report.slug)}</span>
+    </div>
+    <div class="summary-card">
+      <div class="eyebrow">Archive Summary</div>
+      <p>${esc(report.summary.text)}</p>
+      <div class="meta">
+        ${report.summary.stats.map((item) => `<span>${esc(item)}</span>`).join("")}
+      </div>
+    </div>
+    ${signalsHtml}
+    ${tryThisHtml}
+    ${verdictHtml}
+    ${renderRawMarkdown(report.rawMarkdown)}
+  </main>
+  <footer>
+    Legacy Nightly Librarian archive snapshot.<br>
+    <a href="/reports/">← Back to reports</a>
+  </footer>
+</body>
+</html>
+`;
+}
+
+function renderReportsIndexPage(reports, legacyReports) {
+  const sortedReports = [...reports].sort((a, b) => b.date.localeCompare(a.date));
+  const sortedLegacyReports = [...legacyReports].sort((a, b) => b.slug.localeCompare(a.slug));
+
+  const recentRows = sortedReports.map((report) => `
+    <div class="item">
+      <div class="item-title"><a href="/reports/${esc(report.slug)}/">${esc(formatDate(report.date))}</a></div>
+      <div class="item-takeaway">${renderText(report.summary.text)}</div>
+      <div class="item-meta">
+        ${report.summary.stats.map((item) => `<span>${esc(item)}</span>`).join("")}
+      </div>
+    </div>`).join("\n");
+
+  const legacyRows = sortedLegacyReports.map((report) => `
+    <div class="item">
+      <div class="item-title"><a href="/reports/legacy/${esc(report.slug)}/">${esc(formatDate(report.date))}</a></div>
+      <div class="item-takeaway">${renderText(report.summary.text)}</div>
+      <div class="item-meta">
+        <span>${esc(report.issue || "Legacy archive")}</span>
+        <span>${esc(report.slug)}</span>
+      </div>
+    </div>`).join("\n");
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reports — The Nightly Librarian</title>
+  <meta name="description" content="Codex morning memo report log and legacy Nightly Librarian archive entries.">
+  <style>${SHARED_CSS}</style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">The Nightly Librarian</a>
+    <span class="brand-tagline">AI signal without the noise</span>
+    <nav class="site-nav">${siteNav("reports")}</nav>
+  </header>
+  <main>
+    <h1>Report Log</h1>
+    <p style="margin-top:0.75rem;font-size:0.95rem;color:var(--text-dim);line-height:1.6;max-width:620px;">Nightly report drafts from the Codex morning memo workflow, plus preserved legacy archive snapshots from the earlier issue format.</p>
+    ${reports.length ? `<h2>Recent reports</h2>${recentRows}` : ""}
+    ${legacyReports.length ? `<h2>Legacy archive</h2>${legacyRows}` : ""}
+  </main>
+  <footer>
+    The report log preserves the long-form editorial trace behind the public brief pages.
+  </footer>
+</body>
+</html>
+`;
+}
+
 // ─── Index page renderer ──────────────────────────────────────────────────────
 
-function renderIndexPage(briefs) {
+function renderIndexPage(briefs, reports, legacyReports) {
   // briefs sorted newest-first
   const sorted = [...briefs].sort((a, b) => b.date.localeCompare(a.date));
   const latest = sorted[0];
+  const sortedLegacyReports = [...legacyReports].sort((a, b) => b.slug.localeCompare(a.slug));
 
   function renderArchiveRow(brief) {
     const lead = brief.published[0];
@@ -550,6 +837,24 @@ function renderIndexPage(briefs) {
     ? `<h2>Archive</h2>\n${archiveRows}`
     : "";
 
+  const latestReport = reports[0] || sortedLegacyReports[0] || null;
+  const reportsHtml = latestReport
+    ? `<h2>Report log</h2>
+    <div class="item">
+      <div class="item-title">
+        <a href="${reports[0] ? `/reports/${esc(latestReport.slug)}/` : `/reports/legacy/${esc(latestReport.slug)}/`}">${reports[0] ? `Latest report · ${esc(formatDate(latestReport.date))}` : `Legacy archive · ${esc(formatDate(latestReport.date))}`}</a>
+      </div>
+      <div class="item-takeaway">${renderText(latestReport.summary.text)}</div>
+      <div class="item-meta">
+        <span>${reports.length} recent report${reports.length === 1 ? "" : "s"}</span>
+        ${legacyReports.length ? `<span>${legacyReports.length} legacy archive entr${legacyReports.length === 1 ? "y" : "ies"}</span>` : ""}
+      </div>
+    </div>
+    <div style="margin-top:0.85rem;">
+      <a href="/reports/" style="font-size:0.88rem;color:var(--accent);font-weight:600;">Browse all reports →</a>
+    </div>`
+    : "";
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -579,6 +884,7 @@ function renderIndexPage(briefs) {
   <header class="site-header">
     <a class="brand" href="/">The Nightly Librarian</a>
     <span class="brand-tagline">AI signal without the noise</span>
+    <nav class="site-nav">${siteNav("archive")}</nav>
   </header>
   <main>
     <p class="hero-tagline">What changed. Why it matters.<br>What builders should do about it.</p>
@@ -586,6 +892,7 @@ function renderIndexPage(briefs) {
     No hype, no enterprise filler — just what matters for people who ship.</p>
 
     ${heroHtml}
+    ${reportsHtml}
     ${archiveSectionHtml}
   </main>
   <footer>
@@ -614,6 +921,8 @@ function main() {
   }
 
   const briefs = [];
+  const reports = [];
+  const legacyReports = [];
 
   for (const filename of mdFiles) {
     const date = filename.replace(".md", "");
@@ -629,10 +938,34 @@ function main() {
     write(briefPagePath, renderBriefPage(brief));
   }
 
-  // Write index page
-  write(path.join(SITE_DIR, "index.html"), renderIndexPage(briefs));
+  if (fs.existsSync(REPORTS_MD_DIR)) {
+    const reportFiles = fs.readdirSync(REPORTS_MD_DIR)
+      .filter((file) => /^\d{4}-\d{2}-\d{2}\.md$/.test(file))
+      .sort()
+      .reverse();
 
-  console.log(`\nBuild complete. ${briefs.length} brief(s) → site/`);
+    for (const filename of reportFiles) {
+      const date = filename.replace(".md", "");
+      const filePath = path.join(REPORTS_MD_DIR, filename);
+      const report = parseDailyReportMarkdown(fs.readFileSync(filePath, "utf8"), date);
+      reports.push(report);
+      write(path.join(SITE_REPORTS_DIR, date, "index.html"), renderDailyReportPage(report));
+    }
+  }
+
+  for (const filePath of listLegacyBriefFiles()) {
+    const slug = path.basename(path.dirname(filePath));
+    const legacy = parseLegacyReportMarkdown(fs.readFileSync(filePath, "utf8"), slug);
+    if (!legacy) continue;
+    legacyReports.push(legacy);
+    write(path.join(SITE_REPORTS_DIR, "legacy", slug, "index.html"), renderLegacyReportPage(legacy));
+  }
+
+  // Write index page
+  write(path.join(SITE_DIR, "index.html"), renderIndexPage(briefs, reports, legacyReports));
+  write(path.join(SITE_REPORTS_DIR, "index.html"), renderReportsIndexPage(reports, legacyReports));
+
+  console.log(`\nBuild complete. ${briefs.length} brief(s), ${reports.length} report(s), ${legacyReports.length} legacy archive entr${legacyReports.length === 1 ? "y" : "ies"} → site/`);
   if (DRY_RUN) console.log("(dry run — no files written)");
 }
 

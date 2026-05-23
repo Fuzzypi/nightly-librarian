@@ -71,9 +71,12 @@ Use `.env.template` for placeholders only.
 
 ## Generated Artifacts
 
-Generated briefs, social drafts, logs, and run completions are output, not source. The default ignored paths include `dist/`, `reports/`, logs, and completion JSON.
+Generated social drafts, transient logs, and completion JSON are output, not source. `dist/` remains generated output. The deliberate exceptions are:
 
-Future archive publishing may choose a deliberate tracked/static output path, but that should be a separate decision.
+- `reports/YYYY-MM-DD.md` - tracked daily report markdown used as a public-site source input
+- `archive/runs/**/brief.md` - selected legacy archive briefs preserved as public-site source inputs
+
+Raw run JSON, candidate dumps, approvals, synthesized artifacts, and other machine byproducts remain untracked unless explicitly promoted.
 
 ## Incident Handling
 

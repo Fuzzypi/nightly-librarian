@@ -25,7 +25,7 @@ You are one of two scoring agents. Cowork is the other. Both of you:
 After **both** completions exist, one agent (see "Who Runs Synthesis" below) runs:
 
 ```
-synthesize:runs → digest:import → social:generate → build:site → git push
+triage:report → report:write → synthesize:runs → digest:import → social:generate → build:site → git push
 ```
 
 ---
@@ -94,6 +94,8 @@ Output goes to `artifacts/synthesized/YYYY-MM-DD.json` (gitignored — do not co
 ### Full publish pipeline after synthesis:
 
 ```bash
+npm run report:write -- --date YYYY-MM-DD --input triage-report.json
+
 npm run digest:import -- \
   --date YYYY-MM-DD \
   --source artifacts/synthesized/YYYY-MM-DD.json \
@@ -104,11 +106,12 @@ npm run social:generate -- --date YYYY-MM-DD
 npm run build:site
 
 git add dist/briefs/YYYY-MM-DD.md
+git add reports/YYYY-MM-DD.md
 git commit -m "brief: YYYY-MM-DD"
 git push
 ```
 
-Only `dist/briefs/YYYY-MM-DD.md` gets committed. Everything in `artifacts/` and `dist/social/` stays local.
+Commit `dist/briefs/YYYY-MM-DD.md` and `reports/YYYY-MM-DD.md`. Everything in `artifacts/`, `dist/social/`, `site/`, and completion JSON stays local.
 
 ---
 
@@ -120,7 +123,17 @@ Only `dist/briefs/YYYY-MM-DD.md` gets committed. Everything in `artifacts/` and 
 
 1. Cowork finishes triage → saves `completion-{cowork-run-id}.json` to `upstream/cowork-YYYY-MM-DD.json` (not committed, just local/shared)
 2. Codex finishes triage → saves its own `completion-{codex-run-id}.json`
-3. Codex checks for the Cowork file and runs synthesis:
+3. Codex exports the daily report log for the just-completed triage run:
+
+```bash
+cd /opt/nightly-librarian && node src/index.js triage:report --run-id "$CODEX_RUN_ID" \
+  > /tmp/triage-report.json
+
+cd /Users/fuzzypi/nightly-librarian
+npm run report:write -- --date "$DATE" --input /tmp/triage-report.json
+```
+
+4. Codex checks for the Cowork file and runs synthesis:
 
 ```bash
 COWORK_FILE="upstream/cowork-$(date +%Y-%m-%d).json"
@@ -147,6 +160,7 @@ npm run social:generate -- --date "$DATE"
 npm run build:site
 
 git add "dist/briefs/${DATE}.md"
+git add "reports/${DATE}.md"
 git commit -m "brief: ${DATE}"
 git push
 ```
@@ -158,6 +172,7 @@ git push
 | Path | Committed? |
 |------|-----------|
 | `dist/briefs/YYYY-MM-DD.md` | ✅ Yes — required for Cloudflare build |
+| `reports/YYYY-MM-DD.md` | ✅ Yes — tracked report log source for the site |
 | `dist/social/` | ❌ No |
 | `artifacts/synthesized/` | ❌ No |
 | `artifacts/digests/` | ❌ No |
@@ -176,7 +191,7 @@ Only the brief markdown goes to the repo. Everything else is ephemeral.
 - **Triggers:** every push to `main`
 - **Live domain:** `thenightlylibrarian.com`
 
-The build reads `dist/briefs/*.md` from the repo. That's why the brief markdown must be committed. Nothing else needs to be in the repo for the site to build.
+The build reads `dist/briefs/*.md`, `reports/*.md`, and tracked legacy archive briefs from the repo. That's why the brief markdown and report markdown must be committed.
 
 ---
 

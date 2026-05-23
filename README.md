@@ -14,6 +14,7 @@ This repo owns:
 - completed-run producer export shape for the existing local triage/report path
 - upstream digest artifact import and normalization
 - static archive and landing-page direction
+- tracked public report log inputs under `reports/` and legacy archive briefs under `archive/runs/**/brief.md`
 - generated social drafts for X and LinkedIn
 - local approval artifacts and validation gates before anything public is posted
 - redundancy and watchdog expectations around digest artifacts
@@ -66,8 +67,10 @@ CalenCall and Veremun are downstream product funnels. They may inform examples a
 - `scripts/verify.sh` - safe local verification command
 - `src/triage.js` - existing producer triage/report logic plus completed-run structured export
 - `scripts/digest-import.js` - deterministic upstream artifact normalizer
+- `scripts/report-write.js` - deterministic writer for tracked daily report markdown
 - `scripts/social-generate.js` - deterministic non-posting artifact generator
 - `scripts/approval.js` - explicit local approval artifact creator and validator
+- `reports/` - tracked daily report markdown used by the public site
 
 ## Local Verification
 
