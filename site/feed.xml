@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>The Nightly Librarian</title>
+    <link>https://thenightlylibrarian.com</link>
+    <description>Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.</description>
+    <language>en-us</language>
+    <atom:link href="https://thenightlylibrarian.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Wed, 27 May 2026 23:08:20 GMT</lastBuildDate>
+    <ttl>360</ttl>
+    <item>
+      <title>May 27, 2026 — 10x KV compression with no quality loss is a significant practical improvement for local inference. </title>
+      <link>https://thenightlylibrarian.com/briefs/2026-05-27/</link>
+      <guid isPermaLink="true">https://thenightlylibrarian.com/briefs/2026-05-27/</guid>
+      <pubDate>Wed, 27 May 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[<p>10x KV compression with no quality loss is a significant practical improvement for local inference. Changes the calculus on what context lengths are feasible on consumer hardware.</p>
+<p>Topics: Data Infrastructure / Verification / Scraping · AI Operations / Agent Control · Tools Worth Testing · Small Business Automation</p>
+<ul><li>Shard — 10x KV cache compression for local LLMs: 10x KV compression with no quality loss is a significant practical improvement for local inference. Changes the calculus on what context lengths are feasible on consumer hardware.</li><li>AI code review bottleneck — built a tool to fix it: Identifies a real pain point in AI-assisted development workflows. The review bottleneck is a practical problem that affects how you structure agent-driven coding.</li><li>Local PII removal model — near-frontier at 9ms CPU inference: Fast local PII scrubbing is directly useful for agent/MCP pipelines where you want privacy guarantees without API round-trips.</li></ul>
+<p><a href="https://thenightlylibrarian.com/briefs/2026-05-27/">Read the full brief →</a></p>]]></description>
+    </item>
+    <item>
+      <title>May 26, 2026 — 3 stories cleared the bar, led by Constraint Decay: The Fragility of LLM Agents in Back End Code Gen</title>
+      <link>https://thenightlylibrarian.com/briefs/2026-05-26/</link>
+      <guid isPermaLink="true">https://thenightlylibrarian.com/briefs/2026-05-26/</guid>
+      <pubDate>Tue, 26 May 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[<p>3 stories cleared the bar, led by Constraint Decay: The Fragility of LLM Agents in Back End Code Generation, llama.cpp server: fix checkpoints creation (PR #22929), and DeepSeek Reasonix — native coding agent with high caching and low cost.</p>
+<ul><li>Constraint Decay: The Fragility of LLM Agents in Back End Code Generation: Arxiv paper documenting 'constraint decay' — LLM agents progressively fail to maintain stated constraints (security requirements, API contracts, error handling rules) across multi-step backend code generation tasks. The longer and more complex the session, the more constraints are silently dropped. Directly relevant to anyone running agentic coding loops (nightly-librarian, second-brain). Practical mitigations: shorter sessions, explicit re-injection of constraints at each step, structured output validation. No vendor-provided fix exists — this is a fundamental model behavior pattern.</li><li>llama.cpp server: fix checkpoints creation (PR #22929): llama.cpp PR #22929 fixes KV cache checkpoint creation in the server — enabling save and restore of conversation state without reprocessing the full context. The Reddit discussion highlights the workflow value: discuss a problem for 50k tokens, then kick off a long implementation task and save your place. Particularly useful for solo devs running long agentic coding sessions on local models via llama.cpp or Ollama. Watch for this to ship in a stable llama.cpp release.</li><li>DeepSeek Reasonix — native coding agent with high caching and low cost: DeepSeek Reasonix is a coding agent built on DeepSeek V4 with aggressive KV caching to reduce cost per agent loop. More importantly, the related HN thread confirms DeepSeek made the V4 Pro pricing discount permanent. If you're evaluating API providers for agent workloads, DeepSeek V4 Pro is now a stable pricing option rather than a promotional one. Check current pricing against Anthropic/OpenAI for batch/cached workloads.</li></ul>
+<p><a href="https://thenightlylibrarian.com/briefs/2026-05-26/">Read the full brief →</a></p>]]></description>
+    </item>
+    <item>
+      <title>May 25, 2026 — Decision-changing for sandboxing, dependency installs, and build isolation.</title>
+      <link>https://thenightlylibrarian.com/briefs/2026-05-25/</link>
+      <guid isPermaLink="true">https://thenightlylibrarian.com/briefs/2026-05-25/</guid>
+      <pubDate>Mon, 25 May 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[<p>Decision-changing for sandboxing, dependency installs, and build isolation.</p>
+<p>Topics: AI Operations / Agent Control · Data Infrastructure / Verification / Scraping · Tools Worth Testing · Model + API Changes</p>
+<ul><li>A Network Allow-List Won't Stop Exfiltration: Decision-changing for sandboxing, dependency installs, and build isolation.</li><li>“Long-Term Support” doesn’t mean what you think: Avoids a common planning trap in ops and dev environments.</li><li>Debian SE Linux and PinTheft: Practical reminder that “optional” hardening can stop real exploit chains.</li></ul>
+<p><a href="https://thenightlylibrarian.com/briefs/2026-05-25/">Read the full brief →</a></p>]]></description>
+    </item>
+    <item>
+      <title>May 24, 2026 — Credible kernel exploit chain implies real patch urgency on Apple Silicon Macs.</title>
+      <link>https://thenightlylibrarian.com/briefs/2026-05-24/</link>
+      <guid isPermaLink="true">https://thenightlylibrarian.com/briefs/2026-05-24/</guid>
+      <pubDate>Sun, 24 May 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[<p>Credible kernel exploit chain implies real patch urgency on Apple Silicon Macs.</p>
+<p>Topics: AI Operations / Agent Control · Model + API Changes · Small Business Automation</p>
+<ul><li>Pardon MIE?: Credible kernel exploit chain implies real patch urgency on Apple Silicon Macs.</li><li>0.12.8: If you run the daemon on shared hosts, socket permissions are a real footgun; update reduces local attack surface.</li><li>.NET (OK, C#) finally gets union types: Union types can simplify error/option flows and reduce boilerplate when modeling “either/or” values.</li></ul>
+<p><a href="https://thenightlylibrarian.com/briefs/2026-05-24/">Read the full brief →</a></p>]]></description>
+    </item>
+    <item>
+      <title>May 23, 2026 — Directly changes incident response procedure for anyone using Google APIs; deletion is not an immedi</title>
+      <link>https://thenightlylibrarian.com/briefs/2026-05-23/</link>
+      <guid isPermaLink="true">https://thenightlylibrarian.com/briefs/2026-05-23/</guid>
+      <pubDate>Sat, 23 May 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[<p>Directly changes incident response procedure for anyone using Google APIs; deletion is not an immediate kill switch.</p>
+<p>Topics: AI Operations / Agent Control · Tools Worth Testing · Data Infrastructure / Verification / Scraping · Model + API Changes</p>
+<ul><li>Google API Keys Keep Working After Deletion (Long Enough to Be Exploited): Directly changes incident response procedure for anyone using Google APIs; deletion is not an immediate kill switch.</li><li>Heretic Free Software Project Served Legal Notice by Meta: Signals Meta is willing to enforce LLaMA license against small OSS projects; relevant to anyone shipping on LLaMA-family weights.</li><li>110 tok/s on Qwen3.6 35B A3B with 12GB VRAM Using ik_llama.cpp: Actionable alternative backend for local LLM users seeing throughput regressions in mainline llama.cpp.</li></ul>
+<p><a href="https://thenightlylibrarian.com/briefs/2026-05-23/">Read the full brief →</a></p>]]></description>
+    </item>
+    <item>
+      <title>May 22, 2026 — 12 stories cleared the bar, led by GitHub confirms breach of 3,800 repos via malicious VSCode extens</title>
+      <link>https://thenightlylibrarian.com/briefs/2026-05-22/</link>
+      <guid isPermaLink="true">https://thenightlylibrarian.com/briefs/2026-05-22/</guid>
+      <pubDate>Fri, 22 May 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[<p>12 stories cleared the bar, led by GitHub confirms breach of 3,800 repos via malicious VSCode extension, OpenAI to confidentially file for IPO as soon as Friday, and An OpenAI model has disproved a central conjecture in discrete geometry.</p>
+<ul><li>GitHub confirms breach of 3,800 repos via malicious VSCode extension: GitHub has confirmed that a malicious VSCode extension was used to steal developer credentials and access over 3,800 repositories. This is a supply chain attack vector targeting developer workstations directly. Immediate action: audit all installed VSCode extensions, remove anything unfamiliar or low-reputation, and check your repositories for unauthorized access or committed secrets.</li><li>OpenAI to confidentially file for IPO as soon as Friday: OpenAI is filing confidentially with the SEC for an IPO, potentially as soon as Friday May 22. Going public changes OpenAI's corporate incentives significantly — quarterly earnings pressure, shareholder priorities, and regulatory scrutiny all increase. Builders relying on OpenAI APIs should watch for any pricing or rate limit changes that could follow increased investor visibility.</li><li>An OpenAI model has disproved a central conjecture in discrete geometry: OpenAI's model found a valid counterexample to a longstanding conjecture in discrete geometry, verified by Fields medalist Tim Gowers. This is the first credible instance of a frontier AI model making a genuinely original mathematical contribution — not solving a known problem but disproving a believed-true conjecture. A landmark AI capability milestone with implications for how we think about frontier model reasoning.</li></ul>
+<p><a href="https://thenightlylibrarian.com/briefs/2026-05-22/">Read the full brief →</a></p>]]></description>
+    </item>
+    <item>
+      <title>May 21, 2026 — If you built cost assumptions on Gemini 2.0 Flash pricing, 3.5 Flash is not a free upgrade—review th</title>
+      <link>https://thenightlylibrarian.com/briefs/2026-05-21/</link>
+      <guid isPermaLink="true">https://thenightlylibrarian.com/briefs/2026-05-21/</guid>
+      <pubDate>Thu, 21 May 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[<p>If you built cost assumptions on Gemini 2.0 Flash pricing, 3.5 Flash is not a free upgrade—review the pricing page before switching.</p>
+<p>Topics: Small Business Automation · AI Operations / Agent Control · Tools Worth Testing · Model + API Changes</p>
+<ul><li>Gemini 3.5 Flash: more expensive, but Google plan to use it for everything: If you built cost assumptions on Gemini 2.0 Flash pricing, 3.5 Flash is not a free upgrade—review the pricing page before switching.</li><li>My domain got abused on Github Pages: This is a real subdomain takeover vulnerability class that affects anyone with custom domains on GitHub Pages—even if the original Pages site was deleted or the domain was only briefly configured.</li><li>GitHub Source Code Breach - TeamPCP Claims Access to Internal Source Code: If true, the breach could affect the security of GitHub Actions infrastructure, internal tooling, or token handling. GitHub users should watch for an official GitHub Security Advisory.</li></ul>
+<p><a href="https://thenightlylibrarian.com/briefs/2026-05-21/">Read the full brief →</a></p>]]></description>
+    </item>
+  </channel>
+</rss>
