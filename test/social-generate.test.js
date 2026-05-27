@@ -47,12 +47,13 @@ test('generate writes deterministic brief, social drafts, and manifest', () => {
   const xPosts = x.trimEnd().split('\n\n---\n\n');
   assert.equal(xPosts.length, 1);
   assert.ok(xPosts.every((post) => post.length <= social.X_LIMIT));
-  assert.match(xPosts[0], /^Nightly Librarian \(2026-05-20\)/);
+  assert.match(xPosts[0], /^Cloudflare says Claude Managed Agents can run tool calls/);
   assert.match(x, /https:\/\/thenightlylibrarian\.com\/briefs\/2026-05-20/);
 
   const linkedin = read(root, 'dist/social/2026-05-20.linkedin.md');
   assert.match(linkedin, /# LinkedIn Draft - 2026-05-20/);
-  assert.match(linkedin, /Read the full brief/);
+  assert.match(linkedin, /Went through \d+ links today\. Here's what made the brief:/);
+  assert.match(linkedin, /Full brief with all \d+ researched links/);
   assert.match(linkedin, /https:\/\/thenightlylibrarian\.com\/briefs\/2026-05-20/);
   assert.match(linkedin, /Draft status: not approved for posting\./);
 

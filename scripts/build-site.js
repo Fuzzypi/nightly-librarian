@@ -217,6 +217,8 @@ function parseBriefMd(mdContent, date) {
     status: "",
     mode: "",
     themes: [],
+    summaryParagraphs: [],
+    summaryText: "",
     leadTakeaway: "",
     published: [],   // { rank, title, sourceText, sourceUrl, category, published, facts, takeaway, uncertainty }
     monitored: [],
@@ -262,9 +264,14 @@ function parseBriefMd(mdContent, date) {
       .map((t) => t.trim())
       .filter(Boolean);
   }
-  // Lead takeaway is the first non-empty, non-themes line after themes
-  const summaryLines = summary.split("\n").filter((l) => l.trim() && !l.startsWith("Themes:"));
-  if (summaryLines[0]) brief.leadTakeaway = summaryLines[0].trim();
+  // Preserve the whole daily-summary lede for the site. The first paragraph stays
+  // as leadTakeaway for concise titles/metadata; summaryText is the full lead-in.
+  brief.summaryParagraphs = summary
+    .split(/\n\s*\n/)
+    .map((block) => block.split("\n").map((line) => line.trim()).filter(Boolean).join(" "))
+    .filter((paragraph) => paragraph && !paragraph.startsWith("Themes:"));
+  brief.summaryText = brief.summaryParagraphs.join(" ");
+  if (brief.summaryParagraphs[0]) brief.leadTakeaway = brief.summaryParagraphs[0];
 
   // Parser helper for item blocks (used by both "worth mentioning" and "monitor")
   function parseItems(sectionText) {
@@ -934,12 +941,21 @@ function renderRawMarkdown(markdown) {
     </details>`;
 }
 
+function briefSummaryText(brief) {
+  if (brief.summaryText) return brief.summaryText;
+  if (Array.isArray(brief.summaryParagraphs) && brief.summaryParagraphs.length) {
+    return brief.summaryParagraphs.join(" ");
+  }
+  return brief.leadTakeaway || "";
+}
+
 // ─── Brief page renderer ──────────────────────────────────────────────────────
 
 function renderBriefPage(brief) {
   const dateLabel = formatDate(brief.date);
   const published = brief.published;
   const monitored = brief.monitored;
+  const summaryText = briefSummaryText(brief);
 
   function renderItem(item) {
     const sourceLink = item.sourceUrl
@@ -1004,7 +1020,7 @@ function renderBriefPage(brief) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(dateLabel)} — ${esc(SITE_NAME)}</title>
-${seoMeta({ title: dateLabel, description: brief.leadTakeaway || brief.themes.join(", ") || SITE_DESCRIPTION, path: `/briefs/${brief.date}/`, type: "article", publishedDate: brief.date })}
+${seoMeta({ title: dateLabel, description: summaryText || brief.themes.join(", ") || SITE_DESCRIPTION, path: `/briefs/${brief.date}/`, type: "article", publishedDate: brief.date })}
   ${CSS_LINK}
 </head>
 <body>
@@ -1025,7 +1041,7 @@ ${seoMeta({ title: dateLabel, description: brief.leadTakeaway || brief.themes.jo
     <a class="back-link" href="/">All briefs</a>
     <h1>${esc(dateLabel)}</h1>
     ${brief.themes.length ? `<div class="meta" style="margin-top:0.4rem;">${brief.themes.map((t) => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
-    ${brief.leadTakeaway ? `<p class="lead-summary" style="margin-top:0.85rem;">${renderText(brief.leadTakeaway)}</p>` : ""}
+    ${summaryText ? `<p class="lead-summary" style="margin-top:0.85rem;">${renderText(summaryText)}</p>` : ""}
     ${publishedHtml}
     ${monitoredHtml}
     ${linkIndex}
@@ -1315,6 +1331,7 @@ function renderIndexPage(briefs, reports, legacyReports) {
   // briefs sorted newest-first
   const sorted = [...briefs].sort((a, b) => b.date.localeCompare(a.date));
   const latest = sorted[0];
+  const latestSummary = latest ? briefSummaryText(latest) : "";
   const sortedLegacyReports = [...legacyReports].sort((a, b) => b.slug.localeCompare(a.slug));
 
   function renderArchiveRow(brief) {
@@ -1351,7 +1368,7 @@ function renderIndexPage(briefs, reports, legacyReports) {
       </div>
     </div>`).join("\n")
     : latest
-      ? `<div class="item"><div class="item-takeaway">${renderText(latest.leadTakeaway || "")}</div></div>`
+      ? `<div class="item"><div class="item-takeaway">${renderText(latestSummary)}</div></div>`
       : "";
 
   // Archive rows (skip latest, already shown)
@@ -1397,7 +1414,7 @@ ${seoMeta({ title: SITE_NAME, description: SITE_DESCRIPTION, path: "/" })}
         <div class="section-label">Today's brief</div>
         <p class="brief-valueprop">Every morning I read a few hundred links so you don't have to. This is what cleared the bar today.</p>
         ${latest.themes.length ? `<div class="meta" style="margin-bottom:0.5rem;">${latest.themes.map((t) => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
-        ${latest.leadTakeaway ? `<p class="lead-summary">${renderText(latest.leadTakeaway)}</p>` : ""}
+        ${latestSummary ? `<p class="lead-summary">${renderText(latestSummary)}</p>` : ""}
         <div style="border-top:0.5px solid var(--border);">
           ${latestItemsHtml}
         </div>
@@ -1446,13 +1463,14 @@ function buildRssFeed(briefs) {
 
   const items = sorted.map((brief) => {
     const url = `${SITE_URL}/briefs/${brief.date}/`;
+    const summaryText = briefSummaryText(brief);
     const title = `${formatDate(brief.date)}${brief.leadTakeaway ? ` — ${brief.leadTakeaway.slice(0, 100)}` : ""}`;
     const themes = brief.themes.length ? `<p>Topics: ${brief.themes.join(" · ")}</p>` : "";
     const topItems = brief.published.slice(0, 3).map((item) =>
       `<li>${item.title}${item.takeaway ? `: ${item.takeaway}` : ""}</li>`
     ).join("");
     const descBody = [
-      brief.leadTakeaway ? `<p>${brief.leadTakeaway}</p>` : "",
+      summaryText ? `<p>${summaryText}</p>` : "",
       themes,
       topItems ? `<ul>${topItems}</ul>` : "",
       `<p><a href="${url}">Read the full brief →</a></p>`,
@@ -1583,6 +1601,8 @@ function main() {
         date: report.date,
         title: report.title,
         themes: [],
+        summaryParagraphs: [report.summary.text],
+        summaryText: report.summary.text,
         leadTakeaway: report.summary.text,
         published: report.worthAttention.map((item) => ({
           title: item.title,
@@ -1619,4 +1639,14 @@ function main() {
   if (DRY_RUN) console.log("(dry run — no files written)");
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  buildRssFeed,
+  briefSummaryText,
+  parseBriefMd,
+  renderBriefPage,
+  renderIndexPage,
+};
