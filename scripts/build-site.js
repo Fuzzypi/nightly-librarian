@@ -25,6 +25,15 @@ const {
 } = require("../src/report-archive.js");
 
 const REPO_ROOT = path.join(__dirname, "..");
+
+// Load .env if present (no dotenv dependency — plain parse)
+const envPath = path.join(REPO_ROOT, ".env");
+if (fs.existsSync(envPath)) {
+  fs.readFileSync(envPath, "utf8").split(/\r?\n/).forEach((line) => {
+    const m = line.match(/^\s*([A-Z_][A-Z0-9_]*)\s*=\s*(.*)\s*$/);
+    if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^['"]|['"]$/g, "");
+  });
+}
 const BRIEFS_MD_DIR = path.join(REPO_ROOT, "dist", "briefs");
 const REPORTS_MD_DIR = path.join(REPO_ROOT, "reports");
 const LEGACY_RUNS_DIR = path.join(REPO_ROOT, "archive", "runs");
@@ -34,6 +43,15 @@ const SITE_REPORTS_DIR = path.join(SITE_DIR, "reports");
 
 const DRY_RUN = process.argv.includes("--dry-run");
 
+// ─── Site config ──────────────────────────────────────────────────────────────
+const SITE_URL = process.env.NIGHTLY_LIBRARIAN_PUBLIC_BASE_URL || process.env.SITE_URL || "https://thenightlylibrarian.com";
+const SITE_NAME = "The Nightly Librarian";
+const SITE_DESCRIPTION = "Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.";
+
+// Substack publication slug — replace YOUR_SLUG with your real slug, e.g. "nightlylibrarian"
+// Your subscribe page lives at https://YOUR_SLUG.substack.com/subscribe
+const SUBSTACK_SLUG = process.env.SUBSTACK_SLUG || "YOUR_SLUG";
+
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
 function esc(str) {
@@ -42,6 +60,81 @@ function esc(str) {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+/**
+ * Render the full SEO <head> block: canonical, OG, Twitter Card, JSON-LD, RSS autodiscovery.
+ * @param {{ title: string, description: string, path: string, type?: string, publishedDate?: string }} opts
+ */
+function seoMeta({ title, description, path: urlPath, type = "website", publishedDate = "" }) {
+  const fullUrl = SITE_URL + urlPath;
+  const fullTitle = title === SITE_NAME ? title : `${title} | ${SITE_NAME}`;
+  const safeDesc = esc(description.slice(0, 200));
+  const safeTitle = esc(fullTitle);
+  const safeUrl = esc(fullUrl);
+
+  const jsonLd = type === "article"
+    ? JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": title,
+        "description": description,
+        "url": fullUrl,
+        "publisher": { "@type": "Organization", "name": SITE_NAME, "url": SITE_URL },
+        ...(publishedDate ? { "datePublished": publishedDate } : {}),
+      })
+    : JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": SITE_NAME,
+        "url": SITE_URL,
+        "description": SITE_DESCRIPTION,
+      });
+
+  return `  <meta name="description" content="${safeDesc}">
+  <link rel="canonical" href="${safeUrl}">
+  <link rel="alternate" type="application/rss+xml" title="${esc(SITE_NAME)}" href="${esc(SITE_URL)}/feed.xml">
+  <meta property="og:type" content="${esc(type === "article" ? "article" : "website")}">
+  <meta property="og:site_name" content="${esc(SITE_NAME)}">
+  <meta property="og:title" content="${safeTitle}">
+  <meta property="og:description" content="${safeDesc}">
+  <meta property="og:url" content="${safeUrl}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="${safeTitle}">
+  <meta name="twitter:description" content="${safeDesc}">
+  <script type="application/ld+json">${jsonLd}</script>`;
+}
+
+/**
+ * Sidebar subscribe block — compact email form for the sidebar.
+ */
+function subscribeSidebar() {
+  const action = `https://${SUBSTACK_SLUG}.substack.com/subscribe`;
+  return `<div class="sidebar-block">
+          <div class="section-label">Get the brief</div>
+          <p class="subscribe-desc">Every morning. No hype, no filler.</p>
+          <form class="subscribe-form" action="${action}" method="GET" target="_blank">
+            <input class="subscribe-input" type="email" name="email" placeholder="your@email.com" required>
+            <button class="subscribe-btn" type="submit">Subscribe →</button>
+          </form>
+          <p class="subscribe-note">Free. Unsubscribe any time.</p>
+        </div>`;
+}
+
+/**
+ * Bottom-of-brief subscribe strip — slightly more expansive CTA after the content.
+ */
+function subscribeStrip() {
+  const action = `https://${SUBSTACK_SLUG}.substack.com/subscribe`;
+  return `<div class="subscribe-strip">
+      <div class="subscribe-headline">Get this every morning</div>
+      <p class="subscribe-desc">Filtered from 40+ sources daily — what changed, why it matters, what to do. Free.</p>
+      <form class="subscribe-form" action="${action}" method="GET" target="_blank">
+        <input class="subscribe-input" type="email" name="email" placeholder="your@email.com" required>
+        <button class="subscribe-btn" type="submit">Subscribe →</button>
+      </form>
+      <p class="subscribe-note">Free. Unsubscribe any time.</p>
+    </div>`;
 }
 
 /** Convert inline markdown links [text](url) → <a href="url">text</a> */
@@ -271,227 +364,554 @@ const SHARED_CSS = `
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg:        #0e0f13;
-    --bg2:       #15161c;
-    --bg3:       #1d1f28;
-    --border:    #2a2d3a;
-    --text:      #d8d9e0;
-    --text-dim:  #888a96;
-    --accent:    #f0c040;
-    --accent2:   #e87c3e;
-    --link:      #7eb8f0;
-    --tag-p:     #3a6644;
-    --tag-m:     #4a4a22;
-    --tag-r:     #2a2a2a;
+    --bg:        #f9f6f0;
+    --bg2:       #f1ece4;
+    --bg3:       #e8e0d4;
+    --border:    rgba(0,0,0,0.11);
+    --text:      #1a1a18;
+    --text-dim:  #6a6860;
+    --accent:    #1e7a42;
+    --accent2:   #155e30;
+    --link:      #1e7a42;
+    --tag-p:     #e4edd8;
+    --tag-m:     #ede8f4;
+    --tag-r:     #e8e4dc;
   }
 
-  html { font-size: 16px; }
+  html { font-size: 17px; }
 
   body {
     background: var(--bg);
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-    line-height: 1.65;
+    line-height: 1.6;
     min-height: 100vh;
   }
 
   a { color: var(--link); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+  a:hover { text-decoration: underline; color: var(--accent2); }
 
+  /* ── Header ── */
   .site-header {
-    border-bottom: 1px solid var(--border);
-    padding: 1.5rem 1.5rem 1.25rem;
+    border-top: 3px solid var(--accent);
+    padding: 1.25rem 1.5rem 0;
+    background: var(--bg);
+  }
+
+  .header-top {
     display: flex;
-    align-items: baseline;
-    gap: 1.25rem;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
     flex-wrap: wrap;
   }
 
   .brand {
     font-family: "Georgia", "Times New Roman", serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: normal;
-    letter-spacing: 0.04em;
-    color: var(--accent);
-    text-transform: uppercase;
+    color: var(--text);
     text-decoration: none;
+    line-height: 1;
   }
-  .brand:hover { text-decoration: none; opacity: 0.85; }
+  .brand:hover { text-decoration: none; color: var(--accent); }
 
   .brand-tagline {
-    font-size: 0.8rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     color: var(--text-dim);
-    letter-spacing: 0.02em;
+    margin-top: 0.35rem;
   }
 
   .site-nav {
-    margin-left: auto;
-    font-size: 0.8rem;
     display: flex;
     gap: 1.25rem;
-    align-items: center;
+    font-size: 0.8rem;
+    align-items: flex-end;
+    padding-bottom: 0.15rem;
   }
-  .site-nav a { color: var(--text-dim); }
+  .site-nav a { color: var(--text-dim); text-decoration: none; }
   .site-nav a:hover { color: var(--text); text-decoration: none; }
+  .site-nav a.nav-active {
+    color: var(--text);
+    font-weight: 600;
+    border-bottom: 1.5px solid var(--text);
+    padding-bottom: 1px;
+  }
 
-  main { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.6rem;
+    padding: 0.5rem 0;
+    border-top: 0.5px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--text-dim);
+  }
 
-  h1 { font-size: 1.5rem; font-weight: 600; line-height: 1.3; color: #fff; }
-  h2 { font-size: 1rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
-       color: var(--text-dim); margin-top: 2.5rem; margin-bottom: 1rem;
-       padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
-  h3 { font-size: 1rem; font-weight: 600; color: #fff; }
+  /* ── Layout ── */
+  .page-wrap { max-width: 860px; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
 
-  p { margin-top: 0.75rem; }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 210px;
+    gap: 2.5rem;
+    align-items: start;
+  }
 
-  .meta { font-size: 0.78rem; color: var(--text-dim); margin-top: 0.3rem; }
+  .sidebar {
+    border-left: 0.5px solid var(--border);
+    padding-left: 1.75rem;
+  }
+
+  .sidebar-block { margin-bottom: 1.5rem; }
+  .sidebar-block + .sidebar-block {
+    padding-top: 1.5rem;
+    border-top: 0.5px solid var(--border);
+  }
+
+  /* Single-column pages still get reasonable width */
+  main { max-width: 700px; margin: 0 auto; padding: 1.75rem 1.5rem 4rem; }
+
+  /* ── Section labels ── */
+  .section-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.85rem;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: var(--border);
+  }
+
+  /* ── Typography ── */
+  h1 {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 1.25;
+    color: var(--text);
+  }
+  h2 {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.85rem;
+  }
+  h2::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: var(--border);
+  }
+  h3 {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text);
+  }
+
+  p { margin-top: 0.6rem; }
+
+  .meta { font-size: 0.72rem; color: var(--text-dim); margin-top: 0.25rem; }
   .meta span + span::before { content: " · "; }
 
+  /* ── Tags ── */
   .tag {
     display: inline-block;
-    font-size: 0.68rem;
+    font-size: 0.62rem;
     font-weight: 600;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    padding: 0.15em 0.5em;
-    border-radius: 3px;
+    padding: 0.12em 0.45em;
+    border: 0.5px solid var(--border);
+    color: var(--text-dim);
     vertical-align: middle;
   }
-  .tag-p { background: var(--tag-p); color: #8ecf9e; }
-  .tag-m { background: var(--tag-m); color: #c8c870; }
+  .tag-p { background: var(--tag-p); color: #3a6030; }
+  .tag-m { background: var(--tag-m); color: #6a5a18; }
   .tag-r { background: var(--tag-r); color: var(--text-dim); }
 
+  /* ── Items ── */
   .item {
-    padding: 1.25rem 0;
-    border-bottom: 1px solid var(--border);
+    padding: 0.8rem 0;
+    border-bottom: 0.5px solid var(--border);
   }
   .item:last-child { border-bottom: none; }
 
-  .item-title { font-size: 1rem; font-weight: 600; color: #fff; line-height: 1.35; }
+  .item-row { display: flex; gap: 0.65rem; }
+  .item-num { font-size: 0.7rem; color: var(--text-dim); min-width: 1rem; padding-top: 0.15rem; flex-shrink: 0; }
+
+  .item-title {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 0.975rem;
+    font-weight: normal;
+    color: var(--text);
+    line-height: 1.35;
+  }
   .item-title a { color: inherit; }
   .item-title a:hover { color: var(--accent); text-decoration: none; }
 
   .item-takeaway {
-    margin-top: 0.6rem;
-    font-size: 0.92rem;
-    line-height: 1.6;
-    color: var(--text);
+    margin-top: 0.3rem;
+    font-size: 0.855rem;
+    line-height: 1.55;
+    color: var(--text-dim);
   }
 
   .item-facts {
-    margin-top: 0.5rem;
-    font-size: 0.84rem;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
     color: var(--text-dim);
     border-left: 2px solid var(--border);
-    padding-left: 0.75rem;
-    line-height: 1.55;
+    padding-left: 0.65rem;
+    line-height: 1.5;
   }
 
   .item-uncertainty {
-    margin-top: 0.4rem;
-    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    font-size: 0.78rem;
     color: var(--accent2);
     font-style: italic;
   }
 
   .item-meta {
-    margin-top: 0.5rem;
-    font-size: 0.75rem;
+    margin-top: 0.3rem;
+    font-size: 0.7rem;
     color: var(--text-dim);
     display: flex;
-    gap: 0.75rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
     align-items: center;
   }
 
-  details { margin-top: 1rem; }
-  details summary {
-    cursor: pointer;
+  /* ── Archive rows ── */
+  .arc-row {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.7rem 0;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .arc-row:last-child { border-bottom: none; }
+  .arc-date { font-size: 0.75rem; color: var(--text-dim); min-width: 52px; padding-top: 0.1rem; flex-shrink: 0; }
+  .arc-text { font-size: 0.855rem; color: var(--text-dim); line-height: 1.45; }
+  .arc-meta { font-size: 0.7rem; color: var(--text-dim); margin-top: 0.2rem; opacity: 0.75; }
+
+  /* ── Archive theme pills ── */
+  .arc-themes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.15rem;
+  }
+  .arc-tag {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 0.15em 0.5em;
+    border-radius: 2px;
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    color: var(--text-dim);
+  }
+
+  /* ── Brief value prop ── */
+  .brief-valueprop {
     font-size: 0.8rem;
     color: var(--text-dim);
-    user-select: none;
+    line-height: 1.55;
+    margin-bottom: 0.65rem;
+    font-style: italic;
+  }
+
+  /* ── Sidebar rows ── */
+  .sb-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     padding: 0.4rem 0;
+    border-bottom: 0.5px solid var(--border);
+    font-size: 0.8rem;
+  }
+  .sb-row:last-child { border-bottom: none; }
+  .sb-row a { color: var(--text-dim); }
+  .sb-row a:hover { color: var(--text); text-decoration: none; }
+  .sb-count { font-size: 0.7rem; color: var(--text-dim); }
+
+  /* ── Details ── */
+  details { margin-top: 0.85rem; }
+  details summary {
+    cursor: pointer;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    user-select: none;
+    padding: 0.35rem 0;
   }
   details summary:hover { color: var(--text); }
   details[open] summary { color: var(--text); }
 
-  .link-index {
-    margin-top: 0.75rem;
-    font-size: 0.8rem;
-    line-height: 1.8;
-  }
+  /* ── Link index ── */
+  .link-index { margin-top: 0.65rem; font-size: 0.78rem; line-height: 1.75; }
   .link-index a { color: var(--text-dim); }
   .link-index a:hover { color: var(--link); }
   .link-index .li-p a { color: var(--text); }
 
+  /* ── Back link ── */
   .back-link {
     display: inline-block;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     color: var(--text-dim);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
   }
   .back-link:hover { color: var(--text); text-decoration: none; }
   .back-link::before { content: "← "; }
 
+  /* ── Summary card (reports) ── */
   .summary-card {
-    margin-top: 1.25rem;
-    padding: 1.1rem 1.15rem;
-    background: linear-gradient(180deg, rgba(240, 192, 64, 0.08), rgba(240, 192, 64, 0.02));
-    border: 1px solid rgba(240, 192, 64, 0.18);
-    border-radius: 10px;
+    margin-top: 1rem;
+    padding: 0.9rem 1rem;
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-left: 3px solid var(--accent);
   }
-
   .summary-card p {
-    margin-top: 0.35rem;
-    font-size: 0.95rem;
-    line-height: 1.65;
+    margin-top: 0.3rem;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--text-dim);
   }
 
   .eyebrow {
-    font-size: 0.72rem;
+    font-size: 0.65rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.14em;
     color: var(--accent);
     font-weight: 700;
   }
 
+  /* ── Raw report ── */
   .raw-report {
     margin-top: 0.9rem;
     white-space: pre-wrap;
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: 0.78rem;
-    line-height: 1.65;
+    font-size: 0.74rem;
+    line-height: 1.6;
     color: var(--text-dim);
     background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1rem;
+    border: 0.5px solid var(--border);
+    padding: 0.85rem;
   }
 
-  .item-stack {
-    display: grid;
-    gap: 0.85rem;
+  .item-stack { display: grid; gap: 0; }
+  .compact-list { margin-top: 0.65rem; display: grid; gap: 0; }
+  .compact-list .item { padding: 0.7rem 0; }
+
+  /* ── Lead takeaway ── */
+  .lead-summary {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 0.975rem;
+    font-style: italic;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin-bottom: 0.85rem;
   }
 
-  .compact-list {
-    margin-top: 0.75rem;
-    display: grid;
-    gap: 0.8rem;
+  /* ── Hero tagline (kept for compatibility) ── */
+  .hero-tagline {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 1.3rem;
+    line-height: 1.35;
+    color: var(--text);
+    font-weight: normal;
+    margin-top: 1.5rem;
+  }
+  .hero-sub {
+    font-size: 0.88rem;
+    color: var(--text-dim);
+    margin-top: 0.45rem;
+    line-height: 1.6;
+    max-width: 540px;
   }
 
-  .compact-list .item {
-    padding: 0.9rem 0;
-  }
-
+  /* ── Footer ── */
   footer {
-    border-top: 1px solid var(--border);
-    padding: 1.5rem;
+    border-top: 2px solid var(--text);
+    padding: 0.85rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .footer-brand {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  .footer-sub { font-size: 0.72rem; color: var(--text-dim); }
+
+  /* ── Subscribe block ── */
+  .subscribe-desc {
     font-size: 0.78rem;
     color: var(--text-dim);
-    text-align: center;
-    line-height: 1.8;
+    line-height: 1.5;
+    margin-bottom: 0.65rem;
+    margin-top: 0;
+  }
+
+  .subscribe-form {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .subscribe-input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.4em 0.6em;
+    font-size: 0.78rem;
+    font-family: inherit;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+  .subscribe-input:focus { border-color: var(--accent); }
+  .subscribe-input::placeholder { color: var(--text-dim); opacity: 0.7; }
+
+  .subscribe-btn {
+    padding: 0.4em 0.85em;
+    font-size: 0.78rem;
+    font-family: inherit;
+    font-weight: 600;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 0;
+    letter-spacing: 0.02em;
+  }
+  .subscribe-btn:hover { background: var(--accent2); }
+
+  .subscribe-note {
+    margin-top: 0.45rem;
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    opacity: 0.7;
+  }
+
+  .subscribe-strip {
+    margin-top: 2.5rem;
+    padding: 1.1rem 1.25rem;
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-left: 3px solid var(--accent);
+  }
+  .subscribe-strip .subscribe-headline {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 0.95rem;
+    font-weight: normal;
+    color: var(--text);
+    margin-bottom: 0.35rem;
+  }
+
+  /* ── Theme toggle button ── */
+  .theme-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--text-dim);
+    padding: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+  .theme-btn:hover { color: var(--text); }
+
+  /* ── Dark mode ── */
+  /* Fires when OS is dark AND user hasn't forced light */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:        #1d1e20;
+      --bg2:       #252628;
+      --bg3:       #2e2f31;
+      --border:    rgba(255,255,255,0.1);
+      --text:      #e8e4dc;
+      --text-dim:  #9a9488;
+      --accent:    #40d070;
+      --accent2:   #58e085;
+      --link:      #40d070;
+      --tag-p:     #192c1e;
+      --tag-m:     #241e30;
+      --tag-r:     #252628;
+    }
+  }
+  /* Fires when user explicitly chose dark (regardless of OS) */
+  :root[data-theme="dark"] {
+    --bg:        #1d1e20;
+    --bg2:       #252628;
+    --bg3:       #2e2f31;
+    --border:    rgba(255,255,255,0.1);
+    --text:      #e8e4dc;
+    --text-dim:  #9a9488;
+    --accent:    #40d070;
+    --accent2:   #58e085;
+    --link:      #40d070;
+    --tag-p:     #192c1e;
+    --tag-m:     #241e30;
+    --tag-r:     #252628;
   }
 `;
+
+const CSS_LINK = '<link rel="stylesheet" href="/style.css">';
+
+// Runs before CSS paints — sets data-theme from localStorage to prevent FOUC
+const THEME_INIT = `<script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>`;
+
+// Toggle function + icon sync — injected before </body> on every page
+const THEME_JS = `<script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>`;
 
 function siteNav(active = "") {
   const items = [
@@ -499,10 +919,12 @@ function siteNav(active = "") {
     { href: "/reports/", label: "Reports", key: "reports" },
   ];
 
-  return items.map((item) => {
-    const style = item.key === active ? ` style="color:#fff"` : "";
-    return `<a href="${item.href}"${style}>${item.label}</a>`;
+  const links = items.map((item) => {
+    const cls = item.key === active ? ` class="nav-active"` : "";
+    return `<a href="${item.href}"${cls}>${item.label}</a>`;
   }).join("");
+
+  return links + `<button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button>`;
 }
 
 function renderRawMarkdown(markdown) {
@@ -538,14 +960,19 @@ function renderBriefPage(brief) {
 
     return `
     <div class="item">
-      <div class="item-title">${titleEl}</div>
-      ${item.takeaway ? `<div class="item-takeaway">${renderText(item.takeaway)}</div>` : ""}
-      ${factsHtml}
-      ${uncertaintyHtml}
-      <div class="item-meta">
-        ${sourceLink ? `<span>${sourceLink}</span>` : ""}
-        ${item.category ? `<span>${esc(item.category)}</span>` : ""}
-        ${item.published ? `<span>${esc(item.published)}</span>` : ""}
+      <div class="item-row">
+        <span class="item-num">${item.rank}.</span>
+        <div>
+          <div class="item-title">${titleEl}</div>
+          ${item.takeaway ? `<div class="item-takeaway">${renderText(item.takeaway)}</div>` : ""}
+          ${factsHtml}
+          ${uncertaintyHtml}
+          <div class="item-meta">
+            ${sourceLink ? `<span>${sourceLink}</span>` : ""}
+            ${item.category ? `<span>${esc(item.category)}</span>` : ""}
+            ${item.published ? `<span>${esc(item.published)}</span>` : ""}
+          </div>
+        </div>
       </div>
     </div>`;
   }
@@ -573,36 +1000,42 @@ function renderBriefPage(brief) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
+  ${THEME_INIT}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${esc(brief.title)} — The Nightly Librarian</title>
-  <meta name="description" content="${esc(brief.leadTakeaway || brief.title)}">
-  <style>${SHARED_CSS}</style>
+  <title>${esc(dateLabel)} — ${esc(SITE_NAME)}</title>
+${seoMeta({ title: dateLabel, description: brief.leadTakeaway || brief.themes.join(", ") || SITE_DESCRIPTION, path: `/briefs/${brief.date}/`, type: "article", publishedDate: brief.date })}
+  ${CSS_LINK}
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="/">The Nightly Librarian</a>
-    <span class="brand-tagline">AI signal without the noise</span>
-    <nav class="site-nav">${siteNav("archive")}</nav>
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav">${siteNav("archive")}</nav>
+    </div>
+    <div class="dateline">
+      <span>${esc(dateLabel)}</span>
+      <span style="font-style:italic;">What changed. Why it matters. What to do.</span>
+    </div>
   </header>
   <main>
     <a class="back-link" href="/">All briefs</a>
     <h1>${esc(dateLabel)}</h1>
-    <div class="meta">
-      ${brief.themes.length ? `<span>${brief.themes.join(" · ")}</span>` : ""}
-      ${brief.mode && brief.mode !== "primary" ? `<span>${esc(brief.mode)} mode</span>` : ""}
-    </div>
-
-    ${brief.leadTakeaway ? `<p style="margin-top:1.25rem;font-size:1.05rem;line-height:1.65;">${renderText(brief.leadTakeaway)}</p>` : ""}
-
+    ${brief.themes.length ? `<div class="meta" style="margin-top:0.4rem;">${brief.themes.map((t) => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
+    ${brief.leadTakeaway ? `<p class="lead-summary" style="margin-top:0.85rem;">${renderText(brief.leadTakeaway)}</p>` : ""}
     ${publishedHtml}
     ${monitoredHtml}
     ${linkIndex}
+    ${subscribeStrip()}
   </main>
   <footer>
-    The Nightly Librarian — what changed, why it matters, what to do about it.<br>
-    <a href="/">← Back to archive</a>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
   </footer>
+  ${THEME_JS}
 </body>
 </html>
 `;
@@ -642,29 +1075,34 @@ function renderDailyReportPage(report) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
+  ${THEME_INIT}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${esc(report.date)} report log — The Nightly Librarian</title>
-  <meta name="description" content="${esc(report.summary.text)}">
-  <style>${SHARED_CSS}</style>
+  <title>${esc(formatDate(report.date))} report log — ${esc(SITE_NAME)}</title>
+${seoMeta({ title: `${formatDate(report.date)} report log`, description: report.summary.text, path: `/reports/${report.date}/` })}
+  ${CSS_LINK}
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="/">The Nightly Librarian</a>
-    <span class="brand-tagline">AI signal without the noise</span>
-    <nav class="site-nav">${siteNav("reports")}</nav>
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav">${siteNav("reports")}</nav>
+    </div>
+    <div class="dateline">
+      <span>${esc(formatDate(report.date))} · Report log</span>
+      ${report.completedAt ? `<span>${esc(formatIsoDateTime(report.completedAt))}</span>` : ""}
+    </div>
   </header>
   <main>
     <a class="back-link" href="/reports/">All reports</a>
     <h1>${esc(formatDate(report.date))}</h1>
-    <div class="meta">
-      ${report.completedAt ? `<span>${esc(formatIsoDateTime(report.completedAt))}</span>` : ""}
-      ${report.runId ? `<span>run ${esc(report.runId.slice(0, 8))}</span>` : ""}
-    </div>
     <div class="summary-card">
-      <div class="eyebrow">Report Summary</div>
+      <div class="eyebrow">Report summary</div>
       <p>${esc(report.summary.text)}</p>
-      <div class="meta">
+      <div class="meta" style="margin-top:0.4rem;">
         ${report.summary.stats.map((item) => `<span>${esc(item)}</span>`).join("")}
       </div>
     </div>
@@ -673,9 +1111,10 @@ function renderDailyReportPage(report) {
     ${renderRawMarkdown(report.rawMarkdown)}
   </main>
   <footer>
-    Nightly report log for the Codex morning memo workflow.<br>
-    <a href="/reports/">← Back to reports</a>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
   </footer>
+  ${THEME_JS}
 </body>
 </html>
 `;
@@ -704,29 +1143,34 @@ function renderLegacyReportPage(report) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
+  ${THEME_INIT}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${esc(report.date)} legacy archive — The Nightly Librarian</title>
-  <meta name="description" content="${esc(report.summary.text)}">
-  <style>${SHARED_CSS}</style>
+  <title>${esc(formatDate(report.date))} legacy archive — ${esc(SITE_NAME)}</title>
+${seoMeta({ title: `${formatDate(report.date)} legacy archive`, description: report.summary.text, path: `/reports/legacy/${report.slug}/` })}
+  ${CSS_LINK}
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="/">The Nightly Librarian</a>
-    <span class="brand-tagline">AI signal without the noise</span>
-    <nav class="site-nav">${siteNav("reports")}</nav>
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav">${siteNav("reports")}</nav>
+    </div>
+    <div class="dateline">
+      <span>${esc(formatDate(report.date))} · Legacy archive</span>
+      <span>${esc(report.slug)}</span>
+    </div>
   </header>
   <main>
     <a class="back-link" href="/reports/">All reports</a>
     <h1>${esc(formatDate(report.date))}</h1>
-    <div class="meta">
-      <span>${esc(report.issue || "Legacy archive")}</span>
-      <span>${esc(report.slug)}</span>
-    </div>
     <div class="summary-card">
-      <div class="eyebrow">Archive Summary</div>
+      <div class="eyebrow">Archive summary</div>
       <p>${esc(report.summary.text)}</p>
-      <div class="meta">
+      <div class="meta" style="margin-top:0.4rem;">
         ${report.summary.stats.map((item) => `<span>${esc(item)}</span>`).join("")}
       </div>
     </div>
@@ -736,9 +1180,10 @@ function renderLegacyReportPage(report) {
     ${renderRawMarkdown(report.rawMarkdown)}
   </main>
   <footer>
-    Legacy Nightly Librarian archive snapshot.<br>
-    <a href="/reports/">← Back to reports</a>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
   </footer>
+  ${THEME_JS}
 </body>
 </html>
 `;
@@ -770,27 +1215,95 @@ function renderReportsIndexPage(reports, legacyReports) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
+  ${THEME_INIT}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Reports — The Nightly Librarian</title>
-  <meta name="description" content="Codex morning memo report log and legacy Nightly Librarian archive entries.">
-  <style>${SHARED_CSS}</style>
+  <title>Reports — ${esc(SITE_NAME)}</title>
+${seoMeta({ title: "Reports", description: "Pipeline report log and legacy archive entries — The Nightly Librarian.", path: "/reports/" })}
+  ${CSS_LINK}
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav">${siteNav("reports")}</nav>
+    </div>
+    <div class="dateline">
+      <span>Report log</span>
+      <span>Pipeline drafts and archive snapshots</span>
+    </div>
+  </header>
+  <main>
+    <h1>Report log</h1>
+    <p style="margin-top:0.5rem;font-size:0.88rem;color:var(--text-dim);line-height:1.6;max-width:600px;">Nightly report drafts from the Codex morning memo pipeline, plus preserved legacy archive snapshots from the earlier issue format.</p>
+    ${reports.length ? `<h2>Recent reports</h2>${recentRows}` : ""}
+    ${legacyReports.length ? `<h2>Legacy archive</h2>${legacyRows}` : ""}
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+  ${THEME_JS}
+</body>
+</html>
+`;
+}
+
+// ─── Brief page from report data (fallback for dates missing a dist/briefs entry) ──
+
+function renderBriefFromReport(report) {
+  const dateLabel = formatDate(report.date);
+  const items = report.worthAttention;
+
+  function renderItem(item) {
+    const titleEl = item.url
+      ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a>`
+      : esc(item.title);
+    const sourceLink = item.url
+      ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(new URL(item.url).hostname.replace(/^www\./, ""))}</a>`
+      : "";
+    return `
+    <div class="item">
+      <div class="item-title">${titleEl}</div>
+      ${item.summary ? `<div class="item-takeaway">${renderText(item.summary)}</div>` : ""}
+      <div class="item-meta">
+        ${sourceLink ? `<span>${sourceLink}</span>` : ""}
+        ${item.source ? `<span>${esc(item.source)}</span>` : ""}
+      </div>
+    </div>`;
+  }
+
+  const leadTakeaway = report.summary.text;
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  ${THEME_INIT}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${esc(dateLabel)} — ${esc(SITE_NAME)}</title>
+${seoMeta({ title: dateLabel, description: leadTakeaway || SITE_DESCRIPTION, path: `/briefs/${report.date}/`, type: "article", publishedDate: report.date })}
+  ${CSS_LINK}
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="/">The Nightly Librarian</a>
     <span class="brand-tagline">AI signal without the noise</span>
-    <nav class="site-nav">${siteNav("reports")}</nav>
+    <nav class="site-nav">${siteNav("archive")}</nav>
   </header>
   <main>
-    <h1>Report Log</h1>
-    <p style="margin-top:0.75rem;font-size:0.95rem;color:var(--text-dim);line-height:1.6;max-width:620px;">Nightly report drafts from the Codex morning memo workflow, plus preserved legacy archive snapshots from the earlier issue format.</p>
-    ${reports.length ? `<h2>Recent reports</h2>${recentRows}` : ""}
-    ${legacyReports.length ? `<h2>Legacy archive</h2>${legacyRows}` : ""}
+    <a class="back-link" href="/">All briefs</a>
+    <h1>${esc(dateLabel)}</h1>
+    ${leadTakeaway ? `<p style="margin-top:1.25rem;font-size:1.05rem;line-height:1.65;">${renderText(leadTakeaway)}</p>` : ""}
+    ${items.length ? `<h2>Worth mentioning</h2>\n${items.map(renderItem).join("\n")}` : ""}
   </main>
   <footer>
-    The report log preserves the long-form editorial trace behind the public brief pages.
+    The Nightly Librarian — built for builders, not boardrooms.
   </footer>
+  ${THEME_JS}
 </body>
 </html>
 `;
@@ -810,8 +1323,8 @@ function renderIndexPage(briefs, reports, legacyReports) {
     <div class="item">
       <div class="item-title">
         <a href="/briefs/${esc(brief.date)}/">${esc(formatDateShort(brief.date))}</a>
-        ${brief.themes.length ? ` <span class="meta" style="font-weight:normal;font-size:0.8rem;">${brief.themes.join(" · ")}</span>` : ""}
       </div>
+      ${brief.themes.length ? `<div class="arc-themes">${brief.themes.map((t) => `<span class="arc-tag">${esc(t)}</span>`).join("")}</div>` : ""}
       ${lead ? `<div class="item-takeaway" style="font-size:0.88rem;">${renderText(lead.takeaway || lead.title)}</div>` : ""}
       <div class="item-meta">
         <span>${brief.published.length} item${brief.published.length !== 1 ? "s" : ""}</span>
@@ -821,86 +1334,184 @@ function renderIndexPage(briefs, reports, legacyReports) {
     </div>`;
   }
 
-  // Hero block for latest brief
-  const heroHtml = latest ? `
-  <div style="margin-top:2.5rem;padding:1.5rem;background:var(--bg2);border:1px solid var(--border);border-radius:6px;">
-    <div class="meta" style="margin-bottom:0.5rem;">Latest · ${esc(formatDate(latest.date))}</div>
-    <h1 style="font-size:1.15rem;">${latest.themes.length ? esc(latest.themes.join(" · ")) : "Today's brief"}</h1>
-    ${latest.leadTakeaway ? `<p style="margin-top:0.75rem;font-size:0.95rem;line-height:1.6;">${renderText(latest.leadTakeaway)}</p>` : ""}
-    <div style="margin-top:1rem;">
-      <a href="/briefs/${esc(latest.date)}/" style="font-size:0.88rem;color:var(--accent);font-weight:600;">Read the full brief →</a>
-    </div>
-  </div>` : "";
-
-  const archiveRows = sorted.slice(1).map(renderArchiveRow).join("\n");
-  const archiveSectionHtml = sorted.length > 1
-    ? `<h2>Archive</h2>\n${archiveRows}`
-    : "";
-
-  const latestReport = reports[0] || sortedLegacyReports[0] || null;
-  const reportsHtml = latestReport
-    ? `<h2>Report log</h2>
+  // Today's brief items (from latest)
+  const latestItemsHtml = latest && latest.published.length
+    ? latest.published.slice(0, 5).map((item, i) => `
     <div class="item">
-      <div class="item-title">
-        <a href="${reports[0] ? `/reports/${esc(latestReport.slug)}/` : `/reports/legacy/${esc(latestReport.slug)}/`}">${reports[0] ? `Latest report · ${esc(formatDate(latestReport.date))}` : `Legacy archive · ${esc(formatDate(latestReport.date))}`}</a>
+      <div class="item-row">
+        <span class="item-num">${i + 1}.</span>
+        <div>
+          <div class="item-title">${item.sourceUrl ? `<a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener">${esc(item.title)}</a>` : esc(item.title)}</div>
+          ${item.takeaway ? `<div class="item-takeaway">${renderText(item.takeaway)}</div>` : ""}
+          <div class="item-meta">
+            ${item.sourceText ? `<span>${item.sourceUrl ? `<a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener">${esc(item.sourceText)}</a>` : esc(item.sourceText)}</span>` : ""}
+            ${item.category ? `<span>${esc(item.category)}</span>` : ""}
+          </div>
+        </div>
       </div>
-      <div class="item-takeaway">${renderText(latestReport.summary.text)}</div>
-      <div class="item-meta">
-        <span>${reports.length} recent report${reports.length === 1 ? "" : "s"}</span>
-        ${legacyReports.length ? `<span>${legacyReports.length} legacy archive entr${legacyReports.length === 1 ? "y" : "ies"}</span>` : ""}
-      </div>
-    </div>
-    <div style="margin-top:0.85rem;">
-      <a href="/reports/" style="font-size:0.88rem;color:var(--accent);font-weight:600;">Browse all reports →</a>
-    </div>`
-    : "";
+    </div>`).join("\n")
+    : latest
+      ? `<div class="item"><div class="item-takeaway">${renderText(latest.leadTakeaway || "")}</div></div>`
+      : "";
+
+  // Archive rows (skip latest, already shown)
+  const archiveRows = sorted.slice(1).map(renderArchiveRow).join("\n");
+
+  // Sidebar report log
+  const sortedReports = [...reports].sort((a, b) => b.date.localeCompare(a.date));
+  const reportLogRows = sortedReports.slice(0, 6).map((r) => `
+    <div class="sb-row">
+      <a href="/reports/${esc(r.slug)}/">${esc(formatDateShort(r.date))}</a>
+      <span class="sb-count">${r.worthAttention.length} item${r.worthAttention.length !== 1 ? "s" : ""}</span>
+    </div>`).join("\n");
 
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
+  ${THEME_INIT}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Nightly Librarian — AI signal without the noise</title>
-  <meta name="description" content="Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.">
-  <style>${SHARED_CSS}
-
-  .hero-tagline {
-    font-size: 1.35rem;
-    line-height: 1.4;
-    color: #fff;
-    font-weight: 600;
-    margin-top: 2.5rem;
-  }
-  .hero-sub {
-    font-size: 0.95rem;
-    color: var(--text-dim);
-    margin-top: 0.6rem;
-    line-height: 1.6;
-    max-width: 560px;
-  }
-  </style>
+  <title>${esc(SITE_NAME)} — AI signal without the noise</title>
+${seoMeta({ title: SITE_NAME, description: SITE_DESCRIPTION, path: "/" })}
+  ${CSS_LINK}
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="/">The Nightly Librarian</a>
-    <span class="brand-tagline">AI signal without the noise</span>
-    <nav class="site-nav">${siteNav("archive")}</nav>
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav">${siteNav("archive")}</nav>
+    </div>
+    ${latest ? `<div class="dateline">
+      <span>Latest issue · ${esc(formatDate(latest.date))}</span>
+      <span style="font-style:italic;">What changed. Why it matters. What to do.</span>
+    </div>` : ""}
   </header>
-  <main>
-    <p class="hero-tagline">What changed. Why it matters.<br>What builders should do about it.</p>
-    <p class="hero-sub">Daily AI and dev intelligence for builders, operators, and technical founders.
-    No hype, no enterprise filler — just what matters for people who ship.</p>
 
-    ${heroHtml}
-    ${reportsHtml}
-    ${archiveSectionHtml}
-  </main>
+  <div class="page-wrap">
+    <div class="two-col">
+      <div>
+        ${latest ? `
+        <div class="section-label">Today's brief</div>
+        <p class="brief-valueprop">Every morning I read a few hundred links so you don't have to. This is what cleared the bar today.</p>
+        ${latest.themes.length ? `<div class="meta" style="margin-bottom:0.5rem;">${latest.themes.map((t) => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
+        ${latest.leadTakeaway ? `<p class="lead-summary">${renderText(latest.leadTakeaway)}</p>` : ""}
+        <div style="border-top:0.5px solid var(--border);">
+          ${latestItemsHtml}
+        </div>
+        <a href="/briefs/${esc(latest.date)}/" style="display:inline-block;margin-top:0.85rem;font-size:0.82rem;color:var(--accent);font-weight:600;border-bottom:1px solid var(--accent);padding-bottom:1px;">Read the full brief →</a>
+        ` : ""}
+
+        ${sorted.length > 1 ? `
+        <div style="margin-top:1.75rem;">
+          <div class="section-label">Archive</div>
+          ${archiveRows}
+        </div>` : ""}
+      </div>
+
+      <aside class="sidebar">
+        ${subscribeSidebar()}
+        <div class="sidebar-block">
+          <div class="section-label">About</div>
+          <p style="font-size:0.82rem;line-height:1.6;color:var(--text-dim);">I scan AI papers, GitHub PRs, model releases, and dev tooling every night and distill what actually changes how you build. If it wouldn't make you stop and reconsider something, it doesn't make the brief.</p>
+        </div>
+
+        ${reportLogRows ? `
+        <div class="sidebar-block">
+          <div class="section-label">Report log</div>
+          ${reportLogRows}
+          <a href="/reports/" style="display:inline-block;margin-top:0.6rem;font-size:0.72rem;color:var(--text-dim);">All reports →</a>
+        </div>` : ""}
+      </aside>
+    </div>
+  </div>
+
   <footer>
-    The Nightly Librarian — built for builders, not boardrooms.
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
   </footer>
+  ${THEME_JS}
 </body>
 </html>
 `;
+}
+
+// ─── RSS feed builder ──────────────────────────────────────────────────────────
+
+function buildRssFeed(briefs) {
+  // newest-first, cap at 20 items
+  const sorted = [...briefs].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 20);
+
+  const items = sorted.map((brief) => {
+    const url = `${SITE_URL}/briefs/${brief.date}/`;
+    const title = `${formatDate(brief.date)}${brief.leadTakeaway ? ` — ${brief.leadTakeaway.slice(0, 100)}` : ""}`;
+    const themes = brief.themes.length ? `<p>Topics: ${brief.themes.join(" · ")}</p>` : "";
+    const topItems = brief.published.slice(0, 3).map((item) =>
+      `<li>${item.title}${item.takeaway ? `: ${item.takeaway}` : ""}</li>`
+    ).join("");
+    const descBody = [
+      brief.leadTakeaway ? `<p>${brief.leadTakeaway}</p>` : "",
+      themes,
+      topItems ? `<ul>${topItems}</ul>` : "",
+      `<p><a href="${url}">Read the full brief →</a></p>`,
+    ].filter(Boolean).join("\n");
+
+    // RFC-2822 pubDate — treat brief date as 6 AM UTC
+    const pubDate = new Date(`${brief.date}T06:00:00Z`).toUTCString();
+
+    return `    <item>
+      <title>${esc(title)}</title>
+      <link>${url}</link>
+      <guid isPermaLink="true">${url}</guid>
+      <pubDate>${pubDate}</pubDate>
+      <description><![CDATA[${descBody}]]></description>
+    </item>`;
+  }).join("\n");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>${SITE_NAME}</title>
+    <link>${SITE_URL}</link>
+    <description>${SITE_DESCRIPTION}</description>
+    <language>en-us</language>
+    <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+    <ttl>360</ttl>
+${items}
+  </channel>
+</rss>`;
+}
+
+// ─── Sitemap builder ──────────────────────────────────────────────────────────
+
+function buildSitemap(briefs, reports, legacyReports) {
+  const now = new Date().toISOString().slice(0, 10);
+
+  const urls = [
+    { loc: `${SITE_URL}/`, priority: "1.0", changefreq: "daily" },
+    { loc: `${SITE_URL}/reports/`, priority: "0.5", changefreq: "daily" },
+    ...briefs
+      .sort((a, b) => b.date.localeCompare(a.date))
+      .map((b) => ({ loc: `${SITE_URL}/briefs/${b.date}/`, priority: "0.8", changefreq: "never", lastmod: b.date })),
+    ...reports
+      .sort((a, b) => b.date.localeCompare(a.date))
+      .map((r) => ({ loc: `${SITE_URL}/reports/${r.date}/`, priority: "0.4", changefreq: "never", lastmod: r.date })),
+  ];
+
+  const urlEntries = urls.map(({ loc, priority, changefreq, lastmod }) => `  <url>
+    <loc>${loc}</loc>
+    <lastmod>${lastmod || now}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`).join("\n");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urlEntries}
+</urlset>`;
 }
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
@@ -961,9 +1572,48 @@ function main() {
     write(path.join(SITE_REPORTS_DIR, "legacy", slug, "index.html"), renderLegacyReportPage(legacy));
   }
 
+  // Generate brief pages from report data for any date missing a dist/briefs entry
+  const briefDates = new Set(briefs.map((b) => b.date));
+  for (const report of reports) {
+    if (!briefDates.has(report.date) && report.worthAttention.length > 0) {
+      const briefPagePath = path.join(SITE_BRIEFS_DIR, report.date, "index.html");
+      write(briefPagePath, renderBriefFromReport(report));
+      // Add a lightweight stub to briefs array so it appears in the archive index
+      briefs.push({
+        date: report.date,
+        title: report.title,
+        themes: [],
+        leadTakeaway: report.summary.text,
+        published: report.worthAttention.map((item) => ({
+          title: item.title,
+          takeaway: item.summary || "",
+          sourceUrl: item.url || "",
+          sourceText: item.source || "",
+          category: "",
+          published: "",
+          facts: [],
+          uncertainty: "",
+        })),
+        monitored: [],
+        allLinks: [],
+      });
+      briefDates.add(report.date);
+    }
+  }
+
+  // Write shared stylesheet
+  write(path.join(SITE_DIR, "style.css"), SHARED_CSS.trim());
+
   // Write index page
   write(path.join(SITE_DIR, "index.html"), renderIndexPage(briefs, reports, legacyReports));
   write(path.join(SITE_REPORTS_DIR, "index.html"), renderReportsIndexPage(reports, legacyReports));
+
+  // Write RSS feed
+  const allBriefs = [...briefs].sort((a, b) => b.date.localeCompare(a.date));
+  write(path.join(SITE_DIR, "feed.xml"), buildRssFeed(allBriefs));
+
+  // Write sitemap
+  write(path.join(SITE_DIR, "sitemap.xml"), buildSitemap(allBriefs, reports, legacyReports));
 
   console.log(`\nBuild complete. ${briefs.length} brief(s), ${reports.length} report(s), ${legacyReports.length} legacy archive entr${legacyReports.length === 1 ? "y" : "ies"} → site/`);
   if (DRY_RUN) console.log("(dry run — no files written)");
