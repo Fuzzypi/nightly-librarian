@@ -39,6 +39,8 @@ test('generate writes deterministic brief, social drafts, and manifest', () => {
   const brief = read(root, 'dist/briefs/2026-05-20.md');
   assert.match(brief, /# Nightly Librarian - 2026-05-20/);
   assert.match(brief, /## Daily summary/);
+  assert.match(brief, /Tonight's brief tracks AI Operations \/ Agent Control\./);
+  assert.match(brief, /The lead source signal is Cloudflare adds Claude Managed Agents support: Cloudflare says Claude Managed Agents can run tool calls inside isolated Firecracker microVMs near private backends\./);
   assert.match(brief, /Landing page: https:\/\/thenightlylibrarian\.com\/briefs\/2026-05-20/);
   assert.match(brief, /## All researched links \(complete index\)/);
   assert.match(brief, /\[R\] \[Cloudflare adds Claude Managed Agents support\]/);
@@ -67,6 +69,24 @@ test('generate writes deterministic brief, social drafts, and manifest', () => {
   assert.equal(manifest.landing_url, 'https://thenightlylibrarian.com/briefs/2026-05-20');
   assert.equal(manifest.sources[0].claim_type, 'launch');
   assert.equal(manifest.sources[1].claim_type, 'benchmark');
+});
+
+test('daily summary lead paragraph includes publish and monitor context without clipped snippet blocks', () => {
+  const root = makeTempProject();
+  const inputPath = path.join(root, 'artifacts/digests/2026-05-20.json');
+  const digest = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
+  digest.items[0].labels.push('publish_public');
+  digest.items[1].labels.push('publish_private');
+  digest.items[2].labels.push('monitor');
+  fs.writeFileSync(inputPath, `${JSON.stringify(digest, null, 2)}\n`);
+
+  social.generate({ date: '2026-05-20', baseDir: root });
+
+  const brief = read(root, 'dist/briefs/2026-05-20.md');
+  assert.match(brief, /Tonight's brief tracks AI Operations \/ Agent Control and Small Business Automation\./);
+  assert.match(brief, /Supporting context: Forge publishes local-agent guardrails \(Local-agent builders get a concrete benchmark target before trusting an 8B model with multi-step tool use\)\./);
+  assert.match(brief, /Monitor-only context stays out of the publish list until reviewed: Vercel tests flat-rate CDN pricing \(Cost-sensitive operators should watch whether this removes spike-bill risk before moving high-traffic archives\)\./);
+  assert.doesNotMatch(brief, /Forge publishes local-agent guardrails: Local-agent builders get a concrete benchmark target/);
 });
 
 test('generate is idempotent for the same input', () => {

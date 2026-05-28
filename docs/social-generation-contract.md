@@ -314,7 +314,7 @@ Expected approval shape:
     "generated_at": "2026-05-20T07:00:00.000Z"
   },
   "social": {
-    "generator_version": "social-generate/v2",
+    "generator_version": "social-generate/v4",
     "manifest": {
       "path": "dist/social/YYYY-MM-DD.json",
       "sha256": "hex string"

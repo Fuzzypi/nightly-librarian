@@ -5,7 +5,7 @@ const crypto = require("node:crypto");
 const fs = require("node:fs");
 const path = require("node:path");
 
-const GENERATOR_VERSION = "social-generate/v3";
+const GENERATOR_VERSION = "social-generate/v4";
 const X_LIMIT = 280;
 const DEFAULT_PUBLIC_BASE_URL = "https://thenightlylibrarian.com";
 const DEFAULT_BRIEF_PATH_TEMPLATE = "/briefs/{date}";
@@ -273,6 +273,73 @@ function markdownList(items, prefix = "- ") {
   return items.map((item) => `${prefix}${item}`).join("\n");
 }
 
+function cleanClause(value) {
+  return optionalString(value)
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/[.!?]+$/g, "");
+}
+
+function sentence(value) {
+  const clause = cleanClause(value);
+  return clause ? `${clause}.` : "";
+}
+
+function phraseList(values) {
+  if (values.length === 0) {
+    return "";
+  }
+  if (values.length === 1) {
+    return values[0];
+  }
+  if (values.length === 2) {
+    return `${values[0]} and ${values[1]}`;
+  }
+  return `${values.slice(0, -1).join(", ")}, and ${values.at(-1)}`;
+}
+
+function buildDailyLeadParagraph(digest, lead, published, monitored, categories) {
+  const parts = [];
+  const themeText = phraseList(categories);
+  parts.push(themeText ? `Tonight's brief tracks ${themeText}.` : "Tonight's brief tracks a mixed set of signals.");
+
+  const digestSummary = sentence(digest.summary);
+  if (digestSummary) {
+    parts.push(digestSummary);
+  }
+
+  if (lead) {
+    const leadFact = lead.source_facts[0] || "";
+    const sourceSignal = sentence(leadFact || lead.builder_takeaway);
+    if (sourceSignal) {
+      parts.push(`The lead source signal is ${lead.title}: ${sourceSignal}`);
+    }
+
+    const leadTakeaway = sentence(cleanSignal(lead.builder_takeaway));
+    if (leadTakeaway) {
+      parts.push(`The operator read is ${leadTakeaway}`);
+    }
+  }
+
+  const supporting = published.filter((item) => item.id !== lead?.id).slice(0, 2);
+  if (supporting.length) {
+    const signals = supporting
+      .map((item) => `${item.title} (${cleanClause(cleanSignal(item.builder_takeaway))})`)
+      .join("; ");
+    parts.push(`Supporting context: ${signals}.`);
+  }
+
+  if (monitored.length) {
+    const watchList = monitored
+      .slice(0, 2)
+      .map((item) => `${item.title} (${cleanClause(cleanSignal(item.builder_takeaway))})`)
+      .join("; ");
+    parts.push(`Monitor-only context stays out of the publish list until reviewed: ${watchList}.`);
+  }
+
+  return parts.join(" ");
+}
+
 function renderItemMarkdown(item, rank) {
   const lines = [
     `### ${rank}. ${item.title}`,
@@ -304,7 +371,7 @@ function buildBriefMarkdown(digest, metadata, landingUrl) {
   const monitored = ordered.filter((item) => verdictForItem(item) === "monitor");
   const rejected = ordered.filter((item) => verdictForItem(item) === "reject");
 
-  const categories = [...new Set([...published, ...monitored].map((item) => item.category))].slice(0, 4);
+  const categories = [...new Set([lead, ...published, ...monitored].filter(Boolean).map((item) => item.category))].slice(0, 4);
 
   const lines = [
     `# ${digest.title}`,
@@ -327,14 +394,8 @@ function buildBriefMarkdown(digest, metadata, landingUrl) {
     "",
     categories.length ? `Themes: ${categories.join(" • ")}.` : "Themes: mixed.",
     "",
-    lead ? lead.builder_takeaway : "",
+    buildDailyLeadParagraph(digest, lead, published, monitored, categories),
   );
-
-  const supportingPublished = published.filter((item) => item.id !== lead?.id);
-  if (supportingPublished.length) {
-    const extras = supportingPublished.slice(0, 4).map((item) => `${item.title}: ${clipText(item.builder_takeaway, 140)}`);
-    lines.push("", extras.join("\n\n"));
-  }
 
   if (published.length) {
     lines.push("", "## Worth mentioning", "");

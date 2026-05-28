@@ -18,6 +18,8 @@ npm run digest:import -- --date YYYY-MM-DD --source path/to/upstream.json --dry-
 npm run social:generate -- --date YYYY-MM-DD --dry-run
 npm run approval:create -- --date YYYY-MM-DD --digest artifacts/digests/YYYY-MM-DD.json --approval artifacts/approvals/YYYY-MM-DD.json --approver "Name" --approved-at YYYY-MM-DDTHH:MM:SS.sssZ
 npm run approval:validate -- --date YYYY-MM-DD --digest artifacts/digests/YYYY-MM-DD.json --approval artifacts/approvals/YYYY-MM-DD.json
+npm run build:site
+npm run publish:check
 ```
 
 `triage:export` reads an existing completed producer run through the current triage/report path and writes structured JSON to stdout. It preserves the markdown `triage:report` command, rejects non-completed runs, and does not post publicly. Run it only in an environment already authorized to read the producer run data; verification can use committed fixtures instead of production data.
@@ -27,6 +29,21 @@ npm run approval:validate -- --date YYYY-MM-DD --digest artifacts/digests/YYYY-M
 `social:generate` reads a completed local digest artifact and writes draft artifacts under `dist/`. It does not post, create paid-service dependencies, read credentials, or call the network.
 
 `approval:create` and `approval:validate` create or validate explicit local approval state under `artifacts/approvals/`. Approval validation computes the deterministic draft hashes in memory from the digest, so it can validate what `social:generate --dry-run` would produce without writing `dist/`.
+
+`publish:check` is a local-only preflight for the generated static site. Run it after `npm run build:site`; it checks that the latest generated brief/report have matching site pages, the site index/feed/sitemap exist, and the latest brief page has a meaningful lead summary. It does not browse the live site or call the network.
+
+After deployment, verify the live site with the approved browser CLI:
+
+```bash
+latest="$(find dist/briefs -maxdepth 1 -name '????-??-??.md' -print | sed -E 's#^.*/([0-9-]+)\.md#\1#' | sort | tail -1)"
+~/.claude/skills/gstack/browse/dist/browse goto "https://thenightlylibrarian.com/"
+~/.claude/skills/gstack/browse/dist/browse wait --load
+~/.claude/skills/gstack/browse/dist/browse text
+~/.claude/skills/gstack/browse/dist/browse goto "https://thenightlylibrarian.com/briefs/${latest}/"
+~/.claude/skills/gstack/browse/dist/browse wait --load
+~/.claude/skills/gstack/browse/dist/browse text
+~/.claude/skills/gstack/browse/dist/browse console --errors
+```
 
 ## Producer Export Round Trip
 
