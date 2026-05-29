@@ -29,7 +29,7 @@
       <nav class="site-nav"><a href="/" class="nav-active">Archive</a><a href="/reports/">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
     </div>
     <div class="dateline">
-      <span>Latest issue · May 27, 2026</span>
+      <span>Latest issue · May 29, 2026</span>
       <span style="font-style:italic;">What changed. Why it matters. What to do.</span>
     </div>
   </header>
@@ -40,19 +40,19 @@
         
         <div class="section-label">Today's brief</div>
         <p class="brief-valueprop">Every morning I read a few hundred links so you don't have to. This is what cleared the bar today.</p>
-        <div class="meta" style="margin-bottom:0.5rem;"><span>Data Infrastructure / Verification / Scraping</span><span>AI Operations / Agent Control</span><span>Tools Worth Testing</span><span>Small Business Automation</span></div>
-        <p class="lead-summary">Tonight's brief tracks Data Infrastructure / Verification / Scraping, AI Operations / Agent Control, Tools Worth Testing, and Small Business Automation. Synthesized Nightly Librarian run with 8 promoted item(s), 40 scored item(s), and 32 rejected item(s). The lead source signal is Shard — 10x KV cache compression for local LLMs: Shard compresses KV cache 10x for Llama-3.1-8B with no measurable quality degradation. The operator read is 10x KV compression with no quality loss is a significant practical improvement for local inference. Changes the calculus on what context lengths are feasible on consumer hardware. Supporting context: AI code review bottleneck — built a tool to fix it (Identifies a real pain point in AI-assisted development workflows. The review bottleneck is a practical problem that affects how you structure agent-driven coding); Local PII removal model — near-frontier at 9ms CPU inference (Fast local PII scrubbing is directly useful for agent/MCP pipelines where you want privacy guarantees without API round-trips). Monitor-only context stays out of the publish list until reviewed: Transitioning side project into main income: RAG Enterprise SaaS (Similar architecture space to second-brain; may surface useful B2B RAG pricing/positioning signals); MiniCPM5-1B — small multimodal model (MiniCPM line has been competitive at small sizes; a 1B multimodal model could be useful for on-device tasks with Ollama).</p>
+        <div class="meta" style="margin-bottom:0.5rem;"><span>AI Operations / Agent Control</span><span>Model + API Changes</span><span>Voice AI / Realtime Agents</span></div>
+        <p class="lead-summary">Tonight's brief tracks AI Operations / Agent Control, Model + API Changes, and Voice AI / Realtime Agents. Synthesized Nightly Librarian run with 4 promoted item(s), 40 scored item(s), and 36 rejected item(s). The lead source signal is Mistral Vibe: unified agent with Work and Code modes, plus VS Code extension: Mistral launched Vibe, a unified agent for long-horizon productivity and coding tasks, with a new VS Code extension. The operator read is New competing coding agent tool in VS Code ecosystem; relevant for solo devs evaluating agentic tooling. Supporting context: Build with built-in and custom MCPs in Mistral Studio (MCP ecosystem support from a major LLM provider directly affects tooling choices for MCP-heavy workflows). Monitor-only context stays out of the publish list until reviewed: Remote agents in Mistral Vibe powered by Mistral Medium 3.5 (New model with remote agent capabilities is relevant for anyone evaluating LLMs for agentic tasks); Voxtral TTS: open-weights text-to-speech model for voice agents (Open-weights TTS is relevant for voice agent work; self-hosting option reduces cost and dependency).</p>
         <div style="border-top:0.5px solid var(--border);">
           
     <div class="item">
       <div class="item-row">
         <span class="item-num">1.</span>
         <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tnvo7r/shard_getting_to_10_kv_cache_compression/" target="_blank" rel="noopener">Shard — 10x KV cache compression for local LLMs</a></div>
-          <div class="item-takeaway">10x KV compression with no quality loss is a significant practical improvement for local inference. Changes the calculus on what context lengths are feasible on consumer hardware.</div>
+          <div class="item-title"><a href="https://mistral.ai/news/vibe-agent" target="_blank" rel="noopener">Mistral Vibe: unified agent with Work and Code modes, plus VS Code extension</a></div>
+          <div class="item-takeaway">New competing coding agent tool in VS Code ecosystem; relevant for solo devs evaluating agentic tooling.</div>
           <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tnvo7r/shard_getting_to_10_kv_cache_compression/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span>Data Infrastructure / Verification / Scraping</span>
+            <span><a href="https://mistral.ai/news/vibe-agent" target="_blank" rel="noopener">mistral.ai</a></span>
+            <span>AI Operations / Agent Control</span>
           </div>
         </div>
       </div>
@@ -62,51 +62,49 @@
       <div class="item-row">
         <span class="item-num">2.</span>
         <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1tnz7rr/i_couldnt_take_it_anymore/" target="_blank" rel="noopener">AI code review bottleneck — built a tool to fix it</a></div>
-          <div class="item-takeaway">Identifies a real pain point in AI-assisted development workflows. The review bottleneck is a practical problem that affects how you structure agent-driven coding.</div>
+          <div class="item-title"><a href="https://mistral.ai/news/connectors" target="_blank" rel="noopener">Build with built-in and custom MCPs in Mistral Studio</a></div>
+          <div class="item-takeaway">MCP ecosystem support from a major LLM provider directly affects tooling choices for MCP-heavy workflows.</div>
           <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/SaaS/comments/1tnz7rr/i_couldnt_take_it_anymore/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span>AI Operations / Agent Control</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">3.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tnqk4h/new_local_model_reaching_near_frontier_on_pii/" target="_blank" rel="noopener">Local PII removal model — near-frontier at 9ms CPU inference</a></div>
-          <div class="item-takeaway">Fast local PII scrubbing is directly useful for agent/MCP pipelines where you want privacy guarantees without API round-trips.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tnqk4h/new_local_model_reaching_near_frontier_on_pii/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span>AI Operations / Agent Control</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">4.</span>
-        <div>
-          <div class="item-title"><a href="https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly/" target="_blank" rel="noopener">Using AI to write better code more slowly</a></div>
-          <div class="item-takeaway">Nolan Lawson is a credible builder voice. The quality-over-speed framing is useful for calibrating how to use coding agents effectively.</div>
-          <div class="item-meta">
-            <span><a href="https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly/" target="_blank" rel="noopener">nolanlawson.com</a></span>
-            <span>Tools Worth Testing</span>
+            <span><a href="https://mistral.ai/news/connectors" target="_blank" rel="noopener">mistral.ai</a></span>
+            <span>Model + API Changes</span>
           </div>
         </div>
       </div>
     </div>
         </div>
-        <a href="/briefs/2026-05-27/" style="display:inline-block;margin-top:0.85rem;font-size:0.82rem;color:var(--accent);font-weight:600;border-bottom:1px solid var(--accent);padding-bottom:1px;">Read the full brief →</a>
+        <a href="/briefs/2026-05-29/" style="display:inline-block;margin-top:0.85rem;font-size:0.82rem;color:var(--accent);font-weight:600;border-bottom:1px solid var(--accent);padding-bottom:1px;">Read the full brief →</a>
         
 
         
         <div style="margin-top:1.75rem;">
           <div class="section-label">Archive</div>
           
+    <div class="item">
+      <div class="item-title">
+        <a href="/briefs/2026-05-28/">May 28, 2026</a>
+      </div>
+      <div class="arc-themes"><span class="arc-tag">Tools Worth Testing</span><span class="arc-tag">Data Infrastructure / Verification / Scraping</span><span class="arc-tag">Small Business Automation</span><span class="arc-tag">AI Operations / Agent Control</span></div>
+      <div class="item-takeaway" style="font-size:0.88rem;">Concrete OSS tool that simplifies outbound email for self-hosted stacks.</div>
+      <div class="item-meta">
+        <span>6 items</span>
+        <span>1 to watch</span>
+        <span>39 links researched</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        <a href="/briefs/2026-05-27/">May 27, 2026</a>
+      </div>
+      <div class="arc-themes"><span class="arc-tag">Data Infrastructure / Verification / Scraping</span><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Tools Worth Testing</span><span class="arc-tag">Small Business Automation</span></div>
+      <div class="item-takeaway" style="font-size:0.88rem;">10x KV compression with no quality loss is a significant practical improvement for local inference. Changes the calculus on what context lengths are feasible on consumer hardware.</div>
+      <div class="item-meta">
+        <span>4 items</span>
+        <span>4 to watch</span>
+        <span>40 links researched</span>
+      </div>
+    </div>
+
     <div class="item">
       <div class="item-title">
         <a href="/briefs/2026-05-26/">May 26, 2026</a>
@@ -207,6 +205,16 @@
           <div class="section-label">Report log</div>
           
     <div class="sb-row">
+      <a href="/reports/2026-05-29/">May 29, 2026</a>
+      <span class="sb-count">2 items</span>
+    </div>
+
+    <div class="sb-row">
+      <a href="/reports/2026-05-28/">May 28, 2026</a>
+      <span class="sb-count">7 items</span>
+    </div>
+
+    <div class="sb-row">
       <a href="/reports/2026-05-27/">May 27, 2026</a>
       <span class="sb-count">8 items</span>
     </div>
@@ -224,16 +232,6 @@
     <div class="sb-row">
       <a href="/reports/2026-05-24/">May 24, 2026</a>
       <span class="sb-count">5 items</span>
-    </div>
-
-    <div class="sb-row">
-      <a href="/reports/2026-05-23/">May 23, 2026</a>
-      <span class="sb-count">7 items</span>
-    </div>
-
-    <div class="sb-row">
-      <a href="/reports/2026-05-22/">May 22, 2026</a>
-      <span class="sb-count">12 items</span>
     </div>
           <a href="/reports/" style="display:inline-block;margin-top:0.6rem;font-size:0.72rem;color:var(--text-dim);">All reports →</a>
         </div>
