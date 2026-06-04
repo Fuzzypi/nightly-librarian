@@ -11,7 +11,8 @@ async function deliver() {
       `SELECT id, started_at, private_memo
        FROM nightly_runs
        WHERE private_memo IS NOT NULL
-       ORDER BY started_at DESC`
+       ORDER BY started_at DESC
+       LIMIT 30`
     );
 
     if (result.rows.length === 0) {
