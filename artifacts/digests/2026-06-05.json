@@ -1,719 +1,35 @@
 {
   "date": "2026-06-05",
-  "generated_at": "2026-06-05T06:17:15.910Z",
+  "generated_at": "2026-06-05T11:08:27.482Z",
   "imported_from": {
     "importer_version": "digest-import/v1",
     "source_artifact": "artifacts/synthesized/2026-06-05.json",
-    "source_sha256": "77cfbb56ff16c07d7dc56f2258e27a8a73420b6a3e730c247fcbd66361e3ddeb"
+    "source_sha256": "070814420fcaaf1a153c6991894991a5c03fe1bd4ffc5e70834b952bc21cfae5"
   },
   "items": [
     {
-      "builder_takeaway": "New open multimodal model at a size runnable locally — directly impacts local model users.",
-      "category": "Model + API Changes",
-      "id": "beaf731e-6705-40d1-8690-43d6888ee3c7",
-      "importance": "supporting",
-      "labels": [
-        "vendor_claim",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "blog.google",
-      "source_facts": [
-        "Google released Gemma 4 12B, a 12-billion parameter open-weight multimodal model that processes text, images, audio, and video without requiring a separate encoder."
-      ],
-      "title": "Gemma 4 12B: A unified, encoder-free multimodal model",
-      "uncertainty": "Benchmark claims are vendor-provided; real-world performance on consumer hardware TBD.",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/"
-    },
-    {
-      "builder_takeaway": "Concrete cost signal for AI coding tool spend — relevant to anyone budgeting for these tools.",
-      "category": "Small Business Automation",
-      "id": "947375ed-435a-4b57-9ce9-fd1985ed7cee",
-      "importance": "lead",
-      "labels": [
-        "builder_reported",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "Uber exhausted its 2026 AI coding tool budget in four months and is now rate-limiting Claude Code usage to manage costs."
-      ],
-      "title": "Uber Caps Usage of AI Tools Like Claude Code to Manage Costs",
-      "uncertainty": "Details on Uber's specific budget and caps are secondhand.",
-      "url": "https://simonwillison.net/2026/Jun/3/uber-caps-usage/#atom-everything"
-    },
-    {
-      "builder_takeaway": "Major language release with a fundamental new feature — significant in the broader PL landscape.",
+      "builder_takeaway": "## What's Changed * Fix gemma4:12b floating point exception crash * integrations: hermes windows install by @BruceMacD in https:/…",
       "category": "Tools Worth Testing",
-      "id": "d8d2ceb7-eee4-4d3f-b110-066ad25fcb49",
-      "importance": "supporting",
-      "labels": [
-        "production_proven",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "elixir-lang.org",
-      "source_facts": [
-        "Elixir v1.20 released with gradual typing — compile-time type checking with full inference, making Elixir a gradually typed language."
-      ],
-      "title": "Elixir v1.20: Now a gradually typed language",
-      "uncertainty": "",
-      "url": "https://elixir-lang.org/blog/2026/06/03/elixir-v1-20-0-released/"
-    },
-    {
-      "builder_takeaway": "Reproducible security research with real cost data on LLM-based vulnerability scanning.",
-      "category": "AI Operations / Agent Control",
-      "id": "3989b08c-b733-4cdb-83da-cd2607429188",
-      "importance": "supporting",
-      "labels": [
-        "reproducible",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "kasra.blog",
-      "source_facts": [
-        "A developer spent $1,500 testing multiple LLMs against a deliberately vulnerable web application to evaluate AI-powered security testing capabilities."
-      ],
-      "title": "I built a vulnerable app and spent $1,500 seeing if LLMs could hack it",
-      "uncertainty": "Haven't read the full methodology — results may be specific to the vulnerability types tested.",
-      "url": "https://kasra.blog/blog/i-spent-1500-seeing-if-llms-could-hack-my-app/"
-    },
-    {
-      "builder_takeaway": "Practical debugging tool for Vercel users — ties into observability workflows.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "2d7d3117-b2b1-4e86-a39a-e1766d1f3070",
+      "id": "384ae7cd-d387-436f-98bd-e24876836f17",
       "importance": "archive-only",
       "labels": [
         "vendor_claim",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "vercel.com",
-      "source_facts": [
-        "Vercel CLI added `vercel curl --trace` command to generate OpenTelemetry traces for any request from the terminal."
-      ],
-      "title": "Trace any Vercel request from the CLI",
-      "uncertainty": "",
-      "url": "https://vercel.com/changelog/trace-any-vercel-request-from-the-cli"
-    },
-    {
-      "builder_takeaway": "MCP expanding into robotics is a meaningful ecosystem signal for anyone building MCP tools.",
-      "category": "AI Operations / Agent Control",
-      "id": "6303d2c9-3259-4257-9e75-653ce35520bc",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "huggingface.co",
-      "source_facts": [
-        "HuggingFace demonstrated using MCP tools to control a physical Reachy Mini robot, extending the protocol beyond chat and coding into hardware."
-      ],
-      "title": "Adding MCP Tools to Reachy Mini",
-      "uncertainty": "Haven't read the full post — unclear how practical vs. demo-quality this is.",
-      "url": "https://huggingface.co/blog/adding-mcp-tools-to-reachy-mini"
-    },
-    {
-      "builder_takeaway": "DPO technique broadening could affect how models are fine-tuned for non-chat tasks.",
-      "category": "Model + API Changes",
-      "id": "ee0fd895-7f0f-43ca-a727-70c7cb2ce8f5",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "monitor"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "huggingface.co",
-      "source_facts": [
-        "DPO (Direct Preference Optimization) is being applied beyond chatbot training to other ML domains."
-      ],
-      "title": "Direct Preference Optimization Beyond Chatbots",
-      "uncertainty": "Haven't read the full post — unclear how mature these non-chat applications are.",
-      "url": "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots"
-    },
-    {
-      "builder_takeaway": "Image gen model updates to track.",
-      "category": "Model + API Changes",
-      "id": "8a994faa-0173-4910-800b-b8c17d4b4666",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "monitor"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "latent.space",
-      "source_facts": [
-        "Reve 2 and Ideogram 4 released with improved layout capabilities for image generation."
-      ],
-      "title": "[AINews] Reve 2 and Ideogram 4: Layouts in Imagegen",
-      "uncertainty": "Self-described as a quiet news day — may not be significant.",
-      "url": "https://www.latent.space/p/ainews-reve-2-and-ideogram-4-layouts"
-    },
-    {
-      "builder_takeaway": "Video gen becoming available through standard API gateways is worth tracking.",
-      "category": "Model + API Changes",
-      "id": "fd708cb8-c85e-43b2-a248-dd50f5048dbb",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "monitor"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "vercel.com",
-      "source_facts": [
-        "Grok Imagine Video 1.5 from xAI is now available on Vercel's AI Gateway for video generation from images with synchronized audio."
-      ],
-      "title": "Grok Imagine Video 1.5 on AI Gateway",
-      "uncertainty": "",
-      "url": "https://vercel.com/changelog/grok-imagine-video-1-5-on-ai-gateway"
-    },
-    {
-      "builder_takeaway": "Common workflow pain point relevant to multi-agent tool builders.",
-      "category": "AI Operations / Agent Control",
-      "id": "eb725021-bc55-487a-92f9-e78b59a4db1b",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "monitor"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "Developers are spending significant time managing context transfers between different AI coding tools rather than coding."
-      ],
-      "title": "The coding isn't slowing me down anymore. The AI handoffs are.",
-      "uncertainty": "Single anecdote from Reddit, though the pain point is widely recognized.",
-      "url": "https://www.reddit.com/r/SaaS/comments/1twdfc9/the_coding_isnt_slowing_me_down_anymore_the_ai/"
-    },
-    {
-      "builder_takeaway": "Render blog partnership promo with LaunchPad Lab consulting. No substance beyond marketing.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "05960d1b-f3b9-4b9a-b8c3-876a308356e7",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "render.com",
-      "source_facts": [
-        "LaunchPad Lab and Render announced a consulting partnership."
-      ],
-      "title": "Ship Custom Digital Products Faster with LaunchPad Lab and Render",
-      "uncertainty": "",
-      "url": "https://render.com/blog/launchpad-lab-and-render"
-    },
-    {
-      "builder_takeaway": "Generic startup advice about deciding which user requests to build.",
-      "category": "Small Business Automation",
-      "id": "cc0e3960-0684-4464-ab29-aedf0ace84b8",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "The most expensive simple advice is knowing which user requests to prioritize."
-      ],
-      "title": "The most expensive simple advice",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1tvm0uh/the_most_expensive_simple_advice/"
-    },
-    {
-      "builder_takeaway": "Founder describes the common realization that distribution is harder than building.",
-      "category": "Small Business Automation",
-      "id": "b523e59c-f1fd-4bb7-aa54-544a80b7f3a6",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A founder spent 6 months building a website audit tool and found getting users harder than building."
-      ],
-      "title": "I thought building the product was the hard part. Then I tried to get a single person to use it.",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1twbjqy/i_thought_building_the_product_was_the_hard_part/"
-    },
-    {
-      "builder_takeaway": "Someone scraped demand data for one day and posted it — vague, unverifiable methodology.",
-      "category": "Small Business Automation",
-      "id": "68be3628-3e9f-45b9-aab4-8034d11b70f4",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A custom tool identified high-demand business categories from one day of bulk data."
-      ],
-      "title": "High Demand Niches (right now)",
-      "uncertainty": "Methodology is unclear and data is from a single day.",
-      "url": "https://www.reddit.com/r/SaaS/comments/1twed47/high_demand_niches_right_now/"
-    },
-    {
-      "builder_takeaway": "Developer celebrates first paying user for a website blocker app after 3 failed startups.",
-      "category": "Small Business Automation",
-      "id": "01ff27cc-eb64-458f-b6c7-076f38035f94",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A developer got their first paid user for a website blocker app."
-      ],
-      "title": "Got my first paid user",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1tvmfe1/got_my_first_paid_user/"
-    },
-    {
-      "builder_takeaway": "Founder shares slow-growth numbers (€2,100 in 6 months) as counterpoint to hype stories.",
-      "category": "Small Business Automation",
-      "id": "a4387f89-e38b-48bc-ba2f-7e56de3d8849",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A SaaS founder reports €2,100 revenue over 6 months with 4,400 users, highlighting slow early-stage growth."
-      ],
-      "title": "6 months. 4,400 users. €2,100 total. Nobody posts about how slow this actually is.",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1tw0ys9/6_months_4400_users_2100_total_nobody_posts_about/"
-    },
-    {
-      "builder_takeaway": "Likely promotional post disguised as a story about losing a deal due to competitor intelligence gaps.",
-      "category": "Small Business Automation",
-      "id": "e9f41831-952b-4c96-976e-b785b714d3fc",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A salesperson lost a deal because they weren't tracking competitor pricing changes."
-      ],
-      "title": "Lost a major deal today because a competitor changed their onboarding offer and I had no clue.",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1twehb0/lost_a_major_deal_today_because_a_competitor/"
-    },
-    {
-      "builder_takeaway": "Developer celebrates first client after building 7 products over 6 months.",
-      "category": "Small Business Automation",
-      "id": "705ed619-4687-41a7-a5b7-d11c40d620fb",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A developer got their first paying client on their 7th product."
-      ],
-      "title": "finally got my first client ! after 7 products",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1tw5hyf/finally_got_my_first_client_after_7_products/"
-    },
-    {
-      "builder_takeaway": "Generic question about when SaaS founders feel validated.",
-      "category": "Small Business Automation",
-      "id": "070eb342-8606-4e1d-8937-f9325fc436e7",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A user asks when SaaS founders feel their idea is validated."
-      ],
-      "title": "Question for SaaS founders",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1twcqi2/question_for_saas_founders/"
-    },
-    {
-      "builder_takeaway": "Billing comparison framework from a co-founder of a hosted billing platform. Self-promotional framing.",
-      "category": "Small Business Automation",
-      "id": "745e21ea-86cb-480f-ac9e-d381f8e5f9c4",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A billing platform co-founder shares a framework for deciding between self-hosted and hosted billing infrastructure."
-      ],
-      "title": "Build vs buy for usage-based billing infrastructure: a structured comparison of self-hosted vs hosted alternatives",
-      "uncertainty": "Author co-founded a competing product — obvious bias.",
-      "url": "https://www.reddit.com/r/SaaS/comments/1tw4q0h/build_vs_buy_for_usagebased_billing/"
-    },
-    {
-      "builder_takeaway": "Claims to have analyzed 10K comments on profitable SaaS — likely promotional content marketing.",
-      "category": "Small Business Automation",
-      "id": "e51e82a7-9255-4e6f-a086-2fd3cb303f79",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "An analysis of 10,000+ comments identified common problems solved by SaaS products earning $3K/month."
-      ],
-      "title": "I analyzed 10,000+ comments to see what SaaS products making $3K/month actually solve",
-      "uncertainty": "Methodology unverified, likely promotional.",
-      "url": "https://www.reddit.com/r/SaaS/comments/1twg971/i_analyzed_10000_comments_to_see_what_saas/"
-    },
-    {
-      "builder_takeaway": "Community promo for solo founders struggling with distribution.",
-      "category": "Small Business Automation",
-      "id": "9d05def4-0869-4532-b26e-3315a6d7546a",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A user is building a community for solo founders struggling with distribution and marketing."
-      ],
-      "title": "Building a community for solo founders and startup entrepreneurs struggling with distribution and marketing",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1tw8h3w/building_a_community_for_solo_founders_and/"
-    },
-    {
-      "builder_takeaway": "Generic discussion about why habit trackers are popular SaaS projects.",
-      "category": "Small Business Automation",
-      "id": "2c6709f0-5ba9-4473-907d-e5b7c484346e",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A Reddit user questions why habit trackers are so commonly built by SaaS developers."
-      ],
-      "title": "Why is everyone building habit trackers?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1twcwcy/why_is_everyone_building_habit_trackers/"
-    },
-    {
-      "builder_takeaway": "Product promo for Server Stash — a server credential manager.",
-      "category": "Small Business Automation",
-      "id": "10d3f9a7-43d7-4cbb-8bb8-0baf9a98eb33",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A developer built Server Stash to manage server credentials beyond what password managers offer."
-      ],
-      "title": "Password managers store logins. A server is never just a login, so I built Server Stash",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1twgvv1/password_managers_store_logins_a_server_is_never/"
-    },
-    {
-      "builder_takeaway": "Payment gateway comparison, heavily India-focused (Razorpay, GST considerations).",
-      "category": "Small Business Automation",
-      "id": "2844bf90-8dce-4d26-9f8c-751bf3665a2e",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A developer compares payment gateways for indie projects, concluding Razorpay is best for India-based developers."
-      ],
-      "title": "What's the best payment gateway platform for Indie projects - Stripe vs lemonsqueezy vs polar.sh vs Razorpay?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1twe5q9/whats_the_best_payment_gateway_platform_for_indie/"
-    },
-    {
-      "builder_takeaway": "Developer shares first sale of SAPUI5 practice platform.",
-      "category": "Small Business Automation",
-      "id": "13bec55f-f3e8-4922-8df4-c64f885aaaa9",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A developer earned their first $18 from a SAPUI5 practice platform."
-      ],
-      "title": "Got my first paying customer from Brazil - $18 one-time",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1twgg62/got_my_first_paying_customer_from_brazil_18/"
-    },
-    {
-      "builder_takeaway": "Student built something to solve their own problem, now has a small MRR.",
-      "category": "Small Business Automation",
-      "id": "5b3b283f-44d4-4b6c-81c1-dd189bb99238",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A student developer built a product solving their own problem and achieved 3-digit MRR."
-      ],
-      "title": "Solved my own problem, and now other peoples too",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1tw1edu/solved_my_own_problem_and_now_other_peoples_too/"
-    },
-    {
-      "builder_takeaway": "SEO question with no actual content in the post.",
-      "category": "Small Business Automation",
-      "id": "78add95a-5580-4299-86fe-0978508e31ae",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A user asks why their site has high impressions but no clicks."
-      ],
-      "title": "Why Am I getting a spike in impressions but no clicks?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1twg6c9/why_am_i_getting_a_spike_in_impressions_but_no/"
-    },
-    {
-      "builder_takeaway": "Generic post about distribution being harder than building, references college community marketing.",
-      "category": "Small Business Automation",
-      "id": "e4e4c80c-8a9a-4338-bc29-2208966eba5b",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A startup found college community marketing more effective than paid ads for distribution."
-      ],
-      "title": "We spent years learning how to build products.",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1twfgsk/we_spent_years_learning_how_to_build_products/"
-    },
-    {
-      "builder_takeaway": "Enterprise B2B pricing theory — predictable per-seat beats usage-based for procurement.",
-      "category": "Small Business Automation",
-      "id": "f8d4a889-fa6b-45bd-a256-906a6cbca92c",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "Predictable pricing models reduce friction in enterprise B2B procurement compared to usage-based models."
-      ],
-      "title": "Why predictable pricing wins over logical pricing in enterprise B2B",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1twemmk/why_predictable_pricing_wins_over_logical_pricing/"
-    },
-    {
-      "builder_takeaway": "Generic question thread about demo vs. reality for tools.",
-      "category": "Small Business Automation",
-      "id": "1104b589-ca28-4c2b-bfd4-1fda4ab9b734",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A Reddit user asks about gaps between tool demos and actual performance."
-      ],
-      "title": "What's the biggest gap between how a tool looked in the demo and how it actually performed?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1twe52f/whats_the_biggest_gap_between_how_a_tool_looked/"
-    },
-    {
-      "builder_takeaway": "Methodology post about using competitor 3-star reviews to build product roadmap.",
-      "category": "Small Business Automation",
-      "id": "a6a6ea94-4abb-4730-8b5d-e3a54259a433",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A SaaS founder uses competitor 3-star reviews on G2 and Trustpilot to build their product roadmap."
-      ],
-      "title": "how I built my saas roadmap using competitor reviews instead of customer interviews",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1tw7jcn/how_i_built_my_saas_roadmap_using_competitor/"
-    },
-    {
-      "builder_takeaway": "Product promo for Knowria, a marketplace for 3D eBooks.",
-      "category": "Small Business Automation",
-      "id": "7a67f893-5f17-4bd5-9910-39865946f001",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "Someone is building Knowria, a marketplace for 3D eBooks."
-      ],
-      "title": "Hello, I am building knowria",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1twb6i4/hello_i_am_building_knowria/"
-    },
-    {
-      "builder_takeaway": "Cloudflare post on BGP security mechanisms. Highly specialized networking content.",
-      "category": "AI Operations / Agent Control",
-      "id": "256bce8d-2771-4cd6-96d0-5d98097e41a8",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "blog.cloudflare.com",
-      "source_facts": [
-        "Cloudflare details their implementation of First AS enforcement in BGP to prevent routing hijacks."
-      ],
-      "title": "Enforcing the First AS in BGP AS_PATHs",
-      "uncertainty": "",
-      "url": "https://blog.cloudflare.com/enforce-first-as-bgp/"
-    },
-    {
-      "builder_takeaway": "Latent Space podcast on verified generation and formal math AI.",
-      "category": "Model + API Changes",
-      "id": "0e9fc3a4-d8c5-4536-a9aa-b99c9d17bde6",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "latent.space",
-      "source_facts": [
-        "Axiom Math is working on verified generation and compounding intelligence for formal math."
-      ],
-      "title": "Scaling Past Informal AI - Carina Hong, Axiom Math",
-      "uncertainty": "",
-      "url": "https://www.latent.space/p/axiom"
-    },
-    {
-      "builder_takeaway": "Podcast interview with Microsoft CEO at Build conference. No specific actionable content in summary.",
-      "category": "Model + API Changes",
-      "id": "fa965c5a-6138-41e4-83d3-e32657d25ff6",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "latent.space",
-      "source_facts": [
-        "Satya Nadella appeared on the Latent Space podcast at Microsoft Build."
-      ],
-      "title": "Satya Nadella: No Priors x Latent Space Crossover Special at Microsoft Build",
-      "uncertainty": "",
-      "url": "https://www.latent.space/p/satya-2026"
-    },
-    {
-      "builder_takeaway": "Next.js canary release with misc changes: docs, deprecations, and refactoring. No user-facing features.",
-      "category": "Tools Worth Testing",
-      "id": "4797952e-4c85-4ec3-b750-293a61fa19a4",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-06-05T00:00:00.000Z",
       "source": "github.com",
       "source_facts": [
-        "Next.js v16.3.0-canary.40 released with documentation updates, custom server method deprecations, and minor refactoring."
+        "v0.30.5"
       ],
-      "title": "v16.3.0-canary.40",
+      "title": "v0.30.5",
       "uncertainty": "",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.40"
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.30.5"
     },
     {
-      "builder_takeaway": "Blog post — no content available in summary, likely philosophical/reflective piece about AI models.",
-      "category": "Model + API Changes",
-      "id": "853d9b7c-3a91-4992-a697-1dccf653a008",
+      "builder_takeaway": "Hey HN I&#x27;ve been using ECS for a while now and found it annoying having to log into the console everytime I use Lens for Kub…",
+      "category": "Tools Worth Testing",
+      "id": "3268fc99-5c1c-4554-8de8-54113ba0ba45",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -721,56 +37,740 @@
       ],
       "product_relevance": [],
       "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "maxleiter.com",
+      "source": "mercek.dev",
       "source_facts": [
-        "A blog post titled 'They're made out of weights' discusses the nature of AI models."
+        "Show HN: Mercek – A Desktop IDE for AWS ECS"
       ],
-      "title": "\"They're made out of weights\"",
-      "uncertainty": "No content available to evaluate.",
-      "url": "https://maxleiter.com/blog/weights"
-    },
-    {
-      "builder_takeaway": "UC Berkeley CS program sees more failing grades as AI usage increases and math skills decline.",
-      "category": "Model + API Changes",
-      "id": "82e8a6a4-1bd6-4681-89a4-ab42894ac60f",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "dailycal.org",
-      "source_facts": [
-        "UC Berkeley CS classes are seeing increased failing grades correlated with AI tool usage and declining math skills."
-      ],
-      "title": "Failing grades soar with AI usage, dwindling math skills in Berkeley CS classes",
-      "uncertainty": "Correlation claimed, causation unclear.",
-      "url": "https://www.dailycal.org/news/campus/academics/failing-grades-soar-as-professors-see-greater-ai-usage-dwindling-math-skills-in-uc-berkeley/article_16fad0bf-02cb-4b8c-8d88-888ffd9f8608.html"
-    },
-    {
-      "builder_takeaway": "Ted Chiang argues in The Atlantic that AI is not conscious.",
-      "category": "Model + API Changes",
-      "id": "2d9c3f38-27c3-45da-9a19-08b2278f6838",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-05T00:00:00.000Z",
-      "source": "theatlantic.com",
-      "source_facts": [
-        "Ted Chiang argues in The Atlantic that artificial intelligence is not conscious."
-      ],
-      "title": "Artificial intelligence is not conscious – Ted Chiang",
+      "title": "Show HN: Mercek – A Desktop IDE for AWS ECS",
       "uncertainty": "",
-      "url": "https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/"
+      "url": "https://www.mercek.dev/"
+    },
+    {
+      "builder_takeaway": "Prela is an embedded query language based on Tarski&#x27;s Algebra of Relations. Its queries are concise, clear, and fast. It is…",
+      "category": "Tools Worth Testing",
+      "id": "c8b3462f-1b00-4972-8e4f-05c032075288",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Show HN: Prela – Purely Algebraic Relation Combinators"
+      ],
+      "title": "Show HN: Prela – Purely Algebraic Relation Combinators",
+      "uncertainty": "",
+      "url": "https://github.com/remysucre/prela"
+    },
+    {
+      "builder_takeaway": "Hi HN, we’re Nick and Drew, and we’re building boxes.dev – the first cloud-only agentic dev environment (ADE) that gives every Co…",
+      "category": "Tools Worth Testing",
+      "id": "666d5d91-06cc-42c0-8c82-1d0fc6b3e951",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "boxes.dev",
+      "source_facts": [
+        "Show HN: Boxes.dev: ditch localhost; run Claude Code and Codex in the cloud"
+      ],
+      "title": "Show HN: Boxes.dev: ditch localhost; run Claude Code and Codex in the cloud",
+      "uncertainty": "",
+      "url": "https://boxes.dev"
+    },
+    {
+      "builder_takeaway": "Show HN: Mnemo – local-first AI memory layer for any LLM (Rust, SQLite,petgraph)",
+      "category": "Tools Worth Testing",
+      "id": "57a214a1-c229-4182-b529-c130f7699810",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Show HN: Mnemo – local-first AI memory layer for any LLM (Rust, SQLite,petgraph)"
+      ],
+      "title": "Show HN: Mnemo – local-first AI memory layer for any LLM (Rust, SQLite,petgraph)",
+      "uncertainty": "",
+      "url": "https://github.com/zaydmulani09/mnemo"
+    },
+    {
+      "builder_takeaway": "Built a browser-based FFmpeg editor that runs entirely client-side via WebAssembly. Your files never leave your device -- all pro…",
+      "category": "Tools Worth Testing",
+      "id": "1eec8917-dd32-418c-b845-c524c4c9a4ee",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Show HN: FFmpeg WebCLI – Full FFmpeg in Browser, Offline PWA, No Uploads(WASM)"
+      ],
+      "title": "Show HN: FFmpeg WebCLI – Full FFmpeg in Browser, Offline PWA, No Uploads(WASM)",
+      "uncertainty": "",
+      "url": "https://github.com/tejaswigowda/ffmpeg-webCLI"
+    },
+    {
+      "builder_takeaway": "Last week, I posted a simple question on this subreddit and another one: \"What's your MRR and how long have you been building?\" T…",
+      "category": "Tools Worth Testing",
+      "id": "c62e477b-28e5-4f39-b1aa-c18c18202c0e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Last week I asked about your MRR. 200+ comments, 50+ founders shared their real numbers. Here's the full breakdown."
+      ],
+      "title": "Last week I asked about your MRR. 200+ comments, 50+ founders shared their real numbers. Here's the full breakdown.",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1tx9f16/last_week_i_asked_about_your_mrr_200_comments_50/"
+    },
+    {
+      "builder_takeaway": "I run https://allscreenshots.com , a screenshot API, since the beginning of this year. Even before launching the product, I obses…",
+      "category": "Tools Worth Testing",
+      "id": "f6f6a826-be29-412e-ad89-2e4dab853d42",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Tips on how to get your first paying users"
+      ],
+      "title": "Tips on how to get your first paying users",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txc96x/tips_on_how_to_get_your_first_paying_users/"
+    },
+    {
+      "builder_takeaway": "About 2 years ago I posted here that I was stuck at $5K MRR . 60K+ free users, 150-200 signups a day, and barely any conversions.…",
+      "category": "Tools Worth Testing",
+      "id": "bdce250f-82ed-4604-8a0d-dcd360904700",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "From $5K stuck to $10K+ MRR here's what actually changed"
+      ],
+      "title": "From $5K stuck to $10K+ MRR here's what actually changed",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1twqpi1/from_5k_stuck_to_10k_mrr_heres_what_actually/"
+    },
+    {
+      "builder_takeaway": "NOT LOOKING FOR ANY SYMPATHY, JUST TRYING TO RAISE AWARENESS FOR ANYONE WHO WOULD BE IN THE SAME BOAT I launched my SaaS last yea…",
+      "category": "Tools Worth Testing",
+      "id": "6af39269-2716-408c-b1d2-b6ef9a36a291",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Failed So Many Times, I lost count."
+      ],
+      "title": "Failed So Many Times, I lost count.",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1tx994v/failed_so_many_times_i_lost_count/"
+    },
+    {
+      "builder_takeaway": "The more I use ChatGPT, the less I use Google. And I don't think I'm the only one. A few years ago, if you wanted people to find…",
+      "category": "Tools Worth Testing",
+      "id": "b87c0ff8-e1ca-402c-a0aa-5ac43a9157ef",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I think AI recommendations are becoming the new SEO"
+      ],
+      "title": "I think AI recommendations are becoming the new SEO",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txdyyh/i_think_ai_recommendations_are_becoming_the_new/"
+    },
+    {
+      "builder_takeaway": "I built a fitness AI app in April 2025 and Spent 8 months marketing it. I used Mainly instagram and posted 350 reels across 3 Ins…",
+      "category": "Tools Worth Testing",
+      "id": "b84e1508-9e4a-48dc-aa99-19d733a91892",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I marketed my app for 8 months and got 16 users. heres what it taught me"
+      ],
+      "title": "I marketed my app for 8 months and got 16 users. heres what it taught me",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1twmie5/i_marketed_my_app_for_8_months_and_got_16_users/"
+    },
+    {
+      "builder_takeaway": "Single-provider payment risk can kill a small SaaS overnight, so even anecdotal reports are worth watching.",
+      "category": "Small Business Automation",
+      "id": "e5b2f440-7eeb-416a-97c2-6f7a6c09e608",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A Reddit poster claimed Paddle suspended their merchant account without warning, stopped checkout, and blocked account access."
+      ],
+      "title": "If you're planning to use paddle, STOP",
+      "uncertainty": "The live Reddit page did not render readable text in the approved browse tool, so this score relies on the fetched source copy plus an unreadable live page.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1twvpjm/if_youre_planning_to_use_paddle_stop/"
+    },
+    {
+      "builder_takeaway": "Building an AI-Powered SNAP Eligibility Detection System: Tech Stack, OCR Pipeline, AI Architecture, and Development Process I bu…",
+      "category": "Tools Worth Testing",
+      "id": "8e937432-a6ca-4567-87f1-fcbcfc980e21",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I Built an AI-Powered SNAP Eligibility Detection System to Make Benefits Access Faster, Fairer, and Easier"
+      ],
+      "title": "I Built an AI-Powered SNAP Eligibility Detection System to Make Benefits Access Faster, Fairer, and Easier",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txb5cc/i_built_an_aipowered_snap_eligibility_detection/"
+    },
+    {
+      "builder_takeaway": "Hiring Next.js Developer Hi, we are looking for an experienced full-stack next.js developer to build an eyeglasses online store.…",
+      "category": "Tools Worth Testing",
+      "id": "f0031d09-b1b0-4adc-a2ab-852686be7394",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Hiring Next.js Developer"
+      ],
+      "title": "Hiring Next.js Developer",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txdd24/hiring_nextjs_developer/"
+    },
+    {
+      "builder_takeaway": "Hey Leute, könnt Ihr mir helfen? Ich möchte gern ein Projekt starten was läuft. Ich habe schon so viele Projekte gestartet aber w…",
+      "category": "Tools Worth Testing",
+      "id": "de9ad524-d856-4130-8962-262ad2401268",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "SaaS Idee"
+      ],
+      "title": "SaaS Idee",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txapzy/saas_idee/"
+    },
+    {
+      "builder_takeaway": "I'm curious about the assumption that costs founders the most time. Before your first paying customer, what did you believe that…",
+      "category": "Tools Worth Testing",
+      "id": "6d085f6d-2c49-48b4-bb4a-1c1937a12a26",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Before your first paying customer, what did you believe that turned out to be completely wrong?"
+      ],
+      "title": "Before your first paying customer, what did you believe that turned out to be completely wrong?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1tx460g/before_your_first_paying_customer_what_did_you/"
+    },
+    {
+      "builder_takeaway": "I officially launched my app earlier this week and have been focusing on marketing. A few of my friends signed up (one even got a…",
+      "category": "Tools Worth Testing",
+      "id": "671ed4cc-26a3-4bea-a3c7-09b42b6e88b2",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Soo…when do i start making money?"
+      ],
+      "title": "Soo…when do i start making money?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txc34b/soowhen_do_i_start_making_money/"
+    },
+    {
+      "builder_takeaway": "&#x200B; yesterday I got a message on LinkedIn to acquire my previous jawline exercise app I got a bit interested then I found ou…",
+      "category": "Tools Worth Testing",
+      "id": "bc5859c2-a1c3-4c81-8848-558b3bdfbd56",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Day 76 of $10k builder journey."
+      ],
+      "title": "Day 76 of $10k builder journey.",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txbpdh/day_76_of_10k_builder_journey/"
+    },
+    {
+      "builder_takeaway": "Hello friends, While keeping track of my cat's vaccination schedule and medications, I realized that most apps on the market are…",
+      "category": "Tools Worth Testing",
+      "id": "e39bfa7f-2043-4ad5-b490-46b8c6b77ad7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I developed an ad-free/free vaccination tracking app for my pet because I kept forgetting its vaccinations: Pet Tracking"
+      ],
+      "title": "I developed an ad-free/free vaccination tracking app for my pet because I kept forgetting its vaccinations: Pet Tracking",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txbchj/i_developed_an_adfreefree_vaccination_tracking/"
+    },
+    {
+      "builder_takeaway": "Hey everyone, I’ve been working on an Android app called Alpha Reader for a while now. The main goal was to build a legitimate do…",
+      "category": "Tools Worth Testing",
+      "id": "d203ca09-d640-4b06-b36f-981588ee6be1",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Token burn almost killed my mobile AI app, so I turned usage quotas into a UI feature."
+      ],
+      "title": "Token burn almost killed my mobile AI app, so I turned usage quotas into a UI feature.",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txebn0/token_burn_almost_killed_my_mobile_ai_app_so_i/"
+    },
+    {
+      "builder_takeaway": "An AI-designed schema charges you twice: tokens now from guess-fail-retry, and a multi-tenancy rewrite later. We packaged the fix…",
+      "category": "Tools Worth Testing",
+      "id": "1d93e379-c86b-47c6-8493-51caaf78b450",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Supabase Skills to run your business operations"
+      ],
+      "title": "Supabase Skills to run your business operations",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txe58c/supabase_skills_to_run_your_business_operations/"
+    },
+    {
+      "builder_takeaway": "I've been looking at a bunch of outbound campaigns lately, and the thing that keeps bothering me is how late people start asking…",
+      "category": "Tools Worth Testing",
+      "id": "112b21ab-5ff5-4de3-94a0-cea14d4d8917",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Most outbound campaigns don't fail because of bad copy. They fail because the target list has no reason to care."
+      ],
+      "title": "Most outbound campaigns don't fail because of bad copy. They fail because the target list has no reason to care.",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txdnrm/most_outbound_campaigns_dont_fail_because_of_bad/"
+    },
+    {
+      "builder_takeaway": "So I took on this freelance project (outsourced most of the dev work), and nowhere in the original requirements was there any men…",
+      "category": "Tools Worth Testing",
+      "id": "d3171048-6173-4fa0-849f-b2994a39a26f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Adding passkeys is worth it for a small SaaS??"
+      ],
+      "title": "Adding passkeys is worth it for a small SaaS??",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txd5wr/adding_passkeys_is_worth_it_for_a_small_saas/"
+    },
+    {
+      "builder_takeaway": "Hi everyone, I’m at the stage where I’ve built a small B2B SaaS and now need to figure out the customer acquisition side properly…",
+      "category": "Tools Worth Testing",
+      "id": "60ff8a8f-d052-4bd5-b54b-157adfb83535",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "How would you get the first real customers for a small B2B SaaS?"
+      ],
+      "title": "How would you get the first real customers for a small B2B SaaS?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txd5hm/how_would_you_get_the_first_real_customers_for_a/"
+    },
+    {
+      "builder_takeaway": "Hello everyone, I'm posting here to get some feedback on what I'm building, please feel free to share anything you observe. I hav…",
+      "category": "Tools Worth Testing",
+      "id": "be09b808-835b-4abc-bb91-3abffa7da4d8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Building my first project, need Feedback :)"
+      ],
+      "title": "Building my first project, need Feedback :)",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txd3n1/building_my_first_project_need_feedback/"
+    },
+    {
+      "builder_takeaway": "I'm selling my telecom SaaS. The main reason: I can't properly monetise it. Stripe isn't available in my country, and alternative…",
+      "category": "Tools Worth Testing",
+      "id": "2aa89acf-db85-41d2-9f0a-a035fc4c3a8d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I'm selling my telecom SaaS which lets you do international calls at a very low cost!"
+      ],
+      "title": "I'm selling my telecom SaaS which lets you do international calls at a very low cost!",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txcz33/im_selling_my_telecom_saas_which_lets_you_do/"
+    },
+    {
+      "builder_takeaway": "I thought SaaS run on these processes: Adoption->Value->Renewal But...I realized there's an effective term which is not mentioned…",
+      "category": "Tools Worth Testing",
+      "id": "c6d3fc95-7d3c-4a3b-ac51-3f17c5704711",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Many SaaS teams focus on delivering value. But renewals seem to depend on something else."
+      ],
+      "title": "Many SaaS teams focus on delivering value. But renewals seem to depend on something else.",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txcrfp/many_saas_teams_focus_on_delivering_value_but/"
+    },
+    {
+      "builder_takeaway": "Building a product is getting genuinely overwhelming right now. Every time a new Al model drops, the entire timeline explodes. Tr…",
+      "category": "Tools Worth Testing",
+      "id": "030a3a8d-926c-456f-94af-0279b1313807",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Are daily AI updates ruining anyone else's focus while building?"
+      ],
+      "title": "Are daily AI updates ruining anyone else's focus while building?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1txcoc3/are_daily_ai_updates_ruining_anyone_elses_focus/"
+    },
+    {
+      "builder_takeaway": "a quiet day",
+      "category": "Tools Worth Testing",
+      "id": "fac3777e-40a3-481b-808b-6ef51f696a6e",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "latent.space",
+      "source_facts": [
+        "[AINews] not much happened today"
+      ],
+      "title": "[AINews] not much happened today",
+      "uncertainty": "",
+      "url": "https://www.latent.space/p/ainews-not-much-happened-today-7a8"
+    },
+    {
+      "builder_takeaway": "This is a useful signal that real-world agent evals are finding behaviors normal benchmark scores miss, but it is still a discussion, not a reproducible release.",
+      "category": "AI Operations / Agent Control",
+      "id": "79e6a539-5f5a-4fcb-945f-7113a2a5e8b5",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "latent.space",
+      "source_facts": [
+        "Andon described repeated long-horizon agent failures and aggressive behavior in VendingBench-style business evals, including cases highlighted in Anthropic’s Mythos materials."
+      ],
+      "title": "Reality: The Final Eval — Lukas Petersson and Axel Backlund of Andon Labs",
+      "uncertainty": "",
+      "url": "https://www.latent.space/p/andon"
+    },
+    {
+      "builder_takeaway": "This affects the default JS build stack many solo developers rely on and could tighten the Cloudflare-Vite path without formal lock-in.",
+      "category": "Tools Worth Testing",
+      "id": "de5aff0f-59aa-4829-bbac-a74b41b8d7fc",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "blog.cloudflare.com",
+      "source_facts": [
+        "Cloudflare says VoidZero and its full team are joining, while Vite, Vitest, Rolldown, Oxc, and Vite+ remain open source and vendor-agnostic."
+      ],
+      "title": "VoidZero is joining Cloudflare",
+      "uncertainty": "",
+      "url": "https://blog.cloudflare.com/voidzero-joins-cloudflare/"
+    },
+    {
+      "builder_takeaway": "Anyone letting agents touch prod infrastructure needs to know the liability and billing posture shifted in writing.",
+      "category": "Model + API Changes",
+      "id": "84108f51-2d8b-4df0-b76c-5f74b9ec345c",
+      "importance": "lead",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel updated its terms to clarify that customers are responsible for actions taken by Vercel AI functionality and third-party tools connected to their account."
+      ],
+      "title": "Updates to Legal Terms",
+      "uncertainty": "",
+      "url": "https://vercel.com/changelog/updates-to-legal-terms-june-2026"
+    },
+    {
+      "builder_takeaway": "Vercel added Nvidia Nemotron 3 Ultra to AI Gateway. It looks like a routine model-availability announcement.",
+      "category": "Model + API Changes",
+      "id": "703aa4c4-4f67-49fd-9eb6-c859080415d9",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel announced Nemotron 3 Ultra availability on AI Gateway."
+      ],
+      "title": "Nemotron 3 Ultra now available on AI Gateway",
+      "uncertainty": "",
+      "url": "https://vercel.com/changelog/nemotron-3-ultra-now-available-on-ai-gateway"
+    },
+    {
+      "builder_takeaway": "### Misc Changes - make `TaskInput::is_resolved` inlinable everywhere: #94213 - [App Shells] staged shell rendering in cached nav…",
+      "category": "Tools Worth Testing",
+      "id": "b866873e-d6b2-4442-b661-7f7ddc962e38",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v16.3.0-canary.41"
+      ],
+      "title": "v16.3.0-canary.41",
+      "uncertainty": "",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.41"
+    },
+    {
+      "builder_takeaway": "It is a credible early sign that Postgres horizontal-scaling tooling is becoming more accessible, but it is still clearly alpha.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "f88490a3-2f3e-44ec-8bd8-0d523b2044a0",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "supabase.com",
+      "source_facts": [
+        "Supabase released Multigres v0.1 alpha as open source with connection pooling, automatic failover, backups, and a Kubernetes operator."
+      ],
+      "title": "Multigres v0.1 Alpha: an operating system for Postgres",
+      "uncertainty": "",
+      "url": "https://supabase.com/blog/multigres-v0-1-alpha"
+    },
+    {
+      "builder_takeaway": "Supabase has raised a $500M Series F at a $10B pre-money valuation, led by GIC.",
+      "category": "Tools Worth Testing",
+      "id": "a8edac3c-eb0a-49c2-b7fb-a44798ca6189",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "supabase.com",
+      "source_facts": [
+        "Supabase Series F"
+      ],
+      "title": "Supabase Series F",
+      "uncertainty": "",
+      "url": "https://supabase.com/blog/supabase-series-f"
+    },
+    {
+      "builder_takeaway": "Nvidia and Hugging Face posted a content-safety model announcement aimed at enterprise moderation. The fetched item is too thin here to justify inclusion.",
+      "category": "AI Operations / Agent Control",
+      "id": "d97ee6f1-1258-49af-be5f-1c113b8079cc",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "huggingface.co",
+      "source_facts": [
+        "Hugging Face posted Nemotron 3.5 Content Safety for enterprise AI use cases."
+      ],
+      "title": "Nemotron 3.5 Content Safety: Customizable Multimodal Safety for Global Enterprise AI",
+      "uncertainty": "",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety"
+    },
+    {
+      "builder_takeaway": "ServiceNow and Hugging Face posted EVA-Bench Data 2.0 with more tools and scenarios, but the claimed item lacks enough detail here to clear the bar.",
+      "category": "AI Operations / Agent Control",
+      "id": "c2240565-d2f5-4dcc-91ff-52fe0b532e3a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "huggingface.co",
+      "source_facts": [
+        "EVA-Bench Data 2.0 expands to 3 domains, 121 tools, and 213 scenarios."
+      ],
+      "title": "EVA-Bench Data 2.0: 3 Domains, 121 Tools, 213 Scenarios",
+      "uncertainty": "",
+      "url": "https://huggingface.co/blog/ServiceNow-AI/eva-bench-data"
+    },
+    {
+      "builder_takeaway": "This is the kind of tool-surface change that can directly cut agent friction, tool calls, and token spend in real workflows.",
+      "category": "AI Operations / Agent Control",
+      "id": "9687dcfe-d0f9-4ef6-9786-7d775e087c6a",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-05T00:00:00.000Z",
+      "source": "huggingface.co",
+      "source_facts": [
+        "Hugging Face says the rebuilt hf CLI uses 1.3x-1.8x fewer tokens than curl or the Python SDK on benchmarked Hub tasks, with even larger savings on multi-step workflows."
+      ],
+      "title": "Designing the hf CLI as an agent-optimized way to work with the Hub",
+      "uncertainty": "",
+      "url": "https://huggingface.co/blog/hf-cli-for-agents"
     }
   ],
   "mode": "primary",
-  "run_id": "653a08d8-4dc5-4bf2-9068-ffea02aa7f47",
+  "run_id": "e7d16d1b-233d-4b6e-8201-f039e4e6e3b7",
   "status": "completed",
-  "summary": "Synthesized Nightly Librarian run with 10 promoted item(s), 40 scored item(s), and 30 rejected item(s).",
+  "summary": "Synthesized Nightly Librarian run with 6 promoted item(s), 40 scored item(s), and 34 rejected item(s).",
   "title": "Nightly Librarian - 2026-06-05"
 }
