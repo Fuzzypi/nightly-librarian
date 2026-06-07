@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>June 6, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="5 stories cleared the bar, led by Reproducible Builds in May 2026, Image API requests failing with 401s, and Our ai feature went down in the claude outage yesterday, right as i'd spent two weeks makin">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-06-06/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="June 6, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="5 stories cleared the bar, led by Reproducible Builds in May 2026, Image API requests failing with 401s, and Our ai feature went down in the claude outage yesterday, right as i'd spent two weeks makin">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-06-06/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="June 6, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="5 stories cleared the bar, led by Reproducible Builds in May 2026, Image API requests failing with 401s, and Our ai feature went down in the claude outage yesterday, right as i'd spent two weeks makin">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."}</script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>June 6, 2026 · Report log</span>
+      <span>Jun 6, 2026, 3:06 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>June 6, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>5 stories cleared the bar, led by Reproducible Builds in May 2026, Image API requests failing with 401s, and Our ai feature went down in the claude outage yesterday, right as i'd spent two weeks making it cheaper.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>5 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+      
+      <div class="item">
+        <div class="item-title"><a href="https://reproducible-builds.org/reports/2026-05/" target="_blank" rel="noopener">Reproducible Builds in May 2026</a></div>
+        <div class="item-takeaway">The Reproducible Builds report says Debian testing now blocks unreproducible packages ahead of Debian 14.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://status.openai.com//incidents/01KTA0V0N4KT7VV50DTJZ85XTA" target="_blank" rel="noopener">Image API requests failing with 401s</a></div>
+        <div class="item-takeaway">OpenAI says Image API requests returned 401s for about 40 minutes before mitigation and full recovery.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1txgiex/our_ai_feature_went_down_in_the_claude_outage/" target="_blank" rel="noopener">Our ai feature went down in the claude outage yesterday, right as i'd spent two weeks making it cheaper</a></div>
+        <div class="item-takeaway">A SaaS operator says a Claude outage exposed the gap between model-cost optimization and multi-provider resilience.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/jj-vcs/jj/releases/tag/v0.42.0" target="_blank" rel="noopener">jujutsu v0.42.0 released</a></div>
+        <div class="item-takeaway">jj 0.42.0 ships multi-revision show, change-ID-aware fetch rebases, alias docs in completions, and a mimalloc switch.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://openai.com/index/chatgpt-memory-dreaming" target="_blank" rel="noopener">Dreaming: Better memory for a more helpful ChatGPT</a></div>
+        <div class="item-takeaway">OpenAI posted a new ChatGPT memory article; browse access returned 403, so this is title-level only and needs follow-up.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+      
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tx9sl9/kimi_k26_on_8b200_expected_vllmsglang_throughput/" target="_blank" rel="noopener">Kimi K2.6 on 8×B200: expected vLLM/SGLang throughput?</a>
+        </div>
+        <div class="item-takeaway">I’m planning to run moonshotai/Kimi-K2.6 on 8×NVIDIA B200 with vLLM or SGLang , likely using NVFP4(or original QAT model) . What real throug</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tx9ef5/qwen_36_35b_on_rtx_3080_10gb_7700x_32gb_ddr5/" target="_blank" rel="noopener">Qwen 3.6 35B on RTX 3080 10GB + 7700X + 32GB DDR5</a>
+        </div>
+        <div class="item-takeaway">Environment: GPU: RTX 3080 10GB CPU: Ryzen 7 7700x RAM: 32GB 6000mt/s DDR5 OS: CachyOS engine: ik_llamacpp cuda Config: llama-server \ --mod</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tx8cur/provekv_honest_36_lossless_vs_f32_18x_vs_fp16/" target="_blank" rel="noopener">proveKV – Honest 36× lossless (vs f32, 18x vs fp16) KV‑cache compression for LLMs (zero PPL regression)</a>
+        </div>
+        <div class="item-takeaway">I’m sharing a new open‑source repo that demonstrates a reproducible KV‑cache compression technique. - Result: 36× lossless / 68× lossy memor</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1txcrof/can_mtp_models_be_used_as_standalone_smaller/" target="_blank" rel="noopener">Can MTP models be used as standalone smaller models? (e.g. DS4 Flash/Pro)</a>
+        </div>
+        <div class="item-takeaway">I&amp;#39;ve been wondering about models that are trained with MTP (Multi-Token Prediction) and whether the intermediate prediction heads can ef</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tx1x6g/any_one_still_use_gptoss120b/" target="_blank" rel="noopener">Any one still use gpt-oss-120b?</a>
+        </div>
+        <div class="item-takeaway">Is anyone still using GPT-OSS-120B? How has it been for tool calling, summarization, coding assistance, and other relatively simple agent ta</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1twsffj/the_deepswe_benchmark_was_runned_rather/" target="_blank" rel="noopener">The DeepSWE benchmark was runned rather incompetently and the results are completely invalid</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/Charuru [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://owen.cafe/posts/stumpalo/" target="_blank" rel="noopener">A faster bump allocator for rust</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://hauleth.dev/post/review-requires-reading/" target="_blank" rel="noopener">Reviewing code requires reading</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://xeiaso.net/notes/2026/ipv6-zones-go-url/" target="_blank" rel="noopener">IPv6 zones in URLs are a mistake</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/jj-vcs/jj/releases/tag/v0.42.0" target="_blank" rel="noopener">jujutsu v0.42.0 released</a>
+        </div>
+        <div class="item-takeaway">jj 0.42.0 ships multi-revision show, change-ID-aware fetch rebases, alias docs in completions, and a mimalloc switch.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://htmx.org/essays/code-is-cheap/" target="_blank" rel="noopener">Code is Cheap(er)</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://drj11.wordpress.com/2007/04/09/learning-j-part-i/" target="_blank" rel="noopener">Learning J – Part I</a>
+        </div>
+        <div class="item-takeaway">Part I , Part II , Part III , and Part IV Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/a-yiorgos/wambook" target="_blank" rel="noopener">Warren's Abstract Machine: A Tutorial Reconstruction</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://youtu.be/55pTFVoclvE" target="_blank" rel="noopener">I was laid off by Atlassian</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/maxonvim/tmux-underkeys" target="_blank" rel="noopener">Tmux plugin to quickly switch between sessions</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://charitydotwtf.substack.com/p/ai-enthusiasts-are-in-a-race-against" target="_blank" rel="noopener">AI enthusiasts are in a race against time, AI skeptics are in a race against entropy</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://tiki.li/blog/blqsort" target="_blank" rel="noopener">Branchless Quicksort</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://reproducible-builds.org/reports/2026-05/" target="_blank" rel="noopener">Reproducible Builds in May 2026</a>
+        </div>
+        <div class="item-takeaway">The Reproducible Builds report says Debian testing now blocks unreproducible packages ahead of Debian 14.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://momentsingraphics.de/Siggraph2026.html" target="_blank" rel="noopener">Gaussian Point Splatting</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://people.ece.cornell.edu/land/courses/ece4760/RP2040/C_SDK_DMA_machine/DMA_machine_rp2040.html" target="_blank" rel="noopener">RP2040 DMA is Turing Complete (2023)</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.youtube.com/watch?v=GZoLy5e8y-4" target="_blank" rel="noopener">Ladybird browser update (May 2026)</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://utcc.utoronto.ca/~cks/space/blog/unix/SuAsLoginReplacement" target="_blank" rel="noopener">When su replaced login for becoming another Unix login</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.adamsolove.com/ui/ducking/2026/06/03/better-podcast-ui.html" target="_blank" rel="noopener">Designing a better podcast editor</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.waleson.com/2026/05/navigating-fog-of-war-age-of-empires-ai.html" target="_blank" rel="noopener">Navigating the Fog of War: Age of Empires, AI Agents, and the Rise of Dark Code</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lfg.popovicu.com/series/the-shell-as-a-language/terminal-tty-and-shell/" target="_blank" rel="noopener">The terminal, the TTY, and the shell</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.youtube.com/watch?v=0_9YS2tsdYc" target="_blank" rel="noopener">Microcontroller Magic: Under the Hood of the RP2350 &quot;Sum Ergo Demonstro&quot; demo</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://status.openai.com//incidents/01KTA0V0N4KT7VV50DTJZ85XTA" target="_blank" rel="noopener">Image API requests failing with 401s</a>
+        </div>
+        <div class="item-takeaway">OpenAI says Image API requests returned 401s for about 40 minutes before mitigation and full recovery.</div>
+        <div class="item-meta">
+          <span>openai-status</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://openai.com/index/chatgpt-memory-dreaming" target="_blank" rel="noopener">Dreaming: Better memory for a more helpful ChatGPT</a>
+        </div>
+        <div class="item-takeaway">OpenAI posted a new ChatGPT memory article; browse access returned 403, so this is title-level only and needs follow-up.</div>
+        <div class="item-meta">
+          <span>openai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openai.com/index/biodefense-in-the-intelligence-age" target="_blank" rel="noopener">Biodefense in the Intelligence Age</a>
+        </div>
+        <div class="item-takeaway">An action plan for AI-powered biological resilience</div>
+        <div class="item-meta">
+          <span>openai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txeh9l/best_book_on_innovation/" target="_blank" rel="noopener">Best book on innovation</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/Vish341 [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txgiex/our_ai_feature_went_down_in_the_claude_outage/" target="_blank" rel="noopener">Our ai feature went down in the claude outage yesterday, right as i'd spent two weeks making it cheaper</a>
+        </div>
+        <div class="item-takeaway">A SaaS operator says a Claude outage exposed the gap between model-cost optimization and multi-provider resilience.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txgrow/when_was_the_last_time_you_felt_like_this/" target="_blank" rel="noopener">When was the last time you felt like this?</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/woeshipekora [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txgl5u/integrating_zkteco_k45_pro_with_nodejs/" target="_blank" rel="noopener">Integrating ZKTeco K45 Pro with Node.js</a>
+        </div>
+        <div class="item-takeaway">I&amp;#39;m building a gym management SaaS in Node.js and want to integrate a ZKTeco K45 Pro biometric device. Goal: Fingerprint scan → attendan</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txgt0d/i_run_an_ai_course_creator_how_do_i_stay_safe/" target="_blank" rel="noopener">I run an AI course creator. How do I stay safe from copyright trouble with what users make?</a>
+        </div>
+        <div class="item-takeaway">I want to know how other founders handle this in real life, not the legal theory. I run a tool that has an AI course creator. A user types i</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txgn63/week_two_of_my_launch_the_two_customers_who_didnt/" target="_blank" rel="noopener">Week two of my launch: the two customers who didn't leave taught me more than the 200 who showed up</a>
+        </div>
+        <div class="item-takeaway">Launch week was crazy loud. Visitors streamed in, and I ran a show that kept folks hooked, along with a directory feature. It felt amazing.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txfsdx/im_testing_my_tarot_apps_onboarding_funnel_one/" target="_blank" rel="noopener">I'm testing my tarot app's onboarding funnel one cheap ad at a time. Two rounds in.</a>
+        </div>
+        <div class="item-takeaway">I run a daily tarot app that helps people self reflect and I&amp;#39;m validating the funnel one small experiment at a time. I think this is the</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txf191/built_a_finance_dashboard_for_founders_after/" target="_blank" rel="noopener">Built a finance dashboard for founders after nearly missing payroll. Here is what I learned.</a>
+        </div>
+        <div class="item-takeaway">Founder here, full disclosure I built what I am about to mention. About a year ago I was running our startup and had no real idea what our b</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txeqfn/is_the_serviceassoftware_model_actually_different/" target="_blank" rel="noopener">Is the Service-as-Software model actually different from SaaS tools?</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/Mourino_ [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txhp3s/6_years_software_developer_looking_to_start_a/" target="_blank" rel="noopener">6+ Years Software Developer Looking to Start a Business/Startup in India – Need Industry &amp; Investment Advice</a>
+        </div>
+        <div class="item-takeaway">Hello everyone, I have 6+ years experience as a software developer (Ruby on Rails, React, SaaS product development, cloud deployment, APIs,</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txh5cr/my_journey_of_earning_my_first_dollar_through_a/" target="_blank" rel="noopener">my journey of earning my first dollar through a SaaS</a>
+        </div>
+        <div class="item-takeaway">I thought of an idea - ai assistant for macOS and wanted to give it a try. OpenAI codex hackathon came and then i thought to give it a shot.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 8b9238aa-b59f-457f-986d-3a8091fce365
+Started: 2026-06-06T07:01:10.675Z
+Completed: 2026-06-06T07:06:13.824Z
+
+## Worth attention
+
+- **Reproducible Builds in May 2026**
+  https://reproducible-builds.org/reports/2026-05/
+  The Reproducible Builds report says Debian testing now blocks unreproducible packages ahead of Debian 14.
+- **Image API requests failing with 401s**
+  https://status.openai.com//incidents/01KTA0V0N4KT7VV50DTJZ85XTA
+  OpenAI says Image API requests returned 401s for about 40 minutes before mitigation and full recovery.
+- **Our ai feature went down in the claude outage yesterday, right as i'd spent two weeks making it cheaper**
+  https://www.reddit.com/r/SaaS/comments/1txgiex/our_ai_feature_went_down_in_the_claude_outage/
+  A SaaS operator says a Claude outage exposed the gap between model-cost optimization and multi-provider resilience.
+- **jujutsu v0.42.0 released**
+  https://github.com/jj-vcs/jj/releases/tag/v0.42.0
+  jj 0.42.0 ships multi-revision show, change-ID-aware fetch rebases, alias docs in completions, and a mimalloc switch.
+- **Dreaming: Better memory for a more helpful ChatGPT**
+  https://openai.com/index/chatgpt-memory-dreaming
+  OpenAI posted a new ChatGPT memory article; browse access returned 403, so this is title-level only and needs follow-up.
+
+## Full digest
+
+- [R] [reddit-localllama] Kimi K2.6 on 8×B200: expected vLLM/SGLang throughput? — https://www.reddit.com/r/LocalLLaMA/comments/1tx9sl9/kimi_k26_on_8b200_expected_vllmsglang_throughput/ — I’m planning to run moonshotai/Kimi-K2.6 on 8×NVIDIA B200 with vLLM or SGLang , likely using NVFP4(or original QAT model) . What real throug
+- [R] [reddit-localllama] Qwen 3.6 35B on RTX 3080 10GB + 7700X + 32GB DDR5 — https://www.reddit.com/r/LocalLLaMA/comments/1tx9ef5/qwen_36_35b_on_rtx_3080_10gb_7700x_32gb_ddr5/ — Environment: GPU: RTX 3080 10GB CPU: Ryzen 7 7700x RAM: 32GB 6000mt/s DDR5 OS: CachyOS engine: ik_llamacpp cuda Config: llama-server \ --mod
+- [R] [reddit-localllama] proveKV – Honest 36× lossless (vs f32, 18x vs fp16) KV‑cache compression for LLMs (zero PPL regression) — https://www.reddit.com/r/LocalLLaMA/comments/1tx8cur/provekv_honest_36_lossless_vs_f32_18x_vs_fp16/ — I’m sharing a new open‑source repo that demonstrates a reproducible KV‑cache compression technique. - Result: 36× lossless / 68× lossy memor
+- [R] [reddit-localllama] Can MTP models be used as standalone smaller models? (e.g. DS4 Flash/Pro) — https://www.reddit.com/r/LocalLLaMA/comments/1txcrof/can_mtp_models_be_used_as_standalone_smaller/ — I&amp;#39;ve been wondering about models that are trained with MTP (Multi-Token Prediction) and whether the intermediate prediction heads can ef
+- [R] [reddit-localllama] Any one still use gpt-oss-120b? — https://www.reddit.com/r/LocalLLaMA/comments/1tx1x6g/any_one_still_use_gptoss120b/ — Is anyone still using GPT-OSS-120B? How has it been for tool calling, summarization, coding assistance, and other relatively simple agent ta
+- [R] [reddit-localllama] The DeepSWE benchmark was runned rather incompetently and the results are completely invalid — https://www.reddit.com/r/LocalLLaMA/comments/1twsffj/the_deepswe_benchmark_was_runned_rather/ — &amp;#32; submitted by &amp;#32; /u/Charuru [link] &amp;#32; [comments]
+- [R] [lobsters] A faster bump allocator for rust — https://owen.cafe/posts/stumpalo/ — Comments
+- [R] [lobsters] Reviewing code requires reading — https://hauleth.dev/post/review-requires-reading/ — Comments
+- [R] [lobsters] IPv6 zones in URLs are a mistake — https://xeiaso.net/notes/2026/ipv6-zones-go-url/ — Comments
+- [P] [lobsters] jujutsu v0.42.0 released — https://github.com/jj-vcs/jj/releases/tag/v0.42.0 — jj 0.42.0 ships multi-revision show, change-ID-aware fetch rebases, alias docs in completions, and a mimalloc switch.
+- [R] [lobsters] Code is Cheap(er) — https://htmx.org/essays/code-is-cheap/ — Comments
+- [R] [lobsters] Learning J – Part I — https://drj11.wordpress.com/2007/04/09/learning-j-part-i/ — Part I , Part II , Part III , and Part IV Comments
+- [R] [lobsters] Warren's Abstract Machine: A Tutorial Reconstruction — https://github.com/a-yiorgos/wambook — Comments
+- [R] [lobsters] I was laid off by Atlassian — https://youtu.be/55pTFVoclvE — Comments
+- [R] [lobsters] Tmux plugin to quickly switch between sessions — https://github.com/maxonvim/tmux-underkeys — Comments
+- [R] [lobsters] AI enthusiasts are in a race against time, AI skeptics are in a race against entropy — https://charitydotwtf.substack.com/p/ai-enthusiasts-are-in-a-race-against — Comments
+- [R] [lobsters] Branchless Quicksort — https://tiki.li/blog/blqsort — Comments
+- [P] [lobsters] Reproducible Builds in May 2026 — https://reproducible-builds.org/reports/2026-05/ — The Reproducible Builds report says Debian testing now blocks unreproducible packages ahead of Debian 14.
+- [R] [lobsters] Gaussian Point Splatting — https://momentsingraphics.de/Siggraph2026.html — Comments
+- [R] [lobsters] RP2040 DMA is Turing Complete (2023) — https://people.ece.cornell.edu/land/courses/ece4760/RP2040/C_SDK_DMA_machine/DMA_machine_rp2040.html — Comments
+- [R] [lobsters] Ladybird browser update (May 2026) — https://www.youtube.com/watch?v=GZoLy5e8y-4 — Comments
+- [R] [lobsters] When su replaced login for becoming another Unix login — https://utcc.utoronto.ca/~cks/space/blog/unix/SuAsLoginReplacement — Comments
+- [R] [lobsters] Designing a better podcast editor — https://www.adamsolove.com/ui/ducking/2026/06/03/better-podcast-ui.html — Comments
+- [R] [lobsters] Navigating the Fog of War: Age of Empires, AI Agents, and the Rise of Dark Code — https://blog.waleson.com/2026/05/navigating-fog-of-war-age-of-empires-ai.html — Comments
+- [R] [lobsters] The terminal, the TTY, and the shell — https://lfg.popovicu.com/series/the-shell-as-a-language/terminal-tty-and-shell/ — Comments
+- [R] [lobsters] Microcontroller Magic: Under the Hood of the RP2350 &quot;Sum Ergo Demonstro&quot; demo — https://www.youtube.com/watch?v=0_9YS2tsdYc — Comments
+- [M] [openai-status] Image API requests failing with 401s — https://status.openai.com//incidents/01KTA0V0N4KT7VV50DTJZ85XTA — OpenAI says Image API requests returned 401s for about 40 minutes before mitigation and full recovery.
+- [M] [openai-blog] Dreaming: Better memory for a more helpful ChatGPT — https://openai.com/index/chatgpt-memory-dreaming — OpenAI posted a new ChatGPT memory article; browse access returned 403, so this is title-level only and needs follow-up.
+- [R] [openai-blog] Biodefense in the Intelligence Age — https://openai.com/index/biodefense-in-the-intelligence-age — An action plan for AI-powered biological resilience
+- [R] [reddit-saas] Best book on innovation — https://www.reddit.com/r/SaaS/comments/1txeh9l/best_book_on_innovation/ — &amp;#32; submitted by &amp;#32; /u/Vish341 [link] &amp;#32; [comments]
+- [P] [reddit-saas] Our ai feature went down in the claude outage yesterday, right as i'd spent two weeks making it cheaper — https://www.reddit.com/r/SaaS/comments/1txgiex/our_ai_feature_went_down_in_the_claude_outage/ — A SaaS operator says a Claude outage exposed the gap between model-cost optimization and multi-provider resilience.
+- [R] [reddit-saas] When was the last time you felt like this? — https://www.reddit.com/r/SaaS/comments/1txgrow/when_was_the_last_time_you_felt_like_this/ — &amp;#32; submitted by &amp;#32; /u/woeshipekora [link] &amp;#32; [comments]
+- [R] [reddit-saas] Integrating ZKTeco K45 Pro with Node.js — https://www.reddit.com/r/SaaS/comments/1txgl5u/integrating_zkteco_k45_pro_with_nodejs/ — I&amp;#39;m building a gym management SaaS in Node.js and want to integrate a ZKTeco K45 Pro biometric device. Goal: Fingerprint scan → attendan
+- [R] [reddit-saas] I run an AI course creator. How do I stay safe from copyright trouble with what users make? — https://www.reddit.com/r/SaaS/comments/1txgt0d/i_run_an_ai_course_creator_how_do_i_stay_safe/ — I want to know how other founders handle this in real life, not the legal theory. I run a tool that has an AI course creator. A user types i
+- [R] [reddit-saas] Week two of my launch: the two customers who didn't leave taught me more than the 200 who showed up — https://www.reddit.com/r/SaaS/comments/1txgn63/week_two_of_my_launch_the_two_customers_who_didnt/ — Launch week was crazy loud. Visitors streamed in, and I ran a show that kept folks hooked, along with a directory feature. It felt amazing.
+- [R] [reddit-saas] I'm testing my tarot app's onboarding funnel one cheap ad at a time. Two rounds in. — https://www.reddit.com/r/SaaS/comments/1txfsdx/im_testing_my_tarot_apps_onboarding_funnel_one/ — I run a daily tarot app that helps people self reflect and I&amp;#39;m validating the funnel one small experiment at a time. I think this is the
+- [R] [reddit-saas] Built a finance dashboard for founders after nearly missing payroll. Here is what I learned. — https://www.reddit.com/r/SaaS/comments/1txf191/built_a_finance_dashboard_for_founders_after/ — Founder here, full disclosure I built what I am about to mention. About a year ago I was running our startup and had no real idea what our b
+- [R] [reddit-saas] Is the Service-as-Software model actually different from SaaS tools? — https://www.reddit.com/r/SaaS/comments/1txeqfn/is_the_serviceassoftware_model_actually_different/ — &amp;#32; submitted by &amp;#32; /u/Mourino_ [link] &amp;#32; [comments]
+- [R] [reddit-saas] 6+ Years Software Developer Looking to Start a Business/Startup in India – Need Industry &amp; Investment Advice — https://www.reddit.com/r/SaaS/comments/1txhp3s/6_years_software_developer_looking_to_start_a/ — Hello everyone, I have 6+ years experience as a software developer (Ruby on Rails, React, SaaS product development, cloud deployment, APIs,
+- [R] [reddit-saas] my journey of earning my first dollar through a SaaS — https://www.reddit.com/r/SaaS/comments/1txh5cr/my_journey_of_earning_my_first_dollar_through_a/ — I thought of an idea - ai assistant for macOS and wanted to give it a try. OpenAI codex hackathon came and then i thought to give it a shot.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>

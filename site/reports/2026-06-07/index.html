@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>June 7, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="6 stories cleared the bar, led by (untitled), (untitled), and (untitled).">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-06-07/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="June 7, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="6 stories cleared the bar, led by (untitled), (untitled), and (untitled).">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-06-07/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="June 7, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="6 stories cleared the bar, led by (untitled), (untitled), and (untitled).">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."}</script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>June 7, 2026 · Report log</span>
+      
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>June 7, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>6 stories cleared the bar, led by (untitled), (untitled), and (untitled).</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>6 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+      
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Val Town launched a plugin that enables 100ms deploys directly from Claude Code, Codex, and Cursor. This puts serverless deployment inside your coding agent loop — write a val, deploy it without leaving the terminal. Directly relevant if you're running agentic workflows with Claude Code.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Two notable changes: `ollama launch omp` now integrates with Oh My Pi (an AI coding agent with IDE integration), and MLX embedding layers now use NVFP4 global scale for improved quantization on Apple Silicon. If you're running Ollama locally on Mac for embeddings, the NVFP4 change may improve quality at the same quantization level. Worth a quick test.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">A builder reports the first formally verified polygon intersection algorithm, noting that Claude Opus 4.8 could one-shot the implementation while previous models failed. This is a practical capability signal — if you've hit walls with complex algorithmic tasks, the new Opus generation may clear them.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Single binary that filters verbose CLI output before it reaches an LLM agent context. Builder-reported 91.8% token reduction on their workflow. Relevant for any agentic pipeline where you're piping shell output to a model — worth a quick look if token costs or context window pressure is a concern.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Vercel added persistent, attachable storage for their sandbox product — lifecycle independent of the sandbox itself. Create a drive once, mount it at a configurable path per sandbox. Early signal for stateful agent execution environments; not usable without getting on the waitlist.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">API access to 600K+ skills from the open-source ecosystem, authenticated via Vercel OIDC. Lets you query, search, and inspect skills programmatically from your own apps or agents. Relevant if you're building MCP servers or skill-routing infrastructure.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+      
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-perplexity%3D%3D1.3.2" target="_blank" rel="noopener">langchain-perplexity==1.3.2</a>
+        </div>
+        <div class="item-takeaway">patch: ToolMessage/AIMessage serialization fix</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.4.1" target="_blank" rel="noopener">langchain-core==1.4.1</a>
+        </div>
+        <div class="item-takeaway">minor fixes, remove Bedrock prevalidation from load</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/ollama/ollama/releases/tag/v0.30.6" target="_blank" rel="noopener">v0.30.6</a>
+        </div>
+        <div class="item-takeaway">Oh My Pi integration + NVFP4 MLX quantization on Apple Silicon</div>
+        <div class="item-meta">
+          <span>gh-ollama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://github.com/crewAIInc/crewAI/releases/tag/1.14.7a2" target="_blank" rel="noopener">crewAI 1.14.7a2</a>
+        </div>
+        <div class="item-takeaway">alpha: conversational flow traces, handle_turn, Type DSL</div>
+        <div class="item-meta">
+          <span>gh-crewai</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/schildep/verified-polygon-intersection" target="_blank" rel="noopener">Formally verified polygon intersection / Opus 4.8</a>
+        </div>
+        <div class="item-takeaway">Opus 4.8 oneshots formally verified algorithm that previous models failed</div>
+        <div class="item-meta">
+          <span>hn</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/zdk/lowfat" target="_blank" rel="noopener">Lowfat CLI filter</a>
+        </div>
+        <div class="item-takeaway">91.8% LLM token reduction via CLI output filtering</div>
+        <div class="item-meta">
+          <span>hn</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/" target="_blank" rel="noopener">Google AI updates May 2026</a>
+        </div>
+        <div class="item-takeaway">monthly roundup, thin content</div>
+        <div class="item-meta">
+          <span>google-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ty3scl/" target="_blank" rel="noopener">first orders post</a>
+        </div>
+        <div class="item-takeaway">engagement noise</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txoay9/" target="_blank" rel="noopener">this sub in one graph</a>
+        </div>
+        <div class="item-takeaway">engagement bait</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ty9lqn/" target="_blank" rel="noopener">first sale from fun SaaS tool</a>
+        </div>
+        <div class="item-takeaway">noise</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txy7jl/" target="_blank" rel="noopener">$1.3K MRR $6K ad spend</a>
+        </div>
+        <div class="item-takeaway">noise</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txxi2t/" target="_blank" rel="noopener">how to get first 100 customers</a>
+        </div>
+        <div class="item-takeaway">generic question</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txsl1p/" target="_blank" rel="noopener">scraped 21K B2B companies</a>
+        </div>
+        <div class="item-takeaway">thin/promotional</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txyi03/" target="_blank" rel="noopener">fake stories on SaaS sub</a>
+        </div>
+        <div class="item-takeaway">noise</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1tya00e/" target="_blank" rel="noopener">cold email for B2B SaaS</a>
+        </div>
+        <div class="item-takeaway">generic advice-seeking</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ty6xzd/" target="_blank" rel="noopener">how do you know SaaS is ready to launch</a>
+        </div>
+        <div class="item-takeaway">generic</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txzwo1/" target="_blank" rel="noopener">old HP laptop to first paying customer</a>
+        </div>
+        <div class="item-takeaway">feel-good story, not actionable</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ty1x8r/" target="_blank" rel="noopener">guidance for solo startup</a>
+        </div>
+        <div class="item-takeaway">generic</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txln3q/" target="_blank" rel="noopener">jealous of 3k MRR posts</a>
+        </div>
+        <div class="item-takeaway">venting, no signal</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ty8x45/" target="_blank" rel="noopener">why is explaining SaaS so hard</a>
+        </div>
+        <div class="item-takeaway">generic</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ty47sa/" target="_blank" rel="noopener">week 1 competitor tracking SaaS</a>
+        </div>
+        <div class="item-takeaway">thin launch diary</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ty8omp/" target="_blank" rel="noopener">tracking AI traffic in GA4</a>
+        </div>
+        <div class="item-takeaway">thin discussion, no actionable solution</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ty8j5c/" target="_blank" rel="noopener">hardest part of launching a product</a>
+        </div>
+        <div class="item-takeaway">generic filler question</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ty863c/" target="_blank" rel="noopener">AI firewall for prompts</a>
+        </div>
+        <div class="item-takeaway">thin/promotional</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ty0n0l/" target="_blank" rel="noopener">should I pull the plug</a>
+        </div>
+        <div class="item-takeaway">venting, no signal</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txlbdb/" target="_blank" rel="noopener">voice AI for hotels</a>
+        </div>
+        <div class="item-takeaway">too narrow/niche</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txvw0x/" target="_blank" rel="noopener">who can relate</a>
+        </div>
+        <div class="item-takeaway">content-free</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1txv7kd/" target="_blank" rel="noopener">footrue.com 280 browser tools</a>
+        </div>
+        <div class="item-takeaway">self-promotion</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ty9tut/" target="_blank" rel="noopener">startups struggling with growth</a>
+        </div>
+        <div class="item-takeaway">generic filler</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ty9mfk/" target="_blank" rel="noopener">50 users milestone</a>
+        </div>
+        <div class="item-takeaway">noise</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/ainews-not-much-happened-today-6b8" target="_blank" rel="noopener">AINews: not much happened today</a>
+        </div>
+        <div class="item-takeaway">self-described quiet day</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/bad-envs" target="_blank" rel="noopener">How to Stop Shipping Low-Quality RL Environments</a>
+        </div>
+        <div class="item-takeaway">ML researcher content, not solo dev relevant</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/stable" target="_blank" rel="noopener">n8n stable 2.23.4</a>
+        </div>
+        <div class="item-takeaway">minor bugfix (DOMMatrix polyfill for PDFs)</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.23.4" target="_blank" rel="noopener">n8n@2.23.4</a>
+        </div>
+        <div class="item-takeaway">duplicate of stable release</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.25.5" target="_blank" rel="noopener">n8n@2.25.5</a>
+        </div>
+        <div class="item-takeaway">AI builder sandboxes now thread-scoped and non-ephemeral</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">n8n beta</a>
+        </div>
+        <div class="item-takeaway">duplicate of 2.25.5</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.val.town/plugin" target="_blank" rel="noopener">Val Town plugin for coding agents</a>
+        </div>
+        <div class="item-takeaway">100ms deploys from Claude Code/Codex/Cursor</div>
+        <div class="item-meta">
+          <span>vercel</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.42" target="_blank" rel="noopener">Next.js v16.3.0-canary.42</a>
+        </div>
+        <div class="item-takeaway">canary channel, misc turbopack changes</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/drives-for-vercel-sandbox-in-private-beta" target="_blank" rel="noopener">Vercel Sandbox Drives private beta</a>
+        </div>
+        <div class="item-takeaway">persistent storage for sandboxes, lifecycle-independent</div>
+        <div class="item-meta">
+          <span>vercel</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/the-skills-sh-api-is-now-available" target="_blank" rel="noopener">skills.sh API now available</a>
+        </div>
+        <div class="item-takeaway">600K+ open-source skills queryable via Vercel OIDC</div>
+        <div class="item-meta">
+          <span>vercel</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Morning memo — 2026-06-07
+
+**Source failures:** None observed.
+
+## Worth attention
+
+- **Val Town plugin for coding agents** — https://blog.val.town/plugin
+  Val Town launched a plugin that enables 100ms deploys directly from Claude Code, Codex, and Cursor. This puts serverless deployment inside your coding agent loop — write a val, deploy it without leaving the terminal. Directly relevant if you're running agentic workflows with Claude Code.
+
+- **Ollama v0.30.6** — https://github.com/ollama/ollama/releases/tag/v0.30.6
+  Two notable changes: `ollama launch omp` now integrates with Oh My Pi (an AI coding agent with IDE integration), and MLX embedding layers now use NVFP4 global scale for improved quantization on Apple Silicon. If you're running Ollama locally on Mac for embeddings, the NVFP4 change may improve quality at the same quantization level. Worth a quick test.
+
+- **Formally verified polygon intersection — Opus 4.8 oneshots, prev models failed** — https://github.com/schildep/verified-polygon-intersection
+  A builder reports the first formally verified polygon intersection algorithm, noting that Claude Opus 4.8 could one-shot the implementation while previous models failed. This is a practical capability signal — if you've hit walls with complex algorithmic tasks, the new Opus generation may clear them.
+
+- **Lowfat — pluggable CLI filter that saved 91.8% LLM tokens** — https://github.com/zdk/lowfat
+  Single binary that filters verbose CLI output before it reaches an LLM agent context. Builder-reported 91.8% token reduction on their workflow. Relevant for any agentic pipeline where you're piping shell output to a model — worth a quick look if token costs or context window pressure is a concern.
+
+- **Vercel Sandbox Drives in Private Beta** — https://vercel.com/changelog/drives-for-vercel-sandbox-in-private-beta
+  Vercel added persistent, attachable storage for their sandbox product — lifecycle independent of the sandbox itself. Create a drive once, mount it at a configurable path per sandbox. Early signal for stateful agent execution environments; not usable without getting on the waitlist.
+
+- **skills.sh API now available** — https://vercel.com/changelog/the-skills-sh-api-is-now-available
+  API access to 600K+ skills from the open-source ecosystem, authenticated via Vercel OIDC. Lets you query, search, and inspect skills programmatically from your own apps or agents. Relevant if you're building MCP servers or skill-routing infrastructure.
+
+## Full digest
+
+- [R] [gh-langchain] langchain-perplexity==1.3.2 — https://github.com/langchain-ai/langchain/releases/tag/langchain-perplexity%3D%3D1.3.2 — patch: ToolMessage/AIMessage serialization fix
+- [R] [gh-langchain] langchain-core==1.4.1 — https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.4.1 — minor fixes, remove Bedrock prevalidation from load
+- [P] [gh-ollama] v0.30.6 — https://github.com/ollama/ollama/releases/tag/v0.30.6 — Oh My Pi integration + NVFP4 MLX quantization on Apple Silicon
+- [M] [gh-crewai] crewAI 1.14.7a2 — https://github.com/crewAIInc/crewAI/releases/tag/1.14.7a2 — alpha: conversational flow traces, handle_turn, Type DSL
+- [P] [hn] Formally verified polygon intersection / Opus 4.8 — https://github.com/schildep/verified-polygon-intersection — Opus 4.8 oneshots formally verified algorithm that previous models failed
+- [P] [hn] Lowfat CLI filter — https://github.com/zdk/lowfat — 91.8% LLM token reduction via CLI output filtering
+- [R] [google-blog] Google AI updates May 2026 — https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/ — monthly roundup, thin content
+- [R] [reddit-saas] first orders post — https://www.reddit.com/r/SaaS/comments/1ty3scl/ — engagement noise
+- [R] [reddit-saas] this sub in one graph — https://www.reddit.com/r/SaaS/comments/1txoay9/ — engagement bait
+- [R] [reddit-saas] first sale from fun SaaS tool — https://www.reddit.com/r/SaaS/comments/1ty9lqn/ — noise
+- [R] [reddit-saas] $1.3K MRR $6K ad spend — https://www.reddit.com/r/SaaS/comments/1txy7jl/ — noise
+- [R] [reddit-saas] how to get first 100 customers — https://www.reddit.com/r/SaaS/comments/1txxi2t/ — generic question
+- [R] [reddit-saas] scraped 21K B2B companies — https://www.reddit.com/r/SaaS/comments/1txsl1p/ — thin/promotional
+- [R] [reddit-saas] fake stories on SaaS sub — https://www.reddit.com/r/SaaS/comments/1txyi03/ — noise
+- [R] [reddit-saas] cold email for B2B SaaS — https://www.reddit.com/r/SaaS/comments/1tya00e/ — generic advice-seeking
+- [R] [reddit-saas] how do you know SaaS is ready to launch — https://www.reddit.com/r/SaaS/comments/1ty6xzd/ — generic
+- [R] [reddit-saas] old HP laptop to first paying customer — https://www.reddit.com/r/SaaS/comments/1txzwo1/ — feel-good story, not actionable
+- [R] [reddit-saas] guidance for solo startup — https://www.reddit.com/r/SaaS/comments/1ty1x8r/ — generic
+- [R] [reddit-saas] jealous of 3k MRR posts — https://www.reddit.com/r/SaaS/comments/1txln3q/ — venting, no signal
+- [R] [reddit-saas] why is explaining SaaS so hard — https://www.reddit.com/r/SaaS/comments/1ty8x45/ — generic
+- [R] [reddit-saas] week 1 competitor tracking SaaS — https://www.reddit.com/r/SaaS/comments/1ty47sa/ — thin launch diary
+- [R] [reddit-saas] tracking AI traffic in GA4 — https://www.reddit.com/r/SaaS/comments/1ty8omp/ — thin discussion, no actionable solution
+- [R] [reddit-saas] hardest part of launching a product — https://www.reddit.com/r/SaaS/comments/1ty8j5c/ — generic filler question
+- [R] [reddit-saas] AI firewall for prompts — https://www.reddit.com/r/SaaS/comments/1ty863c/ — thin/promotional
+- [R] [reddit-saas] should I pull the plug — https://www.reddit.com/r/SaaS/comments/1ty0n0l/ — venting, no signal
+- [R] [reddit-saas] voice AI for hotels — https://www.reddit.com/r/SaaS/comments/1txlbdb/ — too narrow/niche
+- [R] [reddit-saas] who can relate — https://www.reddit.com/r/SaaS/comments/1txvw0x/ — content-free
+- [R] [reddit-saas] footrue.com 280 browser tools — https://www.reddit.com/r/SaaS/comments/1txv7kd/ — self-promotion
+- [R] [reddit-saas] startups struggling with growth — https://www.reddit.com/r/SaaS/comments/1ty9tut/ — generic filler
+- [R] [reddit-saas] 50 users milestone — https://www.reddit.com/r/SaaS/comments/1ty9mfk/ — noise
+- [R] [latent-space] AINews: not much happened today — https://www.latent.space/p/ainews-not-much-happened-today-6b8 — self-described quiet day
+- [R] [latent-space] How to Stop Shipping Low-Quality RL Environments — https://www.latent.space/p/bad-envs — ML researcher content, not solo dev relevant
+- [R] [gh-n8n] n8n stable 2.23.4 — https://github.com/n8n-io/n8n/releases/tag/stable — minor bugfix (DOMMatrix polyfill for PDFs)
+- [R] [gh-n8n] n8n@2.23.4 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.23.4 — duplicate of stable release
+- [M] [gh-n8n] n8n@2.25.5 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.25.5 — AI builder sandboxes now thread-scoped and non-ephemeral
+- [R] [gh-n8n] n8n beta — https://github.com/n8n-io/n8n/releases/tag/beta — duplicate of 2.25.5
+- [P] [vercel] Val Town plugin for coding agents — https://blog.val.town/plugin — 100ms deploys from Claude Code/Codex/Cursor
+- [R] [gh-nextjs] Next.js v16.3.0-canary.42 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.42 — canary channel, misc turbopack changes
+- [P] [vercel] Vercel Sandbox Drives private beta — https://vercel.com/changelog/drives-for-vercel-sandbox-in-private-beta — persistent storage for sandboxes, lifecycle-independent
+- [P] [vercel] skills.sh API now available — https://vercel.com/changelog/the-skills-sh-api-is-now-available — 600K+ open-source skills queryable via Vercel OIDC</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>

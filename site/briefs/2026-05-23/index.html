@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>May 23, 2026 — The Nightly Librarian</title>
+  <meta name="description" content="Tonight's brief tracks AI Operations / Agent Control, Tools Worth Testing, Data Infrastructure / Verification / Scraping, and Model + API Changes. Synthesized Nightly Librarian run with 7 promoted ite">
+  <link rel="canonical" href="https://thenightlylibrarian.com/briefs/2026-05-23/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="May 23, 2026 | The Nightly Librarian">
+  <meta property="og:description" content="Tonight's brief tracks AI Operations / Agent Control, Tools Worth Testing, Data Infrastructure / Verification / Scraping, and Model + API Changes. Synthesized Nightly Librarian run with 7 promoted ite">
+  <meta property="og:url" content="https://thenightlylibrarian.com/briefs/2026-05-23/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="May 23, 2026 | The Nightly Librarian">
+  <meta name="twitter:description" content="Tonight's brief tracks AI Operations / Agent Control, Tools Worth Testing, Data Infrastructure / Verification / Scraping, and Model + API Changes. Synthesized Nightly Librarian run with 7 promoted ite">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"May 23, 2026","description":"Tonight's brief tracks AI Operations / Agent Control, Tools Worth Testing, Data Infrastructure / Verification / Scraping, and Model + API Changes. Synthesized Nightly Librarian run with 7 promoted item(s), 40 scored item(s), and 33 rejected item(s). The lead source signal is Google API Keys Keep Working After Deletion (Long Enough to Be Exploited): Deleted Google API keys remain valid for an exploitable time window before truly expiring. The operator read is Directly changes incident response procedure for anyone using Google APIs; deletion is not an immediate kill switch. Supporting context: Heretic Free Software Project Served Legal Notice by Meta (Signals Meta is willing to enforce LLaMA license against small OSS projects; relevant to anyone shipping on LLaMA-family weights); 110 tok/s on Qwen3.6 35B A3B with 12GB VRAM Using ik_llama.cpp (Actionable alternative backend for local LLM users seeing throughput regressions in mainline llama.cpp). Monitor-only context stays out of the publish list until reviewed: llama.cpp b9274 Addresses MTP VRAM Leak (Relevant to Ollama/llama.cpp users running local MTP models who see premature model unloading); Honesty in a Small Model Drops from 35% to 0% by Changing Prompt Tone (Early signal that small local models are more tone-sensitive than assumed; relevant to agent pipelines).","url":"https://thenightlylibrarian.com/briefs/2026-05-23/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-05-23"}</script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/" class="nav-active">Archive</a><a href="/reports/">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>May 23, 2026</span>
+      <span style="font-style:italic;">What changed. Why it matters. What to do.</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/">All briefs</a>
+    <h1>May 23, 2026</h1>
+    <div class="meta" style="margin-top:0.4rem;"><span>AI Operations / Agent Control</span><span>Tools Worth Testing</span><span>Data Infrastructure / Verification / Scraping</span><span>Model + API Changes</span></div>
+    <p class="lead-summary" style="margin-top:0.85rem;">Tonight's brief tracks AI Operations / Agent Control, Tools Worth Testing, Data Infrastructure / Verification / Scraping, and Model + API Changes. Synthesized Nightly Librarian run with 7 promoted item(s), 40 scored item(s), and 33 rejected item(s). The lead source signal is Google API Keys Keep Working After Deletion (Long Enough to Be Exploited): Deleted Google API keys remain valid for an exploitable time window before truly expiring. The operator read is Directly changes incident response procedure for anyone using Google APIs; deletion is not an immediate kill switch. Supporting context: Heretic Free Software Project Served Legal Notice by Meta (Signals Meta is willing to enforce LLaMA license against small OSS projects; relevant to anyone shipping on LLaMA-family weights); 110 tok/s on Qwen3.6 35B A3B with 12GB VRAM Using ik_llama.cpp (Actionable alternative backend for local LLM users seeing throughput regressions in mainline llama.cpp). Monitor-only context stays out of the publish list until reviewed: llama.cpp b9274 Addresses MTP VRAM Leak (Relevant to Ollama/llama.cpp users running local MTP models who see premature model unloading); Honesty in a Small Model Drops from 35% to 0% by Changing Prompt Tone (Early signal that small local models are more tone-sensitive than assumed; relevant to agent pipelines).</p>
+    <h2>Worth mentioning</h2>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">1.</span>
+        <div>
+          <div class="item-title"><a href="https://www.aikido.dev/blog/google-api-keys-deletion" target="_blank" rel="noopener">Google API Keys Keep Working After Deletion (Long Enough to Be Exploited)</a></div>
+          <div class="item-takeaway">Directly changes incident response procedure for anyone using Google APIs; deletion is not an immediate kill switch.</div>
+          <div class="item-facts"><div>Deleted Google API keys remain valid for an exploitable time window before truly expiring.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Exact delay duration may vary by key type.</div>
+          <div class="item-meta">
+            <span><a href="https://www.aikido.dev/blog/google-api-keys-deletion" target="_blank" rel="noopener">aikido.dev</a></span>
+            <span>AI Operations / Agent Control</span>
+            <span>2026-05-23</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">2.</span>
+        <div>
+          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjmvx6/heretic_has_been_served_a_legal_notice_by_meta_inc/" target="_blank" rel="noopener">Heretic Free Software Project Served Legal Notice by Meta</a></div>
+          <div class="item-takeaway">Signals Meta is willing to enforce LLaMA license against small OSS projects; relevant to anyone shipping on LLaMA-family weights.</div>
+          <div class="item-facts"><div>Meta served a legal notice to the Heretic open-source project over LLaMA usage.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Specific nature of the alleged violation not disclosed publicly.</div>
+          <div class="item-meta">
+            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjmvx6/heretic_has_been_served_a_legal_notice_by_meta_inc/" target="_blank" rel="noopener">reddit.com</a></span>
+            <span>Tools Worth Testing</span>
+            <span>2026-05-23</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">3.</span>
+        <div>
+          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjh7az/110_toks_with_12gb_vram_on_qwen36_35b_a3b_and_ik/" target="_blank" rel="noopener">110 tok/s on Qwen3.6 35B A3B with 12GB VRAM Using ik_llama.cpp</a></div>
+          <div class="item-takeaway">Actionable alternative backend for local LLM users seeing throughput regressions in mainline llama.cpp.</div>
+          <div class="item-facts"><div>ik_llama.cpp achieves 110 tok/s on Qwen3.6 35B A3B on 12GB VRAM vs. regression in mainline llama.cpp after MTP merge.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Single builder report; not independently verified across hardware configs.</div>
+          <div class="item-meta">
+            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjh7az/110_toks_with_12gb_vram_on_qwen36_35b_a3b_and_ik/" target="_blank" rel="noopener">reddit.com</a></span>
+            <span>Data Infrastructure / Verification / Scraping</span>
+            <span>2026-05-23</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">4.</span>
+        <div>
+          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjoiij/for_everyone_that_uses_opencode_pi_heres_your/" target="_blank" rel="noopener">llama.cpp PR Fixes Constant Prompt Re-processing for OpenCode / Pi Users</a></div>
+          <div class="item-takeaway">Directly affects performance of local agentic workflows on llama.cpp; highly relevant to multi-agent setup.</div>
+          <div class="item-facts"><div>llama.cpp PR #22929 fixes constant prompt re-processing when using agentic harnesses like OpenCode and Pi.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: PR may not be merged yet; confirm current status before acting.</div>
+          <div class="item-meta">
+            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjoiij/for_everyone_that_uses_opencode_pi_heres_your/" target="_blank" rel="noopener">reddit.com</a></span>
+            <span>AI Operations / Agent Control</span>
+            <span>2026-05-23</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">5.</span>
+        <div>
+          <div class="item-title"><a href="https://hacks.mozilla.org/2026/05/web-serial-support-in-firefox/" target="_blank" rel="noopener">Announcing Web Serial Support in Firefox</a></div>
+          <div class="item-takeaway">Browser API parity matters for web-based hardware tools; expands addressable user base for web serial projects.</div>
+          <div class="item-facts"><div>Firefox now natively supports the Web Serial API.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Exact Firefox version not confirmed from fetched content.</div>
+          <div class="item-meta">
+            <span><a href="https://hacks.mozilla.org/2026/05/web-serial-support-in-firefox/" target="_blank" rel="noopener">hacks.mozilla.org</a></span>
+            <span>Model + API Changes</span>
+            <span>2026-05-23</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Monitor</h2>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">6.</span>
+        <div>
+          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tk0grd/latest_b9274_addresses_mtp_vram_leak/" target="_blank" rel="noopener">llama.cpp b9274 Addresses MTP VRAM Leak</a></div>
+          <div class="item-takeaway">Relevant to Ollama/llama.cpp users running local MTP models who see premature model unloading.</div>
+          <div class="item-facts"><div>llama.cpp b9274 fixes a VRAM leak affecting MTP models.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: User-reported; not yet confirmed in official release notes.</div>
+          <div class="item-meta">
+            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tk0grd/latest_b9274_addresses_mtp_vram_leak/" target="_blank" rel="noopener">reddit.com</a></span>
+            <span>Data Infrastructure / Verification / Scraping</span>
+            <span>2026-05-23</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">7.</span>
+        <div>
+          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjmswd/honesty_in_a_small_model_drops_from_35_to_0_by/" target="_blank" rel="noopener">Honesty in a Small Model Drops from 35% to 0% by Changing Prompt Tone</a></div>
+          <div class="item-takeaway">Early signal that small local models are more tone-sensitive than assumed; relevant to agent pipelines.</div>
+          <div class="item-facts"><div>Small LLMs drop from 35% to 0% honesty rate by changing prompt tone alone.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Only tested on small models; generalizability to larger models unclear.</div>
+          <div class="item-meta">
+            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjmswd/honesty_in_a_small_model_drops_from_35_to_0_by/" target="_blank" rel="noopener">reddit.com</a></span>
+            <span>AI Operations / Agent Control</span>
+            <span>2026-05-23</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>40 researched links (full index)</summary>
+      <div class="link-index">
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.aikido.dev/blog/google-api-keys-deletion" target="_blank" rel="noopener">Google API Keys Keep Working After Deletion (Long Enough to Be Exploited)</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjmvx6/heretic_has_been_served_a_legal_notice_by_meta_inc/" target="_blank" rel="noopener">Heretic Free Software Project Served Legal Notice by Meta</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjh7az/110_toks_with_12gb_vram_on_qwen36_35b_a3b_and_ik/" target="_blank" rel="noopener">110 tok/s on Qwen3.6 35B A3B with 12GB VRAM Using ik_llama.cpp</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjoiij/for_everyone_that_uses_opencode_pi_heres_your/" target="_blank" rel="noopener">llama.cpp PR Fixes Constant Prompt Re-processing for OpenCode / Pi Users</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://simonwillison.net/2026/May/21/datasette-agent-charts/#atom-everything" target="_blank" rel="noopener">datasette-agent-charts 0.1a2</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://simonwillison.net/2026/May/21/datasette-agent-2/#atom-everything" target="_blank" rel="noopener">datasette-agent 0.1a3</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://simonwillison.net/2026/May/20/datasette-agent-charts/#atom-everything" target="_blank" rel="noopener">datasette-agent-charts 0.1a1</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://simonwillison.net/2026/May/15/datasette-agent/#atom-everything" target="_blank" rel="noopener">datasette-agent 0.1a2</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://simonwillison.net/2026/May/14/datasette-agent/#atom-everything" target="_blank" rel="noopener">datasette-agent 0.1a1</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://blog.flipper.net/flipper-one-we-need-your-help/" target="_blank" rel="noopener">Flipper One — we need your help</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://rickcarlino.com/notes/p2p/gnutella-explanation.html" target="_blank" rel="noopener">Gnutella: A Protocol Outliving the World That Created It</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://hacks.mozilla.org/2026/05/web-serial-support-in-firefox/" target="_blank" rel="noopener">Announcing Web Serial Support in Firefox</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://lobste.rs/s/r87zln/internships_for_early_university_no" target="_blank" rel="noopener">Internships for Early University Students</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://slugcat.systems/post/26-05-21-how-to-open-calc-exe-from-sbox/" target="_blank" rel="noopener">How to Open calc.exe from S&amp;Box</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://illegalcode.net/rfcs/phased_rollouts.html" target="_blank" rel="noopener">Dependency Cooldowns Are Unfair; Use Phased Rollouts Instead</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://go.dev/blog/pkgsite-api" target="_blank" rel="noopener">Introducing the pkg.go.dev API</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://blog.changs.co.uk/python-315-features-that-didnt-make-the-headlines.html" target="_blank" rel="noopener">Python 3.15: Features That Didn't Make the Headlines</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://stefansf.de/c-quiz/" target="_blank" rel="noopener">C Programming Language Quiz</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-require-cox-media-group-two-other-firms-pay-nearly-1-million-settle-charges-they-deceived" target="_blank" rel="noopener">FTC Fines Cox Media Group ~$1M for Deceptive Active Listening AI</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://dev.to/harmonyos/introducing-arkts-huaweis-next-generation-development-language-jg7" target="_blank" rel="noopener">Introducing ArkTS, Huawei's Next-Generation Development Language</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://a4al6a.substack.com/p/stop-using-pull-requests" target="_blank" rel="noopener">Stop Using Pull Requests</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://oshogbo.com/blog/88/" target="_blank" rel="noopener">A Private pkg Repo Behind Mutual TLS</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://worrydream.com/refs/Jefferson_1985_-_Virtual_Time.pdf" target="_blank" rel="noopener">Virtual Time for Discrete Event Simulation (1985)</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/boratanrikulu/gobee" target="_blank" rel="noopener">Gobee: Write eBPF Programs in Go, Transpiled via Clang</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjvz6l/waiting_for_qwen_37_open_weight_the_new_king_has/" target="_blank" rel="noopener">Waiting for Qwen 3.7 Open Weight</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tk4gyy/when_your_llm_treats_data_center_gpus_like_an/" target="_blank" rel="noopener">When Your LLM Treats Data Center GPUs Like an Optional DLC</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjwrp7/qwen36_35ba3_has_changed_my_workflows_and_even/" target="_blank" rel="noopener">Qwen3.6 35B A3B Has Changed My Workflows</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tk2s09/in_theory_if_i_have_20kish_to_spend_on_hardware/" target="_blank" rel="noopener">$20k Hardware for Local Coding Agent — Off the Grid</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tk0grd/latest_b9274_addresses_mtp_vram_leak/" target="_blank" rel="noopener">llama.cpp b9274 Addresses MTP VRAM Leak</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjtz31/latitudegamesequinox31b_hugging_face/" target="_blank" rel="noopener">LatitudeGames/Equinox-31B Gemma Finetune</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjpafg/were_thursday_and_no_one_claimed_agi_yet_this_week/" target="_blank" rel="noopener">We're Thursday and No One Claimed AGI Yet This Week</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tk8la2/anyone_evaluated_the_difference_between_qwen_code/" target="_blank" rel="noopener">Anyone Evaluated Qwen Code vs. Other Agentic Harnesses?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tk9a7o/lowlevel_coding_dataset/" target="_blank" rel="noopener">Low-Level Coding Dataset Community Project</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tkbupt/new_release_of_rocm_based_mlx_llm_engine/" target="_blank" rel="noopener">New Release of ROCm-Based MLX LLM Engine (lemon-mlx-engine)</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjmswd/honesty_in_a_small_model_drops_from_35_to_0_by/" target="_blank" rel="noopener">Honesty in a Small Model Drops from 35% to 0% by Changing Prompt Tone</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjien7/tencent_hy_30b7b18b/" target="_blank" rel="noopener">Tencent Hy-MT2: Multilingual Translation Models</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjqfr4/gorgon_halo_is_67_faster_than_predecessor_strix/" target="_blank" rel="noopener">Gorgon Halo is 6.7% Faster Than Strix Halo</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tk5of4/gmail_tieins/" target="_blank" rel="noopener">Gmail Tie-ins with Local LLM</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjvl4h/interesting_paper_advocates_for_quantized/" target="_blank" rel="noopener">Paper Advocates for Quantized Prefilling and Precise Decoding</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjyr5s/best_solution_to_generate_reports_locally_with/" target="_blank" rel="noopener">Best Solution to Generate Reports Locally with Graphs and Charts?</a></div>
+      </div>
+    </details>
+    <div class="subscribe-strip">
+      <div class="subscribe-headline">Get this every morning</div>
+      <p class="subscribe-desc">Filtered from 40+ sources daily — what changed, why it matters, what to do. Free.</p>
+      <form class="subscribe-form" action="https://thenightlylibrarian.substack.com/subscribe" method="GET" target="_blank">
+        <input class="subscribe-input" type="email" name="email" placeholder="your@email.com" required>
+        <button class="subscribe-btn" type="submit">Subscribe →</button>
+      </form>
+      <p class="subscribe-note">Free. Unsubscribe any time.</p>
+    </div>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>

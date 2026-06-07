@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>June 1, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="5 stories cleared the bar, led by Websites have a new way to spy on visitors: analyzing their SSD activity, Show HN: Streambed – Stream Postgres to Iceberg on S3, Supports Postgres Wire, and Cloudflar">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-06-01/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="June 1, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="5 stories cleared the bar, led by Websites have a new way to spy on visitors: analyzing their SSD activity, Show HN: Streambed – Stream Postgres to Iceberg on S3, Supports Postgres Wire, and Cloudflar">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-06-01/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="June 1, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="5 stories cleared the bar, led by Websites have a new way to spy on visitors: analyzing their SSD activity, Show HN: Streambed – Stream Postgres to Iceberg on S3, Supports Postgres Wire, and Cloudflar">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."}</script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>June 1, 2026 · Report log</span>
+      <span>Jun 1, 2026, 7:11 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>June 1, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>5 stories cleared the bar, led by Websites have a new way to spy on visitors: analyzing their SSD activity, Show HN: Streambed – Stream Postgres to Iceberg on S3, Supports Postgres Wire, and Cloudflare Turnstile requiring fingerprintable WebGL.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>5 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+      
+      <div class="item">
+        <div class="item-title"><a href="https://arstechnica.com/security/2026/05/websites-have-a-new-way-to-spy-on-visitors-analyzing-their-ssd-activity/" target="_blank" rel="noopener">Websites have a new way to spy on visitors: analyzing their SSD activity</a></div>
+        <div class="item-takeaway">Ars summarizes a new browser-only SSD timing side-channel (FROST) that times OPFS reads to infer other tabs/apps via SSD contention. Not reported in the wild; scaling requires ~GB-sized per-origin files and the paper proposes browser mitigations.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/viggy28/streambed" target="_blank" rel="noopener">Show HN: Streambed – Stream Postgres to Iceberg on S3, Supports Postgres Wire</a></div>
+        <div class="item-takeaway">Streambed is a Go Postgres-to-Iceberg CDC tool: streams logical replication/WAL into Parquet on S3, commits Iceberg metadata, and exposes a DuckDB-backed query server over the Postgres wire protocol.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://hacktivis.me/articles/cloudflare-turnstile-webgl-fingerprinting" target="_blank" rel="noopener">Cloudflare Turnstile requiring fingerprintable WebGL</a></div>
+        <div class="item-takeaway">A report claims Cloudflare Turnstile now requires WebGL renderer info, causing endless verification loops in WebKitGTK and potentially blocking privacy-hardened browsers.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://seg6.space/posts/concurrent-registration/" target="_blank" rel="noopener">Concurrent device registration without Redis</a></div>
+        <div class="item-takeaway">A detailed write-up on preventing device-limit races in a multi-instance backend without Redis by using DB row-level locks (`SELECT ... FOR UPDATE`) and careful isolation-level choices.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.zsh.org/mla/announce/msg00135.html" target="_blank" rel="noopener">zsh 5.9.1 released</a></div>
+        <div class="item-takeaway">zsh 5.9.1 was released as a stable maintenance update (bug fixes/build improvements, minor features).</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+      
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://arstechnica.com/security/2026/05/websites-have-a-new-way-to-spy-on-visitors-analyzing-their-ssd-activity/" target="_blank" rel="noopener">Websites have a new way to spy on visitors: analyzing their SSD activity</a>
+        </div>
+        <div class="item-takeaway">Ars summarizes a new browser-only SSD timing side-channel (FROST) that times OPFS reads to infer other tabs/apps via SSD contention. Not reported in the wild; scaling requires ~GB-sized per-origin files and the paper proposes browser mitigations.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://justine.lol/rseq/" target="_blank" rel="noopener">Restartable Sequences</a>
+        </div>
+        <div class="item-takeaway">Restartable Sequences (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="http://www.linux-m68k.org/" target="_blank" rel="noopener">Linux/M68k</a>
+        </div>
+        <div class="item-takeaway">Linux/M68k (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.modelfkeyboards.com/product/beam-spring-b104-keyboard/" target="_blank" rel="noopener">New Beam Spring Keyboards</a>
+        </div>
+        <div class="item-takeaway">New Beam Spring Keyboards (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://twitter.com/i/status/2060746160558543217" target="_blank" rel="noopener">Codex just found a &quot;workaround&quot; of not having sudo on my PC</a>
+        </div>
+        <div class="item-takeaway">Codex just found a &quot;workaround&quot; of not having sudo on my PC (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/viggy28/streambed" target="_blank" rel="noopener">Show HN: Streambed – Stream Postgres to Iceberg on S3, Supports Postgres Wire</a>
+        </div>
+        <div class="item-takeaway">Streambed is a Go Postgres-to-Iceberg CDC tool: streams logical replication/WAL into Parquet on S3, commits Iceberg metadata, and exposes a DuckDB-backed query server over the Postgres wire protocol.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.lauramichet.com/what-its-like-to-have-the-machine-that-keeps-you-alive-die-while-youre-on-vacation/" target="_blank" rel="noopener">Having your insulin pump die while you're on vacation</a>
+        </div>
+        <div class="item-takeaway">Having your insulin pump die while you're on vacation (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.amnesty.org/en/documents/pol40/0996/2026/en/" target="_blank" rel="noopener">Unlawful by design: Exposing the human rights costs of generative AI</a>
+        </div>
+        <div class="item-takeaway">Unlawful by design: Exposing the human rights costs of generative AI (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://thoughts.hmmz.org/2026-05-31.html" target="_blank" rel="noopener">vibecoding as adhd multiplier</a>
+        </div>
+        <div class="item-takeaway">vibecoding as adhd multiplier (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://mail.cyberneticforests.com/its-not-just-data-its-post-training/" target="_blank" rel="noopener">It's Not Just X. It's Y</a>
+        </div>
+        <div class="item-takeaway">It's Not Just X. It's Y (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://kristoff.it/blog/fix-your-asserts/" target="_blank" rel="noopener">You Must Fix Your Asserts</a>
+        </div>
+        <div class="item-takeaway">You Must Fix Your Asserts (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://hacktivis.me/articles/cloudflare-turnstile-webgl-fingerprinting" target="_blank" rel="noopener">Cloudflare Turnstile requiring fingerprintable WebGL</a>
+        </div>
+        <div class="item-takeaway">A report claims Cloudflare Turnstile now requires WebGL renderer info, causing endless verification loops in WebKitGTK and potentially blocking privacy-hardened browsers.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/Hawzen/I-found-a-seashell-in-the-middle-of-the-desert#i-found-a-seashell-in-the-middle-of-the-desert" target="_blank" rel="noopener">I found a seashell in the middle of the desert</a>
+        </div>
+        <div class="item-takeaway">I found a seashell in the middle of the desert (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://endler.dev/2026/lychee-recursion/" target="_blank" rel="noopener">Five Years of Trying to Add Recursion to lychee</a>
+        </div>
+        <div class="item-takeaway">Five Years of Trying to Add Recursion to lychee (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://apenwarr.ca/log/20260531" target="_blank" rel="noopener">The software industry: annealing, but wrong</a>
+        </div>
+        <div class="item-takeaway">The software industry: annealing, but wrong (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.zsh.org/mla/announce/msg00135.html" target="_blank" rel="noopener">zsh 5.9.1 released</a>
+        </div>
+        <div class="item-takeaway">zsh 5.9.1 was released as a stable maintenance update (bug fixes/build improvements, minor features).</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://plantbasedgames.io/blog/posts/09-adding-offline-mode-and-custom-servers-to-an-mmorpg/" target="_blank" rel="noopener">Adding Offline Mode and Custom Servers to an MMORPG</a>
+        </div>
+        <div class="item-takeaway">Adding Offline Mode and Custom Servers to an MMORPG (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.vincentdelft.be/post/post_20260530" target="_blank" rel="noopener">UTF8 email with DMA: DragonFly Mail Agent</a>
+        </div>
+        <div class="item-takeaway">UTF8 email with DMA: DragonFly Mail Agent (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://seg6.space/posts/concurrent-registration/" target="_blank" rel="noopener">Concurrent device registration without Redis</a>
+        </div>
+        <div class="item-takeaway">A detailed write-up on preventing device-limit races in a multi-instance backend without Redis by using DB row-level locks (`SELECT ... FOR UPDATE`) and careful isolation-level choices.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://fgiesen.wordpress.com/2026/05/29/why-does-astc-use-ise-when-almost-nothing-else-does/" target="_blank" rel="noopener">Why does ASTC use ISE when almost nothing else does?</a>
+        </div>
+        <div class="item-takeaway">Why does ASTC use ISE when almost nothing else does? (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://codeberg.org/vitali87/croft" target="_blank" rel="noopener">Croft - TUI VSCode Clone</a>
+        </div>
+        <div class="item-takeaway">Croft - TUI VSCode Clone (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="http://marcosh.github.io/post/2026/05/21/homomorphic-static-analysis.html" target="_blank" rel="noopener">Homomorphic static analysis</a>
+        </div>
+        <div class="item-takeaway">Homomorphic static analysis (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/heavyrain266/colourspace" target="_blank" rel="noopener">A pragmatic set of modern colour space transforms for the Odin language</a>
+        </div>
+        <div class="item-takeaway">A pragmatic set of modern colour space transforms for the Odin language (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ttdiq0/minimax_m3_coding_agentic_frontier_1m_context/" target="_blank" rel="noopener">MiniMax M3 - Coding &amp; Agentic Frontier, 1M Context, Multimodal</a>
+        </div>
+        <div class="item-takeaway">MiniMax M3 - Coding &amp; Agentic Frontier, 1M Context, Multimodal (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tthkh5/nvidia_announces_nemotron_3_ultra/" target="_blank" rel="noopener">NVIDIA announces Nemotron 3 Ultra</a>
+        </div>
+        <div class="item-takeaway">NVIDIA announces Nemotron 3 Ultra (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tsz4ji/yt_pewdiepie_released_his_harnesswebui/" target="_blank" rel="noopener">(YT) PewDiePie released his harness/webui</a>
+        </div>
+        <div class="item-takeaway">(YT) PewDiePie released his harness/webui (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tthxl4/i_was_a_data_scientist_for_10_years_before/" target="_blank" rel="noopener">I was a Data Scientist for 10 years before becoming a quadriplegic. For the past 3 months, I built VibeETL from scratch: A lightning-fast, visual Alteryx alternative powered by Polars &amp; React Flow.</a>
+        </div>
+        <div class="item-takeaway">I was a Data Scientist for 10 years before becoming a quadriplegic. For the past 3 months, I built VibeETL from scratch: A lightning-fast, visual Alteryx alternative powered by Polars &amp; React Flow. (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tt7bf4/god_dammit_qwen/" target="_blank" rel="noopener">God dammit Qwen</a>
+        </div>
+        <div class="item-takeaway">God dammit Qwen (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tt6oja/i_ported_nvidia_parakeet_speechtotext_to_ggml/" target="_blank" rel="noopener">I ported NVIDIA Parakeet (speech-to-text) to ggml: same output as NeMo, faster, GGUF-quantized, no Python</a>
+        </div>
+        <div class="item-takeaway">I ported NVIDIA Parakeet (speech-to-text) to ggml: same output as NeMo, faster, GGUF-quantized, no Python (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tter4t/use_html_as_the_primary_chat_language_of_your/" target="_blank" rel="noopener">Use HTML as the primary chat language of your LLM's so they can make interactive content</a>
+        </div>
+        <div class="item-takeaway">Use HTML as the primary chat language of your LLM's so they can make interactive content (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ttl4xl/i_timetraveled_to_2038_to_buy_ddr7_ram_so_i_could/" target="_blank" rel="noopener">I Time-Traveled to 2038 to Buy DDR7 RAM So I Could Finally Run Local LLMs Without Selling My Kidney for VRAM</a>
+        </div>
+        <div class="item-takeaway">I Time-Traveled to 2038 to Buy DDR7 RAM So I Could Finally Run Local LLMs Without Selling My Kidney for VRAM (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ttkz1c/next_minimax_will_be_released_in_10_days/" target="_blank" rel="noopener">next MiniMax will be released in ~10 Days</a>
+        </div>
+        <div class="item-takeaway">next MiniMax will be released in ~10 Days (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ttboo2/get_you_some_gpus_its_not_worth_the_hacks_around/" target="_blank" rel="noopener">Get you some GPUs, it's not worth the hacks around lack of RAM</a>
+        </div>
+        <div class="item-takeaway">Get you some GPUs, it's not worth the hacks around lack of RAM (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tthnru/100_trillion_pretraining_data_this_is_the_largest/" target="_blank" rel="noopener">100 Trillion+ Pretraining data??? This is the largest data I've see a model being trained on.</a>
+        </div>
+        <div class="item-takeaway">100 Trillion+ Pretraining data??? This is the largest data I've see a model being trained on. (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          NVIDIA RTX Spark
+        </div>
+        <div class="item-takeaway">Slim Laptops &amp; Small Desktops — https://www.reddit.com/r/LocalLLaMA/comments/1ttji8b/nvidia_rtx_spark_slim_laptops_small_desktops/ — NVIDIA RTX Spark — Slim Laptops &amp; Small Desktops (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tt9r8j/gpu_prices_buy_now_or_buy_later/" target="_blank" rel="noopener">GPU Prices. Buy now, or buy later?</a>
+        </div>
+        <div class="item-takeaway">GPU Prices. Buy now, or buy later? (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tss9nq/stepfun_37_flash_is_very_good/" target="_blank" rel="noopener">Stepfun 3.7 Flash is very good</a>
+        </div>
+        <div class="item-takeaway">Stepfun 3.7 Flash is very good (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tte2cu/built_a_fun_weekend_project_an_mcp_server_for/" target="_blank" rel="noopener">Built a fun weekend project: An MCP server for generating Mandelbrot visualizations</a>
+        </div>
+        <div class="item-takeaway">Built a fun weekend project: An MCP server for generating Mandelbrot visualizations (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ttl45v/open_models_may_2026/" target="_blank" rel="noopener">Open Models - May 2026</a>
+        </div>
+        <div class="item-takeaway">Open Models - May 2026 (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ttgqk6/what_are_some_cool_little_things_you_guys_are/" target="_blank" rel="noopener">What are some cool little things you guys are doing with &lt; 10b models?</a>
+        </div>
+        <div class="item-takeaway">What are some cool little things you guys are doing with &lt; 10b models? (not opened); title-level only.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: ef644f8c-04b0-4134-86c2-db79faac5378
+Started: 2026-06-01T11:03:11.467Z
+Completed: 2026-06-01T11:11:31.086Z
+
+## Worth attention
+
+- **Websites have a new way to spy on visitors: analyzing their SSD activity**
+  https://arstechnica.com/security/2026/05/websites-have-a-new-way-to-spy-on-visitors-analyzing-their-ssd-activity/
+  Ars summarizes a new browser-only SSD timing side-channel (FROST) that times OPFS reads to infer other tabs/apps via SSD contention. Not reported in the wild; scaling requires ~GB-sized per-origin files and the paper proposes browser mitigations.
+- **Show HN: Streambed – Stream Postgres to Iceberg on S3, Supports Postgres Wire**
+  https://github.com/viggy28/streambed
+  Streambed is a Go Postgres-to-Iceberg CDC tool: streams logical replication/WAL into Parquet on S3, commits Iceberg metadata, and exposes a DuckDB-backed query server over the Postgres wire protocol.
+- **Cloudflare Turnstile requiring fingerprintable WebGL**
+  https://hacktivis.me/articles/cloudflare-turnstile-webgl-fingerprinting
+  A report claims Cloudflare Turnstile now requires WebGL renderer info, causing endless verification loops in WebKitGTK and potentially blocking privacy-hardened browsers.
+- **Concurrent device registration without Redis**
+  https://seg6.space/posts/concurrent-registration/
+  A detailed write-up on preventing device-limit races in a multi-instance backend without Redis by using DB row-level locks (`SELECT ... FOR UPDATE`) and careful isolation-level choices.
+- **zsh 5.9.1 released**
+  https://www.zsh.org/mla/announce/msg00135.html
+  zsh 5.9.1 was released as a stable maintenance update (bug fixes/build improvements, minor features).
+
+## Full digest
+
+- [P] [hn-top] Websites have a new way to spy on visitors: analyzing their SSD activity — https://arstechnica.com/security/2026/05/websites-have-a-new-way-to-spy-on-visitors-analyzing-their-ssd-activity/ — Ars summarizes a new browser-only SSD timing side-channel (FROST) that times OPFS reads to infer other tabs/apps via SSD contention. Not reported in the wild; scaling requires ~GB-sized per-origin files and the paper proposes browser mitigations.
+- [R] [hn-top] Restartable Sequences — https://justine.lol/rseq/ — Restartable Sequences (not opened); title-level only.
+- [R] [hn-top] Linux/M68k — http://www.linux-m68k.org/ — Linux/M68k (not opened); title-level only.
+- [R] [hn-top] New Beam Spring Keyboards — https://www.modelfkeyboards.com/product/beam-spring-b104-keyboard/ — New Beam Spring Keyboards (not opened); title-level only.
+- [R] [hn-top] Codex just found a &quot;workaround&quot; of not having sudo on my PC — https://twitter.com/i/status/2060746160558543217 — Codex just found a &quot;workaround&quot; of not having sudo on my PC (not opened); title-level only.
+- [P] [hn-top] Show HN: Streambed – Stream Postgres to Iceberg on S3, Supports Postgres Wire — https://github.com/viggy28/streambed — Streambed is a Go Postgres-to-Iceberg CDC tool: streams logical replication/WAL into Parquet on S3, commits Iceberg metadata, and exposes a DuckDB-backed query server over the Postgres wire protocol.
+- [R] [hn-top] Having your insulin pump die while you're on vacation — https://blog.lauramichet.com/what-its-like-to-have-the-machine-that-keeps-you-alive-die-while-youre-on-vacation/ — Having your insulin pump die while you're on vacation (not opened); title-level only.
+- [R] [lobsters] Unlawful by design: Exposing the human rights costs of generative AI — https://www.amnesty.org/en/documents/pol40/0996/2026/en/ — Unlawful by design: Exposing the human rights costs of generative AI (not opened); title-level only.
+- [R] [lobsters] vibecoding as adhd multiplier — https://thoughts.hmmz.org/2026-05-31.html — vibecoding as adhd multiplier (not opened); title-level only.
+- [R] [lobsters] It's Not Just X. It's Y — https://mail.cyberneticforests.com/its-not-just-data-its-post-training/ — It's Not Just X. It's Y (not opened); title-level only.
+- [R] [lobsters] You Must Fix Your Asserts — https://kristoff.it/blog/fix-your-asserts/ — You Must Fix Your Asserts (not opened); title-level only.
+- [P] [lobsters] Cloudflare Turnstile requiring fingerprintable WebGL — https://hacktivis.me/articles/cloudflare-turnstile-webgl-fingerprinting — A report claims Cloudflare Turnstile now requires WebGL renderer info, causing endless verification loops in WebKitGTK and potentially blocking privacy-hardened browsers.
+- [R] [lobsters] I found a seashell in the middle of the desert — https://github.com/Hawzen/I-found-a-seashell-in-the-middle-of-the-desert#i-found-a-seashell-in-the-middle-of-the-desert — I found a seashell in the middle of the desert (not opened); title-level only.
+- [R] [lobsters] Five Years of Trying to Add Recursion to lychee — https://endler.dev/2026/lychee-recursion/ — Five Years of Trying to Add Recursion to lychee (not opened); title-level only.
+- [R] [lobsters] The software industry: annealing, but wrong — https://apenwarr.ca/log/20260531 — The software industry: annealing, but wrong (not opened); title-level only.
+- [M] [lobsters] zsh 5.9.1 released — https://www.zsh.org/mla/announce/msg00135.html — zsh 5.9.1 was released as a stable maintenance update (bug fixes/build improvements, minor features).
+- [R] [lobsters] Adding Offline Mode and Custom Servers to an MMORPG — https://plantbasedgames.io/blog/posts/09-adding-offline-mode-and-custom-servers-to-an-mmorpg/ — Adding Offline Mode and Custom Servers to an MMORPG (not opened); title-level only.
+- [R] [lobsters] UTF8 email with DMA: DragonFly Mail Agent — https://www.vincentdelft.be/post/post_20260530 — UTF8 email with DMA: DragonFly Mail Agent (not opened); title-level only.
+- [P] [lobsters] Concurrent device registration without Redis — https://seg6.space/posts/concurrent-registration/ — A detailed write-up on preventing device-limit races in a multi-instance backend without Redis by using DB row-level locks (`SELECT ... FOR UPDATE`) and careful isolation-level choices.
+- [R] [lobsters] Why does ASTC use ISE when almost nothing else does? — https://fgiesen.wordpress.com/2026/05/29/why-does-astc-use-ise-when-almost-nothing-else-does/ — Why does ASTC use ISE when almost nothing else does? (not opened); title-level only.
+- [R] [lobsters] Croft - TUI VSCode Clone — https://codeberg.org/vitali87/croft — Croft - TUI VSCode Clone (not opened); title-level only.
+- [R] [lobsters] Homomorphic static analysis — http://marcosh.github.io/post/2026/05/21/homomorphic-static-analysis.html — Homomorphic static analysis (not opened); title-level only.
+- [R] [lobsters] A pragmatic set of modern colour space transforms for the Odin language — https://github.com/heavyrain266/colourspace — A pragmatic set of modern colour space transforms for the Odin language (not opened); title-level only.
+- [R] [reddit-localllama] MiniMax M3 - Coding &amp; Agentic Frontier, 1M Context, Multimodal — https://www.reddit.com/r/LocalLLaMA/comments/1ttdiq0/minimax_m3_coding_agentic_frontier_1m_context/ — MiniMax M3 - Coding &amp; Agentic Frontier, 1M Context, Multimodal (not opened); title-level only.
+- [R] [reddit-localllama] NVIDIA announces Nemotron 3 Ultra — https://www.reddit.com/r/LocalLLaMA/comments/1tthkh5/nvidia_announces_nemotron_3_ultra/ — NVIDIA announces Nemotron 3 Ultra (not opened); title-level only.
+- [R] [reddit-localllama] (YT) PewDiePie released his harness/webui — https://www.reddit.com/r/LocalLLaMA/comments/1tsz4ji/yt_pewdiepie_released_his_harnesswebui/ — (YT) PewDiePie released his harness/webui (not opened); title-level only.
+- [R] [reddit-localllama] I was a Data Scientist for 10 years before becoming a quadriplegic. For the past 3 months, I built VibeETL from scratch: A lightning-fast, visual Alteryx alternative powered by Polars &amp; React Flow. — https://www.reddit.com/r/LocalLLaMA/comments/1tthxl4/i_was_a_data_scientist_for_10_years_before/ — I was a Data Scientist for 10 years before becoming a quadriplegic. For the past 3 months, I built VibeETL from scratch: A lightning-fast, visual Alteryx alternative powered by Polars &amp; React Flow. (not opened); title-level only.
+- [R] [reddit-localllama] God dammit Qwen — https://www.reddit.com/r/LocalLLaMA/comments/1tt7bf4/god_dammit_qwen/ — God dammit Qwen (not opened); title-level only.
+- [R] [reddit-localllama] I ported NVIDIA Parakeet (speech-to-text) to ggml: same output as NeMo, faster, GGUF-quantized, no Python — https://www.reddit.com/r/LocalLLaMA/comments/1tt6oja/i_ported_nvidia_parakeet_speechtotext_to_ggml/ — I ported NVIDIA Parakeet (speech-to-text) to ggml: same output as NeMo, faster, GGUF-quantized, no Python (not opened); title-level only.
+- [R] [reddit-localllama] Use HTML as the primary chat language of your LLM's so they can make interactive content — https://www.reddit.com/r/LocalLLaMA/comments/1tter4t/use_html_as_the_primary_chat_language_of_your/ — Use HTML as the primary chat language of your LLM's so they can make interactive content (not opened); title-level only.
+- [R] [reddit-localllama] I Time-Traveled to 2038 to Buy DDR7 RAM So I Could Finally Run Local LLMs Without Selling My Kidney for VRAM — https://www.reddit.com/r/LocalLLaMA/comments/1ttl4xl/i_timetraveled_to_2038_to_buy_ddr7_ram_so_i_could/ — I Time-Traveled to 2038 to Buy DDR7 RAM So I Could Finally Run Local LLMs Without Selling My Kidney for VRAM (not opened); title-level only.
+- [R] [reddit-localllama] next MiniMax will be released in ~10 Days — https://www.reddit.com/r/LocalLLaMA/comments/1ttkz1c/next_minimax_will_be_released_in_10_days/ — next MiniMax will be released in ~10 Days (not opened); title-level only.
+- [R] [reddit-localllama] Get you some GPUs, it's not worth the hacks around lack of RAM — https://www.reddit.com/r/LocalLLaMA/comments/1ttboo2/get_you_some_gpus_its_not_worth_the_hacks_around/ — Get you some GPUs, it's not worth the hacks around lack of RAM (not opened); title-level only.
+- [R] [reddit-localllama] 100 Trillion+ Pretraining data??? This is the largest data I've see a model being trained on. — https://www.reddit.com/r/LocalLLaMA/comments/1tthnru/100_trillion_pretraining_data_this_is_the_largest/ — 100 Trillion+ Pretraining data??? This is the largest data I've see a model being trained on. (not opened); title-level only.
+- [R] [reddit-localllama] NVIDIA RTX Spark — Slim Laptops &amp; Small Desktops — https://www.reddit.com/r/LocalLLaMA/comments/1ttji8b/nvidia_rtx_spark_slim_laptops_small_desktops/ — NVIDIA RTX Spark — Slim Laptops &amp; Small Desktops (not opened); title-level only.
+- [R] [reddit-localllama] GPU Prices. Buy now, or buy later? — https://www.reddit.com/r/LocalLLaMA/comments/1tt9r8j/gpu_prices_buy_now_or_buy_later/ — GPU Prices. Buy now, or buy later? (not opened); title-level only.
+- [R] [reddit-localllama] Stepfun 3.7 Flash is very good — https://www.reddit.com/r/LocalLLaMA/comments/1tss9nq/stepfun_37_flash_is_very_good/ — Stepfun 3.7 Flash is very good (not opened); title-level only.
+- [R] [reddit-localllama] Built a fun weekend project: An MCP server for generating Mandelbrot visualizations — https://www.reddit.com/r/LocalLLaMA/comments/1tte2cu/built_a_fun_weekend_project_an_mcp_server_for/ — Built a fun weekend project: An MCP server for generating Mandelbrot visualizations (not opened); title-level only.
+- [R] [reddit-localllama] Open Models - May 2026 — https://www.reddit.com/r/LocalLLaMA/comments/1ttl45v/open_models_may_2026/ — Open Models - May 2026 (not opened); title-level only.
+- [R] [reddit-localllama] What are some cool little things you guys are doing with &lt; 10b models? — https://www.reddit.com/r/LocalLLaMA/comments/1ttgqk6/what_are_some_cool_little_things_you_guys_are/ — What are some cool little things you guys are doing with &lt; 10b models? (not opened); title-level only.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
