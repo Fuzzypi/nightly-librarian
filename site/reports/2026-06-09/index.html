@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>June 9, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="12 stories cleared the bar, led by llama.cpp Gemma4 MTP support merged, Gemma4 31B FP8 competitive with Claude Sonnet 4.6 on agentic tasks, and Qwen 3.6 27B on DeepSWE: 2% score, 18th/20, above Claude">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-06-09/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="June 9, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="12 stories cleared the bar, led by llama.cpp Gemma4 MTP support merged, Gemma4 31B FP8 competitive with Claude Sonnet 4.6 on agentic tasks, and Qwen 3.6 27B on DeepSWE: 2% score, 18th/20, above Claude">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-06-09/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="June 9, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="12 stories cleared the bar, led by llama.cpp Gemma4 MTP support merged, Gemma4 31B FP8 competitive with Claude Sonnet 4.6 on agentic tasks, and Qwen 3.6 27B on DeepSWE: 2% score, 18th/20, above Claude">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."}</script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>June 9, 2026 · Report log</span>
+      <span>Jun 9, 2026, 2:23 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>June 9, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>12 stories cleared the bar, led by llama.cpp Gemma4 MTP support merged, Gemma4 31B FP8 competitive with Claude Sonnet 4.6 on agentic tasks, and Qwen 3.6 27B on DeepSWE: 2% score, 18th/20, above Claude Haiku 4.5.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>12 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+      
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tzbcyp/llamacpp_gemma4_mtp_support_merged/" target="_blank" rel="noopener">llama.cpp Gemma4 MTP support merged</a></div>
+        <div class="item-takeaway">Multi-Token Prediction (MTP) support for Gemma4 was merged into llama.cpp (PR #23398). Community reports show roughly 2-2.5x token generation speed on Gemma4 31B — from ~20-21 t/s to 50 t/s at 32k context. If you run Gemma4 locally via llama.cpp, pull latest and enable MTP to immediately double your throughput at no hardware cost.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tzw207/gemma4_31b_fp8_keeping_up_with_sonnet_46_medium/" target="_blank" rel="noopener">Gemma4 31B FP8 competitive with Claude Sonnet 4.6 on agentic tasks</a></div>
+        <div class="item-takeaway">A builder running real agentic tasks (Cypher queries, entity extraction, tool selection, Python coding, RAG synthesis) found Gemma4 31B FP8 producing comparable results to Claude Sonnet 4.6 medium. Single harness report, not a formal benchmark, but directly relevant to Fuzzy's agent work. If reproducible, local Gemma4 could replace some Sonnet API calls at zero marginal cost.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tzmq5y/qwen_36_27b_on_deepswe/" target="_blank" rel="noopener">Qwen 3.6 27B on DeepSWE: 2% score, 18th/20, above Claude Haiku 4.5</a></div>
+        <div class="item-takeaway">A builder ran Qwen 3.6 27B FP8 through the full DeepSWE coding benchmark (70 hours, 1 rollout/task, BF16 KV cache, 262k context on vLLM). Result: ~2% score, 18th/20, above Claude Haiku 4.5. The best open-source model (Kimi-k2.6) still trails frontier by a wide margin. For local coding agents, Qwen 3.6 27B is practical SOTA but absolute benchmark scores reveal a large gap to frontier coding performance.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tza4ji/qwen_36_27b_kv_cache_quant_benchmarks_75_pairs/" target="_blank" rel="noopener">Qwen 3.6 27B KV cache quant benchmarks: 75 pairs, q8/q6/q5/q4, KVarN, Turbo/TCQ</a></div>
+        <div class="item-takeaway">Comprehensive KV cache quantization benchmark for Qwen 3.6 27B: 75 pairs tested across q8/q6/q5/q4, KVarN, TurboQuant, and TCQ using a custom llama.cpp fork (BeeLlama.cpp). Full analysis at anbeeld.com. Most thorough KV quant analysis for Qwen 3.6 27B — directly actionable for choosing KV cache settings when running at long context.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tzxmm8/qats_q4_0_from_google_have_more_precision_than_q4/" target="_blank" rel="noopener">Google Gemma4 QAT Q4_0 GGUFs have more precision than Unsloth Q4_K_XL</a></div>
+        <div class="item-takeaway">Tensor-level inspection shows Google's official Gemma4 QAT Q4_0 GGUFs use q6_k for important tensors alongside q4_0, while Unsloth's Q4_K_XL applies uniform quantization. Google's builds are larger (5.15 GB vs 4.22 GB for E4B) but more precise in critical layers. Actionable: prefer Google's official QAT GGUFs over Unsloth's for quality-sensitive Gemma4 work.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tzsdxm/whats_your_experience_with_gemma4_qat/" target="_blank" rel="noopener">Community reports: Gemma4 QAT quality improvements and MTP speed gains</a></div>
+        <div class="item-takeaway">Community user reports on Gemma4 31B QAT vs non-QAT: more varied language in creative tasks, better context correlation. MTP yields ~2.5x speed (50 t/s vs 20 t/s at 32k). Caveat: Q8_0 KV cache shows noticeable degradation at 128K context. Using a single model for both short and long context tasks is now viable with QAT.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://performance.dev/how-is-linear-so-fast-a-technical-breakdown" target="_blank" rel="noopener">How's Linear so fast? A technical breakdown</a></div>
+        <div class="item-takeaway">Performance.dev published a technical breakdown of Linear's famously snappy UI. Likely covers optimistic updates, client-side sync, and rendering architecture. No content was fetched but the topic is valuable for any builder thinking about perceived performance in web apps.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/devenjarvis/lathe" target="_blank" rel="noopener">Show HN: Lathe – Use LLMs to learn a new domain, not skip past it</a></div>
+        <div class="item-takeaway">Lathe is a Go CLI + LLM agent tool (works with Claude Code, Cursor, Codex) that generates hands-on, source-backed tutorials for any technical topic and serves them in a local webapp where you read and type through them. Unlike asking an LLM to write code, it forces active reading with exercises. Relevant to Fuzzy's MCP/agent work as an example of agent-driven learning scaffolding.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.ydb.tech/do-we-fear-the-serializable-isolation-level-more-than-we-fear-subtle-bugs-5a025401b609" target="_blank" rel="noopener">Do we fear the serializable isolation level more than we fear subtle bugs (2024)</a></div>
+        <div class="item-takeaway">2024 article arguing developers often avoid serializable transaction isolation due to perceived performance costs, but the real cost of subtle concurrency bugs in lower isolation levels may be worse. Worth reading if designing transaction logic in Postgres for CalenCall or ContractorVerify backends.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://xeiaso.net/blog/2026/dancing-mad-sandboxing/" target="_blank" rel="noopener">Dancing mad with sandboxing</a></div>
+        <div class="item-takeaway">xeiaso.net (high-signal technical blog) published an in-depth article on sandboxing. Given the author's track record, likely covers practical isolation approaches. Directly relevant to Fuzzy's MCP/agent work where untrusted tool execution needs isolation.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://pmbanugo.me/blog/why-queues-dont-fix-overload-and-what-to-do-instead" target="_blank" rel="noopener">Why Queues Don't Fix Overload (And What To Do Instead)</a></div>
+        <div class="item-takeaway">Backend architecture article explaining that adding queues to an overloaded system increases latency without fixing the root cause. Covers backpressure and load shedding as proper alternatives. Useful for any solo builder designing services that could face traffic spikes.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reuters.com/business/energy/texas-grid-flags-risks-data-centers-crypto-sites-fail-voltage-tests-2026-06-05/" target="_blank" rel="noopener">Texas grid flags risks as data centers, crypto sites fail voltage tests</a></div>
+        <div class="item-takeaway">ERCOT (Texas grid operator) flagged that data centers and crypto mining facilities are failing voltage tests, signaling potential grid stability risks in Texas. Worth monitoring if you host infrastructure in Texas-based data centers.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+      
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://runtimewire.com/article/deepseek-v4-pro-beats-gpt-5-5-pro-on-precision" target="_blank" rel="noopener">DeepSeek V4 Pro beats GPT-5.5 Pro on precision</a>
+        </div>
+        <div class="item-takeaway">Clickbait headline from runtimewire.com — a non-notable site. GPT-5.5 Pro does not exist as a named model, and no content was fetched. Appears to be fabricated benchmark drama.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://nik.art/making-peace-with-your-unlived-dreams/" target="_blank" rel="noopener">Making peace with your unlived dreams (2023)</a>
+        </div>
+        <div class="item-takeaway">Personal essay about reconciling with paths not taken. Not relevant to solo dev tooling or product work.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.absurdlyoptimized.com/recipes/pancakes/" target="_blank" rel="noopener">Show HN: I Derived a Pancake</a>
+        </div>
+        <div class="item-takeaway">A web app uses stoichiometry and bisection solver to compute optimal pancake recipes from available ingredients and chemistry targets. Clever engineering but not relevant to dev tooling.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/melastmohican/rust-rpico2-embassy-examples" target="_blank" rel="noopener">A Matter Wi-Fi Light Bulb in Rust on the Raspberry Pi Pico 2 W</a>
+        </div>
+        <div class="item-takeaway">Embedded Rust project implementing a Matter protocol smart bulb on Pi Pico 2 W. Niche hardware hobbyist content.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://performance.dev/how-is-linear-so-fast-a-technical-breakdown" target="_blank" rel="noopener">How's Linear so fast? A technical breakdown</a>
+        </div>
+        <div class="item-takeaway">Performance.dev published a technical breakdown of Linear's famously snappy UI. Likely covers optimistic updates, client-side sync, and rendering architecture. No content was fetched but the topic is valuable for any builder thinking about perceived performance in web apps.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://unix.stackexchange.com/questions/18154/what-is-the-purpose-of-the-lostfound-folder-in-linux-and-unix" target="_blank" rel="noopener">What is the purpose of the lost+found folder in Linux and Unix? (2014)</a>
+        </div>
+        <div class="item-takeaway">Old Stack Overflow answer explaining the lost+found directory on Linux. Evergreen trivia but not urgent or actionable.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/devenjarvis/lathe" target="_blank" rel="noopener">Show HN: Lathe – Use LLMs to learn a new domain, not skip past it</a>
+        </div>
+        <div class="item-takeaway">Lathe is a Go CLI + LLM agent tool (works with Claude Code, Cursor, Codex) that generates hands-on, source-backed tutorials for any technical topic and serves them in a local webapp where you read and type through them. Unlike asking an LLM to write code, it forces active reading with exercises. Relevant to Fuzzy's MCP/agent work as an example of agent-driven learning scaffolding.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.reuters.com/business/energy/texas-grid-flags-risks-data-centers-crypto-sites-fail-voltage-tests-2026-06-05/" target="_blank" rel="noopener">Texas grid flags risks as data centers, crypto sites fail voltage tests</a>
+        </div>
+        <div class="item-takeaway">ERCOT (Texas grid operator) flagged that data centers and crypto mining facilities are failing voltage tests, signaling potential grid stability risks in Texas. Worth monitoring if you host infrastructure in Texas-based data centers.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.ydb.tech/do-we-fear-the-serializable-isolation-level-more-than-we-fear-subtle-bugs-5a025401b609" target="_blank" rel="noopener">Do we fear the serializable isolation level more than we fear subtle bugs (2024)</a>
+        </div>
+        <div class="item-takeaway">2024 article arguing developers often avoid serializable transaction isolation due to perceived performance costs, but the real cost of subtle concurrency bugs in lower isolation levels may be worse. Worth reading if designing transaction logic in Postgres for CalenCall or ContractorVerify backends.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://human-in-the-loop.bearblog.dev/llms-are-eroding-my-software-engineering-career-and-i-dont-know-what-to-do/" target="_blank" rel="noopener">LLMs are eroding my software engineering career and I don't know what to do</a>
+        </div>
+        <div class="item-takeaway">First-person career anxiety essay about LLMs replacing software engineering tasks. Not actionable for a solo developer who already leverages LLMs.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.righto.com/2026/06/ibm-604-thyraton-tube-module.html" target="_blank" rel="noopener">Powering up a module from the IBM 604: an electronic calculator from 1948</a>
+        </div>
+        <div class="item-takeaway">Righto.com reverse-engineering a thyratron tube module from a 1948 IBM calculator. Historical computing archaeology; not relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://opensource.posit.co/blog/2026-05-21_in-defense-of-yaml/" target="_blank" rel="noopener">In Defense of YAML</a>
+        </div>
+        <div class="item-takeaway">Opinion piece defending YAML against common criticism. No content fetched.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://servo.org/blog/2026/05/31/april-in-servo/" target="_blank" rel="noopener">April in Servo: new Android UI, focus, forms, security fixes, and more</a>
+        </div>
+        <div class="item-takeaway">Servo browser engine shipped Android UI improvements, focus/forms handling, and security fixes in its April 2026 update. Ongoing progress toward a viable alternative browser engine.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lewiscampbell.tech/blog/260607.html" target="_blank" rel="noopener">The User Doesn't Care - But you should</a>
+        </div>
+        <div class="item-takeaway">UX opinion piece: users care about outcomes not implementation details. No content fetched.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.youtube.com/watch?v=E6_JqYMeNqs" target="_blank" rel="noopener">Gleam and the value of small</a>
+        </div>
+        <div class="item-takeaway">YouTube talk about Gleam language's philosophy of staying small and focused. Niche PL content; not actionable.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lemire.me/blog/2026/06/06/how-much-do-amd64-microarchitecture-levels-help-in-go/" target="_blank" rel="noopener">How much do amd64 microarchitecture levels help in Go?</a>
+        </div>
+        <div class="item-takeaway">Lemire benchmarks Go performance across GOAMD64 v1-v4 microarchitecture levels. No content fetched; likely rigorous but relevant only if optimizing Go compute workloads for known CPU targets.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://bal-e.org/blog/2026/verifying-proc/" target="_blank" rel="noopener">verifying /proc</a>
+        </div>
+        <div class="item-takeaway">Technical article on verifying the accuracy and trustworthiness of /proc filesystem data on Linux. Relevant to sandboxing, security tooling, and any system that trusts /proc-reported values in containerized or adversarial environments.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lobste.rs/s/3g02jc/how_do_i_get_seo_email_spam_stop" target="_blank" rel="noopener">How do I get SEO Email Spam to stop?</a>
+        </div>
+        <div class="item-takeaway">Lobsters discussion thread: someone asks how to stop SEO spam emails after going live. Support question, not a signal item.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.ioccc.org/2025/" target="_blank" rel="noopener">Winners of the 2025 International Obfuscated C Code Contest (IOCCC 29)</a>
+        </div>
+        <div class="item-takeaway">IOCCC 2025 winners announced. Fun obfuscated C contest; entertainment only.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://xeiaso.net/blog/2026/dancing-mad-sandboxing/" target="_blank" rel="noopener">Dancing mad with sandboxing</a>
+        </div>
+        <div class="item-takeaway">xeiaso.net (high-signal technical blog) published an in-depth article on sandboxing. Given the author's track record, likely covers practical isolation approaches. Directly relevant to Fuzzy's MCP/agent work where untrusted tool execution needs isolation.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://mercurial-scm.org/news/2026/0005-london-sprint-recap" target="_blank" rel="noopener">Recapping the London Mercurial sprint</a>
+        </div>
+        <div class="item-takeaway">Mercurial VCS community sprint recap. Not relevant to typical git-based workflow.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://invlpg.com/posts/2025-06-19-premature-optimization.html" target="_blank" rel="noopener">Premature Optimization is Fun Sometimes</a>
+        </div>
+        <div class="item-takeaway">Opinion piece defending premature optimization as an enjoyable learning exercise. Not actionable.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.youtube.com/watch?v=nQrzB5P5NPE" target="_blank" rel="noopener">Making a game in Visual Studio from 1997</a>
+        </div>
+        <div class="item-takeaway">YouTube video about making a game using Visual Studio 1997. Retro programming nostalgia content.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://codeberg.org/mmontone/mold-desktop" target="_blank" rel="noopener">mold-desktop</a>
+        </div>
+        <div class="item-takeaway">Codeberg project called mold-desktop. No content available; insufficient context to evaluate.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://j11g.com/how-to-fix-a-laptop-that-reboots-randomly" target="_blank" rel="noopener">How to fix a laptop that reboots randomly</a>
+        </div>
+        <div class="item-takeaway">Hardware troubleshooting article about diagnosing random laptop reboots. Practical but highly situational.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.youtube.com/watch?v=aDKhrLVm3ew" target="_blank" rel="noopener">A critical look at the UX of various linux desktops</a>
+        </div>
+        <div class="item-takeaway">YouTube video reviewing UX across Linux desktop environments. Not relevant to solo dev product work.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://arch.dog/bark/entropy" target="_blank" rel="noopener">Entropy</a>
+        </div>
+        <div class="item-takeaway">arch.dog/bark/entropy - vague title, no content fetched, unknown topic.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://pmbanugo.me/blog/why-queues-dont-fix-overload-and-what-to-do-instead" target="_blank" rel="noopener">Why Queues Don't Fix Overload (And What To Do Instead)</a>
+        </div>
+        <div class="item-takeaway">Backend architecture article explaining that adding queues to an overloaded system increases latency without fixing the root cause. Covers backpressure and load shedding as proper alternatives. Useful for any solo builder designing services that could face traffic spikes.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.makingsoftware.com/chapters/image-compression" target="_blank" rel="noopener">Image Compression</a>
+        </div>
+        <div class="item-takeaway">Chapter from makingsoftware.com explaining image compression. Educational but not urgent or actionable.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tzw207/gemma4_31b_fp8_keeping_up_with_sonnet_46_medium/" target="_blank" rel="noopener">Gemma4 31B FP8 competitive with Claude Sonnet 4.6 on agentic tasks</a>
+        </div>
+        <div class="item-takeaway">A builder running real agentic tasks (Cypher queries, entity extraction, tool selection, Python coding, RAG synthesis) found Gemma4 31B FP8 producing comparable results to Claude Sonnet 4.6 medium. Single harness report, not a formal benchmark, but directly relevant to Fuzzy's agent work. If reproducible, local Gemma4 could replace some Sonnet API calls at zero marginal cost.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tzbcyp/llamacpp_gemma4_mtp_support_merged/" target="_blank" rel="noopener">llama.cpp Gemma4 MTP support merged</a>
+        </div>
+        <div class="item-takeaway">Multi-Token Prediction (MTP) support for Gemma4 was merged into llama.cpp (PR #23398). Community reports show roughly 2-2.5x token generation speed on Gemma4 31B — from ~20-21 t/s to 50 t/s at 32k context. If you run Gemma4 locally via llama.cpp, pull latest and enable MTP to immediately double your throughput at no hardware cost.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tzgn87/control_a_3d_avatar_with_language_instead_of/" target="_blank" rel="noopener">Control a 3D avatar with language instead of buttons</a>
+        </div>
+        <div class="item-takeaway">Demo/promotion of programasweights.com — platform compiling neural programs from natural language. Primarily promotional content.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tzxmm8/qats_q4_0_from_google_have_more_precision_than_q4/" target="_blank" rel="noopener">Google Gemma4 QAT Q4_0 GGUFs have more precision than Unsloth Q4_K_XL</a>
+        </div>
+        <div class="item-takeaway">Tensor-level inspection shows Google's official Gemma4 QAT Q4_0 GGUFs use q6_k for important tensors alongside q4_0, while Unsloth's Q4_K_XL applies uniform quantization. Google's builds are larger (5.15 GB vs 4.22 GB for E4B) but more precise in critical layers. Actionable: prefer Google's official QAT GGUFs over Unsloth's for quality-sensitive Gemma4 work.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tzsdxm/whats_your_experience_with_gemma4_qat/" target="_blank" rel="noopener">Community reports: Gemma4 QAT quality improvements and MTP speed gains</a>
+        </div>
+        <div class="item-takeaway">Community user reports on Gemma4 31B QAT vs non-QAT: more varied language in creative tasks, better context correlation. MTP yields ~2.5x speed (50 t/s vs 20 t/s at 32k). Caveat: Q8_0 KV cache shows noticeable degradation at 128K context. Using a single model for both short and long context tasks is now viable with QAT.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tzzcja/thoughts_on_gemma4_12b_vs_26a4b_which_one_is/" target="_blank" rel="noopener">Thoughts on Gemma4 12b vs 26a4b, which one is better?</a>
+        </div>
+        <div class="item-takeaway">Reddit discussion asking which Gemma4 variant is better for creative tasks. Low-signal Q&amp;A with no benchmark data.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tzv1uz/best_local_tts_solution/" target="_blank" rel="noopener">Best Local TTS solution</a>
+        </div>
+        <div class="item-takeaway">Community discussion comparing local TTS options. Best mentions: kokoro and moss-nano for edge devices, edgeTTS for free cloud. Nothing yet matches ElevenLabs quality locally. Discussion thread only; space is rapidly evolving.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tzmq5y/qwen_36_27b_on_deepswe/" target="_blank" rel="noopener">Qwen 3.6 27B on DeepSWE: 2% score, 18th/20, above Claude Haiku 4.5</a>
+        </div>
+        <div class="item-takeaway">A builder ran Qwen 3.6 27B FP8 through the full DeepSWE coding benchmark (70 hours, 1 rollout/task, BF16 KV cache, 262k context on vLLM). Result: ~2% score, 18th/20, above Claude Haiku 4.5. The best open-source model (Kimi-k2.6) still trails frontier by a wide margin. For local coding agents, Qwen 3.6 27B is practical SOTA but absolute benchmark scores reveal a large gap to frontier coding performance.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tzfr6z/guys_it_just_happened/" target="_blank" rel="noopener">x99 hardware died (engagement bait)</a>
+        </div>
+        <div class="item-takeaway">Reddit post: someone's x99 platform died. Viral engagement bait with no information value.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tzgafl/gmktec_crams_oculink_wifi_7_and_dual_pcie_40_into/" target="_blank" rel="noopener">GMKtec EVO-X3: 192GB Ryzen AI MAX+ 495 mini PC announced for late 2026</a>
+        </div>
+        <div class="item-takeaway">GMKtec announced the EVO-X3 mini PC with OCuLink, Wi-Fi 7, and dual PCIe 4.0. A Ryzen AI MAX+ 495 variant with 192GB unified memory is coming later in 2026 with no pricing yet. First confirmed Strix Halo 495 hardware announcement. Relevant for those planning future local inference hardware.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1tza4ji/qwen_36_27b_kv_cache_quant_benchmarks_75_pairs/" target="_blank" rel="noopener">Qwen 3.6 27B KV cache quant benchmarks: 75 pairs, q8/q6/q5/q4, KVarN, Turbo/TCQ</a>
+        </div>
+        <div class="item-takeaway">Comprehensive KV cache quantization benchmark for Qwen 3.6 27B: 75 pairs tested across q8/q6/q5/q4, KVarN, TurboQuant, and TCQ using a custom llama.cpp fork (BeeLlama.cpp). Full analysis at anbeeld.com. Most thorough KV quant analysis for Qwen 3.6 27B — directly actionable for choosing KV cache settings when running at long context.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: adafc87e-5e52-4c6d-a52f-39bb33fb9af8
+Started: 2026-06-09T06:09:24.078Z
+Completed: 2026-06-09T06:23:34.943Z
+
+## Worth attention
+
+- **llama.cpp Gemma4 MTP support merged**
+  https://www.reddit.com/r/LocalLLaMA/comments/1tzbcyp/llamacpp_gemma4_mtp_support_merged/
+  Multi-Token Prediction (MTP) support for Gemma4 was merged into llama.cpp (PR #23398). Community reports show roughly 2-2.5x token generation speed on Gemma4 31B — from ~20-21 t/s to 50 t/s at 32k context. If you run Gemma4 locally via llama.cpp, pull latest and enable MTP to immediately double your throughput at no hardware cost.
+- **Gemma4 31B FP8 competitive with Claude Sonnet 4.6 on agentic tasks**
+  https://www.reddit.com/r/LocalLLaMA/comments/1tzw207/gemma4_31b_fp8_keeping_up_with_sonnet_46_medium/
+  A builder running real agentic tasks (Cypher queries, entity extraction, tool selection, Python coding, RAG synthesis) found Gemma4 31B FP8 producing comparable results to Claude Sonnet 4.6 medium. Single harness report, not a formal benchmark, but directly relevant to Fuzzy's agent work. If reproducible, local Gemma4 could replace some Sonnet API calls at zero marginal cost.
+- **Qwen 3.6 27B on DeepSWE: 2% score, 18th/20, above Claude Haiku 4.5**
+  https://www.reddit.com/r/LocalLLaMA/comments/1tzmq5y/qwen_36_27b_on_deepswe/
+  A builder ran Qwen 3.6 27B FP8 through the full DeepSWE coding benchmark (70 hours, 1 rollout/task, BF16 KV cache, 262k context on vLLM). Result: ~2% score, 18th/20, above Claude Haiku 4.5. The best open-source model (Kimi-k2.6) still trails frontier by a wide margin. For local coding agents, Qwen 3.6 27B is practical SOTA but absolute benchmark scores reveal a large gap to frontier coding performance.
+- **Qwen 3.6 27B KV cache quant benchmarks: 75 pairs, q8/q6/q5/q4, KVarN, Turbo/TCQ**
+  https://www.reddit.com/r/LocalLLaMA/comments/1tza4ji/qwen_36_27b_kv_cache_quant_benchmarks_75_pairs/
+  Comprehensive KV cache quantization benchmark for Qwen 3.6 27B: 75 pairs tested across q8/q6/q5/q4, KVarN, TurboQuant, and TCQ using a custom llama.cpp fork (BeeLlama.cpp). Full analysis at anbeeld.com. Most thorough KV quant analysis for Qwen 3.6 27B — directly actionable for choosing KV cache settings when running at long context.
+- **Google Gemma4 QAT Q4_0 GGUFs have more precision than Unsloth Q4_K_XL**
+  https://www.reddit.com/r/LocalLLaMA/comments/1tzxmm8/qats_q4_0_from_google_have_more_precision_than_q4/
+  Tensor-level inspection shows Google's official Gemma4 QAT Q4_0 GGUFs use q6_k for important tensors alongside q4_0, while Unsloth's Q4_K_XL applies uniform quantization. Google's builds are larger (5.15 GB vs 4.22 GB for E4B) but more precise in critical layers. Actionable: prefer Google's official QAT GGUFs over Unsloth's for quality-sensitive Gemma4 work.
+- **Community reports: Gemma4 QAT quality improvements and MTP speed gains**
+  https://www.reddit.com/r/LocalLLaMA/comments/1tzsdxm/whats_your_experience_with_gemma4_qat/
+  Community user reports on Gemma4 31B QAT vs non-QAT: more varied language in creative tasks, better context correlation. MTP yields ~2.5x speed (50 t/s vs 20 t/s at 32k). Caveat: Q8_0 KV cache shows noticeable degradation at 128K context. Using a single model for both short and long context tasks is now viable with QAT.
+- **How's Linear so fast? A technical breakdown**
+  https://performance.dev/how-is-linear-so-fast-a-technical-breakdown
+  Performance.dev published a technical breakdown of Linear's famously snappy UI. Likely covers optimistic updates, client-side sync, and rendering architecture. No content was fetched but the topic is valuable for any builder thinking about perceived performance in web apps.
+- **Show HN: Lathe – Use LLMs to learn a new domain, not skip past it**
+  https://github.com/devenjarvis/lathe
+  Lathe is a Go CLI + LLM agent tool (works with Claude Code, Cursor, Codex) that generates hands-on, source-backed tutorials for any technical topic and serves them in a local webapp where you read and type through them. Unlike asking an LLM to write code, it forces active reading with exercises. Relevant to Fuzzy's MCP/agent work as an example of agent-driven learning scaffolding.
+- **Do we fear the serializable isolation level more than we fear subtle bugs (2024)**
+  https://blog.ydb.tech/do-we-fear-the-serializable-isolation-level-more-than-we-fear-subtle-bugs-5a025401b609
+  2024 article arguing developers often avoid serializable transaction isolation due to perceived performance costs, but the real cost of subtle concurrency bugs in lower isolation levels may be worse. Worth reading if designing transaction logic in Postgres for CalenCall or ContractorVerify backends.
+- **Dancing mad with sandboxing**
+  https://xeiaso.net/blog/2026/dancing-mad-sandboxing/
+  xeiaso.net (high-signal technical blog) published an in-depth article on sandboxing. Given the author's track record, likely covers practical isolation approaches. Directly relevant to Fuzzy's MCP/agent work where untrusted tool execution needs isolation.
+- **Why Queues Don't Fix Overload (And What To Do Instead)**
+  https://pmbanugo.me/blog/why-queues-dont-fix-overload-and-what-to-do-instead
+  Backend architecture article explaining that adding queues to an overloaded system increases latency without fixing the root cause. Covers backpressure and load shedding as proper alternatives. Useful for any solo builder designing services that could face traffic spikes.
+- **Texas grid flags risks as data centers, crypto sites fail voltage tests**
+  https://www.reuters.com/business/energy/texas-grid-flags-risks-data-centers-crypto-sites-fail-voltage-tests-2026-06-05/
+  ERCOT (Texas grid operator) flagged that data centers and crypto mining facilities are failing voltage tests, signaling potential grid stability risks in Texas. Worth monitoring if you host infrastructure in Texas-based data centers.
+
+## Full digest
+
+- [R] [hn-top] DeepSeek V4 Pro beats GPT-5.5 Pro on precision — https://runtimewire.com/article/deepseek-v4-pro-beats-gpt-5-5-pro-on-precision — Clickbait headline from runtimewire.com — a non-notable site. GPT-5.5 Pro does not exist as a named model, and no content was fetched. Appears to be fabricated benchmark drama.
+- [R] [hn-top] Making peace with your unlived dreams (2023) — https://nik.art/making-peace-with-your-unlived-dreams/ — Personal essay about reconciling with paths not taken. Not relevant to solo dev tooling or product work.
+- [R] [hn-top] Show HN: I Derived a Pancake — https://www.absurdlyoptimized.com/recipes/pancakes/ — A web app uses stoichiometry and bisection solver to compute optimal pancake recipes from available ingredients and chemistry targets. Clever engineering but not relevant to dev tooling.
+- [R] [hn-top] A Matter Wi-Fi Light Bulb in Rust on the Raspberry Pi Pico 2 W — https://github.com/melastmohican/rust-rpico2-embassy-examples — Embedded Rust project implementing a Matter protocol smart bulb on Pi Pico 2 W. Niche hardware hobbyist content.
+- [P] [hn-top] How's Linear so fast? A technical breakdown — https://performance.dev/how-is-linear-so-fast-a-technical-breakdown — Performance.dev published a technical breakdown of Linear's famously snappy UI. Likely covers optimistic updates, client-side sync, and rendering architecture. No content was fetched but the topic is valuable for any builder thinking about perceived performance in web apps.
+- [R] [hn-top] What is the purpose of the lost+found folder in Linux and Unix? (2014) — https://unix.stackexchange.com/questions/18154/what-is-the-purpose-of-the-lostfound-folder-in-linux-and-unix — Old Stack Overflow answer explaining the lost+found directory on Linux. Evergreen trivia but not urgent or actionable.
+- [P] [hn-top] Show HN: Lathe – Use LLMs to learn a new domain, not skip past it — https://github.com/devenjarvis/lathe — Lathe is a Go CLI + LLM agent tool (works with Claude Code, Cursor, Codex) that generates hands-on, source-backed tutorials for any technical topic and serves them in a local webapp where you read and type through them. Unlike asking an LLM to write code, it forces active reading with exercises. Relevant to Fuzzy's MCP/agent work as an example of agent-driven learning scaffolding.
+- [M] [hn-top] Texas grid flags risks as data centers, crypto sites fail voltage tests — https://www.reuters.com/business/energy/texas-grid-flags-risks-data-centers-crypto-sites-fail-voltage-tests-2026-06-05/ — ERCOT (Texas grid operator) flagged that data centers and crypto mining facilities are failing voltage tests, signaling potential grid stability risks in Texas. Worth monitoring if you host infrastructure in Texas-based data centers.
+- [P] [hn-top] Do we fear the serializable isolation level more than we fear subtle bugs (2024) — https://blog.ydb.tech/do-we-fear-the-serializable-isolation-level-more-than-we-fear-subtle-bugs-5a025401b609 — 2024 article arguing developers often avoid serializable transaction isolation due to perceived performance costs, but the real cost of subtle concurrency bugs in lower isolation levels may be worse. Worth reading if designing transaction logic in Postgres for CalenCall or ContractorVerify backends.
+- [R] [hn-top] LLMs are eroding my software engineering career and I don't know what to do — https://human-in-the-loop.bearblog.dev/llms-are-eroding-my-software-engineering-career-and-i-dont-know-what-to-do/ — First-person career anxiety essay about LLMs replacing software engineering tasks. Not actionable for a solo developer who already leverages LLMs.
+- [R] [hn-top] Powering up a module from the IBM 604: an electronic calculator from 1948 — https://www.righto.com/2026/06/ibm-604-thyraton-tube-module.html — Righto.com reverse-engineering a thyratron tube module from a 1948 IBM calculator. Historical computing archaeology; not relevant.
+- [R] [lobsters] In Defense of YAML — https://opensource.posit.co/blog/2026-05-21_in-defense-of-yaml/ — Opinion piece defending YAML against common criticism. No content fetched.
+- [M] [lobsters] April in Servo: new Android UI, focus, forms, security fixes, and more — https://servo.org/blog/2026/05/31/april-in-servo/ — Servo browser engine shipped Android UI improvements, focus/forms handling, and security fixes in its April 2026 update. Ongoing progress toward a viable alternative browser engine.
+- [R] [lobsters] The User Doesn't Care - But you should — https://lewiscampbell.tech/blog/260607.html — UX opinion piece: users care about outcomes not implementation details. No content fetched.
+- [R] [lobsters] Gleam and the value of small — https://www.youtube.com/watch?v=E6_JqYMeNqs — YouTube talk about Gleam language's philosophy of staying small and focused. Niche PL content; not actionable.
+- [R] [lobsters] How much do amd64 microarchitecture levels help in Go? — https://lemire.me/blog/2026/06/06/how-much-do-amd64-microarchitecture-levels-help-in-go/ — Lemire benchmarks Go performance across GOAMD64 v1-v4 microarchitecture levels. No content fetched; likely rigorous but relevant only if optimizing Go compute workloads for known CPU targets.
+- [P] [lobsters] verifying /proc — https://bal-e.org/blog/2026/verifying-proc/ — Technical article on verifying the accuracy and trustworthiness of /proc filesystem data on Linux. Relevant to sandboxing, security tooling, and any system that trusts /proc-reported values in containerized or adversarial environments.
+- [R] [lobsters] How do I get SEO Email Spam to stop? — https://lobste.rs/s/3g02jc/how_do_i_get_seo_email_spam_stop — Lobsters discussion thread: someone asks how to stop SEO spam emails after going live. Support question, not a signal item.
+- [R] [lobsters] Winners of the 2025 International Obfuscated C Code Contest (IOCCC 29) — https://www.ioccc.org/2025/ — IOCCC 2025 winners announced. Fun obfuscated C contest; entertainment only.
+- [P] [lobsters] Dancing mad with sandboxing — https://xeiaso.net/blog/2026/dancing-mad-sandboxing/ — xeiaso.net (high-signal technical blog) published an in-depth article on sandboxing. Given the author's track record, likely covers practical isolation approaches. Directly relevant to Fuzzy's MCP/agent work where untrusted tool execution needs isolation.
+- [R] [lobsters] Recapping the London Mercurial sprint — https://mercurial-scm.org/news/2026/0005-london-sprint-recap — Mercurial VCS community sprint recap. Not relevant to typical git-based workflow.
+- [R] [lobsters] Premature Optimization is Fun Sometimes — https://invlpg.com/posts/2025-06-19-premature-optimization.html — Opinion piece defending premature optimization as an enjoyable learning exercise. Not actionable.
+- [R] [lobsters] Making a game in Visual Studio from 1997 — https://www.youtube.com/watch?v=nQrzB5P5NPE — YouTube video about making a game using Visual Studio 1997. Retro programming nostalgia content.
+- [R] [lobsters] mold-desktop — https://codeberg.org/mmontone/mold-desktop — Codeberg project called mold-desktop. No content available; insufficient context to evaluate.
+- [R] [lobsters] How to fix a laptop that reboots randomly — https://j11g.com/how-to-fix-a-laptop-that-reboots-randomly — Hardware troubleshooting article about diagnosing random laptop reboots. Practical but highly situational.
+- [R] [lobsters] A critical look at the UX of various linux desktops — https://www.youtube.com/watch?v=aDKhrLVm3ew — YouTube video reviewing UX across Linux desktop environments. Not relevant to solo dev product work.
+- [R] [lobsters] Entropy — https://arch.dog/bark/entropy — arch.dog/bark/entropy - vague title, no content fetched, unknown topic.
+- [P] [lobsters] Why Queues Don't Fix Overload (And What To Do Instead) — https://pmbanugo.me/blog/why-queues-dont-fix-overload-and-what-to-do-instead — Backend architecture article explaining that adding queues to an overloaded system increases latency without fixing the root cause. Covers backpressure and load shedding as proper alternatives. Useful for any solo builder designing services that could face traffic spikes.
+- [R] [lobsters] Image Compression — https://www.makingsoftware.com/chapters/image-compression — Chapter from makingsoftware.com explaining image compression. Educational but not urgent or actionable.
+- [P] [reddit-localllama] Gemma4 31B FP8 competitive with Claude Sonnet 4.6 on agentic tasks — https://www.reddit.com/r/LocalLLaMA/comments/1tzw207/gemma4_31b_fp8_keeping_up_with_sonnet_46_medium/ — A builder running real agentic tasks (Cypher queries, entity extraction, tool selection, Python coding, RAG synthesis) found Gemma4 31B FP8 producing comparable results to Claude Sonnet 4.6 medium. Single harness report, not a formal benchmark, but directly relevant to Fuzzy's agent work. If reproducible, local Gemma4 could replace some Sonnet API calls at zero marginal cost.
+- [P] [reddit-localllama] llama.cpp Gemma4 MTP support merged — https://www.reddit.com/r/LocalLLaMA/comments/1tzbcyp/llamacpp_gemma4_mtp_support_merged/ — Multi-Token Prediction (MTP) support for Gemma4 was merged into llama.cpp (PR #23398). Community reports show roughly 2-2.5x token generation speed on Gemma4 31B — from ~20-21 t/s to 50 t/s at 32k context. If you run Gemma4 locally via llama.cpp, pull latest and enable MTP to immediately double your throughput at no hardware cost.
+- [R] [reddit-localllama] Control a 3D avatar with language instead of buttons — https://www.reddit.com/r/LocalLLaMA/comments/1tzgn87/control_a_3d_avatar_with_language_instead_of/ — Demo/promotion of programasweights.com — platform compiling neural programs from natural language. Primarily promotional content.
+- [P] [reddit-localllama] Google Gemma4 QAT Q4_0 GGUFs have more precision than Unsloth Q4_K_XL — https://www.reddit.com/r/LocalLLaMA/comments/1tzxmm8/qats_q4_0_from_google_have_more_precision_than_q4/ — Tensor-level inspection shows Google's official Gemma4 QAT Q4_0 GGUFs use q6_k for important tensors alongside q4_0, while Unsloth's Q4_K_XL applies uniform quantization. Google's builds are larger (5.15 GB vs 4.22 GB for E4B) but more precise in critical layers. Actionable: prefer Google's official QAT GGUFs over Unsloth's for quality-sensitive Gemma4 work.
+- [P] [reddit-localllama] Community reports: Gemma4 QAT quality improvements and MTP speed gains — https://www.reddit.com/r/LocalLLaMA/comments/1tzsdxm/whats_your_experience_with_gemma4_qat/ — Community user reports on Gemma4 31B QAT vs non-QAT: more varied language in creative tasks, better context correlation. MTP yields ~2.5x speed (50 t/s vs 20 t/s at 32k). Caveat: Q8_0 KV cache shows noticeable degradation at 128K context. Using a single model for both short and long context tasks is now viable with QAT.
+- [R] [reddit-localllama] Thoughts on Gemma4 12b vs 26a4b, which one is better? — https://www.reddit.com/r/LocalLLaMA/comments/1tzzcja/thoughts_on_gemma4_12b_vs_26a4b_which_one_is/ — Reddit discussion asking which Gemma4 variant is better for creative tasks. Low-signal Q&amp;A with no benchmark data.
+- [R] [reddit-localllama] Best Local TTS solution — https://www.reddit.com/r/LocalLLaMA/comments/1tzv1uz/best_local_tts_solution/ — Community discussion comparing local TTS options. Best mentions: kokoro and moss-nano for edge devices, edgeTTS for free cloud. Nothing yet matches ElevenLabs quality locally. Discussion thread only; space is rapidly evolving.
+- [P] [reddit-localllama] Qwen 3.6 27B on DeepSWE: 2% score, 18th/20, above Claude Haiku 4.5 — https://www.reddit.com/r/LocalLLaMA/comments/1tzmq5y/qwen_36_27b_on_deepswe/ — A builder ran Qwen 3.6 27B FP8 through the full DeepSWE coding benchmark (70 hours, 1 rollout/task, BF16 KV cache, 262k context on vLLM). Result: ~2% score, 18th/20, above Claude Haiku 4.5. The best open-source model (Kimi-k2.6) still trails frontier by a wide margin. For local coding agents, Qwen 3.6 27B is practical SOTA but absolute benchmark scores reveal a large gap to frontier coding performance.
+- [R] [reddit-localllama] x99 hardware died (engagement bait) — https://www.reddit.com/r/LocalLLaMA/comments/1tzfr6z/guys_it_just_happened/ — Reddit post: someone's x99 platform died. Viral engagement bait with no information value.
+- [M] [reddit-localllama] GMKtec EVO-X3: 192GB Ryzen AI MAX+ 495 mini PC announced for late 2026 — https://www.reddit.com/r/LocalLLaMA/comments/1tzgafl/gmktec_crams_oculink_wifi_7_and_dual_pcie_40_into/ — GMKtec announced the EVO-X3 mini PC with OCuLink, Wi-Fi 7, and dual PCIe 4.0. A Ryzen AI MAX+ 495 variant with 192GB unified memory is coming later in 2026 with no pricing yet. First confirmed Strix Halo 495 hardware announcement. Relevant for those planning future local inference hardware.
+- [P] [reddit-localllama] Qwen 3.6 27B KV cache quant benchmarks: 75 pairs, q8/q6/q5/q4, KVarN, Turbo/TCQ — https://www.reddit.com/r/LocalLLaMA/comments/1tza4ji/qwen_36_27b_kv_cache_quant_benchmarks_75_pairs/ — Comprehensive KV cache quantization benchmark for Qwen 3.6 27B: 75 pairs tested across q8/q6/q5/q4, KVarN, TurboQuant, and TCQ using a custom llama.cpp fork (BeeLlama.cpp). Full analysis at anbeeld.com. Most thorough KV quant analysis for Qwen 3.6 27B — directly actionable for choosing KV cache settings when running at long context.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
