@@ -6,8 +6,18 @@
     <description>Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.</description>
     <language>en-us</language>
     <atom:link href="https://thenightlylibrarian.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 10 Jun 2026 06:24:22 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 06:53:59 GMT</lastBuildDate>
     <ttl>360</ttl>
+    <item>
+      <title>June 11, 2026 — Tonight's brief tracks Model + API Changes and AI Operations / Agent Control. Synthesized Nightly Li</title>
+      <link>https://thenightlylibrarian.com/briefs/2026-06-11/</link>
+      <guid isPermaLink="true">https://thenightlylibrarian.com/briefs/2026-06-11/</guid>
+      <pubDate>Thu, 11 Jun 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[<p>Tonight's brief tracks Model + API Changes and AI Operations / Agent Control. Synthesized Nightly Librarian run with 4 promoted item(s), 40 scored item(s), and 36 rejected item(s). The lead source signal is 0.13.1: Release notes claim: added support for "claude fable 5", set Anthropic tool_choice to auto when thinking is enabled (forced choice incompatible with thinking), and fixed packaged agent tools env (PRs #5008-#5010). The operator read is Direct, actionable detail for anyone building Claude tool-use agents with extended thinking enabled; also an early signal on a possibly new Claude model. Monitor-only context stays out of the publish list until reviewed: 1.14.7a4 (If multi-agent flows are ever built on crewAI, this changes how flow definitions and backends are wired -- worth checking before upgrading past 1.14.x); langchain==1.3.5 (Context-window/summarization middleware and apply_patch tool support are directly relevant to agent token-cost management and code-editing agent workflows).</p>
+<p>Topics: Model + API Changes · AI Operations / Agent Control</p>
+<ul><li>0.13.1: Direct, actionable detail for anyone building Claude tool-use agents with extended thinking enabled; also an early signal on a possibly new Claude model.</li></ul>
+<p><a href="https://thenightlylibrarian.com/briefs/2026-06-11/">Read the full brief →</a></p>]]></description>
+    </item>
     <item>
       <title>June 10, 2026 — Tonight's brief tracks Small Business Automation, AI Operations / Agent Control, Tools Worth Testing</title>
       <link>https://thenightlylibrarian.com/briefs/2026-06-10/</link>
@@ -196,15 +206,6 @@
 <p>Topics: AI Operations / Agent Control · Tools Worth Testing · Data Infrastructure / Verification / Scraping · Model + API Changes</p>
 <ul><li>Google API Keys Keep Working After Deletion (Long Enough to Be Exploited): Directly changes incident response procedure for anyone using Google APIs; deletion is not an immediate kill switch.</li><li>Heretic Free Software Project Served Legal Notice by Meta: Signals Meta is willing to enforce LLaMA license against small OSS projects; relevant to anyone shipping on LLaMA-family weights.</li><li>110 tok/s on Qwen3.6 35B A3B with 12GB VRAM Using ik_llama.cpp: Actionable alternative backend for local LLM users seeing throughput regressions in mainline llama.cpp.</li></ul>
 <p><a href="https://thenightlylibrarian.com/briefs/2026-05-23/">Read the full brief →</a></p>]]></description>
-    </item>
-    <item>
-      <title>May 22, 2026 — 12 stories cleared the bar, led by GitHub confirms breach of 3,800 repos via malicious VSCode extens</title>
-      <link>https://thenightlylibrarian.com/briefs/2026-05-22/</link>
-      <guid isPermaLink="true">https://thenightlylibrarian.com/briefs/2026-05-22/</guid>
-      <pubDate>Fri, 22 May 2026 06:00:00 GMT</pubDate>
-      <description><![CDATA[<p>12 stories cleared the bar, led by GitHub confirms breach of 3,800 repos via malicious VSCode extension, OpenAI to confidentially file for IPO as soon as Friday, and An OpenAI model has disproved a central conjecture in discrete geometry.</p>
-<ul><li>GitHub confirms breach of 3,800 repos via malicious VSCode extension: GitHub has confirmed that a malicious VSCode extension was used to steal developer credentials and access over 3,800 repositories. This is a supply chain attack vector targeting developer workstations directly. Immediate action: audit all installed VSCode extensions, remove anything unfamiliar or low-reputation, and check your repositories for unauthorized access or committed secrets.</li><li>OpenAI to confidentially file for IPO as soon as Friday: OpenAI is filing confidentially with the SEC for an IPO, potentially as soon as Friday May 22. Going public changes OpenAI's corporate incentives significantly — quarterly earnings pressure, shareholder priorities, and regulatory scrutiny all increase. Builders relying on OpenAI APIs should watch for any pricing or rate limit changes that could follow increased investor visibility.</li><li>An OpenAI model has disproved a central conjecture in discrete geometry: OpenAI's model found a valid counterexample to a longstanding conjecture in discrete geometry, verified by Fields medalist Tim Gowers. This is the first credible instance of a frontier AI model making a genuinely original mathematical contribution — not solving a known problem but disproving a believed-true conjecture. A landmark AI capability milestone with implications for how we think about frontier model reasoning.</li></ul>
-<p><a href="https://thenightlylibrarian.com/briefs/2026-05-22/">Read the full brief →</a></p>]]></description>
     </item>
   </channel>
 </rss>

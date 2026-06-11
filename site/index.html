@@ -29,7 +29,7 @@
       <nav class="site-nav"><a href="/" class="nav-active">Archive</a><a href="/reports/">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
     </div>
     <div class="dateline">
-      <span>Latest issue · June 10, 2026</span>
+      <span>Latest issue · June 11, 2026</span>
       <span style="font-style:italic;">What changed. Why it matters. What to do.</span>
     </div>
   </header>
@@ -40,87 +40,44 @@
         
         <div class="section-label">Today's brief</div>
         <p class="brief-valueprop">Every morning I read a few hundred links so you don't have to. This is what cleared the bar today.</p>
-        <div class="meta" style="margin-bottom:0.5rem;"><span>Small Business Automation</span><span>AI Operations / Agent Control</span><span>Tools Worth Testing</span><span>Model + API Changes</span></div>
-        <p class="lead-summary">Tonight's brief tracks Small Business Automation, AI Operations / Agent Control, Tools Worth Testing, and Model + API Changes. Synthesized Nightly Librarian run with 13 promoted item(s), 40 scored item(s), and 27 rejected item(s). The lead source signal is DeepSeek enters the fight for token volume, Anthropic continues to dominate spend: Vercel AI Gateway June 2026 data shows DeepSeek gaining token volume share while Anthropic leads spend; confirms Claude Code budget overruns and Amazon tokenmaxxing controls. The operator read is Rare production-level data on actual LLM usage and cost patterns from a major infrastructure provider. Supporting context: browser-use 0.13.0 — Rebuilt in Rust (beta) (Concrete release with new import path; relevant for agent builders using browser-use); n8n@1.123.54 — 9 security fixes (Security patch with 9 CVEs — self-hosted n8n users need to update). Monitor-only context stays out of the publish list until reviewed: Show HN: Gitdot – A better GitHub. Open-source, written in Rust (Open-source forge space is heating up; Rust + keyboard-driven approach is architecturally interesting); [AINews] FrontierCode: Benchmarking for Code Quality over Slop (Code quality benchmarking beyond test pass rates is a meaningful research direction for AI-assisted development).</p>
+        <div class="meta" style="margin-bottom:0.5rem;"><span>Model + API Changes</span><span>AI Operations / Agent Control</span></div>
+        <p class="lead-summary">Tonight's brief tracks Model + API Changes and AI Operations / Agent Control. Synthesized Nightly Librarian run with 4 promoted item(s), 40 scored item(s), and 36 rejected item(s). The lead source signal is 0.13.1: Release notes claim: added support for &quot;claude fable 5&quot;, set Anthropic tool_choice to auto when thinking is enabled (forced choice incompatible with thinking), and fixed packaged agent tools env (PRs #5008-#5010). The operator read is Direct, actionable detail for anyone building Claude tool-use agents with extended thinking enabled; also an early signal on a possibly new Claude model. Monitor-only context stays out of the publish list until reviewed: 1.14.7a4 (If multi-agent flows are ever built on crewAI, this changes how flow definitions and backends are wired -- worth checking before upgrading past 1.14.x); langchain==1.3.5 (Context-window/summarization middleware and apply_patch tool support are directly relevant to agent token-cost management and code-editing agent workflows).</p>
         <div style="border-top:0.5px solid var(--border);">
           
     <div class="item">
       <div class="item-row">
         <span class="item-num">1.</span>
         <div>
-          <div class="item-title"><a href="https://vercel.com/blog/ai-gateway-production-index-june-2026" target="_blank" rel="noopener">DeepSeek enters the fight for token volume, Anthropic continues to dominate spend</a></div>
-          <div class="item-takeaway">Rare production-level data on actual LLM usage and cost patterns from a major infrastructure provider.</div>
+          <div class="item-title"><a href="https://github.com/browser-use/browser-use/releases/tag/0.13.1" target="_blank" rel="noopener">0.13.1</a></div>
+          <div class="item-takeaway">Direct, actionable detail for anyone building Claude tool-use agents with extended thinking enabled; also an early signal on a possibly new Claude model.</div>
           <div class="item-meta">
-            <span><a href="https://vercel.com/blog/ai-gateway-production-index-june-2026" target="_blank" rel="noopener">vercel.com</a></span>
-            <span>Small Business Automation</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">2.</span>
-        <div>
-          <div class="item-title"><a href="https://github.com/browser-use/browser-use/releases/tag/0.13.0" target="_blank" rel="noopener">browser-use 0.13.0 — Rebuilt in Rust (beta)</a></div>
-          <div class="item-takeaway">Concrete release with new import path; relevant for agent builders using browser-use.</div>
-          <div class="item-meta">
-            <span><a href="https://github.com/browser-use/browser-use/releases/tag/0.13.0" target="_blank" rel="noopener">github.com</a></span>
-            <span>AI Operations / Agent Control</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">3.</span>
-        <div>
-          <div class="item-title"><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.54" target="_blank" rel="noopener">n8n@1.123.54 — 9 security fixes</a></div>
-          <div class="item-takeaway">Security patch with 9 CVEs — self-hosted n8n users need to update.</div>
-          <div class="item-meta">
-            <span><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.54" target="_blank" rel="noopener">github.com</a></span>
-            <span>AI Operations / Agent Control</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">4.</span>
-        <div>
-          <div class="item-title"><a href="https://blog.cloudflare.com/realtime-threat-intel-waf-rules/" target="_blank" rel="noopener">Turning Cloudflare's threat indicators into real-time WAF rules</a></div>
-          <div class="item-takeaway">Concrete new WAF capability that changes what's possible for Cloudflare-protected apps.</div>
-          <div class="item-meta">
-            <span><a href="https://blog.cloudflare.com/realtime-threat-intel-waf-rules/" target="_blank" rel="noopener">blog.cloudflare.com</a></span>
-            <span>AI Operations / Agent Control</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">5.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1u09koi/i_finally_raised_my_prices_and_lost_half_my/" target="_blank" rel="noopener">I finally raised my prices… and lost half my customers</a></div>
-          <div class="item-takeaway">Concrete outcome of a common SaaS decision; useful signal for solo builders weighing price increases.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/SaaS/comments/1u09koi/i_finally_raised_my_prices_and_lost_half_my/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span>Small Business Automation</span>
+            <span><a href="https://github.com/browser-use/browser-use/releases/tag/0.13.1" target="_blank" rel="noopener">github.com</a></span>
+            <span>Model + API Changes</span>
           </div>
         </div>
       </div>
     </div>
         </div>
-        <a href="/briefs/2026-06-10/" style="display:inline-block;margin-top:0.85rem;font-size:0.82rem;color:var(--accent);font-weight:600;border-bottom:1px solid var(--accent);padding-bottom:1px;">Read the full brief →</a>
+        <a href="/briefs/2026-06-11/" style="display:inline-block;margin-top:0.85rem;font-size:0.82rem;color:var(--accent);font-weight:600;border-bottom:1px solid var(--accent);padding-bottom:1px;">Read the full brief →</a>
         
 
         
         <div style="margin-top:1.75rem;">
           <div class="section-label">Archive</div>
           
+    <div class="item">
+      <div class="item-title">
+        <a href="/briefs/2026-06-10/">Jun 10, 2026</a>
+      </div>
+      <div class="arc-themes"><span class="arc-tag">Small Business Automation</span><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Tools Worth Testing</span><span class="arc-tag">Model + API Changes</span></div>
+      <div class="item-takeaway" style="font-size:0.88rem;">Rare production-level data on actual LLM usage and cost patterns from a major infrastructure provider.</div>
+      <div class="item-meta">
+        <span>7 items</span>
+        <span>6 to watch</span>
+        <span>39 links researched</span>
+      </div>
+    </div>
+
     <div class="item">
       <div class="item-title">
         <a href="/briefs/2026-06-09/">Jun 9, 2026</a>
@@ -403,6 +360,11 @@
           <div class="section-label">Report log</div>
           
     <div class="sb-row">
+      <a href="/reports/2026-06-11/">Jun 11, 2026</a>
+      <span class="sb-count">4 items</span>
+    </div>
+
+    <div class="sb-row">
       <a href="/reports/2026-06-10/">Jun 10, 2026</a>
       <span class="sb-count">7 items</span>
     </div>
@@ -425,11 +387,6 @@
     <div class="sb-row">
       <a href="/reports/2026-06-06/">Jun 6, 2026</a>
       <span class="sb-count">5 items</span>
-    </div>
-
-    <div class="sb-row">
-      <a href="/reports/2026-06-05/">Jun 5, 2026</a>
-      <span class="sb-count">6 items</span>
     </div>
           <a href="/reports/" style="display:inline-block;margin-top:0.6rem;font-size:0.72rem;color:var(--text-dim);">All reports →</a>
         </div>

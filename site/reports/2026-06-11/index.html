@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>June 11, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="4 stories cleared the bar, led by 0.13.1, langchain==1.3.5, and 1.14.7a4.">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-06-11/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="June 11, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="4 stories cleared the bar, led by 0.13.1, langchain==1.3.5, and 1.14.7a4.">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-06-11/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="June 11, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="4 stories cleared the bar, led by 0.13.1, langchain==1.3.5, and 1.14.7a4.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."}</script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>June 11, 2026 · Report log</span>
+      <span>Jun 11, 2026, 2:53 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>June 11, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>4 stories cleared the bar, led by 0.13.1, langchain==1.3.5, and 1.14.7a4.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>4 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+      
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/browser-use/browser-use/releases/tag/0.13.1" target="_blank" rel="noopener">0.13.1</a></div>
+        <div class="item-takeaway">browser-use 0.13.1 adds support for a model referred to as &quot;claude fable 5&quot; and fixes Anthropic tool_choice handling: when extended thinking is enabled, tool_choice now falls back to &quot;auto&quot; since forced tool choice can't be combined with thinking. Also fixes the packaged agent tools env.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.5" target="_blank" rel="noopener">langchain==1.3.5</a></div>
+        <div class="item-takeaway">langchain 1.3.5 adds AND-capable trigger conditions to SummarizationMiddleware and adds OpenAI &quot;apply_patch&quot; built-in tool support; the very next release (1.3.6) shipped a same-day hotfix for summarization trigger compatibility.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/crewAIInc/crewAI/releases/tag/1.14.7a4" target="_blank" rel="noopener">1.14.7a4</a></div>
+        <div class="item-takeaway">crewAI 1.14.7a4 (alpha) migrates the @listen/@router flow runtime to read from FlowDefinition and adds pluggable default backends for memory, knowledge, RAG, and flow -- a meaningful internal architecture shift.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.cc.dev/" target="_blank" rel="noopener">Show HN: Command Center, the AI coding env for people who care about quality</a></div>
+        <div class="item-takeaway">Show HN launch of &quot;Command Center&quot;, an agentic coding environment from credentialed founders focused on refactoring/de-slopping AI-generated diffs and generating code-review walkthroughs, with named testimonials from engineers at Climavision and Sumo Logic.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+      
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/deepset-ai/haystack/releases/tag/v2.30.1" target="_blank" rel="noopener">v2.30.1</a>
+        </div>
+        <div class="item-takeaway">Routine point release of the Haystack RAG framework.</div>
+        <div class="item-meta">
+          <span>gh-haystack</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/deepset-ai/haystack/releases/tag/v2.30.1-rc1" target="_blank" rel="noopener">v2.30.1-rc1</a>
+        </div>
+        <div class="item-takeaway">Release-candidate tag preceding haystack v2.30.1 -- same content, pre-release of the item above.</div>
+        <div class="item-meta">
+          <span>gh-haystack</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://github.com/crewAIInc/crewAI/releases/tag/1.14.7a4" target="_blank" rel="noopener">1.14.7a4</a>
+        </div>
+        <div class="item-takeaway">crewAI 1.14.7a4 (alpha) migrates the @listen/@router flow runtime to read from FlowDefinition and adds pluggable default backends for memory, knowledge, RAG, and flow -- a meaningful internal architecture shift.</div>
+        <div class="item-meta">
+          <span>gh-crewai</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.2.31" target="_blank" rel="noopener">CLI @composio/cli@0.2.31</a>
+        </div>
+        <div class="item-takeaway">Routine point release of the Composio CLI.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.2.31-beta.258" target="_blank" rel="noopener">CLI Beta @composio/cli@0.2.31-beta.258</a>
+        </div>
+        <div class="item-takeaway">Beta pre-release tag preceding the Composio CLI 0.2.31 release above.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.6" target="_blank" rel="noopener">langchain==1.3.6</a>
+        </div>
+        <div class="item-takeaway">langchain 1.3.6 is a same-day hotfix for the SummarizationMiddleware trigger feature shipped in 1.3.5.</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-groq%3D%3D1.1.3" target="_blank" rel="noopener">langchain-groq==1.1.3</a>
+        </div>
+        <div class="item-takeaway">Routine point release of the langchain Groq integration package.</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.5" target="_blank" rel="noopener">langchain==1.3.5</a>
+        </div>
+        <div class="item-takeaway">langchain 1.3.5 adds AND-capable trigger conditions to SummarizationMiddleware and adds OpenAI &quot;apply_patch&quot; built-in tool support; the very next release (1.3.6) shipped a same-day hotfix for summarization trigger compatibility.</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-perplexity%3D%3D1.4.0" target="_blank" rel="noopener">langchain-perplexity==1.4.0</a>
+        </div>
+        <div class="item-takeaway">Routine point release of the langchain Perplexity integration package.</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.3.0" target="_blank" rel="noopener">langchain-openai==1.3.0</a>
+        </div>
+        <div class="item-takeaway">Routine point release of the langchain OpenAI integration package.</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.4.3" target="_blank" rel="noopener">langchain-core==1.4.3</a>
+        </div>
+        <div class="item-takeaway">Routine point release of langchain-core.</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/browser-use/browser-use/releases/tag/0.13.1" target="_blank" rel="noopener">0.13.1</a>
+        </div>
+        <div class="item-takeaway">browser-use 0.13.1 adds support for a model referred to as &quot;claude fable 5&quot; and fixes Anthropic tool_choice handling: when extended thinking is enabled, tool_choice now falls back to &quot;auto&quot; since forced tool choice can't be combined with thinking. Also fixes the packaged agent tools env.</div>
+        <div class="item-meta">
+          <span>gh-browser-use</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://qunabu.github.io/Gravity/" target="_blank" rel="noopener">Show HN: Gravity – Interactive solar-system simulator, from Newton to Einstein</a>
+        </div>
+        <div class="item-takeaway">Hobby Show HN: an interactive solar-system simulator covering Newtonian and relativistic gravity.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/luke8086/gentleos32" target="_blank" rel="noopener">Show HN: GentleOS – A pair of hobby OSes for vintage 32-bit and 16-bit PCs</a>
+        </div>
+        <div class="item-takeaway">Hobby Show HN: a pair of small hobby operating systems for vintage 16/32-bit PCs.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.cc.dev/" target="_blank" rel="noopener">Show HN: Command Center, the AI coding env for people who care about quality</a>
+        </div>
+        <div class="item-takeaway">Show HN launch of &quot;Command Center&quot;, an agentic coding environment from credentialed founders focused on refactoring/de-slopping AI-generated diffs and generating code-review walkthroughs, with named testimonials from engineers at Climavision and Sumo Logic.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u0z4vz/new_rule_banning_a_saas_product_category_no/" target="_blank" rel="noopener">New rule banning a SaaS product category: No Promotional or Advertising SaaS</a>
+        </div>
+        <div class="item-takeaway">r/SaaS moderation announcement banning a category of promotional/advertising SaaS posts.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1tbml/i_just_crossed_0000_mrr_after_one_month_heres_how/" target="_blank" rel="noopener">I just crossed $0,000 MRR after one month. Here's how I did it.</a>
+        </div>
+        <div class="item-takeaway">Self-reported MRR milestone post with a redacted/garbled revenue figure ('$0,000 MRR').</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u17p4n/launched_my_first_app_1_month_ago_480_users_2/" target="_blank" rel="noopener">Launched my first app 1 month ago. 480 users, 2 subscribers, $11 MRR.</a>
+        </div>
+        <div class="item-takeaway">Self-reported early-traction post: 480 users, 2 subscribers, $11 MRR after one month.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1tuar/i_spent_413_hours_building_a_payment_saas_the/" target="_blank" rel="noopener">I spent 413 hours building a payment SaaS. The dashboard was the easy part.</a>
+        </div>
+        <div class="item-takeaway">Builder reflection post on the time cost of building a payment SaaS, framing the dashboard as the easy part.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1uoqq/founders_what_takes_the_most_time_between_having/" target="_blank" rel="noopener">Founders: what takes the most time between having an idea and starting development?</a>
+        </div>
+        <div class="item-takeaway">Discussion thread asking founders what consumes the most time between idea and starting development.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u11oqx/haha_this_is_epic/" target="_blank" rel="noopener">haha this is epic</a>
+        </div>
+        <div class="item-takeaway">Low-content meme/reaction post with no substantive claim.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1qc18/my_marketplace_app_made_209_in_a_few_days/" target="_blank" rel="noopener">My marketplace app made $209 in a few days</a>
+        </div>
+        <div class="item-takeaway">Self-reported small-revenue milestone for a marketplace app ($209 in a few days).</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1qvt6/validation/" target="_blank" rel="noopener">Validation</a>
+        </div>
+        <div class="item-takeaway">Generic post titled 'Validation', presumably about idea/market validation.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1ui9c/are_mvps_not_really_mvps_anymore_in_the_ai_era/" target="_blank" rel="noopener">Are MVPs not really MVPs anymore in the AI era?</a>
+        </div>
+        <div class="item-takeaway">Discussion/opinion post questioning whether MVPs are still meaningful in the AI era.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1udw8/every_new_shopify_app_looks_exactly_like_the_top/" target="_blank" rel="noopener">Every new Shopify app looks exactly like the top app in its category. And people wonder why they can’t get installs.</a>
+        </div>
+        <div class="item-takeaway">Opinion post complaining that new Shopify apps all look like category leaders and wondering why they don't get installs.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1pv3o/how_do_you_consistently_find_where_your_target/" target="_blank" rel="noopener">How do you consistently find where your target users hang out online?</a>
+        </div>
+        <div class="item-takeaway">Discussion thread asking how founders consistently find where their target users hang out online.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1txyr/the_more_optimized_your_saas_metrics_get_the_less/" target="_blank" rel="noopener">The more optimized your SaaS metrics get, the less they reflect reality.</a>
+        </div>
+        <div class="item-takeaway">Opinion post arguing that over-optimized SaaS metrics stop reflecting reality.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1kmdl/building_in_public_when_competitors_already_exist/" target="_blank" rel="noopener">Building in public when competitors already exist. Actually worth it or just another thing everyone keeps repeating?</a>
+        </div>
+        <div class="item-takeaway">Discussion post questioning whether 'building in public' is worthwhile when competitors already exist.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1suqb/today_we_are_launching_a_much_cleaner_competitors/" target="_blank" rel="noopener">Today we are launching a much cleaner Competitors Market view for App Store</a>
+        </div>
+        <div class="item-takeaway">Self-promotional launch post for a 'Competitors Market' view feature for App Store analytics.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1mi66/compiling_a_list_of_free_tier_saas_websites/" target="_blank" rel="noopener">Compiling a list of free tier SaaS websites</a>
+        </div>
+        <div class="item-takeaway">Crowdsourced list-building post compiling free-tier SaaS websites.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1q2o7/ai_app_builders_how_are_you_handling_security/" target="_blank" rel="noopener">AI app builders: How are you handling security questionnaires when selling your product?</a>
+        </div>
+        <div class="item-takeaway">Discussion thread asking how AI app builders handle enterprise security questionnaires when selling.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1s8q8/fetchsandbox_just_hit_1000_mau_and_1045_mcp/" target="_blank" rel="noopener">FetchSandbox just hit 1,000 MAU and 1,045 MCP installs/month</a>
+        </div>
+        <div class="item-takeaway">Founder self-promo post: FetchSandbox (stateful API sandboxes for AI coding agents, 55 APIs) reports 1,000 MAU and 1,045 MCP installs/month.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1s329/wwdc_is_over_you_have_one_job/" target="_blank" rel="noopener">WWDC is over. You have one job.</a>
+        </div>
+        <div class="item-takeaway">Reactive/opinion post riffing on WWDC announcements with a generic call to action for SaaS builders.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1vkun/distribution_of_a_niche_saas/" target="_blank" rel="noopener">Distribution of a niche SaaS</a>
+        </div>
+        <div class="item-takeaway">Discussion thread about distribution strategy for a niche SaaS product.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1v8zc/which_paid_saas_products_are_actually_worth_the/" target="_blank" rel="noopener">Which paid SaaS products are actually worth the money?</a>
+        </div>
+        <div class="item-takeaway">Discussion thread asking which paid SaaS products are actually worth paying for.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1v45u/how_much_friction_are_people_willing_to_tolerate/" target="_blank" rel="noopener">How much friction are people willing to tolerate to access AI features?</a>
+        </div>
+        <div class="item-takeaway">Discussion thread about how much friction users will tolerate to access AI features.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1uzpl/saas_startup_review_we_are_helping_brands_ride/" target="_blank" rel="noopener">SaaS Startup Review- We are helping brands ride Social Media Trends and Go Viral</a>
+        </div>
+        <div class="item-takeaway">Self-promotional 'startup review' post for a social-media-trend-riding SaaS.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u1uyla/finally_my_project_got_first_subscription_i/" target="_blank" rel="noopener">Finally!! my project got first subscription. I honestly couldn't believe my eyes!!</a>
+        </div>
+        <div class="item-takeaway">Celebratory post about getting a first paying subscriber.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u17jqu/the_hardest_part_of_building_after_a_95_is_not/" target="_blank" rel="noopener">the hardest part of building after a 9-5 is not always being tired</a>
+        </div>
+        <div class="item-takeaway">Reflective post on the challenges of building a side project after a full-time job.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.26.1" target="_blank" rel="noopener">n8n@2.26.1</a>
+        </div>
+        <div class="item-takeaway">Routine point release of n8n, the workflow automation platform.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: ede89d83-35f4-4198-9e88-d383e53fcd41
+Started: 2026-06-11T06:09:37.368Z
+Completed: 2026-06-11T06:53:13.301Z
+
+## Worth attention
+
+- **0.13.1**
+  https://github.com/browser-use/browser-use/releases/tag/0.13.1
+  browser-use 0.13.1 adds support for a model referred to as &quot;claude fable 5&quot; and fixes Anthropic tool_choice handling: when extended thinking is enabled, tool_choice now falls back to &quot;auto&quot; since forced tool choice can't be combined with thinking. Also fixes the packaged agent tools env.
+- **langchain==1.3.5**
+  https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.5
+  langchain 1.3.5 adds AND-capable trigger conditions to SummarizationMiddleware and adds OpenAI &quot;apply_patch&quot; built-in tool support; the very next release (1.3.6) shipped a same-day hotfix for summarization trigger compatibility.
+- **1.14.7a4**
+  https://github.com/crewAIInc/crewAI/releases/tag/1.14.7a4
+  crewAI 1.14.7a4 (alpha) migrates the @listen/@router flow runtime to read from FlowDefinition and adds pluggable default backends for memory, knowledge, RAG, and flow -- a meaningful internal architecture shift.
+- **Show HN: Command Center, the AI coding env for people who care about quality**
+  https://www.cc.dev/
+  Show HN launch of &quot;Command Center&quot;, an agentic coding environment from credentialed founders focused on refactoring/de-slopping AI-generated diffs and generating code-review walkthroughs, with named testimonials from engineers at Climavision and Sumo Logic.
+
+## Full digest
+
+- [R] [gh-haystack] v2.30.1 — https://github.com/deepset-ai/haystack/releases/tag/v2.30.1 — Routine point release of the Haystack RAG framework.
+- [R] [gh-haystack] v2.30.1-rc1 — https://github.com/deepset-ai/haystack/releases/tag/v2.30.1-rc1 — Release-candidate tag preceding haystack v2.30.1 -- same content, pre-release of the item above.
+- [M] [gh-crewai] 1.14.7a4 — https://github.com/crewAIInc/crewAI/releases/tag/1.14.7a4 — crewAI 1.14.7a4 (alpha) migrates the @listen/@router flow runtime to read from FlowDefinition and adds pluggable default backends for memory, knowledge, RAG, and flow -- a meaningful internal architecture shift.
+- [R] [gh-composio] CLI @composio/cli@0.2.31 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.2.31 — Routine point release of the Composio CLI.
+- [R] [gh-composio] CLI Beta @composio/cli@0.2.31-beta.258 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.2.31-beta.258 — Beta pre-release tag preceding the Composio CLI 0.2.31 release above.
+- [R] [gh-langchain] langchain==1.3.6 — https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.6 — langchain 1.3.6 is a same-day hotfix for the SummarizationMiddleware trigger feature shipped in 1.3.5.
+- [R] [gh-langchain] langchain-groq==1.1.3 — https://github.com/langchain-ai/langchain/releases/tag/langchain-groq%3D%3D1.1.3 — Routine point release of the langchain Groq integration package.
+- [M] [gh-langchain] langchain==1.3.5 — https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.5 — langchain 1.3.5 adds AND-capable trigger conditions to SummarizationMiddleware and adds OpenAI &quot;apply_patch&quot; built-in tool support; the very next release (1.3.6) shipped a same-day hotfix for summarization trigger compatibility.
+- [R] [gh-langchain] langchain-perplexity==1.4.0 — https://github.com/langchain-ai/langchain/releases/tag/langchain-perplexity%3D%3D1.4.0 — Routine point release of the langchain Perplexity integration package.
+- [R] [gh-langchain] langchain-openai==1.3.0 — https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.3.0 — Routine point release of the langchain OpenAI integration package.
+- [R] [gh-langchain] langchain-core==1.4.3 — https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.4.3 — Routine point release of langchain-core.
+- [P] [gh-browser-use] 0.13.1 — https://github.com/browser-use/browser-use/releases/tag/0.13.1 — browser-use 0.13.1 adds support for a model referred to as &quot;claude fable 5&quot; and fixes Anthropic tool_choice handling: when extended thinking is enabled, tool_choice now falls back to &quot;auto&quot; since forced tool choice can't be combined with thinking. Also fixes the packaged agent tools env.
+- [R] [hn-show] Show HN: Gravity – Interactive solar-system simulator, from Newton to Einstein — https://qunabu.github.io/Gravity/ — Hobby Show HN: an interactive solar-system simulator covering Newtonian and relativistic gravity.
+- [R] [hn-show] Show HN: GentleOS – A pair of hobby OSes for vintage 32-bit and 16-bit PCs — https://github.com/luke8086/gentleos32 — Hobby Show HN: a pair of small hobby operating systems for vintage 16/32-bit PCs.
+- [M] [hn-show] Show HN: Command Center, the AI coding env for people who care about quality — https://www.cc.dev/ — Show HN launch of &quot;Command Center&quot;, an agentic coding environment from credentialed founders focused on refactoring/de-slopping AI-generated diffs and generating code-review walkthroughs, with named testimonials from engineers at Climavision and Sumo Logic.
+- [R] [reddit-saas] New rule banning a SaaS product category: No Promotional or Advertising SaaS — https://www.reddit.com/r/SaaS/comments/1u0z4vz/new_rule_banning_a_saas_product_category_no/ — r/SaaS moderation announcement banning a category of promotional/advertising SaaS posts.
+- [R] [reddit-saas] I just crossed $0,000 MRR after one month. Here's how I did it. — https://www.reddit.com/r/SaaS/comments/1u1tbml/i_just_crossed_0000_mrr_after_one_month_heres_how/ — Self-reported MRR milestone post with a redacted/garbled revenue figure ('$0,000 MRR').
+- [R] [reddit-saas] Launched my first app 1 month ago. 480 users, 2 subscribers, $11 MRR. — https://www.reddit.com/r/SaaS/comments/1u17p4n/launched_my_first_app_1_month_ago_480_users_2/ — Self-reported early-traction post: 480 users, 2 subscribers, $11 MRR after one month.
+- [R] [reddit-saas] I spent 413 hours building a payment SaaS. The dashboard was the easy part. — https://www.reddit.com/r/SaaS/comments/1u1tuar/i_spent_413_hours_building_a_payment_saas_the/ — Builder reflection post on the time cost of building a payment SaaS, framing the dashboard as the easy part.
+- [R] [reddit-saas] Founders: what takes the most time between having an idea and starting development? — https://www.reddit.com/r/SaaS/comments/1u1uoqq/founders_what_takes_the_most_time_between_having/ — Discussion thread asking founders what consumes the most time between idea and starting development.
+- [R] [reddit-saas] haha this is epic — https://www.reddit.com/r/SaaS/comments/1u11oqx/haha_this_is_epic/ — Low-content meme/reaction post with no substantive claim.
+- [R] [reddit-saas] My marketplace app made $209 in a few days — https://www.reddit.com/r/SaaS/comments/1u1qc18/my_marketplace_app_made_209_in_a_few_days/ — Self-reported small-revenue milestone for a marketplace app ($209 in a few days).
+- [R] [reddit-saas] Validation — https://www.reddit.com/r/SaaS/comments/1u1qvt6/validation/ — Generic post titled 'Validation', presumably about idea/market validation.
+- [R] [reddit-saas] Are MVPs not really MVPs anymore in the AI era? — https://www.reddit.com/r/SaaS/comments/1u1ui9c/are_mvps_not_really_mvps_anymore_in_the_ai_era/ — Discussion/opinion post questioning whether MVPs are still meaningful in the AI era.
+- [R] [reddit-saas] Every new Shopify app looks exactly like the top app in its category. And people wonder why they can’t get installs. — https://www.reddit.com/r/SaaS/comments/1u1udw8/every_new_shopify_app_looks_exactly_like_the_top/ — Opinion post complaining that new Shopify apps all look like category leaders and wondering why they don't get installs.
+- [R] [reddit-saas] How do you consistently find where your target users hang out online? — https://www.reddit.com/r/SaaS/comments/1u1pv3o/how_do_you_consistently_find_where_your_target/ — Discussion thread asking how founders consistently find where their target users hang out online.
+- [R] [reddit-saas] The more optimized your SaaS metrics get, the less they reflect reality. — https://www.reddit.com/r/SaaS/comments/1u1txyr/the_more_optimized_your_saas_metrics_get_the_less/ — Opinion post arguing that over-optimized SaaS metrics stop reflecting reality.
+- [R] [reddit-saas] Building in public when competitors already exist. Actually worth it or just another thing everyone keeps repeating? — https://www.reddit.com/r/SaaS/comments/1u1kmdl/building_in_public_when_competitors_already_exist/ — Discussion post questioning whether 'building in public' is worthwhile when competitors already exist.
+- [R] [reddit-saas] Today we are launching a much cleaner Competitors Market view for App Store — https://www.reddit.com/r/SaaS/comments/1u1suqb/today_we_are_launching_a_much_cleaner_competitors/ — Self-promotional launch post for a 'Competitors Market' view feature for App Store analytics.
+- [R] [reddit-saas] Compiling a list of free tier SaaS websites — https://www.reddit.com/r/SaaS/comments/1u1mi66/compiling_a_list_of_free_tier_saas_websites/ — Crowdsourced list-building post compiling free-tier SaaS websites.
+- [R] [reddit-saas] AI app builders: How are you handling security questionnaires when selling your product? — https://www.reddit.com/r/SaaS/comments/1u1q2o7/ai_app_builders_how_are_you_handling_security/ — Discussion thread asking how AI app builders handle enterprise security questionnaires when selling.
+- [R] [reddit-saas] FetchSandbox just hit 1,000 MAU and 1,045 MCP installs/month — https://www.reddit.com/r/SaaS/comments/1u1s8q8/fetchsandbox_just_hit_1000_mau_and_1045_mcp/ — Founder self-promo post: FetchSandbox (stateful API sandboxes for AI coding agents, 55 APIs) reports 1,000 MAU and 1,045 MCP installs/month.
+- [R] [reddit-saas] WWDC is over. You have one job. — https://www.reddit.com/r/SaaS/comments/1u1s329/wwdc_is_over_you_have_one_job/ — Reactive/opinion post riffing on WWDC announcements with a generic call to action for SaaS builders.
+- [R] [reddit-saas] Distribution of a niche SaaS — https://www.reddit.com/r/SaaS/comments/1u1vkun/distribution_of_a_niche_saas/ — Discussion thread about distribution strategy for a niche SaaS product.
+- [R] [reddit-saas] Which paid SaaS products are actually worth the money? — https://www.reddit.com/r/SaaS/comments/1u1v8zc/which_paid_saas_products_are_actually_worth_the/ — Discussion thread asking which paid SaaS products are actually worth paying for.
+- [R] [reddit-saas] How much friction are people willing to tolerate to access AI features? — https://www.reddit.com/r/SaaS/comments/1u1v45u/how_much_friction_are_people_willing_to_tolerate/ — Discussion thread about how much friction users will tolerate to access AI features.
+- [R] [reddit-saas] SaaS Startup Review- We are helping brands ride Social Media Trends and Go Viral — https://www.reddit.com/r/SaaS/comments/1u1uzpl/saas_startup_review_we_are_helping_brands_ride/ — Self-promotional 'startup review' post for a social-media-trend-riding SaaS.
+- [R] [reddit-saas] Finally!! my project got first subscription. I honestly couldn't believe my eyes!! — https://www.reddit.com/r/SaaS/comments/1u1uyla/finally_my_project_got_first_subscription_i/ — Celebratory post about getting a first paying subscriber.
+- [R] [reddit-saas] the hardest part of building after a 9-5 is not always being tired — https://www.reddit.com/r/SaaS/comments/1u17jqu/the_hardest_part_of_building_after_a_95_is_not/ — Reflective post on the challenges of building a side project after a full-time job.
+- [R] [gh-n8n] n8n@2.26.1 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.26.1 — Routine point release of n8n, the workflow automation platform.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
