@@ -1,4 +1,5 @@
 const fs = require('fs/promises');
+const preTriage = require('./utils/pre-triage');
 
 const DEFAULT_BATCH_LIMIT = 40;
 const CLAIM_STALE_AFTER_HOURS = 4;
@@ -235,9 +236,28 @@ async function claimForAgent(pool, argv = []) {
 
     await client.query('COMMIT');
 
+    // Pre-triage: deduplicate near-identical titles, cap per-source volume,
+    // annotate engagement signals from raw_data for Codex context.
+    const { items: triageItems, stats: preTriageStats } = preTriage.runPreTriage(claimResult.rows);
+
+    if (preTriageStats.duplicates_removed > 0 || preTriageStats.deferred_over_cap > 0) {
+      logger.info('triage', `Pre-triage: ${claimResult.rows.length} claimed → ${triageItems.length} to Codex (${preTriageStats.duplicates_removed} dupes, ${preTriageStats.deferred_over_cap} capped)`);
+    }
+
+    // Write duplicate_of back to DB for the items we collapsed
+    if (preTriageStats.duplicate_ids.length > 0) {
+      for (const { id, duplicate_of } of preTriageStats.duplicate_ids) {
+        await client.query(
+          `UPDATE raw_items SET duplicate_of = $1 WHERE id = $2`,
+          [duplicate_of, id]
+        ).catch(() => {}); // non-fatal
+      }
+    }
+
     return {
       run_id: runId,
       claimed_count: claimResult.rows.length,
+      pre_triage: preTriageStats,
       editorial_rules: editorialRules(),
       allowed_values: {
         categories: CATEGORIES,
@@ -246,7 +266,7 @@ async function claimForAgent(pool, argv = []) {
         score_fields: SCORE_FIELDS,
       },
       completion_contract: completionContract(runId, claimResult.rows),
-      items: claimResult.rows.map(formatRawItem),
+      items: triageItems.map(formatRawItem),
     };
   } catch (err) {
     await client.query('ROLLBACK');
@@ -651,7 +671,7 @@ function editorialRules() {
 }
 
 function formatRawItem(item) {
-  return {
+  const out = {
     raw_item_id: item.id,
     source_id: item.source_id,
     external_id: item.external_id,
@@ -661,6 +681,12 @@ function formatRawItem(item) {
     fetched_at: item.fetched_at,
     published_at: item.published_at,
   };
+  // Attach engagement score when available (set by pre-triage annotateEngagement).
+  // Codex uses this as a signal — higher score = more community traction.
+  if (item.engagement_score !== null && item.engagement_score !== undefined) {
+    out.engagement_score = item.engagement_score;
+  }
+  return out;
 }
 
 function extractSummarySeed(item) {
