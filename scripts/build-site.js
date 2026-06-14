@@ -66,30 +66,53 @@ function esc(str) {
  * Render the full SEO <head> block: canonical, OG, Twitter Card, JSON-LD, RSS autodiscovery.
  * @param {{ title: string, description: string, path: string, type?: string, publishedDate?: string }} opts
  */
-function seoMeta({ title, description, path: urlPath, type = "website", publishedDate = "" }) {
+// Placeholder og-image — replace site/og-image.png with a real 1200x630 PNG.
+// TODO: add sameAs to Blog schema once X/LinkedIn handles are confirmed.
+const OG_IMAGE = `${SITE_URL}/og-image.png`;
+
+function truncateDesc(str) {
+  const raw = str.slice(0, 155);
+  const m = raw.match(/^([\s\S]*[.!?])/);
+  if (m && m[1].length > 40) return m[1].trim();
+  const lastSpace = raw.lastIndexOf(" ");
+  return (lastSpace > 40 ? raw.slice(0, lastSpace) : raw).trim();
+}
+
+function seoMeta({ title, description, path: urlPath, type = "website", publishedDate = "", leadTitle = "" }) {
   const fullUrl = SITE_URL + urlPath;
   const fullTitle = title === SITE_NAME ? title : `${title} | ${SITE_NAME}`;
-  const safeDesc = esc(description.slice(0, 200));
+  const safeDesc = esc(truncateDesc(description));
   const safeTitle = esc(fullTitle);
   const safeUrl = esc(fullUrl);
+  const safeOgImage = esc(OG_IMAGE);
 
   const jsonLd = type === "article"
     ? JSON.stringify({
         "@context": "https://schema.org",
         "@type": "NewsArticle",
-        "headline": title,
-        "description": description,
+        "headline": leadTitle || title,
+        "description": description.slice(0, 500),
         "url": fullUrl,
         "publisher": { "@type": "Organization", "name": SITE_NAME, "url": SITE_URL },
-        ...(publishedDate ? { "datePublished": publishedDate } : {}),
+        ...(publishedDate ? { "datePublished": publishedDate, "dateModified": publishedDate } : {}),
       })
-    : JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": SITE_NAME,
-        "url": SITE_URL,
-        "description": SITE_DESCRIPTION,
-      });
+    : JSON.stringify([
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": SITE_NAME,
+          "url": SITE_URL,
+          "description": SITE_DESCRIPTION,
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "name": SITE_NAME,
+          "url": SITE_URL,
+          "description": SITE_DESCRIPTION,
+          "author": { "@type": "Person", "name": "The Nightly Librarian" },
+        },
+      ]);
 
   return `  <meta name="description" content="${safeDesc}">
   <link rel="canonical" href="${safeUrl}">
@@ -99,9 +122,13 @@ function seoMeta({ title, description, path: urlPath, type = "website", publishe
   <meta property="og:title" content="${safeTitle}">
   <meta property="og:description" content="${safeDesc}">
   <meta property="og:url" content="${safeUrl}">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="${safeOgImage}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${safeTitle}">
   <meta name="twitter:description" content="${safeDesc}">
+  <meta name="twitter:image" content="${safeOgImage}">
   <script type="application/ld+json">${jsonLd}</script>`;
 }
 
@@ -858,6 +885,14 @@ const SHARED_CSS = `
     align-items: center;
   }
   .theme-btn:hover { color: var(--text); }
+  /* ── Inline subscribe strip ── */
+  .inline-subscribe {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .inline-subscribe .subscribe-form { flex-wrap: nowrap; }
+
 
   /* ── Dark mode ── */
   /* Fires when OS is dark AND user hasn't forced light */
@@ -1020,7 +1055,7 @@ function renderBriefPage(brief) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(dateLabel)} — ${esc(SITE_NAME)}</title>
-${seoMeta({ title: dateLabel, description: summaryText || brief.themes.join(", ") || SITE_DESCRIPTION, path: `/briefs/${brief.date}/`, type: "article", publishedDate: brief.date })}
+${seoMeta({ title: dateLabel, description: summaryText || brief.themes.join(", ") || SITE_DESCRIPTION, path: `/briefs/${brief.date}/`, type: "article", publishedDate: brief.date, leadTitle: brief.published[0]?.title || "" })}
   ${CSS_LINK}
 </head>
 <body>
@@ -1041,7 +1076,7 @@ ${seoMeta({ title: dateLabel, description: summaryText || brief.themes.join(", "
     <a class="back-link" href="/">All briefs</a>
     <h1>${esc(dateLabel)}</h1>
     ${brief.themes.length ? `<div class="meta" style="margin-top:0.4rem;">${brief.themes.map((t) => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
-    ${summaryText ? `<p class="lead-summary" style="margin-top:0.85rem;">${renderText(summaryText)}</p>` : ""}
+    ${brief.published[0]?.takeaway ? `<p class="lead-summary" style="margin-top:0.85rem;">${renderText(brief.published[0].takeaway)}</p>` : brief.themes.length ? `<p class="lead-summary" style="margin-top:0.85rem;">${esc(brief.themes.join(" · "))}</p>` : ""}
     ${publishedHtml}
     ${monitoredHtml}
     ${linkIndex}
@@ -1301,7 +1336,7 @@ function renderBriefFromReport(report) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(dateLabel)} — ${esc(SITE_NAME)}</title>
-${seoMeta({ title: dateLabel, description: leadTakeaway || SITE_DESCRIPTION, path: `/briefs/${report.date}/`, type: "article", publishedDate: report.date })}
+${seoMeta({ title: dateLabel, description: leadTakeaway || SITE_DESCRIPTION, path: `/briefs/${report.date}/`, type: "article", publishedDate: report.date, leadTitle: report.worthAttention[0]?.title || "" })}
   ${CSS_LINK}
 </head>
 <body>
@@ -1338,11 +1373,11 @@ function renderIndexPage(briefs, reports, legacyReports) {
     const lead = brief.published[0];
     return `
     <div class="item">
-      <div class="item-title">
-        <a href="/briefs/${esc(brief.date)}/">${esc(formatDateShort(brief.date))}</a>
+      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+        <a href="/briefs/${esc(brief.date)}/" style="color:var(--text);">${esc(formatDateShort(brief.date))}</a>
       </div>
-      ${brief.themes.length ? `<div class="arc-themes">${brief.themes.map((t) => `<span class="arc-tag">${esc(t)}</span>`).join("")}</div>` : ""}
-      ${lead ? `<div class="item-takeaway" style="font-size:0.88rem;">${renderText(lead.takeaway || lead.title)}</div>` : ""}
+      ${brief.themes.length ? `<div class="arc-themes">${brief.themes.slice(0,2).map((t) => `<span class="arc-tag">${esc(t)}</span>`).join("")}</div>` : ""}
+      ${lead ? `<div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${renderText(lead.takeaway || lead.title)}</div>` : ""}
       <div class="item-meta">
         <span>${brief.published.length} item${brief.published.length !== 1 ? "s" : ""}</span>
         ${brief.monitored.length ? `<span>${brief.monitored.length} to watch</span>` : ""}
@@ -1411,10 +1446,16 @@ ${seoMeta({ title: SITE_NAME, description: SITE_DESCRIPTION, path: "/" })}
     <div class="two-col">
       <div>
         ${latest ? `
+        <div class="inline-subscribe">
+          <form class="subscribe-form" action="https://thenightlylibrarian.substack.com/subscribe" method="GET" target="_blank">
+            <input class="subscribe-input" type="email" name="email" placeholder="your@email.com" required>
+            <button class="subscribe-btn" type="submit">Get the brief free →</button>
+          </form>
+        </div>
         <div class="section-label">Today's brief</div>
         <p class="brief-valueprop">Every morning I read a few hundred links so you don't have to. This is what cleared the bar today.</p>
         ${latest.themes.length ? `<div class="meta" style="margin-bottom:0.5rem;">${latest.themes.map((t) => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
-        ${latestSummary ? `<p class="lead-summary">${renderText(latestSummary)}</p>` : ""}
+        ${latest && latest.published[0]?.takeaway ? `<p class="lead-summary">${renderText(latest.published[0].takeaway)}</p>` : latest && latest.themes.length ? `<p class="lead-summary">${esc(latest.themes.join(" · "))}</p>` : ""}
         <div style="border-top:0.5px solid var(--border);">
           ${latestItemsHtml}
         </div>
