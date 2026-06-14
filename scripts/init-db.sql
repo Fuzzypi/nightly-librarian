@@ -102,5 +102,6 @@ INSERT INTO sources (id, source_type, url, enabled, priority, tier) VALUES
   ('reddit-localllama',  'reddit_json',    'https://www.reddit.com/r/LocalLLaMA/new.json',               true,  5, 2),
   ('reddit-saas',        'reddit_json',    'https://www.reddit.com/r/SaaS/new.json',                     true,  4, 2),
   ('lobsters',           'rss',            'https://lobste.rs/t/ai.rss',                                 true,  4, 2),
-  ('claude-status',      'rss',            'https://status.anthropic.com/history.rss',                   true,  8, 1)
+  ('claude-status',      'rss',            'https://status.anthropic.com/history.rss',                   true,  8, 1),
+  ('github-trending-weekly', 'github_trending', 'weekly',                                                  true,  7, 2)
 ON CONFLICT (id) DO NOTHING;
