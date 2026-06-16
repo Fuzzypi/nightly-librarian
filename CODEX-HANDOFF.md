@@ -103,15 +103,16 @@ npm run digest:import -- \
 
 npm run social:generate -- --date YYYY-MM-DD
 
-npm run build:site
-
-git add dist/briefs/YYYY-MM-DD.md
-git add reports/YYYY-MM-DD.md
-git commit -m "brief: YYYY-MM-DD"
-git push
+# Build, preflight, stage ONLY the brief + report, commit, and push in one step.
+# No manual git surgery; robust to unrelated dirty state (e.g. regenerated site/).
+npm run publish -- --date YYYY-MM-DD --push
 ```
 
-Commit `dist/briefs/YYYY-MM-DD.md` and `reports/YYYY-MM-DD.md`. Everything in `artifacts/`, `dist/social/`, `site/`, and completion JSON stays local.
+`npm run publish` runs `build:site`, then `publish:check`, then stages *only*
+`dist/briefs/YYYY-MM-DD.md` + `reports/YYYY-MM-DD.md` (scoped pathspec — never
+`git add -A`), runs a staged whitespace check, and commits `brief: YYYY-MM-DD`.
+Add `--push` to deploy, `--dry-run` to preview. Everything in `artifacts/`,
+`dist/social/`, `site/`, and completion JSON stays local.
 
 ---
 
@@ -157,12 +158,9 @@ npm run digest:import -- --date "$DATE" \
   --out "artifacts/digests/${DATE}.json"
 
 npm run social:generate -- --date "$DATE"
-npm run build:site
 
-git add "dist/briefs/${DATE}.md"
-git add "reports/${DATE}.md"
-git commit -m "brief: ${DATE}"
-git push
+# Build + preflight + scoped commit + push in one step:
+npm run publish -- --date "$DATE" --push
 ```
 
 ---
@@ -173,13 +171,18 @@ git push
 |------|-----------|
 | `dist/briefs/YYYY-MM-DD.md` | ✅ Yes — required for Cloudflare build |
 | `reports/YYYY-MM-DD.md` | ✅ Yes — tracked report log source for the site |
+| `reports/engagement-YYYY-Www.md` | ✅ Yes — weekly scorecard (ignored by the site build) |
+| `site/` (generated HTML) | ❌ No — gitignored; Cloudflare rebuilds it on every deploy |
 | `dist/social/` | ❌ No |
 | `artifacts/synthesized/` | ❌ No |
 | `artifacts/digests/` | ❌ No |
 | `completion-*.json` | ❌ No |
 | `scripts/synthesize-runs.js` | ✅ Already committed |
 
-Only the brief markdown goes to the repo. Everything else is ephemeral.
+Only the brief + report markdown (and weekly scorecards) go to the repo. The
+`site/` HTML is build output — gitignored and rebuilt by Cloudflare — so it must
+never be committed. `npm run publish` stages only the brief/report, so a dirty
+`site/` can never block or pollute a publish.
 
 ---
 
@@ -197,13 +200,32 @@ The build reads `dist/briefs/*.md`, `reports/*.md`, and tracked legacy archive b
 
 ## Verification Before Push
 
+`npm run publish` already runs `build:site` + `publish:check` + a staged
+whitespace check before committing, so the daily path is self-verifying. To
+inspect manually first:
+
 ```bash
-npm run verify          # runs scripts/verify.sh
-git diff --check        # no trailing whitespace
-head -5 dist/briefs/YYYY-MM-DD.md  # sanity check the brief
+npm run publish -- --date YYYY-MM-DD --dry-run   # build + check, show what would commit
+npm run verify                                   # runs scripts/verify.sh
+head -5 dist/briefs/YYYY-MM-DD.md                # sanity check the brief
 ```
 
-If `build:site` fails with `dist/briefs/ not found`, the brief wasn't committed. Check `git status`.
+If `build:site` fails with `dist/briefs/ not found`, the brief wasn't generated. Check `git status`.
+
+---
+
+## Phase 5: Analytics & Weekly Scorecard
+
+- **Site analytics:** `build-site.js` injects a Cloudflare Web Analytics beacon
+  on every page when `CF_WEB_ANALYTICS_TOKEN` is set in the Cloudflare Pages
+  build environment (Settings → Environment variables). Unset = no beacon, so
+  local builds stay inert. Privacy-first, free, no cookie banner.
+- **Substack slug:** `SUBSTACK_SLUG` defaults to `thenightlylibrarian`; override
+  via env only if the publication slug changes.
+- **Weekly scorecard:** `npm run scorecard` stamps `reports/engagement-YYYY-Www.md`
+  with the metric layout (unique visitors, top briefs, referrers incl. social via
+  UTM, RSS pulls, Substack growth, GSC). Fill it weekly from the dashboards; it
+  feeds the Phase 6 decision gate. These files are ignored by the site build.
 
 ---
 
@@ -214,7 +236,10 @@ If `build:site` fails with `dist/briefs/ not found`, the brief wasn't committed.
 | `scripts/synthesize-runs.js` | Merge Cowork + Codex completions |
 | `scripts/digest-import.js` | Normalize to digest contract |
 | `scripts/social-generate.js` | Generate brief + social drafts |
-| `scripts/build-site.js` | Build static HTML site |
+| `scripts/build-site.js` | Build static HTML site (+ analytics beacon) |
+| `scripts/publish.js` | Reliable daily publish: build + preflight + scoped commit/push |
+| `scripts/publish-check.js` | Local publish preflight (no network) |
+| `scripts/engagement-scorecard.js` | Stamp the weekly engagement scorecard |
 | `src/triage.js` | claim / complete / export DB logic |
 | `src/index.js` | CLI entry point |
 | `AGENTS.md` | Hard stops and lane rules — read this |
