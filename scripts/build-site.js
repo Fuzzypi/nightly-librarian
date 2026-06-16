@@ -48,9 +48,17 @@ const SITE_URL = process.env.NIGHTLY_LIBRARIAN_PUBLIC_BASE_URL || process.env.SI
 const SITE_NAME = "The Nightly Librarian";
 const SITE_DESCRIPTION = "Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.";
 
-// Substack publication slug — replace YOUR_SLUG with your real slug, e.g. "nightlylibrarian"
-// Your subscribe page lives at https://YOUR_SLUG.substack.com/subscribe
-const SUBSTACK_SLUG = process.env.SUBSTACK_SLUG || "YOUR_SLUG";
+// Substack publication slug. Defaults to the live publication; override with the
+// SUBSTACK_SLUG env var (in .env or the Cloudflare Pages build environment).
+const SUBSTACK_SLUG = process.env.SUBSTACK_SLUG || "thenightlylibrarian";
+
+// Cloudflare Web Analytics beacon (privacy-first, free). Set CF_WEB_ANALYTICS_TOKEN
+// in the Cloudflare Pages build environment (or .env) to activate. When unset, no
+// beacon is emitted, so local/offline builds stay inert.
+const CF_WEB_ANALYTICS_TOKEN = process.env.CF_WEB_ANALYTICS_TOKEN || "";
+const ANALYTICS_BEACON = CF_WEB_ANALYTICS_TOKEN
+  ? `\n  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='${JSON.stringify({ token: CF_WEB_ANALYTICS_TOKEN })}'></script>`
+  : "";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -129,7 +137,7 @@ function seoMeta({ title, description, path: urlPath, type = "website", publishe
   <meta name="twitter:title" content="${safeTitle}">
   <meta name="twitter:description" content="${safeDesc}">
   <meta name="twitter:image" content="${safeOgImage}">
-  <script type="application/ld+json">${jsonLd}</script>`;
+  <script type="application/ld+json">${jsonLd}</script>${ANALYTICS_BEACON}`;
 }
 
 /**
@@ -1447,7 +1455,7 @@ ${seoMeta({ title: SITE_NAME, description: SITE_DESCRIPTION, path: "/" })}
       <div>
         ${latest ? `
         <div class="inline-subscribe">
-          <form class="subscribe-form" action="https://thenightlylibrarian.substack.com/subscribe" method="GET" target="_blank">
+          <form class="subscribe-form" action="https://${SUBSTACK_SLUG}.substack.com/subscribe" method="GET" target="_blank">
             <input class="subscribe-input" type="email" name="email" placeholder="your@email.com" required>
             <button class="subscribe-btn" type="submit">Get the brief free →</button>
           </form>
