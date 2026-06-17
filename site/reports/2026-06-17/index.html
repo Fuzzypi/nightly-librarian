@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>June 17, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="7 stories cleared the bar, led by (untitled), (untitled), and (untitled).">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-06-17/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="June 17, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="7 stories cleared the bar, led by (untitled), (untitled), and (untitled).">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-06-17/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="June 17, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="7 stories cleared the bar, led by (untitled), (untitled), and (untitled).">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>June 17, 2026 · Report log</span>
+      
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>June 17, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>7 stories cleared the bar, led by (untitled), (untitled), and (untitled).</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>7 worth-attention items</span><span>19 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+      
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">An Axios investigation (via Simon Willison) reports that Anthropic's Claude models were taken offline after a clash with the White House over the 'Fable 5' jailbreak and export control designation. Sources close to Anthropic say 'they screwed us.' For any developer running Claude-dependent workflows (including second-brain, multi-agent setups), this is a concrete reminder that API availability is not guaranteed during policy disputes. Consider having a multi-provider fallback.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">A security researcher documented a supply chain attack: a polished LinkedIn job offer directs the candidate to clone and run a GitHub repo that installs a persistent backdoor while appearing legitimate. The attack passes casual code review. Any solo developer who evaluates contractor code or does take-home tests should be aware of this vector and run unknown repos in sandboxes.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Simon Willison's datasette-agent MCP gains an `execute_write_sql` tool that requests user approval before writing to the database. This is a concrete, working implementation of the 'dangerous action requires human confirmation' pattern for agent workflows — directly applicable if you're building MCP tools that touch databases.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">TIL from Simon Willison: Cloudflare WAF Managed Challenge rules can trigger CAPTCHA on requests with literal ampersands in the URL, breaking faceted search engines. Workaround: URL-encode ampersands or scope WAF rules more tightly. Easy to miss and hard to debug without knowing the cause.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Pro and Enterprise Vercel Functions (Node.js and Python) can now run up to 30 minutes, more than doubling the previous ~13-minute cap. Relevant for AI pipeline functions, document processing, or anything that previously required a separate queue/worker setup to handle the time limit.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Iroh, a Rust-based P2P networking library, hit v1.0. Uses public keys instead of IP addresses for connections, with NAT traversal and relay fallback. API is now stable. Worth tracking for agent-to-agent networking or building tools that need direct device connections without centralized infrastructure.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Typst 0.15, the modern LaTeX alternative, released with significant new features. Worth checking if you do any technical document generation or templated PDF production.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+      
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/" target="_blank" rel="noopener">Anthropic's Claude models went offline due to government clash</a>
+        </div>
+        <div class="item-takeaway">API outage driven by Fable 5 jailbreak/export control conflict; plan for Claude API unavailability</div>
+        <div class="item-meta">
+          <span>simonwillison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://roman.pt/posts/linkedin-backdoor/" target="_blank" rel="noopener">A backdoor in a LinkedIn job offer</a>
+        </div>
+        <div class="item-takeaway">Supply chain attack via polished job offer repo; installs persistent backdoor on clone+run</div>
+        <div class="item-meta">
+          <span>hacker-news</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jun/15/datasette-agent/" target="_blank" rel="noopener">datasette-agent 0.3a0</a>
+        </div>
+        <div class="item-takeaway">execute_write_sql with user approval — human-in-the-loop pattern for agent DB writes</div>
+        <div class="item-meta">
+          <span>simonwillison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jun/16/captcha-on-at-least-one-ampersand/" target="_blank" rel="noopener">Cloudflare CAPTCHA on URLs with ampersands</a>
+        </div>
+        <div class="item-takeaway">WAF Managed Challenge triggers on &amp; in URLs; fix: URL-encode or scope rules</div>
+        <div class="item-meta">
+          <span>simonwillison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/vercel-functions-can-now-run-up-to-30-minutes" target="_blank" rel="noopener">Vercel Functions now up to 30 min execution</a>
+        </div>
+        <div class="item-takeaway">Pro/Enterprise Node.js/Python; 2x previous cap</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.iroh.computer/blog/v1" target="_blank" rel="noopener">Iroh 1.0</a>
+        </div>
+        <div class="item-takeaway">Stable v1.0 Rust P2P library; keys not IPs, NAT traversal</div>
+        <div class="item-meta">
+          <span>iroh</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://typst.app/blog/2026/typst-0.15/" target="_blank" rel="noopener">Typst 0.15</a>
+        </div>
+        <div class="item-takeaway">Major release of modern document typesetting tool</div>
+        <div class="item-meta">
+          <span>hacker-news</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.52" target="_blank" rel="noopener">v16.3.0-canary.52</a>
+        </div>
+        <div class="item-takeaway">Canary; rspack 2.0 + experimental Turbopack React compiler</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/workflow-sdk-now-supports-inflight-cancellation" target="_blank" rel="noopener">Workflow SDK inflight cancellation</a>
+        </div>
+        <div class="item-takeaway">Beta, Vercel-specific</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/workflow-sdk-now-supports-tanstack-start" target="_blank" rel="noopener">Workflow SDK TanStack Start</a>
+        </div>
+        <div class="item-takeaway">Too niche</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/ainews-satya-on-loopcraft-building" target="_blank" rel="noopener">AINews Satya on Loopcraft</a>
+        </div>
+        <div class="item-takeaway">Editorial newsletter, no actionable claim</div>
+        <div class="item-meta">
+          <span>latent.space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Jun/16/fable-5-export-controls/" target="_blank" rel="noopener">Fable 5 Export Controls Harm US Cyber Defense</a>
+        </div>
+        <div class="item-takeaway">Policy commentary; covered by the main outage story</div>
+        <div class="item-meta">
+          <span>simonwillison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Jun/16/matteo-wong-the-atlantic/" target="_blank" rel="noopener">Quoting Matteo Wong / Atlantic on Fable</a>
+        </div>
+        <div class="item-takeaway">Duplicate angle on outage story</div>
+        <div class="item-meta">
+          <span>simonwillison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://devblogs.microsoft.com/oldnewthing/20260615-00/?p=112419" target="_blank" rel="noopener">x86 emulator team</a>
+        </div>
+        <div class="item-takeaway">Historical tech story; not actionable</div>
+        <div class="item-meta">
+          <span>simonwillison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://twitter.com/ID_AA_Carmack/status/2064095424420487226" target="_blank" rel="noopener">John Carmack on Fabrice Bellard</a>
+        </div>
+        <div class="item-takeaway">Social media link, no content</div>
+        <div class="item-meta">
+          <span>simonwillison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.richardosgood.com/posts/banned-book-library/" target="_blank" rel="noopener">Banned Book Library in a WiFi Light Bulb</a>
+        </div>
+        <div class="item-takeaway">Creative hack; not actionable</div>
+        <div class="item-meta">
+          <span>hacker-news</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://garden-of-flowers.heikkilotvonen.com/" target="_blank" rel="noopener">Garden of Flowers typography archive</a>
+        </div>
+        <div class="item-takeaway">Historical archive; not actionable</div>
+        <div class="item-meta">
+          <span>hacker-news</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.sacredheartsc.com/blog/freebsd-15-on-a-laptop/" target="_blank" rel="noopener">FreeBSD 15 on a Laptop</a>
+        </div>
+        <div class="item-takeaway">OS report; not relevant to stack</div>
+        <div class="item-meta">
+          <span>hacker-news</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.iroh.computer/blog/v1" target="_blank" rel="noopener">Iroh 1.0 HN discussion</a>
+        </div>
+        <div class="item-takeaway">Duplicate of Iroh 1.0 blog post</div>
+        <div class="item-meta">
+          <span>hacker-news</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Morning memo — 2026-06-17
+
+**Source failures (if any):** None observed.
+
+## Worth attention
+
+- **Anthropic's Claude models went offline due to US government policy clash** — https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/#atom-everything
+  An Axios investigation (via Simon Willison) reports that Anthropic's Claude models were taken offline after a clash with the White House over the 'Fable 5' jailbreak and export control designation. Sources close to Anthropic say 'they screwed us.' For any developer running Claude-dependent workflows (including second-brain, multi-agent setups), this is a concrete reminder that API availability is not guaranteed during policy disputes. Consider having a multi-provider fallback.
+
+- **A backdoor in a LinkedIn job offer** — https://roman.pt/posts/linkedin-backdoor/
+  A security researcher documented a supply chain attack: a polished LinkedIn job offer directs the candidate to clone and run a GitHub repo that installs a persistent backdoor while appearing legitimate. The attack passes casual code review. Any solo developer who evaluates contractor code or does take-home tests should be aware of this vector and run unknown repos in sandboxes.
+
+- **datasette-agent 0.3a0: execute_write_sql with user approval** — https://simonwillison.net/2026/Jun/15/datasette-agent/#atom-everything
+  Simon Willison's datasette-agent MCP gains an `execute_write_sql` tool that requests user approval before writing to the database. This is a concrete, working implementation of the 'dangerous action requires human confirmation' pattern for agent workflows — directly applicable if you're building MCP tools that touch databases.
+
+- **Cloudflare CAPTCHA triggered by URLs containing ampersands** — https://simonwillison.net/2026/Jun/16/captcha-on-at-least-one-ampersand/#atom-everything
+  TIL from Simon Willison: Cloudflare WAF Managed Challenge rules can trigger CAPTCHA on requests with literal ampersands in the URL, breaking faceted search engines. Workaround: URL-encode ampersands or scope WAF rules more tightly. Easy to miss and hard to debug without knowing the cause.
+
+- **Vercel Functions now support up to 30-minute execution** — https://vercel.com/changelog/vercel-functions-can-now-run-up-to-30-minutes
+  Pro and Enterprise Vercel Functions (Node.js and Python) can now run up to 30 minutes, more than doubling the previous ~13-minute cap. Relevant for AI pipeline functions, document processing, or anything that previously required a separate queue/worker setup to handle the time limit.
+
+- **Iroh 1.0: Dial Keys, not IPs** — https://www.iroh.computer/blog/v1
+  Iroh, a Rust-based P2P networking library, hit v1.0. Uses public keys instead of IP addresses for connections, with NAT traversal and relay fallback. API is now stable. Worth tracking for agent-to-agent networking or building tools that need direct device connections without centralized infrastructure.
+
+- **Typst 0.15 released** — https://typst.app/blog/2026/typst-0.15/
+  Typst 0.15, the modern LaTeX alternative, released with significant new features. Worth checking if you do any technical document generation or templated PDF production.
+
+## Full digest
+- [P] [simonwillison] Anthropic's Claude models went offline due to government clash — https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/ — API outage driven by Fable 5 jailbreak/export control conflict; plan for Claude API unavailability
+- [P] [hacker-news] A backdoor in a LinkedIn job offer — https://roman.pt/posts/linkedin-backdoor/ — Supply chain attack via polished job offer repo; installs persistent backdoor on clone+run
+- [P] [simonwillison] datasette-agent 0.3a0 — https://simonwillison.net/2026/Jun/15/datasette-agent/ — execute_write_sql with user approval — human-in-the-loop pattern for agent DB writes
+- [P] [simonwillison] Cloudflare CAPTCHA on URLs with ampersands — https://simonwillison.net/2026/Jun/16/captcha-on-at-least-one-ampersand/ — WAF Managed Challenge triggers on &amp; in URLs; fix: URL-encode or scope rules
+- [P] [vercel-changelog] Vercel Functions now up to 30 min execution — https://vercel.com/changelog/vercel-functions-can-now-run-up-to-30-minutes — Pro/Enterprise Node.js/Python; 2x previous cap
+- [M] [iroh] Iroh 1.0 — https://www.iroh.computer/blog/v1 — Stable v1.0 Rust P2P library; keys not IPs, NAT traversal
+- [P] [hacker-news] Typst 0.15 — https://typst.app/blog/2026/typst-0.15/ — Major release of modern document typesetting tool
+- [R] [gh-nextjs] v16.3.0-canary.52 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.52 — Canary; rspack 2.0 + experimental Turbopack React compiler
+- [R] [vercel-changelog] Workflow SDK inflight cancellation — https://vercel.com/changelog/workflow-sdk-now-supports-inflight-cancellation — Beta, Vercel-specific
+- [R] [vercel-changelog] Workflow SDK TanStack Start — https://vercel.com/changelog/workflow-sdk-now-supports-tanstack-start — Too niche
+- [R] [latent.space] AINews Satya on Loopcraft — https://www.latent.space/p/ainews-satya-on-loopcraft-building — Editorial newsletter, no actionable claim
+- [R] [simonwillison] Fable 5 Export Controls Harm US Cyber Defense — https://simonwillison.net/2026/Jun/16/fable-5-export-controls/ — Policy commentary; covered by the main outage story
+- [R] [simonwillison] Quoting Matteo Wong / Atlantic on Fable — https://simonwillison.net/2026/Jun/16/matteo-wong-the-atlantic/ — Duplicate angle on outage story
+- [R] [simonwillison] x86 emulator team — https://devblogs.microsoft.com/oldnewthing/20260615-00/?p=112419 — Historical tech story; not actionable
+- [R] [simonwillison] John Carmack on Fabrice Bellard — https://twitter.com/ID_AA_Carmack/status/2064095424420487226 — Social media link, no content
+- [R] [hacker-news] Banned Book Library in a WiFi Light Bulb — https://www.richardosgood.com/posts/banned-book-library/ — Creative hack; not actionable
+- [R] [hacker-news] Garden of Flowers typography archive — https://garden-of-flowers.heikkilotvonen.com/ — Historical archive; not actionable
+- [R] [hacker-news] FreeBSD 15 on a Laptop — https://www.sacredheartsc.com/blog/freebsd-15-on-a-laptop/ — OS report; not relevant to stack
+- [R] [hacker-news] Iroh 1.0 HN discussion — https://www.iroh.computer/blog/v1 — Duplicate of Iroh 1.0 blog post</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+  
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
