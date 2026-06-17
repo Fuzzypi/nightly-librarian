@@ -46,6 +46,7 @@ const DRY_RUN = process.argv.includes("--dry-run");
 // ─── Site config ──────────────────────────────────────────────────────────────
 const SITE_URL = process.env.NIGHTLY_LIBRARIAN_PUBLIC_BASE_URL || process.env.SITE_URL || "https://thenightlylibrarian.com";
 const SITE_NAME = "The Nightly Librarian";
+const CF_WEB_ANALYTICS_TOKEN = process.env.CF_WEB_ANALYTICS_TOKEN || "";
 const SITE_DESCRIPTION = "Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.";
 
 // Substack publication slug — replace YOUR_SLUG with your real slug, e.g. "nightlylibrarian"
@@ -935,6 +936,11 @@ const CSS_LINK = '<link rel="stylesheet" href="/style.css">';
 // Runs before CSS paints — sets data-theme from localStorage to prevent FOUC
 const THEME_INIT = `<script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>`;
 
+// Cloudflare Web Analytics beacon — no-op when token is absent (local dev)
+const CF_BEACON = CF_WEB_ANALYTICS_TOKEN
+  ? `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"${CF_WEB_ANALYTICS_TOKEN}"}'></script>`
+  : "";
+
 // Toggle function + icon sync — injected before </body> on every page
 const THEME_JS = `<script>
 function _nlThemeToggle(){
@@ -1087,6 +1093,7 @@ ${seoMeta({ title: dateLabel, description: summaryText || brief.themes.join(", "
     <span class="footer-brand">The Nightly Librarian</span>
     <span class="footer-sub">Built for builders, not boardrooms.</span>
   </footer>
+  ${CF_BEACON}
   ${THEME_JS}
 </body>
 </html>
@@ -1166,6 +1173,7 @@ ${seoMeta({ title: `${formatDate(report.date)} report log`, description: report.
     <span class="footer-brand">The Nightly Librarian</span>
     <span class="footer-sub">Built for builders, not boardrooms.</span>
   </footer>
+  ${CF_BEACON}
   ${THEME_JS}
 </body>
 </html>
@@ -1235,6 +1243,7 @@ ${seoMeta({ title: `${formatDate(report.date)} legacy archive`, description: rep
     <span class="footer-brand">The Nightly Librarian</span>
     <span class="footer-sub">Built for builders, not boardrooms.</span>
   </footer>
+  ${CF_BEACON}
   ${THEME_JS}
 </body>
 </html>
@@ -1298,6 +1307,7 @@ ${seoMeta({ title: "Reports", description: "Pipeline report log and legacy archi
     <span class="footer-brand">The Nightly Librarian</span>
     <span class="footer-sub">Built for builders, not boardrooms.</span>
   </footer>
+  ${CF_BEACON}
   ${THEME_JS}
 </body>
 </html>
@@ -1355,6 +1365,7 @@ ${seoMeta({ title: dateLabel, description: leadTakeaway || SITE_DESCRIPTION, pat
   <footer>
     The Nightly Librarian — built for builders, not boardrooms.
   </footer>
+  ${CF_BEACON}
   ${THEME_JS}
 </body>
 </html>
@@ -1491,6 +1502,7 @@ ${seoMeta({ title: SITE_NAME, description: SITE_DESCRIPTION, path: "/" })}
     <span class="footer-brand">The Nightly Librarian</span>
     <span class="footer-sub">Built for builders, not boardrooms.</span>
   </footer>
+  ${CF_BEACON}
   ${THEME_JS}
 </body>
 </html>
