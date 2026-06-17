@@ -464,10 +464,12 @@ function briefPathTemplate() {
   return optionalString(process.env.NIGHTLY_LIBRARIAN_BRIEF_PATH_TEMPLATE) || DEFAULT_BRIEF_PATH_TEMPLATE;
 }
 
-function landingUrlForDate(date) {
+function landingUrlForDate(date, utmSource = "") {
   const baseUrl = normalizeBaseUrl(process.env.NIGHTLY_LIBRARIAN_PUBLIC_BASE_URL);
   const template = briefPathTemplate();
-  return `${baseUrl}${template.replace("{date}", date)}`;
+  const url = `${baseUrl}${template.replace("{date}", date)}`;
+  if (!utmSource) return url;
+  return `${url}?utm_source=${utmSource}&utm_medium=social&utm_campaign=daily-brief`;
 }
 
 function hasLabel(item, label) {
@@ -558,12 +560,12 @@ function buildXMarkdown(digest, landingUrl) {
   return `${post1}\n\n---\n\n${minimal}\n`;
 }
 
-function buildLinkedInMarkdown(digest) {
+function buildLinkedInMarkdown(digest, landingUrl) {
   const ordered = orderedItems(digest.items);
   const lead = ordered.find((item) => item.importance === "lead");
   const promoted = ordered.filter((item) => verdictForItem(item) === "publish" && item.id !== lead.id);
   const allResearched = ordered.length;
-  const landingUrl = landingUrlForDate(digest.date);
+  if (!landingUrl) landingUrl = landingUrlForDate(digest.date, "linkedin");
 
   const lines = [
     `# LinkedIn Draft - ${digest.date}`,
@@ -739,6 +741,8 @@ function buildGeneration({ date, inputPath, baseDir = process.cwd() }) {
   const { raw, parsed, sha256 } = readJson(resolvedInput);
   const digest = validateDigest(parsed, date);
   const landingUrl = landingUrlForDate(date);
+  const xLandingUrl = landingUrlForDate(date, "x");
+  const linkedinLandingUrl = landingUrlForDate(date, "linkedin");
   const inputArtifact = relativePath(baseDir, resolvedInput);
   const outputPaths = {
     brief: normalizeSlash(path.join("dist", "briefs", `${date}.md`)),
@@ -753,8 +757,8 @@ function buildGeneration({ date, inputPath, baseDir = process.cwd() }) {
   };
 
   const brief = buildBriefMarkdown(digest, metadata, landingUrl);
-  const x = buildXMarkdown(digest, landingUrl);
-  const linkedin = buildLinkedInMarkdown(digest);
+  const x = buildXMarkdown(digest, xLandingUrl);
+  const linkedin = buildLinkedInMarkdown(digest, linkedinLandingUrl);
   const xPosts = splitXPosts(x);
   const manifest = buildManifest(digest, metadata, outputPaths, { xPosts, linkedin });
 

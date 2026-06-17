@@ -52,6 +52,11 @@ const SITE_DESCRIPTION = "Daily AI and dev intelligence for builders and operato
 // Your subscribe page lives at https://YOUR_SLUG.substack.com/subscribe
 const SUBSTACK_SLUG = process.env.SUBSTACK_SLUG || "YOUR_SLUG";
 
+const CF_ANALYTICS_TOKEN = process.env.CF_WEB_ANALYTICS_TOKEN || "";
+const CF_ANALYTICS_SNIPPET = CF_ANALYTICS_TOKEN
+  ? `<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "${CF_ANALYTICS_TOKEN}"}'></script>`
+  : "";
+
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
 function esc(str) {
@@ -200,8 +205,9 @@ function write(filePath, content) {
     console.log(`[dry-run] would write ${filePath} (${content.length} bytes)`);
     return;
   }
+  const cleaned = content.replace(/[^\S\n]+$/gm, "");
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
-  fs.writeFileSync(filePath, content, "utf8");
+  fs.writeFileSync(filePath, cleaned, "utf8");
   console.log(`wrote ${path.relative(REPO_ROOT, filePath)}`);
 }
 
@@ -1087,6 +1093,7 @@ ${seoMeta({ title: dateLabel, description: summaryText || brief.themes.join(", "
     <span class="footer-sub">Built for builders, not boardrooms.</span>
   </footer>
   ${THEME_JS}
+  ${CF_ANALYTICS_SNIPPET}
 </body>
 </html>
 `;
@@ -1166,6 +1173,7 @@ ${seoMeta({ title: `${formatDate(report.date)} report log`, description: report.
     <span class="footer-sub">Built for builders, not boardrooms.</span>
   </footer>
   ${THEME_JS}
+  ${CF_ANALYTICS_SNIPPET}
 </body>
 </html>
 `;
@@ -1235,6 +1243,7 @@ ${seoMeta({ title: `${formatDate(report.date)} legacy archive`, description: rep
     <span class="footer-sub">Built for builders, not boardrooms.</span>
   </footer>
   ${THEME_JS}
+  ${CF_ANALYTICS_SNIPPET}
 </body>
 </html>
 `;
@@ -1298,6 +1307,7 @@ ${seoMeta({ title: "Reports", description: "Pipeline report log and legacy archi
     <span class="footer-sub">Built for builders, not boardrooms.</span>
   </footer>
   ${THEME_JS}
+  ${CF_ANALYTICS_SNIPPET}
 </body>
 </html>
 `;
@@ -1355,6 +1365,7 @@ ${seoMeta({ title: dateLabel, description: leadTakeaway || SITE_DESCRIPTION, pat
     The Nightly Librarian — built for builders, not boardrooms.
   </footer>
   ${THEME_JS}
+  ${CF_ANALYTICS_SNIPPET}
 </body>
 </html>
 `;
@@ -1491,6 +1502,7 @@ ${seoMeta({ title: SITE_NAME, description: SITE_DESCRIPTION, path: "/" })}
     <span class="footer-sub">Built for builders, not boardrooms.</span>
   </footer>
   ${THEME_JS}
+  ${CF_ANALYTICS_SNIPPET}
 </body>
 </html>
 `;
