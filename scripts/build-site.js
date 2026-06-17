@@ -115,6 +115,7 @@ function seoMeta({ title, description, path: urlPath, type = "website", publishe
       ]);
 
   return `  <meta name="description" content="${safeDesc}">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="${safeUrl}">
   <link rel="alternate" type="application/rss+xml" title="${esc(SITE_NAME)}" href="${esc(SITE_URL)}/feed.xml">
   <meta property="og:type" content="${esc(type === "article" ? "article" : "website")}">
