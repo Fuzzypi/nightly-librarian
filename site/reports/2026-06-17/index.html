@@ -5,21 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>June 17, 2026 report log — The Nightly Librarian</title>
-  <meta name="description" content="7 stories cleared the bar, led by (untitled), (untitled), and (untitled).">
+  <meta name="description" content="7 stories cleared the bar, led by n8n@2.27.0, Vercel Sandbox can now run for up to 24 hours, and Cloudflare DMARC Management is now generally available.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-06-17/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="June 17, 2026 report log | The Nightly Librarian">
-  <meta property="og:description" content="7 stories cleared the bar, led by (untitled), (untitled), and (untitled).">
+  <meta property="og:description" content="7 stories cleared the bar, led by n8n@2.27.0, Vercel Sandbox can now run for up to 24 hours, and Cloudflare DMARC Management is now generally available.">
   <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-06-17/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="June 17, 2026 report log | The Nightly Librarian">
-  <meta name="twitter:description" content="7 stories cleared the bar, led by (untitled), (untitled), and (untitled).">
+  <meta name="twitter:description" content="7 stories cleared the bar, led by n8n@2.27.0, Vercel Sandbox can now run for up to 24 hours, and Cloudflare DMARC Management is now generally available.">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
@@ -35,7 +35,7 @@
     </div>
     <div class="dateline">
       <span>June 17, 2026 · Report log</span>
-      
+      <span>Jun 17, 2026, 7:08 AM</span>
     </div>
   </header>
   <main>
@@ -43,47 +43,47 @@
     <h1>June 17, 2026</h1>
     <div class="summary-card">
       <div class="eyebrow">Report summary</div>
-      <p>7 stories cleared the bar, led by (untitled), (untitled), and (untitled).</p>
+      <p>7 stories cleared the bar, led by n8n@2.27.0, Vercel Sandbox can now run for up to 24 hours, and Cloudflare DMARC Management is now generally available.</p>
       <div class="meta" style="margin-top:0.4rem;">
-        <span>7 worth-attention items</span><span>19 digest lines</span>
+        <span>7 worth-attention items</span><span>40 digest lines</span>
       </div>
     </div>
     <h2>Worth attention</h2>
     <div class="item-stack">
       
       <div class="item">
-        <div class="item-title">(untitled)</div>
-        <div class="item-takeaway">An Axios investigation (via Simon Willison) reports that Anthropic's Claude models were taken offline after a clash with the White House over the 'Fable 5' jailbreak and export control designation. Sources close to Anthropic say 'they screwed us.' For any developer running Claude-dependent workflows (including second-brain, multi-agent setups), this is a concrete reminder that API availability is not guaranteed during policy disputes. Consider having a multi-provider fallback.</div>
+        <div class="item-title"><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.27.0" target="_blank" rel="noopener">n8n@2.27.0</a></div>
+        <div class="item-takeaway">n8n 2.27.0 ships a real operational footnote, a migration that adds an index to execution_entity and may run for several minutes on large installs, while also fixing queued-job startup races, API key scope enforcement, CVE-related dependencies, and several workflow execution edge cases. If you run n8n seriously, this is worth reading before upgrading rather than treating as a routine patch.</div>
       </div>
 
       <div class="item">
-        <div class="item-title">(untitled)</div>
-        <div class="item-takeaway">A security researcher documented a supply chain attack: a polished LinkedIn job offer directs the candidate to clone and run a GitHub repo that installs a persistent backdoor while appearing legitimate. The attack passes casual code review. Any solo developer who evaluates contractor code or does take-home tests should be aware of this vector and run unknown repos in sandboxes.</div>
+        <div class="item-title"><a href="https://vercel.com/changelog/vercel-sandbox-can-now-run-for-up-to-24-hours" target="_blank" rel="noopener">Vercel Sandbox can now run for up to 24 hours</a></div>
+        <div class="item-takeaway">Vercel Sandbox sessions can now run up to 24 hours instead of 5 hours on Pro and Enterprise plans. That materially changes the design tradeoff for long-lived agent runs, batch jobs, and browser/test workflows that previously needed external workers or restarts.</div>
       </div>
 
       <div class="item">
-        <div class="item-title">(untitled)</div>
-        <div class="item-takeaway">Simon Willison's datasette-agent MCP gains an `execute_write_sql` tool that requests user approval before writing to the database. This is a concrete, working implementation of the 'dangerous action requires human confirmation' pattern for agent workflows — directly applicable if you're building MCP tools that touch databases.</div>
+        <div class="item-title"><a href="https://blog.cloudflare.com/dmarc-management-ga/" target="_blank" rel="noopener">Cloudflare DMARC Management is now generally available</a></div>
+        <div class="item-takeaway">Cloudflare made DMARC Management generally available for all customers and added clearer record analysis, source investigation, and an SPF lookup audit to help domains get to enforced DMARC without breaking legitimate mail. This matters less as a feature launch and more as a reminder that email authentication is now an operational requirement, not optional hygiene.</div>
       </div>
 
       <div class="item">
-        <div class="item-title">(untitled)</div>
-        <div class="item-takeaway">TIL from Simon Willison: Cloudflare WAF Managed Challenge rules can trigger CAPTCHA on requests with literal ampersands in the URL, breaking faceted search engines. Workaround: URL-encode ampersands or scope WAF rules more tightly. Easy to miss and hard to debug without knowing the cause.</div>
+        <div class="item-title"><a href="https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/" target="_blank" rel="noopener">Running local models is good now</a></div>
+        <div class="item-takeaway">Vicki Boykis argues that local coding models crossed a practical threshold for solo use: on an M2 Mac with 64 GB RAM she is getting roughly 75% of frontier-model usefulness for agentic coding, tests, and refactors using Gemma 4 variants with LM Studio and a Docker-contained harness. This is still anecdotal, but it is a credible signal that local-first dev workflows are no longer purely experimental if you value privacy, cost control, or offline use.</div>
       </div>
 
       <div class="item">
-        <div class="item-title">(untitled)</div>
-        <div class="item-takeaway">Pro and Enterprise Vercel Functions (Node.js and Python) can now run up to 30 minutes, more than doubling the previous ~13-minute cap. Relevant for AI pipeline functions, document processing, or anything that previously required a separate queue/worker setup to handle the time limit.</div>
+        <div class="item-title"><a href="https://vercel.com/changelog/glm-5-2-now-available-on-ai-gateway" target="_blank" rel="noopener">GLM 5.2 now available on AI Gateway</a></div>
+        <div class="item-takeaway">Vercel added GLM 5.2 to AI Gateway with a claimed 1M-token context window and positioning around long-horizon engineering tasks. If you already use AI Gateway, this is a low-friction model to benchmark; if not, it is mostly another vendor-distribution announcement rather than a market-moving model event.</div>
       </div>
 
       <div class="item">
-        <div class="item-title">(untitled)</div>
-        <div class="item-takeaway">Iroh, a Rust-based P2P networking library, hit v1.0. Uses public keys instead of IP addresses for connections, with NAT traversal and relay fallback. API is now stable. Worth tracking for agent-to-agent networking or building tools that need direct device connections without centralized infrastructure.</div>
+        <div class="item-title"><a href="https://github.com/nvlabs/cutile-rs" target="_blank" rel="noopener">Show HN: cuTile Rust: Safe, data-race-free GPU kernels in Rust</a></div>
+        <div class="item-takeaway">cuTile Rust from NVLabs is an early-stage open-source system for writing memory-safe, data-race-free GPU kernels in Rust, with strong performance claims in its linked paper and explicit support for JIT-compiling Rust ASTs into CUDA kernels. It is too early and niche for a main memo item, but worth tracking if safe GPU programming in Rust becomes more than a research lane.</div>
       </div>
 
       <div class="item">
-        <div class="item-title">(untitled)</div>
-        <div class="item-takeaway">Typst 0.15, the modern LaTeX alternative, released with significant new features. Worth checking if you do any technical document generation or templated PDF production.</div>
+        <div class="item-title"><a href="https://www.tno.nl/en/digital/artificial-intelligence/gpt-nl/" target="_blank" rel="noopener">GPT‑NL: a sovereign language model for the Netherlands</a></div>
+        <div class="item-takeaway">TNO says GPT-NL is an independently trained Dutch language model focused on sovereignty, transparent data provenance, and public-value governance, backed by 13.5 million euros in public funding. The governance angle is notable, but this reads as a strategic nation-state project update rather than something that changes a solo developer decision this week.</div>
       </div>
     </div>
     <h2>Full digest</h2>
@@ -91,87 +91,285 @@
       
       <div class="item">
         <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/" target="_blank" rel="noopener">Anthropic's Claude models went offline due to government clash</a>
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.2.32-beta.265" target="_blank" rel="noopener">CLI Beta @composio/cli@0.2.32-beta.265</a>
         </div>
-        <div class="item-takeaway">API outage driven by Fable 5 jailbreak/export control conflict; plan for Claude API unavailability</div>
+        <div class="item-takeaway">Composio CLI beta release centered on docs and scoped API key permission updates.</div>
         <div class="item-meta">
-          <span>simonwillison</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://roman.pt/posts/linkedin-backdoor/" target="_blank" rel="noopener">A backdoor in a LinkedIn job offer</a>
-        </div>
-        <div class="item-takeaway">Supply chain attack via polished job offer repo; installs persistent backdoor on clone+run</div>
-        <div class="item-meta">
-          <span>hacker-news</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://simonwillison.net/2026/Jun/15/datasette-agent/" target="_blank" rel="noopener">datasette-agent 0.3a0</a>
-        </div>
-        <div class="item-takeaway">execute_write_sql with user approval — human-in-the-loop pattern for agent DB writes</div>
-        <div class="item-meta">
-          <span>simonwillison</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://simonwillison.net/2026/Jun/16/captcha-on-at-least-one-ampersand/" target="_blank" rel="noopener">Cloudflare CAPTCHA on URLs with ampersands</a>
-        </div>
-        <div class="item-takeaway">WAF Managed Challenge triggers on &amp; in URLs; fix: URL-encode or scope rules</div>
-        <div class="item-meta">
-          <span>simonwillison</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://vercel.com/changelog/vercel-functions-can-now-run-up-to-30-minutes" target="_blank" rel="noopener">Vercel Functions now up to 30 min execution</a>
-        </div>
-        <div class="item-takeaway">Pro/Enterprise Node.js/Python; 2x previous cap</div>
-        <div class="item-meta">
-          <span>vercel-changelog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://www.iroh.computer/blog/v1" target="_blank" rel="noopener">Iroh 1.0</a>
-        </div>
-        <div class="item-takeaway">Stable v1.0 Rust P2P library; keys not IPs, NAT traversal</div>
-        <div class="item-meta">
-          <span>iroh</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://typst.app/blog/2026/typst-0.15/" target="_blank" rel="noopener">Typst 0.15</a>
-        </div>
-        <div class="item-takeaway">Major release of modern document typesetting tool</div>
-        <div class="item-meta">
-          <span>hacker-news</span>
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.52" target="_blank" rel="noopener">v16.3.0-canary.52</a>
+          <a href="https://github.com/microsoft/semantic-kernel/releases/tag/python-1.43.1" target="_blank" rel="noopener">python-1.43.1</a>
         </div>
-        <div class="item-takeaway">Canary; rspack 2.0 + experimental Turbopack React compiler</div>
+        <div class="item-takeaway">Semantic Kernel Python 1.43.1 adds assistant-agent option support and fixes MessagePack, but reads as normal incremental release maintenance.</div>
+        <div class="item-meta">
+          <span>gh-semantic-kernel</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u7wyhu/asked_for_feedback_in_a_cold_email_got_even/" target="_blank" rel="noopener">Asked for feedback in a cold email got even colder response 🥶</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u82qwn/how_do_we_find_the_first_customers_when_we_are/" target="_blank" rel="noopener">How do we find the first customers when we are selling to other founders?</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u7i9ij/am_i_missing_something_or_are_we_all_just/" target="_blank" rel="noopener">Am I missing something, or are we all just building things for the sake of it?</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8020f/how_do_i_market_my_idea/" target="_blank" rel="noopener">How do I market my idea?</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u7zuhe/where_do_i_find_testers_if_i_cant_askpromote_any/" target="_blank" rel="noopener">Where do I find testers if I can't ask/promote any where?</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u7juy5/are_saas_directory_submissions_still_worth_doing/" target="_blank" rel="noopener">Are SaaS directory submissions still worth doing in 2026?</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u7ezo9/i_finally_got_my_first_paying_customer_today_here/" target="_blank" rel="noopener">I finally got my first paying customer today 😭. here is the story</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u818qn/how_do_you_bring_customers_to_your_product/" target="_blank" rel="noopener">How do you bring customers to your product?</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u7ghdf/our_little_team_just_shipped_its_first_saas_our/" target="_blank" rel="noopener">our little team just shipped its first SaaS! (our founder used to work with NASA and Microsoft, but he decided to start from scratch with fresh idea)</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u7tnco/whats_actually_getting_you_clients_right_now_paid/" target="_blank" rel="noopener">What's actually getting you clients right now paid or free?</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u83oyc/stop_giving_your_apps_for_free_my_clipboard_app/" target="_blank" rel="noopener">Stop giving your apps for free. My clipboard app just made me my first dollar.</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u83gg3/this_one_is_for_the_students/" target="_blank" rel="noopener">This one is for the students</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u83c7s/payout_delays_high_fees_or_gst_confusion_whats/" target="_blank" rel="noopener">Payout delays, high fees, or GST confusion? What’s your biggest payment nightmare as an Indian creator?</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u83c40/why_do_people_keep_mentioning_their_age_here_for/" target="_blank" rel="noopener">Why do people keep mentioning their age here for showing their product ?</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u83bam/how_do_you_create_a_waitlist_before_you_launch_or/" target="_blank" rel="noopener">How do you create a waitlist before you launch or even build something?</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u83adw/who_are_all_littlenever_used_llm_tools_because_of/" target="_blank" rel="noopener">Who are all little/never used LLM tools because of privacy concern?</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u835ut/i_updated_kuberagent_based_on_reddit_user_would/" target="_blank" rel="noopener">I updated KuberAgent based on Reddit User, would love your thoughts on the latest version</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u82za6/should_i_keep_researching/" target="_blank" rel="noopener">Should I keep researching ?</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u82xix/recently_left_my_job_looking_to_help_23/" target="_blank" rel="noopener">Recently left my job. Looking to help 2-3 businesses with their social media for free.</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u82wqi/building_for_b2b_saas_startups_with_revenue/" target="_blank" rel="noopener">Building for B2B SaaS Startups with Revenue</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u82p2k/i_cant_find_people_to_talk_with/" target="_blank" rel="noopener">I can't find people to talk with</a>
+        </div>
+        <div class="item-takeaway">Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://github.com/nvlabs/cutile-rs" target="_blank" rel="noopener">Show HN: cuTile Rust: Safe, data-race-free GPU kernels in Rust</a>
+        </div>
+        <div class="item-takeaway">cuTile Rust from NVLabs is an early-stage open-source system for writing memory-safe, data-race-free GPU kernels in Rust, with strong performance claims in its linked paper and explicit support for JIT-compiling Rust ASTs into CUDA kernels. It is too early and niche for a main memo item, but worth tracking if safe GPU programming in Rust becomes more than a research lane.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/ainews-glm-52-the-top-frontend-coding" target="_blank" rel="noopener">[AINews] GLM-5.2: the top Frontend Coding model in the world, IndexShare for Speculative Decoding</a>
+        </div>
+        <div class="item-takeaway">Latent Space roundup headline about GLM-5.2 and speculative decoding, but it is a secondary aggregator rather than a primary source for one concrete decision.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.53" target="_blank" rel="noopener">v16.3.0-canary.53</a>
+        </div>
+        <div class="item-takeaway">Next.js canary release with mainly maintenance and experimental changes, including a React canary bump and tooling cleanups.</div>
         <div class="item-meta">
           <span>gh-nextjs</span>
         </div>
@@ -179,10 +377,65 @@
 
       <div class="item">
         <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://vercel.com/changelog/workflow-sdk-now-supports-inflight-cancellation" target="_blank" rel="noopener">Workflow SDK inflight cancellation</a>
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.27.0" target="_blank" rel="noopener">n8n@2.27.0</a>
         </div>
-        <div class="item-takeaway">Beta, Vercel-specific</div>
+        <div class="item-takeaway">n8n 2.27.0 ships a real operational footnote, a migration that adds an index to execution_entity and may run for several minutes on large installs, while also fixing queued-job startup races, API key scope enforcement, CVE-related dependencies, and several workflow execution edge cases. If you run n8n seriously, this is worth reading before upgrading rather than treating as a routine patch.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">beta</a>
+        </div>
+        <div class="item-takeaway">Duplicate moving tag for the same n8n 2.27.0 pre-release notes.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/stable" target="_blank" rel="noopener">stable</a>
+        </div>
+        <div class="item-takeaway">n8n stable tag points to a minor patch release with one bug fix and no broader decision-changing update.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/dmarc-management-ga/" target="_blank" rel="noopener">Cloudflare DMARC Management is now generally available</a>
+        </div>
+        <div class="item-takeaway">Cloudflare made DMARC Management generally available for all customers and added clearer record analysis, source investigation, and an SPF lookup audit to help domains get to enforced DMARC without breaking legitimate mail. This matters less as a feature launch and more as a reminder that email authentication is now an operational requirement, not optional hygiene.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/vercel-sandbox-can-now-run-for-up-to-24-hours" target="_blank" rel="noopener">Vercel Sandbox can now run for up to 24 hours</a>
+        </div>
+        <div class="item-takeaway">Vercel Sandbox sessions can now run up to 24 hours instead of 5 hours on Pro and Enterprise plans. That materially changes the design tradeoff for long-lived agent runs, batch jobs, and browser/test workflows that previously needed external workers or restarts.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/glm-5-2-now-available-on-ai-gateway" target="_blank" rel="noopener">GLM 5.2 now available on AI Gateway</a>
+        </div>
+        <div class="item-takeaway">Vercel added GLM 5.2 to AI Gateway with a claimed 1M-token context window and positioning around long-horizon engineering tasks. If you already use AI Gateway, this is a low-friction model to benchmark; if not, it is mostly another vendor-distribution announcement rather than a market-moving model event.</div>
         <div class="item-meta">
           <span>vercel-changelog</span>
         </div>
@@ -191,162 +444,165 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://vercel.com/changelog/workflow-sdk-now-supports-tanstack-start" target="_blank" rel="noopener">Workflow SDK TanStack Start</a>
+          <a href="https://discuss.grapheneos.org/d/36469-grapheneos-has-been-ported-to-android-17-and-official-releases-are-coming-soon" target="_blank" rel="noopener">GrapheneOS has been ported to Android 17</a>
         </div>
-        <div class="item-takeaway">Too niche</div>
+        <div class="item-takeaway">GrapheneOS moving to Android 17 is notable for that ecosystem, but it does not change a likely software-build decision for this memo’s audience.</div>
         <div class="item-meta">
-          <span>vercel-changelog</span>
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/" target="_blank" rel="noopener">Running local models is good now</a>
+        </div>
+        <div class="item-takeaway">Vicki Boykis argues that local coding models crossed a practical threshold for solo use: on an M2 Mac with 64 GB RAM she is getting roughly 75% of frontier-model usefulness for agentic coding, tests, and refactors using Gemma 4 variants with LM Studio and a Docker-contained harness. This is still anecdotal, but it is a credible signal that local-first dev workflows are no longer purely experimental if you value privacy, cost control, or offline use.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.latent.space/p/ainews-satya-on-loopcraft-building" target="_blank" rel="noopener">AINews Satya on Loopcraft</a>
+          <a href="https://mll.sh/humiliating-iis-servers-for-fun-and-jail-time/" target="_blank" rel="noopener">Humiliating IIS servers for fun and jail time</a>
         </div>
-        <div class="item-takeaway">Editorial newsletter, no actionable claim</div>
+        <div class="item-takeaway">IIS exploitation write-up may be interesting to security specialists, but this memo is not a general security-news roundup.</div>
         <div class="item-meta">
-          <span>latent.space</span>
+          <span>hn-top</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://simonwillison.net/2026/Jun/16/fable-5-export-controls/" target="_blank" rel="noopener">Fable 5 Export Controls Harm US Cyber Defense</a>
+          <a href="https://writings.stephenwolfram.com/2026/06/launching-version-15-of-wolfram-language-mathematica-built-in-useful-ai-lots-of-new-core-functionality/" target="_blank" rel="noopener">Wolfram Language and Mathematica version 15</a>
         </div>
-        <div class="item-takeaway">Policy commentary; covered by the main outage story</div>
+        <div class="item-takeaway">Wolfram Language version 15 launch is substantial inside that ecosystem, but the memo audience is unlikely to act on it tomorrow morning.</div>
         <div class="item-meta">
-          <span>simonwillison</span>
+          <span>hn-top</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://simonwillison.net/2026/Jun/16/matteo-wong-the-atlantic/" target="_blank" rel="noopener">Quoting Matteo Wong / Atlantic on Fable</a>
+          <a href="https://mareksuppa.com/til/bash-dev-tcp-http-without-curl/" target="_blank" rel="noopener">TIL: You can make HTTP requests without curl using Bash /dev/TCP</a>
         </div>
-        <div class="item-takeaway">Duplicate angle on outage story</div>
+        <div class="item-takeaway">Neat Bash /dev/TCP trick for ad hoc HTTP requests, but too small and tactical for the memo.</div>
         <div class="item-meta">
-          <span>simonwillison</span>
+          <span>hn-top</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://devblogs.microsoft.com/oldnewthing/20260615-00/?p=112419" target="_blank" rel="noopener">x86 emulator team</a>
+          <a href="https://therepublicofletters.substack.com/p/calvin-and-hobbes-and-the-price-of" target="_blank" rel="noopener">Calvin and Hobbes and the price of integrity</a>
         </div>
-        <div class="item-takeaway">Historical tech story; not actionable</div>
+        <div class="item-takeaway">Essay on Calvin and Hobbes and artistic integrity, outside the remit of this tooling-focused memo.</div>
         <div class="item-meta">
-          <span>simonwillison</span>
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.tno.nl/en/digital/artificial-intelligence/gpt-nl/" target="_blank" rel="noopener">GPT‑NL: a sovereign language model for the Netherlands</a>
+        </div>
+        <div class="item-takeaway">TNO says GPT-NL is an independently trained Dutch language model focused on sovereignty, transparent data provenance, and public-value governance, backed by 13.5 million euros in public funding. The governance angle is notable, but this reads as a strategic nation-state project update rather than something that changes a solo developer decision this week.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://twitter.com/ID_AA_Carmack/status/2064095424420487226" target="_blank" rel="noopener">John Carmack on Fabrice Bellard</a>
+          <a href="https://tim.blog/2026/06/12/has-ai-already-killed-nonfiction/" target="_blank" rel="noopener">Has AI already killed self-help nonfiction books?</a>
         </div>
-        <div class="item-takeaway">Social media link, no content</div>
+        <div class="item-takeaway">Speculative self-help publishing discussion, outside the memo’s target lane.</div>
         <div class="item-meta">
-          <span>simonwillison</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.richardosgood.com/posts/banned-book-library/" target="_blank" rel="noopener">Banned Book Library in a WiFi Light Bulb</a>
-        </div>
-        <div class="item-takeaway">Creative hack; not actionable</div>
-        <div class="item-meta">
-          <span>hacker-news</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://garden-of-flowers.heikkilotvonen.com/" target="_blank" rel="noopener">Garden of Flowers typography archive</a>
-        </div>
-        <div class="item-takeaway">Historical archive; not actionable</div>
-        <div class="item-meta">
-          <span>hacker-news</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.sacredheartsc.com/blog/freebsd-15-on-a-laptop/" target="_blank" rel="noopener">FreeBSD 15 on a Laptop</a>
-        </div>
-        <div class="item-takeaway">OS report; not relevant to stack</div>
-        <div class="item-meta">
-          <span>hacker-news</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.iroh.computer/blog/v1" target="_blank" rel="noopener">Iroh 1.0 HN discussion</a>
-        </div>
-        <div class="item-takeaway">Duplicate of Iroh 1.0 blog post</div>
-        <div class="item-meta">
-          <span>hacker-news</span>
+          <span>hn-top</span>
         </div>
       </div>
     </div>
     <details>
       <summary>Original markdown</summary>
-      <pre class="raw-report"># Morning memo — 2026-06-17
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
 
-**Source failures (if any):** None observed.
+Run: 02a7a89c-aad5-4ae4-8ca2-f0fd06a63696
+Started: 2026-06-17T11:03:13.825Z
+Completed: 2026-06-17T11:08:28.323Z
 
 ## Worth attention
 
-- **Anthropic's Claude models went offline due to US government policy clash** — https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/#atom-everything
-  An Axios investigation (via Simon Willison) reports that Anthropic's Claude models were taken offline after a clash with the White House over the 'Fable 5' jailbreak and export control designation. Sources close to Anthropic say 'they screwed us.' For any developer running Claude-dependent workflows (including second-brain, multi-agent setups), this is a concrete reminder that API availability is not guaranteed during policy disputes. Consider having a multi-provider fallback.
-
-- **A backdoor in a LinkedIn job offer** — https://roman.pt/posts/linkedin-backdoor/
-  A security researcher documented a supply chain attack: a polished LinkedIn job offer directs the candidate to clone and run a GitHub repo that installs a persistent backdoor while appearing legitimate. The attack passes casual code review. Any solo developer who evaluates contractor code or does take-home tests should be aware of this vector and run unknown repos in sandboxes.
-
-- **datasette-agent 0.3a0: execute_write_sql with user approval** — https://simonwillison.net/2026/Jun/15/datasette-agent/#atom-everything
-  Simon Willison's datasette-agent MCP gains an `execute_write_sql` tool that requests user approval before writing to the database. This is a concrete, working implementation of the 'dangerous action requires human confirmation' pattern for agent workflows — directly applicable if you're building MCP tools that touch databases.
-
-- **Cloudflare CAPTCHA triggered by URLs containing ampersands** — https://simonwillison.net/2026/Jun/16/captcha-on-at-least-one-ampersand/#atom-everything
-  TIL from Simon Willison: Cloudflare WAF Managed Challenge rules can trigger CAPTCHA on requests with literal ampersands in the URL, breaking faceted search engines. Workaround: URL-encode ampersands or scope WAF rules more tightly. Easy to miss and hard to debug without knowing the cause.
-
-- **Vercel Functions now support up to 30-minute execution** — https://vercel.com/changelog/vercel-functions-can-now-run-up-to-30-minutes
-  Pro and Enterprise Vercel Functions (Node.js and Python) can now run up to 30 minutes, more than doubling the previous ~13-minute cap. Relevant for AI pipeline functions, document processing, or anything that previously required a separate queue/worker setup to handle the time limit.
-
-- **Iroh 1.0: Dial Keys, not IPs** — https://www.iroh.computer/blog/v1
-  Iroh, a Rust-based P2P networking library, hit v1.0. Uses public keys instead of IP addresses for connections, with NAT traversal and relay fallback. API is now stable. Worth tracking for agent-to-agent networking or building tools that need direct device connections without centralized infrastructure.
-
-- **Typst 0.15 released** — https://typst.app/blog/2026/typst-0.15/
-  Typst 0.15, the modern LaTeX alternative, released with significant new features. Worth checking if you do any technical document generation or templated PDF production.
+- **n8n@2.27.0**
+  https://github.com/n8n-io/n8n/releases/tag/n8n%402.27.0
+  n8n 2.27.0 ships a real operational footnote, a migration that adds an index to execution_entity and may run for several minutes on large installs, while also fixing queued-job startup races, API key scope enforcement, CVE-related dependencies, and several workflow execution edge cases. If you run n8n seriously, this is worth reading before upgrading rather than treating as a routine patch.
+- **Vercel Sandbox can now run for up to 24 hours**
+  https://vercel.com/changelog/vercel-sandbox-can-now-run-for-up-to-24-hours
+  Vercel Sandbox sessions can now run up to 24 hours instead of 5 hours on Pro and Enterprise plans. That materially changes the design tradeoff for long-lived agent runs, batch jobs, and browser/test workflows that previously needed external workers or restarts.
+- **Cloudflare DMARC Management is now generally available**
+  https://blog.cloudflare.com/dmarc-management-ga/
+  Cloudflare made DMARC Management generally available for all customers and added clearer record analysis, source investigation, and an SPF lookup audit to help domains get to enforced DMARC without breaking legitimate mail. This matters less as a feature launch and more as a reminder that email authentication is now an operational requirement, not optional hygiene.
+- **Running local models is good now**
+  https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/
+  Vicki Boykis argues that local coding models crossed a practical threshold for solo use: on an M2 Mac with 64 GB RAM she is getting roughly 75% of frontier-model usefulness for agentic coding, tests, and refactors using Gemma 4 variants with LM Studio and a Docker-contained harness. This is still anecdotal, but it is a credible signal that local-first dev workflows are no longer purely experimental if you value privacy, cost control, or offline use.
+- **GLM 5.2 now available on AI Gateway**
+  https://vercel.com/changelog/glm-5-2-now-available-on-ai-gateway
+  Vercel added GLM 5.2 to AI Gateway with a claimed 1M-token context window and positioning around long-horizon engineering tasks. If you already use AI Gateway, this is a low-friction model to benchmark; if not, it is mostly another vendor-distribution announcement rather than a market-moving model event.
+- **Show HN: cuTile Rust: Safe, data-race-free GPU kernels in Rust**
+  https://github.com/nvlabs/cutile-rs
+  cuTile Rust from NVLabs is an early-stage open-source system for writing memory-safe, data-race-free GPU kernels in Rust, with strong performance claims in its linked paper and explicit support for JIT-compiling Rust ASTs into CUDA kernels. It is too early and niche for a main memo item, but worth tracking if safe GPU programming in Rust becomes more than a research lane.
+- **GPT‑NL: a sovereign language model for the Netherlands**
+  https://www.tno.nl/en/digital/artificial-intelligence/gpt-nl/
+  TNO says GPT-NL is an independently trained Dutch language model focused on sovereignty, transparent data provenance, and public-value governance, backed by 13.5 million euros in public funding. The governance angle is notable, but this reads as a strategic nation-state project update rather than something that changes a solo developer decision this week.
 
 ## Full digest
-- [P] [simonwillison] Anthropic's Claude models went offline due to government clash — https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/ — API outage driven by Fable 5 jailbreak/export control conflict; plan for Claude API unavailability
-- [P] [hacker-news] A backdoor in a LinkedIn job offer — https://roman.pt/posts/linkedin-backdoor/ — Supply chain attack via polished job offer repo; installs persistent backdoor on clone+run
-- [P] [simonwillison] datasette-agent 0.3a0 — https://simonwillison.net/2026/Jun/15/datasette-agent/ — execute_write_sql with user approval — human-in-the-loop pattern for agent DB writes
-- [P] [simonwillison] Cloudflare CAPTCHA on URLs with ampersands — https://simonwillison.net/2026/Jun/16/captcha-on-at-least-one-ampersand/ — WAF Managed Challenge triggers on &amp; in URLs; fix: URL-encode or scope rules
-- [P] [vercel-changelog] Vercel Functions now up to 30 min execution — https://vercel.com/changelog/vercel-functions-can-now-run-up-to-30-minutes — Pro/Enterprise Node.js/Python; 2x previous cap
-- [M] [iroh] Iroh 1.0 — https://www.iroh.computer/blog/v1 — Stable v1.0 Rust P2P library; keys not IPs, NAT traversal
-- [P] [hacker-news] Typst 0.15 — https://typst.app/blog/2026/typst-0.15/ — Major release of modern document typesetting tool
-- [R] [gh-nextjs] v16.3.0-canary.52 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.52 — Canary; rspack 2.0 + experimental Turbopack React compiler
-- [R] [vercel-changelog] Workflow SDK inflight cancellation — https://vercel.com/changelog/workflow-sdk-now-supports-inflight-cancellation — Beta, Vercel-specific
-- [R] [vercel-changelog] Workflow SDK TanStack Start — https://vercel.com/changelog/workflow-sdk-now-supports-tanstack-start — Too niche
-- [R] [latent.space] AINews Satya on Loopcraft — https://www.latent.space/p/ainews-satya-on-loopcraft-building — Editorial newsletter, no actionable claim
-- [R] [simonwillison] Fable 5 Export Controls Harm US Cyber Defense — https://simonwillison.net/2026/Jun/16/fable-5-export-controls/ — Policy commentary; covered by the main outage story
-- [R] [simonwillison] Quoting Matteo Wong / Atlantic on Fable — https://simonwillison.net/2026/Jun/16/matteo-wong-the-atlantic/ — Duplicate angle on outage story
-- [R] [simonwillison] x86 emulator team — https://devblogs.microsoft.com/oldnewthing/20260615-00/?p=112419 — Historical tech story; not actionable
-- [R] [simonwillison] John Carmack on Fabrice Bellard — https://twitter.com/ID_AA_Carmack/status/2064095424420487226 — Social media link, no content
-- [R] [hacker-news] Banned Book Library in a WiFi Light Bulb — https://www.richardosgood.com/posts/banned-book-library/ — Creative hack; not actionable
-- [R] [hacker-news] Garden of Flowers typography archive — https://garden-of-flowers.heikkilotvonen.com/ — Historical archive; not actionable
-- [R] [hacker-news] FreeBSD 15 on a Laptop — https://www.sacredheartsc.com/blog/freebsd-15-on-a-laptop/ — OS report; not relevant to stack
-- [R] [hacker-news] Iroh 1.0 HN discussion — https://www.iroh.computer/blog/v1 — Duplicate of Iroh 1.0 blog post</pre>
+
+- [R] [gh-composio] CLI Beta @composio/cli@0.2.32-beta.265 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.2.32-beta.265 — Composio CLI beta release centered on docs and scoped API key permission updates.
+- [R] [gh-semantic-kernel] python-1.43.1 — https://github.com/microsoft/semantic-kernel/releases/tag/python-1.43.1 — Semantic Kernel Python 1.43.1 adds assistant-agent option support and fixes MessagePack, but reads as normal incremental release maintenance.
+- [R] [reddit-saas] Asked for feedback in a cold email got even colder response 🥶 — https://www.reddit.com/r/SaaS/comments/1u7wyhu/asked_for_feedback_in_a_cold_email_got_even/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] How do we find the first customers when we are selling to other founders? — https://www.reddit.com/r/SaaS/comments/1u82qwn/how_do_we_find_the_first_customers_when_we_are/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] Am I missing something, or are we all just building things for the sake of it? — https://www.reddit.com/r/SaaS/comments/1u7i9ij/am_i_missing_something_or_are_we_all_just/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] How do I market my idea? — https://www.reddit.com/r/SaaS/comments/1u8020f/how_do_i_market_my_idea/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] Where do I find testers if I can't ask/promote any where? — https://www.reddit.com/r/SaaS/comments/1u7zuhe/where_do_i_find_testers_if_i_cant_askpromote_any/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] Are SaaS directory submissions still worth doing in 2026? — https://www.reddit.com/r/SaaS/comments/1u7juy5/are_saas_directory_submissions_still_worth_doing/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] I finally got my first paying customer today 😭. here is the story — https://www.reddit.com/r/SaaS/comments/1u7ezo9/i_finally_got_my_first_paying_customer_today_here/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] How do you bring customers to your product? — https://www.reddit.com/r/SaaS/comments/1u818qn/how_do_you_bring_customers_to_your_product/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] our little team just shipped its first SaaS! (our founder used to work with NASA and Microsoft, but he decided to start from scratch with fresh idea) — https://www.reddit.com/r/SaaS/comments/1u7ghdf/our_little_team_just_shipped_its_first_saas_our/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] What's actually getting you clients right now paid or free? — https://www.reddit.com/r/SaaS/comments/1u7tnco/whats_actually_getting_you_clients_right_now_paid/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] Stop giving your apps for free. My clipboard app just made me my first dollar. — https://www.reddit.com/r/SaaS/comments/1u83oyc/stop_giving_your_apps_for_free_my_clipboard_app/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] This one is for the students — https://www.reddit.com/r/SaaS/comments/1u83gg3/this_one_is_for_the_students/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] Payout delays, high fees, or GST confusion? What’s your biggest payment nightmare as an Indian creator? — https://www.reddit.com/r/SaaS/comments/1u83c7s/payout_delays_high_fees_or_gst_confusion_whats/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] Why do people keep mentioning their age here for showing their product ? — https://www.reddit.com/r/SaaS/comments/1u83c40/why_do_people_keep_mentioning_their_age_here_for/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] How do you create a waitlist before you launch or even build something? — https://www.reddit.com/r/SaaS/comments/1u83bam/how_do_you_create_a_waitlist_before_you_launch_or/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] Who are all little/never used LLM tools because of privacy concern? — https://www.reddit.com/r/SaaS/comments/1u83adw/who_are_all_littlenever_used_llm_tools_because_of/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] I updated KuberAgent based on Reddit User, would love your thoughts on the latest version — https://www.reddit.com/r/SaaS/comments/1u835ut/i_updated_kuberagent_based_on_reddit_user_would/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] Should I keep researching ? — https://www.reddit.com/r/SaaS/comments/1u82za6/should_i_keep_researching/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] Recently left my job. Looking to help 2-3 businesses with their social media for free. — https://www.reddit.com/r/SaaS/comments/1u82xix/recently_left_my_job_looking_to_help_23/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] Building for B2B SaaS Startups with Revenue — https://www.reddit.com/r/SaaS/comments/1u82wqi/building_for_b2b_saas_startups_with_revenue/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [R] [reddit-saas] I can't find people to talk with — https://www.reddit.com/r/SaaS/comments/1u82p2k/i_cant_find_people_to_talk_with/ — Generic Reddit discussion or anecdote about early SaaS marketing, validation, or customer acquisition.
+- [M] [hn-show] Show HN: cuTile Rust: Safe, data-race-free GPU kernels in Rust — https://github.com/nvlabs/cutile-rs — cuTile Rust from NVLabs is an early-stage open-source system for writing memory-safe, data-race-free GPU kernels in Rust, with strong performance claims in its linked paper and explicit support for JIT-compiling Rust ASTs into CUDA kernels. It is too early and niche for a main memo item, but worth tracking if safe GPU programming in Rust becomes more than a research lane.
+- [R] [latent-space] [AINews] GLM-5.2: the top Frontend Coding model in the world, IndexShare for Speculative Decoding — https://www.latent.space/p/ainews-glm-52-the-top-frontend-coding — Latent Space roundup headline about GLM-5.2 and speculative decoding, but it is a secondary aggregator rather than a primary source for one concrete decision.
+- [R] [gh-nextjs] v16.3.0-canary.53 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.53 — Next.js canary release with mainly maintenance and experimental changes, including a React canary bump and tooling cleanups.
+- [P] [gh-n8n] n8n@2.27.0 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.27.0 — n8n 2.27.0 ships a real operational footnote, a migration that adds an index to execution_entity and may run for several minutes on large installs, while also fixing queued-job startup races, API key scope enforcement, CVE-related dependencies, and several workflow execution edge cases. If you run n8n seriously, this is worth reading before upgrading rather than treating as a routine patch.
+- [R] [gh-n8n] beta — https://github.com/n8n-io/n8n/releases/tag/beta — Duplicate moving tag for the same n8n 2.27.0 pre-release notes.
+- [R] [gh-n8n] stable — https://github.com/n8n-io/n8n/releases/tag/stable — n8n stable tag points to a minor patch release with one bug fix and no broader decision-changing update.
+- [P] [cloudflare-blog] Cloudflare DMARC Management is now generally available — https://blog.cloudflare.com/dmarc-management-ga/ — Cloudflare made DMARC Management generally available for all customers and added clearer record analysis, source investigation, and an SPF lookup audit to help domains get to enforced DMARC without breaking legitimate mail. This matters less as a feature launch and more as a reminder that email authentication is now an operational requirement, not optional hygiene.
+- [P] [vercel-changelog] Vercel Sandbox can now run for up to 24 hours — https://vercel.com/changelog/vercel-sandbox-can-now-run-for-up-to-24-hours — Vercel Sandbox sessions can now run up to 24 hours instead of 5 hours on Pro and Enterprise plans. That materially changes the design tradeoff for long-lived agent runs, batch jobs, and browser/test workflows that previously needed external workers or restarts.
+- [P] [vercel-changelog] GLM 5.2 now available on AI Gateway — https://vercel.com/changelog/glm-5-2-now-available-on-ai-gateway — Vercel added GLM 5.2 to AI Gateway with a claimed 1M-token context window and positioning around long-horizon engineering tasks. If you already use AI Gateway, this is a low-friction model to benchmark; if not, it is mostly another vendor-distribution announcement rather than a market-moving model event.
+- [R] [hn-top] GrapheneOS has been ported to Android 17 — https://discuss.grapheneos.org/d/36469-grapheneos-has-been-ported-to-android-17-and-official-releases-are-coming-soon — GrapheneOS moving to Android 17 is notable for that ecosystem, but it does not change a likely software-build decision for this memo’s audience.
+- [P] [hn-top] Running local models is good now — https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/ — Vicki Boykis argues that local coding models crossed a practical threshold for solo use: on an M2 Mac with 64 GB RAM she is getting roughly 75% of frontier-model usefulness for agentic coding, tests, and refactors using Gemma 4 variants with LM Studio and a Docker-contained harness. This is still anecdotal, but it is a credible signal that local-first dev workflows are no longer purely experimental if you value privacy, cost control, or offline use.
+- [R] [hn-top] Humiliating IIS servers for fun and jail time — https://mll.sh/humiliating-iis-servers-for-fun-and-jail-time/ — IIS exploitation write-up may be interesting to security specialists, but this memo is not a general security-news roundup.
+- [R] [hn-top] Wolfram Language and Mathematica version 15 — https://writings.stephenwolfram.com/2026/06/launching-version-15-of-wolfram-language-mathematica-built-in-useful-ai-lots-of-new-core-functionality/ — Wolfram Language version 15 launch is substantial inside that ecosystem, but the memo audience is unlikely to act on it tomorrow morning.
+- [R] [hn-top] TIL: You can make HTTP requests without curl using Bash /dev/TCP — https://mareksuppa.com/til/bash-dev-tcp-http-without-curl/ — Neat Bash /dev/TCP trick for ad hoc HTTP requests, but too small and tactical for the memo.
+- [R] [hn-top] Calvin and Hobbes and the price of integrity — https://therepublicofletters.substack.com/p/calvin-and-hobbes-and-the-price-of — Essay on Calvin and Hobbes and artistic integrity, outside the remit of this tooling-focused memo.
+- [M] [hn-top] GPT‑NL: a sovereign language model for the Netherlands — https://www.tno.nl/en/digital/artificial-intelligence/gpt-nl/ — TNO says GPT-NL is an independently trained Dutch language model focused on sovereignty, transparent data provenance, and public-value governance, backed by 13.5 million euros in public funding. The governance angle is notable, but this reads as a strategic nation-state project update rather than something that changes a solo developer decision this week.
+- [R] [hn-top] Has AI already killed self-help nonfiction books? — https://tim.blog/2026/06/12/has-ai-already-killed-nonfiction/ — Speculative self-help publishing discussion, outside the memo’s target lane.</pre>
     </details>
   </main>
   <footer>

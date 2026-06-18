@@ -1,16 +1,16 @@
 {
   "date": "2026-06-17",
-  "generated_at": "2026-06-17T06:20:52.651Z",
+  "generated_at": "2026-06-17T11:08:52.959Z",
   "imported_from": {
     "importer_version": "digest-import/v1",
     "source_artifact": "artifacts/synthesized/2026-06-17.json",
-    "source_sha256": "68ab3fe413607a8a92a8d7b1347e5273a36e6ff4119245832adc9413439466c0"
+    "source_sha256": "4efd90c3c79e433b2b8e0dc6c8516922d0dbffc1bf33863e38ac422f2973a59f"
   },
   "items": [
     {
-      "builder_takeaway": "Next.js canary release upgrading to rspack 2.0 and adding experimental React compiler support for Turbopack. Pre-release only; rspack bump is maintenance-level, Turbopack React compiler is experimental.",
+      "builder_takeaway": "Composio CLI beta release centered on docs and scoped API key permission updates.",
       "category": "Tools Worth Testing",
-      "id": "2720f425-a0d6-4b33-b37c-9adaec88f15a",
+      "id": "7112cc05-11a3-442b-8a51-9e3e8dc6ad4d",
       "importance": "archive-only",
       "labels": [
         "reproducible",
@@ -20,206 +20,35 @@
       "published_at": "2026-06-17T00:00:00.000Z",
       "source": "github.com",
       "source_facts": [
-        "Next.js v16.3.0-canary.52 upgrades next-rspack to rspack 2.0 and adds experimental React compiler support for Turbopack."
+        "Composio CLI beta adds docs and permission-scope changes."
       ],
-      "title": "Next.js v16.3.0-canary.52",
-      "uncertainty": "Canary builds are unstable; changes may not land in stable as described.",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.52"
+      "title": "CLI Beta @composio/cli@0.2.32-beta.265",
+      "uncertainty": "Beta release and mostly maintenance-level changes from the release notes.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.2.32-beta.265"
     },
     {
-      "builder_takeaway": "Vercel Workflow SDK 5 beta adds AbortController/AbortSignal support across workflow and step boundaries, allowing cancellation of in-flight operations that survive suspensions and deterministic replay. Beta, Vercel-specific.",
-      "category": "Model + API Changes",
-      "id": "e6da552a-99ae-4a03-93ef-d237574f037b",
+      "builder_takeaway": "Semantic Kernel Python 1.43.1 adds assistant-agent option support and fixes MessagePack, but reads as normal incremental release maintenance.",
+      "category": "Tools Worth Testing",
+      "id": "88647467-fe02-48c1-815d-163475131f03",
       "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "vercel.com",
-      "source_facts": [
-        "Vercel Workflow SDK 5 beta now supports AbortController/AbortSignal for cancelling in-flight workflow steps across suspension boundaries."
-      ],
-      "title": "Workflow SDK now supports inflight cancellation",
-      "uncertainty": "Beta product; API may change before stable release.",
-      "url": "https://vercel.com/changelog/workflow-sdk-now-supports-inflight-cancellation"
-    },
-    {
-      "builder_takeaway": "Vercel Workflow SDK now supports TanStack Start apps on Vercel using the existing Vite/Nitro plugin. Niche: requires both TanStack Start and the Vercel platform.",
-      "category": "Model + API Changes",
-      "id": "b560d90d-e326-4160-b0f2-a60642fbd76d",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "vercel.com",
-      "source_facts": [
-        "Vercel Workflow SDK now supports TanStack Start applications with durable, resumable workflow functions via the workflow/vite plugin."
-      ],
-      "title": "Workflow SDK now supports TanStack Start",
-      "uncertainty": "TanStack Start itself is still relatively new.",
-      "url": "https://vercel.com/changelog/workflow-sdk-now-supports-tanstack-start"
-    },
-    {
-      "builder_takeaway": "Changes the calculus for long-running tasks on Vercel — previously you'd need a queue/worker setup to stay under the old limit.",
-      "category": "Model + API Changes",
-      "id": "28208e51-cd24-48c3-a1b6-09273c944b1b",
-      "importance": "supporting",
-      "labels": [
-        "vendor_claim",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "vercel.com",
-      "source_facts": [
-        "Vercel Pro/Enterprise Functions can now run up to 30 minutes for Node.js and Python runtimes, up from the previous 800-second limit."
-      ],
-      "title": "Vercel Functions can now run up to 30 minutes",
-      "uncertainty": "Pro/Enterprise only; other runtimes not yet supported.",
-      "url": "https://vercel.com/changelog/vercel-functions-can-now-run-up-to-30-minutes"
-    },
-    {
-      "builder_takeaway": "A latent.space AI newsletter issue covering Satya Nadella's 'Loopcraft' essay about building frontier AI ecosystems. Editorial commentary on a quiet news day; no actionable claim.",
-      "category": "AI Operations / Agent Control",
-      "id": "0aa24cbc-1dd9-4a7c-9346-119f494c9f28",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "latent.space",
-      "source_facts": [
-        "AI News newsletter covers Satya Nadella's Loopcraft essay about building frontier AI ecosystems."
-      ],
-      "title": "[AINews] Satya on Loopcraft: Building Frontier Ecosystems",
-      "uncertainty": "Secondary source; unclear what the essay argues without reading it.",
-      "url": "https://www.latent.space/p/ainews-satya-on-loopcraft-building"
-    },
-    {
-      "builder_takeaway": "Simon Willison quotes Kate Moussouris (Luta Security) on the Fable 5 jailbreak situation: the White House classified Claude as a potential weapons-enabling tool, Anthropic is pushing back. Policy commentary with no independent actionable claim beyond the main model-offline story.",
-      "category": "AI Operations / Agent Control",
-      "id": "47fd22f1-b401-48d9-a0a6-c0b47bb417a6",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "Cybersecurity expert Kate Moussouris argues that applying export controls to AI models due to the Fable 5 jailbreak harms US cyber defense capabilities."
-      ],
-      "title": "The Fable 5 Export Controls Harm US Cyber Defense",
-      "uncertainty": "Policy situation is evolving; outcome unclear.",
-      "url": "https://simonwillison.net/2026/Jun/16/fable-5-export-controls/#atom-everything"
-    },
-    {
-      "builder_takeaway": "Simon Willison quotes The Atlantic's Matteo Wong on the Fable jailbreak: cybersecurity expert Moussouris confirmed the jailbreak was genuine but argues export controls are the wrong response. Duplicate angle on the main Anthropic outage story.",
-      "category": "AI Operations / Agent Control",
-      "id": "c8ea6348-c9b1-40bb-8b8e-face294aed8c",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "Katie Moussouris confirmed the Fable jailbreak of Claude was real but argues that applying export controls as a result harms US cyber defense."
-      ],
-      "title": "Anthropic/Claude and the Fable 5 export control situation — The Atlantic",
-      "uncertainty": "Attribution via anonymous sources; Anthropic not commenting publicly.",
-      "url": "https://simonwillison.net/2026/Jun/16/matteo-wong-the-atlantic/#atom-everything"
-    },
-    {
-      "builder_takeaway": "Practical gotcha that would be hard to debug without knowing the cause — saves hours of debugging time.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "f1bd9330-497d-4c54-baa0-73cfc0752da6",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "Cloudflare WAF Managed Challenge rules can trigger CAPTCHA on URLs containing literal ampersands, breaking faceted search engines and similar query-string-heavy pages."
-      ],
-      "title": "Cloudflare CAPTCHA triggered by URLs containing ampersands",
-      "uncertainty": "May depend on specific WAF rule configuration; not necessarily universal across all Cloudflare setups.",
-      "url": "https://simonwillison.net/2026/Jun/16/captcha-on-at-least-one-ampersand/#atom-everything"
-    },
-    {
-      "builder_takeaway": "Human approval pattern for agent DB writes is directly applicable to MCP server design for agentic workflows.",
-      "category": "AI Operations / Agent Control",
-      "id": "b6ff9dc4-1e4f-44a9-9bd8-ddc68b80f66a",
-      "importance": "supporting",
       "labels": [
         "reproducible",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "datasette-agent 0.3a0 adds execute_write_sql tool that requests user approval before writing to the database, implementing human-in-the-loop for agent DB writes."
-      ],
-      "title": "datasette-agent 0.3a0: execute_write_sql with user approval",
-      "uncertainty": "Alpha release; API may change.",
-      "url": "https://simonwillison.net/2026/Jun/15/datasette-agent/#atom-everything"
-    },
-    {
-      "builder_takeaway": "Direct impact on Claude API availability — affects any builder running Claude-dependent automation or agents.",
-      "category": "Model + API Changes",
-      "id": "27355ad8-6506-4c10-9a11-81b21a07dc26",
-      "importance": "lead",
-      "labels": [
-        "early_signal",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "Anthropic's Claude models were taken offline due to conflict with the US government over the Fable 5 jailbreak and export control classification."
-      ],
-      "title": "Anthropic's Claude models went offline due to US government policy clash over Fable jailbreak",
-      "uncertainty": "Based on anonymous sources cited in Axios; Anthropic has not made official statements. Exact timeline and restoration status unclear.",
-      "url": "https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/#atom-everything"
-    },
-    {
-      "builder_takeaway": "Raymond Chen (Old New Thing) recounts a story from Microsoft's x86-on-ARM emulation team finding application code so broken they implemented runtime patches in the emulator itself. Historical tech story with no actionable implications for current projects.",
-      "category": "Tools Worth Testing",
-      "id": "b088160b-1b50-4b1d-b733-2d742ead3428",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "devblogs.microsoft.com",
+      "source": "github.com",
       "source_facts": [
-        "Microsoft's Windows-on-ARM x86 emulation team implemented runtime patches for application code too broken to run without fixes during emulation."
+        "Semantic Kernel Python 1.43.1 shipped small feature and fix updates."
       ],
-      "title": "The time the x86 emulator team found code so bad they fixed it during emulation",
+      "title": "python-1.43.1",
       "uncertainty": "",
-      "url": "https://devblogs.microsoft.com/oldnewthing/20260615-00/?p=112419"
+      "url": "https://github.com/microsoft/semantic-kernel/releases/tag/python-1.43.1"
     },
     {
-      "builder_takeaway": "A link to a John Carmack tweet expressing admiration for Fabrice Bellard. No substantive content beyond a social media post.",
-      "category": "Tools Worth Testing",
-      "id": "a28e499c-102d-413e-ba5e-45a1efc5c89e",
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "7d9fecde-e27e-49fa-bd58-1dc9d28be046",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -227,56 +56,398 @@
       ],
       "product_relevance": [],
       "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "twitter.com",
+      "source": "reddit.com",
       "source_facts": [
-        "John Carmack posted on X expressing admiration for Fabrice Bellard."
+        "&#32; submitted by &#32; /u/Xhanther [link] &#32; [comments]"
       ],
-      "title": "John Carmack on Fabrice Bellard",
-      "uncertainty": "Tweet content not available without accessing X.",
-      "url": "https://twitter.com/ID_AA_Carmack/status/2064095424420487226"
+      "title": "Asked for feedback in a cold email got even colder response 🥶",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u7wyhu/asked_for_feedback_in_a_cold_email_got_even/"
     },
     {
-      "builder_takeaway": "Real documented attack vector targeting developers via LinkedIn — high risk for solo devs who review code for freelance or contract work.",
-      "category": "AI Operations / Agent Control",
-      "id": "58b872f7-bcf5-4b9c-8c8d-dcf3d308c8c3",
-      "importance": "supporting",
-      "labels": [
-        "reproducible",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "roman.pt",
-      "source_facts": [
-        "A security researcher documented a supply chain attack where a LinkedIn job offer directed developers to clone a GitHub repo that installed a persistent backdoor."
-      ],
-      "title": "A backdoor in a LinkedIn job offer",
-      "uncertainty": "Specifics of the backdoor mechanism depend on reading the full post.",
-      "url": "https://roman.pt/posts/linkedin-backdoor/"
-    },
-    {
-      "builder_takeaway": "A creative project embedding a library of banned books in a smart light bulb's WiFi captive portal. Clever hardware hack but no practical application for solo builder workflows.",
-      "category": "Tools Worth Testing",
-      "id": "298df3a5-4f94-47b0-83fe-22e40d195584",
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "610ea815-b9cf-4e7d-ae96-da2b26146055",
       "importance": "archive-only",
       "labels": [
-        "builder_reported",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "richardosgood.com",
+      "source": "reddit.com",
       "source_facts": [
-        "A developer embedded a banned book library accessible via captive WiFi portal in a smart light bulb."
+        "I&#39;ve been thinking about this a lot recently. Whenever someone launches a SaaS, people usually say: &quot;Talk to customers.&quot; &quot"
       ],
-      "title": "Banned Book Library in a Wi-Fi Smart Light Bulb",
-      "uncertainty": "",
-      "url": "https://www.richardosgood.com/posts/banned-book-library/"
+      "title": "How do we find the first customers when we are selling to other founders?",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u82qwn/how_do_we_find_the_first_customers_when_we_are/"
     },
     {
-      "builder_takeaway": "Stable 1.0 P2P library for direct device-to-device connections without centralized infrastructure.",
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "4924e6db-64aa-4b9a-8b1b-8b57c9caf55c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "With AI becoming so accessible, everyone seems to be building apps, SaaS products, agents, and other projects. I joined Reddit only a few mo"
+      ],
+      "title": "Am I missing something, or are we all just building things for the sake of it?",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u7i9ij/am_i_missing_something_or_are_we_all_just/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "856c585b-8141-4471-ad28-4f0f28ba5a34",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I was planning on building an app for IOS store that relates to my personal brand on Instagram but I want to know how to validate my idea as"
+      ],
+      "title": "How do I market my idea?",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u8020f/how_do_i_market_my_idea/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "2c6033b3-9617-49e3-962a-6ec29183d9be",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Made and launched an app, it&#39;s (hopefully) great for New Zealand based tradies. &#x200B; Problem is, plumbers and sparkies and painters"
+      ],
+      "title": "Where do I find testers if I can't ask/promote any where?",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u7zuhe/where_do_i_find_testers_if_i_cant_askpromote_any/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "5a213401-f075-4409-a711-37a85bfe466a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I&#39;ve been trying to figure out which marketing activities actually move the needle for a new SaaS. One thing I keep hearing is that foun"
+      ],
+      "title": "Are SaaS directory submissions still worth doing in 2026?",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u7juy5/are_saas_directory_submissions_still_worth_doing/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "18ad29e1-f20c-42e1-9c76-10ce50ebd4fe",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Hi folks, Its finally happening. I&#39;ve been building my Saas app for about 4 months, went live about a month ago. Its a faceless video ge"
+      ],
+      "title": "I finally got my first paying customer today 😭. here is the story",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u7ezo9/i_finally_got_my_first_paying_customer_today_here/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "3391ffa1-205a-42da-9116-a2a4872dfe0f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Hello, I&#39;m fairly new to the saas business idea and have shipped my product a month ago. But so far I&#39;ve got limited tractions and o"
+      ],
+      "title": "How do you bring customers to your product?",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u818qn/how_do_you_bring_customers_to_your_product/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "5827763a-1ed7-4a02-a3cb-848e8aa5ea7a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Hey everyone! So today is kind of a big day for our little team and I wanted to share it here but not as promotion, just describing our path"
+      ],
+      "title": "our little team just shipped its first SaaS! (our founder used to work with NASA and Microsoft, but he decided to start from scratch with fresh idea)",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u7ghdf/our_little_team_just_shipped_its_first_saas_our/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "441b312a-afd6-49f2-9755-836bf1adc36a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Quick question... I&#39;m building an AI voice receptionist SaaS (targeting HVAC companies) and I&#39;m at the stage where the product works"
+      ],
+      "title": "What's actually getting you clients right now paid or free?",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u7tnco/whats_actually_getting_you_clients_right_now_paid/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "238c49e6-6fb5-436d-98ec-e497c1643fc8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I never knew strangers would pay for something as simple. After giving my app for free for a month, I suddenly decided to put a paywall on i"
+      ],
+      "title": "Stop giving your apps for free. My clipboard app just made me my first dollar.",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u83oyc/stop_giving_your_apps_for_free_my_clipboard_app/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "0ba2dfea-b349-4670-940f-40d901a2a24f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I was looking for a tool that turns lecture slides into questions but I couldn&#39;t find anything convenient to use. I didn&#39;t want to s"
+      ],
+      "title": "This one is for the students",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u83gg3/this_one_is_for_the_students/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "4f98219f-2dd4-4725-9aab-f6ec7e23859a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I’m currently building a platform tailored for Indian creators to sell digital products (like ebooks) and host 1:1 mentorship/consulting ses"
+      ],
+      "title": "Payout delays, high fees, or GST confusion? What’s your biggest payment nightmare as an Indian creator?",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u83c7s/payout_delays_high_fees_or_gst_confusion_whats/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "240df5e7-da2a-4baf-b298-f3218aa702ae",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Hi, I have been noticing on linkedin, X, and reddit SaaS group that these people have been mentioning there age along with their product/ach"
+      ],
+      "title": "Why do people keep mentioning their age here for showing their product ?",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u83c40/why_do_people_keep_mentioning_their_age_here_for/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "d88b59bd-7de5-440b-8ebb-7173ec9d4c9e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "So I guess I&#39;m trying to follow a framework where I build a waitlist and if enough people sign up showing interest in the product I&#39;"
+      ],
+      "title": "How do you create a waitlist before you launch or even build something?",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u83bam/how_do_you_create_a_waitlist_before_you_launch_or/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "8c68e02b-78ac-45e9-9d56-1eff069ce6eb",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I wanted to know how many of you don&#39;t use any LLM tools because of the privacy issue that your data used for training purposes or it mi"
+      ],
+      "title": "Who are all little/never used LLM tools because of privacy concern?",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u83adw/who_are_all_littlenever_used_llm_tools_because_of/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "4bc90b97-b5b0-42b5-89e5-c9a3d5468196",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Yesterday, I shared KuberAgent here and got some really useful ideas from Reddit users. A lot of you pointed out things that could be improv"
+      ],
+      "title": "I updated KuberAgent based on Reddit User, would love your thoughts on the latest version",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u835ut/i_updated_kuberagent_based_on_reddit_user_would/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "4500b88c-46d0-46c1-8e75-f2cc8bb669d1",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Hey everyone, I’m currently in the process of validating a saas idea, but I’ve found myself stuck in a loop of endless desk research analyzi"
+      ],
+      "title": "Should I keep researching ?",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u82za6/should_i_keep_researching/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "32e99754-e530-43ab-a563-6b64b2550101",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A few weeks ago, I decided to leave my job and focus full-time on growing my marketing consultancy. &#x200B; As I make that transition, I&#3"
+      ],
+      "title": "Recently left my job. Looking to help 2-3 businesses with their social media for free.",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u82xix/recently_left_my_job_looking_to_help_23/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "eb4e767b-6aad-40b1-bc41-04a68eac2994",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I am Shakil building the AI Native Marketing Workforce for B2B SaaS Startups. We are bridging the gap between founders who are looking for a"
+      ],
+      "title": "Building for B2B SaaS Startups with Revenue",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u82wqi/building_for_b2b_saas_startups_with_revenue/"
+    },
+    {
+      "builder_takeaway": "Low-signal founder discussion.",
+      "category": "Small Business Automation",
+      "id": "eaca2521-e9be-448b-9232-d6ee850fb069",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I am marketing my first SaaS after I built it. I know that I should focus now on getting the first 10 customers by cold outreach, DMs, and d"
+      ],
+      "title": "I can't find people to talk with",
+      "uncertainty": "Single-thread anecdote with no strong evidence and no clear decision-changing takeaway.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u82p2k/i_cant_find_people_to_talk_with/"
+    },
+    {
+      "builder_takeaway": "Interesting open-source direction, but not yet broadly actionable for most solo developers.",
       "category": "Tools Worth Testing",
-      "id": "016532f2-2de2-4f18-86d1-323d2f5d7623",
+      "id": "41a4f4ea-95d1-4aa3-814b-2560a21dd751",
       "importance": "archive-only",
       "labels": [
         "reproducible",
@@ -284,56 +455,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "iroh.computer",
+      "source": "github.com",
       "source_facts": [
-        "Iroh 1.0 released — a stable Rust P2P networking library that uses public keys instead of IPs for connections, with NAT traversal and relay fallback."
+        "NVLabs released cuTile Rust for writing safe GPU kernels in Rust with competitive performance claims."
       ],
-      "title": "Iroh 1.0: Dial Keys, not IPs",
-      "uncertainty": "Rust-only for now; ecosystem adoption unclear.",
-      "url": "https://www.iroh.computer/blog/v1"
+      "title": "Show HN: cuTile Rust: Safe, data-race-free GPU kernels in Rust",
+      "uncertainty": "Project is explicitly early-stage research software with expected bugs and API breakage.",
+      "url": "https://github.com/nvlabs/cutile-rs"
     },
     {
-      "builder_takeaway": "A historical archive of text-based visual art predating ASCII art, created from a 2015 BA thesis on Amiga ASCII art. Interesting historical artifact; not actionable for solo builder work.",
+      "builder_takeaway": "Latent Space roundup headline about GLM-5.2 and speculative decoding, but it is a secondary aggregator rather than a primary source for one concrete decision.",
       "category": "Tools Worth Testing",
-      "id": "701883ca-653d-4d6d-8971-94a2a26e6688",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "garden-of-flowers.heikkilotvonen.com",
-      "source_facts": [
-        "A developer published an archive of pre-ASCII pictorial typography based on their 2015 BA thesis research on Amiga ASCII art."
-      ],
-      "title": "Garden of Flowers: archive of pictorial typography before ASCII art",
-      "uncertainty": "",
-      "url": "https://garden-of-flowers.heikkilotvonen.com/"
-    },
-    {
-      "builder_takeaway": "An experience report of running FreeBSD 15 as a laptop daily driver. Not relevant to Fuzzy's macOS/Linux/Hetzner stack.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "be9a619d-9595-4fa4-80ea-d97f1cbe8710",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "sacredheartsc.com",
-      "source_facts": [
-        "A developer published their experience running FreeBSD 15 as a laptop daily driver."
-      ],
-      "title": "FreeBSD 15 on a Laptop",
-      "uncertainty": "",
-      "url": "https://www.sacredheartsc.com/blog/freebsd-15-on-a-laptop/"
-    },
-    {
-      "builder_takeaway": "Hacker News discussion thread for the Iroh 1.0 release blog post. Same underlying story as item 016532f2; no additional content warranting a separate entry.",
-      "category": "Tools Worth Testing",
-      "id": "66ad3a0c-6e9b-4659-a84e-368915dbd72a",
+      "id": "5935bba9-a4bc-4cd9-934b-024186d45fc6",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -341,37 +474,303 @@
       ],
       "product_relevance": [],
       "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "iroh.computer",
+      "source": "latent.space",
       "source_facts": [
-        "Hacker News discussion of the Iroh 1.0 P2P networking library release."
+        "Latent Space highlighted GLM-5.2 and related AI news."
       ],
-      "title": "Iroh 1.0 — Hacker News discussion",
+      "title": "[AINews] GLM-5.2: the top Frontend Coding model in the world, IndexShare for Speculative Decoding",
       "uncertainty": "",
-      "url": "https://www.iroh.computer/blog/v1"
+      "url": "https://www.latent.space/p/ainews-glm-52-the-top-frontend-coding"
     },
     {
-      "builder_takeaway": "Notable release for document generation tooling; worth checking for PDF/report generation workflows.",
+      "builder_takeaway": "Next.js canary release with mainly maintenance and experimental changes, including a React canary bump and tooling cleanups.",
       "category": "Tools Worth Testing",
-      "id": "9662cfd8-9412-41d2-be04-5ea2703315d2",
+      "id": "3fee1026-b3b2-41b5-b741-d024a746e9ee",
       "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Next.js v16.3.0-canary.53 shipped maintenance and experimental updates."
+      ],
+      "title": "v16.3.0-canary.53",
+      "uncertainty": "Canary pre-release; changes may shift before stable.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.53"
+    },
+    {
+      "builder_takeaway": "Operationally relevant release note with upgrade-time behavior and multiple reliability/security-adjacent fixes.",
+      "category": "AI Operations / Agent Control",
+      "id": "348b6474-37e1-4e5c-b087-136cef06293a",
+      "importance": "lead",
       "labels": [
         "reproducible",
         "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-06-17T00:00:00.000Z",
-      "source": "typst.app",
+      "source": "github.com",
       "source_facts": [
-        "Typst 0.15 released with significant new features in the modern LaTeX-alternative document typesetting system."
+        "n8n 2.27.0 includes a database migration plus queue, API scope, and worker startup fixes."
       ],
-      "title": "Typst 0.15 released",
-      "uncertainty": "HN link is to comments; full feature list requires reading the official blog post.",
-      "url": "https://typst.app/blog/2026/typst-0.15/"
+      "title": "n8n@2.27.0",
+      "uncertainty": "Release notes do not quantify migration duration beyond saying it can take several minutes on large instances.",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.27.0"
+    },
+    {
+      "builder_takeaway": "Duplicate moving tag for the same n8n 2.27.0 pre-release notes.",
+      "category": "AI Operations / Agent Control",
+      "id": "95570671-398e-4aac-86f9-05f9a2036de1",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n beta moving tag points to the same 2.27.0 release."
+      ],
+      "title": "beta",
+      "uncertainty": "",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/beta"
+    },
+    {
+      "builder_takeaway": "n8n stable tag points to a minor patch release with one bug fix and no broader decision-changing update.",
+      "category": "AI Operations / Agent Control",
+      "id": "57c8ef69-48e2-4ff8-ab8a-2486c29418c2",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n stable moved to 2.26.4 with a small bug fix."
+      ],
+      "title": "stable",
+      "uncertainty": "",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/stable"
+    },
+    {
+      "builder_takeaway": "Actionable if you operate domains or outbound email, with direct deliverability and spoofing risk implications.",
+      "category": "AI Operations / Agent Control",
+      "id": "c1a1352d-5b6d-4a7b-91c6-8e71f85ca731",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "blog.cloudflare.com",
+      "source_facts": [
+        "Cloudflare DMARC Management is now GA with reporting, record analysis, and SPF lookup auditing."
+      ],
+      "title": "Cloudflare DMARC Management is now generally available",
+      "uncertainty": "Available only when DNS is on Cloudflare, and the source is Cloudflare describing its own product.",
+      "url": "https://blog.cloudflare.com/dmarc-management-ga/"
+    },
+    {
+      "builder_takeaway": "Meaningful platform limit increase for agentic and long-running workflows.",
+      "category": "Model + API Changes",
+      "id": "29cc476f-925b-45cd-960c-d5450928300c",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel Sandbox maximum runtime increased from 5 hours to 24 hours."
+      ],
+      "title": "Vercel Sandbox can now run for up to 24 hours",
+      "uncertainty": "Plan-gated to Pro and Enterprise, and this only applies to Sandbox, not every Vercel runtime.",
+      "url": "https://vercel.com/changelog/vercel-sandbox-can-now-run-for-up-to-24-hours"
+    },
+    {
+      "builder_takeaway": "Relevant model availability update for teams already routing traffic through Vercel AI Gateway.",
+      "category": "Model + API Changes",
+      "id": "069ba292-6f72-4938-a424-fe6890fb6f52",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "GLM 5.2 is available on Vercel AI Gateway with a 1M-token context window."
+      ],
+      "title": "GLM 5.2 now available on AI Gateway",
+      "uncertainty": "Performance claims come from the vendor announcement; no independent evaluation was provided on the page.",
+      "url": "https://vercel.com/changelog/glm-5-2-now-available-on-ai-gateway"
+    },
+    {
+      "builder_takeaway": "GrapheneOS moving to Android 17 is notable for that ecosystem, but it does not change a likely software-build decision for this memo’s audience.",
+      "category": "AI Operations / Agent Control",
+      "id": "b5ebbc96-1f5d-4039-93c6-2518ba1ca1b8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "discuss.grapheneos.org",
+      "source_facts": [
+        "GrapheneOS has been ported to Android 17."
+      ],
+      "title": "GrapheneOS has been ported to Android 17",
+      "uncertainty": "",
+      "url": "https://discuss.grapheneos.org/d/36469-grapheneos-has-been-ported-to-android-17-and-official-releases-are-coming-soon"
+    },
+    {
+      "builder_takeaway": "Practical builder signal that changes whether local coding stacks are worth evaluating now.",
+      "category": "Tools Worth Testing",
+      "id": "f16acfcc-7e12-42a7-af5f-92ab0df5edb6",
+      "importance": "supporting",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "vickiboykis.com",
+      "source_facts": [
+        "A practitioner reports that current local models are now good enough for real agentic coding loops on consumer hardware."
+      ],
+      "title": "Running local models is good now",
+      "uncertainty": "Single-practitioner report on a relatively strong local machine, not a benchmark or broad production study.",
+      "url": "https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/"
+    },
+    {
+      "builder_takeaway": "IIS exploitation write-up may be interesting to security specialists, but this memo is not a general security-news roundup.",
+      "category": "AI Operations / Agent Control",
+      "id": "36997606-dde1-498a-b59e-fbf7b7c4f9d2",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "mll.sh",
+      "source_facts": [
+        "Post describes exploiting IIS servers."
+      ],
+      "title": "Humiliating IIS servers for fun and jail time",
+      "uncertainty": "",
+      "url": "https://mll.sh/humiliating-iis-servers-for-fun-and-jail-time/"
+    },
+    {
+      "builder_takeaway": "Wolfram Language version 15 launch is substantial inside that ecosystem, but the memo audience is unlikely to act on it tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "7c1f7ec4-b080-4fe2-8c0e-0968674bd985",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "writings.stephenwolfram.com",
+      "source_facts": [
+        "Wolfram Language and Mathematica version 15 launched."
+      ],
+      "title": "Wolfram Language and Mathematica version 15",
+      "uncertainty": "",
+      "url": "https://writings.stephenwolfram.com/2026/06/launching-version-15-of-wolfram-language-mathematica-built-in-useful-ai-lots-of-new-core-functionality/"
+    },
+    {
+      "builder_takeaway": "Neat Bash /dev/TCP trick for ad hoc HTTP requests, but too small and tactical for the memo.",
+      "category": "Tools Worth Testing",
+      "id": "6ced2551-d669-45ef-9893-a50fa2c8c279",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "mareksuppa.com",
+      "source_facts": [
+        "You can make raw HTTP requests from Bash using /dev/TCP."
+      ],
+      "title": "TIL: You can make HTTP requests without curl using Bash /dev/TCP",
+      "uncertainty": "",
+      "url": "https://mareksuppa.com/til/bash-dev-tcp-http-without-curl/"
+    },
+    {
+      "builder_takeaway": "Essay on Calvin and Hobbes and artistic integrity, outside the remit of this tooling-focused memo.",
+      "category": "Tools Worth Testing",
+      "id": "ec7c0e89-7d1c-4c27-9046-f8168ad97363",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "therepublicofletters.substack.com",
+      "source_facts": [
+        "Essay about Calvin and Hobbes and integrity."
+      ],
+      "title": "Calvin and Hobbes and the price of integrity",
+      "uncertainty": "",
+      "url": "https://therepublicofletters.substack.com/p/calvin-and-hobbes-and-the-price-of"
+    },
+    {
+      "builder_takeaway": "Worth tracking as a sovereignty/policy signal, not as an immediate tooling decision.",
+      "category": "Model + API Changes",
+      "id": "f0af87f9-bf4b-4541-994a-b5af376a9361",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "tno.nl",
+      "source_facts": [
+        "The Netherlands-backed GPT-NL project is positioning itself as a sovereign, transparent Dutch language model."
+      ],
+      "title": "GPT‑NL: a sovereign language model for the Netherlands",
+      "uncertainty": "Institutional project page, not an independent technical evaluation or release benchmark.",
+      "url": "https://www.tno.nl/en/digital/artificial-intelligence/gpt-nl/"
+    },
+    {
+      "builder_takeaway": "Speculative self-help publishing discussion, outside the memo’s target lane.",
+      "category": "Small Business Automation",
+      "id": "8e349259-3f72-42c8-adb8-cadd8e2adaa4",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-06-17T00:00:00.000Z",
+      "source": "tim.blog",
+      "source_facts": [
+        "Discussion asks whether AI has already damaged self-help nonfiction."
+      ],
+      "title": "Has AI already killed self-help nonfiction books?",
+      "uncertainty": "",
+      "url": "https://tim.blog/2026/06/12/has-ai-already-killed-nonfiction/"
     }
   ],
   "mode": "primary",
-  "run_id": "7a149b30-0fcb-4490-a13c-02ceb7bbdfb1",
+  "run_id": "02a7a89c-aad5-4ae4-8ca2-f0fd06a63696",
   "status": "completed",
-  "summary": "Synthesized Nightly Librarian run with 7 promoted item(s), 19 scored item(s), and 12 rejected item(s).",
+  "summary": "Synthesized Nightly Librarian run with 7 promoted item(s), 40 scored item(s), and 33 rejected item(s).",
   "title": "Nightly Librarian - 2026-06-17"
 }
