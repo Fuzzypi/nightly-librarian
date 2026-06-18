@@ -191,6 +191,25 @@ function scoreOrZero(value) {
   return Number.isFinite(n) ? n : 0;
 }
 
+function timestampValue(...values) {
+  for (const value of values) {
+    const text = stringValue(value);
+    if (text) {
+      return text;
+    }
+  }
+  return "";
+}
+
+function resolveGeneratedAt(completions, fallbackDate) {
+  const timestamps = completions
+    .map((completion) => timestampValue(completion.generated_at, completion.completed_at, completion.reported_at))
+    .filter(Boolean)
+    .sort();
+
+  return timestamps.at(-1) || `${fallbackDate}T00:00:00.000Z`;
+}
+
 /**
  * Pick the "better" of two items scored for the same raw_item_id.
  * "Better" = higher verdict rank, then higher score_worth_mentioning.
@@ -213,6 +232,20 @@ function betterItem(a, b) {
  */
 function enrichItem(item, fallbackDate) {
   const enriched = { ...item };
+  const rawClaim = stringValue(enriched.raw_claim);
+  const sourceFacts = Array.isArray(enriched.source_facts)
+    ? enriched.source_facts.map(stringValue).filter(Boolean)
+    : [];
+
+  if (sourceFacts.length === 0 && rawClaim) {
+    enriched.source_facts = [rawClaim];
+  } else if (sourceFacts.length > 0) {
+    enriched.source_facts = sourceFacts;
+  } else {
+    throw new Error(
+      `Synthesized item ${stringValue(enriched.raw_item_id) || stringValue(enriched.title) || "(unknown)"} must include source_facts or raw_claim.`
+    );
+  }
 
   // Ensure builder_takeaway surrogate
   if (
@@ -248,21 +281,21 @@ function enrichItem(item, fallbackDate) {
 function mergeItems(completions) {
   const byId = new Map();
 
-  for (const completion of completions) {
+  completions.forEach((completion, completionIndex) => {
     const results = Array.isArray(completion.results) ? completion.results : [];
-    for (const item of results) {
+    results.forEach((item, itemIndex) => {
       const key =
         stringValue(item.raw_item_id) ||
         (Array.isArray(item.evidence_sources) && stringValue(item.evidence_sources[0])) ||
-        `__nokey__${Math.random()}`;
+        `__nokey__${completionIndex}:${itemIndex}`;
 
       if (byId.has(key)) {
         byId.set(key, betterItem(byId.get(key), item));
       } else {
         byId.set(key, item);
       }
-    }
-  }
+    });
+  });
 
   return Array.from(byId.values());
 }
@@ -366,7 +399,7 @@ function synthesize({ date, primaryPath, secondaryPath, baseDir = process.cwd() 
     mode: "primary",
     title: `Nightly Librarian - ${date}`,
     summary: buildSummary(mergedItems),
-    generated_at: new Date().toISOString(),
+    generated_at: resolveGeneratedAt(completions, date),
     run_id: runIds || "synthesized",
     synthesized_by: SCRIPT_VERSION,
     synthesized_from: inputFiles,

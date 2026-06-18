@@ -1,4 +1,5 @@
 const assert = require('node:assert/strict');
+const crypto = require('node:crypto');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
@@ -12,8 +13,20 @@ const fixturePath = path.join(repoRoot, 'test/fixtures/digests/2026-05-20.json')
 function makeTempProject() {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'nl-social-generate-'));
   const inputDir = path.join(root, 'artifacts/digests');
+  const sourceDir = path.join(root, 'artifacts/synthesized');
   fs.mkdirSync(inputDir, { recursive: true });
+  fs.mkdirSync(sourceDir, { recursive: true });
   fs.copyFileSync(fixturePath, path.join(inputDir, '2026-05-20.json'));
+  const sourceArtifactPath = path.join(sourceDir, '2026-05-20.json');
+  fs.writeFileSync(sourceArtifactPath, '{"source":"fixture"}\n');
+  const digestPath = path.join(inputDir, '2026-05-20.json');
+  const digest = JSON.parse(fs.readFileSync(digestPath, 'utf8'));
+  digest.imported_from = {
+    importer_version: 'digest-import/v1',
+    source_artifact: 'artifacts/synthesized/2026-05-20.json',
+    source_sha256: crypto.createHash('sha256').update(fs.readFileSync(sourceArtifactPath)).digest('hex'),
+  };
+  fs.writeFileSync(digestPath, `${JSON.stringify(digest, null, 2)}\n`);
   return root;
 }
 
@@ -24,7 +37,11 @@ function read(root, relativePath) {
 test('generate writes deterministic brief, social drafts, and manifest', () => {
   const root = makeTempProject();
 
-  const result = social.generate({ date: '2026-05-20', baseDir: root });
+  const result = social.generate({
+    date: '2026-05-20',
+    baseDir: root,
+    requireSourceArtifact: 'artifacts/synthesized/2026-05-20.json',
+  });
 
   assert.equal(result.dry_run, false);
   assert.equal(result.side_effects.network, false);
@@ -80,7 +97,11 @@ test('daily summary lead paragraph includes publish and monitor context without 
   digest.items[2].labels.push('monitor');
   fs.writeFileSync(inputPath, `${JSON.stringify(digest, null, 2)}\n`);
 
-  social.generate({ date: '2026-05-20', baseDir: root });
+  social.generate({
+    date: '2026-05-20',
+    baseDir: root,
+    requireSourceArtifact: 'artifacts/synthesized/2026-05-20.json',
+  });
 
   const brief = read(root, 'dist/briefs/2026-05-20.md');
   assert.match(brief, /Tonight's brief tracks AI Operations \/ Agent Control and Small Business Automation\./);
@@ -91,7 +112,11 @@ test('daily summary lead paragraph includes publish and monitor context without 
 
 test('generate is idempotent for the same input', () => {
   const root = makeTempProject();
-  social.generate({ date: '2026-05-20', baseDir: root });
+  social.generate({
+    date: '2026-05-20',
+    baseDir: root,
+    requireSourceArtifact: 'artifacts/synthesized/2026-05-20.json',
+  });
 
   const before = {
     brief: read(root, 'dist/briefs/2026-05-20.md'),
@@ -100,7 +125,11 @@ test('generate is idempotent for the same input', () => {
     linkedin: read(root, 'dist/social/2026-05-20.linkedin.md'),
   };
 
-  const result = social.generate({ date: '2026-05-20', baseDir: root });
+  const result = social.generate({
+    date: '2026-05-20',
+    baseDir: root,
+    requireSourceArtifact: 'artifacts/synthesized/2026-05-20.json',
+  });
 
   assert.ok(result.operations.every((operation) => operation.status === 'unchanged'));
   assert.deepEqual(before, {
@@ -114,7 +143,12 @@ test('generate is idempotent for the same input', () => {
 test('dry run validates input and does not write files', () => {
   const root = makeTempProject();
 
-  const result = social.generate({ date: '2026-05-20', baseDir: root, dryRun: true });
+  const result = social.generate({
+    date: '2026-05-20',
+    baseDir: root,
+    dryRun: true,
+    requireSourceArtifact: 'artifacts/synthesized/2026-05-20.json',
+  });
 
   assert.equal(result.dry_run, true);
   assert.equal(result.gating.input_valid, true);
@@ -130,7 +164,11 @@ test('generate rejects non-completed digests', () => {
   fs.writeFileSync(inputPath, `${JSON.stringify(digest, null, 2)}\n`);
 
   assert.throws(
-    () => social.generate({ date: '2026-05-20', baseDir: root }),
+    () => social.generate({
+      date: '2026-05-20',
+      baseDir: root,
+      requireSourceArtifact: 'artifacts/synthesized/2026-05-20.json',
+    }),
     /Digest status must be completed/
   );
 });
@@ -143,6 +181,7 @@ test('generate rejects mismatched requested date', () => {
       date: '2026-05-21',
       baseDir: root,
       inputPath: 'artifacts/digests/2026-05-20.json',
+      requireSourceArtifact: 'artifacts/synthesized/2026-05-20.json',
     }),
     /does not match requested date/
   );
@@ -156,7 +195,11 @@ test('generate rejects malformed digest timestamps', () => {
   fs.writeFileSync(inputPath, `${JSON.stringify(digest, null, 2)}\n`);
 
   assert.throws(
-    () => social.generate({ date: '2026-05-20', baseDir: root }),
+    () => social.generate({
+      date: '2026-05-20',
+      baseDir: root,
+      requireSourceArtifact: 'artifacts/synthesized/2026-05-20.json',
+    }),
     /generated_at must be an ISO-8601 timestamp/
   );
 });
@@ -168,7 +211,11 @@ test('generate labels completed fallback artifacts', () => {
   digest.mode = 'fallback';
   fs.writeFileSync(inputPath, `${JSON.stringify(digest, null, 2)}\n`);
 
-  social.generate({ date: '2026-05-20', baseDir: root });
+  social.generate({
+    date: '2026-05-20',
+    baseDir: root,
+    requireSourceArtifact: 'artifacts/synthesized/2026-05-20.json',
+  });
 
   const brief = read(root, 'dist/briefs/2026-05-20.md');
   const x = read(root, 'dist/social/2026-05-20.x.md');
@@ -182,7 +229,11 @@ test('generate labels completed fallback artifacts', () => {
 
 test('generate refuses to overwrite approved output', () => {
   const root = makeTempProject();
-  social.generate({ date: '2026-05-20', baseDir: root });
+  social.generate({
+    date: '2026-05-20',
+    baseDir: root,
+    requireSourceArtifact: 'artifacts/synthesized/2026-05-20.json',
+  });
 
   const manifestPath = path.join(root, 'dist/social/2026-05-20.json');
   const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
@@ -195,7 +246,28 @@ test('generate refuses to overwrite approved output', () => {
   fs.writeFileSync(inputPath, `${JSON.stringify(digest, null, 2)}\n`);
 
   assert.throws(
-    () => social.generate({ date: '2026-05-20', baseDir: root }),
+    () => social.generate({
+      date: '2026-05-20',
+      baseDir: root,
+      requireSourceArtifact: 'artifacts/synthesized/2026-05-20.json',
+    }),
     /Refusing to overwrite approved social output/
+  );
+});
+
+test('generate rejects digests that are not bound to the current synthesized source artifact', () => {
+  const root = makeTempProject();
+  const digestPath = path.join(root, 'artifacts/digests/2026-05-20.json');
+  const digest = JSON.parse(fs.readFileSync(digestPath, 'utf8'));
+  digest.imported_from.source_sha256 = 'deadbeef';
+  fs.writeFileSync(digestPath, `${JSON.stringify(digest, null, 2)}\n`);
+
+  assert.throws(
+    () => social.generate({
+      date: '2026-05-20',
+      baseDir: root,
+      requireSourceArtifact: 'artifacts/synthesized/2026-05-20.json',
+    }),
+    /source_sha256 does not match/
   );
 });

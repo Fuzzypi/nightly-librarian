@@ -11,12 +11,12 @@ npm run social:generate -- --date YYYY-MM-DD --dry-run
 Generation command:
 
 ```bash
-npm run social:generate -- --date YYYY-MM-DD
+npm run social:generate -- --date YYYY-MM-DD --require-source-artifact artifacts/synthesized/YYYY-MM-DD.json
 ```
 
 ## Producer Export Command
 
-Phase 3 adds a structured export mode to the existing producer report path:
+Phase 3 adds a structured export mode to the existing producer report path. The structured export is the source artifact that `digest:import` and later `social:generate` bind to for the current day:
 
 ```bash
 mkdir -p artifacts/upstream
@@ -32,6 +32,7 @@ Producer export rules:
 - preserves source URLs through `url` and `evidence_sources`
 - preserves source claims through `raw_claim`
 - includes category, verdict, evidence level, uncertainty, scores, and builder/operator relevance fields
+- keeps the export importable by ensuring each synthesized item includes `raw_claim` or `source_facts`
 - does not post to public channels
 - does not create paid-service dependencies
 - does not add a new database or credential path
@@ -172,6 +173,8 @@ Supported status and mode values:
 Generation rejects `failed`, `partial`, missing, date-mismatched, or malformed artifacts. Fallback mode is allowed only when the artifact is still `completed`; generated brief and manifest output label it as fallback.
 
 The importer may add an `imported_from` metadata object containing importer version and source artifact hash. `social:generate` ignores this metadata for rendering, but the raw artifact hash still changes when the import provenance changes.
+
+When the publish lane is running from a synthesized source artifact, `social:generate` must be called with `--require-source-artifact artifacts/synthesized/YYYY-MM-DD.json`. That makes the digest import fail closed if a stale digest file is still on disk after a failed current-day import.
 
 ## Output Artifacts
 

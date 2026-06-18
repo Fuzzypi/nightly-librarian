@@ -146,6 +146,7 @@ test('triage:report structured-json emits producer export accepted by import and
   const generated = social.generate({
     date: '2026-05-20',
     inputPath: 'artifacts/digests/2026-05-20.json',
+    requireSourceArtifact: 'upstream/producer.json',
     baseDir: root,
     dryRun: true,
   });
@@ -177,6 +178,7 @@ test('completed producer fixture round-trips through digest import and social dr
   const generated = social.generate({
     date: '2026-05-20',
     inputPath: 'artifacts/digests/2026-05-20.json',
+    requireSourceArtifact: 'upstream/producer.json',
     baseDir: root,
     dryRun: true,
   });

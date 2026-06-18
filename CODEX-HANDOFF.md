@@ -25,7 +25,7 @@ You are one of two scoring agents. Cowork is the other. Both of you:
 After **both** completions exist, one agent (see "Who Runs Synthesis" below) runs:
 
 ```
-triage:report → report:write → synthesize:runs → digest:import → social:generate → build:site → git push
+triage:report → report:write → synthesize:runs → digest:import → social:generate --require-source-artifact artifacts/synthesized/YYYY-MM-DD.json → build:site → git push
 ```
 
 ---
@@ -101,7 +101,7 @@ npm run digest:import -- \
   --source artifacts/synthesized/YYYY-MM-DD.json \
   --out artifacts/digests/YYYY-MM-DD.json
 
-npm run social:generate -- --date YYYY-MM-DD
+npm run social:generate -- --date YYYY-MM-DD --require-source-artifact artifacts/synthesized/YYYY-MM-DD.json
 
 npm run build:site
 
@@ -112,6 +112,7 @@ git push
 ```
 
 Commit `dist/briefs/YYYY-MM-DD.md` and `reports/YYYY-MM-DD.md`. Everything in `artifacts/`, `dist/social/`, `site/`, and completion JSON stays local.
+If the active repo is dirty, create and use an isolated clean worktree for the publish lane before running the sequence above.
 
 ---
 
@@ -156,7 +157,7 @@ npm run digest:import -- --date "$DATE" \
   --source "artifacts/synthesized/${DATE}.json" \
   --out "artifacts/digests/${DATE}.json"
 
-npm run social:generate -- --date "$DATE"
+npm run social:generate -- --date "$DATE" --require-source-artifact "artifacts/synthesized/${DATE}.json"
 npm run build:site
 
 git add "dist/briefs/${DATE}.md"
@@ -202,6 +203,8 @@ npm run verify          # runs scripts/verify.sh
 git diff --check        # no trailing whitespace
 head -5 dist/briefs/YYYY-MM-DD.md  # sanity check the brief
 ```
+
+Before committing, inspect the staged paths and fail closed if anything outside `dist/briefs/YYYY-MM-DD.md` and `reports/YYYY-MM-DD.md` is staged.
 
 If `build:site` fails with `dist/briefs/ not found`, the brief wasn't committed. Check `git status`.
 

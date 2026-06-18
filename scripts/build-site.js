@@ -198,12 +198,13 @@ function formatDateShort(isoDate) {
 }
 
 function write(filePath, content) {
+  const normalizedContent = content.replace(/[ \t]+$/gm, "");
   if (DRY_RUN) {
-    console.log(`[dry-run] would write ${filePath} (${content.length} bytes)`);
+    console.log(`[dry-run] would write ${filePath} (${normalizedContent.length} bytes)`);
     return;
   }
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
-  fs.writeFileSync(filePath, content, "utf8");
+  fs.writeFileSync(filePath, normalizedContent, "utf8");
   console.log(`wrote ${path.relative(REPO_ROOT, filePath)}`);
 }
 
@@ -1083,7 +1084,7 @@ ${seoMeta({ title: dateLabel, description: summaryText || brief.themes.join(", "
     <a class="back-link" href="/">All briefs</a>
     <h1>${esc(dateLabel)}</h1>
     ${brief.themes.length ? `<div class="meta" style="margin-top:0.4rem;">${brief.themes.map((t) => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
-    ${brief.published[0]?.takeaway ? `<p class="lead-summary" style="margin-top:0.85rem;">${renderText(brief.published[0].takeaway)}</p>` : brief.themes.length ? `<p class="lead-summary" style="margin-top:0.85rem;">${esc(brief.themes.join(" · "))}</p>` : ""}
+    ${summaryText ? `<p class="lead-summary" style="margin-top:0.85rem;">${renderText(summaryText)}</p>` : brief.published[0]?.takeaway ? `<p class="lead-summary" style="margin-top:0.85rem;">${renderText(brief.published[0].takeaway)}</p>` : brief.themes.length ? `<p class="lead-summary" style="margin-top:0.85rem;">${esc(brief.themes.join(" · "))}</p>` : ""}
     ${publishedHtml}
     ${monitoredHtml}
     ${linkIndex}

@@ -11,7 +11,7 @@ test('editorialRules includes Worth attention + Full digest guidance', () => {
 });
 
 test('completionContract private_memo prompt matches new memo format', () => {
-  const contract = triage.__test.completionContract('run-1', [{ id: 'item-1', title: 'T1', url: 'https://example.com' }]);
+  const contract = triage.completionContract('run-1', [{ id: 'item-1', title: 'T1', url: 'https://example.com' }]);
   assert.equal(contract.run_id, 'run-1');
   assert.ok(contract.private_memo.includes('Worth attention'));
   assert.ok(contract.private_memo.includes('Full digest'));

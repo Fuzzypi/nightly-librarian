@@ -15,7 +15,7 @@ npm run verify
 mkdir -p artifacts/upstream
 npm run triage:export -- --run-id RUN_ID --date YYYY-MM-DD > artifacts/upstream/YYYY-MM-DD.producer.json
 npm run digest:import -- --date YYYY-MM-DD --source path/to/upstream.json --dry-run
-npm run social:generate -- --date YYYY-MM-DD --dry-run
+npm run social:generate -- --date YYYY-MM-DD --require-source-artifact artifacts/synthesized/YYYY-MM-DD.json --dry-run
 npm run approval:create -- --date YYYY-MM-DD --digest artifacts/digests/YYYY-MM-DD.json --approval artifacts/approvals/YYYY-MM-DD.json --approver "Name" --approved-at YYYY-MM-DDTHH:MM:SS.sssZ
 npm run approval:validate -- --date YYYY-MM-DD --digest artifacts/digests/YYYY-MM-DD.json --approval artifacts/approvals/YYYY-MM-DD.json
 npm run build:site
@@ -26,7 +26,7 @@ npm run publish:check
 
 `digest:import` reads one explicit local upstream JSON artifact and normalizes it into `artifacts/digests/YYYY-MM-DD.json`. It does not discover production paths, connect to databases, read credentials, or call the network.
 
-`social:generate` reads a completed local digest artifact and writes draft artifacts under `dist/`. It does not post, create paid-service dependencies, read credentials, or call the network.
+`social:generate` reads a completed local digest artifact and writes draft artifacts under `dist/`. When the lane is using a current synthesized source artifact, pass `--require-source-artifact artifacts/synthesized/YYYY-MM-DD.json` so the digest hash and provenance have to match the current run. It does not post, create paid-service dependencies, read credentials, or call the network.
 
 `approval:create` and `approval:validate` create or validate explicit local approval state under `artifacts/approvals/`. Approval validation computes the deterministic draft hashes in memory from the digest, so it can validate what `social:generate --dry-run` would produce without writing `dist/`.
 
@@ -57,6 +57,8 @@ npm run approval:validate -- --date YYYY-MM-DD --digest artifacts/digests/YYYY-M
 ```
 
 `social:generate --dry-run` must not write `dist/` and must not publish anything. `approval:validate` must fail closed when approval is missing, stale, malformed, date-mismatched, or bound to different digest/social hashes.
+
+If the active worktree is dirty, run the publish lane in an isolated clean worktree and perform the commit checks there. The user’s active working tree should remain untouched.
 
 To create an approval artifact locally, pass an explicit approver and approval time:
 

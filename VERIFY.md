@@ -41,7 +41,7 @@ Phase 3 round-trip verification shape:
 
 ```bash
 npm run digest:import -- --date 2026-05-20 --source test/fixtures/producer/completed-structured-export-2026-05-20.json
-npm run social:generate -- --date 2026-05-20 --input artifacts/digests/2026-05-20.json --dry-run
+npm run social:generate -- --date 2026-05-20 --input artifacts/digests/2026-05-20.json --require-source-artifact artifacts/synthesized/2026-05-20.json --dry-run
 npm run approval:create -- --date 2026-05-20 --digest artifacts/digests/2026-05-20.json --approval artifacts/approvals/2026-05-20.json --approver "Fixture Approver" --approved-at 2026-05-20T08:00:00.000Z
 npm run approval:validate -- --date 2026-05-20 --digest artifacts/digests/2026-05-20.json --approval artifacts/approvals/2026-05-20.json
 ```

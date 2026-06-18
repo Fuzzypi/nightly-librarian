@@ -17,7 +17,7 @@ const IMPORTANCE_ORDER = new Map([
 ]);
 
 const USAGE = `Usage:
-  npm run social:generate -- --date YYYY-MM-DD [--input path] [--dry-run] [--force]
+  npm run social:generate -- --date YYYY-MM-DD [--input path] [--require-source-artifact path] [--dry-run] [--force]
 
 Reads a completed local digest JSON artifact and generates:
   dist/briefs/YYYY-MM-DD.md
@@ -31,6 +31,7 @@ function parseArgs(argv) {
   const parsed = {
     date: null,
     input: null,
+    requireSourceArtifact: null,
     dryRun: false,
     force: false,
     help: false,
@@ -54,6 +55,11 @@ function parseArgs(argv) {
       i += 1;
     } else if (arg.startsWith("--input=")) {
       parsed.input = arg.slice("--input=".length);
+    } else if (arg === "--require-source-artifact") {
+      parsed.requireSourceArtifact = nextArg(argv, i, "--require-source-artifact");
+      i += 1;
+    } else if (arg.startsWith("--require-source-artifact=")) {
+      parsed.requireSourceArtifact = arg.slice("--require-source-artifact=".length);
     } else {
       throw new Error(`Unknown argument: ${arg}`);
     }
@@ -205,6 +211,7 @@ function validateDigest(digest, expectedDate) {
     summary,
     generated_at: assertIsoTimestamp(generatedAt, "generated_at"),
     run_id: optionalString(digest.run_id),
+    imported_from: digest.imported_from,
     items,
   };
 }
@@ -674,6 +681,28 @@ function buildManifest(digest, metadata, outputPaths, channelStats) {
   };
 }
 
+function validateImportedFrom(digest, sourceArtifactPath, sourceArtifactSha256, baseDir) {
+  const importedFrom = digest.imported_from;
+  if (!importedFrom || typeof importedFrom !== "object" || Array.isArray(importedFrom)) {
+    throw new Error("Digest is missing imported_from provenance metadata.");
+  }
+
+  const expectedArtifact = relativePath(baseDir, path.resolve(baseDir, sourceArtifactPath));
+  if (importedFrom.source_artifact !== expectedArtifact) {
+    throw new Error(
+      `Digest imported_from.source_artifact ${importedFrom.source_artifact || "(missing)"} does not match required source artifact ${expectedArtifact}.`
+    );
+  }
+
+  if (importedFrom.source_sha256 !== sourceArtifactSha256) {
+    throw new Error(
+      "Digest imported_from.source_sha256 does not match the current source artifact hash."
+    );
+  }
+
+  return true;
+}
+
 function splitXPosts(xMarkdown) {
   return xMarkdown.trimEnd().split(/\n\n---\n\n/);
 }
@@ -733,11 +762,16 @@ function writeOutputs(outputMap, manifestPath, manifest, force) {
   return operations;
 }
 
-function buildGeneration({ date, inputPath, baseDir = process.cwd() }) {
+function buildGeneration({ date, inputPath, requireSourceArtifact, baseDir = process.cwd() }) {
   validateDate(date);
   const resolvedInput = path.resolve(baseDir, inputPath || path.join("artifacts", "digests", `${date}.json`));
   const { raw, parsed, sha256 } = readJson(resolvedInput);
   const digest = validateDigest(parsed, date);
+  if (requireSourceArtifact) {
+    const resolvedSourceArtifact = path.resolve(baseDir, requireSourceArtifact);
+    const { sha256: sourceSha256 } = readJson(resolvedSourceArtifact);
+    validateImportedFrom(digest, requireSourceArtifact, sourceSha256, baseDir);
+  }
   const landingUrl = landingUrlForDate(date);
   const inputArtifact = relativePath(baseDir, resolvedInput);
   const outputPaths = {
@@ -771,8 +805,15 @@ function buildGeneration({ date, inputPath, baseDir = process.cwd() }) {
   };
 }
 
-function generate({ date, inputPath = null, baseDir = process.cwd(), dryRun = false, force = false }) {
-  const generation = buildGeneration({ date, inputPath, baseDir });
+function generate({
+  date,
+  inputPath = null,
+  requireSourceArtifact = null,
+  baseDir = process.cwd(),
+  dryRun = false,
+  force = false,
+}) {
+  const generation = buildGeneration({ date, inputPath, requireSourceArtifact, baseDir });
   const resolvedManifest = path.resolve(baseDir, generation.outputPaths.manifest);
   const planned = Object.keys(generation.outputMap).map((filePath) => relativePath(baseDir, filePath));
 
@@ -829,6 +870,7 @@ function main() {
   const result = generate({
     date: args.date,
     inputPath: args.input,
+    requireSourceArtifact: args.requireSourceArtifact,
     dryRun: args.dryRun,
     force: args.force,
   });
