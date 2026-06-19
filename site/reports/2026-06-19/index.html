@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>June 19, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="4 stories cleared the bar, led by (untitled), (untitled), and (untitled).">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-06-19/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="June 19, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="4 stories cleared the bar, led by (untitled), (untitled), and (untitled).">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-06-19/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="June 19, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="4 stories cleared the bar, led by (untitled), (untitled), and (untitled).">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>June 19, 2026 · Report log</span>
+      
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>June 19, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>4 stories cleared the bar, led by (untitled), (untitled), and (untitled).</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>4 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+      
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Vercel has lifted CLI-specific deployment limits, removing a hard bottleneck for CI/CD pipelines and AI agent-driven deployments. Teams and automated systems can now push at whatever pace their workflows require. If you're doing any Vercel-hosted projects or using the Vercel CLI in automation, check your old throttling workarounds — they may now be unnecessary.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Cloudflare has opened up the Agents SDK primitives as a runtime any agent framework can build on, with the Flue framework being the first to target it. Agents can now be managed via the Cloudflare dashboard. Relevant if you're building agent workflows that need durable execution or want to deploy on Cloudflare Workers infrastructure.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">A bug in Haystack's Agent component caused premature exits under the default `exit_conditions=[&quot;text&quot;]` — the agent would stop even when the final message wasn't a proper assistant text response. The fix ensures the agent only exits when the last message is a non-empty assistant text (or no tool invoker is configured). If you're using Haystack for pipelines, check for this unexpected halt behavior.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Vercel's annual ship event focused heavily on agent-first infrastructure — the pitch is that winning products will be built on infrastructure designed for agents from day one. The recap covers what was announced in London. Worth a skim to track where the Next.js/Vercel ecosystem is heading over the next 12 months.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+      
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/cli-deployment-limits-removed" target="_blank" rel="noopener">CLI deployment limits removed</a>
+        </div>
+        <div class="item-takeaway">Vercel removes CLI deployment throttle; CI/CD and agent deployments can now run unrestricted</div>
+        <div class="item-meta">
+          <span>vercel_changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/agents-platform-flue-sdk/" target="_blank" rel="noopener">Bringing more agent harnesses and frameworks to Cloudflare, starting with Flue</a>
+        </div>
+        <div class="item-takeaway">Cloudflare opens Agents SDK so any framework can run on it; Flue is first; dashboard agent management added</div>
+        <div class="item-meta">
+          <span>cloudflare_blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/deepset-ai/haystack/releases/tag/v2.30.2-rc1" target="_blank" rel="noopener">Haystack v2.30.2-rc1</a>
+        </div>
+        <div class="item-takeaway">Bug fix: Agent no longer exits prematurely under default exit_conditions=[&quot;text&quot;]</div>
+        <div class="item-meta">
+          <span>github_releases</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/blog/vercel-ship-2026-recap" target="_blank" rel="noopener">Vercel Ship 2026 recap</a>
+        </div>
+        <div class="item-takeaway">Vercel announces agent-first infra direction; marketing-heavy but signals where Next.js/edge is going</div>
+        <div class="item-meta">
+          <span>vercel_blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://blog.val.town/talk-of-the-town-june-2026" target="_blank" rel="noopener">Talk of the Town - June 2026</a>
+        </div>
+        <div class="item-takeaway">Val.town community roundup of notable vals; worth skimming if you use val.town for quick scripts</div>
+        <div class="item-meta">
+          <span>val_town_blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://blog.cloudflare.com/cloudflare-one-stack/" target="_blank" rel="noopener">Cloudflare One Stack: agent-powered deployment</a>
+        </div>
+        <div class="item-takeaway">Agent skills for Zero Trust environment management; early-stage, narrow audience</div>
+        <div class="item-meta">
+          <span>cloudflare_blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/" target="_blank" rel="noopener">Google AMIE medical AI in Nature</a>
+        </div>
+        <div class="item-takeaway">Medical AI research; not actionable for solo devs</div>
+        <div class="item-meta">
+          <span>google_blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/c0rRupT9/STEPLA-1" target="_blank" rel="noopener">Show HN: 8-bit CPU by EE students</a>
+        </div>
+        <div class="item-takeaway">Hobbyist project; not relevant</div>
+        <div class="item-meta">
+          <span>hacker_news</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ribbie.tv/watch" target="_blank" rel="noopener">Show HN: 8-bit baseball gamecast</a>
+        </div>
+        <div class="item-takeaway">Entertainment; not relevant</div>
+        <div class="item-meta">
+          <span>hacker_news</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://johnowhitaker.github.io/inkwash/about" target="_blank" rel="noopener">Inkwash watercolor app</a>
+        </div>
+        <div class="item-takeaway">Creative tool; not relevant</div>
+        <div class="item-meta">
+          <span>hacker_news</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://cells2pixels.github.io/" target="_blank" rel="noopener">High-Res Neural Cellular Automata</a>
+        </div>
+        <div class="item-takeaway">Interesting demo; not decision-changing</div>
+        <div class="item-meta">
+          <span>hacker_news</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ArcaEge/capacitor-alarm-clock" target="_blank" rel="noopener">Capacitor Alarm Clock</a>
+        </div>
+        <div class="item-takeaway">Hardware hack; not relevant</div>
+        <div class="item-meta">
+          <span>hacker_news</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://brevio.pro" target="_blank" rel="noopener">184 free browser tools</a>
+        </div>
+        <div class="item-takeaway">Generic tool collection; low signal</div>
+        <div class="item-meta">
+          <span>hacker_news</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8nefx/" target="_blank" rel="noopener">Marketing is quite important!</a>
+        </div>
+        <div class="item-takeaway">Obvious observation; no new information</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8tude/" target="_blank" rel="noopener">Real chain of command</a>
+        </div>
+        <div class="item-takeaway">Viral image post; reject</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8mzdt/" target="_blank" rel="noopener">First $19 sale</a>
+        </div>
+        <div class="item-takeaway">Feel-good post; not actionable</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8dywe/" target="_blank" rel="noopener">$20K with 100 customers</a>
+        </div>
+        <div class="item-takeaway">Anecdotal milestone; not actionable</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8jpm1/" target="_blank" rel="noopener">7 paid customers on launch</a>
+        </div>
+        <div class="item-takeaway">Feel-good; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8tmvt/" target="_blank" rel="noopener">How to get first 10 customers</a>
+        </div>
+        <div class="item-takeaway">Generic Q&amp;A; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8zn60/" target="_blank" rel="noopener">Nothing feels better</a>
+        </div>
+        <div class="item-takeaway">Feel-good; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8uuom/" target="_blank" rel="noopener">Half signups were bots from paid ads</a>
+        </div>
+        <div class="item-takeaway">Anecdotal; common knowledge</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8xaiq/" target="_blank" rel="noopener">Chargeback disputes</a>
+        </div>
+        <div class="item-takeaway">Support question; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8e2lj/" target="_blank" rel="noopener">3 paid customers today</a>
+        </div>
+        <div class="item-takeaway">Feel-good; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8yr19/" target="_blank" rel="noopener">How to handle payments</a>
+        </div>
+        <div class="item-takeaway">Beginner question; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8q8po/" target="_blank" rel="noopener">Stuck in distribution loop</a>
+        </div>
+        <div class="item-takeaway">Generic frustration; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8zuhy/" target="_blank" rel="noopener">Traffic not the hard part</a>
+        </div>
+        <div class="item-takeaway">Generic insight; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8z93e/" target="_blank" rel="noopener">13k MRR in 3 months</a>
+        </div>
+        <div class="item-takeaway">Anecdotal; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8yfdz/" target="_blank" rel="noopener">UX fix 10 mins with Claude Code</a>
+        </div>
+        <div class="item-takeaway">Anecdotal; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8ybzi/" target="_blank" rel="noopener">AI agents buying SaaS speculation</a>
+        </div>
+        <div class="item-takeaway">Speculation; no concrete information</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u89d6t/" target="_blank" rel="noopener">Backend engineer against SaaS-in-90-days posts</a>
+        </div>
+        <div class="item-takeaway">Opinion; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8m8rt/" target="_blank" rel="noopener">280 deals in 7 weeks</a>
+        </div>
+        <div class="item-takeaway">Milestone share; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8xk5a/" target="_blank" rel="noopener">Web search quality in coding agents</a>
+        </div>
+        <div class="item-takeaway">Anecdotal complaint; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8q08l/" target="_blank" rel="noopener">AI agent confused in Instagram SaaS</a>
+        </div>
+        <div class="item-takeaway">Individual troubleshooting; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u903x2/" target="_blank" rel="noopener">Built idea validation tool without validating it</a>
+        </div>
+        <div class="item-takeaway">Ironic self-reflection; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8crzi/" target="_blank" rel="noopener">First paying customer after 4 months free</a>
+        </div>
+        <div class="item-takeaway">Milestone; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1u8zytl/" target="_blank" rel="noopener">Want all LLMs in one place</a>
+        </div>
+        <div class="item-takeaway">Vague idea post; no signal</div>
+        <div class="item-meta">
+          <span>reddit_saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ai.google.dev/gemini-api/docs/deep-research?hl=sq" target="_blank" rel="noopener">Gemini Deep Research (Albanian)</a>
+        </div>
+        <div class="item-takeaway">Non-English docs page; noise</div>
+        <div class="item-meta">
+          <span>google_ai_dev</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.56" target="_blank" rel="noopener">Next.js v16.3.0-canary.56</a>
+        </div>
+        <div class="item-takeaway">Canary release, misc CI changes only</div>
+        <div class="item-meta">
+          <span>github_releases</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.55" target="_blank" rel="noopener">Next.js v16.3.0-canary.55</a>
+        </div>
+        <div class="item-takeaway">Canary release, CI-only change</div>
+        <div class="item-meta">
+          <span>github_releases</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/blog/weather-company-vercel" target="_blank" rel="noopener">Weather Company on Vercel case study</a>
+        </div>
+        <div class="item-takeaway">Vendor marketing; not actionable</div>
+        <div class="item-meta">
+          <span>vercel_blog</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Morning memo — 2026-06-19
+
+**Source failures:** None observed.
+
+## Worth attention
+
+- **Vercel CLI deployment limits removed** — https://vercel.com/changelog/cli-deployment-limits-removed
+  Vercel has lifted CLI-specific deployment limits, removing a hard bottleneck for CI/CD pipelines and AI agent-driven deployments. Teams and automated systems can now push at whatever pace their workflows require. If you're doing any Vercel-hosted projects or using the Vercel CLI in automation, check your old throttling workarounds — they may now be unnecessary.
+
+- **Cloudflare opens Agents SDK to all frameworks (starting with Flue)** — https://blog.cloudflare.com/agents-platform-flue-sdk/
+  Cloudflare has opened up the Agents SDK primitives as a runtime any agent framework can build on, with the Flue framework being the first to target it. Agents can now be managed via the Cloudflare dashboard. Relevant if you're building agent workflows that need durable execution or want to deploy on Cloudflare Workers infrastructure.
+
+- **Haystack v2.30.2-rc1: Agent exit condition bug fixed** — https://github.com/deepset-ai/haystack/releases/tag/v2.30.2-rc1
+  A bug in Haystack's Agent component caused premature exits under the default `exit_conditions=[&quot;text&quot;]` — the agent would stop even when the final message wasn't a proper assistant text response. The fix ensures the agent only exits when the last message is a non-empty assistant text (or no tool invoker is configured). If you're using Haystack for pipelines, check for this unexpected halt behavior.
+
+- **Vercel Ship 2026 recap** — https://vercel.com/blog/vercel-ship-2026-recap
+  Vercel's annual ship event focused heavily on agent-first infrastructure — the pitch is that winning products will be built on infrastructure designed for agents from day one. The recap covers what was announced in London. Worth a skim to track where the Next.js/Vercel ecosystem is heading over the next 12 months.
+
+## Full digest
+
+- [P] [vercel_changelog] CLI deployment limits removed — https://vercel.com/changelog/cli-deployment-limits-removed — Vercel removes CLI deployment throttle; CI/CD and agent deployments can now run unrestricted
+- [P] [cloudflare_blog] Bringing more agent harnesses and frameworks to Cloudflare, starting with Flue — https://blog.cloudflare.com/agents-platform-flue-sdk/ — Cloudflare opens Agents SDK so any framework can run on it; Flue is first; dashboard agent management added
+- [P] [github_releases] Haystack v2.30.2-rc1 — https://github.com/deepset-ai/haystack/releases/tag/v2.30.2-rc1 — Bug fix: Agent no longer exits prematurely under default exit_conditions=[&quot;text&quot;]
+- [P] [vercel_blog] Vercel Ship 2026 recap — https://vercel.com/blog/vercel-ship-2026-recap — Vercel announces agent-first infra direction; marketing-heavy but signals where Next.js/edge is going
+- [M] [val_town_blog] Talk of the Town - June 2026 — https://blog.val.town/talk-of-the-town-june-2026 — Val.town community roundup of notable vals; worth skimming if you use val.town for quick scripts
+- [M] [cloudflare_blog] Cloudflare One Stack: agent-powered deployment — https://blog.cloudflare.com/cloudflare-one-stack/ — Agent skills for Zero Trust environment management; early-stage, narrow audience
+- [R] [google_blog] Google AMIE medical AI in Nature — https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/ — Medical AI research; not actionable for solo devs
+- [R] [hacker_news] Show HN: 8-bit CPU by EE students — https://github.com/c0rRupT9/STEPLA-1 — Hobbyist project; not relevant
+- [R] [hacker_news] Show HN: 8-bit baseball gamecast — https://ribbie.tv/watch — Entertainment; not relevant
+- [R] [hacker_news] Inkwash watercolor app — https://johnowhitaker.github.io/inkwash/about — Creative tool; not relevant
+- [R] [hacker_news] High-Res Neural Cellular Automata — https://cells2pixels.github.io/ — Interesting demo; not decision-changing
+- [R] [hacker_news] Capacitor Alarm Clock — https://github.com/ArcaEge/capacitor-alarm-clock — Hardware hack; not relevant
+- [R] [hacker_news] 184 free browser tools — https://brevio.pro — Generic tool collection; low signal
+- [R] [reddit_saas] Marketing is quite important! — https://www.reddit.com/r/SaaS/comments/1u8nefx/ — Obvious observation; no new information
+- [R] [reddit_saas] Real chain of command — https://www.reddit.com/r/SaaS/comments/1u8tude/ — Viral image post; reject
+- [R] [reddit_saas] First $19 sale — https://www.reddit.com/r/SaaS/comments/1u8mzdt/ — Feel-good post; not actionable
+- [R] [reddit_saas] $20K with 100 customers — https://www.reddit.com/r/SaaS/comments/1u8dywe/ — Anecdotal milestone; not actionable
+- [R] [reddit_saas] 7 paid customers on launch — https://www.reddit.com/r/SaaS/comments/1u8jpm1/ — Feel-good; no signal
+- [R] [reddit_saas] How to get first 10 customers — https://www.reddit.com/r/SaaS/comments/1u8tmvt/ — Generic Q&amp;A; no signal
+- [R] [reddit_saas] Nothing feels better — https://www.reddit.com/r/SaaS/comments/1u8zn60/ — Feel-good; no signal
+- [R] [reddit_saas] Half signups were bots from paid ads — https://www.reddit.com/r/SaaS/comments/1u8uuom/ — Anecdotal; common knowledge
+- [R] [reddit_saas] Chargeback disputes — https://www.reddit.com/r/SaaS/comments/1u8xaiq/ — Support question; no signal
+- [R] [reddit_saas] 3 paid customers today — https://www.reddit.com/r/SaaS/comments/1u8e2lj/ — Feel-good; no signal
+- [R] [reddit_saas] How to handle payments — https://www.reddit.com/r/SaaS/comments/1u8yr19/ — Beginner question; no signal
+- [R] [reddit_saas] Stuck in distribution loop — https://www.reddit.com/r/SaaS/comments/1u8q8po/ — Generic frustration; no signal
+- [R] [reddit_saas] Traffic not the hard part — https://www.reddit.com/r/SaaS/comments/1u8zuhy/ — Generic insight; no signal
+- [R] [reddit_saas] 13k MRR in 3 months — https://www.reddit.com/r/SaaS/comments/1u8z93e/ — Anecdotal; no signal
+- [R] [reddit_saas] UX fix 10 mins with Claude Code — https://www.reddit.com/r/SaaS/comments/1u8yfdz/ — Anecdotal; no signal
+- [R] [reddit_saas] AI agents buying SaaS speculation — https://www.reddit.com/r/SaaS/comments/1u8ybzi/ — Speculation; no concrete information
+- [R] [reddit_saas] Backend engineer against SaaS-in-90-days posts — https://www.reddit.com/r/SaaS/comments/1u89d6t/ — Opinion; no signal
+- [R] [reddit_saas] 280 deals in 7 weeks — https://www.reddit.com/r/SaaS/comments/1u8m8rt/ — Milestone share; no signal
+- [R] [reddit_saas] Web search quality in coding agents — https://www.reddit.com/r/SaaS/comments/1u8xk5a/ — Anecdotal complaint; no signal
+- [R] [reddit_saas] AI agent confused in Instagram SaaS — https://www.reddit.com/r/SaaS/comments/1u8q08l/ — Individual troubleshooting; no signal
+- [R] [reddit_saas] Built idea validation tool without validating it — https://www.reddit.com/r/SaaS/comments/1u903x2/ — Ironic self-reflection; no signal
+- [R] [reddit_saas] First paying customer after 4 months free — https://www.reddit.com/r/SaaS/comments/1u8crzi/ — Milestone; no signal
+- [R] [reddit_saas] Want all LLMs in one place — https://www.reddit.com/r/SaaS/comments/1u8zytl/ — Vague idea post; no signal
+- [R] [google_ai_dev] Gemini Deep Research (Albanian) — https://ai.google.dev/gemini-api/docs/deep-research?hl=sq — Non-English docs page; noise
+- [R] [github_releases] Next.js v16.3.0-canary.56 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.56 — Canary release, misc CI changes only
+- [R] [github_releases] Next.js v16.3.0-canary.55 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.55 — Canary release, CI-only change
+- [R] [vercel_blog] Weather Company on Vercel case study — https://vercel.com/blog/weather-company-vercel — Vendor marketing; not actionable</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+  
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
