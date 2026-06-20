@@ -41,7 +41,7 @@
       <div class="item-takeaway">GitHub has confirmed that a malicious VSCode extension was used to steal developer credentials and access over 3,800 repositories. This is a supply chain attack vector targeting developer workstations directly. Immediate action: audit all installed VSCode extensions, remove anything unfamiliar or low-reputation, and check your repositories for unauthorized access or committed secrets.</div>
       <div class="item-meta">
         <span><a href="https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/" target="_blank" rel="noopener">bleepingcomputer.com</a></span>
-        
+
       </div>
     </div>
 
@@ -50,7 +50,7 @@
       <div class="item-takeaway">OpenAI is filing confidentially with the SEC for an IPO, potentially as soon as Friday May 22. Going public changes OpenAI's corporate incentives significantly — quarterly earnings pressure, shareholder priorities, and regulatory scrutiny all increase. Builders relying on OpenAI APIs should watch for any pricing or rate limit changes that could follow increased investor visibility.</div>
       <div class="item-meta">
         <span><a href="https://www.cnbc.com/2026/05/20/openai-ipo-filing.html" target="_blank" rel="noopener">cnbc.com</a></span>
-        
+
       </div>
     </div>
 
@@ -59,7 +59,7 @@
       <div class="item-takeaway">OpenAI's model found a valid counterexample to a longstanding conjecture in discrete geometry, verified by Fields medalist Tim Gowers. This is the first credible instance of a frontier AI model making a genuinely original mathematical contribution — not solving a known problem but disproving a believed-true conjecture. A landmark AI capability milestone with implications for how we think about frontier model reasoning.</div>
       <div class="item-meta">
         <span><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/" target="_blank" rel="noopener">openai.com</a></span>
-        
+
       </div>
     </div>
 
@@ -68,7 +68,7 @@
       <div class="item-takeaway">Cohere cofounder Nick Frosst confirmed on Reddit that Command-A Plus is being released as open weights (BF16 on HuggingFace). This is a significant open-source model release from a credible enterprise AI company targeting RAG and agentic use cases. Worth evaluating against current open-weight alternatives if you need an enterprise-focused open model.</div>
       <div class="item-meta">
         <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tizmar/re_what_ever_happened_to_coheres_commanda_series/" target="_blank" rel="noopener">reddit.com</a></span>
-        
+
       </div>
     </div>
 
@@ -77,7 +77,7 @@
       <div class="item-takeaway">A builder created a reusable test harness to run identical coding tasks across multiple AI agent environments (Copilot, Pi, Claude Code, opencode) with both cloud and local models. The key finding is that harness design contributes significantly to coding agent performance, independent of the underlying model. Relevant if you are choosing or designing a coding agent workflow.</div>
       <div class="item-meta">
         <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tjbhjk/same_task_in_githubcopilot_pi_claudecode_and/" target="_blank" rel="noopener">reddit.com</a></span>
-        
+
       </div>
     </div>
 
@@ -86,7 +86,7 @@
       <div class="item-takeaway">ByteShape released Qwen 3.6 35B GGUF quantizations in both NTP and MTP families with benchmark-backed guidance on which to pick for different hardware configurations. If you are running Qwen 3.6 35B locally, this is the go-to reference for selecting the right GGUF and saves hours of personal benchmarking.</div>
       <div class="item-meta">
         <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tipihx/qwen_36_35b_gguf_ntp_vs_mtp_quantization_results/" target="_blank" rel="noopener">reddit.com</a></span>
-        
+
       </div>
     </div>
 
@@ -95,7 +95,7 @@
       <div class="item-takeaway">Detailed benchmarks of Qwen3.6 35B MoE on RTX 5080 16GB at real coding-agent context lengths. Key finding: MTP provides no benefit for this model at 128k context because memory bandwidth is the bottleneck. 56 tok/s is the practical ceiling. Useful data point for planning local inference for agentic code workloads.</div>
       <div class="item-meta">
         <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tiixql/rtx_5080_16gb_qwen36_35b_moe_at_128k_context_56/" target="_blank" rel="noopener">reddit.com</a></span>
-        
+
       </div>
     </div>
 
@@ -104,7 +104,7 @@
       <div class="item-takeaway">AMD announced pricing for their Ryzen AI Halo PC at $3,999 with 128GB of unified memory on-board. This establishes a new consumer-grade tier for local AI inference with large memory capacity, competing with Apple Silicon Mac Studio for local LLM use cases.</div>
       <div class="item-meta">
         <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tinl98/amd_ryzen_ai_halo_pc_will_cost_3999_with_128gb/" target="_blank" rel="noopener">reddit.com</a></span>
-        
+
       </div>
     </div>
 
@@ -113,7 +113,7 @@
       <div class="item-takeaway">Salvaged PS5 APU boards (AMD BC-250) are available on eBay at $50-150 each, featuring Zen 2, 16GB unified GDDR6, and RDNA 2. ROCm has been confirmed working on them. At this price point they are the cheapest viable GPU inference node available, significantly cheaper than any current discrete GPU with similar VRAM.</div>
       <div class="item-meta">
         <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tj4unp/amd_bc250_and_the_search_for_cheap_compute/" target="_blank" rel="noopener">reddit.com</a></span>
-        
+
       </div>
     </div>
 
@@ -122,7 +122,7 @@
       <div class="item-takeaway">An interactive tool that converts raw tokens-per-second into human-comprehensible equivalents (reading speed, typing speed). Useful for calibrating expectations about LLM inference performance and explaining token generation speed to non-technical stakeholders or clients.</div>
       <div class="item-meta">
         <span><a href="https://mikeveerman.github.io/tokenspeed/" target="_blank" rel="noopener">mikeveerman.github.io</a></span>
-        
+
       </div>
     </div>
 
@@ -131,7 +131,7 @@
       <div class="item-takeaway">A builder created a system running a Linux VM inside the browser (via WebAssembly) that bridges physical USB scanners via WebUSB + USB/IP protocol. This enables legacy SANE-compatible scanners to work in-browser without native drivers. The architectural pattern — browser WASM VM + WebUSB bridge — is novel and potentially applicable to other USB hardware classes.</div>
       <div class="item-meta">
         <span><a href="https://yes-we-scan.app/details" target="_blank" rel="noopener">yes-we-scan.app</a></span>
-        
+
       </div>
     </div>
 
@@ -140,14 +140,14 @@
       <div class="item-takeaway">HuggingFace added a model size filter to their benchmark dataset view, enabling comparison of models within a given parameter budget. Minor but genuinely useful for model selection tasks.</div>
       <div class="item-meta">
         <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tilvit/huggingface_benchmark_datasets_now_let_you_filter/" target="_blank" rel="noopener">reddit.com</a></span>
-        
+
       </div>
     </div>
   </main>
   <footer>
     The Nightly Librarian — built for builders, not boardrooms.
   </footer>
-  
+
   <script>
 function _nlThemeToggle(){
   var h=document.documentElement;

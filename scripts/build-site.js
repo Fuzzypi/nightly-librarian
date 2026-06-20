@@ -203,8 +203,16 @@ function write(filePath, content) {
     return;
   }
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
-  fs.writeFileSync(filePath, content, "utf8");
+  fs.writeFileSync(filePath, normalizeGeneratedText(content), "utf8");
   console.log(`wrote ${path.relative(REPO_ROOT, filePath)}`);
+}
+
+function normalizeGeneratedText(content) {
+  const normalized = String(content)
+    .replace(/\r\n/g, "\n")
+    .replace(/[ \t]+$/gm, "");
+
+  return normalized.endsWith("\n") ? normalized : `${normalized}\n`;
 }
 
 function formatIsoDateTime(timestamp) {
@@ -1700,6 +1708,7 @@ if (require.main === module) {
 module.exports = {
   buildRssFeed,
   briefSummaryText,
+  normalizeGeneratedText,
   parseBriefMd,
   renderBriefPage,
   renderIndexPage,

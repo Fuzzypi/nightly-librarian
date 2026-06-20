@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>June 20, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="6 stories cleared the bar, led by I found 10k GitHub repositories distributing Trojan malware, Zero-Touch OAuth for MCP, and Google Workspace threatening">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-06-20/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="June 20, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="6 stories cleared the bar, led by I found 10k GitHub repositories distributing Trojan malware, Zero-Touch OAuth for MCP, and Google Workspace threatening">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-06-20/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="June 20, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="6 stories cleared the bar, led by I found 10k GitHub repositories distributing Trojan malware, Zero-Touch OAuth for MCP, and Google Workspace threatening">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>June 20, 2026 · Report log</span>
+      <span>Jun 20, 2026, 2:15 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>June 20, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>6 stories cleared the bar, led by I found 10k GitHub repositories distributing Trojan malware, Zero-Touch OAuth for MCP, and Google Workspace threatening to block Firefox access.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>6 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://orchidfiles.com/github-repositories-distributing-malware/" target="_blank" rel="noopener">I found 10k GitHub repositories distributing Trojan malware</a></div>
+        <div class="item-takeaway">A security researcher (Orchid Files) identified roughly 10,000 GitHub repositories quietly distributing Trojan malware for over a year, undetected by GitHub's automated systems. Corroborated by Cybernews, TechTimes, and HN discussion. The campaign clones legitimate-looking repos, periodically force-pushes a fake &quot;Update README.md&quot; commit to dodge detection, and delivers a LuaJIT-based loader that resolves its C2 via a Polygon smart contract. The researcher released an open-source detection tool and the full list of identified repos. Takeaway: be more careful vetting any repo you clone — check star/commit history authenticity, not just search ranking, especially when pulling code or MCP servers from GitHub.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/" target="_blank" rel="noopener">Zero-Touch OAuth for MCP</a></div>
+        <div class="item-takeaway">The Model Context Protocol's Enterprise-Managed Authorization extension reached stable status on June 18, 2026: an Identity Assertion JWT Authorization Grant (ID-JAG) flow that lets an organization's identity provider (Okta, etc.) silently provision MCP server access on first login, replacing per-app OAuth consent screens. Already being adopted by Anthropic, Microsoft, and Okta. Directly relevant if you build or maintain MCP servers, especially for teams/enterprise deployment.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html" target="_blank" rel="noopener">Google Workspace threatening to block Firefox access</a></div>
+        <div class="item-takeaway">Multiple developers report that Firefox now triggers a block/warning when accessing Gmail, Drive, or Calendar on certain Google Workspace accounts, pushing users toward Chrome. Corroborating reports (HN, follow-up coverage) suggest this is tied to IT security/device-compliance features some organizations are enabling, not a blanket Google-wide policy against Firefox. If you administer or rely on a Workspace account, worth checking your org's device-compliance settings before assuming it's a bug.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jun/18/datasette-apps/" target="_blank" rel="noopener">Datasette Apps: Host custom HTML applications inside Datasette</a></div>
+        <div class="item-takeaway">Simon Willison describes Datasette Apps, a feature/plugin that lets you host custom HTML applications directly inside a Datasette instance — turning Datasette into a lightweight app-hosting layer on top of your data. Still early/alpha, but a concrete, usable feature if you use Datasette for internal tools or data exploration.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/littlefs-project/littlefs/blob/master/DESIGN.md" target="_blank" rel="noopener">The design of littlefs</a></div>
+        <div class="item-takeaway">The official design document for littlefs, a small, fail-safe filesystem built for embedded/flash storage, covering how it achieves power-loss resilience and wear leveling within bounded RAM. A solid reference if you're building anything touching embedded flash storage.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.greybeam.ai/blog/duckdb-internals-part-1" target="_blank" rel="noopener">DuckDB Internals: Why Is DuckDB Fast? (Part 1)</a></div>
+        <div class="item-takeaway">A technical deep-dive into the architectural choices behind DuckDB's query performance — vectorized execution, columnar storage, and query optimization. Useful if you use DuckDB for local/embedded analytics and want to understand its performance characteristics.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lobste.rs/s/crl4fj/what_are_your_favorite_lobste_rs_comments" target="_blank" rel="noopener">What are your Favorite Lobste.rs Comments?</a>
+        </div>
+        <div class="item-takeaway">A meta-discussion thread on Lobsters asking users to share their favorite old comments from the site's history. Pure community nostalgia with no new information or technical content.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="http://manishearth.github.io/blog/2026/06/17/the-future-of-the-con-is-already-here/" target="_blank" rel="noopener">The Future of the Con Is Already Here, It's Just Not Evenly Distributed</a>
+        </div>
+        <div class="item-takeaway">A personal essay riffing on William Gibson's quote to comment on tech conference culture. Speculative cultural commentary without a concrete claim or actionable takeaway.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html" target="_blank" rel="noopener">Google Workspace threatening to block Firefox access</a>
+        </div>
+        <div class="item-takeaway">Multiple developers report that Firefox now triggers a block/warning when accessing Gmail, Drive, or Calendar on certain Google Workspace accounts, pushing users toward Chrome. Corroborating reports (HN, follow-up coverage) suggest this is tied to IT security/device-compliance features some organizations are enabling, not a blanket Google-wide policy against Firefox. If you administer or rely on a Workspace account, worth checking your org's device-compliance settings before assuming it's a bug.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://movq.de/blog/postings/2026-06-16/0/POSTING-en.html" target="_blank" rel="noopener">What was nice about the UI of Windows 2000</a>
+        </div>
+        <div class="item-takeaway">A nostalgia post reflecting on UI design choices in Windows 2000. Interesting trivia, no actionable or current relevance.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/littlefs-project/littlefs/blob/master/DESIGN.md" target="_blank" rel="noopener">The design of littlefs</a>
+        </div>
+        <div class="item-takeaway">The official design document for littlefs, a small, fail-safe filesystem built for embedded/flash storage, covering how it achieves power-loss resilience and wear leveling within bounded RAM. A solid reference if you're building anything touching embedded flash storage.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://thenewstack.io/vim-creator-bram-moolenaars-forgotten-programming-language-zimbu/" target="_blank" rel="noopener">Vim Creator Bram Moolenaar's Forgotten Programming Language, Zimbu (2023)</a>
+        </div>
+        <div class="item-takeaway">A historical retrospective (originally from 2023) on Zimbu, a little-known programming language created by Vim's author. Interesting history, no current relevance.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://bd103.dev/blog/2026-06-18-git-rebase-onto/" target="_blank" rel="noopener">Updating Stacked Pull Requests with git rebase --onto</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://bal-e.org/blog/2026/offset-of-slices/" target="_blank" rel="noopener">offset_of! slices</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://yoebuild.org/blog/time-for-a-new-build-system/" target="_blank" rel="noopener">Is It Time for a New Embedded Linux Build System?</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://yogthos.net/posts/2026-06-17-perlin-flow.html" target="_blank" rel="noopener">The Hidden Elegance of Gradient Noise</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://abhinavsarkar.net/posts/nix-for-haskell-static-builds/" target="_blank" rel="noopener">Nix for Haskell: Static Builds</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blainsmith.com/articles/rfc-10008-http-query-method/" target="_blank" rel="noopener">RFC 10008: The HTTP QUERY Method</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://aresluna.org/show-your-hands-honor/" target="_blank" rel="noopener">Show your hands honor for the strange power they bring you</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://orchidfiles.com/github-repositories-distributing-malware/" target="_blank" rel="noopener">I discovered a large-scale malware distribution on GitHub</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ps.tc/pages/blog-usbliter8.html" target="_blank" rel="noopener">usbliter8- Apple A12/A13 bootrom exploit</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.greybeam.ai/blog/duckdb-internals-part-1" target="_blank" rel="noopener">DuckDB Internals: Why Is DuckDB Fast? (Part 1)</a>
+        </div>
+        <div class="item-takeaway">A technical deep-dive into the architectural choices behind DuckDB's query performance — vectorized execution, columnar storage, and query optimization. Useful if you use DuckDB for local/embedded analytics and want to understand its performance characteristics.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://news.mit.edu/2026/to-study-how-chips-really-work-mit-researchers-built-their-own-operating-system-0610" target="_blank" rel="noopener">To study how chips work, MIT researchers built their own operating system</a>
+        </div>
+        <div class="item-takeaway">MIT researchers built a custom operating system purely as a research tool to study low-level chip behavior. Academic research with no near-term practical action for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://mickael.canouil.fr/posts/2026-06-15-gribouille-0-3/" target="_blank" rel="noopener">Gribouille 0.3.0: A Grammar of Graphics for Typst</a>
+        </div>
+        <div class="item-takeaway">Version 0.3.0 release of Gribouille, a ggplot2-style plotting library for the Typst typesetting system. Niche tool update for a narrow audience.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://orchidfiles.com/github-repositories-distributing-malware/" target="_blank" rel="noopener">I found 10k GitHub repositories distributing Trojan malware</a>
+        </div>
+        <div class="item-takeaway">A security researcher (Orchid Files) identified roughly 10,000 GitHub repositories quietly distributing Trojan malware for over a year, undetected by GitHub's automated systems. Corroborated by Cybernews, TechTimes, and HN discussion. The campaign clones legitimate-looking repos, periodically force-pushes a fake &quot;Update README.md&quot; commit to dodge detection, and delivers a LuaJIT-based loader that resolves its C2 via a Polygon smart contract. The researcher released an open-source detection tool and the full list of identified repos. Takeaway: be more careful vetting any repo you clone — check star/commit history authenticity, not just search ranking, especially when pulling code or MCP servers from GitHub.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/" target="_blank" rel="noopener">Zero-Touch OAuth for MCP</a>
+        </div>
+        <div class="item-takeaway">The Model Context Protocol's Enterprise-Managed Authorization extension reached stable status on June 18, 2026: an Identity Assertion JWT Authorization Grant (ID-JAG) flow that lets an organization's identity provider (Okta, etc.) silently provision MCP server access on first login, replacing per-app OAuth consent screens. Already being adopted by Anthropic, Microsoft, and Okta. Directly relevant if you build or maintain MCP servers, especially for teams/enterprise deployment.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jun/18/datasette-apps/" target="_blank" rel="noopener">Datasette Apps: Host custom HTML applications inside Datasette</a>
+        </div>
+        <div class="item-takeaway">Simon Willison describes Datasette Apps, a feature/plugin that lets you host custom HTML applications directly inside a Datasette instance — turning Datasette into a lightweight app-hosting layer on top of your data. Still early/alpha, but a concrete, usable feature if you use Datasette for internal tools or data exploration.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://dfdxlabs.com/research/2026/robotics-setup/" target="_blank" rel="noopener">Building a robotics research setup that lives next to my desk</a>
+        </div>
+        <div class="item-takeaway">Quick framing, since the post is long: I did robotic manipulation research at OpenAI from 2017–2020, and the tabletop setup back then cost r…</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.jacc.org/doi/10.1016/j.jaccas.2025.104885" target="_blank" rel="noopener">Ice water drowning survival of young patient (2025)</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.ui.com/article/introducing-enterprise-nas" target="_blank" rel="noopener">Ubiquiti: Enterprise NAS, Built on ZFS</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/cajal-technologies/talos" target="_blank" rel="noopener">Show HN: Talos – Open-source WASM interpreter for Lean</a>
+        </div>
+        <div class="item-takeaway">At Cajal (YC W26) we’re excited to share Talos ( https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;cajal-technologies&amp;#x2F;talos ), an open source framework…</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.cs.cornell.edu/courses/cs6120/2025fa/self-guided/" target="_blank" rel="noopener">CS 6120: Advanced Compilers: The Self-Guided Online Course (2020)</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://americanexpress.io/cell-based-architecture-for-resilient-payment-systems/" target="_blank" rel="noopener">Cell-based architecture for resilient payment systems</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://nelson.cloud/.gitignore-isnt-the-only-way-to-ignore-files-in-git/" target="_blank" rel="noopener">.gitignore Isn't the only way to ignore files in Git</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://letsencrypt.status.io/#2026" target="_blank" rel="noopener">Many Let's Encrypt renewals had errors today</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.kcl.ac.uk/news/hospitals-and-universities-repurposing-drugs-at-90-lower-cost" target="_blank" rel="noopener">Hospitals and universities repurposing drugs at lower cost</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://arun.is/blog/jr-logo/" target="_blank" rel="noopener">How Japan's railways stayed one while splitting apart</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.thatprivacyguy.com/blog/elkjop-forced-consent-fine/" target="_blank" rel="noopener">I told them forced consent was unlawful. 5 years later it cost Elkjop €1.8M</a>
+        </div>
+        <div class="item-takeaway">https:&amp;#x2F;&amp;#x2F;web.archive.org&amp;#x2F;web&amp;#x2F;20260618212028&amp;#x2F;https:&amp;#x2F;&amp;#x2F;www.thatp... https:&amp;#x2F;&amp;#x2F;archive.ph&amp;#x2F;I4zjA</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.intheweights.com/" target="_blank" rel="noopener">Show HN: Are You in the Weights?</a>
+        </div>
+        <div class="item-takeaway">With more traffic moving off-web and into LLMs, I got curious about what traces we leave &quot;in the weights&quot;. My design partner and I built a s…</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="http://paulbuchheit.blogspot.com/2010/02/if-your-product-is-great-it-doesnt-need.html" target="_blank" rel="noopener">If your product is Great, it doesn't need to be Good (2010)</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.elenarossini.com/w-social-public-institutions-and-the-theater-of-european-digital-sovereignty/" target="_blank" rel="noopener">W Social, public institutions and the theater of European digital sovereignty</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://tester.army" target="_blank" rel="noopener">Launch HN: TesterArmy (YC P26) – Agents that test web and mobile apps</a>
+        </div>
+        <div class="item-takeaway">Hey HN - we’re Oskar, Szymon, and Piotr, and we’re building TesterArmy ( https:&amp;#x2F;&amp;#x2F;tester.army ). TesterArmy is an agentic testing p…</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://spectrum.ieee.org/modos-e-paper-monitor" target="_blank" rel="noopener">Modos Color Monitor Pushes E-Paper Displays Further</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Jun/18/datasette-apps/#atom-everything" target="_blank" rel="noopener">Datasette Apps: Host custom HTML applications inside Datasette</a>
+        </div>
+        <div class="item-takeaway">Today we launched a new plugin for Datasette, datasette-apps , with this launch announcement post on the Datasette project blog. That post h…</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Jun/18/datasette-acl/#atom-everything" target="_blank" rel="noopener">datasette-acl 0.6a0</a>
+        </div>
+        <div class="item-takeaway">Alpha release of datasette-acl, expanding the plugin from table-only permissions toward a general resource-sharing/access-control system for Datasette. Overlaps with the broader Datasette Apps story already covered separately.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Jun/15/datasette-apps-2/#atom-everything" target="_blank" rel="noopener">datasette-apps 0.1a3</a>
+        </div>
+        <div class="item-takeaway">Patch release of datasette-apps containing two permission bug fixes (create-app permission enforcement, edit/delete permission rules). No new user-facing functionality.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: d39e9812-7aef-4d3f-bbb3-58da86ff1c74
+Started: 2026-06-20T06:11:03.019Z
+Completed: 2026-06-20T06:15:37.118Z
+
+## Worth attention
+
+- **I found 10k GitHub repositories distributing Trojan malware**
+  https://orchidfiles.com/github-repositories-distributing-malware/
+  A security researcher (Orchid Files) identified roughly 10,000 GitHub repositories quietly distributing Trojan malware for over a year, undetected by GitHub's automated systems. Corroborated by Cybernews, TechTimes, and HN discussion. The campaign clones legitimate-looking repos, periodically force-pushes a fake &quot;Update README.md&quot; commit to dodge detection, and delivers a LuaJIT-based loader that resolves its C2 via a Polygon smart contract. The researcher released an open-source detection tool and the full list of identified repos. Takeaway: be more careful vetting any repo you clone — check star/commit history authenticity, not just search ranking, especially when pulling code or MCP servers from GitHub.
+- **Zero-Touch OAuth for MCP**
+  https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/
+  The Model Context Protocol's Enterprise-Managed Authorization extension reached stable status on June 18, 2026: an Identity Assertion JWT Authorization Grant (ID-JAG) flow that lets an organization's identity provider (Okta, etc.) silently provision MCP server access on first login, replacing per-app OAuth consent screens. Already being adopted by Anthropic, Microsoft, and Okta. Directly relevant if you build or maintain MCP servers, especially for teams/enterprise deployment.
+- **Google Workspace threatening to block Firefox access**
+  https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html
+  Multiple developers report that Firefox now triggers a block/warning when accessing Gmail, Drive, or Calendar on certain Google Workspace accounts, pushing users toward Chrome. Corroborating reports (HN, follow-up coverage) suggest this is tied to IT security/device-compliance features some organizations are enabling, not a blanket Google-wide policy against Firefox. If you administer or rely on a Workspace account, worth checking your org's device-compliance settings before assuming it's a bug.
+- **Datasette Apps: Host custom HTML applications inside Datasette**
+  https://simonwillison.net/2026/Jun/18/datasette-apps/
+  Simon Willison describes Datasette Apps, a feature/plugin that lets you host custom HTML applications directly inside a Datasette instance — turning Datasette into a lightweight app-hosting layer on top of your data. Still early/alpha, but a concrete, usable feature if you use Datasette for internal tools or data exploration.
+- **The design of littlefs**
+  https://github.com/littlefs-project/littlefs/blob/master/DESIGN.md
+  The official design document for littlefs, a small, fail-safe filesystem built for embedded/flash storage, covering how it achieves power-loss resilience and wear leveling within bounded RAM. A solid reference if you're building anything touching embedded flash storage.
+- **DuckDB Internals: Why Is DuckDB Fast? (Part 1)**
+  https://www.greybeam.ai/blog/duckdb-internals-part-1
+  A technical deep-dive into the architectural choices behind DuckDB's query performance — vectorized execution, columnar storage, and query optimization. Useful if you use DuckDB for local/embedded analytics and want to understand its performance characteristics.
+
+## Full digest
+
+- [R] [lobsters] What are your Favorite Lobste.rs Comments? — https://lobste.rs/s/crl4fj/what_are_your_favorite_lobste_rs_comments — A meta-discussion thread on Lobsters asking users to share their favorite old comments from the site's history. Pure community nostalgia with no new information or technical content.
+- [R] [lobsters] The Future of the Con Is Already Here, It's Just Not Evenly Distributed — http://manishearth.github.io/blog/2026/06/17/the-future-of-the-con-is-already-here/ — A personal essay riffing on William Gibson's quote to comment on tech conference culture. Speculative cultural commentary without a concrete claim or actionable takeaway.
+- [P] [lobsters] Google Workspace threatening to block Firefox access — https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html — Multiple developers report that Firefox now triggers a block/warning when accessing Gmail, Drive, or Calendar on certain Google Workspace accounts, pushing users toward Chrome. Corroborating reports (HN, follow-up coverage) suggest this is tied to IT security/device-compliance features some organizations are enabling, not a blanket Google-wide policy against Firefox. If you administer or rely on a Workspace account, worth checking your org's device-compliance settings before assuming it's a bug.
+- [R] [lobsters] What was nice about the UI of Windows 2000 — https://movq.de/blog/postings/2026-06-16/0/POSTING-en.html — A nostalgia post reflecting on UI design choices in Windows 2000. Interesting trivia, no actionable or current relevance.
+- [P] [lobsters] The design of littlefs — https://github.com/littlefs-project/littlefs/blob/master/DESIGN.md — The official design document for littlefs, a small, fail-safe filesystem built for embedded/flash storage, covering how it achieves power-loss resilience and wear leveling within bounded RAM. A solid reference if you're building anything touching embedded flash storage.
+- [R] [lobsters] Vim Creator Bram Moolenaar's Forgotten Programming Language, Zimbu (2023) — https://thenewstack.io/vim-creator-bram-moolenaars-forgotten-programming-language-zimbu/ — A historical retrospective (originally from 2023) on Zimbu, a little-known programming language created by Vim's author. Interesting history, no current relevance.
+- [R] [lobsters] Updating Stacked Pull Requests with git rebase --onto — https://bd103.dev/blog/2026-06-18-git-rebase-onto/ — Comments
+- [R] [lobsters] offset_of! slices — https://bal-e.org/blog/2026/offset-of-slices/ — Comments
+- [R] [lobsters] Is It Time for a New Embedded Linux Build System? — https://yoebuild.org/blog/time-for-a-new-build-system/ — Comments
+- [R] [lobsters] The Hidden Elegance of Gradient Noise — https://yogthos.net/posts/2026-06-17-perlin-flow.html — Comments
+- [R] [lobsters] Nix for Haskell: Static Builds — https://abhinavsarkar.net/posts/nix-for-haskell-static-builds/ — Comments
+- [R] [lobsters] RFC 10008: The HTTP QUERY Method — https://blainsmith.com/articles/rfc-10008-http-query-method/ — Comments
+- [R] [lobsters] Show your hands honor for the strange power they bring you — https://aresluna.org/show-your-hands-honor/ — Comments
+- [R] [lobsters] I discovered a large-scale malware distribution on GitHub — https://orchidfiles.com/github-repositories-distributing-malware/ — Comments
+- [R] [lobsters] usbliter8- Apple A12/A13 bootrom exploit — https://ps.tc/pages/blog-usbliter8.html — Comments
+- [P] [hn-top] DuckDB Internals: Why Is DuckDB Fast? (Part 1) — https://www.greybeam.ai/blog/duckdb-internals-part-1 — A technical deep-dive into the architectural choices behind DuckDB's query performance — vectorized execution, columnar storage, and query optimization. Useful if you use DuckDB for local/embedded analytics and want to understand its performance characteristics.
+- [R] [hn-top] To study how chips work, MIT researchers built their own operating system — https://news.mit.edu/2026/to-study-how-chips-really-work-mit-researchers-built-their-own-operating-system-0610 — MIT researchers built a custom operating system purely as a research tool to study low-level chip behavior. Academic research with no near-term practical action for a solo software builder.
+- [R] [hn-top] Gribouille 0.3.0: A Grammar of Graphics for Typst — https://mickael.canouil.fr/posts/2026-06-15-gribouille-0-3/ — Version 0.3.0 release of Gribouille, a ggplot2-style plotting library for the Typst typesetting system. Niche tool update for a narrow audience.
+- [P] [hn-top] I found 10k GitHub repositories distributing Trojan malware — https://orchidfiles.com/github-repositories-distributing-malware/ — A security researcher (Orchid Files) identified roughly 10,000 GitHub repositories quietly distributing Trojan malware for over a year, undetected by GitHub's automated systems. Corroborated by Cybernews, TechTimes, and HN discussion. The campaign clones legitimate-looking repos, periodically force-pushes a fake &quot;Update README.md&quot; commit to dodge detection, and delivers a LuaJIT-based loader that resolves its C2 via a Polygon smart contract. The researcher released an open-source detection tool and the full list of identified repos. Takeaway: be more careful vetting any repo you clone — check star/commit history authenticity, not just search ranking, especially when pulling code or MCP servers from GitHub.
+- [P] [hn-top] Zero-Touch OAuth for MCP — https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/ — The Model Context Protocol's Enterprise-Managed Authorization extension reached stable status on June 18, 2026: an Identity Assertion JWT Authorization Grant (ID-JAG) flow that lets an organization's identity provider (Okta, etc.) silently provision MCP server access on first login, replacing per-app OAuth consent screens. Already being adopted by Anthropic, Microsoft, and Okta. Directly relevant if you build or maintain MCP servers, especially for teams/enterprise deployment.
+- [P] [hn-top] Datasette Apps: Host custom HTML applications inside Datasette — https://simonwillison.net/2026/Jun/18/datasette-apps/ — Simon Willison describes Datasette Apps, a feature/plugin that lets you host custom HTML applications directly inside a Datasette instance — turning Datasette into a lightweight app-hosting layer on top of your data. Still early/alpha, but a concrete, usable feature if you use Datasette for internal tools or data exploration.
+- [R] [hn-top] Building a robotics research setup that lives next to my desk — https://dfdxlabs.com/research/2026/robotics-setup/ — Quick framing, since the post is long: I did robotic manipulation research at OpenAI from 2017–2020, and the tabletop setup back then cost r…
+- [R] [hn-top] Ice water drowning survival of young patient (2025) — https://www.jacc.org/doi/10.1016/j.jaccas.2025.104885 — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Ubiquiti: Enterprise NAS, Built on ZFS — https://blog.ui.com/article/introducing-enterprise-nas — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Show HN: Talos – Open-source WASM interpreter for Lean — https://github.com/cajal-technologies/talos — At Cajal (YC W26) we’re excited to share Talos ( https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;cajal-technologies&amp;#x2F;talos ), an open source framework…
+- [R] [hn-top] CS 6120: Advanced Compilers: The Self-Guided Online Course (2020) — https://www.cs.cornell.edu/courses/cs6120/2025fa/self-guided/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Cell-based architecture for resilient payment systems — https://americanexpress.io/cell-based-architecture-for-resilient-payment-systems/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] .gitignore Isn't the only way to ignore files in Git — https://nelson.cloud/.gitignore-isnt-the-only-way-to-ignore-files-in-git/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Many Let's Encrypt renewals had errors today — https://letsencrypt.status.io/#2026 — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Hospitals and universities repurposing drugs at lower cost — https://www.kcl.ac.uk/news/hospitals-and-universities-repurposing-drugs-at-90-lower-cost — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] How Japan's railways stayed one while splitting apart — https://arun.is/blog/jr-logo/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] I told them forced consent was unlawful. 5 years later it cost Elkjop €1.8M — https://www.thatprivacyguy.com/blog/elkjop-forced-consent-fine/ — https:&amp;#x2F;&amp;#x2F;web.archive.org&amp;#x2F;web&amp;#x2F;20260618212028&amp;#x2F;https:&amp;#x2F;&amp;#x2F;www.thatp... https:&amp;#x2F;&amp;#x2F;archive.ph&amp;#x2F;I4zjA
+- [R] [hn-top] Show HN: Are You in the Weights? — https://www.intheweights.com/ — With more traffic moving off-web and into LLMs, I got curious about what traces we leave &quot;in the weights&quot;. My design partner and I built a s…
+- [R] [hn-top] If your product is Great, it doesn't need to be Good (2010) — http://paulbuchheit.blogspot.com/2010/02/if-your-product-is-great-it-doesnt-need.html — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] W Social, public institutions and the theater of European digital sovereignty — https://blog.elenarossini.com/w-social-public-institutions-and-the-theater-of-european-digital-sovereignty/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Launch HN: TesterArmy (YC P26) – Agents that test web and mobile apps — https://tester.army — Hey HN - we’re Oskar, Szymon, and Piotr, and we’re building TesterArmy ( https:&amp;#x2F;&amp;#x2F;tester.army ). TesterArmy is an agentic testing p…
+- [R] [hn-top] Modos Color Monitor Pushes E-Paper Displays Further — https://spectrum.ieee.org/modos-e-paper-monitor — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [simon-willison] Datasette Apps: Host custom HTML applications inside Datasette — https://simonwillison.net/2026/Jun/18/datasette-apps/#atom-everything — Today we launched a new plugin for Datasette, datasette-apps , with this launch announcement post on the Datasette project blog. That post h…
+- [R] [simon-willison] datasette-acl 0.6a0 — https://simonwillison.net/2026/Jun/18/datasette-acl/#atom-everything — Alpha release of datasette-acl, expanding the plugin from table-only permissions toward a general resource-sharing/access-control system for Datasette. Overlaps with the broader Datasette Apps story already covered separately.
+- [R] [simon-willison] datasette-apps 0.1a3 — https://simonwillison.net/2026/Jun/15/datasette-apps-2/#atom-everything — Patch release of datasette-apps containing two permission bug fixes (create-app permission enforcement, edit/delete permission rules). No new user-facing functionality.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>

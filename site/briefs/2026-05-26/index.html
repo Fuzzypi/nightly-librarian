@@ -41,7 +41,7 @@
       <div class="item-takeaway">Arxiv paper documenting 'constraint decay' — LLM agents progressively fail to maintain stated constraints (security requirements, API contracts, error handling rules) across multi-step backend code generation tasks. The longer and more complex the session, the more constraints are silently dropped. Directly relevant to anyone running agentic coding loops (nightly-librarian, second-brain). Practical mitigations: shorter sessions, explicit re-injection of constraints at each step, structured output validation. No vendor-provided fix exists — this is a fundamental model behavior pattern.</div>
       <div class="item-meta">
         <span><a href="https://arxiv.org/abs/2605.06445" target="_blank" rel="noopener">arxiv.org</a></span>
-        
+
       </div>
     </div>
 
@@ -50,7 +50,7 @@
       <div class="item-takeaway">llama.cpp PR #22929 fixes KV cache checkpoint creation in the server — enabling save and restore of conversation state without reprocessing the full context. The Reddit discussion highlights the workflow value: discuss a problem for 50k tokens, then kick off a long implementation task and save your place. Particularly useful for solo devs running long agentic coding sessions on local models via llama.cpp or Ollama. Watch for this to ship in a stable llama.cpp release.</div>
       <div class="item-meta">
         <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1tn0jyp/server_fix_checkpoints_creation_by_jacekpoplawski/" target="_blank" rel="noopener">reddit.com</a></span>
-        
+
       </div>
     </div>
 
@@ -59,14 +59,14 @@
       <div class="item-takeaway">DeepSeek Reasonix is a coding agent built on DeepSeek V4 with aggressive KV caching to reduce cost per agent loop. More importantly, the related HN thread confirms DeepSeek made the V4 Pro pricing discount permanent. If you're evaluating API providers for agent workloads, DeepSeek V4 Pro is now a stable pricing option rather than a promotional one. Check current pricing against Anthropic/OpenAI for batch/cached workloads.</div>
       <div class="item-meta">
         <span><a href="https://esengine.github.io/DeepSeek-Reasonix/" target="_blank" rel="noopener">esengine.github.io</a></span>
-        
+
       </div>
     </div>
   </main>
   <footer>
     The Nightly Librarian — built for builders, not boardrooms.
   </footer>
-  
+
   <script>
 function _nlThemeToggle(){
   var h=document.documentElement;

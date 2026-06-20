@@ -50,7 +50,7 @@
     </div>
     <h2>Signals</h2>
     <div class="item-stack">
-      
+
       <div class="item">
         <div class="item-title">1. @ai-sdk/google@3.0.71</div>
         <div class="item-takeaway">### Patch Changes - 59530cf: fix(google): emit Vertex no-args streaming tool calls and preserve thoughtSignature Vertex emits a no-args function call as a single chunk shaped `{ functionCall: { name: 'X' } }` with no `args`, no `partialArgs`, and no `willContinue`. The streaming parser had no branch for this shape, so the call was dropped along with any `thoughtSignature` it carried. For Gemini 3 thinking models this caused the next multi-turn step to 400 with `missing thought_signature`. BUILDER IMPACT: Directly affects tools and APIs that solo developers rely on in daily workflows. Highly actionable — concrete steps available. Evidence: official_changelog Source: https://github.com/vercel/ai/releases/tag/%40ai-sdk/google%403.0.71</div>
@@ -158,7 +158,7 @@ Unsubscribe | Archive
     <span class="footer-brand">The Nightly Librarian</span>
     <span class="footer-sub">Built for builders, not boardrooms.</span>
   </footer>
-  
+
   <script>
 function _nlThemeToggle(){
   var h=document.documentElement;
