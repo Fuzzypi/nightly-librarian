@@ -5,23 +5,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>June 20, 2026 — The Nightly Librarian</title>
-  <meta name="description" content="Tonight's brief tracks AI Operations / Agent Control, Model + API Changes, Tools Worth Testing, and Data Infrastructure / Verification / Scraping.">
+  <meta name="description" content="Tonight's brief tracks AI Operations / Agent Control, Small Business Automation, Data Infrastructure / Verification / Scraping, and Tools Worth Testing.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/briefs/2026-06-20/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="June 20, 2026 | The Nightly Librarian">
-  <meta property="og:description" content="Tonight's brief tracks AI Operations / Agent Control, Model + API Changes, Tools Worth Testing, and Data Infrastructure / Verification / Scraping.">
+  <meta property="og:description" content="Tonight's brief tracks AI Operations / Agent Control, Small Business Automation, Data Infrastructure / Verification / Scraping, and Tools Worth Testing.">
   <meta property="og:url" content="https://thenightlylibrarian.com/briefs/2026-06-20/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="June 20, 2026 | The Nightly Librarian">
-  <meta name="twitter:description" content="Tonight's brief tracks AI Operations / Agent Control, Model + API Changes, Tools Worth Testing, and Data Infrastructure / Verification / Scraping.">
+  <meta name="twitter:description" content="Tonight's brief tracks AI Operations / Agent Control, Small Business Automation, Data Infrastructure / Verification / Scraping, and Tools Worth Testing.">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"I found 10k GitHub repositories distributing Trojan malware","description":"Tonight's brief tracks AI Operations / Agent Control, Model + API Changes, Tools Worth Testing, and Data Infrastructure / Verification / Scraping. Synthesized Nightly Librarian run with 6 promoted item(s), 14 scored item(s), and 8 rejected item(s). The lead source signal is I found 10k GitHub repositories distributing Trojan malware: An independent investigation identified roughly 10,000 GitHub repositories distributing Trojan malware, undetected for over a year. The operator read is Directly ac","url":"https://thenightlylibrarian.com/briefs/2026-06-20/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-06-20","dateModified":"2026-06-20"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"@composio/core@0.11.0","description":"Tonight's brief tracks AI Operations / Agent Control, Small Business Automation, Data Infrastructure / Verification / Scraping, and Tools Worth Testing. Synthesized Nightly Librarian run with 6 promoted item(s), 40 scored item(s), and 34 rejected item(s). The lead source signal is @composio/core@0.11.0: ### Minor Changes - a94715f: Forward `userId` when creating trigger instances so trigger 2FA flows can verify connected account ownership. - 44e5458: Remove the legacy `composio.tools.createCusto","url":"https://thenightlylibrarian.com/briefs/2026-06-20/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-06-20","dateModified":"2026-06-20"}</script>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -41,20 +41,20 @@
   <main>
     <a class="back-link" href="/">All briefs</a>
     <h1>June 20, 2026</h1>
-    <div class="meta" style="margin-top:0.4rem;"><span>AI Operations / Agent Control</span><span>Model + API Changes</span><span>Tools Worth Testing</span><span>Data Infrastructure / Verification / Scraping</span></div>
-    <p class="lead-summary" style="margin-top:0.85rem;">Directly actionable: vet provenance before cloning or running random GitHub repos, tools, or MCP servers — a routine part of a solo builder's workflow.</p>
+    <div class="meta" style="margin-top:0.4rem;"><span>AI Operations / Agent Control</span><span>Small Business Automation</span><span>Data Infrastructure / Verification / Scraping</span><span>Tools Worth Testing</span></div>
+    <p class="lead-summary" style="margin-top:0.85rem;">Composio shipped fixes that remove several failure modes in agent tool execution, especially around MCP-backed toolkits and malformed tool-call arguments.</p>
     <h2>Worth mentioning</h2>
 
     <div class="item">
       <div class="item-row">
         <span class="item-num">1.</span>
         <div>
-          <div class="item-title"><a href="https://orchidfiles.com/github-repositories-distributing-malware/" target="_blank" rel="noopener">I found 10k GitHub repositories distributing Trojan malware</a></div>
-          <div class="item-takeaway">Directly actionable: vet provenance before cloning or running random GitHub repos, tools, or MCP servers — a routine part of a solo builder's workflow.</div>
-          <div class="item-facts"><div>An independent investigation identified roughly 10,000 GitHub repositories distributing Trojan malware, undetected for over a year.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: GitHub's official response/remediation status wasn't confirmed at time of writing; scope of true victim count is researcher-estimated.</div>
+          <div class="item-title"><a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/core%400.11.0" target="_blank" rel="noopener">@composio/core@0.11.0</a></div>
+          <div class="item-takeaway">Composio shipped fixes that remove several failure modes in agent tool execution, especially around MCP-backed toolkits and malformed tool-call arguments.</div>
+          <div class="item-facts"><div>### Minor Changes - a94715f: Forward `userId` when creating trigger instances so trigger 2FA flows can verify connected account ownership. - 44e5458: Remove the legacy `composio.tools.createCustomTool(...)` in-memory registry API. Use Tool Router custom tools via `experimental_createTool`, `experimental_createToolkit`, and `composio.create(..., { experimental: { customTools, customToolkits } })` instead. ### Patch Changes - 22a9171: Defer telemetry batch and error sends so instrumentation does not wait for telemetry network requests before returning SDK results or rethrowing SDK errors. - 93b67e8: Fix automatic file upload/download substitution for file schemas that accept either a single file or a list of files. The file modifier now selects composed-schema branches by runtime value shape, so `anyOf(file, array )` uploads or downloads each file when the tool receives a list while preserving existing single-file behavior. - b69cef1: Tolerate dangling `$ref` pointers in tool schemas the Composio API ships without a matching `$defs` entry. Some toolkits (e.g. `GMAIL_FETCH_EMAILS`) emit `outputParameters` with `&quot;$ref&quot;: &quot;#/$defs/FetchEmailsResponse&quot;` while never declaring a top-level `</div></div>
+
           <div class="item-meta">
-            <span><a href="https://orchidfiles.com/github-repositories-distributing-malware/" target="_blank" rel="noopener">orchidfiles.com</a></span>
+            <span><a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/core%400.11.0" target="_blank" rel="noopener">github.com</a></span>
             <span>AI Operations / Agent Control</span>
             <span>2026-06-20</span>
           </div>
@@ -66,13 +66,13 @@
       <div class="item-row">
         <span class="item-num">2.</span>
         <div>
-          <div class="item-title"><a href="https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html" target="_blank" rel="noopener">Google Workspace threatening to block Firefox access</a></div>
-          <div class="item-takeaway">A platform forcing browser choice on Workspace accounts is a real, immediate decision point for anyone using Firefox with a managed Google account.</div>
-          <div class="item-facts"><div>Some Google Workspace accounts are blocking or warning Firefox users to switch to Chrome, apparently tied to org-level device-compliance security settings.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Not yet confirmed whether this is a deliberate Google-wide policy, an opt-in admin security feature, or a rollout bug — reporting suggests the latter two are more likely than a systematic Firefox block.</div>
+          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1u9o3gv/got_my_solo_translation_app_to_10k_mrr_some/" target="_blank" rel="noopener">Got my solo translation app to $10k MRR. Some random notes after 8 months</a></div>
+          <div class="item-takeaway">One of the few builder reports with concrete revenue and practical distribution/product lessons, even though the evidence is still self-reported.</div>
+          <div class="item-facts"><div>Solo dev from Japan here. Not Tokyo, not really in any startup scene, just building from a more rural area. I launched a translation app in Oct 2025 and it recently passed $10k MRR. took around 8 months. proof: https://profile.stripe.com/nani/Ae1hNCkN No ads, no paid referral thing, no big launch. mostly just posting progress on X and people sharing it. Just writing down stuff I noticed I spent way too much time before launch wondering, “does anyone actually want this?” Most of my supposedly realistic predictions were wrong anyway. Sometimes you just put it out there and it does better than you thought. I made a small tool to solve my own problem. It started as something just for me, then I turned it into a product. Turns out other people had the same problem. You don’t always need a big vision. Don’t ship something that’s obviously bad just for the sake of shipping. People have limited attention. Once they decide your app is useless, it’s pretty hard to win them back. Your landing page should make it obvious what the product does. That matters more than some vague, clever-sounding headline. People are tired of reading landing pages. Even better if they can try part of the product</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Linked Reddit page was unreadable in the browse toolchain, so this relies on the captured feed text and the Stripe profile link mentioned in the post.</div>
           <div class="item-meta">
-            <span><a href="https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html" target="_blank" rel="noopener">tales.fromprod.com</a></span>
-            <span>Model + API Changes</span>
+            <span><a href="https://www.reddit.com/r/SaaS/comments/1u9o3gv/got_my_solo_translation_app_to_10k_mrr_some/" target="_blank" rel="noopener">reddit.com</a></span>
+            <span>Small Business Automation</span>
             <span>2026-06-20</span>
           </div>
         </div>
@@ -83,30 +83,31 @@
       <div class="item-row">
         <span class="item-num">3.</span>
         <div>
-          <div class="item-title"><a href="https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/" target="_blank" rel="noopener">Zero-Touch OAuth for MCP</a></div>
-          <div class="item-takeaway">A first-party protocol-level change directly relevant to anyone building or deploying MCP servers — squarely in scope for ongoing MCP/agent work.</div>
-          <div class="item-facts"><div>MCP's Enterprise-Managed Authorization ('Zero-Touch OAuth') extension reached stable status on June 18, 2026, and is being adopted by Anthropic, Microsoft, and Okta.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Adoption is just starting; not yet clear how quickly the broader MCP client/host ecosystem (beyond the named early adopters) will implement it.</div>
+          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1u9w9jy/my_real_saas_story_no_200k_mrr_bs_just_honesty/" target="_blank" rel="noopener">My real SaaS story, no 200k MRR BS, just honesty</a></div>
+          <div class="item-takeaway">The operational lessons are concrete: cofounder imbalance, support burden from complexity, and the cost of attracting the wrong users.</div>
+          <div class="item-facts"><div>Hey guys, I thought I share my story because I want to show that for most people the journey is hard and that it takes time to really get going. I structured the post a little to give some good overview. The start (early 2024) I met two guys looking for a developer to build their SaaS idea for marketing agencies. They already ran a successful agency so I figured they knew the problem very well. Over the next 6 months I built it alongside my full-time job. Launch early traction We ran a beta, collected feedback, launched officially in January 2025 and hit $1k MRR in the first month. Then reality hit. We had priced too low and attracted the wrong users. We had added too many features, but users only cared about one we d almost added as an afterthought. Churn went up fast. Pivot the grind I quit my job and went all in. Had a lot of conversations with customers and we pivoted to a completely different direction and moved to high-ticket pricing. We tested everything on onboarding: 14-day trials with credit card to demo calls option to 10-day no-card trials to demo calls only. At peak we were spending $2k/month on Google + Meta ads and pulling in $6,500 in revenue. But the product had be</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Linked Reddit page was only partially readable in the browse toolchain, so this summary leans on the captured feed text.</div>
           <div class="item-meta">
-            <span><a href="https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/" target="_blank" rel="noopener">blog.modelcontextprotocol.io</a></span>
-            <span>Model + API Changes</span>
+            <span><a href="https://www.reddit.com/r/SaaS/comments/1u9w9jy/my_real_saas_story_no_200k_mrr_bs_just_honesty/" target="_blank" rel="noopener">reddit.com</a></span>
+            <span>Small Business Automation</span>
             <span>2026-06-20</span>
           </div>
         </div>
       </div>
     </div>
+    <h2>Monitor</h2>
 
     <div class="item">
       <div class="item-row">
         <span class="item-num">4.</span>
         <div>
-          <div class="item-title"><a href="https://simonwillison.net/2026/Jun/18/datasette-apps/" target="_blank" rel="noopener">Datasette Apps: Host custom HTML applications inside Datasette</a></div>
-          <div class="item-takeaway">Concrete, usable feature for Datasette users wanting lightweight internal tools without separate hosting.</div>
-          <div class="item-facts"><div>Datasette Apps lets you host custom HTML applications directly inside a Datasette instance.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Still alpha (pre-1.0 plugin versions), so API and stability may shift before general release.</div>
+          <div class="item-title"><a href="https://status.claude.com/incidents/1p98mj17s1z2" target="_blank" rel="noopener">Elevated error rates on the Claude API</a></div>
+          <div class="item-takeaway">Short API incident that hit Claude API, Claude Code, and Cowork is relevant operationally if your workflows depend on Anthropic uptime.</div>
+          <div class="item-facts"><div>Jun 19 , 08:45 UTC Resolved - This incident has been resolved. Jun 19 , 08:37 UTC Monitoring - A fix has been implemented and we are monitoring the results. Jun 19 , 08:17 UTC Investigating - We are currently investigating this issue.</div></div>
+
           <div class="item-meta">
-            <span><a href="https://simonwillison.net/2026/Jun/18/datasette-apps/" target="_blank" rel="noopener">simonwillison.net</a></span>
-            <span>Tools Worth Testing</span>
+            <span><a href="https://status.claude.com/incidents/1p98mj17s1z2" target="_blank" rel="noopener">status.claude.com</a></span>
+            <span>Data Infrastructure / Verification / Scraping</span>
             <span>2026-06-20</span>
           </div>
         </div>
@@ -117,12 +118,12 @@
       <div class="item-row">
         <span class="item-num">5.</span>
         <div>
-          <div class="item-title"><a href="https://github.com/littlefs-project/littlefs/blob/master/DESIGN.md" target="_blank" rel="noopener">The design of littlefs</a></div>
-          <div class="item-takeaway">High-quality technical reference for embedded-systems work, though narrow in scope.</div>
-          <div class="item-facts"><div>littlefs's design document explains how the embedded filesystem achieves power-loss resilience and wear leveling with bounded RAM use.</div></div>
+          <div class="item-title"><a href="https://mnot.net/blog/2026/well_known_uris" target="_blank" rel="noopener">So You Want to Define a Well-Known URI</a></div>
+          <div class="item-takeaway">Mark Nottingham's note is a useful protocol-design refresher if you are defining site-wide discovery endpoints or well-known URLs.</div>
+          <div class="item-facts"><div>Mark Nottingham lays out when well-known endpoints are appropriate, and warns against using them as a prestige signal or a shortcut when a real URL would work better.</div></div>
 
           <div class="item-meta">
-            <span><a href="https://github.com/littlefs-project/littlefs/blob/master/DESIGN.md" target="_blank" rel="noopener">github.com</a></span>
+            <span><a href="https://mnot.net/blog/2026/well_known_uris" target="_blank" rel="noopener">mnot.net</a></span>
             <span>Data Infrastructure / Verification / Scraping</span>
             <span>2026-06-20</span>
           </div>
@@ -134,36 +135,61 @@
       <div class="item-row">
         <span class="item-num">6.</span>
         <div>
-          <div class="item-title"><a href="https://www.greybeam.ai/blog/duckdb-internals-part-1" target="_blank" rel="noopener">DuckDB Internals: Why Is DuckDB Fast? (Part 1)</a></div>
-          <div class="item-takeaway">Solid technical depth for DuckDB users, but a narrower audience.</div>
-          <div class="item-facts"><div>A technical breakdown explains the internal architectural choices behind DuckDB's query performance.</div></div>
+          <div class="item-title"><a href="https://noteflakes.com/articles/2026-06-18-syntropy-modules" target="_blank" rel="noopener">Rethinking modularity in Ruby applications</a></div>
+          <div class="item-takeaway">Good architecture note if explicit dependency loading and non-global module boundaries matter in your Ruby work.</div>
+          <div class="item-facts"><div>Comments</div></div>
 
           <div class="item-meta">
-            <span><a href="https://www.greybeam.ai/blog/duckdb-internals-part-1" target="_blank" rel="noopener">greybeam.ai</a></span>
-            <span>Data Infrastructure / Verification / Scraping</span>
+            <span><a href="https://noteflakes.com/articles/2026-06-18-syntropy-modules" target="_blank" rel="noopener">noteflakes.com</a></span>
+            <span>Tools Worth Testing</span>
             <span>2026-06-20</span>
           </div>
         </div>
       </div>
     </div>
-
     <details>
-      <summary>14 researched links (full index)</summary>
+      <summary>40 researched links (full index)</summary>
       <div class="link-index">
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://orchidfiles.com/github-repositories-distributing-malware/" target="_blank" rel="noopener">I found 10k GitHub repositories distributing Trojan malware</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html" target="_blank" rel="noopener">Google Workspace threatening to block Firefox access</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/" target="_blank" rel="noopener">Zero-Touch OAuth for MCP</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://simonwillison.net/2026/Jun/18/datasette-apps/" target="_blank" rel="noopener">Datasette Apps: Host custom HTML applications inside Datasette</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://lobste.rs/s/crl4fj/what_are_your_favorite_lobste_rs_comments" target="_blank" rel="noopener">What are your Favorite Lobste.rs Comments?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="http://manishearth.github.io/blog/2026/06/17/the-future-of-the-con-is-already-here/" target="_blank" rel="noopener">The Future of the Con Is Already Here, It's Just Not Evenly Distributed</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://movq.de/blog/postings/2026-06-16/0/POSTING-en.html" target="_blank" rel="noopener">What was nice about the UI of Windows 2000</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/littlefs-project/littlefs/blob/master/DESIGN.md" target="_blank" rel="noopener">The design of littlefs</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://thenewstack.io/vim-creator-bram-moolenaars-forgotten-programming-language-zimbu/" target="_blank" rel="noopener">Vim Creator Bram Moolenaar's Forgotten Programming Language, Zimbu (2023)</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.greybeam.ai/blog/duckdb-internals-part-1" target="_blank" rel="noopener">DuckDB Internals: Why Is DuckDB Fast? (Part 1)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://news.mit.edu/2026/to-study-how-chips-really-work-mit-researchers-built-their-own-operating-system-0610" target="_blank" rel="noopener">To study how chips work, MIT researchers built their own operating system</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://mickael.canouil.fr/posts/2026-06-15-gribouille-0-3/" target="_blank" rel="noopener">Gribouille 0.3.0: A Grammar of Graphics for Typst</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/datasette/datasette-acl/releases/tag/0.6a0" target="_blank" rel="noopener">datasette-acl 0.6a0</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/datasette/datasette-apps/releases/tag/0.1a3" target="_blank" rel="noopener">datasette-apps 0.1a3</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/core%400.11.0" target="_blank" rel="noopener">@composio/core@0.11.0</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/SaaS/comments/1u9o3gv/got_my_solo_translation_app_to_10k_mrr_some/" target="_blank" rel="noopener">Got my solo translation app to $10k MRR. Some random notes after 8 months</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/SaaS/comments/1u9w9jy/my_real_saas_story_no_200k_mrr_bs_just_honesty/" target="_blank" rel="noopener">My real SaaS story, no 200k MRR BS, just honesty</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://status.claude.com/incidents/1p98mj17s1z2" target="_blank" rel="noopener">Elevated error rates on the Claude API</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1u9wg0p/the_butler_that_lets_you_browse_talk_to_and/" target="_blank" rel="noopener">the butler that lets you browse, talk to, and modify Wikipedia articles in real-time</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1u9wc9p/building_an_app_for_tech_blog_readers_seeking/" target="_blank" rel="noopener">Building an app for tech blog readers - seeking help for marketing.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1u9ylz8/a_qr_menu_saas/" target="_blank" rel="noopener">A QR menu saas</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1u9xygb/added_a_repeated_15_sec_demo_visual_under_the/" target="_blank" rel="noopener">added a repeated 15 sec demo visual under the hero section for people to get a glimpse of how my SaaS works</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1u9xjrd/help_new_founder_here/" target="_blank" rel="noopener">Help! New founder here</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1u9yedh/i_spread_misinformation_to_the_elderly_for/" target="_blank" rel="noopener">I spread misinformation to the elderly (for science) over social media for a month as marketing. Here are my findings.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1u9ydx8/how_are_you_guys_handling_failed_webhooks_and/" target="_blank" rel="noopener">how are you guys handling failed webhooks and async tasks before support gets flooded?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.59" target="_blank" rel="noopener">n8n@1.123.59</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.27.3" target="_blank" rel="noopener">n8n@2.27.3</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">beta</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.jvm-weekly.com/p/project-valhalla-explained-how-a" target="_blank" rel="noopener">Project Valhalla, Explained: How a Decade of Work Arrives in JDK 28</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://mnot.net/blog/2026/well_known_uris" target="_blank" rel="noopener">So You Want to Define a Well-Known URI</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://blog.jxmo.io/p/zen-and-the-art-of-machine-learning" target="_blank" rel="noopener">Zen and the Art of Machine Learning Research</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.theescapenewsletter.com/p/the-airpods-effect" target="_blank" rel="noopener">The AirPods Effect</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://pypi.org/project/prylint/" target="_blank" rel="noopener">Fable Converted Pylint to Rust</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.wired.com/story/sk-telecom-anthropic-mythos-export-controls/" target="_blank" rel="noopener">The Korean telecom giant at the center of Anthropic's Mythos controversy</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://godotengine.org/releases/4.7/" target="_blank" rel="noopener">Godot 4.7: Lights, Camera, Action</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://noteflakes.com/articles/2026-06-18-syntropy-modules" target="_blank" rel="noopener">Rethinking modularity in Ruby applications</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://diffshub.com/" target="_blank" rel="noopener">DiffsHub</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/vercel%400.9.3" target="_blank" rel="noopener">@composio/vercel@0.9.3</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/openai%400.9.3" target="_blank" rel="noopener">@composio/openai@0.9.3</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/openai-agents%400.9.3" target="_blank" rel="noopener">@composio/openai-agents@0.9.3</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/mastra%400.9.3" target="_blank" rel="noopener">@composio/mastra@0.9.3</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/llamaindex%400.9.3" target="_blank" rel="noopener">@composio/llamaindex@0.9.3</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/langchain%400.9.3" target="_blank" rel="noopener">@composio/langchain@0.9.3</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/google%400.9.3" target="_blank" rel="noopener">@composio/google@0.9.3</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cloudflare%400.9.3" target="_blank" rel="noopener">@composio/cloudflare@0.9.3</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli-local-tools%400.0.5" target="_blank" rel="noopener">@composio/cli-local-tools@0.0.5</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://metiq.space" target="_blank" rel="noopener">Show HN: Metiq: a real time 3D globe for 100 public datasets</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uaf4dw/ai_didnt_turn_me_into_a_10x_dev_it_just_let_me/" target="_blank" rel="noopener">AI didn't turn me into a 10x dev. It just let me run a whole company by myself</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uajqa1/i_got_my_first_paying_customer/" target="_blank" rel="noopener">I got my first paying customer! 🎉</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uagy17/11_months_still_no_paying_customers_starting_to/" target="_blank" rel="noopener">11 months, still no paying customers. starting to think the problem is me</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1ua0cnq/my_saas_just_made_its_first_33_i_paid_myself_13/" target="_blank" rel="noopener">My SaaS just made its first $33. I paid myself $13, and a friend threw in $20 for morale. Honestly? It works.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uapj6c/industry_people_be_hating_so_called_tech_bros/" target="_blank" rel="noopener">Industry people be hating so called tech bros</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uab17e/is_it_worth_launching_on_product_hunt_these_days/" target="_blank" rel="noopener">Is it worth launching on Product Hunt these days?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uafzkd/120_mrr_to_1500_mrr_in_6_months/" target="_blank" rel="noopener">$120 MRR to $1500 MRR in 6 months</a></div>
       </div>
     </details>
     <div class="subscribe-strip">
