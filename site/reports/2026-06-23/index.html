@@ -5,21 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>June 23, 2026 report log — The Nightly Librarian</title>
-  <meta name="description" content="3 stories cleared the bar, led by Temporary Cloudflare Accounts for AI agents, sqlite-utils 4.">
+  <meta name="description" content="5 stories cleared the bar, led by Codex logging bug may write TBs to local SSDs, n8n@1.123.60, and Deno Desktop apps.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-06-23/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="June 23, 2026 report log | The Nightly Librarian">
-  <meta property="og:description" content="3 stories cleared the bar, led by Temporary Cloudflare Accounts for AI agents, sqlite-utils 4.">
+  <meta property="og:description" content="5 stories cleared the bar, led by Codex logging bug may write TBs to local SSDs, n8n@1.123.60, and Deno Desktop apps.">
   <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-06-23/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="June 23, 2026 report log | The Nightly Librarian">
-  <meta name="twitter:description" content="3 stories cleared the bar, led by Temporary Cloudflare Accounts for AI agents, sqlite-utils 4.">
+  <meta name="twitter:description" content="5 stories cleared the bar, led by Codex logging bug may write TBs to local SSDs, n8n@1.123.60, and Deno Desktop apps.">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
@@ -35,7 +35,7 @@
     </div>
     <div class="dateline">
       <span>June 23, 2026 · Report log</span>
-      <span>Jun 23, 2026, 2:25 AM</span>
+      <span>Jun 23, 2026, 7:07 AM</span>
     </div>
   </header>
   <main>
@@ -43,27 +43,37 @@
     <h1>June 23, 2026</h1>
     <div class="summary-card">
       <div class="eyebrow">Report summary</div>
-      <p>3 stories cleared the bar, led by Temporary Cloudflare Accounts for AI agents, sqlite-utils 4.0rc1 adds migrations and nested transactions, and Elevated Error Rates for Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 4.6, and Haiku 4.5.</p>
+      <p>5 stories cleared the bar, led by Codex logging bug may write TBs to local SSDs, n8n@1.123.60, and Deno Desktop apps.</p>
       <div class="meta" style="margin-top:0.4rem;">
-        <span>3 worth-attention items</span><span>40 digest lines</span>
+        <span>5 worth-attention items</span><span>40 digest lines</span>
       </div>
     </div>
     <h2>Worth attention</h2>
     <div class="item-stack">
 
       <div class="item">
-        <div class="item-title"><a href="https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything" target="_blank" rel="noopener">Temporary Cloudflare Accounts for AI agents</a></div>
-        <div class="item-takeaway">Cloudflare now supports creating temporary accounts that auto-expire — spin up an isolated Cloudflare environment for a short-lived task (agent workflow, CI sandbox, etc.) without leaving persistent infrastructure behind. Simon Willison notes the 'for AI agents' framing is marketing; the feature is useful for any builder who needs ephemeral isolated cloud environments. No pricing details confirmed yet.</div>
+        <div class="item-title"><a href="https://github.com/openai/codex/issues/28224" target="_blank" rel="noopener">Codex logging bug may write TBs to local SSDs</a></div>
+        <div class="item-takeaway">A Codex CLI issue documented heavy local SQLite feedback logging, and a Jun 23 update says three merged PRs cut most of the noise and closed the report.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/#atom-everything" target="_blank" rel="noopener">sqlite-utils 4.0rc1 adds migrations and nested transactions</a></div>
-        <div class="item-takeaway">Simon Willison's sqlite-utils Python library is releasing 4.0rc1 with native schema migration support and nested transactions. This means you can track schema changes and run migrations directly in sqlite-utils without a separate tool like Alembic. Still an RC — stable release expected soon.</div>
+        <div class="item-title"><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.60" target="_blank" rel="noopener">n8n@1.123.60</a></div>
+        <div class="item-takeaway">n8n 1.123.60 says it excludes failed workflows from billable counts and fixes 26 dependency security issues across packages like tmp, protobufjs, ws, and axios.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://status.claude.com/incidents/lv35v0q9nsj2" target="_blank" rel="noopener">Elevated Error Rates for Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 4.6, and Haiku 4.5</a></div>
-        <div class="item-takeaway">All major Claude API models had elevated error rates on Jun 22 starting around 01:33 UTC, resolved by 02:06 UTC — approximately 30 minutes total. No action needed now, but worth noting as a reliability data point if you depend on Claude API for production workloads.</div>
+        <div class="item-title"><a href="https://docs.deno.com/runtime/desktop/" target="_blank" rel="noopener">Deno Desktop apps</a></div>
+        <div class="item-takeaway">Deno docs now document `deno desktop`, a canary-only Deno 2.9 feature for packaging web or TypeScript projects into desktop binaries with built-in webview options and auto-update support.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1ucf12d/i_was_looking_for_a_side_business_to_build_and/" target="_blank" rel="noopener">I was looking for a side business to build and looked into the AI resume builder market, here are the gaps.</a></div>
+        <div class="item-takeaway">A Reddit founder post argues AI resume builders look saturated for generic ATS use, while freelancer, international, career-change, and recruiter-side workflows remain less served.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1ubw3mo/i_forked_ik_llamacpp_and_added_a_numa_mirror_mode/" target="_blank" rel="noopener">I forked ik_llama.cpp and added a &quot;--numa mirror&quot; mode to maximize performance on multi-socket CPU systems. Just sharing and looking for testers!</a></div>
+        <div class="item-takeaway">A LocalLLaMA post claims a forked `ik_llama.cpp` adds `--numa mirror`, duplicating weights and KV cache per socket to avoid remote-memory penalties and posted 1.3x-1.6x gains on several models.</div>
       </div>
     </div>
     <h2>Full digest</h2>
@@ -72,440 +82,440 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://hawksley.dev/blog/json-ld-explained-for-personal-websites/" target="_blank" rel="noopener">JSON-LD explained for personal websites</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ucf6b0/building_a_qual_research_analysis_tool_flying_to/" target="_blank" rel="noopener">Building a qual research analysis tool, flying to Ahmedabad (June 25-30) &amp; Delhi (July 1-4) - want to meet researchers in person</a>
         </div>
-        <div class="item-takeaway">Educational article on well-known web standard; no new information.</div>
+        <div class="item-takeaway">Hey all, I'm a cofounder of a qualitative research analysis tool. Interviews, transcripts, turning a pile of conversations into something y…</div>
         <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.beyondallreason.info" target="_blank" rel="noopener">Beyond All Reason (Free Total Annihilation Inspired RTS)</a>
-        </div>
-        <div class="item-takeaway">Game project; off-topic.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://underreacted.leaflet.pub/3mmevu6woys27" target="_blank" rel="noopener">Japanese verb conjugation the simple hard way</a>
-        </div>
-        <div class="item-takeaway">Language learning content; off-topic.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://powerfox.jazzzny.me/" target="_blank" rel="noopener">PowerFox Browser</a>
-        </div>
-        <div class="item-takeaway">Hobby browser project; off-topic.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.minecraft.net/en-us/article/minecraft-java-edition-26-2" target="_blank" rel="noopener">Minecraft: Java Edition 26.2, the first version with Vulkan 1.2</a>
-        </div>
-        <div class="item-takeaway">Gaming news; off-topic.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/paytonjjones/bsharp" target="_blank" rel="noopener">Show HN: Teach your kids perfect pitch</a>
-        </div>
-        <div class="item-takeaway">Education/music app; off-topic.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://the-criterion-closet.vercel.app" target="_blank" rel="noopener">Show HN: Criterion Closet as a website</a>
-        </div>
-        <div class="item-takeaway">Film catalog website; off-topic.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.politico.com/news/2026/06/21/rent-collections-are-down-in-new-york-and-no-ones-sure-why-00966982" target="_blank" rel="noopener">Rent collections are down in New York</a>
-        </div>
-        <div class="item-takeaway">Non-technical news; not relevant to software development.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction" target="_blank" rel="noopener">Prefer duplication over the wrong abstraction (2016)</a>
-        </div>
-        <div class="item-takeaway">Classic 2016 article; widely known, not new.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://brandur.org/minimum-viable-unit" target="_blank" rel="noopener">The minimum viable unit of saleable software</a>
-        </div>
-        <div class="item-takeaway">Interesting concept piece but deferred; no hard decision-changing signal.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://norvig.com/lispy.html" target="_blank" rel="noopener">(How to Write a (Lisp) Interpreter (In Python)) (2010)</a>
-        </div>
-        <div class="item-takeaway">Classic 2010 educational post; very old and widely known.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/raiyanyahya/recall" target="_blank" rel="noopener">Show HN: Recall – Local project memory for Claude Code</a>
-        </div>
-        <div class="item-takeaway">Deferred due to cap; potentially relevant to agent/MCP work but insufficient signal.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://lobste.rs/s/lbjdlo/what_s_advice_for_llm_poisoning_artwork" target="_blank" rel="noopener">What's the advice for LLM poisoning of artwork these days?</a>
-        </div>
-        <div class="item-takeaway">Community discussion; no actionable tooling.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://postmarketos.org/blog/2026/06/21/v26.06-release/" target="_blank" rel="noopener">postmarketOS v26.06 (Alpen Avocado) released</a>
-        </div>
-        <div class="item-takeaway">Mobile Linux; niche.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://lmao.center/blog/wiggle-accidents/" target="_blank" rel="noopener">help i accidentally a wigglegram</a>
-        </div>
-        <div class="item-takeaway">Off-topic.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://atgreen.github.io/repl-yell/posts/libffi-plan-cache/" target="_blank" rel="noopener">Performance improvements in libffi</a>
-        </div>
-        <div class="item-takeaway">Low-level FFI; niche.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://fzakaria.com/2026/06/21/nix-build-in-under-100-lines" target="_blank" rel="noopener">nix-build in under 100 lines</a>
-        </div>
-        <div class="item-takeaway">Nix internals; niche.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.datagubbe.se/os20up/" target="_blank" rel="noopener">AmigaOS 2: the greatest upgrade</a>
-        </div>
-        <div class="item-takeaway">Retrocomputing; off-topic.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://alexwlchan.net/2026/wonky-web-apis/" target="_blank" rel="noopener">What can wonky APIs tell us about the web?</a>
-        </div>
-        <div class="item-takeaway">Analytical; deferred.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://fgiesen.wordpress.com/2026/06/21/pivco-huffman-merge-operations/" target="_blank" rel="noopener">PivCo-Huffman &quot;merge&quot; operations</a>
-        </div>
-        <div class="item-takeaway">Compression research; niche.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/mysk-research/loupe" target="_blank" rel="noopener">loupe: A privacy-focused iOS app</a>
-        </div>
-        <div class="item-takeaway">iOS privacy tool; niche.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://kobzol.github.io/rust/2026/06/21/optimizing-sqlx-test-rebuild-time.html" target="_blank" rel="noopener">Optimizing #[sqlx::test] rebuild time</a>
-        </div>
-        <div class="item-takeaway">Rust/sqlx; niche.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://codeberg.org/mlugg/robust-jobserver/src/branch/main/spec.md" target="_blank" rel="noopener">Robust Jobserver</a>
-        </div>
-        <div class="item-takeaway">Build system spec; niche.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.science.org/doi/10.1126/science.aec7671" target="_blank" rel="noopener">Remote work increases social isolation</a>
-        </div>
-        <div class="item-takeaway">Academic study; not actionable.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://fil-c.org/inlineasm" target="_blank" rel="noopener">Memory Safe Inline Assembly</a>
-        </div>
-        <div class="item-takeaway">PLT research; niche.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.humprog.org/~stephen/blog/2026/06/15/#system-call-instrumentation-on-intel-negative-result" target="_blank" rel="noopener">System call instrumentation on Linux/x86-64</a>
-        </div>
-        <div class="item-takeaway">Systems research; niche.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/#atom-everything" target="_blank" rel="noopener">sqlite-utils 4.0rc1 adds migrations and nested transactions</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ucf12d/i_was_looking_for_a_side_business_to_build_and/" target="_blank" rel="noopener">I was looking for a side business to build and looked into the AI resume builder market, here are the gaps.</a>
         </div>
-        <div class="item-takeaway">Python SQLite toolkit gets native migrations and nested transactions in 4.0 RC.</div>
+        <div class="item-takeaway">A Reddit founder post argues AI resume builders look saturated for generic ATS use, while freelancer, international, career-change, and recruiter-side workflows remain less served.</div>
         <div class="item-meta">
-          <span>simon-willison</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://simonwillison.net/2026/Jun/21/sqlite-utils/#atom-everything" target="_blank" rel="noopener">sqlite-utils 4.0rc1 (release tag)</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ucee67/here_are_features_im_planning_to_build_what_do/" target="_blank" rel="noopener">Here are features I'm planning to build. What do you think?</a>
         </div>
-        <div class="item-takeaway">Duplicate of migration article.</div>
+        <div class="item-takeaway">After working with hundreds of ecommerce merchants, I've noticed something interesting: Most store owners don't actually want more dashboar…</div>
         <div class="item-meta">
-          <span>simon-willison</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything" target="_blank" rel="noopener">Temporary Cloudflare Accounts for AI agents</a>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.60" target="_blank" rel="noopener">n8n@1.123.60</a>
         </div>
-        <div class="item-takeaway">New Cloudflare feature: ephemeral accounts auto-expire, useful for sandboxed agent environments.</div>
+        <div class="item-takeaway">n8n 1.123.60 says it excludes failed workflows from billable counts and fixes 26 dependency security issues across packages like tmp, protobufjs, ws, and axios.</div>
         <div class="item-meta">
-          <span>simon-willison</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://status.claude.com/incidents/lv35v0q9nsj2" target="_blank" rel="noopener">Elevated Error Rates for Opus 4.8/4.7/4.6, Sonnet 4.6, Haiku 4.5</a>
-        </div>
-        <div class="item-takeaway">All major Claude API models had elevated errors Jun 22 01:33-02:06 UTC; resolved.</div>
-        <div class="item-meta">
-          <span>claude-status</span>
+          <span>gh-n8n</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://openai.com/index/samsung-electronics-chatgpt-codex-deployment" target="_blank" rel="noopener">Samsung Electronics brings ChatGPT and Codex to employees</a>
+          <a href="https://stratechery.com/2026/apple-price-increases-apple-intelligence-and-the-e-u/" target="_blank" rel="noopener">Apple Price Increases, Apple Intelligence and the E.U.</a>
         </div>
-        <div class="item-takeaway">Enterprise adoption story; no solo dev value.</div>
+        <div class="item-takeaway">Apple is (finally) raising prices, but they're not shipping Siri AI to the E.U.</div>
         <div class="item-meta">
-          <span>openai-blog</span>
+          <span>stratechery</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1ucg8ks/" target="_blank" rel="noopener">The way I got my first paying user on my SaaS</a>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1uc79ho/glm52_is_on_deepswe/" target="_blank" rel="noopener">GLM-5.2 is on DeepSWE</a>
         </div>
-        <div class="item-takeaway">Thin personal story.</div>
+        <div class="item-takeaway">TOP-RIGHT corner is the best, price gets CHEAPER as you go towards the RIGHT. https://deepswe.datacurve.ai/ Alternate scores by ArtificialA…</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
+          <span>reddit-localllama</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1ucgzbd/" target="_blank" rel="noopener">What did you consider completely normal in software development...</a>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1uc3wg9/local_llm_inference_optimization_the_complete/" target="_blank" rel="noopener">Local LLM Inference Optimization: The Complete Guide</a>
         </div>
-        <div class="item-takeaway">Discussion; no value.</div>
+        <div class="item-takeaway">I compiled a year of local LLM experiments into a practical llama.cpp optimization guide, covering VRAM fitting, KV cache, MoE placement, M…</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
+          <span>reddit-localllama</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1ucgf6e/" target="_blank" rel="noopener">Building Blitzit 3.0: Week 26 Update</a>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ucgrxh/gemma_4_qat_31b_responds_better_to_kv_cache/" target="_blank" rel="noopener">Gemma 4 QAT 31B responds better to KV cache quantization too</a>
         </div>
-        <div class="item-takeaway">Indie SaaS metrics; interesting but not actionable.</div>
+        <div class="item-takeaway">I've run benchmark from this post and got even better results on Gemma 4 31B &amp;#32; submitted by &amp;#32; /u/justicecurcian [link] &amp;#32; [comme…</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
+          <span>reddit-localllama</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1ucfu9n/" target="_blank" rel="noopener">Vigilante weekly execution report feedback</a>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ubrcwj/tokenomics/" target="_blank" rel="noopener">Tokenomics</a>
         </div>
-        <div class="item-takeaway">Product feedback; off-topic.</div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/HOLUPREDICTIONS [link] &amp;#32; [comments]</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
+          <span>reddit-localllama</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uce23c/" target="_blank" rel="noopener">One-person company AI automation</a>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1uce2pz/do_you_think_dedicated_hardware_for_running_local/" target="_blank" rel="noopener">Do you think dedicated hardware for running local LLMs will become affordable anytime soon?</a>
         </div>
-        <div class="item-takeaway">Discussion; no hard signal.</div>
+        <div class="item-takeaway">Models like qwen 27b dense have already proved to be useful coding/general purpose assistants, but issue is still with hardware even the en…</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
+          <span>reddit-localllama</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uchcmr/" target="_blank" rel="noopener">The one tool you refuse to replace with AI</a>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ucevoo/support_step3537_flash_mtp3_by_forforever73_pull/" target="_blank" rel="noopener">Support Step3.5/3.7 flash mtp3 by forforever73 · Pull Request #24340 · ggml-org/llama.cpp</a>
         </div>
-        <div class="item-takeaway">Engagement bait.</div>
+        <div class="item-takeaway">follow-up to #23274 Multi-layer MTP support! Try with latest llama.cpp version. &amp;#32; submitted by &amp;#32; /u/pmttyji [link] &amp;#32; [comments]</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
+          <span>reddit-localllama</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1ucgrgk/" target="_blank" rel="noopener">I'm about to quit the whole SaaS thing</a>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ubzzib/not_a_new_model_just_a_happy_fathers_day_and_a/" target="_blank" rel="noopener">Not a new model, just a Happy Father's Day and a thank you.</a>
         </div>
-        <div class="item-takeaway">Personal motivation; not actionable.</div>
+        <div class="item-takeaway">I know this isn't our usual discussion about context windows, quantization, or the latest model drop, but I just wanted to take a quick mom…</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
+          <span>reddit-localllama</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1ucgjhi/" target="_blank" rel="noopener">Best MoR for early stage SaaS</a>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ucenk7/gemma_4_31b_q6_on_dual_9060_xt/" target="_blank" rel="noopener">Gemma 4 31B Q6 on Dual 9060 XT</a>
         </div>
-        <div class="item-takeaway">Basic question; no new information.</div>
+        <div class="item-takeaway">Running Gemma 4 31B Q6 on two 9060 XT 16GB cards, runs consistently around 8-9 t/s. From reading through other threads on here, people seem…</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
+          <span>reddit-localllama</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1ucf88z/" target="_blank" rel="noopener">Domain deliverability monitor for SaaS outreach</a>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ubk57k/vercel_ceo_almost_shocked_by_how_good_glm52_is_at/" target="_blank" rel="noopener">Vercel CEO: &quot;Almost shocked&quot; by how good GLM-5.2 is at coding</a>
         </div>
-        <div class="item-takeaway">Product validation question; off-topic.</div>
+        <div class="item-takeaway">Guillermo Rauch (Vercel CEO) says he is &quot;genuinely impressed, almost shocked&quot; by GLM-5.2's coding performance. What has your experience wit…</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ucanbv/i_want_to_love_hermes_agent_but_it_looks_so_ugly/" target="_blank" rel="noopener">I want to love hermes agent, but it looks so ugly, and ux is not nice</a>
+        </div>
+        <div class="item-takeaway">I am rechecking on hermes agent currently, also because many report great experiences, but oh my, does it look ugly. The web-UI uses such u…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ubuy8w/i_pretrained_and_post_trained_a_500m_parameter/" target="_blank" rel="noopener">I pretrained and post trained a 500M parameter LLM and 330M parameter Image generator from scratch</a>
+        </div>
+        <div class="item-takeaway">Hey folks Hope you are doing well I started HobbyLM as an side project last month Initially I wrote an Agent harness using Claude SDK which…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ubjnh5/qwen_is_never_going_to_open_source_qwen_37_arent/" target="_blank" rel="noopener">Qwen is never going to open source Qwen 3.7, aren't they?</a>
+        </div>
+        <div class="item-takeaway">Well, this was predictable. After Qwen fired Junyang Lin, the next models are no longer open source. Ignoring the small models for a minute…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1uc9aw3/leaderboard_for_quantized_models_similar_to/" target="_blank" rel="noopener">Leaderboard for quantized models, similar to artificial analysis?</a>
+        </div>
+        <div class="item-takeaway">Artificial analysis’ leaderboard for models is somewhat useful for comparing model intelligence, but does not take into account quantizatio…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ubx4rw/best_local_model_for_vision_2nd_benchmark_update/" target="_blank" rel="noopener">Best local model for vision - 2nd benchmark update - 21 Jun 2026</a>
+        </div>
+        <div class="item-takeaway">I previously posted the first results of my VLM benchmark . There were a few useful comments and observations I took into account, to revis…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1uc4yyx/finally_seeing_benefits_of_mtp_after_removing/" target="_blank" rel="noopener">Finally seeing benefits of MTP after removing GGML_CUDA_ALLREDUCE</a>
+        </div>
+        <div class="item-takeaway">Been fighting this a while, mtp seeing lows at 17 to sometimes 30's and today I went and dug deep and tried so many different configuartion…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ubnj2l/816_mi50s_minimax_m3_19_tps_tg_peak/" target="_blank" rel="noopener">8-16 MI50s Minimax M3 @19 tps TG (peak)</a>
+        </div>
+        <div class="item-takeaway">TL;DR Speeds are not too ugly for this old 2018 hardware but imo, not very usable for agentic coding (if you compare with qwen3.6 27B on 8…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ubl0df/gemma_4_qat_seems_to_respond_significantly_better/" target="_blank" rel="noopener">Gemma 4 QAT seems to respond significantly better to KV cache quantization</a>
+        </div>
+        <div class="item-takeaway">Results from KL Divergence on wikitext with 16k context I know some users, including myself, were disappointed with Gemma 4's sensitivity t…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ubwo03/qwen_36_27b_abliterated_apostate/" target="_blank" rel="noopener">Qwen 3.6 27b Abliterated (apostate)</a>
+        </div>
+        <div class="item-takeaway">I've been working on a project called Apostate and have finally released my first large model with it on Hugging Face. Qwen 3.6 27B with sa…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          2× Radeon R9700
+        </div>
+        <div class="item-takeaway">Qwen 3.6 27B Q8 MTP on llama.cpp — https://www.reddit.com/r/LocalLLaMA/comments/1ubrn1a/2_radeon_r9700_qwen_36_27b_q8_mtp_on_llamacpp/ — There isn't much information around about multi-GPU setups with the R9700, so I'm writing this up in case it helps anyone in the same situa…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ubw3mo/i_forked_ik_llamacpp_and_added_a_numa_mirror_mode/" target="_blank" rel="noopener">I forked ik_llama.cpp and added a &quot;--numa mirror&quot; mode to maximize performance on multi-socket CPU systems. Just sharing and looking for testers!</a>
+        </div>
+        <div class="item-takeaway">A LocalLLaMA post claims a forked `ik_llama.cpp` adds `--numa mirror`, duplicating weights and KV cache per socket to avoid remote-memory penalties and posted 1.3x-1.6x gains on several models.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1uc6ihb/for_programmers_with_slow_local_llm_setup_whats/" target="_blank" rel="noopener">For programmers with slow local LLM setup, what's your workflow?</a>
+        </div>
+        <div class="item-takeaway">What's your workflow and what's the best way you have found to code with local LLM when your token generation is &lt; 10 tk/sec? &amp;#32; submitt…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1uc86pz/agent_recommendations/" target="_blank" rel="noopener">Agent recommendations</a>
+        </div>
+        <div class="item-takeaway">Hi, I have a Strix Halo with 128GB setup that runs a couple of models (GPT-OSS 120b, Qwen3.5-122b, Gemma-4-31b) on llama-swap. GPT and Qwen…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1uc6mp1/your_favorite_workflow_to_convert_pdf_with/" target="_blank" rel="noopener">Your Favorite Workflow to Convert PDF with Complex Structure to Markdown?</a>
+        </div>
+        <div class="item-takeaway">I've tried markitdown, Docling, and Mineru. Are there better tools I should try? I need to process tables, floating box, etc. Thanks! &amp;#32;…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1uchgyr/i_got_a_jetson_orin_nano_can_it_code/" target="_blank" rel="noopener">I got a Jetson Orin Nano, can it code?</a>
+        </div>
+        <div class="item-takeaway">Has anyone tried running a coding model (maybe a Qwen) on a Orin Nano? I was looking at a Qwen 35B (MOE 3B) but that seems too large. ps. I…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html" target="_blank" rel="noopener">Munich 1991: The Roots of the Current AI Boom</a>
+        </div>
+        <div class="item-takeaway">Munich 1991: The Roots of the Current AI Boom</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/openai/codex/issues/28224" target="_blank" rel="noopener">Codex logging bug may write TBs to local SSDs</a>
+        </div>
+        <div class="item-takeaway">A Codex CLI issue documented heavy local SQLite feedback logging, and a Jun 23 update says three merged PRs cut most of the noise and closed the report.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://techstackups.com/comparisons/glm-5.2-vs-opus/" target="_blank" rel="noopener">GLM 5.2 vs. Opus</a>
+        </div>
+        <div class="item-takeaway">GLM 5.2 vs. Opus</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/playX18/lisp-in-types/" target="_blank" rel="noopener">Lisp in the Rust Type System</a>
+        </div>
+        <div class="item-takeaway">Lisp in the Rust Type System</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://6it.dev/blog/infographics-operation-costs-in-cpu-clock-cycles-take-2-80736" target="_blank" rel="noopener">Efficient C++ Programming for Modern C++ CPUs, Chapter 4/part 2</a>
+        </div>
+        <div class="item-takeaway">Efficient C++ Programming for Modern C++ CPUs, Chapter 4/part 2</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.oldtelephoneroom.ca/1983-northern-telecom-commodore-phone/" target="_blank" rel="noopener">1983 Northern Telecom Commodore Phone</a>
+        </div>
+        <div class="item-takeaway">1983 Northern Telecom Commodore Phone</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://docs.deno.com/runtime/desktop/" target="_blank" rel="noopener">Deno Desktop apps</a>
+        </div>
+        <div class="item-takeaway">Deno docs now document `deno desktop`, a canary-only Deno 2.9 feature for packaging web or TypeScript projects into desktop binaries with built-in webview options and auto-update support.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.arp242.net/chestersons-finger.html" target="_blank" rel="noopener">Chesterton's middle finger</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://momentsingraphics.de/CameraRays.html" target="_blank" rel="noopener">Computing Camera Rays</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://pkgdemon.github.io/how-a-computer-should-work.html" target="_blank" rel="noopener">How a Computer Should Work</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openmw.org/2026/openmw-0-51-0-released/" target="_blank" rel="noopener">OpenMW 0.51.0 Released</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
         </div>
       </div>
     </div>
@@ -513,64 +523,70 @@
       <summary>Original markdown</summary>
       <pre class="raw-report"># Nightly Librarian — Newsletter draft
 
-Run: 243ea8dd-7aab-4afe-9c6c-541a6f20fe37
-Started: 2026-06-23T06:09:33.719Z
-Completed: 2026-06-23T06:25:37.126Z
+Run: 2a1fe7e6-0df5-487c-9912-3d5a0aa81d83
+Started: 2026-06-23T11:02:15.611Z
+Completed: 2026-06-23T11:07:04.752Z
 
 ## Worth attention
 
-- **Temporary Cloudflare Accounts for AI agents**
-  https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything
-  Cloudflare now supports creating temporary accounts that auto-expire — spin up an isolated Cloudflare environment for a short-lived task (agent workflow, CI sandbox, etc.) without leaving persistent infrastructure behind. Simon Willison notes the 'for AI agents' framing is marketing; the feature is useful for any builder who needs ephemeral isolated cloud environments. No pricing details confirmed yet.
-- **sqlite-utils 4.0rc1 adds migrations and nested transactions**
-  https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/#atom-everything
-  Simon Willison's sqlite-utils Python library is releasing 4.0rc1 with native schema migration support and nested transactions. This means you can track schema changes and run migrations directly in sqlite-utils without a separate tool like Alembic. Still an RC — stable release expected soon.
-- **Elevated Error Rates for Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 4.6, and Haiku 4.5**
-  https://status.claude.com/incidents/lv35v0q9nsj2
-  All major Claude API models had elevated error rates on Jun 22 starting around 01:33 UTC, resolved by 02:06 UTC — approximately 30 minutes total. No action needed now, but worth noting as a reliability data point if you depend on Claude API for production workloads.
+- **Codex logging bug may write TBs to local SSDs**
+  https://github.com/openai/codex/issues/28224
+  A Codex CLI issue documented heavy local SQLite feedback logging, and a Jun 23 update says three merged PRs cut most of the noise and closed the report.
+- **n8n@1.123.60**
+  https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.60
+  n8n 1.123.60 says it excludes failed workflows from billable counts and fixes 26 dependency security issues across packages like tmp, protobufjs, ws, and axios.
+- **Deno Desktop apps**
+  https://docs.deno.com/runtime/desktop/
+  Deno docs now document `deno desktop`, a canary-only Deno 2.9 feature for packaging web or TypeScript projects into desktop binaries with built-in webview options and auto-update support.
+- **I was looking for a side business to build and looked into the AI resume builder market, here are the gaps.**
+  https://www.reddit.com/r/SaaS/comments/1ucf12d/i_was_looking_for_a_side_business_to_build_and/
+  A Reddit founder post argues AI resume builders look saturated for generic ATS use, while freelancer, international, career-change, and recruiter-side workflows remain less served.
+- **I forked ik_llama.cpp and added a &quot;--numa mirror&quot; mode to maximize performance on multi-socket CPU systems. Just sharing and looking for testers!**
+  https://www.reddit.com/r/LocalLLaMA/comments/1ubw3mo/i_forked_ik_llamacpp_and_added_a_numa_mirror_mode/
+  A LocalLLaMA post claims a forked `ik_llama.cpp` adds `--numa mirror`, duplicating weights and KV cache per socket to avoid remote-memory penalties and posted 1.3x-1.6x gains on several models.
 
 ## Full digest
 
-- [R] [hn-top] JSON-LD explained for personal websites — https://hawksley.dev/blog/json-ld-explained-for-personal-websites/ — Educational article on well-known web standard; no new information.
-- [R] [hn-top] Beyond All Reason (Free Total Annihilation Inspired RTS) — https://www.beyondallreason.info — Game project; off-topic.
-- [R] [hn-top] Japanese verb conjugation the simple hard way — https://underreacted.leaflet.pub/3mmevu6woys27 — Language learning content; off-topic.
-- [R] [hn-top] PowerFox Browser — https://powerfox.jazzzny.me/ — Hobby browser project; off-topic.
-- [R] [hn-top] Minecraft: Java Edition 26.2, the first version with Vulkan 1.2 — https://www.minecraft.net/en-us/article/minecraft-java-edition-26-2 — Gaming news; off-topic.
-- [R] [hn-top] Show HN: Teach your kids perfect pitch — https://github.com/paytonjjones/bsharp — Education/music app; off-topic.
-- [R] [hn-top] Show HN: Criterion Closet as a website — https://the-criterion-closet.vercel.app — Film catalog website; off-topic.
-- [R] [hn-top] Rent collections are down in New York — https://www.politico.com/news/2026/06/21/rent-collections-are-down-in-new-york-and-no-ones-sure-why-00966982 — Non-technical news; not relevant to software development.
-- [R] [hn-top] Prefer duplication over the wrong abstraction (2016) — https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction — Classic 2016 article; widely known, not new.
-- [R] [hn-top] The minimum viable unit of saleable software — https://brandur.org/minimum-viable-unit — Interesting concept piece but deferred; no hard decision-changing signal.
-- [R] [hn-top] (How to Write a (Lisp) Interpreter (In Python)) (2010) — https://norvig.com/lispy.html — Classic 2010 educational post; very old and widely known.
-- [R] [hn-top] Show HN: Recall – Local project memory for Claude Code — https://github.com/raiyanyahya/recall — Deferred due to cap; potentially relevant to agent/MCP work but insufficient signal.
-- [R] [lobsters] What's the advice for LLM poisoning of artwork these days? — https://lobste.rs/s/lbjdlo/what_s_advice_for_llm_poisoning_artwork — Community discussion; no actionable tooling.
-- [R] [lobsters] postmarketOS v26.06 (Alpen Avocado) released — https://postmarketos.org/blog/2026/06/21/v26.06-release/ — Mobile Linux; niche.
-- [R] [lobsters] help i accidentally a wigglegram — https://lmao.center/blog/wiggle-accidents/ — Off-topic.
-- [R] [lobsters] Performance improvements in libffi — https://atgreen.github.io/repl-yell/posts/libffi-plan-cache/ — Low-level FFI; niche.
-- [R] [lobsters] nix-build in under 100 lines — https://fzakaria.com/2026/06/21/nix-build-in-under-100-lines — Nix internals; niche.
-- [R] [lobsters] AmigaOS 2: the greatest upgrade — https://www.datagubbe.se/os20up/ — Retrocomputing; off-topic.
-- [R] [lobsters] What can wonky APIs tell us about the web? — https://alexwlchan.net/2026/wonky-web-apis/ — Analytical; deferred.
-- [R] [lobsters] PivCo-Huffman &quot;merge&quot; operations — https://fgiesen.wordpress.com/2026/06/21/pivco-huffman-merge-operations/ — Compression research; niche.
-- [R] [lobsters] loupe: A privacy-focused iOS app — https://github.com/mysk-research/loupe — iOS privacy tool; niche.
-- [R] [lobsters] Optimizing #[sqlx::test] rebuild time — https://kobzol.github.io/rust/2026/06/21/optimizing-sqlx-test-rebuild-time.html — Rust/sqlx; niche.
-- [R] [lobsters] Robust Jobserver — https://codeberg.org/mlugg/robust-jobserver/src/branch/main/spec.md — Build system spec; niche.
-- [R] [lobsters] Remote work increases social isolation — https://www.science.org/doi/10.1126/science.aec7671 — Academic study; not actionable.
-- [R] [lobsters] Memory Safe Inline Assembly — https://fil-c.org/inlineasm — PLT research; niche.
-- [R] [lobsters] System call instrumentation on Linux/x86-64 — https://www.humprog.org/~stephen/blog/2026/06/15/#system-call-instrumentation-on-intel-negative-result — Systems research; niche.
-- [P] [simon-willison] sqlite-utils 4.0rc1 adds migrations and nested transactions — https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/#atom-everything — Python SQLite toolkit gets native migrations and nested transactions in 4.0 RC.
-- [R] [simon-willison] sqlite-utils 4.0rc1 (release tag) — https://simonwillison.net/2026/Jun/21/sqlite-utils/#atom-everything — Duplicate of migration article.
-- [P] [simon-willison] Temporary Cloudflare Accounts for AI agents — https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything — New Cloudflare feature: ephemeral accounts auto-expire, useful for sandboxed agent environments.
-- [M] [claude-status] Elevated Error Rates for Opus 4.8/4.7/4.6, Sonnet 4.6, Haiku 4.5 — https://status.claude.com/incidents/lv35v0q9nsj2 — All major Claude API models had elevated errors Jun 22 01:33-02:06 UTC; resolved.
-- [R] [openai-blog] Samsung Electronics brings ChatGPT and Codex to employees — https://openai.com/index/samsung-electronics-chatgpt-codex-deployment — Enterprise adoption story; no solo dev value.
-- [R] [reddit-saas] The way I got my first paying user on my SaaS — https://www.reddit.com/r/SaaS/comments/1ucg8ks/ — Thin personal story.
-- [R] [reddit-saas] What did you consider completely normal in software development... — https://www.reddit.com/r/SaaS/comments/1ucgzbd/ — Discussion; no value.
-- [R] [reddit-saas] Building Blitzit 3.0: Week 26 Update — https://www.reddit.com/r/SaaS/comments/1ucgf6e/ — Indie SaaS metrics; interesting but not actionable.
-- [R] [reddit-saas] Vigilante weekly execution report feedback — https://www.reddit.com/r/SaaS/comments/1ucfu9n/ — Product feedback; off-topic.
-- [R] [reddit-saas] One-person company AI automation — https://www.reddit.com/r/SaaS/comments/1uce23c/ — Discussion; no hard signal.
-- [R] [reddit-saas] The one tool you refuse to replace with AI — https://www.reddit.com/r/SaaS/comments/1uchcmr/ — Engagement bait.
-- [R] [reddit-saas] I'm about to quit the whole SaaS thing — https://www.reddit.com/r/SaaS/comments/1ucgrgk/ — Personal motivation; not actionable.
-- [R] [reddit-saas] Best MoR for early stage SaaS — https://www.reddit.com/r/SaaS/comments/1ucgjhi/ — Basic question; no new information.
-- [R] [reddit-saas] Domain deliverability monitor for SaaS outreach — https://www.reddit.com/r/SaaS/comments/1ucf88z/ — Product validation question; off-topic.</pre>
+- [R] [reddit-saas] Building a qual research analysis tool, flying to Ahmedabad (June 25-30) &amp; Delhi (July 1-4) - want to meet researchers in person — https://www.reddit.com/r/SaaS/comments/1ucf6b0/building_a_qual_research_analysis_tool_flying_to/ — Hey all, I'm a cofounder of a qualitative research analysis tool. Interviews, transcripts, turning a pile of conversations into something y…
+- [P] [reddit-saas] I was looking for a side business to build and looked into the AI resume builder market, here are the gaps. — https://www.reddit.com/r/SaaS/comments/1ucf12d/i_was_looking_for_a_side_business_to_build_and/ — A Reddit founder post argues AI resume builders look saturated for generic ATS use, while freelancer, international, career-change, and recruiter-side workflows remain less served.
+- [R] [reddit-saas] Here are features I'm planning to build. What do you think? — https://www.reddit.com/r/SaaS/comments/1ucee67/here_are_features_im_planning_to_build_what_do/ — After working with hundreds of ecommerce merchants, I've noticed something interesting: Most store owners don't actually want more dashboar…
+- [P] [gh-n8n] n8n@1.123.60 — https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.60 — n8n 1.123.60 says it excludes failed workflows from billable counts and fixes 26 dependency security issues across packages like tmp, protobufjs, ws, and axios.
+- [R] [stratechery] Apple Price Increases, Apple Intelligence and the E.U. — https://stratechery.com/2026/apple-price-increases-apple-intelligence-and-the-e-u/ — Apple is (finally) raising prices, but they're not shipping Siri AI to the E.U.
+- [R] [reddit-localllama] GLM-5.2 is on DeepSWE — https://www.reddit.com/r/LocalLLaMA/comments/1uc79ho/glm52_is_on_deepswe/ — TOP-RIGHT corner is the best, price gets CHEAPER as you go towards the RIGHT. https://deepswe.datacurve.ai/ Alternate scores by ArtificialA…
+- [R] [reddit-localllama] Local LLM Inference Optimization: The Complete Guide — https://www.reddit.com/r/LocalLLaMA/comments/1uc3wg9/local_llm_inference_optimization_the_complete/ — I compiled a year of local LLM experiments into a practical llama.cpp optimization guide, covering VRAM fitting, KV cache, MoE placement, M…
+- [R] [reddit-localllama] Gemma 4 QAT 31B responds better to KV cache quantization too — https://www.reddit.com/r/LocalLLaMA/comments/1ucgrxh/gemma_4_qat_31b_responds_better_to_kv_cache/ — I've run benchmark from this post and got even better results on Gemma 4 31B &amp;#32; submitted by &amp;#32; /u/justicecurcian [link] &amp;#32; [comme…
+- [R] [reddit-localllama] Tokenomics — https://www.reddit.com/r/LocalLLaMA/comments/1ubrcwj/tokenomics/ — &amp;#32; submitted by &amp;#32; /u/HOLUPREDICTIONS [link] &amp;#32; [comments]
+- [R] [reddit-localllama] Do you think dedicated hardware for running local LLMs will become affordable anytime soon? — https://www.reddit.com/r/LocalLLaMA/comments/1uce2pz/do_you_think_dedicated_hardware_for_running_local/ — Models like qwen 27b dense have already proved to be useful coding/general purpose assistants, but issue is still with hardware even the en…
+- [R] [reddit-localllama] Support Step3.5/3.7 flash mtp3 by forforever73 · Pull Request #24340 · ggml-org/llama.cpp — https://www.reddit.com/r/LocalLLaMA/comments/1ucevoo/support_step3537_flash_mtp3_by_forforever73_pull/ — follow-up to #23274 Multi-layer MTP support! Try with latest llama.cpp version. &amp;#32; submitted by &amp;#32; /u/pmttyji [link] &amp;#32; [comments]
+- [R] [reddit-localllama] Not a new model, just a Happy Father's Day and a thank you. — https://www.reddit.com/r/LocalLLaMA/comments/1ubzzib/not_a_new_model_just_a_happy_fathers_day_and_a/ — I know this isn't our usual discussion about context windows, quantization, or the latest model drop, but I just wanted to take a quick mom…
+- [R] [reddit-localllama] Gemma 4 31B Q6 on Dual 9060 XT — https://www.reddit.com/r/LocalLLaMA/comments/1ucenk7/gemma_4_31b_q6_on_dual_9060_xt/ — Running Gemma 4 31B Q6 on two 9060 XT 16GB cards, runs consistently around 8-9 t/s. From reading through other threads on here, people seem…
+- [R] [reddit-localllama] Vercel CEO: &quot;Almost shocked&quot; by how good GLM-5.2 is at coding — https://www.reddit.com/r/LocalLLaMA/comments/1ubk57k/vercel_ceo_almost_shocked_by_how_good_glm52_is_at/ — Guillermo Rauch (Vercel CEO) says he is &quot;genuinely impressed, almost shocked&quot; by GLM-5.2's coding performance. What has your experience wit…
+- [R] [reddit-localllama] I want to love hermes agent, but it looks so ugly, and ux is not nice — https://www.reddit.com/r/LocalLLaMA/comments/1ucanbv/i_want_to_love_hermes_agent_but_it_looks_so_ugly/ — I am rechecking on hermes agent currently, also because many report great experiences, but oh my, does it look ugly. The web-UI uses such u…
+- [R] [reddit-localllama] I pretrained and post trained a 500M parameter LLM and 330M parameter Image generator from scratch — https://www.reddit.com/r/LocalLLaMA/comments/1ubuy8w/i_pretrained_and_post_trained_a_500m_parameter/ — Hey folks Hope you are doing well I started HobbyLM as an side project last month Initially I wrote an Agent harness using Claude SDK which…
+- [R] [reddit-localllama] Qwen is never going to open source Qwen 3.7, aren't they? — https://www.reddit.com/r/LocalLLaMA/comments/1ubjnh5/qwen_is_never_going_to_open_source_qwen_37_arent/ — Well, this was predictable. After Qwen fired Junyang Lin, the next models are no longer open source. Ignoring the small models for a minute…
+- [R] [reddit-localllama] Leaderboard for quantized models, similar to artificial analysis? — https://www.reddit.com/r/LocalLLaMA/comments/1uc9aw3/leaderboard_for_quantized_models_similar_to/ — Artificial analysis’ leaderboard for models is somewhat useful for comparing model intelligence, but does not take into account quantizatio…
+- [R] [reddit-localllama] Best local model for vision - 2nd benchmark update - 21 Jun 2026 — https://www.reddit.com/r/LocalLLaMA/comments/1ubx4rw/best_local_model_for_vision_2nd_benchmark_update/ — I previously posted the first results of my VLM benchmark . There were a few useful comments and observations I took into account, to revis…
+- [R] [reddit-localllama] Finally seeing benefits of MTP after removing GGML_CUDA_ALLREDUCE — https://www.reddit.com/r/LocalLLaMA/comments/1uc4yyx/finally_seeing_benefits_of_mtp_after_removing/ — Been fighting this a while, mtp seeing lows at 17 to sometimes 30's and today I went and dug deep and tried so many different configuartion…
+- [R] [reddit-localllama] 8-16 MI50s Minimax M3 @19 tps TG (peak) — https://www.reddit.com/r/LocalLLaMA/comments/1ubnj2l/816_mi50s_minimax_m3_19_tps_tg_peak/ — TL;DR Speeds are not too ugly for this old 2018 hardware but imo, not very usable for agentic coding (if you compare with qwen3.6 27B on 8…
+- [R] [reddit-localllama] Gemma 4 QAT seems to respond significantly better to KV cache quantization — https://www.reddit.com/r/LocalLLaMA/comments/1ubl0df/gemma_4_qat_seems_to_respond_significantly_better/ — Results from KL Divergence on wikitext with 16k context I know some users, including myself, were disappointed with Gemma 4's sensitivity t…
+- [R] [reddit-localllama] Qwen 3.6 27b Abliterated (apostate) — https://www.reddit.com/r/LocalLLaMA/comments/1ubwo03/qwen_36_27b_abliterated_apostate/ — I've been working on a project called Apostate and have finally released my first large model with it on Hugging Face. Qwen 3.6 27B with sa…
+- [R] [reddit-localllama] 2× Radeon R9700 — Qwen 3.6 27B Q8 MTP on llama.cpp — https://www.reddit.com/r/LocalLLaMA/comments/1ubrn1a/2_radeon_r9700_qwen_36_27b_q8_mtp_on_llamacpp/ — There isn't much information around about multi-GPU setups with the R9700, so I'm writing this up in case it helps anyone in the same situa…
+- [P] [reddit-localllama] I forked ik_llama.cpp and added a &quot;--numa mirror&quot; mode to maximize performance on multi-socket CPU systems. Just sharing and looking for testers! — https://www.reddit.com/r/LocalLLaMA/comments/1ubw3mo/i_forked_ik_llamacpp_and_added_a_numa_mirror_mode/ — A LocalLLaMA post claims a forked `ik_llama.cpp` adds `--numa mirror`, duplicating weights and KV cache per socket to avoid remote-memory penalties and posted 1.3x-1.6x gains on several models.
+- [R] [reddit-localllama] For programmers with slow local LLM setup, what's your workflow? — https://www.reddit.com/r/LocalLLaMA/comments/1uc6ihb/for_programmers_with_slow_local_llm_setup_whats/ — What's your workflow and what's the best way you have found to code with local LLM when your token generation is &lt; 10 tk/sec? &amp;#32; submitt…
+- [R] [reddit-localllama] Agent recommendations — https://www.reddit.com/r/LocalLLaMA/comments/1uc86pz/agent_recommendations/ — Hi, I have a Strix Halo with 128GB setup that runs a couple of models (GPT-OSS 120b, Qwen3.5-122b, Gemma-4-31b) on llama-swap. GPT and Qwen…
+- [R] [reddit-localllama] Your Favorite Workflow to Convert PDF with Complex Structure to Markdown? — https://www.reddit.com/r/LocalLLaMA/comments/1uc6mp1/your_favorite_workflow_to_convert_pdf_with/ — I've tried markitdown, Docling, and Mineru. Are there better tools I should try? I need to process tables, floating box, etc. Thanks! &amp;#32;…
+- [R] [reddit-localllama] I got a Jetson Orin Nano, can it code? — https://www.reddit.com/r/LocalLLaMA/comments/1uchgyr/i_got_a_jetson_orin_nano_can_it_code/ — Has anyone tried running a coding model (maybe a Qwen) on a Orin Nano? I was looking at a Qwen 35B (MOE 3B) but that seems too large. ps. I…
+- [R] [hn-top] Munich 1991: The Roots of the Current AI Boom — https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html — Munich 1991: The Roots of the Current AI Boom
+- [P] [hn-top] Codex logging bug may write TBs to local SSDs — https://github.com/openai/codex/issues/28224 — A Codex CLI issue documented heavy local SQLite feedback logging, and a Jun 23 update says three merged PRs cut most of the noise and closed the report.
+- [R] [hn-top] GLM 5.2 vs. Opus — https://techstackups.com/comparisons/glm-5.2-vs-opus/ — GLM 5.2 vs. Opus
+- [R] [hn-top] Lisp in the Rust Type System — https://github.com/playX18/lisp-in-types/ — Lisp in the Rust Type System
+- [R] [hn-top] Efficient C++ Programming for Modern C++ CPUs, Chapter 4/part 2 — https://6it.dev/blog/infographics-operation-costs-in-cpu-clock-cycles-take-2-80736 — Efficient C++ Programming for Modern C++ CPUs, Chapter 4/part 2
+- [R] [hn-top] 1983 Northern Telecom Commodore Phone — https://www.oldtelephoneroom.ca/1983-northern-telecom-commodore-phone/ — 1983 Northern Telecom Commodore Phone
+- [P] [lobsters] Deno Desktop apps — https://docs.deno.com/runtime/desktop/ — Deno docs now document `deno desktop`, a canary-only Deno 2.9 feature for packaging web or TypeScript projects into desktop binaries with built-in webview options and auto-update support.
+- [R] [lobsters] Chesterton's middle finger — https://www.arp242.net/chestersons-finger.html — Comments
+- [R] [lobsters] Computing Camera Rays — https://momentsingraphics.de/CameraRays.html — Comments
+- [R] [lobsters] How a Computer Should Work — https://pkgdemon.github.io/how-a-computer-should-work.html — Comments
+- [R] [lobsters] OpenMW 0.51.0 Released — https://openmw.org/2026/openmw-0-51-0-released/ — Comments</pre>
     </details>
   </main>
   <footer>
