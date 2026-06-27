@@ -5,21 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>June 26, 2026 report log — The Nightly Librarian</title>
-  <meta name="description" content="12 stories cleared the bar, led by Show HN: peerd — AI agent harness that runs entirely in the browser, Cloudflare: Self-Managed OAuth now available to">
+  <meta name="description" content="6 stories cleared the bar, led by How we built saga rollbacks for Cloudflare Workflows, Deno 2.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-06-26/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="June 26, 2026 report log | The Nightly Librarian">
-  <meta property="og:description" content="12 stories cleared the bar, led by Show HN: peerd — AI agent harness that runs entirely in the browser, Cloudflare: Self-Managed OAuth now available to">
+  <meta property="og:description" content="6 stories cleared the bar, led by How we built saga rollbacks for Cloudflare Workflows, Deno 2.">
   <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-06-26/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="June 26, 2026 report log | The Nightly Librarian">
-  <meta name="twitter:description" content="12 stories cleared the bar, led by Show HN: peerd — AI agent harness that runs entirely in the browser, Cloudflare: Self-Managed OAuth now available to">
+  <meta name="twitter:description" content="6 stories cleared the bar, led by How we built saga rollbacks for Cloudflare Workflows, Deno 2.">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
@@ -35,7 +35,7 @@
     </div>
     <div class="dateline">
       <span>June 26, 2026 · Report log</span>
-      <span>Jun 26, 2026, 2:17 AM</span>
+      <span>Jun 26, 2026, 7:07 AM</span>
     </div>
   </header>
   <main>
@@ -43,72 +43,42 @@
     <h1>June 26, 2026</h1>
     <div class="summary-card">
       <div class="eyebrow">Report summary</div>
-      <p>12 stories cleared the bar, led by Show HN: peerd — AI agent harness that runs entirely in the browser, Cloudflare: Self-Managed OAuth now available to all developers, and GLM-5.2 is a step change for open agents.</p>
+      <p>6 stories cleared the bar, led by How we built saga rollbacks for Cloudflare Workflows, Deno 2.9, and How I saved our agency client $480/mo by migrating their CRM sync from Make to self-hosted n8n (Full Docker + Auto-SSL config).</p>
       <div class="meta" style="margin-top:0.4rem;">
-        <span>12 worth-attention items</span><span>40 digest lines</span>
+        <span>6 worth-attention items</span><span>40 digest lines</span>
       </div>
     </div>
     <h2>Worth attention</h2>
     <div class="item-stack">
 
       <div class="item">
-        <div class="item-title"><a href="https://github.com/NotASithLord/peerd" target="_blank" rel="noopener">Show HN: peerd — AI agent harness that runs entirely in the browser</a></div>
-        <div class="item-takeaway">peerd is an Apache-2.0 web-extension agent harness that runs entirely in the browser, using your own provider keys and the browser's existing sandbox (tabs, workers, even Linux-on-wasm) instead of MCP middlemen or a hosted runtime. It explicitly designs against the lethal trifecta by isolating untrusted DOM/results behind dedicated runners and routing all egress through a deny-list. For anyone building agents, it's a credible alternative substrate worth auditing — no build, loads unpacked from GitHub.</div>
+        <div class="item-title"><a href="https://blog.cloudflare.com/rollbacks-for-workflows/" target="_blank" rel="noopener">How we built saga rollbacks for Cloudflare Workflows</a></div>
+        <div class="item-takeaway">Cloudflare Workflows now supports saga-style rollback handlers on step.do(), reducing manual compensation code for durable jobs.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://blog.cloudflare.com/oauth-for-all/" target="_blank" rel="noopener">Cloudflare: Self-Managed OAuth now available to all developers</a></div>
-        <div class="item-takeaway">Cloudflare has rolled out Self-Managed OAuth to all developers, having executed a zero-downtime migration of its core OAuth engine. For solo builders on Cloudflare this means you can stand up your own OAuth provider/flows without third-party identity services — relevant if you're shipping apps or APIs that need auth (e.g. MCP/agent endpoints).</div>
+        <div class="item-title"><a href="https://deno.com/blog/v2.9" target="_blank" rel="noopener">Deno 2.9</a></div>
+        <div class="item-takeaway">Deno 2.9 adds deno desktop, easier Node lockfile migration, CSS module imports, better testing, and Node 26 compatibility.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://www.interconnects.ai/p/glm-52-is-the-step-change-for-open" target="_blank" rel="noopener">GLM-5.2 is a step change for open agents</a></div>
-        <div class="item-takeaway">Nathan Lambert's Interconnects analysis argues GLM-5.2 is a genuine step change for open-weights agentic models — closing much of the gap to closed frontier models on agent/tool-use tasks. If you run open models for agent workloads, GLM-5.2 is now a serious default to benchmark, and it's already available cheaply via gateways (see GLM 5.2 Fast on Vercel).</div>
+        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1ug00ct/how_i_saved_our_agency_client_480mo_by_migrating/" target="_blank" rel="noopener">How I saved our agency client $480/mo by migrating their CRM sync from Make to self-hosted n8n (Full Docker + Auto-SSL config)</a></div>
+        <div class="item-takeaway">A Reddit case study claims a Make-to-self-hosted-n8n migration cut an agency client from about $500/month to an $8 Azure VM.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/" target="_blank" rel="noopener">Computer use in Gemini 3.5 Flash</a></div>
-        <div class="item-takeaway">Google added computer-use (screen understanding + UI control) to Gemini 3.5 Flash, putting agentic GUI automation on a fast, cheap model tier. Directly relevant to anyone doing computer-use/automation agents — a lower-cost option to evaluate against Claude/OpenAI computer-use for desktop and browser control.</div>
+        <div class="item-title"><a href="https://github.com/inkeep/open-knowledge" target="_blank" rel="noopener">Show HN: OpenKnowledge – open source AI-first alternative to Obsidian/Notion</a></div>
+        <div class="item-takeaway">OpenKnowledge launches as an open-source local-first markdown editor with Claude/Codex integration, MCP hooks, and git-backed sharing.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://pure-effect.org" target="_blank" rel="noopener">Show HN: Pure Effect — reproduce production bugs locally without a DB</a></div>
-        <div class="item-takeaway">Pure Effect is a sub-1KB, zero-dependency TypeScript library that makes I/O a description (a Command object) rather than an action, so business logic stays pure and testable without mocks or test containers. Because every effect is plain data, you get free execution traces, time-travel replay of production bugs, and runtime guardrails (e.g. quarantining destructive calls) via an onBeforeCommand hook. A lighter-weight alternative to Effect-TS for solo devs who want testability without adopting a framework.</div>
+        <div class="item-title"><a href="https://huggingface.co/blog/vllm-jobs" target="_blank" rel="noopener">Run a vLLM Server on HF Jobs in One Command</a></div>
+        <div class="item-takeaway">Hugging Face shows how to launch a private OpenAI-compatible vLLM endpoint on HF Jobs with one command and pay-per-time GPUs.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://vercel.com/changelog/glm-5-2-fast-via-wafer-now-available-on-ai-gateway" target="_blank" rel="noopener">GLM 5.2 Fast (via Wafer) now on Vercel AI Gateway</a></div>
-        <div class="item-takeaway">Vercel's AI Gateway now serves GLM 5.2 Fast through Wafer, claiming ~2x throughput vs other serverless providers (170+ tok/s small-context, 200+ large-context) at provider pricing with no markup, including BYOK. If you route models through AI Gateway, this is a cheaper/faster option for the strong open GLM-5.2 model worth benchmarking against your current default.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://www.reuters.com/business/qualcomm-buy-ai-startup-modular-2026-06-24/" target="_blank" rel="noopener">Qualcomm to acquire Modular (Mojo / MAX)</a></div>
-        <div class="item-takeaway">Qualcomm has agreed to acquire Modular, the company behind the Mojo language and MAX inference engine (founded by Chris Lattner). If you've been tracking or betting on Mojo/MAX, ownership and roadmap direction now sit under Qualcomm — a reason to reassess any dependence before committing.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://www.greptile.com/blog/prs-on-openclaw" target="_blank" rel="noopener">PR spam today looks like email spam in the early 2000s</a></div>
-        <div class="item-takeaway">Greptile's builder report on a wave of low-quality AI-generated pull requests flooding open-source repos, drawing the analogy to early-2000s email spam — and pointing toward reputation/filtering defenses. Worth reading if you maintain any public repo or accept external contributions, since the same triage burden is coming for everyone.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://github.com/nubjs/nub" target="_blank" rel="noopener">Show HN: Nub — a Bun-like all-in-one toolkit for Node.js</a></div>
-        <div class="item-takeaway">Nub runs your code on stock Node augmented via a --require preload hook that adds an oxc-powered transpiler, a module-resolution hook, and polyfills (Worker, Temporal, etc.) — giving Bun-like ergonomics while still running on Node's real engine and stdlib. Worth a look if you want Bun-style DX without leaving the Node runtime.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://dandylyons.github.io/treedocs/" target="_blank" rel="noopener">Show HN: Treedocs — documentation that automatically checks for staleness</a></div>
-        <div class="item-takeaway">Treedocs is a documentation tool that automatically flags when docs have gone stale relative to the code they describe. Directly relevant to the recurring problem of CLAUDE.md / project docs drifting out of sync with reality. Worth a look as a pattern even if you don't adopt the tool.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://supabase.com/blog/realtime-or-pipelines-how-to-choose-the-right-tool" target="_blank" rel="noopener">Supabase: Realtime or Pipelines? How to choose</a></div>
-        <div class="item-takeaway">Supabase guide distinguishing Realtime (low-latency change broadcast to clients) from Pipelines (CDC replication to analytical stores like BigQuery) — both read from Postgres logical replication but solve different problems. A useful decision reference if you're building on Postgres/Supabase and weighing live updates vs. analytics replication.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://vercel.com/changelog/workflow-sdk-now-compresses-run-and-step-payloads" target="_blank" rel="noopener">Vercel Workflow SDK 5 beta now compresses run/step payloads (zstd)</a></div>
-        <div class="item-takeaway">The Workflow SDK 5 beta auto-compresses run, hook, and step payloads with zstd, cutting storage/cost up to ~85% for JSON-heavy AI-conversation payloads with no code change. Narrow to Workflow SDK / eve users, but a meaningful cost win if you persist long agent histories there.</div>
+        <div class="item-title"><a href="https://hackernewstrends.com" target="_blank" rel="noopener">Show HN: I made Google Trends for Hacker News by indexing 18 years of comments</a></div>
+        <div class="item-takeaway">Hacker Trends indexes 18 years of HN discussion into a searchable trend chart with term overlays and source-thread drilldowns.</div>
       </div>
     </div>
     <h2>Full digest</h2>
@@ -116,10 +86,296 @@
 
       <div class="item">
         <div class="item-title">
-          <span class="tag tag-p">P</span>
-          Show HN: peerd
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/crewAIInc/crewAI/releases/tag/1.15.0" target="_blank" rel="noopener">1.15.0</a>
         </div>
-        <div class="item-takeaway">AI agent harness that runs entirely in the browser — https://github.com/NotASithLord/peerd — peerd is an Apache-2.0 web-extension agent harness that runs entirely in the browser, using your own provider keys and the browser's existing sandbox (tabs, workers, even Linux-on-wasm) instead of MCP middlemen or a hosted runtime. It explicitly designs against the lethal trifecta by isolating untrusted DOM/results behind dedicated runners and routing all egress through a deny-list. For anyone building agents, it's a credible alternative substrate worth auditing — no build, loads unpacked from GitHub.</div>
+        <div class="item-takeaway">## What's Changed ### Features - Track conversational flow turn usage in telemetry - Support conversational flows in the CLI TUI - Add unif…</div>
+        <div class="item-meta">
+          <span>gh-crewai</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/core%400.13.0" target="_blank" rel="noopener">@composio/core@0.13.0</a>
+        </div>
+        <div class="item-takeaway">### Minor Changes - d17a268: Add the first-class `composio.sessions.create()` API while keeping `composio.create()` as an alias, expose the…</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.4.3" target="_blank" rel="noopener">langchain-fireworks==1.4.3</a>
+        </div>
+        <div class="item-takeaway">Changes since langchain-fireworks==1.4.2 release(fireworks): 1.4.3 chore: bump vcrpy from 8.1.1 to 8.2.1 in /libs/partners/fireworks (#3831…</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/" target="_blank" rel="noopener">Our latest Google Finance upgrades, including a new app</a>
+        </div>
+        <div class="item-takeaway">The new Google Finance is coming out of beta and launching a new Android app.</div>
+        <div class="item-meta">
+          <span>google-ai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufaj3a/dataroom_by_corgi_insurance_ycs24_stole/" target="_blank" rel="noopener">DataRoom by Corgi Insurance (YCS24) stole copywrited opensource code</a>
+        </div>
+        <div class="item-takeaway">Corgi Insurance, the company behind viral stunts like the Corgi Cafe launched a dataroom product this week with full enterprise level featu…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufudj7/we_cloned_our_50kyear_vendor_crm_100_with_codex/" target="_blank" rel="noopener">We cloned our $50k/year vendor CRM 100% with Codex. Will LLMs kill SaaS dev houses?</a>
+        </div>
+        <div class="item-takeaway">Two years ago, we bought our in-house CRM from a software vendor. Last year, we successfully cloned 100% of its features using Codex, which…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufqdqi/whats_a_boring_saas_idea_you_think_could_still/" target="_blank" rel="noopener">What’s a boring SaaS idea you think could still make real money?</a>
+        </div>
+        <div class="item-takeaway">I’m becoming more convinced that boring SaaS is where the money is. submitted by /u/East_Excuse2814 [link] [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufspp1/how_do_you_do_seo/" target="_blank" rel="noopener">How do you do SEO</a>
+        </div>
+        <div class="item-takeaway">I’m curious how saas operators manage SEO. Do you diy? Outsource? Or don’t do it at all? submitted by /u/johns10davenport [link] [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufcevw/i_made_my_first_sale_after_2_weeks/" target="_blank" rel="noopener">i made my first sale after 2 weeks!</a>
+        </div>
+        <div class="item-takeaway">wow, it honestly feels so surreal because I was so sure that they would've cancelled they trial but they didnt! maybe they forgot? or maybe…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufy6zu/do_users_actually_leave_when_a_website_loads/" target="_blank" rel="noopener">Do users actually leave when a website loads slowly?</a>
+        </div>
+        <div class="item-takeaway">I often notice that I lose interest and close websites that take too long to load, even if the product looks useful. From your experience,…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufxrqg/any_good_recommendations_on_funnel_analytic/" target="_blank" rel="noopener">Any good recommendations on funnel analytic platforms?</a>
+        </div>
+        <div class="item-takeaway">I’ve been working through some data and trying to pull it all together into a funnel running from website visits &gt; sign ups &gt; paid conversi…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufzyrg/the_age_of_the_solopreneur_stripe_report/" target="_blank" rel="noopener">The age of the solopreneur (stripe report)</a>
+        </div>
+        <div class="item-takeaway">This was one of the most interesting charts from Stripe’s recent report . The number of solopreneurs crossing every major revenue threshold…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufcbmp/i_posted_my_results_last_week_and_made_extra_410/" target="_blank" rel="noopener">I posted my results last week and made extra $410</a>
+        </div>
+        <div class="item-takeaway">Hello community! I am really happy. Internet is amazing. I created a tool and people buy. Never believed this could be possible ever. Here…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufwpaj/if_you_run_more_than_one_product_solo_how_do_you/" target="_blank" rel="noopener">If you run more than one product solo, how do you decide what to actually work on each day?</a>
+        </div>
+        <div class="item-takeaway">I ship a few small products by myself, and the hardest part isn't building, it's deciding where my hours go each day. Whatever I touched la…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufy2d1/the_best_users_arent_always_the_loudest_ones/" target="_blank" rel="noopener">The best users aren't always the loudest ones</a>
+        </div>
+        <div class="item-takeaway">One thing I've noticed while building products is that the people who end up becoming customers don't always look the most engaged at first…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uffos1/let_your_agent_create_beautiful_forms/" target="_blank" rel="noopener">Let your agent create beautiful forms</a>
+        </div>
+        <div class="item-takeaway">I just hate building forms by hand. And I know every agent can easily build a form. But then you need to host it, and make sure the respons…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ug0b6a/how_do_you_decide_on_a_price_for_tiers/" target="_blank" rel="noopener">How do you decide on a price for tiers?</a>
+        </div>
+        <div class="item-takeaway">I'm working on a &quot;secure and private workspace&quot; and I have 2 separate versions of the project. I have one open source version. I would like…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ug0aev/are_we_moving_from_saas_products_to_aipowered/" target="_blank" rel="noopener">Are we moving from SaaS products to AI-powered business systems?</a>
+        </div>
+        <div class="item-takeaway">It feels like more founders are building software that performs work rather than just providing tools. Do you think SaaS will increasingly…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ug08lj/howre_you_deploying_llms_in_production_nowadays/" target="_blank" rel="noopener">How're you deploying LLMs in production now-a-days? What's the best and most affordable way?</a>
+        </div>
+        <div class="item-takeaway">I've been developing an AI SaaS product using LLM APIs (from OpenRouter) but now want to deploy an open-source LLM in my own Prod env. whic…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ug00ct/how_i_saved_our_agency_client_480mo_by_migrating/" target="_blank" rel="noopener">How I saved our agency client $480/mo by migrating their CRM sync from Make to self-hosted n8n (Full Docker + Auto-SSL config)</a>
+        </div>
+        <div class="item-takeaway">A Reddit case study claims a Make-to-self-hosted-n8n migration cut an agency client from about $500/month to an $8 Azure VM.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufzxcl/at_what_point_did_you_stop_being_your_companys/" target="_blank" rel="noopener">At what point did you stop being your company’s best salesperson?</a>
+        </div>
+        <div class="item-takeaway">Only in Saas businesses context. I think its when you hire your first sales person. submitted by /u/ZizouConnects [link] [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufg9it/whats_a_lesson_you_wish_you_had_learned_earlier/" target="_blank" rel="noopener">What's a lesson you wish you had learned earlier?</a>
+        </div>
+        <div class="item-takeaway">Looking back, what's one lesson you wish you had learned much earlier? It could be about building products, talking to users, growth, or an…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufytt3/so_i_upgrade_my_toy_agent_into_a_proper_saas_what/" target="_blank" rel="noopener">So I upgrade my toy agent into a proper SaaS, what now?</a>
+        </div>
+        <div class="item-takeaway">The story is I built a toy 6 months ago that uses LLM to fill visa applications for me, and recently (being unemployed) I decide to learn w…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufyslx/b2b_saas_founder_no_sales_cant_break_through_need/" target="_blank" rel="noopener">B2B SaaS founder, no sales, can't break through. Need brutal feedback.</a>
+        </div>
+        <div class="item-takeaway">Ok so I've been building this thing for almost a year and a half. ID verification + access control for nightclubs and bars in Chile. We had…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufne99/first_sales_feeling_on_top_of_the_world_haha/" target="_blank" rel="noopener">First sales, feeling on top of the world haha</a>
+        </div>
+        <div class="item-takeaway">Probably won't get another for a while 😅 submitted by /u/OMGitzLambo [link] [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ufu6oq/built_a_tool_to_compete_with_clickup/" target="_blank" rel="noopener">Built a tool to compete with ClickUp</a>
+        </div>
+        <div class="item-takeaway">I know it sounds like I am bragging but for the last few years I have paid thousands of dollars to ClickUp. I loved it at the beginning but…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://github.com/inkeep/open-knowledge" target="_blank" rel="noopener">Show HN: OpenKnowledge – open source AI-first alternative to Obsidian/Notion</a>
+        </div>
+        <div class="item-takeaway">OpenKnowledge launches as an open-source local-first markdown editor with Claude/Codex integration, MCP hooks, and git-backed sharing.</div>
         <div class="item-meta">
           <span>hn-show</span>
         </div>
@@ -127,10 +383,10 @@
 
       <div class="item">
         <div class="item-title">
-          <span class="tag tag-p">P</span>
-          Show HN: Pure Effect
+          <span class="tag tag-r">R</span>
+          <a href="https://princechazz.com" target="_blank" rel="noopener">Show HN: Chess-Inspired Roguelike</a>
         </div>
-        <div class="item-takeaway">reproduce production bugs locally without a DB — https://pure-effect.org — Pure Effect is a sub-1KB, zero-dependency TypeScript library that makes I/O a description (a Command object) rather than an action, so business logic stays pure and testable without mocks or test containers. Because every effect is plain data, you get free execution traces, time-travel replay of production bugs, and runtime guardrails (e.g. quarantining destructive calls) via an onBeforeCommand hook. A lighter-weight alternative to Effect-TS for solo devs who want testability without adopting a framework.</div>
+        <div class="item-takeaway">Show HN: Chess-Inspired Roguelike</div>
         <div class="item-meta">
           <span>hn-show</span>
         </div>
@@ -138,10 +394,10 @@
 
       <div class="item">
         <div class="item-title">
-          <span class="tag tag-p">P</span>
-          Show HN: Treedocs
+          <span class="tag tag-m">M</span>
+          <a href="https://hackernewstrends.com" target="_blank" rel="noopener">Show HN: I made Google Trends for Hacker News by indexing 18 years of comments</a>
         </div>
-        <div class="item-takeaway">documentation that automatically checks for staleness — https://dandylyons.github.io/treedocs/ — Treedocs is a documentation tool that automatically flags when docs have gone stale relative to the code they describe. Directly relevant to the recurring problem of CLAUDE.md / project docs drifting out of sync with reality. Worth a look as a pattern even if you don't adopt the tool.</div>
+        <div class="item-takeaway">Hacker Trends indexes 18 years of HN discussion into a searchable trend chart with term overlays and source-thread drilldowns.</div>
         <div class="item-meta">
           <span>hn-show</span>
         </div>
@@ -150,108 +406,75 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://github.com/n8n-io/n8n/releases/tag/stable" target="_blank" rel="noopener">n8n 2.27.4 (stable) release</a>
+          <a href="https://lingochunk.com/try" target="_blank" rel="noopener">Show HN: Turn native language audio into flashcards and shadowing practice</a>
         </div>
-        <div class="item-takeaway">Routine n8n patch release: minor core bug fixes and a Google Ads node API bump (v20-&gt;v21). No user-facing changes that alter a decision.</div>
+        <div class="item-takeaway">Here is a tool I built initially for myself to help with my German and Greek language studies. It started as a hack for creating Anki cards…</div>
         <div class="item-meta">
-          <span>gh-n8n</span>
+          <span>hn-show</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.27.4" target="_blank" rel="noopener">n8n@2.27.4 release</a>
+          <a href="https://minipcs.zip" target="_blank" rel="noopener">Show HN: MiniPCs.zip – Charting the Pareto frontier of Mini PCs</a>
         </div>
-        <div class="item-takeaway">Duplicate of the n8n 2.27.4 stable tag — same changelog.</div>
+        <div class="item-takeaway">The overall idea is to chart out the thousands of Mini PCs by benchmark and reveal the Pareto Front so you can get the most Compute per Dol…</div>
         <div class="item-meta">
-          <span>gh-n8n</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://vercel.com/changelog/glm-5-2-fast-via-wafer-now-available-on-ai-gateway" target="_blank" rel="noopener">GLM 5.2 Fast (via Wafer) now on Vercel AI Gateway</a>
-        </div>
-        <div class="item-takeaway">Vercel's AI Gateway now serves GLM 5.2 Fast through Wafer, claiming ~2x throughput vs other serverless providers (170+ tok/s small-context, 200+ large-context) at provider pricing with no markup, including BYOK. If you route models through AI Gateway, this is a cheaper/faster option for the strong open GLM-5.2 model worth benchmarking against your current default.</div>
-        <div class="item-meta">
-          <span>vercel-changelog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://vercel.com/changelog/workflow-sdk-now-compresses-run-and-step-payloads" target="_blank" rel="noopener">Vercel Workflow SDK 5 beta now compresses run/step payloads (zstd)</a>
-        </div>
-        <div class="item-takeaway">The Workflow SDK 5 beta auto-compresses run, hook, and step payloads with zstd, cutting storage/cost up to ~85% for JSON-heavy AI-conversation payloads with no code change. Narrow to Workflow SDK / eve users, but a meaningful cost win if you persist long agent histories there.</div>
-        <div class="item-meta">
-          <span>vercel-changelog</span>
+          <span>hn-show</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://vercel.com/changelog/chat-sdk-now-supports-rich-text-in-telegram" target="_blank" rel="noopener">Vercel Chat SDK now supports rich text in Telegram</a>
+          <a href="https://www.crosscanon.com/" target="_blank" rel="noopener">Show HN: Bible as RAG Database</a>
         </div>
-        <div class="item-takeaway">Chat SDK's Telegram adapter now renders markdown/AST messages as native rich messages (headings, lists, tables, formulas, media) with streaming and automatic fallback. Narrow integration detail.</div>
+        <div class="item-takeaway">Made this in a free evening. Index an permissive license translation of the Bible (WEB) into a RAG database to allow returning passages of…</div>
         <div class="item-meta">
-          <span>vercel-changelog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://www.latent.space/p/ainews-its-meta-harness-summer" target="_blank" rel="noopener">[AINews] It's Meta-Harness Summer</a>
-        </div>
-        <div class="item-takeaway">AINews riff on the 'harness of harnesses' trend in agent tooling. Only a teaser line was captured; thematically relevant to agent-harness work but no concrete claim to act on yet.</div>
-        <div class="item-meta">
-          <span>latent-space</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          Why the Frontier Ecosystem must be Open
-        </div>
-        <div class="item-takeaway">Databricks (Zaharia &amp; Xin) — https://www.latent.space/p/databricks — A Databricks leadership interview on what it takes for every company to build 'Agent Clouds' and why open frontier models matter. Only a teaser was captured; strategic/opinion content rather than an actionable change.</div>
-        <div class="item-meta">
-          <span>latent-space</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://supabase.com/blog/realtime-or-pipelines-how-to-choose-the-right-tool" target="_blank" rel="noopener">Supabase: Realtime or Pipelines? How to choose</a>
-        </div>
-        <div class="item-takeaway">Supabase guide distinguishing Realtime (low-latency change broadcast to clients) from Pipelines (CDC replication to analytical stores like BigQuery) — both read from Postgres logical replication but solve different problems. A useful decision reference if you're building on Postgres/Supabase and weighing live updates vs. analytics replication.</div>
-        <div class="item-meta">
-          <span>supabase-blog</span>
+          <span>hn-show</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://supabase.com/blog/introducing-supabase-pipelines" target="_blank" rel="noopener">Introducing Supabase Pipelines</a>
+          <a href="https://www.startupsbr.com/sao-paulo" target="_blank" rel="noopener">Show HN: StartupsBR – A map of Brazilian startups</a>
         </div>
-        <div class="item-takeaway">Announcement of Supabase Pipelines (managed Postgres CDC to BigQuery and similar). Published December 2025 — stale, and the 'Realtime or Pipelines' guide covers the same ground better.</div>
+        <div class="item-takeaway">I couldn't find a simple way to explore the Brazilian startup ecosystem geographically, as I can in other places like the Bay Area or Londo…</div>
         <div class="item-meta">
-          <span>supabase-blog</span>
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://huggingface.co/blog/vllm-jobs" target="_blank" rel="noopener">Run a vLLM Server on HF Jobs in One Command</a>
+        </div>
+        <div class="item-takeaway">Hugging Face shows how to launch a private OpenAI-compatible vLLM endpoint on HF Jobs with one command and pay-per-time GPUs.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://huggingface.co/blog/allenai/hybrid-token-prediction" target="_blank" rel="noopener">Which tokens does a hybrid model predict better?</a>
+        </div>
+        <div class="item-takeaway">Which tokens does a hybrid model predict better?</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://blog.cloudflare.com/oauth-for-all/" target="_blank" rel="noopener">Cloudflare: Self-Managed OAuth now available to all developers</a>
+          <a href="https://blog.cloudflare.com/rollbacks-for-workflows/" target="_blank" rel="noopener">How we built saga rollbacks for Cloudflare Workflows</a>
         </div>
-        <div class="item-takeaway">Cloudflare has rolled out Self-Managed OAuth to all developers, having executed a zero-downtime migration of its core OAuth engine. For solo builders on Cloudflare this means you can stand up your own OAuth provider/flows without third-party identity services — relevant if you're shipping apps or APIs that need auth (e.g. MCP/agent endpoints).</div>
+        <div class="item-takeaway">Cloudflare Workflows now supports saga-style rollback handlers on step.do(), reducing manual compensation code for durable jobs.</div>
         <div class="item-meta">
           <span>cloudflare-blog</span>
         </div>
@@ -260,297 +483,44 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel" target="_blank" rel="noopener">Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel</a>
+          <a href="https://www.latent.space/p/ainews-openai-reports-median-internal" target="_blank" rel="noopener">[AINews] OpenAI reports median internal Codex output tokens grew 56x in Research, 32x in Customer Support, 27x in Engineering, and 13x in Legal since November 2025.</a>
         </div>
-        <div class="item-takeaway">NVIDIA/HF post on speeding up transformer fine-tuning via NeMo AutoModel. GPU-fleet-oriented and not relevant to a solo dev who isn't training models.</div>
+        <div class="item-takeaway">It's happening.</div>
         <div class="item-meta">
-          <span>huggingface-blog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://huggingface.co/blog/ffasr-leaderboard" target="_blank" rel="noopener">Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World</a>
-        </div>
-        <div class="item-takeaway">A new Hugging Face leaderboard benchmarking speech-recognition (ASR) models on real-world audio. Potentially useful if voice/transcription is on the roadmap (e.g. call-handling features), as a reference for picking an ASR model.</div>
-        <div class="item-meta">
-          <span>huggingface-blog</span>
+          <span>latent-space</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-preview.4" target="_blank" rel="noopener">Next.js v16.3.0-preview.4</a>
+          <a href="https://github.com/langgenius/dify/releases/tag/1.15.0" target="_blank" rel="noopener">1.15.0</a>
         </div>
-        <div class="item-takeaway">Next.js v16.3.0-preview.4 pre-release: misc internal changes, doc tweaks, and CI/dev-overlay fixes. Nothing user-facing that changes a decision.</div>
+        <div class="item-takeaway"># Dify 1.15.0 Release Note ## What's Changed ### UX &amp; UI Enhancements - **Redesigned landing / onboarding** for an easier first-run experie…</div>
+        <div class="item-meta">
+          <span>gh-dify</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://deno.com/blog/v2.9" target="_blank" rel="noopener">Deno 2.9</a>
+        </div>
+        <div class="item-takeaway">Deno 2.9 adds deno desktop, easier Node lockfile migration, CSS module imports, better testing, and Node 26 compatibility.</div>
+        <div class="item-meta">
+          <span>deno-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-preview.5" target="_blank" rel="noopener">v16.3.0-preview.5</a>
+        </div>
+        <div class="item-takeaway">### Misc Changes - Restore canary version 16.3.0-canary.66 after v16.3.0-preview.4 preview release - Fix local fonts in statically prerende…</div>
         <div class="item-meta">
           <span>gh-nextjs</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.67" target="_blank" rel="noopener">Next.js v16.3.0-canary.67</a>
-        </div>
-        <div class="item-takeaway">Next.js v16.3.0-canary.67 pre-release: misc internal changes, doc tweaks, and CI/dev-overlay fixes. Nothing user-facing that changes a decision.</div>
-        <div class="item-meta">
-          <span>gh-nextjs</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.66" target="_blank" rel="noopener">Next.js v16.3.0-canary.66</a>
-        </div>
-        <div class="item-takeaway">Next.js v16.3.0-canary.66 pre-release: misc internal changes, doc tweaks, and CI/dev-overlay fixes. Nothing user-facing that changes a decision.</div>
-        <div class="item-meta">
-          <span>gh-nextjs</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.65" target="_blank" rel="noopener">Next.js v16.3.0-canary.65</a>
-        </div>
-        <div class="item-takeaway">Next.js v16.3.0-canary.65 pre-release: misc internal changes, doc tweaks, and CI/dev-overlay fixes. Nothing user-facing that changes a decision.</div>
-        <div class="item-meta">
-          <span>gh-nextjs</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://ai.google.dev/gemini-api/docs/interactions-overview?hl=ja" target="_blank" rel="noopener">Gemini API: Interactions API</a>
-        </div>
-        <div class="item-takeaway">A new 'Interactions API' surfaced in the Gemini API changelog (Japanese docs page). No content captured, but a new Gemini interaction primitive could matter for agent/tool integrations — worth checking the English docs.</div>
-        <div class="item-meta">
-          <span>google-ai-changelog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://hl2.slqnt.dev/" target="_blank" rel="noopener">Half-Life 2 in a Browser</a>
-        </div>
-        <div class="item-takeaway">A port/demo of Half-Life 2 running in the browser. Impressive hack but entertainment, no builder leverage.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/" target="_blank" rel="noopener">Anthropic says Alibaba illicitly extracted Claude model capabilities</a>
-        </div>
-        <div class="item-takeaway">Reuters reports Anthropic alleges Alibaba illicitly extracted Claude's model capabilities (distillation/extraction). Notable industry/IP signal about model-distillation disputes, but no direct action for a solo builder.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" target="_blank" rel="noopener">OpenAI unveils its first custom chip, built by Broadcom</a>
-        </div>
-        <div class="item-takeaway">OpenAI announced its first custom inference chip ('Jalapeno'), built with Broadcom. A longer-term signal about inference cost/capacity trajectory, but no immediate action for solo builders.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://blog.cloudflare.com/oauth-for-all/" target="_blank" rel="noopener">Cloudflare launched self-managed OAuth for all (HN)</a>
-        </div>
-        <div class="item-takeaway">HN front-page item pointing to the Cloudflare self-managed OAuth announcement — same story covered from the Cloudflare blog.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://blog.jim-nielsen.com/2026/blogging-stating-the-obvious/" target="_blank" rel="noopener">Blogging can just be stating the obvious</a>
-        </div>
-        <div class="item-takeaway">An essay arguing blogging doesn't require novelty — stating the obvious has value. Pleasant meta-commentary, no builder leverage.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/LuaJIT/LuaJIT/issues/1475" target="_blank" rel="noopener">LuaJIT 3.0 proposed syntax extensions</a>
-        </div>
-        <div class="item-takeaway">A LuaJIT GitHub issue proposing 3.0 syntax extensions. Interesting to LuaJIT users but outside the solo dev's stack.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.autodidacts.io/dostoyevsky-isnt-difficult/" target="_blank" rel="noopener">Dostoyevsky isn't difficult</a>
-        </div>
-        <div class="item-takeaway">A literary essay on reading Dostoyevsky. Off-topic for a dev briefing.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.economist.com/business/2026/06/21/zombie-unicorns-are-haunting-silicon-valley" target="_blank" rel="noopener">Zombie unicorns are haunting Silicon Valley</a>
-        </div>
-        <div class="item-takeaway">An Economist piece on stagnant, overvalued 'zombie' startups. Business commentary with no builder action.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/" target="_blank" rel="noopener">45°C cooling design cuts data center water use to near zero</a>
-        </div>
-        <div class="item-takeaway">NVIDIA blog on a 45°C liquid-cooling design that nearly eliminates data-center water use. Relevant to hyperscale infra, not to solo builders.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://www.reuters.com/business/qualcomm-buy-ai-startup-modular-2026-06-24/" target="_blank" rel="noopener">Qualcomm to acquire Modular (Mojo / MAX)</a>
-        </div>
-        <div class="item-takeaway">Qualcomm has agreed to acquire Modular, the company behind the Mojo language and MAX inference engine (founded by Chris Lattner). If you've been tracking or betting on Mojo/MAX, ownership and roadmap direction now sit under Qualcomm — a reason to reassess any dependence before committing.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://www.interconnects.ai/p/glm-52-is-the-step-change-for-open" target="_blank" rel="noopener">GLM-5.2 is a step change for open agents</a>
-        </div>
-        <div class="item-takeaway">Nathan Lambert's Interconnects analysis argues GLM-5.2 is a genuine step change for open-weights agentic models — closing much of the gap to closed frontier models on agent/tool-use tasks. If you run open models for agent workloads, GLM-5.2 is now a serious default to benchmark, and it's already available cheaply via gateways (see GLM 5.2 Fast on Vercel).</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://rubyllm.com/" target="_blank" rel="noopener">RubyLLM: a Ruby framework for all major AI providers</a>
-        </div>
-        <div class="item-takeaway">RubyLLM is a single Ruby framework wrapping all major AI providers behind one interface. Narrow to Ruby shops, but if you have Ruby code, it's a clean way to stay provider-agnostic.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://www.greptile.com/blog/prs-on-openclaw" target="_blank" rel="noopener">PR spam today looks like email spam in the early 2000s</a>
-        </div>
-        <div class="item-takeaway">Greptile's builder report on a wave of low-quality AI-generated pull requests flooding open-source repos, drawing the analogy to early-2000s email spam — and pointing toward reputation/filtering defenses. Worth reading if you maintain any public repo or accept external contributions, since the same triage burden is coming for everyone.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/" target="_blank" rel="noopener">Computer use in Gemini 3.5 Flash</a>
-        </div>
-        <div class="item-takeaway">Google added computer-use (screen understanding + UI control) to Gemini 3.5 Flash, putting agentic GUI automation on a fast, cheap model tier. Directly relevant to anyone doing computer-use/automation agents — a lower-cost option to evaluate against Claude/OpenAI computer-use for desktop and browser control.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://blog.omgmog.net/post/xteink-x4-e-ink-reader/" target="_blank" rel="noopener">The Xteink X4 E-Ink Reader</a>
-        </div>
-        <div class="item-takeaway">A personal review of the Xteink X4 e-ink reader. Gadget content, not relevant to dev work.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          Show HN: Nub
-        </div>
-        <div class="item-takeaway">a Bun-like all-in-one toolkit for Node.js — https://github.com/nubjs/nub — Nub runs your code on stock Node augmented via a --require preload hook that adds an oxc-powered transpiler, a module-resolution hook, and polyfills (Worker, Temporal, etc.) — giving Bun-like ergonomics while still running on Node's real engine and stdlib. Worth a look if you want Bun-style DX without leaving the Node runtime.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://blog.interceptfund.com/p/ending-respiratory-infections" target="_blank" rel="noopener">Ending respiratory infections</a>
-        </div>
-        <div class="item-takeaway">A biotech/public-health essay on eliminating respiratory infections. Off-topic for a developer briefing.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://labs.iximiuz.com/tutorials/ssh-tunnels" target="_blank" rel="noopener">A Practical Guide to SSH Tunnels: Local and Remote Port Forwarding</a>
-        </div>
-        <div class="item-takeaway">A solid tutorial on SSH local/remote port forwarding. Useful reference, but well-trodden ground already in active use (e.g. the Hetzner DB tunnel) — low novelty.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://utaw.tech/news/wikipedia-recognition" target="_blank" rel="noopener">UK Wikipedia Workers seek union recognition</a>
-        </div>
-        <div class="item-takeaway">Labor news about UK Wikimedia workers seeking union recognition. Off-topic for a dev briefing.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://astral-os.org/posts/2026/04/03/wine-on-astral.html" target="_blank" rel="noopener">Porting WINE to a new Hobby OS</a>
-        </div>
-        <div class="item-takeaway">A write-up on porting WINE to a hobby operating system. Interesting systems hacking but no leverage for solo product work.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
         </div>
       </div>
     </div>
@@ -558,91 +528,73 @@
       <summary>Original markdown</summary>
       <pre class="raw-report"># Nightly Librarian — Newsletter draft
 
-Run: c2bb090f-0660-4fd0-8a36-9baf94c33ff4
-Started: 2026-06-26T06:09:59.504Z
-Completed: 2026-06-26T06:17:31.078Z
+Run: 40906e9b-891d-4d7e-9a7b-04bafc76926a
+Started: 2026-06-26T11:03:25.861Z
+Completed: 2026-06-26T11:07:57.285Z
 
 ## Worth attention
 
-- **Show HN: peerd — AI agent harness that runs entirely in the browser**
-  https://github.com/NotASithLord/peerd
-  peerd is an Apache-2.0 web-extension agent harness that runs entirely in the browser, using your own provider keys and the browser's existing sandbox (tabs, workers, even Linux-on-wasm) instead of MCP middlemen or a hosted runtime. It explicitly designs against the lethal trifecta by isolating untrusted DOM/results behind dedicated runners and routing all egress through a deny-list. For anyone building agents, it's a credible alternative substrate worth auditing — no build, loads unpacked from GitHub.
-- **Cloudflare: Self-Managed OAuth now available to all developers**
-  https://blog.cloudflare.com/oauth-for-all/
-  Cloudflare has rolled out Self-Managed OAuth to all developers, having executed a zero-downtime migration of its core OAuth engine. For solo builders on Cloudflare this means you can stand up your own OAuth provider/flows without third-party identity services — relevant if you're shipping apps or APIs that need auth (e.g. MCP/agent endpoints).
-- **GLM-5.2 is a step change for open agents**
-  https://www.interconnects.ai/p/glm-52-is-the-step-change-for-open
-  Nathan Lambert's Interconnects analysis argues GLM-5.2 is a genuine step change for open-weights agentic models — closing much of the gap to closed frontier models on agent/tool-use tasks. If you run open models for agent workloads, GLM-5.2 is now a serious default to benchmark, and it's already available cheaply via gateways (see GLM 5.2 Fast on Vercel).
-- **Computer use in Gemini 3.5 Flash**
-  https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/
-  Google added computer-use (screen understanding + UI control) to Gemini 3.5 Flash, putting agentic GUI automation on a fast, cheap model tier. Directly relevant to anyone doing computer-use/automation agents — a lower-cost option to evaluate against Claude/OpenAI computer-use for desktop and browser control.
-- **Show HN: Pure Effect — reproduce production bugs locally without a DB**
-  https://pure-effect.org
-  Pure Effect is a sub-1KB, zero-dependency TypeScript library that makes I/O a description (a Command object) rather than an action, so business logic stays pure and testable without mocks or test containers. Because every effect is plain data, you get free execution traces, time-travel replay of production bugs, and runtime guardrails (e.g. quarantining destructive calls) via an onBeforeCommand hook. A lighter-weight alternative to Effect-TS for solo devs who want testability without adopting a framework.
-- **GLM 5.2 Fast (via Wafer) now on Vercel AI Gateway**
-  https://vercel.com/changelog/glm-5-2-fast-via-wafer-now-available-on-ai-gateway
-  Vercel's AI Gateway now serves GLM 5.2 Fast through Wafer, claiming ~2x throughput vs other serverless providers (170+ tok/s small-context, 200+ large-context) at provider pricing with no markup, including BYOK. If you route models through AI Gateway, this is a cheaper/faster option for the strong open GLM-5.2 model worth benchmarking against your current default.
-- **Qualcomm to acquire Modular (Mojo / MAX)**
-  https://www.reuters.com/business/qualcomm-buy-ai-startup-modular-2026-06-24/
-  Qualcomm has agreed to acquire Modular, the company behind the Mojo language and MAX inference engine (founded by Chris Lattner). If you've been tracking or betting on Mojo/MAX, ownership and roadmap direction now sit under Qualcomm — a reason to reassess any dependence before committing.
-- **PR spam today looks like email spam in the early 2000s**
-  https://www.greptile.com/blog/prs-on-openclaw
-  Greptile's builder report on a wave of low-quality AI-generated pull requests flooding open-source repos, drawing the analogy to early-2000s email spam — and pointing toward reputation/filtering defenses. Worth reading if you maintain any public repo or accept external contributions, since the same triage burden is coming for everyone.
-- **Show HN: Nub — a Bun-like all-in-one toolkit for Node.js**
-  https://github.com/nubjs/nub
-  Nub runs your code on stock Node augmented via a --require preload hook that adds an oxc-powered transpiler, a module-resolution hook, and polyfills (Worker, Temporal, etc.) — giving Bun-like ergonomics while still running on Node's real engine and stdlib. Worth a look if you want Bun-style DX without leaving the Node runtime.
-- **Show HN: Treedocs — documentation that automatically checks for staleness**
-  https://dandylyons.github.io/treedocs/
-  Treedocs is a documentation tool that automatically flags when docs have gone stale relative to the code they describe. Directly relevant to the recurring problem of CLAUDE.md / project docs drifting out of sync with reality. Worth a look as a pattern even if you don't adopt the tool.
-- **Supabase: Realtime or Pipelines? How to choose**
-  https://supabase.com/blog/realtime-or-pipelines-how-to-choose-the-right-tool
-  Supabase guide distinguishing Realtime (low-latency change broadcast to clients) from Pipelines (CDC replication to analytical stores like BigQuery) — both read from Postgres logical replication but solve different problems. A useful decision reference if you're building on Postgres/Supabase and weighing live updates vs. analytics replication.
-- **Vercel Workflow SDK 5 beta now compresses run/step payloads (zstd)**
-  https://vercel.com/changelog/workflow-sdk-now-compresses-run-and-step-payloads
-  The Workflow SDK 5 beta auto-compresses run, hook, and step payloads with zstd, cutting storage/cost up to ~85% for JSON-heavy AI-conversation payloads with no code change. Narrow to Workflow SDK / eve users, but a meaningful cost win if you persist long agent histories there.
+- **How we built saga rollbacks for Cloudflare Workflows**
+  https://blog.cloudflare.com/rollbacks-for-workflows/
+  Cloudflare Workflows now supports saga-style rollback handlers on step.do(), reducing manual compensation code for durable jobs.
+- **Deno 2.9**
+  https://deno.com/blog/v2.9
+  Deno 2.9 adds deno desktop, easier Node lockfile migration, CSS module imports, better testing, and Node 26 compatibility.
+- **How I saved our agency client $480/mo by migrating their CRM sync from Make to self-hosted n8n (Full Docker + Auto-SSL config)**
+  https://www.reddit.com/r/SaaS/comments/1ug00ct/how_i_saved_our_agency_client_480mo_by_migrating/
+  A Reddit case study claims a Make-to-self-hosted-n8n migration cut an agency client from about $500/month to an $8 Azure VM.
+- **Show HN: OpenKnowledge – open source AI-first alternative to Obsidian/Notion**
+  https://github.com/inkeep/open-knowledge
+  OpenKnowledge launches as an open-source local-first markdown editor with Claude/Codex integration, MCP hooks, and git-backed sharing.
+- **Run a vLLM Server on HF Jobs in One Command**
+  https://huggingface.co/blog/vllm-jobs
+  Hugging Face shows how to launch a private OpenAI-compatible vLLM endpoint on HF Jobs with one command and pay-per-time GPUs.
+- **Show HN: I made Google Trends for Hacker News by indexing 18 years of comments**
+  https://hackernewstrends.com
+  Hacker Trends indexes 18 years of HN discussion into a searchable trend chart with term overlays and source-thread drilldowns.
 
 ## Full digest
 
-- [P] [hn-show] Show HN: peerd — AI agent harness that runs entirely in the browser — https://github.com/NotASithLord/peerd — peerd is an Apache-2.0 web-extension agent harness that runs entirely in the browser, using your own provider keys and the browser's existing sandbox (tabs, workers, even Linux-on-wasm) instead of MCP middlemen or a hosted runtime. It explicitly designs against the lethal trifecta by isolating untrusted DOM/results behind dedicated runners and routing all egress through a deny-list. For anyone building agents, it's a credible alternative substrate worth auditing — no build, loads unpacked from GitHub.
-- [P] [hn-show] Show HN: Pure Effect — reproduce production bugs locally without a DB — https://pure-effect.org — Pure Effect is a sub-1KB, zero-dependency TypeScript library that makes I/O a description (a Command object) rather than an action, so business logic stays pure and testable without mocks or test containers. Because every effect is plain data, you get free execution traces, time-travel replay of production bugs, and runtime guardrails (e.g. quarantining destructive calls) via an onBeforeCommand hook. A lighter-weight alternative to Effect-TS for solo devs who want testability without adopting a framework.
-- [P] [hn-show] Show HN: Treedocs — documentation that automatically checks for staleness — https://dandylyons.github.io/treedocs/ — Treedocs is a documentation tool that automatically flags when docs have gone stale relative to the code they describe. Directly relevant to the recurring problem of CLAUDE.md / project docs drifting out of sync with reality. Worth a look as a pattern even if you don't adopt the tool.
-- [R] [gh-n8n] n8n 2.27.4 (stable) release — https://github.com/n8n-io/n8n/releases/tag/stable — Routine n8n patch release: minor core bug fixes and a Google Ads node API bump (v20-&gt;v21). No user-facing changes that alter a decision.
-- [R] [gh-n8n] n8n@2.27.4 release — https://github.com/n8n-io/n8n/releases/tag/n8n%402.27.4 — Duplicate of the n8n 2.27.4 stable tag — same changelog.
-- [P] [vercel-changelog] GLM 5.2 Fast (via Wafer) now on Vercel AI Gateway — https://vercel.com/changelog/glm-5-2-fast-via-wafer-now-available-on-ai-gateway — Vercel's AI Gateway now serves GLM 5.2 Fast through Wafer, claiming ~2x throughput vs other serverless providers (170+ tok/s small-context, 200+ large-context) at provider pricing with no markup, including BYOK. If you route models through AI Gateway, this is a cheaper/faster option for the strong open GLM-5.2 model worth benchmarking against your current default.
-- [M] [vercel-changelog] Vercel Workflow SDK 5 beta now compresses run/step payloads (zstd) — https://vercel.com/changelog/workflow-sdk-now-compresses-run-and-step-payloads — The Workflow SDK 5 beta auto-compresses run, hook, and step payloads with zstd, cutting storage/cost up to ~85% for JSON-heavy AI-conversation payloads with no code change. Narrow to Workflow SDK / eve users, but a meaningful cost win if you persist long agent histories there.
-- [R] [vercel-changelog] Vercel Chat SDK now supports rich text in Telegram — https://vercel.com/changelog/chat-sdk-now-supports-rich-text-in-telegram — Chat SDK's Telegram adapter now renders markdown/AST messages as native rich messages (headings, lists, tables, formulas, media) with streaming and automatic fallback. Narrow integration detail.
-- [M] [latent-space] [AINews] It's Meta-Harness Summer — https://www.latent.space/p/ainews-its-meta-harness-summer — AINews riff on the 'harness of harnesses' trend in agent tooling. Only a teaser line was captured; thematically relevant to agent-harness work but no concrete claim to act on yet.
-- [M] [latent-space] Why the Frontier Ecosystem must be Open — Databricks (Zaharia &amp; Xin) — https://www.latent.space/p/databricks — A Databricks leadership interview on what it takes for every company to build 'Agent Clouds' and why open frontier models matter. Only a teaser was captured; strategic/opinion content rather than an actionable change.
-- [P] [supabase-blog] Supabase: Realtime or Pipelines? How to choose — https://supabase.com/blog/realtime-or-pipelines-how-to-choose-the-right-tool — Supabase guide distinguishing Realtime (low-latency change broadcast to clients) from Pipelines (CDC replication to analytical stores like BigQuery) — both read from Postgres logical replication but solve different problems. A useful decision reference if you're building on Postgres/Supabase and weighing live updates vs. analytics replication.
-- [R] [supabase-blog] Introducing Supabase Pipelines — https://supabase.com/blog/introducing-supabase-pipelines — Announcement of Supabase Pipelines (managed Postgres CDC to BigQuery and similar). Published December 2025 — stale, and the 'Realtime or Pipelines' guide covers the same ground better.
-- [P] [cloudflare-blog] Cloudflare: Self-Managed OAuth now available to all developers — https://blog.cloudflare.com/oauth-for-all/ — Cloudflare has rolled out Self-Managed OAuth to all developers, having executed a zero-downtime migration of its core OAuth engine. For solo builders on Cloudflare this means you can stand up your own OAuth provider/flows without third-party identity services — relevant if you're shipping apps or APIs that need auth (e.g. MCP/agent endpoints).
-- [R] [huggingface-blog] Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel — https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel — NVIDIA/HF post on speeding up transformer fine-tuning via NeMo AutoModel. GPU-fleet-oriented and not relevant to a solo dev who isn't training models.
-- [M] [huggingface-blog] Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World — https://huggingface.co/blog/ffasr-leaderboard — A new Hugging Face leaderboard benchmarking speech-recognition (ASR) models on real-world audio. Potentially useful if voice/transcription is on the roadmap (e.g. call-handling features), as a reference for picking an ASR model.
-- [R] [gh-nextjs] Next.js v16.3.0-preview.4 — https://github.com/vercel/next.js/releases/tag/v16.3.0-preview.4 — Next.js v16.3.0-preview.4 pre-release: misc internal changes, doc tweaks, and CI/dev-overlay fixes. Nothing user-facing that changes a decision.
-- [R] [gh-nextjs] Next.js v16.3.0-canary.67 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.67 — Next.js v16.3.0-canary.67 pre-release: misc internal changes, doc tweaks, and CI/dev-overlay fixes. Nothing user-facing that changes a decision.
-- [R] [gh-nextjs] Next.js v16.3.0-canary.66 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.66 — Next.js v16.3.0-canary.66 pre-release: misc internal changes, doc tweaks, and CI/dev-overlay fixes. Nothing user-facing that changes a decision.
-- [R] [gh-nextjs] Next.js v16.3.0-canary.65 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.65 — Next.js v16.3.0-canary.65 pre-release: misc internal changes, doc tweaks, and CI/dev-overlay fixes. Nothing user-facing that changes a decision.
-- [M] [google-ai-changelog] Gemini API: Interactions API — https://ai.google.dev/gemini-api/docs/interactions-overview?hl=ja — A new 'Interactions API' surfaced in the Gemini API changelog (Japanese docs page). No content captured, but a new Gemini interaction primitive could matter for agent/tool integrations — worth checking the English docs.
-- [R] [hn-top] Half-Life 2 in a Browser — https://hl2.slqnt.dev/ — A port/demo of Half-Life 2 running in the browser. Impressive hack but entertainment, no builder leverage.
-- [M] [hn-top] Anthropic says Alibaba illicitly extracted Claude model capabilities — https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/ — Reuters reports Anthropic alleges Alibaba illicitly extracted Claude's model capabilities (distillation/extraction). Notable industry/IP signal about model-distillation disputes, but no direct action for a solo builder.
-- [M] [hn-top] OpenAI unveils its first custom chip, built by Broadcom — https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/ — OpenAI announced its first custom inference chip ('Jalapeno'), built with Broadcom. A longer-term signal about inference cost/capacity trajectory, but no immediate action for solo builders.
-- [R] [hn-top] Cloudflare launched self-managed OAuth for all (HN) — https://blog.cloudflare.com/oauth-for-all/ — HN front-page item pointing to the Cloudflare self-managed OAuth announcement — same story covered from the Cloudflare blog.
-- [R] [hn-top] Blogging can just be stating the obvious — https://blog.jim-nielsen.com/2026/blogging-stating-the-obvious/ — An essay arguing blogging doesn't require novelty — stating the obvious has value. Pleasant meta-commentary, no builder leverage.
-- [R] [hn-top] LuaJIT 3.0 proposed syntax extensions — https://github.com/LuaJIT/LuaJIT/issues/1475 — A LuaJIT GitHub issue proposing 3.0 syntax extensions. Interesting to LuaJIT users but outside the solo dev's stack.
-- [R] [hn-top] Dostoyevsky isn't difficult — https://www.autodidacts.io/dostoyevsky-isnt-difficult/ — A literary essay on reading Dostoyevsky. Off-topic for a dev briefing.
-- [R] [hn-top] Zombie unicorns are haunting Silicon Valley — https://www.economist.com/business/2026/06/21/zombie-unicorns-are-haunting-silicon-valley — An Economist piece on stagnant, overvalued 'zombie' startups. Business commentary with no builder action.
-- [R] [hn-top] 45°C cooling design cuts data center water use to near zero — https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/ — NVIDIA blog on a 45°C liquid-cooling design that nearly eliminates data-center water use. Relevant to hyperscale infra, not to solo builders.
-- [P] [hn-top] Qualcomm to acquire Modular (Mojo / MAX) — https://www.reuters.com/business/qualcomm-buy-ai-startup-modular-2026-06-24/ — Qualcomm has agreed to acquire Modular, the company behind the Mojo language and MAX inference engine (founded by Chris Lattner). If you've been tracking or betting on Mojo/MAX, ownership and roadmap direction now sit under Qualcomm — a reason to reassess any dependence before committing.
-- [P] [hn-top] GLM-5.2 is a step change for open agents — https://www.interconnects.ai/p/glm-52-is-the-step-change-for-open — Nathan Lambert's Interconnects analysis argues GLM-5.2 is a genuine step change for open-weights agentic models — closing much of the gap to closed frontier models on agent/tool-use tasks. If you run open models for agent workloads, GLM-5.2 is now a serious default to benchmark, and it's already available cheaply via gateways (see GLM 5.2 Fast on Vercel).
-- [P] [hn-top] RubyLLM: a Ruby framework for all major AI providers — https://rubyllm.com/ — RubyLLM is a single Ruby framework wrapping all major AI providers behind one interface. Narrow to Ruby shops, but if you have Ruby code, it's a clean way to stay provider-agnostic.
-- [P] [hn-top] PR spam today looks like email spam in the early 2000s — https://www.greptile.com/blog/prs-on-openclaw — Greptile's builder report on a wave of low-quality AI-generated pull requests flooding open-source repos, drawing the analogy to early-2000s email spam — and pointing toward reputation/filtering defenses. Worth reading if you maintain any public repo or accept external contributions, since the same triage burden is coming for everyone.
-- [P] [hn-top] Computer use in Gemini 3.5 Flash — https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/ — Google added computer-use (screen understanding + UI control) to Gemini 3.5 Flash, putting agentic GUI automation on a fast, cheap model tier. Directly relevant to anyone doing computer-use/automation agents — a lower-cost option to evaluate against Claude/OpenAI computer-use for desktop and browser control.
-- [R] [hn-top] The Xteink X4 E-Ink Reader — https://blog.omgmog.net/post/xteink-x4-e-ink-reader/ — A personal review of the Xteink X4 e-ink reader. Gadget content, not relevant to dev work.
-- [P] [hn-top] Show HN: Nub — a Bun-like all-in-one toolkit for Node.js — https://github.com/nubjs/nub — Nub runs your code on stock Node augmented via a --require preload hook that adds an oxc-powered transpiler, a module-resolution hook, and polyfills (Worker, Temporal, etc.) — giving Bun-like ergonomics while still running on Node's real engine and stdlib. Worth a look if you want Bun-style DX without leaving the Node runtime.
-- [R] [hn-top] Ending respiratory infections — https://blog.interceptfund.com/p/ending-respiratory-infections — A biotech/public-health essay on eliminating respiratory infections. Off-topic for a developer briefing.
-- [R] [hn-top] A Practical Guide to SSH Tunnels: Local and Remote Port Forwarding — https://labs.iximiuz.com/tutorials/ssh-tunnels — A solid tutorial on SSH local/remote port forwarding. Useful reference, but well-trodden ground already in active use (e.g. the Hetzner DB tunnel) — low novelty.
-- [R] [lobsters] UK Wikipedia Workers seek union recognition — https://utaw.tech/news/wikipedia-recognition — Labor news about UK Wikimedia workers seeking union recognition. Off-topic for a dev briefing.
-- [R] [lobsters] Porting WINE to a new Hobby OS — https://astral-os.org/posts/2026/04/03/wine-on-astral.html — A write-up on porting WINE to a hobby operating system. Interesting systems hacking but no leverage for solo product work.</pre>
+- [R] [gh-crewai] 1.15.0 — https://github.com/crewAIInc/crewAI/releases/tag/1.15.0 — ## What's Changed ### Features - Track conversational flow turn usage in telemetry - Support conversational flows in the CLI TUI - Add unif…
+- [R] [gh-composio] @composio/core@0.13.0 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/core%400.13.0 — ### Minor Changes - d17a268: Add the first-class `composio.sessions.create()` API while keeping `composio.create()` as an alias, expose the…
+- [R] [gh-langchain] langchain-fireworks==1.4.3 — https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.4.3 — Changes since langchain-fireworks==1.4.2 release(fireworks): 1.4.3 chore: bump vcrpy from 8.1.1 to 8.2.1 in /libs/partners/fireworks (#3831…
+- [R] [google-ai-blog] Our latest Google Finance upgrades, including a new app — https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/ — The new Google Finance is coming out of beta and launching a new Android app.
+- [R] [reddit-saas] DataRoom by Corgi Insurance (YCS24) stole copywrited opensource code — https://www.reddit.com/r/SaaS/comments/1ufaj3a/dataroom_by_corgi_insurance_ycs24_stole/ — Corgi Insurance, the company behind viral stunts like the Corgi Cafe launched a dataroom product this week with full enterprise level featu…
+- [R] [reddit-saas] We cloned our $50k/year vendor CRM 100% with Codex. Will LLMs kill SaaS dev houses? — https://www.reddit.com/r/SaaS/comments/1ufudj7/we_cloned_our_50kyear_vendor_crm_100_with_codex/ — Two years ago, we bought our in-house CRM from a software vendor. Last year, we successfully cloned 100% of its features using Codex, which…
+- [R] [reddit-saas] What’s a boring SaaS idea you think could still make real money? — https://www.reddit.com/r/SaaS/comments/1ufqdqi/whats_a_boring_saas_idea_you_think_could_still/ — I’m becoming more convinced that boring SaaS is where the money is. submitted by /u/East_Excuse2814 [link] [comments]
+- [R] [reddit-saas] How do you do SEO — https://www.reddit.com/r/SaaS/comments/1ufspp1/how_do_you_do_seo/ — I’m curious how saas operators manage SEO. Do you diy? Outsource? Or don’t do it at all? submitted by /u/johns10davenport [link] [comments]
+- [R] [reddit-saas] i made my first sale after 2 weeks! — https://www.reddit.com/r/SaaS/comments/1ufcevw/i_made_my_first_sale_after_2_weeks/ — wow, it honestly feels so surreal because I was so sure that they would've cancelled they trial but they didnt! maybe they forgot? or maybe…
+- [R] [reddit-saas] Do users actually leave when a website loads slowly? — https://www.reddit.com/r/SaaS/comments/1ufy6zu/do_users_actually_leave_when_a_website_loads/ — I often notice that I lose interest and close websites that take too long to load, even if the product looks useful. From your experience,…
+- [R] [reddit-saas] Any good recommendations on funnel analytic platforms? — https://www.reddit.com/r/SaaS/comments/1ufxrqg/any_good_recommendations_on_funnel_analytic/ — I’ve been working through some data and trying to pull it all together into a funnel running from website visits &gt; sign ups &gt; paid conversi…
+- [R] [reddit-saas] The age of the solopreneur (stripe report) — https://www.reddit.com/r/SaaS/comments/1ufzyrg/the_age_of_the_solopreneur_stripe_report/ — This was one of the most interesting charts from Stripe’s recent report . The number of solopreneurs crossing every major revenue threshold…
+- [R] [reddit-saas] I posted my results last week and made extra $410 — https://www.reddit.com/r/SaaS/comments/1ufcbmp/i_posted_my_results_last_week_and_made_extra_410/ — Hello community! I am really happy. Internet is amazing. I created a tool and people buy. Never believed this could be possible ever. Here…
+- [R] [reddit-saas] If you run more than one product solo, how do you decide what to actually work on each day? — https://www.reddit.com/r/SaaS/comments/1ufwpaj/if_you_run_more_than_one_product_solo_how_do_you/ — I ship a few small products by myself, and the hardest part isn't building, it's deciding where my hours go each day. Whatever I touched la…
+- [R] [reddit-saas] The best users aren't always the loudest ones — https://www.reddit.com/r/SaaS/comments/1ufy2d1/the_best_users_arent_always_the_loudest_ones/ — One thing I've noticed while building products is that the people who end up becoming customers don't always look the most engaged at first…
+- [R] [reddit-saas] Let your agent create beautiful forms — https://www.reddit.com/r/SaaS/comments/1uffos1/let_your_agent_create_beautiful_forms/ — I just hate building forms by hand. And I know every agent can easily build a form. But then you need to host it, and make sure the respons…
+- [R] [reddit-saas] How do you decide on a price for tiers? — https://www.reddit.com/r/SaaS/comments/1ug0b6a/how_do_you_decide_on_a_price_for_tiers/ — I'm working on a &quot;secure and private workspace&quot; and I have 2 separate versions of the project. I have one open source version. I would like…
+- [R] [reddit-saas] Are we moving from SaaS products to AI-powered business systems? — https://www.reddit.com/r/SaaS/comments/1ug0aev/are_we_moving_from_saas_products_to_aipowered/ — It feels like more founders are building software that performs work rather than just providing tools. Do you think SaaS will increasingly…
+- [R] [reddit-saas] How're you deploying LLMs in production now-a-days? What's the best and most affordable way? — https://www.reddit.com/r/SaaS/comments/1ug08lj/howre_you_deploying_llms_in_production_nowadays/ — I've been developing an AI SaaS product using LLM APIs (from OpenRouter) but now want to deploy an open-source LLM in my own Prod env. whic…
+- [M] [reddit-saas] How I saved our agency client $480/mo by migrating their CRM sync from Make to self-hosted n8n (Full Docker + Auto-SSL config) — https://www.reddit.com/r/SaaS/comments/1ug00ct/how_i_saved_our_agency_client_480mo_by_migrating/ — A Reddit case study claims a Make-to-self-hosted-n8n migration cut an agency client from about $500/month to an $8 Azure VM.
+- [R] [reddit-saas] At what point did you stop being your company’s best salesperson? — https://www.reddit.com/r/SaaS/comments/1ufzxcl/at_what_point_did_you_stop_being_your_companys/ — Only in Saas businesses context. I think its when you hire your first sales person. submitted by /u/ZizouConnects [link] [comments]
+- [R] [reddit-saas] What's a lesson you wish you had learned earlier? — https://www.reddit.com/r/SaaS/comments/1ufg9it/whats_a_lesson_you_wish_you_had_learned_earlier/ — Looking back, what's one lesson you wish you had learned much earlier? It could be about building products, talking to users, growth, or an…
+- [R] [reddit-saas] So I upgrade my toy agent into a proper SaaS, what now? — https://www.reddit.com/r/SaaS/comments/1ufytt3/so_i_upgrade_my_toy_agent_into_a_proper_saas_what/ — The story is I built a toy 6 months ago that uses LLM to fill visa applications for me, and recently (being unemployed) I decide to learn w…
+- [R] [reddit-saas] B2B SaaS founder, no sales, can't break through. Need brutal feedback. — https://www.reddit.com/r/SaaS/comments/1ufyslx/b2b_saas_founder_no_sales_cant_break_through_need/ — Ok so I've been building this thing for almost a year and a half. ID verification + access control for nightclubs and bars in Chile. We had…
+- [R] [reddit-saas] First sales, feeling on top of the world haha — https://www.reddit.com/r/SaaS/comments/1ufne99/first_sales_feeling_on_top_of_the_world_haha/ — Probably won't get another for a while 😅 submitted by /u/OMGitzLambo [link] [comments]
+- [R] [reddit-saas] Built a tool to compete with ClickUp — https://www.reddit.com/r/SaaS/comments/1ufu6oq/built_a_tool_to_compete_with_clickup/ — I know it sounds like I am bragging but for the last few years I have paid thousands of dollars to ClickUp. I loved it at the beginning but…
+- [M] [hn-show] Show HN: OpenKnowledge – open source AI-first alternative to Obsidian/Notion — https://github.com/inkeep/open-knowledge — OpenKnowledge launches as an open-source local-first markdown editor with Claude/Codex integration, MCP hooks, and git-backed sharing.
+- [R] [hn-show] Show HN: Chess-Inspired Roguelike — https://princechazz.com — Show HN: Chess-Inspired Roguelike
+- [M] [hn-show] Show HN: I made Google Trends for Hacker News by indexing 18 years of comments — https://hackernewstrends.com — Hacker Trends indexes 18 years of HN discussion into a searchable trend chart with term overlays and source-thread drilldowns.
+- [R] [hn-show] Show HN: Turn native language audio into flashcards and shadowing practice — https://lingochunk.com/try — Here is a tool I built initially for myself to help with my German and Greek language studies. It started as a hack for creating Anki cards…
+- [R] [hn-show] Show HN: MiniPCs.zip – Charting the Pareto frontier of Mini PCs — https://minipcs.zip — The overall idea is to chart out the thousands of Mini PCs by benchmark and reveal the Pareto Front so you can get the most Compute per Dol…
+- [R] [hn-show] Show HN: Bible as RAG Database — https://www.crosscanon.com/ — Made this in a free evening. Index an permissive license translation of the Bible (WEB) into a RAG database to allow returning passages of…
+- [R] [hn-show] Show HN: StartupsBR – A map of Brazilian startups — https://www.startupsbr.com/sao-paulo — I couldn't find a simple way to explore the Brazilian startup ecosystem geographically, as I can in other places like the Bay Area or Londo…
+- [M] [huggingface-blog] Run a vLLM Server on HF Jobs in One Command — https://huggingface.co/blog/vllm-jobs — Hugging Face shows how to launch a private OpenAI-compatible vLLM endpoint on HF Jobs with one command and pay-per-time GPUs.
+- [R] [huggingface-blog] Which tokens does a hybrid model predict better? — https://huggingface.co/blog/allenai/hybrid-token-prediction — Which tokens does a hybrid model predict better?
+- [P] [cloudflare-blog] How we built saga rollbacks for Cloudflare Workflows — https://blog.cloudflare.com/rollbacks-for-workflows/ — Cloudflare Workflows now supports saga-style rollback handlers on step.do(), reducing manual compensation code for durable jobs.
+- [R] [latent-space] [AINews] OpenAI reports median internal Codex output tokens grew 56x in Research, 32x in Customer Support, 27x in Engineering, and 13x in Legal since November 2025. — https://www.latent.space/p/ainews-openai-reports-median-internal — It's happening.
+- [R] [gh-dify] 1.15.0 — https://github.com/langgenius/dify/releases/tag/1.15.0 — # Dify 1.15.0 Release Note ## What's Changed ### UX &amp; UI Enhancements - **Redesigned landing / onboarding** for an easier first-run experie…
+- [P] [deno-blog] Deno 2.9 — https://deno.com/blog/v2.9 — Deno 2.9 adds deno desktop, easier Node lockfile migration, CSS module imports, better testing, and Node 26 compatibility.
+- [R] [gh-nextjs] v16.3.0-preview.5 — https://github.com/vercel/next.js/releases/tag/v16.3.0-preview.5 — ### Misc Changes - Restore canary version 16.3.0-canary.66 after v16.3.0-preview.4 preview release - Fix local fonts in statically prerende…</pre>
     </details>
   </main>
   <footer>
