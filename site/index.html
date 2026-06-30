@@ -34,7 +34,7 @@
       <nav class="site-nav"><a href="/" class="nav-active">Archive</a><a href="/reports/">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
     </div>
     <div class="dateline">
-      <span>Latest issue · June 29, 2026</span>
+      <span>Latest issue · June 30, 2026</span>
       <span style="font-style:italic;">What changed. Why it matters. What to do.</span>
     </div>
   </header>
@@ -51,18 +51,18 @@
         </div>
         <div class="section-label">Today's brief</div>
         <p class="brief-valueprop">Every morning I read a few hundred links so you don't have to. This is what cleared the bar today.</p>
-        <div class="meta" style="margin-bottom:0.5rem;"><span>AI Operations / Agent Control</span><span>Data Infrastructure / Verification / Scraping</span><span>Tools Worth Testing</span><span>Model + API Changes</span></div>
-        <p class="lead-summary">Cost/latency leverage for local+hosted LLM agent stacks.</p>
+        <div class="meta" style="margin-bottom:0.5rem;"><span>AI Operations / Agent Control</span><span>Small Business Automation</span><span>Tools Worth Testing</span></div>
+        <p class="lead-summary">Directly affects coding-agent secrets hygiene, including Fuzzy's Codex-based workflows.</p>
         <div style="border-top:0.5px solid var(--border);">
 
     <div class="item">
       <div class="item-row">
         <span class="item-num">1.</span>
         <div>
-          <div class="item-title"><a href="https://github.com/itsthelore/wayfinder-router" target="_blank" rel="noopener">Wayfinder Router: deterministic routing of queries between local and hosted LLM</a></div>
-          <div class="item-takeaway">Cost/latency leverage for local+hosted LLM agent stacks.</div>
+          <div class="item-title"><a href="https://github.com/openai/codex/issues/2847" target="_blank" rel="noopener">OpenAI Codex still lacks a way to exclude sensitive files (open issue)</a></div>
+          <div class="item-takeaway">Directly affects coding-agent secrets hygiene, including Fuzzy's Codex-based workflows.</div>
           <div class="item-meta">
-            <span><a href="https://github.com/itsthelore/wayfinder-router" target="_blank" rel="noopener">github.com</a></span>
+            <span><a href="https://github.com/openai/codex/issues/2847" target="_blank" rel="noopener">github.com</a></span>
             <span>AI Operations / Agent Control</span>
           </div>
         </div>
@@ -73,11 +73,11 @@
       <div class="item-row">
         <span class="item-num">2.</span>
         <div>
-          <div class="item-title"><a href="https://www.postgresql.org/docs/19/pgplanadvice.html" target="_blank" rel="noopener">pg_plan_advice — help the planner get the right plan</a></div>
-          <div class="item-takeaway">PostgreSQL's pg_plan_advice (in the PG19 docs) lets you nudge the planner toward a chosen plan without hint hacks. Useful if you've hit plan-regression pain on self-hosted Postgres. PG19 is unreleased, so track it rather than adopt now.</div>
+          <div class="item-title"><a href="https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything" target="_blank" rel="noopener">Jon Udell: keep the agent in our loop, not us in theirs</a></div>
+          <div class="item-takeaway">Directly relevant to Fuzzy's multi-agent workflows and keeping agent output reviewable.</div>
           <div class="item-meta">
-            <span><a href="https://www.postgresql.org/docs/19/pgplanadvice.html" target="_blank" rel="noopener">postgresql.org</a></span>
-            <span>Data Infrastructure / Verification / Scraping</span>
+            <span><a href="https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything" target="_blank" rel="noopener">simonwillison.net</a></span>
+            <span>AI Operations / Agent Control</span>
           </div>
         </div>
       </div>
@@ -87,11 +87,11 @@
       <div class="item-row">
         <span class="item-num">3.</span>
         <div>
-          <div class="item-title"><a href="https://clickhouse.com/blog/walrus-postgres-backups-in-rust" target="_blank" rel="noopener">WAL-RUS: a Rust Rewrite of WAL-G for PostgreSQL Backups</a></div>
-          <div class="item-takeaway">Practical Postgres backup tooling for self-hosters.</div>
+          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1uipao8/27k_us_dollar_my_first_week/" target="_blank" rel="noopener">Solo founder reports ~$27k in first week selling a compliance AI tool</a></div>
+          <div class="item-takeaway">Compliance/verification B2B go-to-market overlaps with Fuzzy's ContractorVerify/Veremun work.</div>
           <div class="item-meta">
-            <span><a href="https://clickhouse.com/blog/walrus-postgres-backups-in-rust" target="_blank" rel="noopener">clickhouse.com</a></span>
-            <span>Data Infrastructure / Verification / Scraping</span>
+            <span><a href="https://www.reddit.com/r/SaaS/comments/1uipao8/27k_us_dollar_my_first_week/" target="_blank" rel="noopener">reddit.com</a></span>
+            <span>Small Business Automation</span>
           </div>
         </div>
       </div>
@@ -101,22 +101,49 @@
       <div class="item-row">
         <span class="item-num">4.</span>
         <div>
-          <div class="item-title"><a href="https://cauenapier.com/blog/townsquare_release/" target="_blank" rel="noopener">Turn your site into a place people can bump into each other</a></div>
-          <div class="item-takeaway">TownSquare is a tiny embeddable 'presence layer' that lets website visitors see and bump into each other in real time. A low-lift way to add live presence or social texture to a product. Niche, but a cheap differentiator worth bookmarking.</div>
+          <div class="item-title"><a href="https://verdagon.dev/blog/ante-blending-borrowing-rc" target="_blank" rel="noopener">Ante: A New Way to Blend Borrow Checking and Reference Counting</a></div>
+          <div class="item-takeaway">Interesting memory-safety design for developers following programming-language research.</div>
           <div class="item-meta">
-            <span><a href="https://cauenapier.com/blog/townsquare_release/" target="_blank" rel="noopener">cauenapier.com</a></span>
+            <span><a href="https://verdagon.dev/blog/ante-blending-borrowing-rc" target="_blank" rel="noopener">verdagon.dev</a></span>
+            <span>Tools Worth Testing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">5.</span>
+        <div>
+          <div class="item-title"><a href="https://github.com/kamaludu/bash4llm/" target="_blank" rel="noopener">Show HN: Bash4LLM+ - a dependency-free Bash wrapper for LLM APIs</a></div>
+          <div class="item-takeaway">Lightweight shell-native LLM tooling relevant to Fuzzy's terminal and agent automation.</div>
+          <div class="item-meta">
+            <span><a href="https://github.com/kamaludu/bash4llm/" target="_blank" rel="noopener">github.com</a></span>
             <span>Tools Worth Testing</span>
           </div>
         </div>
       </div>
     </div>
         </div>
-        <a href="/briefs/2026-06-29/" style="display:inline-block;margin-top:0.85rem;font-size:0.82rem;color:var(--accent);font-weight:600;border-bottom:1px solid var(--accent);padding-bottom:1px;">Read the full brief →</a>
+        <a href="/briefs/2026-06-30/" style="display:inline-block;margin-top:0.85rem;font-size:0.82rem;color:var(--accent);font-weight:600;border-bottom:1px solid var(--accent);padding-bottom:1px;">Read the full brief →</a>
 
 
 
         <div style="margin-top:1.75rem;">
           <div class="section-label">Archive</div>
+
+    <div class="item">
+      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+        <a href="/briefs/2026-06-29/" style="color:var(--text);">Jun 29, 2026</a>
+      </div>
+      <div class="arc-themes"><span class="arc-tag">Model + API Changes</span><span class="arc-tag">Tools Worth Testing</span></div>
+      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">This is an interface migration signal, not a feature teaser. New Gemini capabilities will land here first, so builders using generateContent now have a clear API planning decision.</div>
+      <div class="item-meta">
+        <span>4 items</span>
+        <span>1 to watch</span>
+        <span>40 links researched</span>
+      </div>
+    </div>
 
     <div class="item">
       <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
@@ -647,8 +674,13 @@
           <div class="section-label">Report log</div>
 
     <div class="sb-row">
+      <a href="/reports/2026-06-30/">Jun 30, 2026</a>
+      <span class="sb-count">6 items</span>
+    </div>
+
+    <div class="sb-row">
       <a href="/reports/2026-06-29/">Jun 29, 2026</a>
-      <span class="sb-count">7 items</span>
+      <span class="sb-count">5 items</span>
     </div>
 
     <div class="sb-row">
@@ -669,11 +701,6 @@
     <div class="sb-row">
       <a href="/reports/2026-06-25/">Jun 25, 2026</a>
       <span class="sb-count">7 items</span>
-    </div>
-
-    <div class="sb-row">
-      <a href="/reports/2026-06-24/">Jun 24, 2026</a>
-      <span class="sb-count">6 items</span>
     </div>
           <a href="/reports/" style="display:inline-block;margin-top:0.6rem;font-size:0.72rem;color:var(--text-dim);">All reports →</a>
         </div>

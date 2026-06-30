@@ -5,21 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>June 29, 2026 report log — The Nightly Librarian</title>
-  <meta name="description" content="7 stories cleared the bar, led by Wayfinder Router: deterministic routing of queries between local and hosted LLM, WAL-RUS: a Rust Rewrite of WAL-G for">
+  <meta name="description" content="5 stories cleared the bar, led by Interactions API, HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88, and GLM 5.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-06-29/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="June 29, 2026 report log | The Nightly Librarian">
-  <meta property="og:description" content="7 stories cleared the bar, led by Wayfinder Router: deterministic routing of queries between local and hosted LLM, WAL-RUS: a Rust Rewrite of WAL-G for">
+  <meta property="og:description" content="5 stories cleared the bar, led by Interactions API, HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88, and GLM 5.">
   <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-06-29/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="June 29, 2026 report log | The Nightly Librarian">
-  <meta name="twitter:description" content="7 stories cleared the bar, led by Wayfinder Router: deterministic routing of queries between local and hosted LLM, WAL-RUS: a Rust Rewrite of WAL-G for">
+  <meta name="twitter:description" content="5 stories cleared the bar, led by Interactions API, HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88, and GLM 5.">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
@@ -35,7 +35,7 @@
     </div>
     <div class="dateline">
       <span>June 29, 2026 · Report log</span>
-      <span>Jun 29, 2026, 2:15 AM</span>
+      <span>Jun 29, 2026, 7:07 AM</span>
     </div>
   </header>
   <main>
@@ -43,47 +43,37 @@
     <h1>June 29, 2026</h1>
     <div class="summary-card">
       <div class="eyebrow">Report summary</div>
-      <p>7 stories cleared the bar, led by Wayfinder Router: deterministic routing of queries between local and hosted LLM, WAL-RUS: a Rust Rewrite of WAL-G for PostgreSQL Backups, and pg_plan_advice — help the planner get the right plan.</p>
+      <p>5 stories cleared the bar, led by Interactions API, HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88, and GLM 5.2 beats Claude in our benchmarks.</p>
       <div class="meta" style="margin-top:0.4rem;">
-        <span>7 worth-attention items</span><span>40 digest lines</span>
+        <span>5 worth-attention items</span><span>40 digest lines</span>
       </div>
     </div>
     <h2>Worth attention</h2>
     <div class="item-stack">
 
       <div class="item">
-        <div class="item-title"><a href="https://github.com/itsthelore/wayfinder-router" target="_blank" rel="noopener">Wayfinder Router: deterministic routing of queries between local and hosted LLM</a></div>
-        <div class="item-takeaway">Wayfinder Router is a new open-source router that deterministically sends each query to either a local or a hosted LLM based on explicit rules. Directly relevant to MCP/agent work: keep cheap calls local and route hard ones to a frontier model to cut API spend and latency. Worth a look as a pattern for a multi-agent stack.</div>
+        <div class="item-title"><a href="https://ai.google.dev/gemini-api/docs/interactions-overview?hl=vi" target="_blank" rel="noopener">Interactions API</a></div>
+        <div class="item-takeaway">Google says the Interactions API is now the default path for new Gemini apps, with server-side state, background execution, and better cache economics.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://clickhouse.com/blog/walrus-postgres-backups-in-rust" target="_blank" rel="noopener">WAL-RUS: a Rust Rewrite of WAL-G for PostgreSQL Backups</a></div>
-        <div class="item-takeaway">ClickHouse published WAL-RUS, a Rust rewrite of WAL-G for streaming PostgreSQL WAL archiving and backups. For a solo dev self-hosting Postgres, it promises lower-overhead WAL archiving and point-in-time recovery. Worth evaluating against your current pg_basebackup/WAL-G setup at your next backup review.</div>
+        <div class="item-title"><a href="https://danunparsed.com/p/hackerrank-open-source-ats" target="_blank" rel="noopener">HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88</a></div>
+        <div class="item-takeaway">A reproducible writeup shows HackerRank's open ATS can swing resume scores widely across identical runs, which makes LLM-only screening look too noisy for hard cutoffs.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://www.postgresql.org/docs/19/pgplanadvice.html" target="_blank" rel="noopener">pg_plan_advice — help the planner get the right plan</a></div>
-        <div class="item-takeaway">PostgreSQL's pg_plan_advice (in the PG19 docs) lets you nudge the planner toward a chosen plan without hint hacks. Useful if you've hit plan-regression pain on self-hosted Postgres. PG19 is unreleased, so track it rather than adopt now.</div>
+        <div class="item-title"><a href="https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/" target="_blank" rel="noopener">GLM 5.2 beats Claude in our benchmarks</a></div>
+        <div class="item-takeaway">Semgrep reports GLM 5.2 beat Claude Code on its IDOR benchmark under a minimal prompt harness, but the claim is vendor-authored and limited to one task.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://github.com/bikini/exploitarium" target="_blank" rel="noopener">Anonymous GitHub account mass-dropping undisclosed 0-days</a></div>
-        <div class="item-takeaway">An anonymous GitHub account ('exploitarium') is mass-publishing undisclosed 0-day exploits. If genuine, it raises near-term risk for widely used software. Verify before reacting and watch for any affected components in your stack.</div>
+        <div class="item-title"><a href="https://www.eff.org/deeplinks/2026/06/kids-act-would-require-age-checks-get-online" target="_blank" rel="noopener">The KIDS Act would require age checks to get online</a></div>
+        <div class="item-takeaway">EFF argues the proposed KIDS Act would pressure platforms into broad age checks and more restrictive moderation, especially around private messaging.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://cauenapier.com/blog/townsquare_release/" target="_blank" rel="noopener">Turn your site into a place people can bump into each other</a></div>
-        <div class="item-takeaway">TownSquare is a tiny embeddable 'presence layer' that lets website visitors see and bump into each other in real time. A low-lift way to add live presence or social texture to a product. Niche, but a cheap differentiator worth bookmarking.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/" target="_blank" rel="noopener">Asian AI startups launch Mythos-like models</a></div>
-        <div class="item-takeaway">TechCrunch reports Asian AI startups are shipping 'Mythos-like' models as Anthropic's export restrictions persist. Relevant if you want fallback model options or are watching availability/pricing shifts. Early market signal, not actionable yet.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://status.claude.com/incidents/9284yk6xxd0h" target="_blank" rel="noopener">elevated errors on Opus 48</a></div>
-        <div class="item-takeaway">Anthropic's status page logged elevated errors on Opus-48 on Jun 27, since mitigated. Minor, but worth noting if your agents saw failures that night, and a reminder to keep retry/fallback handling around Claude-dependent workflows.</div>
+        <div class="item-title"><a href="https://aleph-alpha.com/en/blog/model-training-as-code/" target="_blank" rel="noopener">Model Training as Code</a></div>
+        <div class="item-takeaway">Aleph Alpha describes an internal “model training as code” stack that treats training pipelines like CI-driven software, with immutable artifacts and nightly end-to-end validation.</div>
       </div>
     </div>
     <h2>Full digest</h2>
@@ -92,42 +82,306 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://github.com/y5-snowies/nourish" target="_blank" rel="noopener">Nourish - a wayland compositor with infinite zoom and pan</a>
+          <a href="https://zanagrams.com/" target="_blank" rel="noopener">Show HN: Zanagrams</a>
         </div>
-        <div class="item-takeaway">Rejected: Niche Wayland compositor; no relevance to solo SaaS/agent work.</div>
+        <div class="item-takeaway">Word-game Show HN, but not relevant to the memo's builder decision filter.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://frequal.com/Perspectives/DrmFreeAuthors.html" target="_blank" rel="noopener">Show HN: DRM-Free Books</a>
+        </div>
+        <div class="item-takeaway">Interesting DRM directory project, but outside the memo's core software/operator focus.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uiac7n/i_sold_my_29_mrr_saas_for_14k_ama/" target="_blank" rel="noopener">I sold my $29 mrr SaaS for 1.4k - AMA</a>
+        </div>
+        <div class="item-takeaway">Tiny exit anecdote without enough transferable detail to justify inclusion.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ui4eq2/hope_driven_development_hdd/" target="_blank" rel="noopener">Hope Driven Development (HDD)</a>
+        </div>
+        <div class="item-takeaway">Meme-style post, not a substantive builder report.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uihxer/got_600_videos_generated_from_my_tool_but_cant/" target="_blank" rel="noopener">Got 600 videos generated from my tool, but can't get anyone to pay</a>
+        </div>
+        <div class="item-takeaway">Builder says 600 trial video generations did not convert once a $6 paywall was added, pointing to a value-timing problem more than demand proof.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uij271/my_first_sale_after_a_year_of_absolute_silence/" target="_blank" rel="noopener">My first sale after a year of absolute silence</a>
+        </div>
+        <div class="item-takeaway">First-sale milestone post, but too personal and thin for the memo.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uikeof/how_do_you_get_your_first_10_customers_when_your/" target="_blank" rel="noopener">How do you get your first 10 customers when your buyers don't hang out online?</a>
+        </div>
+        <div class="item-takeaway">A founder selling into offline buyers reports cold calls and tailored Instagram outreach work better than standard online channels.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uhxvkd/how_is_this_trailer_video/" target="_blank" rel="noopener">How is this trailer video??</a>
+        </div>
+        <div class="item-takeaway">Trailer-video feedback request, not decision-relevant.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uik2fc/if_a_saas_company_suddenly_had_an_extra_100k_what/" target="_blank" rel="noopener">If a SaaS company suddenly had an extra $100k, what problem would you actually spend it on?</a>
+        </div>
+        <div class="item-takeaway">Open-ended discussion prompt, not evidence of a change worth acting on.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uif2sy/what_am_i_doing_wrong_how_can_i_reach_users/" target="_blank" rel="noopener">What am I doing wrong ? How can I reach users ?</a>
+        </div>
+        <div class="item-takeaway">Growth stall post in an adult niche, but too specific and anecdotal to elevate.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ui80ik/1k_mrr_in_6_weeks_after_years_of_nobody_noticing/" target="_blank" rel="noopener">$1k mrr in 6 weeks after years of nobody noticing the stuff i made</a>
+        </div>
+        <div class="item-takeaway">$1k MRR anecdote without enough hard detail to beat stronger items.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uilkxz/founder_here_shipped_my_devtool_saas_mvp_but_i/" target="_blank" rel="noopener">founder here: shipped my devtool saas MVP, but I have 0 distribution. how do you guys get the first 10 users to validate it?</a>
+        </div>
+        <div class="item-takeaway">Devtool distribution question, interesting but still mostly request-for-advice noise.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uieekv/my_first_paying_customer/" target="_blank" rel="noopener">My first paying customer</a>
+        </div>
+        <div class="item-takeaway">First customer milestone without broader lesson or evidence.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uijp8q/launching_a_mobile_b2c_saas_snakestreak_via/" target="_blank" rel="noopener">Launching a mobile B2C SaaS (SnakeStreak) via pre-registration. Giving away Lifetime Pro to fight day-one churn. Thoughts?</a>
+        </div>
+        <div class="item-takeaway">Pre-registration launch tactics post, but too speculative.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uiehal/should_i_triple_my_sales_volume_with_a_999_tier/" target="_blank" rel="noopener">Should I triple my sales volume with a $9.99 tier if it kills my customer satisfaction?</a>
+        </div>
+        <div class="item-takeaway">Pricing thought experiment without evidence beyond opinion.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uiimwe/whats_your_process_for_checking_aibuilt_apps/" target="_blank" rel="noopener">whats your process for checking ai-built apps before you ship to a client?</a>
+        </div>
+        <div class="item-takeaway">Question about QA for AI-built client apps, but the linked Reddit page was blocked during browsing and the item lacks enough signal on its own.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uim25h/can_i_just_edit_my_own_launch_video_or_do_i/" target="_blank" rel="noopener">Can I just edit my own launch video or do i actually need a launch video company ?</a>
+        </div>
+        <div class="item-takeaway">Video production advice request, not a memo item.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uiluv6/how_would_you_run_a_closed_beta_for_a_gpu_sharing/" target="_blank" rel="noopener">How would you run a closed beta for a GPU sharing platform?</a>
+        </div>
+        <div class="item-takeaway">Closed-beta discussion prompt, still too early-stage and generic.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uhz0n5/stop_building_your_mvp_like_its_a_series_b_product/" target="_blank" rel="noopener">Stop building your MVP like it's a Series B product</a>
+        </div>
+        <div class="item-takeaway">Generic MVP advice post, not new enough to keep.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uil080/uff_im_tired_of_explaining_my_work_to_ai_over_and/" target="_blank" rel="noopener">Uff... I'm tired of explaining my work to AI over and over again.</a>
+        </div>
+        <div class="item-takeaway">Complaint about repeating AI context, but no concrete method or product change.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uikx86/first_saas_openptecom_beta_version/" target="_blank" rel="noopener">First Saas (Openpte.com) - Beta version</a>
+        </div>
+        <div class="item-takeaway">Beta launch self-promo, too thin.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uikrta/anyone_know_any_good_affiliate_platforms/" target="_blank" rel="noopener">Anyone know any good affiliate platforms specifically for SaaS applications?</a>
+        </div>
+        <div class="item-takeaway">Affiliate platform question, not evidence.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uikpxq/im_looking_for_someone_highly_skilled_in_video/" target="_blank" rel="noopener">I’m looking for someone highly skilled in video editing, especially for SaaS / software explainer videos.</a>
+        </div>
+        <div class="item-takeaway">Hiring request for video editing help, not memo material.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uikns4/why_do_we_still_waste_1_hour_waiting_at_salons/" target="_blank" rel="noopener">Why do we still waste 1 hour waiting at salons? Today I went to a salon and ended up waiting almost an hour because several people were ahead of me. I found apps like Salonist, Fresha, and Booksy, but they seem to focus more on salon management (appointments, billing, CRM, inventory, etc.) than sol</a>
+        </div>
+        <div class="item-takeaway">Salon wait-time idea pitch, still at problem-statement stage.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uikipt/traveling_with_kids_just_got_much_more_fun_with/" target="_blank" rel="noopener">Traveling with kids just got much more fun with SAGA, native development question</a>
+        </div>
+        <div class="item-takeaway">Travel app promo and dev question, outside scope.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          pg_plan_advice
+          <a href="https://ai.google.dev/gemini-api/docs/interactions-overview?hl=vi" target="_blank" rel="noopener">Interactions API</a>
         </div>
-        <div class="item-takeaway">help the planner get the right plan — https://www.postgresql.org/docs/19/pgplanadvice.html — PostgreSQL's pg_plan_advice (in the PG19 docs) lets you nudge the planner toward a chosen plan without hint hacks. Useful if you've hit plan-regression pain on self-hosted Postgres. PG19 is unreleased, so track it rather than adopt now.</div>
+        <div class="item-takeaway">Google says the Interactions API is now the default path for new Gemini apps, with server-side state, background execution, and better cache economics.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>google-ai-changelog</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/replikativ/ansatz" target="_blank" rel="noopener">Dependently typed Clojure DSL with a Lean4 compatible kernel</a>
+          <span class="tag tag-p">P</span>
+          <a href="https://danunparsed.com/p/hackerrank-open-source-ats" target="_blank" rel="noopener">HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88</a>
         </div>
-        <div class="item-takeaway">Rejected: Highly niche dependently-typed Clojure DSL; no practical relevance.</div>
+        <div class="item-takeaway">A reproducible writeup shows HackerRank's open ATS can swing resume scores widely across identical runs, which makes LLM-only screening look too noisy for hard cutoffs.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>hn-top</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.marfapublicradio.org/podcast/marfa-public-radio-puts-you-to-sleep" target="_blank" rel="noopener">Marfa Public Radio Puts You to Sleep</a>
+          <span class="tag tag-p">P</span>
+          <a href="https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/" target="_blank" rel="noopener">GLM 5.2 beats Claude in our benchmarks</a>
         </div>
-        <div class="item-takeaway">Rejected: Entertainment; irrelevant to a solo developer.</div>
+        <div class="item-takeaway">Semgrep reports GLM 5.2 beat Claude Code on its IDOR benchmark under a minimal prompt harness, but the claim is vendor-authored and limited to one task.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -136,9 +390,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md" target="_blank" rel="noopener">AMD Strix Halo RDMA Cluster Setup Guide</a>
+          <a href="https://nonogra.ph/age-verification-is-just-a-precursor-to-attribution-of-speech-06-29-2026" target="_blank" rel="noopener">Age verification is just a precursor to automated attribution of speech</a>
         </div>
-        <div class="item-takeaway">Rejected: Niche high-end AMD cluster setup; not relevant to a Mac-based solo dev.</div>
+        <div class="item-takeaway">Opinion essay on age verification, but the EFF piece carried the stronger practical signal.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -147,9 +401,86 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://decomp-academy.dev" target="_blank" rel="noopener">Show HN: Decomp Academy – Learn to decompile GameCube games into matching C</a>
+          <a href="https://dam.stanford.edu/memory-prices.html" target="_blank" rel="noopener">Historical memory prices 1960-2026</a>
         </div>
-        <div class="item-takeaway">Rejected: Game decompilation learning resource; off-audience.</div>
+        <div class="item-takeaway">Memory price history is interesting reference data, not tomorrow-morning action.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://pudding.cool/2026/06/menu-story/" target="_blank" rel="noopener">5k menus from the New York Public Library’s Buttolph Collection (1880-1920)</a>
+        </div>
+        <div class="item-takeaway">Historical menu collection project, off-topic for this memo.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://antoine.fi/mri-analysis-using-claude-code-opus" target="_blank" rel="noopener">I used Claude Code to get a second opinion on my MRI</a>
+        </div>
+        <div class="item-takeaway">Medical self-use story with risky framing, not something to amplify.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://arxiv.org/abs/2401.07013" target="_blank" rel="noopener">Knowledge Distillation of Black-Box Large Language Models (2024)</a>
+        </div>
+        <div class="item-takeaway">Older black-box LLM distillation paper resurfaced on HN, but not a fresh development.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.plover.com/lang/bismillah.html" target="_blank" rel="noopener">Deciphering basmala</a>
+        </div>
+        <div class="item-takeaway">Language-history post, outside scope.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://zanagrams.com/" target="_blank" rel="noopener">Show HN: Zanagrams</a>
+        </div>
+        <div class="item-takeaway">Duplicate HN entry for Zanagrams.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://12gramsofcarbon.com/p/agentics-tech-things-tokenmaxxing" target="_blank" rel="noopener">Tokenmaxxing is dead, long live tokenmaxxing</a>
+        </div>
+        <div class="item-takeaway">Essay on token economics and agent tooling, but not concrete enough versus stronger workflow items.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.bloomberg.com/news/features/2020-06-23/golden-geese-and-unicorns-inside-the-eccentric-presentations-of-masayoshi-son" target="_blank" rel="noopener">The Baffling World of Masayoshi Son's Presentations (2020)</a>
+        </div>
+        <div class="item-takeaway">Old Bloomberg feature recirculating, not actionable.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -158,75 +489,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-m">M</span>
-          <a href="https://github.com/bikini/exploitarium" target="_blank" rel="noopener">Anonymous GitHub account mass-dropping undisclosed 0-days</a>
+          <a href="https://www.eff.org/deeplinks/2026/06/kids-act-would-require-age-checks-get-online" target="_blank" rel="noopener">The KIDS Act would require age checks to get online</a>
         </div>
-        <div class="item-takeaway">An anonymous GitHub account ('exploitarium') is mass-publishing undisclosed 0-day exploits. If genuine, it raises near-term risk for widely used software. Verify before reacting and watch for any affected components in your stack.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.openra.net/" target="_blank" rel="noopener">OpenRA</a>
-        </div>
-        <div class="item-takeaway">Rejected: Open-source RTS game engine; entertainment, not relevant.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://evilbit.de/dns-resolver-guide.html" target="_blank" rel="noopener">Choosing a Public DNS Resolver</a>
-        </div>
-        <div class="item-takeaway">Rejected: Evergreen DNS resolver guide; no decision impact.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.the-independent.com/tech/ford-ai-automation-human-workers-b3003787.html" target="_blank" rel="noopener">Ford hired AI and sacked humans. It backfired badly</a>
-        </div>
-        <div class="item-takeaway">Rejected: AI-replaces-humans editorial bait; no actionable substance.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://w.pitula.me/fintech-engineering-handbook/" target="_blank" rel="noopener">Fintech Engineering Handbook</a>
-        </div>
-        <div class="item-takeaway">Rejected: Evergreen fintech handbook; reference, not decision-changing.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://californiasciencecenter.org/about-us/samuel-oschin-air-and-space-center/go-for-stack" target="_blank" rel="noopener">Space Shuttle Endeavour's 20-story vertical display</a>
-        </div>
-        <div class="item-takeaway">Rejected: Museum exhibit; entertainment, irrelevant.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://dervis.de/physical/" target="_blank" rel="noopener">The case for physical media ownership</a>
-        </div>
-        <div class="item-takeaway">Rejected: Opinion piece on physical media; off-audience.</div>
+        <div class="item-takeaway">EFF argues the proposed KIDS Act would pressure platforms into broad age checks and more restrictive moderation, especially around private messaging.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -235,31 +500,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://clickhouse.com/blog/walrus-postgres-backups-in-rust" target="_blank" rel="noopener">WAL-RUS: a Rust Rewrite of WAL-G for PostgreSQL Backups</a>
+          <a href="https://aleph-alpha.com/en/blog/model-training-as-code/" target="_blank" rel="noopener">Model Training as Code</a>
         </div>
-        <div class="item-takeaway">ClickHouse published WAL-RUS, a Rust rewrite of WAL-G for streaming PostgreSQL WAL archiving and backups. For a solo dev self-hosting Postgres, it promises lower-overhead WAL archiving and point-in-time recovery. Worth evaluating against your current pg_basebackup/WAL-G setup at your next backup review.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://cauenapier.com/blog/townsquare_release/" target="_blank" rel="noopener">Turn your site into a place people can bump into each other</a>
-        </div>
-        <div class="item-takeaway">TownSquare is a tiny embeddable 'presence layer' that lets website visitors see and bump into each other in real time. A low-lift way to add live presence or social texture to a product. Niche, but a cheap differentiator worth bookmarking.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/" target="_blank" rel="noopener">Asian AI startups launch Mythos-like models</a>
-        </div>
-        <div class="item-takeaway">TechCrunch reports Asian AI startups are shipping 'Mythos-like' models as Anthropic's export restrictions persist. Relevant if you want fallback model options or are watching availability/pricing shifts. Early market signal, not actionable yet.</div>
+        <div class="item-takeaway">Aleph Alpha describes an internal “model training as code” stack that treats training pipelines like CI-driven software, with immutable artifacts and nightly end-to-end validation.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -268,262 +511,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://spectrum.ieee.org/ai-radio-chip-design" target="_blank" rel="noopener">AI learns the “dark art” of RFIC design</a>
+          <a href="https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html" target="_blank" rel="noopener">Professor denounces mass AI fraud on an exam at Brown</a>
         </div>
-        <div class="item-takeaway">Rejected: AI-for-RFIC-design news; narrow hardware niche, off-audience.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.thedrive.com/news/feds-killed-polestar-and-spared-volvo-that-should-terrify-you" target="_blank" rel="noopener">Feds Killed Polestar and Spared Volvo</a>
-        </div>
-        <div class="item-takeaway">Rejected: Automotive policy story; irrelevant to solo dev.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://jayacunzo.com/blog/your-move-chief" target="_blank" rel="noopener">The best response to AI slop and online noise is from Robin Williams</a>
-        </div>
-        <div class="item-takeaway">Rejected: Opinion blog on AI slop; no actionable substance.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://dobrowolski.dev/article/enhancing-x11-application-security-with-lxc/" target="_blank" rel="noopener">Enhancing X11 Application Security with LXC (2025)</a>
-        </div>
-        <div class="item-takeaway">Rejected: Narrow X11/LXC sysadmin reference; low relevance.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://danluu.com/discontinuities/" target="_blank" rel="noopener">Suspicious Discontinuities (2020)</a>
-        </div>
-        <div class="item-takeaway">Rejected: 2020 repost; high novelty penalty, no new signal.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.sciencedirect.com/science/article/pii/S1877959X26000476" target="_blank" rel="noopener">Reducing tick density along recreational trails in Ottawa, Canada</a>
-        </div>
-        <div class="item-takeaway">Rejected: Tick ecology paper; entirely off-audience.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://cephalosec.com/blog/cybersecurity-in-the-post-mythos-era-keep-calm-and-carry-on/" target="_blank" rel="noopener">Post-Mythos Cybersecurity: Keep calm and carry on</a>
-        </div>
-        <div class="item-takeaway">Rejected: Opinion blog referencing a vague event; no substance.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://status.openai.com//incidents/01KW5HJAH5X1A2V62HP4ZST1V7" target="_blank" rel="noopener">Issues with ChatGPT Windows desktop app</a>
-        </div>
-        <div class="item-takeaway">Rejected: Resolved minor ChatGPT Windows-app incident; low impact.</div>
-        <div class="item-meta">
-          <span>openai-status</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://status.claude.com/incidents/9284yk6xxd0h" target="_blank" rel="noopener">elevated errors on Opus 48</a>
-        </div>
-        <div class="item-takeaway">Anthropic's status page logged elevated errors on Opus-48 on Jun 27, since mitigated. Minor, but worth noting if your agents saw failures that night, and a reminder to keep retry/fallback handling around Claude-dependent workflows.</div>
-        <div class="item-meta">
-          <span>claude-status</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uhtc97/individuals_still_using_cloud_storage/" target="_blank" rel="noopener">Individuals still using Cloud storage?</a>
-        </div>
-        <div class="item-takeaway">Rejected: Promotional idea-validation post; thin.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uhta87/i_wont_try_and_fool_you/" target="_blank" rel="noopener">I wont try and fool you</a>
-        </div>
-        <div class="item-takeaway">Rejected: Networking/promotional reddit post; no signal.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uhuc6w/help_me_out_to_get_a_free_subscription_of_claude/" target="_blank" rel="noopener">Help me out to get a free subscription of Claude Code</a>
-        </div>
-        <div class="item-takeaway">Rejected: Promotional/spam asking for free subscription.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uhtz0j/got_100_inapp_ratings_what_would_you_do_with_this/" target="_blank" rel="noopener">Got 100+ in-app ratings. What would you do with this data?</a>
-        </div>
-        <div class="item-takeaway">Rejected: Thin 'what do I do with ratings' discussion.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uhtau2/what_if_your_github_could_prove_you_can_actually/" target="_blank" rel="noopener">What if your GitHub could prove you can actually ship products?</a>
-        </div>
-        <div class="item-takeaway">Rejected: Promotional product feedback request.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uht0fh/i_spent_the_last_few_days_auditing_random/" target="_blank" rel="noopener">I spent the last few days auditing random websites. Here are the biggest lessons</a>
-        </div>
-        <div class="item-takeaway">Rejected: Listicle of CRO anecdotes; thin and unsourced.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uhswfh/i_automated_my_outbound_now_im_stuck_on_what_to/" target="_blank" rel="noopener">I automated my outbound. Now I'm stuck on what to focus on next - SEO Backlinks?</a>
-        </div>
-        <div class="item-takeaway">Rejected: Promotional AI-GTM self-post; no actionable substance.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uhse6a/saas_app_qa_testing_best_route/" target="_blank" rel="noopener">SaaS App QA testing - best route?</a>
-        </div>
-        <div class="item-takeaway">Rejected: Thin QA-advice question with no useful discussion captured.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uhs7gl/the_way_we_evaluate_saas_is_honestly_broken_and/" target="_blank" rel="noopener">the way we evaluate SaaS is honestly broken and nobody talks about it</a>
-        </div>
-        <div class="item-takeaway">Rejected: Opinion rant on SaaS evaluation; no substance.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uhs1es/has_anyone_actually_closed_clients_through/" target="_blank" rel="noopener">Has anyone actually closed clients through in-person networking at nomad hubs like Bali? What's the realistic conversion rate?</a>
-        </div>
-        <div class="item-takeaway">Rejected: Anecdotal networking question; no signal.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uhrnlh/leads_for_saas_crm_advice/" target="_blank" rel="noopener">Leads for saas crm / advice</a>
-        </div>
-        <div class="item-takeaway">Rejected: Lead-buying/GDPR question; promotional and thin.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uhrj3u/is_this_really_required/" target="_blank" rel="noopener">Is this really required??</a>
-        </div>
-        <div class="item-takeaway">Rejected: Promotional vibe-coding product post; no substance.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/cfenollosa/bashblog" target="_blank" rel="noopener">Bashblog – a single bash script to create blogs</a>
-        </div>
-        <div class="item-takeaway">Rejected: Niche single-script blog tool; evergreen, low relevance.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://github.com/itsthelore/wayfinder-router" target="_blank" rel="noopener">Wayfinder Router: deterministic routing of queries between local and hosted LLM</a>
-        </div>
-        <div class="item-takeaway">Wayfinder Router is a new open-source router that deterministically sends each query to either a local or a hosted LLM based on explicit rules. Directly relevant to MCP/agent work: keep cheap calls local and route hard ones to a frontier model to cut API spend and latency. Worth a look as a pattern for a multi-agent stack.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.johndcook.com/blog/2026/06/23/regex-everywhere/" target="_blank" rel="noopener">Regular expressions that work &quot;everywhere&quot;</a>
-        </div>
-        <div class="item-takeaway">Rejected: Evergreen regex reference; no decision impact.</div>
+        <div class="item-takeaway">AI cheating in higher ed is real, but this item does not change builder decisions here.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -533,76 +523,70 @@
       <summary>Original markdown</summary>
       <pre class="raw-report"># Nightly Librarian — Newsletter draft
 
-Run: aa404090-7fd5-432c-8adc-952afb549947
-Started: 2026-06-29T06:09:44.895Z
-Completed: 2026-06-29T06:15:01.620Z
+Run: 0e078be6-85e1-461e-9349-b03a40926651
+Started: 2026-06-29T11:02:38.527Z
+Completed: 2026-06-29T11:07:20.870Z
 
 ## Worth attention
 
-- **Wayfinder Router: deterministic routing of queries between local and hosted LLM**
-  https://github.com/itsthelore/wayfinder-router
-  Wayfinder Router is a new open-source router that deterministically sends each query to either a local or a hosted LLM based on explicit rules. Directly relevant to MCP/agent work: keep cheap calls local and route hard ones to a frontier model to cut API spend and latency. Worth a look as a pattern for a multi-agent stack.
-- **WAL-RUS: a Rust Rewrite of WAL-G for PostgreSQL Backups**
-  https://clickhouse.com/blog/walrus-postgres-backups-in-rust
-  ClickHouse published WAL-RUS, a Rust rewrite of WAL-G for streaming PostgreSQL WAL archiving and backups. For a solo dev self-hosting Postgres, it promises lower-overhead WAL archiving and point-in-time recovery. Worth evaluating against your current pg_basebackup/WAL-G setup at your next backup review.
-- **pg_plan_advice — help the planner get the right plan**
-  https://www.postgresql.org/docs/19/pgplanadvice.html
-  PostgreSQL's pg_plan_advice (in the PG19 docs) lets you nudge the planner toward a chosen plan without hint hacks. Useful if you've hit plan-regression pain on self-hosted Postgres. PG19 is unreleased, so track it rather than adopt now.
-- **Anonymous GitHub account mass-dropping undisclosed 0-days**
-  https://github.com/bikini/exploitarium
-  An anonymous GitHub account ('exploitarium') is mass-publishing undisclosed 0-day exploits. If genuine, it raises near-term risk for widely used software. Verify before reacting and watch for any affected components in your stack.
-- **Turn your site into a place people can bump into each other**
-  https://cauenapier.com/blog/townsquare_release/
-  TownSquare is a tiny embeddable 'presence layer' that lets website visitors see and bump into each other in real time. A low-lift way to add live presence or social texture to a product. Niche, but a cheap differentiator worth bookmarking.
-- **Asian AI startups launch Mythos-like models**
-  https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/
-  TechCrunch reports Asian AI startups are shipping 'Mythos-like' models as Anthropic's export restrictions persist. Relevant if you want fallback model options or are watching availability/pricing shifts. Early market signal, not actionable yet.
-- **elevated errors on Opus 48**
-  https://status.claude.com/incidents/9284yk6xxd0h
-  Anthropic's status page logged elevated errors on Opus-48 on Jun 27, since mitigated. Minor, but worth noting if your agents saw failures that night, and a reminder to keep retry/fallback handling around Claude-dependent workflows.
+- **Interactions API**
+  https://ai.google.dev/gemini-api/docs/interactions-overview?hl=vi
+  Google says the Interactions API is now the default path for new Gemini apps, with server-side state, background execution, and better cache economics.
+- **HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88**
+  https://danunparsed.com/p/hackerrank-open-source-ats
+  A reproducible writeup shows HackerRank's open ATS can swing resume scores widely across identical runs, which makes LLM-only screening look too noisy for hard cutoffs.
+- **GLM 5.2 beats Claude in our benchmarks**
+  https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/
+  Semgrep reports GLM 5.2 beat Claude Code on its IDOR benchmark under a minimal prompt harness, but the claim is vendor-authored and limited to one task.
+- **The KIDS Act would require age checks to get online**
+  https://www.eff.org/deeplinks/2026/06/kids-act-would-require-age-checks-get-online
+  EFF argues the proposed KIDS Act would pressure platforms into broad age checks and more restrictive moderation, especially around private messaging.
+- **Model Training as Code**
+  https://aleph-alpha.com/en/blog/model-training-as-code/
+  Aleph Alpha describes an internal “model training as code” stack that treats training pipelines like CI-driven software, with immutable artifacts and nightly end-to-end validation.
 
 ## Full digest
 
-- [R] [lobsters] Nourish - a wayland compositor with infinite zoom and pan — https://github.com/y5-snowies/nourish — Rejected: Niche Wayland compositor; no relevance to solo SaaS/agent work.
-- [P] [lobsters] pg_plan_advice — help the planner get the right plan — https://www.postgresql.org/docs/19/pgplanadvice.html — PostgreSQL's pg_plan_advice (in the PG19 docs) lets you nudge the planner toward a chosen plan without hint hacks. Useful if you've hit plan-regression pain on self-hosted Postgres. PG19 is unreleased, so track it rather than adopt now.
-- [R] [lobsters] Dependently typed Clojure DSL with a Lean4 compatible kernel — https://github.com/replikativ/ansatz — Rejected: Highly niche dependently-typed Clojure DSL; no practical relevance.
-- [R] [hn-top] Marfa Public Radio Puts You to Sleep — https://www.marfapublicradio.org/podcast/marfa-public-radio-puts-you-to-sleep — Rejected: Entertainment; irrelevant to a solo developer.
-- [R] [hn-top] AMD Strix Halo RDMA Cluster Setup Guide — https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md — Rejected: Niche high-end AMD cluster setup; not relevant to a Mac-based solo dev.
-- [R] [hn-top] Show HN: Decomp Academy – Learn to decompile GameCube games into matching C — https://decomp-academy.dev — Rejected: Game decompilation learning resource; off-audience.
-- [M] [hn-top] Anonymous GitHub account mass-dropping undisclosed 0-days — https://github.com/bikini/exploitarium — An anonymous GitHub account ('exploitarium') is mass-publishing undisclosed 0-day exploits. If genuine, it raises near-term risk for widely used software. Verify before reacting and watch for any affected components in your stack.
-- [R] [hn-top] OpenRA — https://www.openra.net/ — Rejected: Open-source RTS game engine; entertainment, not relevant.
-- [R] [hn-top] Choosing a Public DNS Resolver — https://evilbit.de/dns-resolver-guide.html — Rejected: Evergreen DNS resolver guide; no decision impact.
-- [R] [hn-top] Ford hired AI and sacked humans. It backfired badly — https://www.the-independent.com/tech/ford-ai-automation-human-workers-b3003787.html — Rejected: AI-replaces-humans editorial bait; no actionable substance.
-- [R] [hn-top] Fintech Engineering Handbook — https://w.pitula.me/fintech-engineering-handbook/ — Rejected: Evergreen fintech handbook; reference, not decision-changing.
-- [R] [hn-top] Space Shuttle Endeavour's 20-story vertical display — https://californiasciencecenter.org/about-us/samuel-oschin-air-and-space-center/go-for-stack — Rejected: Museum exhibit; entertainment, irrelevant.
-- [R] [hn-top] The case for physical media ownership — https://dervis.de/physical/ — Rejected: Opinion piece on physical media; off-audience.
-- [P] [hn-top] WAL-RUS: a Rust Rewrite of WAL-G for PostgreSQL Backups — https://clickhouse.com/blog/walrus-postgres-backups-in-rust — ClickHouse published WAL-RUS, a Rust rewrite of WAL-G for streaming PostgreSQL WAL archiving and backups. For a solo dev self-hosting Postgres, it promises lower-overhead WAL archiving and point-in-time recovery. Worth evaluating against your current pg_basebackup/WAL-G setup at your next backup review.
-- [P] [hn-top] Turn your site into a place people can bump into each other — https://cauenapier.com/blog/townsquare_release/ — TownSquare is a tiny embeddable 'presence layer' that lets website visitors see and bump into each other in real time. A low-lift way to add live presence or social texture to a product. Niche, but a cheap differentiator worth bookmarking.
-- [M] [hn-top] Asian AI startups launch Mythos-like models — https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/ — TechCrunch reports Asian AI startups are shipping 'Mythos-like' models as Anthropic's export restrictions persist. Relevant if you want fallback model options or are watching availability/pricing shifts. Early market signal, not actionable yet.
-- [R] [hn-top] AI learns the “dark art” of RFIC design — https://spectrum.ieee.org/ai-radio-chip-design — Rejected: AI-for-RFIC-design news; narrow hardware niche, off-audience.
-- [R] [hn-top] Feds Killed Polestar and Spared Volvo — https://www.thedrive.com/news/feds-killed-polestar-and-spared-volvo-that-should-terrify-you — Rejected: Automotive policy story; irrelevant to solo dev.
-- [R] [hn-top] The best response to AI slop and online noise is from Robin Williams — https://jayacunzo.com/blog/your-move-chief — Rejected: Opinion blog on AI slop; no actionable substance.
-- [R] [hn-top] Enhancing X11 Application Security with LXC (2025) — https://dobrowolski.dev/article/enhancing-x11-application-security-with-lxc/ — Rejected: Narrow X11/LXC sysadmin reference; low relevance.
-- [R] [hn-top] Suspicious Discontinuities (2020) — https://danluu.com/discontinuities/ — Rejected: 2020 repost; high novelty penalty, no new signal.
-- [R] [hn-top] Reducing tick density along recreational trails in Ottawa, Canada — https://www.sciencedirect.com/science/article/pii/S1877959X26000476 — Rejected: Tick ecology paper; entirely off-audience.
-- [R] [hn-top] Post-Mythos Cybersecurity: Keep calm and carry on — https://cephalosec.com/blog/cybersecurity-in-the-post-mythos-era-keep-calm-and-carry-on/ — Rejected: Opinion blog referencing a vague event; no substance.
-- [R] [openai-status] Issues with ChatGPT Windows desktop app — https://status.openai.com//incidents/01KW5HJAH5X1A2V62HP4ZST1V7 — Rejected: Resolved minor ChatGPT Windows-app incident; low impact.
-- [M] [claude-status] elevated errors on Opus 48 — https://status.claude.com/incidents/9284yk6xxd0h — Anthropic's status page logged elevated errors on Opus-48 on Jun 27, since mitigated. Minor, but worth noting if your agents saw failures that night, and a reminder to keep retry/fallback handling around Claude-dependent workflows.
-- [R] [reddit-saas] Individuals still using Cloud storage? — https://www.reddit.com/r/SaaS/comments/1uhtc97/individuals_still_using_cloud_storage/ — Rejected: Promotional idea-validation post; thin.
-- [R] [reddit-saas] I wont try and fool you — https://www.reddit.com/r/SaaS/comments/1uhta87/i_wont_try_and_fool_you/ — Rejected: Networking/promotional reddit post; no signal.
-- [R] [reddit-saas] Help me out to get a free subscription of Claude Code — https://www.reddit.com/r/SaaS/comments/1uhuc6w/help_me_out_to_get_a_free_subscription_of_claude/ — Rejected: Promotional/spam asking for free subscription.
-- [R] [reddit-saas] Got 100+ in-app ratings. What would you do with this data? — https://www.reddit.com/r/SaaS/comments/1uhtz0j/got_100_inapp_ratings_what_would_you_do_with_this/ — Rejected: Thin 'what do I do with ratings' discussion.
-- [R] [reddit-saas] What if your GitHub could prove you can actually ship products? — https://www.reddit.com/r/SaaS/comments/1uhtau2/what_if_your_github_could_prove_you_can_actually/ — Rejected: Promotional product feedback request.
-- [R] [reddit-saas] I spent the last few days auditing random websites. Here are the biggest lessons — https://www.reddit.com/r/SaaS/comments/1uht0fh/i_spent_the_last_few_days_auditing_random/ — Rejected: Listicle of CRO anecdotes; thin and unsourced.
-- [R] [reddit-saas] I automated my outbound. Now I'm stuck on what to focus on next - SEO Backlinks? — https://www.reddit.com/r/SaaS/comments/1uhswfh/i_automated_my_outbound_now_im_stuck_on_what_to/ — Rejected: Promotional AI-GTM self-post; no actionable substance.
-- [R] [reddit-saas] SaaS App QA testing - best route? — https://www.reddit.com/r/SaaS/comments/1uhse6a/saas_app_qa_testing_best_route/ — Rejected: Thin QA-advice question with no useful discussion captured.
-- [R] [reddit-saas] the way we evaluate SaaS is honestly broken and nobody talks about it — https://www.reddit.com/r/SaaS/comments/1uhs7gl/the_way_we_evaluate_saas_is_honestly_broken_and/ — Rejected: Opinion rant on SaaS evaluation; no substance.
-- [R] [reddit-saas] Has anyone actually closed clients through in-person networking at nomad hubs like Bali? What's the realistic conversion rate? — https://www.reddit.com/r/SaaS/comments/1uhs1es/has_anyone_actually_closed_clients_through/ — Rejected: Anecdotal networking question; no signal.
-- [R] [reddit-saas] Leads for saas crm / advice — https://www.reddit.com/r/SaaS/comments/1uhrnlh/leads_for_saas_crm_advice/ — Rejected: Lead-buying/GDPR question; promotional and thin.
-- [R] [reddit-saas] Is this really required?? — https://www.reddit.com/r/SaaS/comments/1uhrj3u/is_this_really_required/ — Rejected: Promotional vibe-coding product post; no substance.
-- [R] [hn-top] Bashblog – a single bash script to create blogs — https://github.com/cfenollosa/bashblog — Rejected: Niche single-script blog tool; evergreen, low relevance.
-- [P] [hn-top] Wayfinder Router: deterministic routing of queries between local and hosted LLM — https://github.com/itsthelore/wayfinder-router — Wayfinder Router is a new open-source router that deterministically sends each query to either a local or a hosted LLM based on explicit rules. Directly relevant to MCP/agent work: keep cheap calls local and route hard ones to a frontier model to cut API spend and latency. Worth a look as a pattern for a multi-agent stack.
-- [R] [hn-top] Regular expressions that work &quot;everywhere&quot; — https://www.johndcook.com/blog/2026/06/23/regex-everywhere/ — Rejected: Evergreen regex reference; no decision impact.</pre>
+- [R] [hn-show] Show HN: Zanagrams — https://zanagrams.com/ — Word-game Show HN, but not relevant to the memo's builder decision filter.
+- [R] [hn-show] Show HN: DRM-Free Books — https://frequal.com/Perspectives/DrmFreeAuthors.html — Interesting DRM directory project, but outside the memo's core software/operator focus.
+- [R] [reddit-saas] I sold my $29 mrr SaaS for 1.4k - AMA — https://www.reddit.com/r/SaaS/comments/1uiac7n/i_sold_my_29_mrr_saas_for_14k_ama/ — Tiny exit anecdote without enough transferable detail to justify inclusion.
+- [R] [reddit-saas] Hope Driven Development (HDD) — https://www.reddit.com/r/SaaS/comments/1ui4eq2/hope_driven_development_hdd/ — Meme-style post, not a substantive builder report.
+- [R] [reddit-saas] Got 600 videos generated from my tool, but can't get anyone to pay — https://www.reddit.com/r/SaaS/comments/1uihxer/got_600_videos_generated_from_my_tool_but_cant/ — Builder says 600 trial video generations did not convert once a $6 paywall was added, pointing to a value-timing problem more than demand proof.
+- [R] [reddit-saas] My first sale after a year of absolute silence — https://www.reddit.com/r/SaaS/comments/1uij271/my_first_sale_after_a_year_of_absolute_silence/ — First-sale milestone post, but too personal and thin for the memo.
+- [R] [reddit-saas] How do you get your first 10 customers when your buyers don't hang out online? — https://www.reddit.com/r/SaaS/comments/1uikeof/how_do_you_get_your_first_10_customers_when_your/ — A founder selling into offline buyers reports cold calls and tailored Instagram outreach work better than standard online channels.
+- [R] [reddit-saas] How is this trailer video?? — https://www.reddit.com/r/SaaS/comments/1uhxvkd/how_is_this_trailer_video/ — Trailer-video feedback request, not decision-relevant.
+- [R] [reddit-saas] If a SaaS company suddenly had an extra $100k, what problem would you actually spend it on? — https://www.reddit.com/r/SaaS/comments/1uik2fc/if_a_saas_company_suddenly_had_an_extra_100k_what/ — Open-ended discussion prompt, not evidence of a change worth acting on.
+- [R] [reddit-saas] What am I doing wrong ? How can I reach users ? — https://www.reddit.com/r/SaaS/comments/1uif2sy/what_am_i_doing_wrong_how_can_i_reach_users/ — Growth stall post in an adult niche, but too specific and anecdotal to elevate.
+- [R] [reddit-saas] $1k mrr in 6 weeks after years of nobody noticing the stuff i made — https://www.reddit.com/r/SaaS/comments/1ui80ik/1k_mrr_in_6_weeks_after_years_of_nobody_noticing/ — $1k MRR anecdote without enough hard detail to beat stronger items.
+- [R] [reddit-saas] founder here: shipped my devtool saas MVP, but I have 0 distribution. how do you guys get the first 10 users to validate it? — https://www.reddit.com/r/SaaS/comments/1uilkxz/founder_here_shipped_my_devtool_saas_mvp_but_i/ — Devtool distribution question, interesting but still mostly request-for-advice noise.
+- [R] [reddit-saas] My first paying customer — https://www.reddit.com/r/SaaS/comments/1uieekv/my_first_paying_customer/ — First customer milestone without broader lesson or evidence.
+- [R] [reddit-saas] Launching a mobile B2C SaaS (SnakeStreak) via pre-registration. Giving away Lifetime Pro to fight day-one churn. Thoughts? — https://www.reddit.com/r/SaaS/comments/1uijp8q/launching_a_mobile_b2c_saas_snakestreak_via/ — Pre-registration launch tactics post, but too speculative.
+- [R] [reddit-saas] Should I triple my sales volume with a $9.99 tier if it kills my customer satisfaction? — https://www.reddit.com/r/SaaS/comments/1uiehal/should_i_triple_my_sales_volume_with_a_999_tier/ — Pricing thought experiment without evidence beyond opinion.
+- [R] [reddit-saas] whats your process for checking ai-built apps before you ship to a client? — https://www.reddit.com/r/SaaS/comments/1uiimwe/whats_your_process_for_checking_aibuilt_apps/ — Question about QA for AI-built client apps, but the linked Reddit page was blocked during browsing and the item lacks enough signal on its own.
+- [R] [reddit-saas] Can I just edit my own launch video or do i actually need a launch video company ? — https://www.reddit.com/r/SaaS/comments/1uim25h/can_i_just_edit_my_own_launch_video_or_do_i/ — Video production advice request, not a memo item.
+- [R] [reddit-saas] How would you run a closed beta for a GPU sharing platform? — https://www.reddit.com/r/SaaS/comments/1uiluv6/how_would_you_run_a_closed_beta_for_a_gpu_sharing/ — Closed-beta discussion prompt, still too early-stage and generic.
+- [R] [reddit-saas] Stop building your MVP like it's a Series B product — https://www.reddit.com/r/SaaS/comments/1uhz0n5/stop_building_your_mvp_like_its_a_series_b_product/ — Generic MVP advice post, not new enough to keep.
+- [R] [reddit-saas] Uff... I'm tired of explaining my work to AI over and over again. — https://www.reddit.com/r/SaaS/comments/1uil080/uff_im_tired_of_explaining_my_work_to_ai_over_and/ — Complaint about repeating AI context, but no concrete method or product change.
+- [R] [reddit-saas] First Saas (Openpte.com) - Beta version — https://www.reddit.com/r/SaaS/comments/1uikx86/first_saas_openptecom_beta_version/ — Beta launch self-promo, too thin.
+- [R] [reddit-saas] Anyone know any good affiliate platforms specifically for SaaS applications? — https://www.reddit.com/r/SaaS/comments/1uikrta/anyone_know_any_good_affiliate_platforms/ — Affiliate platform question, not evidence.
+- [R] [reddit-saas] I’m looking for someone highly skilled in video editing, especially for SaaS / software explainer videos. — https://www.reddit.com/r/SaaS/comments/1uikpxq/im_looking_for_someone_highly_skilled_in_video/ — Hiring request for video editing help, not memo material.
+- [R] [reddit-saas] Why do we still waste 1 hour waiting at salons? Today I went to a salon and ended up waiting almost an hour because several people were ahead of me. I found apps like Salonist, Fresha, and Booksy, but they seem to focus more on salon management (appointments, billing, CRM, inventory, etc.) than sol — https://www.reddit.com/r/SaaS/comments/1uikns4/why_do_we_still_waste_1_hour_waiting_at_salons/ — Salon wait-time idea pitch, still at problem-statement stage.
+- [R] [reddit-saas] Traveling with kids just got much more fun with SAGA, native development question — https://www.reddit.com/r/SaaS/comments/1uikipt/traveling_with_kids_just_got_much_more_fun_with/ — Travel app promo and dev question, outside scope.
+- [P] [google-ai-changelog] Interactions API — https://ai.google.dev/gemini-api/docs/interactions-overview?hl=vi — Google says the Interactions API is now the default path for new Gemini apps, with server-side state, background execution, and better cache economics.
+- [P] [hn-top] HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88 — https://danunparsed.com/p/hackerrank-open-source-ats — A reproducible writeup shows HackerRank's open ATS can swing resume scores widely across identical runs, which makes LLM-only screening look too noisy for hard cutoffs.
+- [P] [hn-top] GLM 5.2 beats Claude in our benchmarks — https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/ — Semgrep reports GLM 5.2 beat Claude Code on its IDOR benchmark under a minimal prompt harness, but the claim is vendor-authored and limited to one task.
+- [R] [hn-top] Age verification is just a precursor to automated attribution of speech — https://nonogra.ph/age-verification-is-just-a-precursor-to-attribution-of-speech-06-29-2026 — Opinion essay on age verification, but the EFF piece carried the stronger practical signal.
+- [R] [hn-top] Historical memory prices 1960-2026 — https://dam.stanford.edu/memory-prices.html — Memory price history is interesting reference data, not tomorrow-morning action.
+- [R] [hn-top] 5k menus from the New York Public Library’s Buttolph Collection (1880-1920) — https://pudding.cool/2026/06/menu-story/ — Historical menu collection project, off-topic for this memo.
+- [R] [hn-top] I used Claude Code to get a second opinion on my MRI — https://antoine.fi/mri-analysis-using-claude-code-opus — Medical self-use story with risky framing, not something to amplify.
+- [R] [hn-top] Knowledge Distillation of Black-Box Large Language Models (2024) — https://arxiv.org/abs/2401.07013 — Older black-box LLM distillation paper resurfaced on HN, but not a fresh development.
+- [R] [hn-top] Deciphering basmala — https://blog.plover.com/lang/bismillah.html — Language-history post, outside scope.
+- [R] [hn-top] Show HN: Zanagrams — https://zanagrams.com/ — Duplicate HN entry for Zanagrams.
+- [R] [hn-top] Tokenmaxxing is dead, long live tokenmaxxing — https://12gramsofcarbon.com/p/agentics-tech-things-tokenmaxxing — Essay on token economics and agent tooling, but not concrete enough versus stronger workflow items.
+- [R] [hn-top] The Baffling World of Masayoshi Son's Presentations (2020) — https://www.bloomberg.com/news/features/2020-06-23/golden-geese-and-unicorns-inside-the-eccentric-presentations-of-masayoshi-son — Old Bloomberg feature recirculating, not actionable.
+- [M] [hn-top] The KIDS Act would require age checks to get online — https://www.eff.org/deeplinks/2026/06/kids-act-would-require-age-checks-get-online — EFF argues the proposed KIDS Act would pressure platforms into broad age checks and more restrictive moderation, especially around private messaging.
+- [P] [hn-top] Model Training as Code — https://aleph-alpha.com/en/blog/model-training-as-code/ — Aleph Alpha describes an internal “model training as code” stack that treats training pipelines like CI-driven software, with immutable artifacts and nightly end-to-end validation.
+- [R] [hn-top] Professor denounces mass AI fraud on an exam at Brown — https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html — AI cheating in higher ed is real, but this item does not change builder decisions here.</pre>
     </details>
   </main>
   <footer>
