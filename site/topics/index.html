@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Topics — The Nightly Librarian</title>
+  <meta name="description" content="Browse Nightly Librarian briefs by category — Voice AI, Agent Control, Model + API changes, and more.">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/topics/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="Topics | The Nightly Librarian">
+  <meta property="og:description" content="Browse Nightly Librarian briefs by category — Voice AI, Agent Control, Model + API changes, and more.">
+  <meta property="og:url" content="https://thenightlylibrarian.com/topics/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Topics | The Nightly Librarian">
+  <meta name="twitter:description" content="Browse Nightly Librarian briefs by category — Voice AI, Agent Control, Model + API changes, and more.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/" class="nav-active">Topics</a><a href="/reports/">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>Topics</span>
+      <span>6 categories</span>
+    </div>
+  </header>
+  <main>
+    <h1>Browse by topic</h1>
+    <p style="margin-top:0.5rem;font-size:0.88rem;color:var(--text-dim);line-height:1.6;">Every brief is tagged against the categories builders and operators actually care about. Pick one to see every issue that touched it.</p>
+    <div class="topic-pill-grid"><a class="topic-pill" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control <span class="topic-pill-count">39</span></a><a class="topic-pill" href="/topics/tools-worth-testing/">Tools Worth Testing <span class="topic-pill-count">34</span></a><a class="topic-pill" href="/topics/data-infrastructure-verification-scraping/">Data Infrastructure / Verification / Scraping <span class="topic-pill-count">22</span></a><a class="topic-pill" href="/topics/model-api-changes/">Model + API Changes <span class="topic-pill-count">21</span></a><a class="topic-pill" href="/topics/small-business-automation/">Small Business Automation <span class="topic-pill-count">21</span></a><a class="topic-pill" href="/topics/voice-ai-realtime-agents/">Voice AI / Realtime Agents <span class="topic-pill-count">3</span></a></div>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>

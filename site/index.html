@@ -23,6 +23,7 @@
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="site-header">
@@ -31,7 +32,7 @@
         <a class="brand" href="/">The Nightly Librarian</a>
         <p class="brand-tagline">AI signal without the noise</p>
       </div>
-      <nav class="site-nav"><a href="/" class="nav-active">Archive</a><a href="/reports/">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+      <nav class="site-nav"><a href="/" class="nav-active">Archive</a><a href="/topics/">Topics</a><a href="/reports/">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
     </div>
     <div class="dateline">
       <span>Latest issue · July 1, 2026</span>
@@ -50,8 +51,9 @@
           </form>
         </div>
         <div class="section-label">Today's brief</div>
+        <div class="lead-card">
         <p class="brief-valueprop">Every morning I read a few hundred links so you don't have to. This is what cleared the bar today.</p>
-        <div class="meta" style="margin-bottom:0.5rem;"><span>Voice AI / Realtime Agents</span><span>Model + API Changes</span><span>AI Operations / Agent Control</span><span>Tools Worth Testing</span></div>
+        <div class="meta" style="margin-bottom:0.5rem;"><a href="/topics/voice-ai-realtime-agents/" style="color:inherit;">Voice AI / Realtime Agents</a><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></div>
         <p class="lead-summary">Materially lowers the cost/effort of shipping a voice agent for anyone already on AI Gateway or AI SDK.</p>
         <div style="border-top:0.5px solid var(--border);">
 
@@ -63,7 +65,7 @@
           <div class="item-takeaway">Materially lowers the cost/effort of shipping a voice agent for anyone already on AI Gateway or AI SDK.</div>
           <div class="item-meta">
             <span><a href="https://vercel.com/blog/realtime-voice-agents-on-ai-gateway" target="_blank" rel="noopener">vercel.com</a></span>
-            <span>Voice AI / Realtime Agents</span>
+            <span><a class="tag" style="border:none;padding:0;text-transform:none;letter-spacing:normal;font-weight:normal;font-size:inherit;color:inherit;" href="/topics/voice-ai-realtime-agents/">Voice AI / Realtime Agents</a></span>
           </div>
         </div>
       </div>
@@ -77,7 +79,7 @@
           <div class="item-takeaway">Direct CLI/agent access to real performance data is a concrete workflow improvement for Vercel-hosted projects.</div>
           <div class="item-meta">
             <span><a href="https://vercel.com/changelog/query-speed-insights-from-the-vercel-cli" target="_blank" rel="noopener">vercel.com</a></span>
-            <span>Model + API Changes</span>
+            <span><a class="tag" style="border:none;padding:0;text-transform:none;letter-spacing:normal;font-weight:normal;font-size:inherit;color:inherit;" href="/topics/model-api-changes/">Model + API Changes</a></span>
           </div>
         </div>
       </div>
@@ -91,7 +93,7 @@
           <div class="item-takeaway">A new open-source model built specifically for agentic coding is directly relevant to solo builders doing agent/MCP work, and it's something you can try today.</div>
           <div class="item-meta">
             <span><a href="https://github.com/deepreinforce-ai/Ornith-1" target="_blank" rel="noopener">github.com</a></span>
-            <span>AI Operations / Agent Control</span>
+            <span><a class="tag" style="border:none;padding:0;text-transform:none;letter-spacing:normal;font-weight:normal;font-size:inherit;color:inherit;" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a></span>
           </div>
         </div>
       </div>
@@ -105,7 +107,7 @@
           <div class="item-takeaway">Real legal/regulatory event with direct compliance implications for any SaaS handling EU user data.</div>
           <div class="item-meta">
             <span><a href="https://noyb.eu/en/us-supreme-court-just-blew-eu-us-data-transfers" target="_blank" rel="noopener">noyb.eu</a></span>
-            <span>AI Operations / Agent Control</span>
+            <span><a class="tag" style="border:none;padding:0;text-transform:none;letter-spacing:normal;font-weight:normal;font-size:inherit;color:inherit;" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a></span>
           </div>
         </div>
       </div>
@@ -119,13 +121,14 @@
           <div class="item-takeaway">Concrete code sample useful if you're picking a voice model provider on AI Gateway.</div>
           <div class="item-meta">
             <span><a href="https://vercel.com/changelog/xai-grok-audio-models-now-available-on-vercel-ai-gateway" target="_blank" rel="noopener">vercel.com</a></span>
-            <span>Voice AI / Realtime Agents</span>
+            <span><a class="tag" style="border:none;padding:0;text-transform:none;letter-spacing:normal;font-weight:normal;font-size:inherit;color:inherit;" href="/topics/voice-ai-realtime-agents/">Voice AI / Realtime Agents</a></span>
           </div>
         </div>
       </div>
     </div>
         </div>
         <a href="/briefs/2026-07-01/" style="display:inline-block;margin-top:0.85rem;font-size:0.82rem;color:var(--accent);font-weight:600;border-bottom:1px solid var(--accent);padding-bottom:1px;">Read the full brief →</a>
+        </div>
 
 
 
@@ -133,11 +136,11 @@
           <div class="section-label">Archive</div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-30/" style="color:var(--text);">Jun 30, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">Data Infrastructure / Verification / Scraping</span><span class="arc-tag">AI Operations / Agent Control</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Production-proven infrastructure bug that can silently corrupt responses under load.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/data-infrastructure-verification-scraping/">Data Infrastructure / Verification / Scraping</a><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a></div>
+      <div class="arc-teaser">Production-proven infrastructure bug that can silently corrupt responses under load.</div>
       <div class="item-meta">
         <span>3 items</span>
         <span>2 to watch</span>
@@ -146,11 +149,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-29/" style="color:var(--text);">Jun 29, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">Model + API Changes</span><span class="arc-tag">Tools Worth Testing</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">This is an interface migration signal, not a feature teaser. New Gemini capabilities will land here first, so builders using generateContent now have a clear API planning decision.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/model-api-changes/">Model + API Changes</a><a class="arc-tag" href="/topics/tools-worth-testing/">Tools Worth Testing</a></div>
+      <div class="arc-teaser">This is an interface migration signal, not a feature teaser. New Gemini capabilities will land here first, so builders using generateContent now have a clear API planning decision.</div>
       <div class="item-meta">
         <span>4 items</span>
         <span>1 to watch</span>
@@ -159,11 +162,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-28/" style="color:var(--text);">Jun 28, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Small Business Automation</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Built-in agent run tracing and token accounting is directly useful for building and debugging LLM agents.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a><a class="arc-tag" href="/topics/small-business-automation/">Small Business Automation</a></div>
+      <div class="arc-teaser">Built-in agent run tracing and token accounting is directly useful for building and debugging LLM agents.</div>
       <div class="item-meta">
         <span>5 items</span>
         <span>1 to watch</span>
@@ -172,11 +175,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-27/" style="color:var(--text);">Jun 27, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Data Infrastructure / Verification / Scraping</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">A named SSRF redirect-bypass fix in a popular agent framework is worth flagging even before full advisory detail lands.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a><a class="arc-tag" href="/topics/data-infrastructure-verification-scraping/">Data Infrastructure / Verification / Scraping</a></div>
+      <div class="arc-teaser">A named SSRF redirect-bypass fix in a popular agent framework is worth flagging even before full advisory detail lands.</div>
       <div class="item-meta">
         <span>4 items</span>
         <span>1 to watch</span>
@@ -185,11 +188,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-26/" style="color:var(--text);">Jun 26, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Tools Worth Testing</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Directly changes how builders can structure multi-step recovery in workflow orchestration.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a><a class="arc-tag" href="/topics/tools-worth-testing/">Tools Worth Testing</a></div>
+      <div class="arc-teaser">Directly changes how builders can structure multi-step recovery in workflow orchestration.</div>
       <div class="item-meta">
         <span>2 items</span>
         <span>4 to watch</span>
@@ -198,11 +201,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-25/" style="color:var(--text);">Jun 25, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Small Business Automation</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Cancellation is directly useful for agent reliability, and the ESM-only/Node 22 change is the kind of dependency break that can silently bite automation stacks.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a><a class="arc-tag" href="/topics/small-business-automation/">Small Business Automation</a></div>
+      <div class="arc-teaser">Cancellation is directly useful for agent reliability, and the ESM-only/Node 22 change is the kind of dependency break that can silently bite automation stacks.</div>
       <div class="item-meta">
         <span>5 items</span>
         <span>2 to watch</span>
@@ -211,11 +214,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-24/" style="color:var(--text);">Jun 24, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">Model + API Changes</span><span class="arc-tag">Tools Worth Testing</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">This is a concrete document-ingestion upgrade with pricing, deployment, and workflow implications.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/model-api-changes/">Model + API Changes</a><a class="arc-tag" href="/topics/tools-worth-testing/">Tools Worth Testing</a></div>
+      <div class="arc-teaser">This is a concrete document-ingestion upgrade with pricing, deployment, and workflow implications.</div>
       <div class="item-meta">
         <span>2 items</span>
         <span>4 to watch</span>
@@ -224,11 +227,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-23/" style="color:var(--text);">Jun 23, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Small Business Automation</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Concrete local-agent tooling risk with an actionable fix path.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a><a class="arc-tag" href="/topics/small-business-automation/">Small Business Automation</a></div>
+      <div class="arc-teaser">Concrete local-agent tooling risk with an actionable fix path.</div>
       <div class="item-meta">
         <span>5 items</span>
 
@@ -237,11 +240,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-22/" style="color:var(--text);">Jun 22, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Model + API Changes</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Directly relevant to reliability of multi-agent/agentic systems, core to current and likely future work.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a><a class="arc-tag" href="/topics/model-api-changes/">Model + API Changes</a></div>
+      <div class="arc-teaser">Directly relevant to reliability of multi-agent/agentic systems, core to current and likely future work.</div>
       <div class="item-meta">
         <span>5 items</span>
         <span>5 to watch</span>
@@ -250,11 +253,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-21/" style="color:var(--text);">Jun 21, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">Small Business Automation</span><span class="arc-tag">AI Operations / Agent Control</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Concrete distribution lesson with numbers and a replicable playbook.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/small-business-automation/">Small Business Automation</a><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a></div>
+      <div class="arc-teaser">Concrete distribution lesson with numbers and a replicable playbook.</div>
       <div class="item-meta">
         <span>5 items</span>
         <span>1 to watch</span>
@@ -263,11 +266,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-20/" style="color:var(--text);">Jun 20, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Small Business Automation</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Composio shipped fixes that remove several failure modes in agent tool execution, especially around MCP-backed toolkits and malformed tool-call arguments.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a><a class="arc-tag" href="/topics/small-business-automation/">Small Business Automation</a></div>
+      <div class="arc-teaser">Composio shipped fixes that remove several failure modes in agent tool execution, especially around MCP-backed toolkits and malformed tool-call arguments.</div>
       <div class="item-meta">
         <span>3 items</span>
         <span>3 to watch</span>
@@ -276,11 +279,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-19/" style="color:var(--text);">Jun 19, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Tools Worth Testing</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Useful if you are shipping research agents that mix local docs with web search, because prompt-only safety is not enough.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a><a class="arc-tag" href="/topics/tools-worth-testing/">Tools Worth Testing</a></div>
+      <div class="arc-teaser">Useful if you are shipping research agents that mix local docs with web search, because prompt-only safety is not enough.</div>
       <div class="item-meta">
         <span>3 items</span>
         <span>1 to watch</span>
@@ -289,11 +292,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-18/" style="color:var(--text);">Jun 18, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">Model + API Changes</span><span class="arc-tag">AI Operations / Agent Control</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Directly affects anyone using Cursor for AI-assisted coding.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/model-api-changes/">Model + API Changes</a><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a></div>
+      <div class="arc-teaser">Directly affects anyone using Cursor for AI-assisted coding.</div>
       <div class="item-meta">
         <span>8 items</span>
         <span>3 to watch</span>
@@ -302,11 +305,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-17/" style="color:var(--text);">Jun 17, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Model + API Changes</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Operationally relevant release note with upgrade-time behavior and multiple reliability/security-adjacent fixes.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a><a class="arc-tag" href="/topics/model-api-changes/">Model + API Changes</a></div>
+      <div class="arc-teaser">Operationally relevant release note with upgrade-time behavior and multiple reliability/security-adjacent fixes.</div>
       <div class="item-meta">
         <span>5 items</span>
         <span>2 to watch</span>
@@ -315,11 +318,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-16/" style="color:var(--text);">Jun 16, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Data Infrastructure / Verification / Scraping</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Concrete security patch in a widely used automation tool.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a><a class="arc-tag" href="/topics/data-infrastructure-verification-scraping/">Data Infrastructure / Verification / Scraping</a></div>
+      <div class="arc-teaser">Concrete security patch in a widely used automation tool.</div>
       <div class="item-meta">
         <span>4 items</span>
         <span>2 to watch</span>
@@ -328,11 +331,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-15/" style="color:var(--text);">Jun 15, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">Data Infrastructure / Verification / Scraping</span><span class="arc-tag">Tools Worth Testing</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">It reduces config drift for agent-heavy Postgres stacks and makes branch/env policy part of repo code.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/data-infrastructure-verification-scraping/">Data Infrastructure / Verification / Scraping</a><a class="arc-tag" href="/topics/tools-worth-testing/">Tools Worth Testing</a></div>
+      <div class="arc-teaser">It reduces config drift for agent-heavy Postgres stacks and makes branch/env policy part of repo code.</div>
       <div class="item-meta">
         <span>4 items</span>
         <span>1 to watch</span>
@@ -341,11 +344,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-14/" style="color:var(--text);">Jun 14, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">Model + API Changes</span><span class="arc-tag">AI Operations / Agent Control</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">This materially changes Python-in-the-browser packaging and reduces friction for shipping browser Python dependencies.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/model-api-changes/">Model + API Changes</a><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a></div>
+      <div class="arc-teaser">This materially changes Python-in-the-browser packaging and reduces friction for shipping browser Python dependencies.</div>
       <div class="item-meta">
         <span>5 items</span>
         <span>1 to watch</span>
@@ -354,11 +357,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-13/" style="color:var(--text);">Jun 13, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">Tools Worth Testing</span><span class="arc-tag">AI Operations / Agent Control</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Strong example of agent-built infra shipped with serious verification.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/tools-worth-testing/">Tools Worth Testing</a><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a></div>
+      <div class="arc-teaser">Strong example of agent-built infra shipped with serious verification.</div>
       <div class="item-meta">
         <span>6 items</span>
 
@@ -367,11 +370,11 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-12/" style="color:var(--text);">Jun 12, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">Data Infrastructure / Verification / Scraping</span><span class="arc-tag">AI Operations / Agent Control</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Major version of a tool every Mac developer uses. Security and performance changes are practical.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/data-infrastructure-verification-scraping/">Data Infrastructure / Verification / Scraping</a><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a></div>
+      <div class="arc-teaser">Major version of a tool every Mac developer uses. Security and performance changes are practical.</div>
       <div class="item-meta">
         <span>8 items</span>
         <span>6 to watch</span>
@@ -380,290 +383,18 @@
     </div>
 
     <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
         <a href="/briefs/2026-06-11/" style="color:var(--text);">Jun 11, 2026</a>
       </div>
-      <div class="arc-themes"><span class="arc-tag">Model + API Changes</span><span class="arc-tag">AI Operations / Agent Control</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Direct, actionable detail for anyone building Claude tool-use agents with extended thinking enabled; also an early signal on a possibly new Claude model.</div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/model-api-changes/">Model + API Changes</a><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a></div>
+      <div class="arc-teaser">Direct, actionable detail for anyone building Claude tool-use agents with extended thinking enabled; also an early signal on a possibly new Claude model.</div>
       <div class="item-meta">
         <span>1 item</span>
         <span>3 to watch</span>
         <span>40 links researched</span>
       </div>
     </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-06-10/" style="color:var(--text);">Jun 10, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">Small Business Automation</span><span class="arc-tag">AI Operations / Agent Control</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Rare production-level data on actual LLM usage and cost patterns from a major infrastructure provider.</div>
-      <div class="item-meta">
-        <span>7 items</span>
-        <span>6 to watch</span>
-        <span>39 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-06-09/" style="color:var(--text);">Jun 9, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">Data Infrastructure / Verification / Scraping</span><span class="arc-tag">Model + API Changes</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Direct, immediately actionable performance improvement for anyone running Gemma4 locally</div>
-      <div class="item-meta">
-        <span>12 items</span>
-        <span>3 to watch</span>
-        <span>40 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-06-08/" style="color:var(--text);">Jun 8, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Tools Worth Testing</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Concrete IDOR example in AI-generated SaaS code — immediate review item for anyone using vibe coding tools.</div>
-      <div class="item-meta">
-        <span>15 items</span>
-        <span>4 to watch</span>
-        <span>40 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-06-07/" style="color:var(--text);">Jun 7, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">Tools Worth Testing</span><span class="arc-tag">Model + API Changes</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Fuzzy runs Ollama on Mac with BGE-M3 embeddings; NVFP4 MLX improvement and Oh My Pi integration are both directly relevant.</div>
-      <div class="item-meta">
-        <span>6 items</span>
-        <span>2 to watch</span>
-        <span>39 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-06-06/" style="color:var(--text);">Jun 6, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">Data Infrastructure / Verification / Scraping</span><span class="arc-tag">AI Operations / Agent Control</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Vite is the dominant JS build tool; acquisition by a cloud vendor could shift the JS ecosystem.</div>
-      <div class="item-meta">
-        <span>6 items</span>
-        <span>4 to watch</span>
-        <span>40 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-06-05/" style="color:var(--text);">Jun 5, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">Model + API Changes</span><span class="arc-tag">Tools Worth Testing</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Anyone letting agents touch prod infrastructure needs to know the liability and billing posture shifted in writing.</div>
-      <div class="item-meta">
-        <span>4 items</span>
-        <span>2 to watch</span>
-        <span>39 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-06-04/" style="color:var(--text);">Jun 4, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">This is a concrete workflow expansion for research agents, not a vague demo.</div>
-      <div class="item-meta">
-        <span>2 items</span>
-        <span>1 to watch</span>
-        <span>39 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-06-03/" style="color:var(--text);">Jun 3, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Model + API Changes</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">This is a concrete security decision item for anyone using github.dev or browser-based VS Code flows.</div>
-      <div class="item-meta">
-        <span>4 items</span>
-        <span>2 to watch</span>
-        <span>39 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-06-02/" style="color:var(--text);">Jun 2, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">Small Business Automation</span><span class="arc-tag">Tools Worth Testing</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Direct pricing change with immediate cost impact for hosted Postgres users.</div>
-      <div class="item-meta">
-        <span>5 items</span>
-        <span>1 to watch</span>
-        <span>40 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-06-01/" style="color:var(--text);">Jun 1, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Tools Worth Testing</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Potential new web privacy side-channel worth tracking for browser hardening and threat modeling.</div>
-      <div class="item-meta">
-        <span>4 items</span>
-        <span>1 to watch</span>
-        <span>40 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-05-31/" style="color:var(--text);">May 31, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Small Business Automation</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Public AI endpoints are economically attractive to abuse; per-request verification is becoming table-stakes.</div>
-      <div class="item-meta">
-        <span>5 items</span>
-        <span>2 to watch</span>
-        <span>38 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-05-30/" style="color:var(--text);">May 30, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">Small Business Automation</span><span class="arc-tag">AI Operations / Agent Control</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Concrete competitor benchmarks (conversion + support cost) plus a clear heuristic for when freemium works.</div>
-      <div class="item-meta">
-        <span>7 items</span>
-        <span>2 to watch</span>
-        <span>39 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-05-29/" style="color:var(--text);">May 29, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Tools Worth Testing</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Provider allowlists reduce “agent picked the wrong vendor” risk and centralize compliance controls.</div>
-      <div class="item-meta">
-        <span>6 items</span>
-        <span>2 to watch</span>
-        <span>39 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-05-28/" style="color:var(--text);">May 28, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">Tools Worth Testing</span><span class="arc-tag">Data Infrastructure / Verification / Scraping</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Concrete OSS tool that simplifies outbound email for self-hosted stacks.</div>
-      <div class="item-meta">
-        <span>6 items</span>
-        <span>1 to watch</span>
-        <span>39 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-05-27/" style="color:var(--text);">May 27, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">Data Infrastructure / Verification / Scraping</span><span class="arc-tag">AI Operations / Agent Control</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">10x KV compression with no quality loss is a significant practical improvement for local inference. Changes the calculus on what context lengths are feasible on consumer hardware.</div>
-      <div class="item-meta">
-        <span>4 items</span>
-        <span>4 to watch</span>
-        <span>40 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-05-26/" style="color:var(--text);">May 26, 2026</a>
-      </div>
-
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Arxiv paper documenting 'constraint decay' — LLM agents progressively fail to maintain stated constraints (security requirements, API contracts, error handling rules) across multi-step backend code generation tasks. The longer and more complex the session, the more constraints are silently dropped. Directly relevant to anyone running agentic coding loops (nightly-librarian, second-brain). Practical mitigations: shorter sessions, explicit re-injection of constraints at each step, structured output validation. No vendor-provided fix exists — this is a fundamental model behavior pattern.</div>
-      <div class="item-meta">
-        <span>3 items</span>
-
-
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-05-25/" style="color:var(--text);">May 25, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Data Infrastructure / Verification / Scraping</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Decision-changing for sandboxing, dependency installs, and build isolation.</div>
-      <div class="item-meta">
-        <span>4 items</span>
-        <span>1 to watch</span>
-        <span>39 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-05-24/" style="color:var(--text);">May 24, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Model + API Changes</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Credible kernel exploit chain implies real patch urgency on Apple Silicon Macs.</div>
-      <div class="item-meta">
-        <span>4 items</span>
-        <span>1 to watch</span>
-        <span>40 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-05-23/" style="color:var(--text);">May 23, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">AI Operations / Agent Control</span><span class="arc-tag">Tools Worth Testing</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Directly changes incident response procedure for anyone using Google APIs; deletion is not an immediate kill switch.</div>
-      <div class="item-meta">
-        <span>5 items</span>
-        <span>2 to watch</span>
-        <span>40 links researched</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-05-22/" style="color:var(--text);">May 22, 2026</a>
-      </div>
-
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">GitHub has confirmed that a malicious VSCode extension was used to steal developer credentials and access over 3,800 repositories. This is a supply chain attack vector targeting developer workstations directly. Immediate action: audit all installed VSCode extensions, remove anything unfamiliar or low-reputation, and check your repositories for unauthorized access or committed secrets.</div>
-      <div class="item-meta">
-        <span>12 items</span>
-
-
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/2026-05-21/" style="color:var(--text);">May 21, 2026</a>
-      </div>
-      <div class="arc-themes"><span class="arc-tag">Small Business Automation</span><span class="arc-tag">AI Operations / Agent Control</span></div>
-      <div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">If you built cost assumptions on Gemini 2.0 Flash pricing, 3.5 Flash is not a free upgrade—review the pricing page before switching.</div>
-      <div class="item-meta">
-        <span>5 items</span>
-        <span>2 to watch</span>
-        <span>40 links researched</span>
-      </div>
-    </div>
+          <a href="/archive/" style="display:inline-block;margin-top:0.85rem;font-size:0.8rem;color:var(--text-dim);">View full archive (42 briefs) →</a>
         </div>
       </div>
 

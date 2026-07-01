@@ -11,7 +11,9 @@
  *   site/briefs/YYYY-MM-DD/index.html     individual brief pages
  *
  * No network access, no credentials, no paid integrations.
- * No dependencies beyond Node.js built-ins.
+ * Optional dependency: @resvg/resvg-js (per-brief OG image rendering). If it
+ * isn't installed, the build still succeeds — OG images just fall back to
+ * the static per-category image, then the single site-wide default.
  *
  * Usage:
  *   node scripts/build-site.js [--dry-run]
@@ -23,6 +25,14 @@ const {
   parseDailyReportMarkdown,
   parseLegacyReportMarkdown,
 } = require("../src/report-archive.js");
+
+let renderBriefOgImage = null;
+try {
+  ({ renderBriefOgImage } = require("./og-render.js"));
+} catch {
+  // @resvg/resvg-js not installed or bundled fonts missing — dynamic OG
+  // images are skipped, callers fall back to the category/default image.
+}
 
 const REPO_ROOT = path.join(__dirname, "..");
 
@@ -71,6 +81,20 @@ function esc(str) {
 // TODO: add sameAs to Blog schema once X/LinkedIn handles are confirmed.
 const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
+// Per-category OG images (assets/og/<slug>.png → site/og/<slug>.png at build time)
+// give briefs and topic pages a distinct social-share image instead of every
+// page sharing the one generic og-image.png. Falls back to OG_IMAGE when a
+// brief's category doesn't have a matching pre-rendered asset.
+const OG_CATEGORY_DIR = path.join(REPO_ROOT, "assets", "og");
+
+function ogImageForThemes(themes) {
+  for (const t of themes || []) {
+    const candidate = path.join(SITE_DIR, "og", `${slugify(t)}.png`);
+    if (fs.existsSync(candidate)) return `${SITE_URL}/og/${slugify(t)}.png`;
+  }
+  return null;
+}
+
 function truncateDesc(str) {
   const raw = str.slice(0, 155);
   const m = raw.match(/^([\s\S]*[.!?])/);
@@ -79,13 +103,13 @@ function truncateDesc(str) {
   return (lastSpace > 40 ? raw.slice(0, lastSpace) : raw).trim();
 }
 
-function seoMeta({ title, description, path: urlPath, type = "website", publishedDate = "", leadTitle = "" }) {
+function seoMeta({ title, description, path: urlPath, type = "website", publishedDate = "", leadTitle = "", ogImage = OG_IMAGE }) {
   const fullUrl = SITE_URL + urlPath;
   const fullTitle = title === SITE_NAME ? title : `${title} | ${SITE_NAME}`;
   const safeDesc = esc(truncateDesc(description));
   const safeTitle = esc(fullTitle);
   const safeUrl = esc(fullUrl);
-  const safeOgImage = esc(OG_IMAGE);
+  const safeOgImage = esc(ogImage || OG_IMAGE);
 
   const jsonLd = type === "article"
     ? JSON.stringify({
@@ -197,6 +221,42 @@ function formatDateShort(isoDate) {
   }
 }
 
+/** "Voice AI / Realtime Agents" → "voice-ai-realtime-agents" */
+function slugify(str) {
+  return String(str)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+/**
+ * Group briefs by category, drawing from both the brief-level `themes` list
+ * and each published item's `category` field (they use the same taxonomy but
+ * aren't always populated identically). Returns a Map<categoryName, brief[]>
+ * with each brief's array de-duplicated and newest-first.
+ */
+function collectCategories(briefs) {
+  const map = new Map();
+  for (const brief of briefs) {
+    const names = new Set();
+    for (const t of brief.themes || []) names.add(t);
+    for (const item of brief.published || []) {
+      if (item.category) names.add(item.category);
+    }
+    for (const name of names) {
+      if (!map.has(name)) map.set(name, []);
+      map.get(name).push(brief);
+    }
+  }
+  for (const [name, list] of map) {
+    const seen = new Set();
+    const deduped = list.filter((b) => (seen.has(b.date) ? false : (seen.add(b.date), true)));
+    deduped.sort((a, b) => b.date.localeCompare(a.date));
+    map.set(name, deduped);
+  }
+  return map;
+}
+
 function write(filePath, content) {
   if (DRY_RUN) {
     console.log(`[dry-run] would write ${filePath} (${content.length} bytes)`);
@@ -205,6 +265,40 @@ function write(filePath, content) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
   fs.writeFileSync(filePath, normalizeGeneratedText(content), "utf8");
   console.log(`wrote ${path.relative(REPO_ROOT, filePath)}`);
+}
+
+function writeBinary(filePath, buffer) {
+  if (DRY_RUN) {
+    console.log(`[dry-run] would write ${filePath} (${buffer.length} bytes)`);
+    return;
+  }
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+  fs.writeFileSync(filePath, buffer);
+  console.log(`wrote ${path.relative(REPO_ROOT, filePath)}`);
+}
+
+/**
+ * Renders and writes a unique OG image for one brief (date + real headline),
+ * returning its public URL — or null if resvg isn't available, or the brief
+ * has nothing worth putting on an image, so callers can fall back cleanly.
+ */
+function writeBriefOgImage(brief) {
+  if (!renderBriefOgImage) return null;
+  const headline = brief.published?.[0]?.title || brief.leadTakeaway || briefSummaryText(brief);
+  if (!headline) return null;
+
+  try {
+    const png = renderBriefOgImage({
+      dateLabel: formatDate(brief.date),
+      category: brief.themes?.[0] || "",
+      headline,
+    });
+    writeBinary(path.join(SITE_DIR, "og", "briefs", `${brief.date}.png`), png);
+    return `${SITE_URL}/og/briefs/${brief.date}.png`;
+  } catch (err) {
+    console.warn(`[og-render] skipped dynamic OG image for ${brief.date}: ${err.message}`);
+    return null;
+  }
 }
 
 function normalizeGeneratedText(content) {
@@ -420,6 +514,8 @@ const SHARED_CSS = `
     --tag-p:     #e4edd8;
     --tag-m:     #ede8f4;
     --tag-r:     #e8e4dc;
+    --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --shadow-card: 0 1px 2px rgba(0,0,0,0.04), 0 4px 14px rgba(0,0,0,0.045);
   }
 
   html { font-size: 17px; }
@@ -451,7 +547,7 @@ const SHARED_CSS = `
   }
 
   .brand {
-    font-family: "Georgia", "Times New Roman", serif;
+    font-family: var(--font-serif);
     font-size: 1.5rem;
     font-weight: normal;
     color: var(--text);
@@ -540,7 +636,7 @@ const SHARED_CSS = `
 
   /* ── Typography ── */
   h1 {
-    font-family: "Georgia", "Times New Roman", serif;
+    font-family: var(--font-serif);
     font-size: 1.5rem;
     font-weight: normal;
     line-height: 1.25;
@@ -565,7 +661,7 @@ const SHARED_CSS = `
     background: var(--border);
   }
   h3 {
-    font-family: "Georgia", "Times New Roman", serif;
+    font-family: var(--font-serif);
     font-size: 1rem;
     font-weight: normal;
     color: var(--text);
@@ -603,7 +699,7 @@ const SHARED_CSS = `
   .item-num { font-size: 0.7rem; color: var(--text-dim); min-width: 1rem; padding-top: 0.15rem; flex-shrink: 0; }
 
   .item-title {
-    font-family: "Georgia", "Times New Roman", serif;
+    font-family: var(--font-serif);
     font-size: 0.975rem;
     font-weight: normal;
     color: var(--text);
@@ -772,7 +868,7 @@ const SHARED_CSS = `
 
   /* ── Lead takeaway ── */
   .lead-summary {
-    font-family: "Georgia", "Times New Roman", serif;
+    font-family: var(--font-serif);
     font-size: 0.975rem;
     font-style: italic;
     color: var(--text-dim);
@@ -782,7 +878,7 @@ const SHARED_CSS = `
 
   /* ── Hero tagline (kept for compatibility) ── */
   .hero-tagline {
-    font-family: "Georgia", "Times New Roman", serif;
+    font-family: var(--font-serif);
     font-size: 1.3rem;
     line-height: 1.35;
     color: var(--text);
@@ -808,7 +904,7 @@ const SHARED_CSS = `
     gap: 0.5rem;
   }
   .footer-brand {
-    font-family: "Georgia", "Times New Roman", serif;
+    font-family: var(--font-serif);
     font-size: 0.9rem;
     color: var(--text);
   }
@@ -875,7 +971,7 @@ const SHARED_CSS = `
     border-left: 3px solid var(--accent);
   }
   .subscribe-strip .subscribe-headline {
-    font-family: "Georgia", "Times New Roman", serif;
+    font-family: var(--font-serif);
     font-size: 0.95rem;
     font-weight: normal;
     color: var(--text);
@@ -937,9 +1033,83 @@ const SHARED_CSS = `
     --tag-m:     #241e30;
     --tag-r:     #252628;
   }
+
+  /* ── Lead card (today's brief) ── */
+  .lead-card {
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    padding: 1.25rem 1.4rem 1.4rem;
+    box-shadow: var(--shadow-card);
+  }
+  .lead-card .item { padding: 0.75rem 0.15rem; margin: 0 -0.15rem; border-radius: 3px; transition: background 0.15s ease; }
+  .lead-card .item:hover { background: var(--bg3); }
+  .lead-card > div:first-of-type[style*="border-top"] { border-top: none !important; }
+
+  /* ── Clickable category tags ── */
+  a.arc-tag, a.tag { text-decoration: none; }
+  a.arc-tag:hover { background: var(--bg3); color: var(--accent2); }
+  a.tag:hover { text-decoration: none; border-color: var(--accent); color: var(--accent2); }
+
+  /* ── Archive teaser line (was inline nowrap style) ── */
+  .arc-teaser {
+    font-size: 0.88rem;
+    color: var(--text-dim);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* ── Topics index ── */
+  .topic-pill-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+  .topic-pill {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    padding: 0.45em 0.8em;
+    border: 0.5px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg2);
+    color: var(--text);
+  }
+  .topic-pill:hover { background: var(--bg3); text-decoration: none; border-color: var(--accent); }
+  .topic-pill-count { font-size: 0.7rem; color: var(--text-dim); }
+
+  /* ── Empty-state note (rows with missing data) ── */
+  .item-note { font-size: 0.78rem; color: var(--text-dim); font-style: italic; margin-top: 0.2rem; }
+
+  /* ── Responsive layout ── */
+  @media (max-width: 720px) {
+    html { font-size: 16px; }
+    .page-wrap { padding: 1.1rem 1.1rem 3rem; }
+    .two-col { grid-template-columns: 1fr; gap: 0; }
+    .sidebar {
+      border-left: none;
+      border-top: 0.5px solid var(--border);
+      padding-left: 0;
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+    }
+    .site-header { padding: 1rem 1.1rem 0; }
+    .site-nav { font-size: 0.76rem; gap: 1rem; }
+    .lead-card { padding: 1rem 1.1rem 1.2rem; }
+    .arc-teaser {
+      white-space: normal;
+      overflow: hidden;
+      text-overflow: clip;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
 `;
 
 const CSS_LINK = '<link rel="stylesheet" href="/style.css">';
+
+// Editorial display serif — loaded once per page, falls back to Georgia if offline/blocked.
+const FONT_LINKS = `<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">`;
 
 // Runs before CSS paints — sets data-theme from localStorage to prevent FOUC
 const THEME_INIT = `<script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>`;
@@ -973,6 +1143,7 @@ function _nlThemeToggle(){
 function siteNav(active = "") {
   const items = [
     { href: "/", label: "Archive", key: "archive" },
+    { href: "/topics/", label: "Topics", key: "topics" },
     { href: "/reports/", label: "Reports", key: "reports" },
   ];
 
@@ -1001,7 +1172,7 @@ function briefSummaryText(brief) {
 
 // ─── Brief page renderer ──────────────────────────────────────────────────────
 
-function renderBriefPage(brief) {
+function renderBriefPage(brief, ogImageUrl = null) {
   const dateLabel = formatDate(brief.date);
   const published = brief.published;
   const monitored = brief.monitored;
@@ -1035,7 +1206,7 @@ function renderBriefPage(brief) {
           ${uncertaintyHtml}
           <div class="item-meta">
             ${sourceLink ? `<span>${sourceLink}</span>` : ""}
-            ${item.category ? `<span>${esc(item.category)}</span>` : ""}
+            ${item.category ? `<span><a href="/topics/${esc(slugify(item.category))}/" style="color:inherit;">${esc(item.category)}</a></span>` : ""}
             ${item.published ? `<span>${esc(item.published)}</span>` : ""}
           </div>
         </div>
@@ -1070,8 +1241,9 @@ function renderBriefPage(brief) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(dateLabel)} — ${esc(SITE_NAME)}</title>
-${seoMeta({ title: dateLabel, description: summaryText || brief.themes.join(", ") || SITE_DESCRIPTION, path: `/briefs/${brief.date}/`, type: "article", publishedDate: brief.date, leadTitle: brief.published[0]?.title || "" })}
+${seoMeta({ title: dateLabel, description: summaryText || brief.themes.join(", ") || SITE_DESCRIPTION, path: `/briefs/${brief.date}/`, type: "article", publishedDate: brief.date, leadTitle: brief.published[0]?.title || "", ogImage: ogImageUrl || ogImageForThemes(brief.themes) })}
   ${CSS_LINK}
+  ${FONT_LINKS}
 </head>
 <body>
   <header class="site-header">
@@ -1090,7 +1262,7 @@ ${seoMeta({ title: dateLabel, description: summaryText || brief.themes.join(", "
   <main>
     <a class="back-link" href="/">All briefs</a>
     <h1>${esc(dateLabel)}</h1>
-    ${brief.themes.length ? `<div class="meta" style="margin-top:0.4rem;">${brief.themes.map((t) => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
+    ${brief.themes.length ? `<div class="meta" style="margin-top:0.4rem;">${brief.themes.map((t) => `<span><a href="/topics/${esc(slugify(t))}/" style="color:inherit;">${esc(t)}</a></span>`).join("")}</div>` : ""}
     ${brief.published[0]?.takeaway ? `<p class="lead-summary" style="margin-top:0.85rem;">${renderText(brief.published[0].takeaway)}</p>` : brief.themes.length ? `<p class="lead-summary" style="margin-top:0.85rem;">${esc(brief.themes.join(" · "))}</p>` : ""}
     ${publishedHtml}
     ${monitoredHtml}
@@ -1148,6 +1320,7 @@ function renderDailyReportPage(report) {
   <title>${esc(formatDate(report.date))} report log — ${esc(SITE_NAME)}</title>
 ${seoMeta({ title: `${formatDate(report.date)} report log`, description: report.summary.text, path: `/reports/${report.date}/` })}
   ${CSS_LINK}
+  ${FONT_LINKS}
 </head>
 <body>
   <header class="site-header">
@@ -1217,6 +1390,7 @@ function renderLegacyReportPage(report) {
   <title>${esc(formatDate(report.date))} legacy archive — ${esc(SITE_NAME)}</title>
 ${seoMeta({ title: `${formatDate(report.date)} legacy archive`, description: report.summary.text, path: `/reports/legacy/${report.slug}/` })}
   ${CSS_LINK}
+  ${FONT_LINKS}
 </head>
 <body>
   <header class="site-header">
@@ -1258,11 +1432,18 @@ ${seoMeta({ title: `${formatDate(report.date)} legacy archive`, description: rep
 `;
 }
 
-function renderReportsIndexPage(reports, legacyReports) {
-  const sortedReports = [...reports].sort((a, b) => b.date.localeCompare(a.date));
+const REPORTS_PAGE_SIZE = 25;
+
+function reportsPagePath(page) {
+  return page <= 1 ? "/reports/" : `/reports/page/${page}/`;
+}
+
+function renderReportsIndexPage(reports, legacyReports, pagination = {}) {
+  const { page = 1, totalPages = 1, totalCount = reports.length } = pagination;
+  // `reports` is expected to already be the page-sliced, newest-first window.
   const sortedLegacyReports = [...legacyReports].sort((a, b) => b.slug.localeCompare(a.slug));
 
-  const recentRows = sortedReports.map((report) => `
+  const recentRows = reports.map((report) => `
     <div class="item">
       <div class="item-title"><a href="/reports/${esc(report.slug)}/">${esc(formatDate(report.date))}</a></div>
       <div class="item-takeaway">${renderText(report.summary.text)}</div>
@@ -1281,15 +1462,26 @@ function renderReportsIndexPage(reports, legacyReports) {
       </div>
     </div>`).join("\n");
 
+  const paginationHtml = totalPages > 1
+    ? `<div class="item-meta" style="margin-top:1rem;justify-content:space-between;">
+        <span>${page > 1 ? `<a href="${reportsPagePath(page - 1)}">← Newer</a>` : ""}</span>
+        <span>Page ${page} of ${totalPages} · ${totalCount} reports total</span>
+        <span>${page < totalPages ? `<a href="${reportsPagePath(page + 1)}">Older →</a>` : ""}</span>
+      </div>`
+    : "";
+
+  const pageTitle = page > 1 ? `Reports — page ${page}` : "Reports";
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   ${THEME_INIT}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Reports — ${esc(SITE_NAME)}</title>
-${seoMeta({ title: "Reports", description: "Pipeline report log and legacy archive entries — The Nightly Librarian.", path: "/reports/" })}
+  <title>${esc(pageTitle)} — ${esc(SITE_NAME)}</title>
+${seoMeta({ title: pageTitle, description: "Pipeline report log and legacy archive entries — The Nightly Librarian.", path: reportsPagePath(page) })}
   ${CSS_LINK}
+  ${FONT_LINKS}
 </head>
 <body>
   <header class="site-header">
@@ -1308,7 +1500,7 @@ ${seoMeta({ title: "Reports", description: "Pipeline report log and legacy archi
   <main>
     <h1>Report log</h1>
     <p style="margin-top:0.5rem;font-size:0.88rem;color:var(--text-dim);line-height:1.6;max-width:600px;">Nightly report drafts from the Codex morning memo pipeline, plus preserved legacy archive snapshots from the earlier issue format.</p>
-    ${reports.length ? `<h2>Recent reports</h2>${recentRows}` : ""}
+    ${reports.length ? `<h2>Recent reports</h2>${recentRows}${paginationHtml}` : ""}
     ${legacyReports.length ? `<h2>Legacy archive</h2>${legacyRows}` : ""}
   </main>
   <footer>
@@ -1357,6 +1549,7 @@ function renderBriefFromReport(report) {
   <title>${esc(dateLabel)} — ${esc(SITE_NAME)}</title>
 ${seoMeta({ title: dateLabel, description: leadTakeaway || SITE_DESCRIPTION, path: `/briefs/${report.date}/`, type: "article", publishedDate: report.date, leadTitle: report.worthAttention[0]?.title || "" })}
   ${CSS_LINK}
+  ${FONT_LINKS}
 </head>
 <body>
   <header class="site-header">
@@ -1380,6 +1573,27 @@ ${seoMeta({ title: dateLabel, description: leadTakeaway || SITE_DESCRIPTION, pat
 `;
 }
 
+// ─── Shared archive row (used by homepage, /archive/, and /topics/<slug>/) ────
+
+const ARCHIVE_PAGE_SIZE = 20;
+
+function renderArchiveRow(brief) {
+  const lead = brief.published[0];
+  return `
+    <div class="item">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
+        <a href="/briefs/${esc(brief.date)}/" style="color:var(--text);">${esc(formatDateShort(brief.date))}</a>
+      </div>
+      ${brief.themes.length ? `<div class="arc-themes">${brief.themes.slice(0,2).map((t) => `<a class="arc-tag" href="/topics/${esc(slugify(t))}/">${esc(t)}</a>`).join("")}</div>` : ""}
+      ${lead ? `<div class="arc-teaser">${renderText(lead.takeaway || lead.title)}</div>` : `<div class="item-note">No categorized items recorded for this run.</div>`}
+      <div class="item-meta">
+        <span>${brief.published.length} item${brief.published.length !== 1 ? "s" : ""}</span>
+        ${brief.monitored.length ? `<span>${brief.monitored.length} to watch</span>` : ""}
+        ${brief.allLinks.length ? `<span>${brief.allLinks.length} links researched</span>` : ""}
+      </div>
+    </div>`;
+}
+
 // ─── Index page renderer ──────────────────────────────────────────────────────
 
 function renderIndexPage(briefs, reports, legacyReports) {
@@ -1388,23 +1602,6 @@ function renderIndexPage(briefs, reports, legacyReports) {
   const latest = sorted[0];
   const latestSummary = latest ? briefSummaryText(latest) : "";
   const sortedLegacyReports = [...legacyReports].sort((a, b) => b.slug.localeCompare(a.slug));
-
-  function renderArchiveRow(brief) {
-    const lead = brief.published[0];
-    return `
-    <div class="item">
-      <div class="item-title" style="font-family:'Georgia',serif;font-size:0.92rem;">
-        <a href="/briefs/${esc(brief.date)}/" style="color:var(--text);">${esc(formatDateShort(brief.date))}</a>
-      </div>
-      ${brief.themes.length ? `<div class="arc-themes">${brief.themes.slice(0,2).map((t) => `<span class="arc-tag">${esc(t)}</span>`).join("")}</div>` : ""}
-      ${lead ? `<div class="item-takeaway" style="font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${renderText(lead.takeaway || lead.title)}</div>` : ""}
-      <div class="item-meta">
-        <span>${brief.published.length} item${brief.published.length !== 1 ? "s" : ""}</span>
-        ${brief.monitored.length ? `<span>${brief.monitored.length} to watch</span>` : ""}
-        ${brief.allLinks.length ? `<span>${brief.allLinks.length} links researched</span>` : ""}
-      </div>
-    </div>`;
-  }
 
   // Today's brief items (from latest)
   const latestItemsHtml = latest && latest.published.length
@@ -1417,7 +1614,7 @@ function renderIndexPage(briefs, reports, legacyReports) {
           ${item.takeaway ? `<div class="item-takeaway">${renderText(item.takeaway)}</div>` : ""}
           <div class="item-meta">
             ${item.sourceText ? `<span>${item.sourceUrl ? `<a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener">${esc(item.sourceText)}</a>` : esc(item.sourceText)}</span>` : ""}
-            ${item.category ? `<span>${esc(item.category)}</span>` : ""}
+            ${item.category ? `<span><a class="tag" style="border:none;padding:0;text-transform:none;letter-spacing:normal;font-weight:normal;font-size:inherit;color:inherit;" href="/topics/${esc(slugify(item.category))}/">${esc(item.category)}</a></span>` : ""}
           </div>
         </div>
       </div>
@@ -1426,8 +1623,11 @@ function renderIndexPage(briefs, reports, legacyReports) {
       ? `<div class="item"><div class="item-takeaway">${renderText(latestSummary)}</div></div>`
       : "";
 
-  // Archive rows (skip latest, already shown)
-  const archiveRows = sorted.slice(1).map(renderArchiveRow).join("\n");
+  // Archive rows (skip latest, already shown), capped so the homepage doesn't
+  // grow without bound — the full history lives at /archive/.
+  const rest = sorted.slice(1);
+  const archiveRows = rest.slice(0, ARCHIVE_PAGE_SIZE).map(renderArchiveRow).join("\n");
+  const hasMoreArchive = rest.length > ARCHIVE_PAGE_SIZE;
 
   // Sidebar report log
   const sortedReports = [...reports].sort((a, b) => b.date.localeCompare(a.date));
@@ -1446,6 +1646,7 @@ function renderIndexPage(briefs, reports, legacyReports) {
   <title>${esc(SITE_NAME)} — AI signal without the noise</title>
 ${seoMeta({ title: SITE_NAME, description: SITE_DESCRIPTION, path: "/" })}
   ${CSS_LINK}
+  ${FONT_LINKS}
 </head>
 <body>
   <header class="site-header">
@@ -1473,19 +1674,22 @@ ${seoMeta({ title: SITE_NAME, description: SITE_DESCRIPTION, path: "/" })}
           </form>
         </div>
         <div class="section-label">Today's brief</div>
+        <div class="lead-card">
         <p class="brief-valueprop">Every morning I read a few hundred links so you don't have to. This is what cleared the bar today.</p>
-        ${latest.themes.length ? `<div class="meta" style="margin-bottom:0.5rem;">${latest.themes.map((t) => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
+        ${latest.themes.length ? `<div class="meta" style="margin-bottom:0.5rem;">${latest.themes.map((t) => `<a href="/topics/${esc(slugify(t))}/" style="color:inherit;">${esc(t)}</a>`).join("")}</div>` : ""}
         ${latest && latest.published[0]?.takeaway ? `<p class="lead-summary">${renderText(latest.published[0].takeaway)}</p>` : latest && latest.themes.length ? `<p class="lead-summary">${esc(latest.themes.join(" · "))}</p>` : ""}
         <div style="border-top:0.5px solid var(--border);">
           ${latestItemsHtml}
         </div>
         <a href="/briefs/${esc(latest.date)}/" style="display:inline-block;margin-top:0.85rem;font-size:0.82rem;color:var(--accent);font-weight:600;border-bottom:1px solid var(--accent);padding-bottom:1px;">Read the full brief →</a>
+        </div>
         ` : ""}
 
         ${sorted.length > 1 ? `
         <div style="margin-top:1.75rem;">
           <div class="section-label">Archive</div>
           ${archiveRows}
+          ${hasMoreArchive ? `<a href="/archive/" style="display:inline-block;margin-top:0.85rem;font-size:0.8rem;color:var(--text-dim);">View full archive (${sorted.length} briefs) →</a>` : ""}
         </div>` : ""}
       </div>
 
@@ -1506,6 +1710,156 @@ ${seoMeta({ title: SITE_NAME, description: SITE_DESCRIPTION, path: "/" })}
     </div>
   </div>
 
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+  ${CF_BEACON}
+  ${THEME_JS}
+</body>
+</html>
+`;
+}
+
+// ─── Full archive page (/archive/) ─────────────────────────────────────────────
+// Homepage only shows the most recent ARCHIVE_PAGE_SIZE briefs; this page holds
+// the complete chronological history so the homepage doesn't grow without bound.
+
+function renderArchivePage(briefs) {
+  const sorted = [...briefs].sort((a, b) => b.date.localeCompare(a.date));
+  const rows = sorted.map(renderArchiveRow).join("\n");
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  ${THEME_INIT}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Full archive — ${esc(SITE_NAME)}</title>
+${seoMeta({ title: "Full archive", description: `Every ${esc(SITE_NAME)} brief, ${sorted.length} issues and counting.`, path: "/archive/" })}
+  ${CSS_LINK}
+  ${FONT_LINKS}
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav">${siteNav("archive")}</nav>
+    </div>
+    <div class="dateline">
+      <span>Full archive</span>
+      <span>${sorted.length} issue${sorted.length !== 1 ? "s" : ""}</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/">Latest brief</a>
+    <h1>Full archive</h1>
+    <p style="margin-top:0.5rem;font-size:0.88rem;color:var(--text-dim);line-height:1.6;">Every issue, oldest to newest, newest first. Browse by <a href="/topics/">topic</a> instead if you're after one category.</p>
+    <div style="margin-top:1.25rem;">
+      ${rows}
+    </div>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+  ${CF_BEACON}
+  ${THEME_JS}
+</body>
+</html>
+`;
+}
+
+// ─── Topic pages (/topics/, /topics/<slug>/) ───────────────────────────────────
+// Groups briefs by category so a reader can follow one thread (e.g. Voice AI)
+// across every issue it appeared in, instead of only seeing it once in the feed.
+
+function renderTopicsIndexPage(categoryMap) {
+  const entries = [...categoryMap.entries()].sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+
+  const pills = entries.map(([name, list]) => `<a class="topic-pill" href="/topics/${esc(slugify(name))}/">${esc(name)} <span class="topic-pill-count">${list.length}</span></a>`).join("");
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  ${THEME_INIT}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Topics — ${esc(SITE_NAME)}</title>
+${seoMeta({ title: "Topics", description: "Browse Nightly Librarian briefs by category — Voice AI, Agent Control, Model + API changes, and more.", path: "/topics/" })}
+  ${CSS_LINK}
+  ${FONT_LINKS}
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav">${siteNav("topics")}</nav>
+    </div>
+    <div class="dateline">
+      <span>Topics</span>
+      <span>${entries.length} categor${entries.length !== 1 ? "ies" : "y"}</span>
+    </div>
+  </header>
+  <main>
+    <h1>Browse by topic</h1>
+    <p style="margin-top:0.5rem;font-size:0.88rem;color:var(--text-dim);line-height:1.6;">Every brief is tagged against the categories builders and operators actually care about. Pick one to see every issue that touched it.</p>
+    <div class="topic-pill-grid">${pills}</div>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+  ${CF_BEACON}
+  ${THEME_JS}
+</body>
+</html>
+`;
+}
+
+function renderTopicPage(name, briefs) {
+  const sorted = [...briefs].sort((a, b) => b.date.localeCompare(a.date));
+  const rows = sorted.map(renderArchiveRow).join("\n");
+  const slug = slugify(name);
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  ${THEME_INIT}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${esc(name)} — ${esc(SITE_NAME)}</title>
+${seoMeta({ title: name, description: `Every Nightly Librarian brief tagged ${name} — ${sorted.length} issue${sorted.length !== 1 ? "s" : ""}.`, path: `/topics/${slug}/`, ogImage: ogImageForThemes([name]) })}
+  ${CSS_LINK}
+  ${FONT_LINKS}
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav">${siteNav("topics")}</nav>
+    </div>
+    <div class="dateline">
+      <span>Topic</span>
+      <span>${sorted.length} issue${sorted.length !== 1 ? "s" : ""}</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/topics/">All topics</a>
+    <h1>${esc(name)}</h1>
+    <div style="margin-top:1.25rem;">
+      ${rows}
+    </div>
+  </main>
   <footer>
     <span class="footer-brand">The Nightly Librarian</span>
     <span class="footer-sub">Built for builders, not boardrooms.</span>
@@ -1567,12 +1921,18 @@ ${items}
 
 // ─── Sitemap builder ──────────────────────────────────────────────────────────
 
-function buildSitemap(briefs, reports, legacyReports) {
+function buildSitemap(briefs, reports, legacyReports, categoryMap = new Map()) {
   const now = new Date().toISOString().slice(0, 10);
 
   const urls = [
     { loc: `${SITE_URL}/`, priority: "1.0", changefreq: "daily" },
     { loc: `${SITE_URL}/reports/`, priority: "0.5", changefreq: "daily" },
+    { loc: `${SITE_URL}/archive/`, priority: "0.6", changefreq: "daily" },
+    { loc: `${SITE_URL}/topics/`, priority: "0.6", changefreq: "weekly" },
+    ...[...categoryMap.keys()].map((name) => ({ loc: `${SITE_URL}/topics/${slugify(name)}/`, priority: "0.5", changefreq: "weekly" })),
+    ...Array.from({ length: Math.max(0, Math.ceil(reports.length / REPORTS_PAGE_SIZE) - 1) }, (_, i) => ({
+      loc: `${SITE_URL}/reports/page/${i + 2}/`, priority: "0.3", changefreq: "weekly",
+    })),
     ...briefs
       .sort((a, b) => b.date.localeCompare(a.date))
       .map((b) => ({ loc: `${SITE_URL}/briefs/${b.date}/`, priority: "0.8", changefreq: "never", lastmod: b.date })),
@@ -1602,6 +1962,21 @@ function main() {
     process.exit(1);
   }
 
+  // Copy pre-rendered per-category OG images (assets/og/*.png) into site/og/
+  // before rendering any pages, so ogImageForThemes() sees them on disk.
+  if (fs.existsSync(OG_CATEGORY_DIR)) {
+    const destDir = path.join(SITE_DIR, "og");
+    if (!DRY_RUN) fs.mkdirSync(destDir, { recursive: true });
+    for (const file of fs.readdirSync(OG_CATEGORY_DIR).filter((f) => f.endsWith(".png"))) {
+      const destPath = path.join(destDir, file);
+      if (DRY_RUN) {
+        console.log(`[dry-run] would copy ${file} → ${path.relative(REPO_ROOT, destPath)}`);
+      } else {
+        fs.copyFileSync(path.join(OG_CATEGORY_DIR, file), destPath);
+      }
+    }
+  }
+
   const mdFiles = fs.readdirSync(BRIEFS_MD_DIR)
     .filter((f) => /^\d{4}-\d{2}-\d{2}\.md$/.test(f))
     .sort();
@@ -1624,9 +1999,10 @@ function main() {
 
     briefs.push(brief);
 
-    // Write individual brief page
+    // Write individual brief page (with its own dynamic OG image, if resvg is available)
+    const briefOgUrl = writeBriefOgImage(brief);
     const briefPagePath = path.join(SITE_BRIEFS_DIR, date, "index.html");
-    write(briefPagePath, renderBriefPage(brief));
+    write(briefPagePath, renderBriefPage(brief, briefOgUrl));
   }
 
   if (fs.existsSync(REPORTS_MD_DIR)) {
@@ -1688,14 +2064,42 @@ function main() {
 
   // Write index page
   write(path.join(SITE_DIR, "index.html"), renderIndexPage(briefs, reports, legacyReports));
-  write(path.join(SITE_REPORTS_DIR, "index.html"), renderReportsIndexPage(reports, legacyReports));
+
+  // Write paginated reports index — legacy archive only appears on the last
+  // page since it's chronologically the oldest material.
+  const sortedReportsForPaging = [...reports].sort((a, b) => b.date.localeCompare(a.date));
+  const totalReportPages = Math.max(1, Math.ceil(sortedReportsForPaging.length / REPORTS_PAGE_SIZE));
+  for (let p = 1; p <= totalReportPages; p++) {
+    const pageItems = sortedReportsForPaging.slice((p - 1) * REPORTS_PAGE_SIZE, p * REPORTS_PAGE_SIZE);
+    const isLastPage = p === totalReportPages;
+    const html = renderReportsIndexPage(pageItems, isLastPage ? legacyReports : [], {
+      page: p,
+      totalPages: totalReportPages,
+      totalCount: sortedReportsForPaging.length,
+    });
+    const outPath = p === 1
+      ? path.join(SITE_REPORTS_DIR, "index.html")
+      : path.join(SITE_REPORTS_DIR, "page", String(p), "index.html");
+    write(outPath, html);
+  }
+
+  // Write full archive page (homepage only shows the most recent N)
+  write(path.join(SITE_DIR, "archive", "index.html"), renderArchivePage(briefs));
+
+  // Write topic pages — group every brief by category and generate one page
+  // per category plus a /topics/ index.
+  const categoryMap = collectCategories(briefs);
+  write(path.join(SITE_DIR, "topics", "index.html"), renderTopicsIndexPage(categoryMap));
+  for (const [name, list] of categoryMap) {
+    write(path.join(SITE_DIR, "topics", slugify(name), "index.html"), renderTopicPage(name, list));
+  }
 
   // Write RSS feed
   const allBriefs = [...briefs].sort((a, b) => b.date.localeCompare(a.date));
   write(path.join(SITE_DIR, "feed.xml"), buildRssFeed(allBriefs));
 
   // Write sitemap
-  write(path.join(SITE_DIR, "sitemap.xml"), buildSitemap(allBriefs, reports, legacyReports));
+  write(path.join(SITE_DIR, "sitemap.xml"), buildSitemap(allBriefs, reports, legacyReports, categoryMap));
 
   console.log(`\nBuild complete. ${briefs.length} brief(s), ${reports.length} report(s), ${legacyReports.length} legacy archive entr${legacyReports.length === 1 ? "y" : "ies"} → site/`);
   if (DRY_RUN) console.log("(dry run — no files written)");
