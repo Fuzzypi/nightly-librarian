@@ -30,6 +30,10 @@ npm run publish:check
 
 `approval:create` and `approval:validate` create or validate explicit local approval state under `artifacts/approvals/`. Approval validation computes the deterministic draft hashes in memory from the digest, so it can validate what `social:generate --dry-run` would produce without writing `dist/`.
 
+`build-site` injects the Cloudflare Web Analytics beacon on every generated page when `CF_WEB_ANALYTICS_TOKEN` is set in the environment or `.env.template`. Without the token, the beacon is omitted and local builds remain unchanged.
+
+For the measurement rollout and weekly reporting format, see [docs/measurement.md](./measurement.md).
+
 `publish:check` is a local-only preflight for the generated static site. Run it after `npm run build:site`; it checks that the latest generated brief/report have matching site pages, the site index/feed/sitemap exist, and the latest brief page has a meaningful lead summary. It does not browse the live site or call the network.
 
 After deployment, verify the live site with the approved browser CLI:

@@ -53,6 +53,7 @@ Status: implemented locally; no posting.
 - Publish a static archive/landing page first.
 - Use generated social drafts manually or semi-manually for 2-4 weeks.
 - Track engagement and email demand before paying for newsletter or scheduling tools.
+- See `specs/phase-5-distribution-plan.md` for the execution order, thread scope, and Phase 6 decision gate.
 
 ## Phase 6: Optional Integrations
 

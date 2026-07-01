@@ -59,9 +59,11 @@ CalenCall and Veremun are downstream product funnels. They may inform examples a
 - `docs/architecture.md` - system boundaries and distribution-layer components
 - `docs/redundancy.md` - primary AI-assisted path and VPS watchdog fallback rules
 - `docs/operations.md` - safe operating procedures
+- `docs/measurement.md` - analytics, Search Console, and weekly scorecard guidance
 - `docs/content-policy.md` - trust, sourcing, labeling, and factual-claim policy
 - `docs/social-generation-contract.md` - `digest:import` and `social:generate` artifact contracts
 - `docs/decisions/0001-cheap-first-distribution.md` - cheap/free-first distribution decision record
+- `specs/phase-5-distribution-plan.md` - Phase 5 execution plan and sequencing
 - `ROADMAP.md` - staged implementation path
 - `VERIFY.md` - local verification gates
 - `scripts/verify.sh` - safe local verification command

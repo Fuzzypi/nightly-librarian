@@ -52,3 +52,10 @@ Uncertainty: Needs follow-up.
     'daily summary lead-in should render before the item list'
   );
 });
+
+test('normalizes generated site output to avoid trailing whitespace diffs', () => {
+  const normalized = site.normalizeGeneratedText('line one  \r\nline two\t\r\nline three');
+
+  assert.equal(normalized, 'line one\nline two\nline three\n');
+  assert.ok(!/[ \t]+$/m.test(normalized));
+});
