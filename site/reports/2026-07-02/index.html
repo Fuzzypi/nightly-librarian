@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>July 2, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="12 stories cleared the bar, led by What's new in Claude Sonnet 5, Claude Code caught steganographically marking requests based on hidden domain/timezone">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-07-02/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="July 2, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="12 stories cleared the bar, led by What's new in Claude Sonnet 5, Claude Code caught steganographically marking requests based on hidden domain/timezone">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-07-02/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="July 2, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="12 stories cleared the bar, led by What's new in Claude Sonnet 5, Claude Code caught steganographically marking requests based on hidden domain/timezone">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>July 2, 2026 · Report log</span>
+      <span>Jul 2, 2026, 2:16 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>July 2, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>12 stories cleared the bar, led by What's new in Claude Sonnet 5, Claude Code caught steganographically marking requests based on hidden domain/timezone list, and Vercel Agent expands to production investigations and approved actions (public beta).</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>12 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything" target="_blank" rel="noopener">What's new in Claude Sonnet 5</a></div>
+        <div class="item-takeaway">Simon Willison's read of the Sonnet 5 developer docs and system card: Anthropic positions Sonnet 5 as near-Opus-4.8 performance at lower price, with deliberately reduced cyber-task capability (safeguards similar to Opus 4.7/4.8) - likely the reason it could ship without the export-control delays affecting Mythos 5.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://thereallo.dev/blog/claude-code-prompt-steganography" target="_blank" rel="noopener">Claude Code caught steganographically marking requests based on hidden domain/timezone list</a></div>
+        <div class="item-takeaway">A researcher reverse-engineered the Claude Code binary and found it silently rewrites invisible Unicode in the system prompt's date string when ANTHROPIC_BASE_URL matches a hardcoded list of Chinese corporate domains, AI-lab keywords, or reseller gateways (obfuscated via XOR+base64), and swaps date separators for Chinese timezones. It only triggers on non-default/custom endpoints, not the standard api.anthropic.com. Rocketed to #1 on Hacker News (605+ points) on discovery. What to do: if you route Claude Code through a custom ANTHROPIC_BASE_URL (proxy, reseller, self-hosted gateway), know that Anthropic is fingerprinting your traffic via hidden markers - not malicious, but undisclosed.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/an-expanded-vercel-agent-chat-investigations-and-approved-actions-now-in-public-beta" target="_blank" rel="noopener">Vercel Agent expands to production investigations and approved actions (public beta)</a></div>
+        <div class="item-takeaway">Vercel's dashboard agent can now investigate production issues (deployments, logs, metrics, config) and, with sign-off, open a PR, roll back, or change config to fix them. It's read-only by default and billed at $0.25/M tokens on top of provider rates. Worth watching as a reference design for anyone building autonomous ops agents.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/bring-your-dockerfile-to-vercel-functions" target="_blank" rel="noopener">Vercel Functions now run arbitrary Dockerfiles on Fluid Compute</a></div>
+        <div class="item-takeaway">You can deploy an HTTP server from a Dockerfile/Containerfile directly as a Vercel Function, on Fluid compute, keeping preview deploys, logs, routing and autoscaling. This effectively removes the runtime/language lock-in of serverless functions - bring any stack that speaks HTTP.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything" target="_blank" rel="noopener">US Commerce Dept lifts export controls on Claude Fable 5 and Mythos 5</a></div>
+        <div class="item-takeaway">Anthropic announced via Twitter that the Department of Commerce has lifted export controls that had blocked access to Claude Fable 5 and Mythos 5, with access restoration beginning the next day. This directly affects who can use Anthropic's top-tier models and where.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything" target="_blank" rel="noopener">shot-scraper video: agents can now record demos of their own work</a></div>
+        <div class="item-takeaway">New shot-scraper 1.10 command that takes a storyboard.yml script and uses Playwright to record a video walkthrough of a web app. Simon Willison built it specifically so coding agents can produce visual proof/demos of what they built, extending his running project of making agent output verifiable.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/nano-banana-2-lite-gemini-3-1-flash-lite-image-ai-gateway" target="_blank" rel="noopener">Nano Banana 2 Lite image model lands on Vercel AI Gateway at $0.034/image</a></div>
+        <div class="item-takeaway">Google's Flash-Lite-tier image model is now available through Vercel's AI Gateway, generating 1K images in under 4 seconds at about half the cost of Nano Banana 2. No gateway markup on top of provider pricing.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/vercel-sandbox-now-support-custom-images" target="_blank" rel="noopener">Vercel Sandbox supports custom root filesystem images</a></div>
+        <div class="item-takeaway">Sandboxes can now boot from your own OCI image pulled from Vercel's new Container Registry, letting you bring a custom toolchain/OS without losing Fluid Compute's fast cold-start snapshot behavior.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.feistyduck.com/newsletter/issue_138_the_threat_of_residential_proxies" target="_blank" rel="noopener">The Threat of Residential Proxies</a></div>
+        <div class="item-takeaway">Feisty Duck's security newsletter breaks down how residential proxy networks (often compromised home devices) are used to hide scraping and attack traffic behind legitimate-looking residential IPs. Covers the legitimate-to-criminal spectrum and defenses: protective DNS aware of known residential-proxy networks, plus traffic inspection for proxies that skip DNS via hardcoded IPs.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://claude.com/product/claude-science" target="_blank" rel="noopener">Anthropic launches Claude Science, an AI workbench for researchers</a></div>
+        <div class="item-takeaway">Anthropic's new product (beta, macOS/Linux, Pro/Max/Team/Enterprise) brings research tooling into one environment: literature analysis, multi-step experiments, and reproducible artifacts (code, environment, plain-language description all captured). It runs on your own infrastructure (laptop, HPC node, Slurm, or Modal) so raw data/compute stay local. Aimed at computational biology/pharma but signals Anthropic building vertical products beyond Claude Code.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/introducing-vcr-vercel-container-registry" target="_blank" rel="noopener">Vercel launches its own OCI container registry (VCR)</a></div>
+        <div class="item-takeaway">Vercel now hosts an OCI-compliant container registry with standard docker push/pull/tag workflows and unlimited repos per project. Mainly plumbing for the new Sandbox custom images and Dockerfile-based Functions features.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/run-multiple-frameworks-in-one-project-with-vercel-services" target="_blank" rel="noopener">Vercel Services: multiple frameworks in one project</a></div>
+        <div class="item-takeaway">Vercel now lets you deploy multiple frontends/backends as 'Services' within one project, sharing a domain and talking to each other privately without going over the public internet, with coordinated build/preview/rollback.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/an-expanded-vercel-agent-chat-investigations-and-approved-actions-now-in-public-beta" target="_blank" rel="noopener">Vercel Agent expands to production investigations and approved actions (public beta)</a>
+        </div>
+        <div class="item-takeaway">Vercel's dashboard agent can now investigate production issues (deployments, logs, metrics, config) and, with sign-off, open a PR, roll back, or change config to fix them. It's read-only by default and billed at $0.25/M tokens on top of provider rates. Worth watching as a reference design for anyone building autonomous ops agents.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/nano-banana-2-lite-gemini-3-1-flash-lite-image-ai-gateway" target="_blank" rel="noopener">Nano Banana 2 Lite image model lands on Vercel AI Gateway at $0.034/image</a>
+        </div>
+        <div class="item-takeaway">Google's Flash-Lite-tier image model is now available through Vercel's AI Gateway, generating 1K images in under 4 seconds at about half the cost of Nano Banana 2. No gateway markup on top of provider pricing.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/vercel-sandbox-now-support-custom-images" target="_blank" rel="noopener">Vercel Sandbox supports custom root filesystem images</a>
+        </div>
+        <div class="item-takeaway">Sandboxes can now boot from your own OCI image pulled from Vercel's new Container Registry, letting you bring a custom toolchain/OS without losing Fluid Compute's fast cold-start snapshot behavior.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://vercel.com/changelog/introducing-vcr-vercel-container-registry" target="_blank" rel="noopener">Vercel launches its own OCI container registry (VCR)</a>
+        </div>
+        <div class="item-takeaway">Vercel now hosts an OCI-compliant container registry with standard docker push/pull/tag workflows and unlimited repos per project. Mainly plumbing for the new Sandbox custom images and Dockerfile-based Functions features.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://vercel.com/changelog/run-multiple-frameworks-in-one-project-with-vercel-services" target="_blank" rel="noopener">Vercel Services: multiple frameworks in one project</a>
+        </div>
+        <div class="item-takeaway">Vercel now lets you deploy multiple frontends/backends as 'Services' within one project, sharing a domain and talking to each other privately without going over the public internet, with coordinated build/preview/rollback.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/bring-your-dockerfile-to-vercel-functions" target="_blank" rel="noopener">Vercel Functions now run arbitrary Dockerfiles on Fluid Compute</a>
+        </div>
+        <div class="item-takeaway">You can deploy an HTTP server from a Dockerfile/Containerfile directly as a Vercel Function, on Fluid compute, keeping preview deploys, logs, routing and autoscaling. This effectively removes the runtime/language lock-in of serverless functions - bring any stack that speaks HTTP.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/blog/vercel-open-source-program-spring-2026-cohort" target="_blank" rel="noopener">Vercel Open Source Program: Spring 2026 cohort</a>
+        </div>
+        <div class="item-takeaway">The world runs on open source software. The frameworks, libraries, and tools we rely on are made possible by communities that share ideas and build in the open. At Vercel, we want to help those communities thrive. That’s why we run the : a…</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything" target="_blank" rel="noopener">US Commerce Dept lifts export controls on Claude Fable 5 and Mythos 5</a>
+        </div>
+        <div class="item-takeaway">Anthropic announced via Twitter that the Department of Commerce has lifted export controls that had blocked access to Claude Fable 5 and Mythos 5, with access restoration beginning the next day. This directly affects who can use Anthropic's top-tier models and where.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything" target="_blank" rel="noopener">Simon Willison tries Nano Banana 2 Lite</a>
+        </div>
+        <div class="item-takeaway">Hands-on test of the new cheap/fast Gemini image model; anecdotal quality impressions only.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything" target="_blank" rel="noopener">What's new in Claude Sonnet 5</a>
+        </div>
+        <div class="item-takeaway">Simon Willison's read of the Sonnet 5 developer docs and system card: Anthropic positions Sonnet 5 as near-Opus-4.8 performance at lower price, with deliberately reduced cyber-task capability (safeguards similar to Opus 4.7/4.8) - likely the reason it could ship without the export-control delays affecting Mythos 5.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Jun/30/the-ai-compass/#atom-everything" target="_blank" rel="noopener">The AI Compass quiz</a>
+        </div>
+        <div class="item-takeaway">A political-compass-style quiz sorting people into 30 AI-ethics archetypes; notable only for being a no-build single-page React app.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything" target="_blank" rel="noopener">shot-scraper video: agents can now record demos of their own work</a>
+        </div>
+        <div class="item-takeaway">New shot-scraper 1.10 command that takes a storyboard.yml script and uses Playwright to record a video walkthrough of a web app. Simon Willison built it specifically so coding agents can produce visual proof/demos of what they built, extending his running project of making agent output verifiable.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Jun/30/shot-scraper/#atom-everything" target="_blank" rel="noopener">shot-scraper 1.10 release notes</a>
+        </div>
+        <div class="item-takeaway">Release announcement pointing to the 'video' command feature; no additional information beyond the companion post.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://thereallo.dev/blog/claude-code-prompt-steganography" target="_blank" rel="noopener">Claude Code caught steganographically marking requests based on hidden domain/timezone list</a>
+        </div>
+        <div class="item-takeaway">A researcher reverse-engineered the Claude Code binary and found it silently rewrites invisible Unicode in the system prompt's date string when ANTHROPIC_BASE_URL matches a hardcoded list of Chinese corporate domains, AI-lab keywords, or reseller gateways (obfuscated via XOR+base64), and swaps date separators for Chinese timezones. It only triggers on non-default/custom endpoints, not the standard api.anthropic.com. Rocketed to #1 on Hacker News (605+ points) on discovery.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank" rel="noopener">Claude Sonnet 5</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.conception.bio/science-and-updates/the-first-early-human-eggs-from-stem-cells" target="_blank" rel="noopener">First early human eggs derived from stem cells</a>
+        </div>
+        <div class="item-takeaway">Biology research milestone; unrelated to software/dev tooling decisions.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.arxiv.org/2026/06/30/arxivs-next-chapter/" target="_blank" rel="noopener">ArXiv's Next Chapter</a>
+        </div>
+        <div class="item-takeaway">Announcement about the direction of the arXiv preprint platform; general research-infrastructure news, not directly actionable for a solo builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/google/copybara" target="_blank" rel="noopener">Google copybara: moving code between repositories</a>
+        </div>
+        <div class="item-takeaway">Long-established Google open-source tool for transforming/syncing code between repos; resurfaced on HN with no indication of a new release or change.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://twitter.com/AnthropicAI/status/2072106151890809341" target="_blank" rel="noopener">Department of Commerce lifts export controls (HN/Twitter duplicate)</a>
+        </div>
+        <div class="item-takeaway">Same export-control story as the Simon Willison item, sourced directly from the Anthropic tweet via HN.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://claude.com/product/claude-science" target="_blank" rel="noopener">Anthropic launches Claude Science, an AI workbench for researchers</a>
+        </div>
+        <div class="item-takeaway">Anthropic's new product (beta, macOS/Linux, Pro/Max/Team/Enterprise) brings research tooling into one environment: literature analysis, multi-step experiments, and reproducible artifacts (code, environment, plain-language description all captured). It runs on your own infrastructure (laptop, HPC node, Slurm, or Modal) so raw data/compute stay local. Aimed at computational biology/pharma but signals Anthropic building vertical products beyond Claude Code.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://deepmind.google/models/gemini-image/flash-lite/" target="_blank" rel="noopener">Nano Banana 2 Lite</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://docs.mistral.ai/models/model-cards/leanstral-1-5-26-06" target="_blank" rel="noopener">Leanstral 1.5</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://mechanical-pencil.com/products/car" target="_blank" rel="noopener">How does a pull-back car work? Illustrated teardown</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://en.wikipedia.org/wiki/Forestiere_Underground_Gardens" target="_blank" rel="noopener">Forestiere Underground Gardens</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://home.cern/cern-bids-farewell-to-the-lhc-and-enters-long-shutdown-3/" target="_blank" rel="noopener">CERN bids farewell to the LHC and enters Long Shutdown 3</a>
+        </div>
+        <div class="item-takeaway">https:&amp;#x2F;&amp;#x2F;www.nikhef.nl&amp;#x2F;en&amp;#x2F;news&amp;#x2F;final-run-for-the-current-lhc-...</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ngrok.com/blog/i-ported-kubernetes-to-the-browser" target="_blank" rel="noopener">I ported Kubernetes to the browser</a>
+        </div>
+        <div class="item-takeaway">https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;ngrok&amp;#x2F;webernetes https:&amp;#x2F;&amp;#x2F;webernetes-demo.ngrok.app&amp;#x2F;</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?_fb_noscript=1" target="_blank" rel="noopener">From brain waves to words: a new path to communication without surgery</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://verdagon.dev/blog/ante-blending-borrowing-rc" target="_blank" rel="noopener">Ante: A new way to blend borrow checking and reference counting</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://soranews24.com/2026/06/30/tokyo-has-only-two-barley-tea-makers-and-we-visited-one-to-see-how-mugicha-is-made/" target="_blank" rel="noopener">Tokyo has only two barley tea makers, we visited one to see how mugicha is made</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://gauthier-lechevalier.com/radar" target="_blank" rel="noopener">I built a mmWave material classification radar (2025)</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://karolina.mgdubiel.com/drone/" target="_blank" rel="noopener">Building a custom octocopter from scratch with no prior hardware experience</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://hatari.frama.io/hatari/online/hatari.html" target="_blank" rel="noopener">Hatari – Online Atari ST/STE/TT/Falcon Emulator</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://buttondown.com/hillelwayne/archive/stroustrups-rule/" target="_blank" rel="noopener">Stroustrup's Rule (2024)</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lilianweng.github.io/posts/2026-06-24-scaling-laws/" target="_blank" rel="noopener">Scaling Laws, Carefully</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://nickcarr.com/scouting-a-decommissioned-nuclear-power-plant/" target="_blank" rel="noopener">Long Island's decommissioned nuclear power plant</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://taonaw.com/2026/06/27/have-you-restarted-your-computer.html" target="_blank" rel="noopener">Have you restarted your computer this week?</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://dustycloud.org/blog/what-happened-to-the-fight-for-the-internet/" target="_blank" rel="noopener">What happened to the fight for the internet?</a>
+        </div>
+        <div class="item-takeaway">Editorial/opinion piece on internet-freedom advocacy; not actionable news.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://caiustheory.com/jj-jj-jj-jj-jj/" target="_blank" rel="noopener">jj jj jj jj jj</a>
+        </div>
+        <div class="item-takeaway">Short post referencing the Jujutsu (jj) version control tool; underlying content could not be verified beyond the title.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://thereallo.dev/blog/claude-code-prompt-steganography" target="_blank" rel="noopener">Claude Code Is Steganographically Marking Requests</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.feistyduck.com/newsletter/issue_138_the_threat_of_residential_proxies" target="_blank" rel="noopener">The Threat of Residential Proxies</a>
+        </div>
+        <div class="item-takeaway">Feisty Duck's security newsletter breaks down how residential proxy networks (often compromised home devices) are used to hide scraping and attack traffic behind legitimate-looking residential IPs. Covers the legitimate-to-criminal spectrum and defenses: protective DNS aware of known residential-proxy networks, plus traffic inspection for proxies that skip DNS via hardcoded IPs.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 627a2aa5-fbb3-4c15-b6c3-ed3627f466bd
+Started: 2026-07-02T06:09:42.320Z
+Completed: 2026-07-02T06:16:23.409Z
+
+## Worth attention
+
+- **What's new in Claude Sonnet 5**
+  https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything
+  Simon Willison's read of the Sonnet 5 developer docs and system card: Anthropic positions Sonnet 5 as near-Opus-4.8 performance at lower price, with deliberately reduced cyber-task capability (safeguards similar to Opus 4.7/4.8) - likely the reason it could ship without the export-control delays affecting Mythos 5.
+- **Claude Code caught steganographically marking requests based on hidden domain/timezone list**
+  https://thereallo.dev/blog/claude-code-prompt-steganography
+  A researcher reverse-engineered the Claude Code binary and found it silently rewrites invisible Unicode in the system prompt's date string when ANTHROPIC_BASE_URL matches a hardcoded list of Chinese corporate domains, AI-lab keywords, or reseller gateways (obfuscated via XOR+base64), and swaps date separators for Chinese timezones. It only triggers on non-default/custom endpoints, not the standard api.anthropic.com. Rocketed to #1 on Hacker News (605+ points) on discovery.
+
+What to do: if you route Claude Code through a custom ANTHROPIC_BASE_URL (proxy, reseller, self-hosted gateway), know that Anthropic is fingerprinting your traffic via hidden markers - not malicious, but undisclosed.
+- **Vercel Agent expands to production investigations and approved actions (public beta)**
+  https://vercel.com/changelog/an-expanded-vercel-agent-chat-investigations-and-approved-actions-now-in-public-beta
+  Vercel's dashboard agent can now investigate production issues (deployments, logs, metrics, config) and, with sign-off, open a PR, roll back, or change config to fix them. It's read-only by default and billed at $0.25/M tokens on top of provider rates. Worth watching as a reference design for anyone building autonomous ops agents.
+- **Vercel Functions now run arbitrary Dockerfiles on Fluid Compute**
+  https://vercel.com/changelog/bring-your-dockerfile-to-vercel-functions
+  You can deploy an HTTP server from a Dockerfile/Containerfile directly as a Vercel Function, on Fluid compute, keeping preview deploys, logs, routing and autoscaling. This effectively removes the runtime/language lock-in of serverless functions - bring any stack that speaks HTTP.
+- **US Commerce Dept lifts export controls on Claude Fable 5 and Mythos 5**
+  https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything
+  Anthropic announced via Twitter that the Department of Commerce has lifted export controls that had blocked access to Claude Fable 5 and Mythos 5, with access restoration beginning the next day. This directly affects who can use Anthropic's top-tier models and where.
+- **shot-scraper video: agents can now record demos of their own work**
+  https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything
+  New shot-scraper 1.10 command that takes a storyboard.yml script and uses Playwright to record a video walkthrough of a web app. Simon Willison built it specifically so coding agents can produce visual proof/demos of what they built, extending his running project of making agent output verifiable.
+- **Nano Banana 2 Lite image model lands on Vercel AI Gateway at $0.034/image**
+  https://vercel.com/changelog/nano-banana-2-lite-gemini-3-1-flash-lite-image-ai-gateway
+  Google's Flash-Lite-tier image model is now available through Vercel's AI Gateway, generating 1K images in under 4 seconds at about half the cost of Nano Banana 2. No gateway markup on top of provider pricing.
+- **Vercel Sandbox supports custom root filesystem images**
+  https://vercel.com/changelog/vercel-sandbox-now-support-custom-images
+  Sandboxes can now boot from your own OCI image pulled from Vercel's new Container Registry, letting you bring a custom toolchain/OS without losing Fluid Compute's fast cold-start snapshot behavior.
+- **The Threat of Residential Proxies**
+  https://www.feistyduck.com/newsletter/issue_138_the_threat_of_residential_proxies
+  Feisty Duck's security newsletter breaks down how residential proxy networks (often compromised home devices) are used to hide scraping and attack traffic behind legitimate-looking residential IPs. Covers the legitimate-to-criminal spectrum and defenses: protective DNS aware of known residential-proxy networks, plus traffic inspection for proxies that skip DNS via hardcoded IPs.
+- **Anthropic launches Claude Science, an AI workbench for researchers**
+  https://claude.com/product/claude-science
+  Anthropic's new product (beta, macOS/Linux, Pro/Max/Team/Enterprise) brings research tooling into one environment: literature analysis, multi-step experiments, and reproducible artifacts (code, environment, plain-language description all captured). It runs on your own infrastructure (laptop, HPC node, Slurm, or Modal) so raw data/compute stay local. Aimed at computational biology/pharma but signals Anthropic building vertical products beyond Claude Code.
+- **Vercel launches its own OCI container registry (VCR)**
+  https://vercel.com/changelog/introducing-vcr-vercel-container-registry
+  Vercel now hosts an OCI-compliant container registry with standard docker push/pull/tag workflows and unlimited repos per project. Mainly plumbing for the new Sandbox custom images and Dockerfile-based Functions features.
+- **Vercel Services: multiple frameworks in one project**
+  https://vercel.com/changelog/run-multiple-frameworks-in-one-project-with-vercel-services
+  Vercel now lets you deploy multiple frontends/backends as 'Services' within one project, sharing a domain and talking to each other privately without going over the public internet, with coordinated build/preview/rollback.
+
+## Full digest
+
+- [P] [vercel-changelog] Vercel Agent expands to production investigations and approved actions (public beta) — https://vercel.com/changelog/an-expanded-vercel-agent-chat-investigations-and-approved-actions-now-in-public-beta — Vercel's dashboard agent can now investigate production issues (deployments, logs, metrics, config) and, with sign-off, open a PR, roll back, or change config to fix them. It's read-only by default and billed at $0.25/M tokens on top of provider rates. Worth watching as a reference design for anyone building autonomous ops agents.
+- [P] [vercel-changelog] Nano Banana 2 Lite image model lands on Vercel AI Gateway at $0.034/image — https://vercel.com/changelog/nano-banana-2-lite-gemini-3-1-flash-lite-image-ai-gateway — Google's Flash-Lite-tier image model is now available through Vercel's AI Gateway, generating 1K images in under 4 seconds at about half the cost of Nano Banana 2. No gateway markup on top of provider pricing.
+- [P] [vercel-changelog] Vercel Sandbox supports custom root filesystem images — https://vercel.com/changelog/vercel-sandbox-now-support-custom-images — Sandboxes can now boot from your own OCI image pulled from Vercel's new Container Registry, letting you bring a custom toolchain/OS without losing Fluid Compute's fast cold-start snapshot behavior.
+- [M] [vercel-changelog] Vercel launches its own OCI container registry (VCR) — https://vercel.com/changelog/introducing-vcr-vercel-container-registry — Vercel now hosts an OCI-compliant container registry with standard docker push/pull/tag workflows and unlimited repos per project. Mainly plumbing for the new Sandbox custom images and Dockerfile-based Functions features.
+- [M] [vercel-changelog] Vercel Services: multiple frameworks in one project — https://vercel.com/changelog/run-multiple-frameworks-in-one-project-with-vercel-services — Vercel now lets you deploy multiple frontends/backends as 'Services' within one project, sharing a domain and talking to each other privately without going over the public internet, with coordinated build/preview/rollback.
+- [P] [vercel-changelog] Vercel Functions now run arbitrary Dockerfiles on Fluid Compute — https://vercel.com/changelog/bring-your-dockerfile-to-vercel-functions — You can deploy an HTTP server from a Dockerfile/Containerfile directly as a Vercel Function, on Fluid compute, keeping preview deploys, logs, routing and autoscaling. This effectively removes the runtime/language lock-in of serverless functions - bring any stack that speaks HTTP.
+- [R] [vercel-changelog] Vercel Open Source Program: Spring 2026 cohort — https://vercel.com/blog/vercel-open-source-program-spring-2026-cohort — The world runs on open source software. The frameworks, libraries, and tools we rely on are made possible by communities that share ideas and build in the open. At Vercel, we want to help those communities thrive. That’s why we run the : a…
+- [P] [simon-willison] US Commerce Dept lifts export controls on Claude Fable 5 and Mythos 5 — https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything — Anthropic announced via Twitter that the Department of Commerce has lifted export controls that had blocked access to Claude Fable 5 and Mythos 5, with access restoration beginning the next day. This directly affects who can use Anthropic's top-tier models and where.
+- [R] [simon-willison] Simon Willison tries Nano Banana 2 Lite — https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything — Hands-on test of the new cheap/fast Gemini image model; anecdotal quality impressions only.
+- [P] [simon-willison] What's new in Claude Sonnet 5 — https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything — Simon Willison's read of the Sonnet 5 developer docs and system card: Anthropic positions Sonnet 5 as near-Opus-4.8 performance at lower price, with deliberately reduced cyber-task capability (safeguards similar to Opus 4.7/4.8) - likely the reason it could ship without the export-control delays affecting Mythos 5.
+- [R] [simon-willison] The AI Compass quiz — https://simonwillison.net/2026/Jun/30/the-ai-compass/#atom-everything — A political-compass-style quiz sorting people into 30 AI-ethics archetypes; notable only for being a no-build single-page React app.
+- [P] [simon-willison] shot-scraper video: agents can now record demos of their own work — https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything — New shot-scraper 1.10 command that takes a storyboard.yml script and uses Playwright to record a video walkthrough of a web app. Simon Willison built it specifically so coding agents can produce visual proof/demos of what they built, extending his running project of making agent output verifiable.
+- [R] [simon-willison] shot-scraper 1.10 release notes — https://simonwillison.net/2026/Jun/30/shot-scraper/#atom-everything — Release announcement pointing to the 'video' command feature; no additional information beyond the companion post.
+- [P] [hn-top] Claude Code caught steganographically marking requests based on hidden domain/timezone list — https://thereallo.dev/blog/claude-code-prompt-steganography — A researcher reverse-engineered the Claude Code binary and found it silently rewrites invisible Unicode in the system prompt's date string when ANTHROPIC_BASE_URL matches a hardcoded list of Chinese corporate domains, AI-lab keywords, or reseller gateways (obfuscated via XOR+base64), and swaps date separators for Chinese timezones. It only triggers on non-default/custom endpoints, not the standard api.anthropic.com. Rocketed to #1 on Hacker News (605+ points) on discovery.
+
+What to do: if you route Claude Code through a custom ANTHROPIC_BASE_URL (proxy, reseller, self-hosted gateway), know that Anthropic is fingerprinting your traffic via hidden markers - not malicious, but undisclosed.
+- [R] [hn-top] Claude Sonnet 5 — https://www.anthropic.com/news/claude-sonnet-5
+- [R] [hn-top] First early human eggs derived from stem cells — https://www.conception.bio/science-and-updates/the-first-early-human-eggs-from-stem-cells — Biology research milestone; unrelated to software/dev tooling decisions.
+- [R] [hn-top] ArXiv's Next Chapter — https://blog.arxiv.org/2026/06/30/arxivs-next-chapter/ — Announcement about the direction of the arXiv preprint platform; general research-infrastructure news, not directly actionable for a solo builder.
+- [R] [hn-top] Google copybara: moving code between repositories — https://github.com/google/copybara — Long-established Google open-source tool for transforming/syncing code between repos; resurfaced on HN with no indication of a new release or change.
+- [R] [hn-top] Department of Commerce lifts export controls (HN/Twitter duplicate) — https://twitter.com/AnthropicAI/status/2072106151890809341 — Same export-control story as the Simon Willison item, sourced directly from the Anthropic tweet via HN.
+- [P] [hn-top] Anthropic launches Claude Science, an AI workbench for researchers — https://claude.com/product/claude-science — Anthropic's new product (beta, macOS/Linux, Pro/Max/Team/Enterprise) brings research tooling into one environment: literature analysis, multi-step experiments, and reproducible artifacts (code, environment, plain-language description all captured). It runs on your own infrastructure (laptop, HPC node, Slurm, or Modal) so raw data/compute stay local. Aimed at computational biology/pharma but signals Anthropic building vertical products beyond Claude Code.
+- [R] [hn-top] Nano Banana 2 Lite — https://deepmind.google/models/gemini-image/flash-lite/
+- [R] [hn-top] Leanstral 1.5 — https://docs.mistral.ai/models/model-cards/leanstral-1-5-26-06
+- [R] [hn-top] How does a pull-back car work? Illustrated teardown — https://mechanical-pencil.com/products/car
+- [R] [hn-top] Forestiere Underground Gardens — https://en.wikipedia.org/wiki/Forestiere_Underground_Gardens
+- [R] [hn-top] CERN bids farewell to the LHC and enters Long Shutdown 3 — https://home.cern/cern-bids-farewell-to-the-lhc-and-enters-long-shutdown-3/ — https:&amp;#x2F;&amp;#x2F;www.nikhef.nl&amp;#x2F;en&amp;#x2F;news&amp;#x2F;final-run-for-the-current-lhc-...
+- [R] [hn-top] I ported Kubernetes to the browser — https://ngrok.com/blog/i-ported-kubernetes-to-the-browser — https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;ngrok&amp;#x2F;webernetes https:&amp;#x2F;&amp;#x2F;webernetes-demo.ngrok.app&amp;#x2F;
+- [R] [hn-top] From brain waves to words: a new path to communication without surgery — https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?_fb_noscript=1
+- [R] [hn-top] Ante: A new way to blend borrow checking and reference counting — https://verdagon.dev/blog/ante-blending-borrowing-rc
+- [R] [hn-top] Tokyo has only two barley tea makers, we visited one to see how mugicha is made — https://soranews24.com/2026/06/30/tokyo-has-only-two-barley-tea-makers-and-we-visited-one-to-see-how-mugicha-is-made/
+- [R] [hn-top] I built a mmWave material classification radar (2025) — https://gauthier-lechevalier.com/radar
+- [R] [hn-top] Building a custom octocopter from scratch with no prior hardware experience — https://karolina.mgdubiel.com/drone/
+- [R] [hn-top] Hatari – Online Atari ST/STE/TT/Falcon Emulator — https://hatari.frama.io/hatari/online/hatari.html
+- [R] [hn-top] Stroustrup's Rule (2024) — https://buttondown.com/hillelwayne/archive/stroustrups-rule/
+- [R] [hn-top] Scaling Laws, Carefully — https://lilianweng.github.io/posts/2026-06-24-scaling-laws/
+- [R] [hn-top] Long Island's decommissioned nuclear power plant — https://nickcarr.com/scouting-a-decommissioned-nuclear-power-plant/
+- [R] [hn-top] Have you restarted your computer this week? — https://taonaw.com/2026/06/27/have-you-restarted-your-computer.html
+- [R] [lobsters] What happened to the fight for the internet? — https://dustycloud.org/blog/what-happened-to-the-fight-for-the-internet/ — Editorial/opinion piece on internet-freedom advocacy; not actionable news.
+- [R] [lobsters] jj jj jj jj jj — https://caiustheory.com/jj-jj-jj-jj-jj/ — Short post referencing the Jujutsu (jj) version control tool; underlying content could not be verified beyond the title.
+- [R] [lobsters] Claude Code Is Steganographically Marking Requests — https://thereallo.dev/blog/claude-code-prompt-steganography — Comments
+- [P] [lobsters] The Threat of Residential Proxies — https://www.feistyduck.com/newsletter/issue_138_the_threat_of_residential_proxies — Feisty Duck's security newsletter breaks down how residential proxy networks (often compromised home devices) are used to hide scraping and attack traffic behind legitimate-looking residential IPs. Covers the legitimate-to-criminal spectrum and defenses: protective DNS aware of known residential-proxy networks, plus traffic inspection for proxies that skip DNS via hardcoded IPs.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>

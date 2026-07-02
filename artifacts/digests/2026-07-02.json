@@ -1,0 +1,776 @@
+{
+  "date": "2026-07-02",
+  "generated_at": "2026-07-02T06:16:57.723Z",
+  "imported_from": {
+    "importer_version": "digest-import/v1",
+    "source_artifact": "artifacts/synthesized/2026-07-02.json",
+    "source_sha256": "16da1b25a17f8d0a4602031884e0686aedaecf1f6c35523103622e77455a5797"
+  },
+  "items": [
+    {
+      "builder_takeaway": "Concrete reference design for agentic incident response with a real approval/permission model.",
+      "category": "AI Operations / Agent Control",
+      "id": "4900a6a4-daa7-4333-9ef4-91070065b611",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel Agent now offers dashboard chat, production investigations, and approval-gated remediation actions in public beta for Pro/Enterprise teams."
+      ],
+      "title": "Vercel Agent expands to production investigations and approved actions (public beta)",
+      "uncertainty": "Beta scope and quality of the 'approved actions' remediation flow unverified beyond vendor description.",
+      "url": "https://vercel.com/changelog/an-expanded-vercel-agent-chat-investigations-and-approved-actions-now-in-public-beta"
+    },
+    {
+      "builder_takeaway": "Concrete cost figure for cheap, fast image generation - useful if budgeting an image-gen feature.",
+      "category": "Small Business Automation",
+      "id": "f266a3dc-6ffc-4e6e-a65d-2471fb12ed2e",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Nano Banana 2 Lite (gemini-3.1-flash-lite-image) generates 1K images at $0.034 each via Vercel AI Gateway."
+      ],
+      "title": "Nano Banana 2 Lite image model lands on Vercel AI Gateway at $0.034/image",
+      "uncertainty": "Image quality/consistency vs full Nano Banana 2 not independently verified here.",
+      "url": "https://vercel.com/changelog/nano-banana-2-lite-gemini-3-1-flash-lite-image-ai-gateway"
+    },
+    {
+      "builder_takeaway": "Relevant if evaluating hosted sandboxes for agent code execution.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "23aedbf8-5837-41a0-93b3-afa6d51e4753",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel Sandbox now supports launching from custom OCI images while preserving Fluid Compute cold-start performance."
+      ],
+      "title": "Vercel Sandbox supports custom root filesystem images",
+      "uncertainty": "Cold-start performance claim with custom images not independently benchmarked.",
+      "url": "https://vercel.com/changelog/vercel-sandbox-now-support-custom-images"
+    },
+    {
+      "builder_takeaway": "Vercel now hosts an OCI-compliant container registry with standard docker push/pull/tag workflows and unlimited repos per project. Mainly plumbing for the new Sandbox custom images and Dockerfile-based Functions features.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "3ae1df2e-39c4-4f55-a9a3-4cf92f17e4a6",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel Container Registry (VCR) is a new OCI-compliant image registry integrated with standard Docker tooling."
+      ],
+      "title": "Vercel launches its own OCI container registry (VCR)",
+      "uncertainty": "Pricing for storage/egress not stated in the changelog excerpt.",
+      "url": "https://vercel.com/changelog/introducing-vcr-vercel-container-registry"
+    },
+    {
+      "builder_takeaway": "Vercel now lets you deploy multiple frontends/backends as 'Services' within one project, sharing a domain and talking to each other privately without going over the public internet, with coordinated build/preview/rollback.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "07b854d7-6a3e-48ab-8386-7190686ab4c8",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel Services allows deploying multiple frameworks/services within a single project with private internal networking."
+      ],
+      "title": "Vercel Services: multiple frameworks in one project",
+      "uncertainty": "Unclear how this compares cost/complexity-wise to just running separate projects.",
+      "url": "https://vercel.com/changelog/run-multiple-frameworks-in-one-project-with-vercel-services"
+    },
+    {
+      "builder_takeaway": "Meaningfully widens what can run on Vercel's serverless platform - relevant if you were avoiding Vercel for non-JS/Python workloads.",
+      "category": "Model + API Changes",
+      "id": "beb43bdc-e98a-4fab-b345-04f6b66f8cf7",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel Functions now support deploying OCI/Dockerfile-based HTTP servers on Fluid compute, removing prior language/runtime restrictions."
+      ],
+      "title": "Vercel Functions now run arbitrary Dockerfiles on Fluid Compute",
+      "uncertainty": "Cold-start and pricing behavior for arbitrary containers vs native runtimes not detailed here.",
+      "url": "https://vercel.com/changelog/bring-your-dockerfile-to-vercel-functions"
+    },
+    {
+      "builder_takeaway": "The world runs on open source software. The frameworks, libraries, and tools we rely on are made possible by communities that share ideas and build in the open. At Vercel, we want to help those communities thrive. That’s why we run the : a…",
+      "category": "Tools Worth Testing",
+      "id": "c031346a-0935-4be5-b816-79e5150039ff",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel Open Source Program: Spring 2026 cohort"
+      ],
+      "title": "Vercel Open Source Program: Spring 2026 cohort",
+      "uncertainty": "",
+      "url": "https://vercel.com/blog/vercel-open-source-program-spring-2026-cohort"
+    },
+    {
+      "builder_takeaway": "Regulatory change directly affecting model availability for Claude users.",
+      "category": "Small Business Automation",
+      "id": "3312e490-1c81-4779-9032-f7b2f2b95038",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "The US Department of Commerce lifted export controls on Claude Fable 5 and Mythos 5, and Anthropic is restoring access starting the following day."
+      ],
+      "title": "US Commerce Dept lifts export controls on Claude Fable 5 and Mythos 5",
+      "uncertainty": "Full scope of which regions/accounts regain access, and timeline, not yet detailed beyond the tweet.",
+      "url": "https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything"
+    },
+    {
+      "builder_takeaway": "Hands-on test of the new cheap/fast Gemini image model; anecdotal quality impressions only.",
+      "category": "Tools Worth Testing",
+      "id": "38de0e89-10a5-4adb-bc75-31baf4ee15ed",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "Nano Banana 2 Lite is Google's fastest and cheapest Gemini image model, tested informally by Simon Willison."
+      ],
+      "title": "Simon Willison tries Nano Banana 2 Lite",
+      "uncertainty": "Anecdotal single-prompt test, not rigorous.",
+      "url": "https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything"
+    },
+    {
+      "builder_takeaway": "Direct read on whether to move workloads to Sonnet 5 for cost savings, from a trusted, hands-on source.",
+      "category": "Model + API Changes",
+      "id": "90f12cde-a0b2-4322-a233-d934c9384188",
+      "importance": "lead",
+      "labels": [
+        "builder_reported",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "Claude Sonnet 5 offers performance close to Opus 4.8 at a lower price point, with intentionally limited cyber capability versus Mythos 5."
+      ],
+      "title": "What's new in Claude Sonnet 5",
+      "uncertainty": "Benchmark specifics behind 'close to Opus 4.8' not independently verified.",
+      "url": "https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything"
+    },
+    {
+      "builder_takeaway": "A political-compass-style quiz sorting people into 30 AI-ethics archetypes; notable only for being a no-build single-page React app.",
+      "category": "Tools Worth Testing",
+      "id": "12dd0038-8e0a-45b9-ae4c-0344da51d614",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "The AI Compass is a 29-question quiz that categorizes respondents into AI-ethics archetypes."
+      ],
+      "title": "The AI Compass quiz",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Jun/30/the-ai-compass/#atom-everything"
+    },
+    {
+      "builder_takeaway": "Reusable, open-source technique for having your own coding agents produce verifiable video evidence of changes.",
+      "category": "AI Operations / Agent Control",
+      "id": "8ae02efb-9de9-4809-b675-0dff5280e100",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "shot-scraper 1.10 adds a 'video' command that records a Playwright-driven video from a storyboard.yml script, letting coding agents generate demo videos of their own work."
+      ],
+      "title": "shot-scraper video: agents can now record demos of their own work",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything"
+    },
+    {
+      "builder_takeaway": "Release announcement pointing to the 'video' command feature; no additional information beyond the companion post.",
+      "category": "Tools Worth Testing",
+      "id": "7a4140d2-ed58-4444-9636-d8048e4cb0da",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "shot-scraper 1.10 was released, headlined by the new 'video' storyboard command."
+      ],
+      "title": "shot-scraper 1.10 release notes",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Jun/30/shot-scraper/#atom-everything"
+    },
+    {
+      "builder_takeaway": "Credible, reproducible trust/transparency issue in a tool many builders (including this pipeline's operator) use daily.",
+      "category": "AI Operations / Agent Control",
+      "id": "cb6996a6-30b0-4ae7-a738-cd5b3bcc470b",
+      "importance": "supporting",
+      "labels": [
+        "reproducible",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "thereallo.dev",
+      "source_facts": [
+        "Claude Code silently embeds hidden Unicode markers and altered date formatting in its system prompt when routed through certain non-default API endpoints, discovered via binary reverse-engineering."
+      ],
+      "title": "Claude Code caught steganographically marking requests based on hidden domain/timezone list",
+      "uncertainty": "No official Anthropic statement/confirmation yet found; based on independent reverse engineering, though corroborated by multiple outlets.",
+      "url": "https://thereallo.dev/blog/claude-code-prompt-steganography"
+    },
+    {
+      "builder_takeaway": "Claude Sonnet 5",
+      "category": "Tools Worth Testing",
+      "id": "0a317696-68d5-48bc-a3b2-9048cfe2a3c6",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "anthropic.com",
+      "source_facts": [
+        "Claude Sonnet 5"
+      ],
+      "title": "Claude Sonnet 5",
+      "uncertainty": "",
+      "url": "https://www.anthropic.com/news/claude-sonnet-5"
+    },
+    {
+      "builder_takeaway": "Biology research milestone; unrelated to software/dev tooling decisions.",
+      "category": "Tools Worth Testing",
+      "id": "745cc659-7c96-49b1-a040-0a34d61b45b5",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "conception.bio",
+      "source_facts": [
+        "Researchers report producing early-stage human egg cells from stem cells."
+      ],
+      "title": "First early human eggs derived from stem cells",
+      "uncertainty": "",
+      "url": "https://www.conception.bio/science-and-updates/the-first-early-human-eggs-from-stem-cells"
+    },
+    {
+      "builder_takeaway": "Announcement about the direction of the arXiv preprint platform; general research-infrastructure news, not directly actionable for a solo builder.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "b3e1a828-6af1-47ba-9eb7-40f0c83344d0",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "blog.arxiv.org",
+      "source_facts": [
+        "arXiv published a post outlining its next chapter/roadmap."
+      ],
+      "title": "ArXiv's Next Chapter",
+      "uncertainty": "Content not fully reviewed beyond title.",
+      "url": "https://blog.arxiv.org/2026/06/30/arxivs-next-chapter/"
+    },
+    {
+      "builder_takeaway": "Long-established Google open-source tool for transforming/syncing code between repos; resurfaced on HN with no indication of a new release or change.",
+      "category": "Tools Worth Testing",
+      "id": "ab712ea2-27da-4e0f-b7f6-13e544a48800",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Copybara is Google's existing tool for transforming and moving code between repositories."
+      ],
+      "title": "Google copybara: moving code between repositories",
+      "uncertainty": "Unclear why it's trending now; no changelog/new-release signal found.",
+      "url": "https://github.com/google/copybara"
+    },
+    {
+      "builder_takeaway": "Same export-control story as the Simon Willison item, sourced directly from the Anthropic tweet via HN.",
+      "category": "Small Business Automation",
+      "id": "18cb6dd3-ac48-450a-91eb-dcd5f679b91a",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "twitter.com",
+      "source_facts": [
+        "The Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5."
+      ],
+      "title": "Department of Commerce lifts export controls (HN/Twitter duplicate)",
+      "uncertainty": "",
+      "url": "https://twitter.com/AnthropicAI/status/2072106151890809341"
+    },
+    {
+      "builder_takeaway": "Signals Anthropic's vertical-product strategy (Claude Code for science) - useful context even if not directly used.",
+      "category": "Small Business Automation",
+      "id": "bc2d54b5-a57d-4190-8a4f-5a4615ee460b",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "claude.com",
+      "source_facts": [
+        "Anthropic launched Claude Science, a beta AI workbench for scientific research that runs on user-controlled infrastructure and produces reproducible artifacts."
+      ],
+      "title": "Anthropic launches Claude Science, an AI workbench for researchers",
+      "uncertainty": "Real-world adoption/quality for research workflows not yet independently reviewed.",
+      "url": "https://claude.com/product/claude-science"
+    },
+    {
+      "builder_takeaway": "Nano Banana 2 Lite",
+      "category": "Tools Worth Testing",
+      "id": "ea7bed12-9e42-41ce-8841-12845429e29b",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "deepmind.google",
+      "source_facts": [
+        "Nano Banana 2 Lite"
+      ],
+      "title": "Nano Banana 2 Lite",
+      "uncertainty": "",
+      "url": "https://deepmind.google/models/gemini-image/flash-lite/"
+    },
+    {
+      "builder_takeaway": "Leanstral 1.5",
+      "category": "Tools Worth Testing",
+      "id": "57628fa8-f7c2-4c88-b8fb-d734c261db4f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "docs.mistral.ai",
+      "source_facts": [
+        "Leanstral 1.5"
+      ],
+      "title": "Leanstral 1.5",
+      "uncertainty": "",
+      "url": "https://docs.mistral.ai/models/model-cards/leanstral-1-5-26-06"
+    },
+    {
+      "builder_takeaway": "How does a pull-back car work? Illustrated teardown",
+      "category": "Tools Worth Testing",
+      "id": "e3b59c53-fc74-46fd-8366-7f238481bc0e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "mechanical-pencil.com",
+      "source_facts": [
+        "How does a pull-back car work? Illustrated teardown"
+      ],
+      "title": "How does a pull-back car work? Illustrated teardown",
+      "uncertainty": "",
+      "url": "https://mechanical-pencil.com/products/car"
+    },
+    {
+      "builder_takeaway": "Forestiere Underground Gardens",
+      "category": "Tools Worth Testing",
+      "id": "7eca4dca-65fc-4581-9236-03f408674d84",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "en.wikipedia.org",
+      "source_facts": [
+        "Forestiere Underground Gardens"
+      ],
+      "title": "Forestiere Underground Gardens",
+      "uncertainty": "",
+      "url": "https://en.wikipedia.org/wiki/Forestiere_Underground_Gardens"
+    },
+    {
+      "builder_takeaway": "https:&#x2F;&#x2F;www.nikhef.nl&#x2F;en&#x2F;news&#x2F;final-run-for-the-current-lhc-...",
+      "category": "Tools Worth Testing",
+      "id": "0cf911a5-3555-45d5-b13b-380a0ed52889",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "home.cern",
+      "source_facts": [
+        "CERN bids farewell to the LHC and enters Long Shutdown 3"
+      ],
+      "title": "CERN bids farewell to the LHC and enters Long Shutdown 3",
+      "uncertainty": "",
+      "url": "https://home.cern/cern-bids-farewell-to-the-lhc-and-enters-long-shutdown-3/"
+    },
+    {
+      "builder_takeaway": "https:&#x2F;&#x2F;github.com&#x2F;ngrok&#x2F;webernetes https:&#x2F;&#x2F;webernetes-demo.ngrok.app&#x2F;",
+      "category": "Tools Worth Testing",
+      "id": "38e353b7-ece1-4241-82d7-348eeca2a275",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "ngrok.com",
+      "source_facts": [
+        "I ported Kubernetes to the browser"
+      ],
+      "title": "I ported Kubernetes to the browser",
+      "uncertainty": "",
+      "url": "https://ngrok.com/blog/i-ported-kubernetes-to-the-browser"
+    },
+    {
+      "builder_takeaway": "From brain waves to words: a new path to communication without surgery",
+      "category": "Tools Worth Testing",
+      "id": "e19dbf3c-12d4-4578-9c2c-815d4a805a42",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "ai.meta.com",
+      "source_facts": [
+        "From brain waves to words: a new path to communication without surgery"
+      ],
+      "title": "From brain waves to words: a new path to communication without surgery",
+      "uncertainty": "",
+      "url": "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?_fb_noscript=1"
+    },
+    {
+      "builder_takeaway": "Ante: A new way to blend borrow checking and reference counting",
+      "category": "Tools Worth Testing",
+      "id": "b6135ee3-5602-4184-8148-2a00a903ce4c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "verdagon.dev",
+      "source_facts": [
+        "Ante: A new way to blend borrow checking and reference counting"
+      ],
+      "title": "Ante: A new way to blend borrow checking and reference counting",
+      "uncertainty": "",
+      "url": "https://verdagon.dev/blog/ante-blending-borrowing-rc"
+    },
+    {
+      "builder_takeaway": "Tokyo has only two barley tea makers, we visited one to see how mugicha is made",
+      "category": "Tools Worth Testing",
+      "id": "d73a603e-a43c-4399-81eb-35360e0af915",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "soranews24.com",
+      "source_facts": [
+        "Tokyo has only two barley tea makers, we visited one to see how mugicha is made"
+      ],
+      "title": "Tokyo has only two barley tea makers, we visited one to see how mugicha is made",
+      "uncertainty": "",
+      "url": "https://soranews24.com/2026/06/30/tokyo-has-only-two-barley-tea-makers-and-we-visited-one-to-see-how-mugicha-is-made/"
+    },
+    {
+      "builder_takeaway": "I built a mmWave material classification radar (2025)",
+      "category": "Tools Worth Testing",
+      "id": "c2d0903a-bdb8-4a64-8cdd-50696c574a91",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "gauthier-lechevalier.com",
+      "source_facts": [
+        "I built a mmWave material classification radar (2025)"
+      ],
+      "title": "I built a mmWave material classification radar (2025)",
+      "uncertainty": "",
+      "url": "https://gauthier-lechevalier.com/radar"
+    },
+    {
+      "builder_takeaway": "Building a custom octocopter from scratch with no prior hardware experience",
+      "category": "Tools Worth Testing",
+      "id": "34278069-57f8-4431-a69c-35dccfcd16b7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "karolina.mgdubiel.com",
+      "source_facts": [
+        "Building a custom octocopter from scratch with no prior hardware experience"
+      ],
+      "title": "Building a custom octocopter from scratch with no prior hardware experience",
+      "uncertainty": "",
+      "url": "https://karolina.mgdubiel.com/drone/"
+    },
+    {
+      "builder_takeaway": "Hatari – Online Atari ST/STE/TT/Falcon Emulator",
+      "category": "Tools Worth Testing",
+      "id": "fd44f1f2-91b8-4a65-aad2-e94e20198536",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "hatari.frama.io",
+      "source_facts": [
+        "Hatari – Online Atari ST/STE/TT/Falcon Emulator"
+      ],
+      "title": "Hatari – Online Atari ST/STE/TT/Falcon Emulator",
+      "uncertainty": "",
+      "url": "https://hatari.frama.io/hatari/online/hatari.html"
+    },
+    {
+      "builder_takeaway": "Stroustrup's Rule (2024)",
+      "category": "Tools Worth Testing",
+      "id": "7fa4a7dd-faeb-4226-941b-1974f6890554",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "buttondown.com",
+      "source_facts": [
+        "Stroustrup's Rule (2024)"
+      ],
+      "title": "Stroustrup's Rule (2024)",
+      "uncertainty": "",
+      "url": "https://buttondown.com/hillelwayne/archive/stroustrups-rule/"
+    },
+    {
+      "builder_takeaway": "Scaling Laws, Carefully",
+      "category": "Tools Worth Testing",
+      "id": "6ed33689-1ff0-4f38-9bfb-888daa181684",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "lilianweng.github.io",
+      "source_facts": [
+        "Scaling Laws, Carefully"
+      ],
+      "title": "Scaling Laws, Carefully",
+      "uncertainty": "",
+      "url": "https://lilianweng.github.io/posts/2026-06-24-scaling-laws/"
+    },
+    {
+      "builder_takeaway": "Long Island's decommissioned nuclear power plant",
+      "category": "Tools Worth Testing",
+      "id": "4e54d103-02cf-47c0-b39f-a18b17310548",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "nickcarr.com",
+      "source_facts": [
+        "Long Island's decommissioned nuclear power plant"
+      ],
+      "title": "Long Island's decommissioned nuclear power plant",
+      "uncertainty": "",
+      "url": "https://nickcarr.com/scouting-a-decommissioned-nuclear-power-plant/"
+    },
+    {
+      "builder_takeaway": "Have you restarted your computer this week?",
+      "category": "Tools Worth Testing",
+      "id": "ed344a8b-06d0-491f-b65d-dac3001790d2",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "taonaw.com",
+      "source_facts": [
+        "Have you restarted your computer this week?"
+      ],
+      "title": "Have you restarted your computer this week?",
+      "uncertainty": "",
+      "url": "https://taonaw.com/2026/06/27/have-you-restarted-your-computer.html"
+    },
+    {
+      "builder_takeaway": "Editorial/opinion piece on internet-freedom advocacy; not actionable news.",
+      "category": "Tools Worth Testing",
+      "id": "a3144036-2ab1-45cf-bacc-d9e0632e4ad2",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "dustycloud.org",
+      "source_facts": [
+        "The post argues that the movement to keep the internet open and free has lost momentum."
+      ],
+      "title": "What happened to the fight for the internet?",
+      "uncertainty": "",
+      "url": "https://dustycloud.org/blog/what-happened-to-the-fight-for-the-internet/"
+    },
+    {
+      "builder_takeaway": "Short post referencing the Jujutsu (jj) version control tool; underlying content could not be verified beyond the title.",
+      "category": "Tools Worth Testing",
+      "id": "0722a834-271f-4c86-9718-f3e399cc8a7f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "caiustheory.com",
+      "source_facts": [
+        "jj jj jj jj jj"
+      ],
+      "title": "jj jj jj jj jj",
+      "uncertainty": "Could not verify article substance beyond title; possibly a workflow note on the Jujutsu VCS.",
+      "url": "https://caiustheory.com/jj-jj-jj-jj-jj/"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "f0b8b284-b46a-4192-9f0b-4861c5620b70",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "thereallo.dev",
+      "source_facts": [
+        "Claude Code Is Steganographically Marking Requests"
+      ],
+      "title": "Claude Code Is Steganographically Marking Requests",
+      "uncertainty": "",
+      "url": "https://thereallo.dev/blog/claude-code-prompt-steganography"
+    },
+    {
+      "builder_takeaway": "Relevant threat-landscape context for anyone running fetch/scraping pipelines or defending a site against scraping.",
+      "category": "AI Operations / Agent Control",
+      "id": "a28e465b-4dd0-43d3-a02c-bd24e590fd30",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-02T00:00:00.000Z",
+      "source": "feistyduck.com",
+      "source_facts": [
+        "Residential proxy networks are increasingly used to mask scraping and attack traffic as legitimate residential IPs, requiring protective-DNS and traffic-inspection defenses."
+      ],
+      "title": "The Threat of Residential Proxies",
+      "uncertainty": "Newsletter analysis/commentary rather than primary research data.",
+      "url": "https://www.feistyduck.com/newsletter/issue_138_the_threat_of_residential_proxies"
+    }
+  ],
+  "mode": "primary",
+  "run_id": "627a2aa5-fbb3-4c15-b6c3-ed3627f466bd",
+  "status": "completed",
+  "summary": "Synthesized Nightly Librarian run with 12 promoted item(s), 40 scored item(s), and 28 rejected item(s).",
+  "title": "Nightly Librarian - 2026-07-02"
+}
