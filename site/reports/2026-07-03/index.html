@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>July 3, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="12 stories cleared the bar, led by Your site, your rules: new AI traffic options for all customers, Unprivileged root via an out-of-bounds write in the">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-07-03/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="July 3, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="12 stories cleared the bar, led by Your site, your rules: new AI traffic options for all customers, Unprivileged root via an out-of-bounds write in the">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-07-03/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="July 3, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="12 stories cleared the bar, led by Your site, your rules: new AI traffic options for all customers, Unprivileged root via an out-of-bounds write in the">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>July 3, 2026 · Report log</span>
+      <span>Jul 3, 2026, 2:19 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>July 3, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>12 stories cleared the bar, led by Your site, your rules: new AI traffic options for all customers, Unprivileged root via an out-of-bounds write in the FUSE readdir cache (CVE-2026-31694), and Making AI search smarter.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>12 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/content-independence-day-ai-options/" target="_blank" rel="noopener">Your site, your rules: new AI traffic options for all customers</a></div>
+        <div class="item-takeaway">Cloudflare rolled out finer-grained AI traffic controls to every customer, not just enterprise: distinct handling for Search, Agent, and Training crawlers, plus a new option to shield ad-monetized pages from bots. If you run a site that depends on ad revenue or wants to block AI training scrapes without blocking useful agents, this is a config change worth making tomorrow.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://cyberstan.co.uk/fuse-readdir-oob/" target="_blank" rel="noopener">Unprivileged root via an out-of-bounds write in the FUSE readdir cache (CVE-2026-31694)</a></div>
+        <div class="item-takeaway">A real, CVE-tracked local privilege-escalation bug in FUSE's readdir cache -- anyone running Linux servers or VPS instances with FUSE mounts (sshfs, rclone, etc.) should check for patched kernel/FUSE versions. Directly actionable: check your kernel version and patch.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/making-ai-search-smarter/" target="_blank" rel="noopener">Making AI search smarter</a></div>
+        <div class="item-takeaway">Cloudflare announced two new tools aimed at helping site owners stay visible to AI-driven search/agents while getting compensated for their content. For anyone worried about AI crawlers cannibalizing referral traffic, this is a direct lever to evaluate alongside existing bot-management settings.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot/" target="_blank" rel="noopener">Kimi K2.7 Code is generally available in GitHub Copilot</a></div>
+        <div class="item-takeaway">Moonshot AI's Kimi K2.7 Code model reached GA status in GitHub Copilot, giving Copilot users another frontier coding model to switch to. Worth a quick benchmark against whatever model you currently default to -- model choice inside Copilot is now a lever, not a given.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://huggingface.co/blog/cerebras-gemma4-voice-ai" target="_blank" rel="noopener">Hugging Face and Cerebras bring Gemma 4 to real-time voice AI</a></div>
+        <div class="item-takeaway">Cerebras' fast-inference hardware now serves Google's Gemma 4 through Hugging Face, aimed at real-time voice agents where latency is the main bottleneck. If you're building or evaluating voice-agent infrastructure, this is a new low-latency stack option worth benchmarking against your current provider.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://code.visualstudio.com/blogs/2026/06/17/improving-token-efficiency-in-github-copilot" target="_blank" rel="noopener">Improving token efficiency for GitHub Copilot in VS Code</a></div>
+        <div class="item-takeaway">Microsoft/VS Code details concrete changes that cut token consumption for Copilot's agent mode -- directly relevant if you're running agentic coding workflows and watching your API/subscription costs. Worth reading for both the cost savings and the underlying technique, which may be portable to your own agent harnesses.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.google/innovation-and-ai/technology/safety-security/opening-up-zero-knowledge-proof-technology-to-promote-privacy-in-age-assurance/" target="_blank" rel="noopener">Opening up 'Zero-Knowledge Proof' technology to promote privacy in age assurance</a></div>
+        <div class="item-takeaway">As age-verification laws spread across US states, the UK, and EU, Google is publishing ZK-proof tooling that lets sites confirm a user is old enough without harvesting ID data. If you ship anything that will eventually need age gating, this is a credible privacy-preserving approach to watch instead of rolling your own ID-collection flow.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://noyb.eu/en/us-supreme-court-just-blew-eu-us-data-transfers" target="_blank" rel="noopener">US Supreme Court just blew up EU-US Data Transfers</a></div>
+        <div class="item-takeaway">If accurate, this would be a major compliance event for any solo business handling EU user data on US infrastructure -- echoing the Schrems I/II precedent. No article content was scraped (only a link to noyb.eu, Max Schrems' privacy-advocacy org), so the specifics of the ruling and its practical effect are unverified here.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/attribution-business-insights/" target="_blank" rel="noopener">Unmasking the crawls with Attribution Business Insights</a></div>
+        <div class="item-takeaway">A new analytics dashboard surfaces which AI crawlers are hitting your site and how much that traffic might be worth, meant to support negotiating crawl compensation. Useful if you're weighing whether to block or monetize AI bot traffic, but an add-on dashboard rather than something you must react to immediately.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://box2d.org/posts/2026/06/announcing-box3d/" target="_blank" rel="noopener">Announcing Box3D</a></div>
+        <div class="item-takeaway">The creator of the widely-used Box2D physics engine has released a 3D successor. Notable for anyone building games or simulations who currently reaches for Bullet, PhysX, or Jolt -- worth a look given Box2D's reputation for clean API design.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://ziglang.org/devlog/2026/?2026-06-30#2026-06-30" target="_blank" rel="noopener">All Package Management Functionality Moved from Compiler to Build System</a></div>
+        <div class="item-takeaway">A significant architectural decision in the Zig toolchain, separating package management from the compiler proper. Relevant if you're using or evaluating Zig; illustrates a broader trend of build systems absorbing package-management responsibility.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.dmurph.com/posts/2026/06/ecs_vs_oop_benchmark/ecs_vs_oop_benchmark.html" target="_blank" rel="noopener">The Physics of Memory (aka can Javascript ECS?)</a></div>
+        <div class="item-takeaway">A hands-on benchmark exploring whether ECS-style data layout actually helps performance in JS, with reproducible numbers. Good read if you're optimizing hot-path JS/game code; a solid example of evidence-based performance writing.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.cloudflare.com/agentic-internet-bot-report/" target="_blank" rel="noopener">Content Independence Day, one year on: building the business model for the agentic Internet</a>
+        </div>
+        <div class="item-takeaway">Cloudflare's one-year retrospective on its 'Content Independence Day' campaign, framing a shift toward a paid market for AI crawler access. It's a narrative/business overview rather than a new capability -- the substantive changes are covered in Cloudflare's companion announcements from the same day.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/making-ai-search-smarter/" target="_blank" rel="noopener">Making AI search smarter</a>
+        </div>
+        <div class="item-takeaway">Cloudflare announced two new tools aimed at helping site owners stay visible to AI-driven search/agents while getting compensated for their content. For anyone worried about AI crawlers cannibalizing referral traffic, this is a direct lever to evaluate alongside existing bot-management settings.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/content-independence-day-ai-options/" target="_blank" rel="noopener">Your site, your rules: new AI traffic options for all customers</a>
+        </div>
+        <div class="item-takeaway">Cloudflare rolled out finer-grained AI traffic controls to every customer, not just enterprise: distinct handling for Search, Agent, and Training crawlers, plus a new option to shield ad-monetized pages from bots. If you run a site that depends on ad revenue or wants to block AI training scrapes without blocking useful agents, this is a config change worth making tomorrow.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/attribution-business-insights/" target="_blank" rel="noopener">Unmasking the crawls with Attribution Business Insights</a>
+        </div>
+        <div class="item-takeaway">A new analytics dashboard surfaces which AI crawlers are hitting your site and how much that traffic might be worth, meant to support negotiating crawl compensation. Useful if you're weighing whether to block or monetize AI bot traffic, but an add-on dashboard rather than something you must react to immediately.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://huggingface.co/blog/cerebras-gemma4-voice-ai" target="_blank" rel="noopener">Hugging Face and Cerebras bring Gemma 4 to real-time voice AI</a>
+        </div>
+        <div class="item-takeaway">Cerebras' fast-inference hardware now serves Google's Gemma 4 through Hugging Face, aimed at real-time voice agents where latency is the main bottleneck. If you're building or evaluating voice-agent infrastructure, this is a new low-latency stack option worth benchmarking against your current provider.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.63" target="_blank" rel="noopener">n8n@1.123.63</a>
+        </div>
+        <div class="item-takeaway">Single bug fix release (Date value preservation in expressions). No new features or breaking changes.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.29.2" target="_blank" rel="noopener">n8n@2.29.2</a>
+        </div>
+        <div class="item-takeaway">Minor release: a few bug fixes (Salesforce auth, node creator badge, Date handling) plus a UI default change. No major new capability.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">beta</a>
+        </div>
+        <div class="item-takeaway">Duplicate of the 2.29.2 changelog under n8n's beta tag -- no distinct content.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.2.10" target="_blank" rel="noopener">v16.2.10</a>
+        </div>
+        <div class="item-takeaway">Packaging-only fix; no functional or API changes for Next.js users.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v15.5.20" target="_blank" rel="noopener">v15.5.20</a>
+        </div>
+        <div class="item-takeaway">Packaging-only republish, no functional changes.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://noyb.eu/en/us-supreme-court-just-blew-eu-us-data-transfers" target="_blank" rel="noopener">US Supreme Court just blew up EU-US Data Transfers</a>
+        </div>
+        <div class="item-takeaway">If accurate, this would be a major compliance event for any solo business handling EU user data on US infrastructure -- echoing the Schrems I/II precedent. No article content was scraped (only a link to noyb.eu, Max Schrems' privacy-advocacy org), so the specifics of the ruling and its practical effect are unverified here.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.scattered-thoughts.net/writing/artificial-adventures/" target="_blank" rel="noopener">Artificial adventures</a>
+        </div>
+        <div class="item-takeaway">Personal reflective essay; no concrete claim or actionable content.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://box2d.org/posts/2026/06/announcing-box3d/" target="_blank" rel="noopener">Announcing Box3D</a>
+        </div>
+        <div class="item-takeaway">The creator of the widely-used Box2D physics engine has released a 3D successor. Notable for anyone building games or simulations who currently reaches for Bullet, PhysX, or Jolt -- worth a look given Box2D's reputation for clean API design.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://discourse.imfreedom.org/t/pidgin-3-0-alpha-2-2-96-0-has-been-released/398" target="_blank" rel="noopener">Pidgin 3.0 Alpha 2 (2.96.0) has been released</a>
+        </div>
+        <div class="item-takeaway">Alpha-stage release of a legacy IM client; low relevance to current solo-dev priorities.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://ziglang.org/devlog/2026/?2026-06-30#2026-06-30" target="_blank" rel="noopener">All Package Management Functionality Moved from Compiler to Build System</a>
+        </div>
+        <div class="item-takeaway">A significant architectural decision in the Zig toolchain, separating package management from the compiler proper. Relevant if you're using or evaluating Zig; illustrates a broader trend of build systems absorbing package-management responsibility.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.dmurph.com/posts/2026/06/ecs_vs_oop_benchmark/ecs_vs_oop_benchmark.html" target="_blank" rel="noopener">The Physics of Memory (aka can Javascript ECS?)</a>
+        </div>
+        <div class="item-takeaway">A hands-on benchmark exploring whether ECS-style data layout actually helps performance in JS, with reproducible numbers. Good read if you're optimizing hot-path JS/game code; a solid example of evidence-based performance writing.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://godotengine.org/article/contribution-policy-2026/" target="_blank" rel="noopener">Changes to Godot Engine Contribution Policies</a>
+        </div>
+        <div class="item-takeaway">Governance/process change for Godot contributors. Relevant if you contribute to or depend heavily on Godot's roadmap, otherwise a background item.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://asahilinux.org/2026/06/progress-report-7-1/" target="_blank" rel="noopener">Progress Report: Linux 7.1 - Asahi Linux</a>
+        </div>
+        <div class="item-takeaway">Routine progress update on Apple Silicon Linux support. Worth tracking if you run Linux on Apple hardware; not an immediate action item.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://cleberg.net/blog/internet.html" target="_blank" rel="noopener">The Internet I Grew Up With Doesn't Exist Anymore</a>
+        </div>
+        <div class="item-takeaway">Nostalgia essay, not actionable or decision-relevant.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://cyberstan.co.uk/fuse-readdir-oob/" target="_blank" rel="noopener">Unprivileged root via an out-of-bounds write in the FUSE readdir cache (CVE-2026-31694)</a>
+        </div>
+        <div class="item-takeaway">A real, CVE-tracked local privilege-escalation bug in FUSE's readdir cache -- anyone running Linux servers or VPS instances with FUSE mounts (sshfs, rclone, etc.) should check for patched kernel/FUSE versions. Directly actionable: check your kernel version and patch.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.erat.org/crosvm.html" target="_blank" rel="noopener">Creating a development sandbox with crosvm</a>
+        </div>
+        <div class="item-takeaway">A practical guide to using crosvm (the VMM behind ChromeOS/Android's Linux VM) to build an isolated dev sandbox -- directly relevant if you're isolating agent or build execution environments rather than relying on Docker alone.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://benjamintoll.com/2026/06/29/on-ditching-vagrant/" target="_blank" rel="noopener">On Ditching Vagrant</a>
+        </div>
+        <div class="item-takeaway">First-hand account of migrating away from Vagrant -- useful context if you still maintain Vagrant-based dev environments and are weighing alternatives (Docker, Nix, etc.).</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://nesbitt.io/2026/06/30/taking-roads-and-bridges-literally.html" target="_blank" rel="noopener">Open Source as Infrastructure: Taking Roads and Bridges literally</a>
+        </div>
+        <div class="item-takeaway">Thoughtful essay on OSS sustainability framing; interesting background reading on the open-source funding debate, not a near-term decision item.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.youtube.com/watch?v=oPbOK90aJEo" target="_blank" rel="noopener">GameBoy Emulator on ESP32 + Eink</a>
+        </div>
+        <div class="item-takeaway">Fun hobby hardware project video; not relevant to business/software decisions.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.phoronix.com/news/GraalVM-Community-25.1.3" target="_blank" rel="noopener">GraalVM Hello World Program Down To &quot;Just&quot; 6.5MB</a>
+        </div>
+        <div class="item-takeaway">Incremental native-image size reduction in GraalVM. Relevant if you ship GraalVM native binaries and care about image size/cold-start; otherwise a minor footnote.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://code.visualstudio.com/blogs/2026/06/17/improving-token-efficiency-in-github-copilot" target="_blank" rel="noopener">Improving token efficiency for GitHub Copilot in VS Code</a>
+        </div>
+        <div class="item-takeaway">Microsoft/VS Code details concrete changes that cut token consumption for Copilot's agent mode -- directly relevant if you're running agentic coding workflows and watching your API/subscription costs. Worth reading for both the cost savings and the underlying technique, which may be portable to your own agent harnesses.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://yfu.tw/blog/en/autofz-revisited/" target="_blank" rel="noopener">The Control Plane Was the Point: Revisiting autofz in the LLM Era</a>
+        </div>
+        <div class="item-takeaway">A technical essay connecting older fuzzing-infrastructure design (autofz's control plane) to how LLM-driven agent systems should be architected. Thoughtful for anyone designing agent orchestration or tool-calling control planes, though it's an opinionated analysis rather than a released tool.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot/" target="_blank" rel="noopener">Kimi K2.7 Code is generally available in GitHub Copilot</a>
+        </div>
+        <div class="item-takeaway">Moonshot AI's Kimi K2.7 Code model reached GA status in GitHub Copilot, giving Copilot users another frontier coding model to switch to. Worth a quick benchmark against whatever model you currently default to -- model choice inside Copilot is now a lever, not a given.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://zcode.z.ai/en" target="_blank" rel="noopener">ZCode – Harness for GLM-5.2</a>
+        </div>
+        <div class="item-takeaway">A community-built harness for Zhipu's GLM-5.2 model, in the same space as Claude Code/Cursor-style coding agents. No usage data or reviews visible yet -- worth a look if you're already experimenting with GLM models, otherwise not urgent.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://makerspet.com/blog/building-an-open-source-robot-vacuum-meet-oomwoo/" target="_blank" rel="noopener">Oomwoo, an open-source robot vacuum you build yourself</a>
+        </div>
+        <div class="item-takeaway">A fun hardware hobby project, but unrelated to software business decisions.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://f-droid.org/2026/07/01/adv-malware.html" target="_blank" rel="noopener">A new Android malware from Google</a>
+        </div>
+        <div class="item-takeaway">F-Droid, an advocacy-leaning source, flags an Android malware concern tied to Google's ecosystem. The headline is provocative and no article content was scraped, so treat as unverified until corroborated by a neutral source.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://tedium.co/2026/07/01/online-web-forums-retrospective/" target="_blank" rel="noopener">Bring back crappy forums</a>
+        </div>
+        <div class="item-takeaway">Nostalgia/culture essay about web forum culture; no actionable claim for a solo builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.demofox.org/2026/07/01/what-to-learn-to-be-a-graphics-programmer/" target="_blank" rel="noopener">What to learn to be a graphics programmer</a>
+        </div>
+        <div class="item-takeaway">Evergreen career-advice post; useful as a personal resource but not time-sensitive news.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://hydrogenaudio.org/index.php/topic,129691.0.html" target="_blank" rel="noopener">FFmpeg 9.1's new AAC encoder</a>
+        </div>
+        <div class="item-takeaway">A concrete quality/compression improvement to FFmpeg's AAC encoder -- relevant if you touch audio/video encoding pipelines, otherwise low priority.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.google/innovation-and-ai/technology/safety-security/opening-up-zero-knowledge-proof-technology-to-promote-privacy-in-age-assurance/" target="_blank" rel="noopener">Opening up 'Zero-Knowledge Proof' technology to promote privacy in age assurance</a>
+        </div>
+        <div class="item-takeaway">As age-verification laws spread across US states, the UK, and EU, Google is publishing ZK-proof tooling that lets sites confirm a user is old enough without harvesting ID data. If you ship anything that will eventually need age gating, this is a credible privacy-preserving approach to watch instead of rolling your own ID-collection flow.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://news.ycombinator.com/item?id=48747976" target="_blank" rel="noopener">Ask HN: Who is hiring? (July 2026)</a>
+        </div>
+        <div class="item-takeaway">Recurring monthly thread, not news.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.science.org/content/article/how-do-wombats-poop-cubes-scientists-get-bottom-mystery" target="_blank" rel="noopener">How do wombats poop cubes?</a>
+        </div>
+        <div class="item-takeaway">Science curiosity piece, unrelated to software or business.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://thisismodest.com/vimscoops/" target="_blank" rel="noopener">Learn Vim motions with an ice-cream van</a>
+        </div>
+        <div class="item-takeaway">A fun Vim-learning game; charming but not news or decision-relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://underhanded-c.org/" target="_blank" rel="noopener">The Underhanded C Contest</a>
+        </div>
+        <div class="item-takeaway">Evergreen recurring contest page, not a new event.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.qualcomm.com/developer/blog/2026/06/qualcomm-linux-2-now-available" target="_blank" rel="noopener">Qualcomm Linux 2.0</a>
+        </div>
+        <div class="item-takeaway">A major version bump to Qualcomm's own Linux distribution for its chipsets, relevant to embedded and edge-AI developers targeting Snapdragon hardware. Niche audience but a real, dated platform release.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 85881447-4ec5-4b5a-b82c-45e06d3809b0
+Started: 2026-07-03T06:09:56.379Z
+Completed: 2026-07-03T06:19:59.935Z
+
+## Worth attention
+
+- **Your site, your rules: new AI traffic options for all customers**
+  https://blog.cloudflare.com/content-independence-day-ai-options/
+  Cloudflare rolled out finer-grained AI traffic controls to every customer, not just enterprise: distinct handling for Search, Agent, and Training crawlers, plus a new option to shield ad-monetized pages from bots. If you run a site that depends on ad revenue or wants to block AI training scrapes without blocking useful agents, this is a config change worth making tomorrow.
+- **Unprivileged root via an out-of-bounds write in the FUSE readdir cache (CVE-2026-31694)**
+  https://cyberstan.co.uk/fuse-readdir-oob/
+  A real, CVE-tracked local privilege-escalation bug in FUSE's readdir cache -- anyone running Linux servers or VPS instances with FUSE mounts (sshfs, rclone, etc.) should check for patched kernel/FUSE versions. Directly actionable: check your kernel version and patch.
+- **Making AI search smarter**
+  https://blog.cloudflare.com/making-ai-search-smarter/
+  Cloudflare announced two new tools aimed at helping site owners stay visible to AI-driven search/agents while getting compensated for their content. For anyone worried about AI crawlers cannibalizing referral traffic, this is a direct lever to evaluate alongside existing bot-management settings.
+- **Kimi K2.7 Code is generally available in GitHub Copilot**
+  https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot/
+  Moonshot AI's Kimi K2.7 Code model reached GA status in GitHub Copilot, giving Copilot users another frontier coding model to switch to. Worth a quick benchmark against whatever model you currently default to -- model choice inside Copilot is now a lever, not a given.
+- **Hugging Face and Cerebras bring Gemma 4 to real-time voice AI**
+  https://huggingface.co/blog/cerebras-gemma4-voice-ai
+  Cerebras' fast-inference hardware now serves Google's Gemma 4 through Hugging Face, aimed at real-time voice agents where latency is the main bottleneck. If you're building or evaluating voice-agent infrastructure, this is a new low-latency stack option worth benchmarking against your current provider.
+- **Improving token efficiency for GitHub Copilot in VS Code**
+  https://code.visualstudio.com/blogs/2026/06/17/improving-token-efficiency-in-github-copilot
+  Microsoft/VS Code details concrete changes that cut token consumption for Copilot's agent mode -- directly relevant if you're running agentic coding workflows and watching your API/subscription costs. Worth reading for both the cost savings and the underlying technique, which may be portable to your own agent harnesses.
+- **Opening up 'Zero-Knowledge Proof' technology to promote privacy in age assurance**
+  https://blog.google/innovation-and-ai/technology/safety-security/opening-up-zero-knowledge-proof-technology-to-promote-privacy-in-age-assurance/
+  As age-verification laws spread across US states, the UK, and EU, Google is publishing ZK-proof tooling that lets sites confirm a user is old enough without harvesting ID data. If you ship anything that will eventually need age gating, this is a credible privacy-preserving approach to watch instead of rolling your own ID-collection flow.
+- **US Supreme Court just blew up EU-US Data Transfers**
+  https://noyb.eu/en/us-supreme-court-just-blew-eu-us-data-transfers
+  If accurate, this would be a major compliance event for any solo business handling EU user data on US infrastructure -- echoing the Schrems I/II precedent. No article content was scraped (only a link to noyb.eu, Max Schrems' privacy-advocacy org), so the specifics of the ruling and its practical effect are unverified here.
+- **Unmasking the crawls with Attribution Business Insights**
+  https://blog.cloudflare.com/attribution-business-insights/
+  A new analytics dashboard surfaces which AI crawlers are hitting your site and how much that traffic might be worth, meant to support negotiating crawl compensation. Useful if you're weighing whether to block or monetize AI bot traffic, but an add-on dashboard rather than something you must react to immediately.
+- **Announcing Box3D**
+  https://box2d.org/posts/2026/06/announcing-box3d/
+  The creator of the widely-used Box2D physics engine has released a 3D successor. Notable for anyone building games or simulations who currently reaches for Bullet, PhysX, or Jolt -- worth a look given Box2D's reputation for clean API design.
+- **All Package Management Functionality Moved from Compiler to Build System**
+  https://ziglang.org/devlog/2026/?2026-06-30#2026-06-30
+  A significant architectural decision in the Zig toolchain, separating package management from the compiler proper. Relevant if you're using or evaluating Zig; illustrates a broader trend of build systems absorbing package-management responsibility.
+- **The Physics of Memory (aka can Javascript ECS?)**
+  https://www.dmurph.com/posts/2026/06/ecs_vs_oop_benchmark/ecs_vs_oop_benchmark.html
+  A hands-on benchmark exploring whether ECS-style data layout actually helps performance in JS, with reproducible numbers. Good read if you're optimizing hot-path JS/game code; a solid example of evidence-based performance writing.
+
+## Full digest
+
+- [R] [cloudflare-blog] Content Independence Day, one year on: building the business model for the agentic Internet — https://blog.cloudflare.com/agentic-internet-bot-report/ — Cloudflare's one-year retrospective on its 'Content Independence Day' campaign, framing a shift toward a paid market for AI crawler access. It's a narrative/business overview rather than a new capability -- the substantive changes are covered in Cloudflare's companion announcements from the same day.
+- [P] [cloudflare-blog] Making AI search smarter — https://blog.cloudflare.com/making-ai-search-smarter/ — Cloudflare announced two new tools aimed at helping site owners stay visible to AI-driven search/agents while getting compensated for their content. For anyone worried about AI crawlers cannibalizing referral traffic, this is a direct lever to evaluate alongside existing bot-management settings.
+- [P] [cloudflare-blog] Your site, your rules: new AI traffic options for all customers — https://blog.cloudflare.com/content-independence-day-ai-options/ — Cloudflare rolled out finer-grained AI traffic controls to every customer, not just enterprise: distinct handling for Search, Agent, and Training crawlers, plus a new option to shield ad-monetized pages from bots. If you run a site that depends on ad revenue or wants to block AI training scrapes without blocking useful agents, this is a config change worth making tomorrow.
+- [P] [cloudflare-blog] Unmasking the crawls with Attribution Business Insights — https://blog.cloudflare.com/attribution-business-insights/ — A new analytics dashboard surfaces which AI crawlers are hitting your site and how much that traffic might be worth, meant to support negotiating crawl compensation. Useful if you're weighing whether to block or monetize AI bot traffic, but an add-on dashboard rather than something you must react to immediately.
+- [P] [huggingface-blog] Hugging Face and Cerebras bring Gemma 4 to real-time voice AI — https://huggingface.co/blog/cerebras-gemma4-voice-ai — Cerebras' fast-inference hardware now serves Google's Gemma 4 through Hugging Face, aimed at real-time voice agents where latency is the main bottleneck. If you're building or evaluating voice-agent infrastructure, this is a new low-latency stack option worth benchmarking against your current provider.
+- [R] [gh-n8n] n8n@1.123.63 — https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.63 — Single bug fix release (Date value preservation in expressions). No new features or breaking changes.
+- [R] [gh-n8n] n8n@2.29.2 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.29.2 — Minor release: a few bug fixes (Salesforce auth, node creator badge, Date handling) plus a UI default change. No major new capability.
+- [R] [gh-n8n] beta — https://github.com/n8n-io/n8n/releases/tag/beta — Duplicate of the 2.29.2 changelog under n8n's beta tag -- no distinct content.
+- [R] [gh-nextjs] v16.2.10 — https://github.com/vercel/next.js/releases/tag/v16.2.10 — Packaging-only fix; no functional or API changes for Next.js users.
+- [R] [gh-nextjs] v15.5.20 — https://github.com/vercel/next.js/releases/tag/v15.5.20 — Packaging-only republish, no functional changes.
+- [M] [lobsters] US Supreme Court just blew up EU-US Data Transfers — https://noyb.eu/en/us-supreme-court-just-blew-eu-us-data-transfers — If accurate, this would be a major compliance event for any solo business handling EU user data on US infrastructure -- echoing the Schrems I/II precedent. No article content was scraped (only a link to noyb.eu, Max Schrems' privacy-advocacy org), so the specifics of the ruling and its practical effect are unverified here.
+- [R] [lobsters] Artificial adventures — https://www.scattered-thoughts.net/writing/artificial-adventures/ — Personal reflective essay; no concrete claim or actionable content.
+- [P] [lobsters] Announcing Box3D — https://box2d.org/posts/2026/06/announcing-box3d/ — The creator of the widely-used Box2D physics engine has released a 3D successor. Notable for anyone building games or simulations who currently reaches for Bullet, PhysX, or Jolt -- worth a look given Box2D's reputation for clean API design.
+- [R] [lobsters] Pidgin 3.0 Alpha 2 (2.96.0) has been released — https://discourse.imfreedom.org/t/pidgin-3-0-alpha-2-2-96-0-has-been-released/398 — Alpha-stage release of a legacy IM client; low relevance to current solo-dev priorities.
+- [P] [lobsters] All Package Management Functionality Moved from Compiler to Build System — https://ziglang.org/devlog/2026/?2026-06-30#2026-06-30 — A significant architectural decision in the Zig toolchain, separating package management from the compiler proper. Relevant if you're using or evaluating Zig; illustrates a broader trend of build systems absorbing package-management responsibility.
+- [P] [lobsters] The Physics of Memory (aka can Javascript ECS?) — https://www.dmurph.com/posts/2026/06/ecs_vs_oop_benchmark/ecs_vs_oop_benchmark.html — A hands-on benchmark exploring whether ECS-style data layout actually helps performance in JS, with reproducible numbers. Good read if you're optimizing hot-path JS/game code; a solid example of evidence-based performance writing.
+- [M] [lobsters] Changes to Godot Engine Contribution Policies — https://godotengine.org/article/contribution-policy-2026/ — Governance/process change for Godot contributors. Relevant if you contribute to or depend heavily on Godot's roadmap, otherwise a background item.
+- [M] [lobsters] Progress Report: Linux 7.1 - Asahi Linux — https://asahilinux.org/2026/06/progress-report-7-1/ — Routine progress update on Apple Silicon Linux support. Worth tracking if you run Linux on Apple hardware; not an immediate action item.
+- [R] [lobsters] The Internet I Grew Up With Doesn't Exist Anymore — https://cleberg.net/blog/internet.html — Nostalgia essay, not actionable or decision-relevant.
+- [P] [lobsters] Unprivileged root via an out-of-bounds write in the FUSE readdir cache (CVE-2026-31694) — https://cyberstan.co.uk/fuse-readdir-oob/ — A real, CVE-tracked local privilege-escalation bug in FUSE's readdir cache -- anyone running Linux servers or VPS instances with FUSE mounts (sshfs, rclone, etc.) should check for patched kernel/FUSE versions. Directly actionable: check your kernel version and patch.
+- [P] [lobsters] Creating a development sandbox with crosvm — https://www.erat.org/crosvm.html — A practical guide to using crosvm (the VMM behind ChromeOS/Android's Linux VM) to build an isolated dev sandbox -- directly relevant if you're isolating agent or build execution environments rather than relying on Docker alone.
+- [P] [lobsters] On Ditching Vagrant — https://benjamintoll.com/2026/06/29/on-ditching-vagrant/ — First-hand account of migrating away from Vagrant -- useful context if you still maintain Vagrant-based dev environments and are weighing alternatives (Docker, Nix, etc.).
+- [M] [lobsters] Open Source as Infrastructure: Taking Roads and Bridges literally — https://nesbitt.io/2026/06/30/taking-roads-and-bridges-literally.html — Thoughtful essay on OSS sustainability framing; interesting background reading on the open-source funding debate, not a near-term decision item.
+- [R] [lobsters] GameBoy Emulator on ESP32 + Eink — https://www.youtube.com/watch?v=oPbOK90aJEo — Fun hobby hardware project video; not relevant to business/software decisions.
+- [M] [lobsters] GraalVM Hello World Program Down To &quot;Just&quot; 6.5MB — https://www.phoronix.com/news/GraalVM-Community-25.1.3 — Incremental native-image size reduction in GraalVM. Relevant if you ship GraalVM native binaries and care about image size/cold-start; otherwise a minor footnote.
+- [P] [lobsters] Improving token efficiency for GitHub Copilot in VS Code — https://code.visualstudio.com/blogs/2026/06/17/improving-token-efficiency-in-github-copilot — Microsoft/VS Code details concrete changes that cut token consumption for Copilot's agent mode -- directly relevant if you're running agentic coding workflows and watching your API/subscription costs. Worth reading for both the cost savings and the underlying technique, which may be portable to your own agent harnesses.
+- [P] [lobsters] The Control Plane Was the Point: Revisiting autofz in the LLM Era — https://yfu.tw/blog/en/autofz-revisited/ — A technical essay connecting older fuzzing-infrastructure design (autofz's control plane) to how LLM-driven agent systems should be architected. Thoughtful for anyone designing agent orchestration or tool-calling control planes, though it's an opinionated analysis rather than a released tool.
+- [P] [hn-top] Kimi K2.7 Code is generally available in GitHub Copilot — https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot/ — Moonshot AI's Kimi K2.7 Code model reached GA status in GitHub Copilot, giving Copilot users another frontier coding model to switch to. Worth a quick benchmark against whatever model you currently default to -- model choice inside Copilot is now a lever, not a given.
+- [M] [hn-top] ZCode – Harness for GLM-5.2 — https://zcode.z.ai/en — A community-built harness for Zhipu's GLM-5.2 model, in the same space as Claude Code/Cursor-style coding agents. No usage data or reviews visible yet -- worth a look if you're already experimenting with GLM models, otherwise not urgent.
+- [R] [hn-top] Oomwoo, an open-source robot vacuum you build yourself — https://makerspet.com/blog/building-an-open-source-robot-vacuum-meet-oomwoo/ — A fun hardware hobby project, but unrelated to software business decisions.
+- [M] [hn-top] A new Android malware from Google — https://f-droid.org/2026/07/01/adv-malware.html — F-Droid, an advocacy-leaning source, flags an Android malware concern tied to Google's ecosystem. The headline is provocative and no article content was scraped, so treat as unverified until corroborated by a neutral source.
+- [R] [hn-top] Bring back crappy forums — https://tedium.co/2026/07/01/online-web-forums-retrospective/ — Nostalgia/culture essay about web forum culture; no actionable claim for a solo builder.
+- [R] [hn-top] What to learn to be a graphics programmer — https://blog.demofox.org/2026/07/01/what-to-learn-to-be-a-graphics-programmer/ — Evergreen career-advice post; useful as a personal resource but not time-sensitive news.
+- [M] [hn-top] FFmpeg 9.1's new AAC encoder — https://hydrogenaudio.org/index.php/topic,129691.0.html — A concrete quality/compression improvement to FFmpeg's AAC encoder -- relevant if you touch audio/video encoding pipelines, otherwise low priority.
+- [P] [hn-top] Opening up 'Zero-Knowledge Proof' technology to promote privacy in age assurance — https://blog.google/innovation-and-ai/technology/safety-security/opening-up-zero-knowledge-proof-technology-to-promote-privacy-in-age-assurance/ — As age-verification laws spread across US states, the UK, and EU, Google is publishing ZK-proof tooling that lets sites confirm a user is old enough without harvesting ID data. If you ship anything that will eventually need age gating, this is a credible privacy-preserving approach to watch instead of rolling your own ID-collection flow.
+- [R] [hn-top] Ask HN: Who is hiring? (July 2026) — https://news.ycombinator.com/item?id=48747976 — Recurring monthly thread, not news.
+- [R] [hn-top] How do wombats poop cubes? — https://www.science.org/content/article/how-do-wombats-poop-cubes-scientists-get-bottom-mystery — Science curiosity piece, unrelated to software or business.
+- [R] [hn-top] Learn Vim motions with an ice-cream van — https://thisismodest.com/vimscoops/ — A fun Vim-learning game; charming but not news or decision-relevant.
+- [R] [hn-top] The Underhanded C Contest — https://underhanded-c.org/ — Evergreen recurring contest page, not a new event.
+- [P] [hn-top] Qualcomm Linux 2.0 — https://www.qualcomm.com/developer/blog/2026/06/qualcomm-linux-2-now-available — A major version bump to Qualcomm's own Linux distribution for its chipsets, relevant to embedded and edge-AI developers targeting Snapdragon hardware. Niche audience but a real, dated platform release.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
