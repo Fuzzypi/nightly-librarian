@@ -5,23 +5,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>July 4, 2026 — The Nightly Librarian</title>
-  <meta name="description" content="Tonight's brief tracks Data Infrastructure / Verification / Scraping, AI Operations / Agent Control, Model + API Changes, and Tools Worth Testing.">
+  <meta name="description" content="Tonight's brief tracks AI Operations / Agent Control, Data Infrastructure / Verification / Scraping, and Tools Worth Testing.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/briefs/2026-07-04/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="July 4, 2026 | The Nightly Librarian">
-  <meta property="og:description" content="Tonight's brief tracks Data Infrastructure / Verification / Scraping, AI Operations / Agent Control, Model + API Changes, and Tools Worth Testing.">
+  <meta property="og:description" content="Tonight's brief tracks AI Operations / Agent Control, Data Infrastructure / Verification / Scraping, and Tools Worth Testing.">
   <meta property="og:url" content="https://thenightlylibrarian.com/briefs/2026-07-04/">
-  <meta property="og:image" content="https://thenightlylibrarian.com/og/data-infrastructure-verification-scraping.png">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="July 4, 2026 | The Nightly Librarian">
-  <meta name="twitter:description" content="Tonight's brief tracks Data Infrastructure / Verification / Scraping, AI Operations / Agent Control, Model + API Changes, and Tools Worth Testing.">
-  <meta name="twitter:image" content="https://thenightlylibrarian.com/og/data-infrastructure-verification-scraping.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"llamacpp patch: DeepSeek V4 Flash full 1M context on RTX 5090","description":"Tonight's brief tracks Data Infrastructure / Verification / Scraping, AI Operations / Agent Control, Model + API Changes, and Tools Worth Testing. Synthesized Nightly Librarian run with 9 promoted item(s), 26 scored item(s), and 17 rejected item(s). The lead source signal is llamacpp patch: DeepSeek V4 Flash full 1M context on RTX 5090: A builder wired a CUDA kernel for DeepSeek V4 Flash's DSA indexer in llama.cpp, enabling 1M-token context on a single RTX 5090 with a 20x compute-buffer reductio","url":"https://thenightlylibrarian.com/briefs/2026-07-04/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-07-04","dateModified":"2026-07-04"}</script>
+  <meta name="twitter:description" content="Tonight's brief tracks AI Operations / Agent Control, Data Infrastructure / Verification / Scraping, and Tools Worth Testing.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Agent Runs now available in the Vercel MCP and CLI","description":"Tonight's brief tracks AI Operations / Agent Control, Data Infrastructure / Verification / Scraping, and Tools Worth Testing. Synthesized Nightly Librarian run with 4 promoted item(s), 40 scored item(s), and 36 rejected item(s). The lead source signal is Agent Runs now available in the Vercel MCP and CLI: Vercel MCP and CLI can now list agent-run projects, inspect runs, and retrieve full traces for eve deployments. The operator read is First-party agent trace inspection matters if you deploy age","url":"https://thenightlylibrarian.com/briefs/2026-07-04/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-07-04","dateModified":"2026-07-04"}</script>
   <link rel="stylesheet" href="/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
 </head>
@@ -42,21 +42,21 @@
   <main>
     <a class="back-link" href="/">All briefs</a>
     <h1>July 4, 2026</h1>
-    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span><span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span><span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span></div>
-    <p class="lead-summary" style="margin-top:0.85rem;">Concrete, reproducible engineering fix with real leverage for anyone running large local models on consumer GPUs.</p>
+    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span><span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span><span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span></div>
+    <p class="lead-summary" style="margin-top:0.85rem;">First-party agent trace inspection matters if you deploy agent workflows on Vercel and want debugging without building your own observability layer.</p>
     <h2>Worth mentioning</h2>
 
     <div class="item">
       <div class="item-row">
         <span class="item-num">1.</span>
         <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1ulymml/llamacpp_patch_deepseek_v4_flash_running_with/" target="_blank" rel="noopener">llamacpp patch: DeepSeek V4 Flash full 1M context on RTX 5090</a></div>
-          <div class="item-takeaway">Concrete, reproducible engineering fix with real leverage for anyone running large local models on consumer GPUs.</div>
-          <div class="item-facts"><div>A builder wired a CUDA kernel for DeepSeek V4 Flash's DSA indexer in llama.cpp, enabling 1M-token context on a single RTX 5090 with a 20x compute-buffer reduction and ~4.7x prefill speedup.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Patch is not yet merged upstream (referenced PR is still open); numbers are self-reported by the author on their own hardware.</div>
+          <div class="item-title"><a href="https://vercel.com/changelog/agent-runs-vercel-mcp-cli" target="_blank" rel="noopener">Agent Runs now available in the Vercel MCP and CLI</a></div>
+          <div class="item-takeaway">First-party agent trace inspection matters if you deploy agent workflows on Vercel and want debugging without building your own observability layer.</div>
+          <div class="item-facts"><div>Vercel MCP and CLI can now list agent-run projects, inspect runs, and retrieve full traces for eve deployments.</div></div>
+
           <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1ulymml/llamacpp_patch_deepseek_v4_flash_running_with/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
+            <span><a href="https://vercel.com/changelog/agent-runs-vercel-mcp-cli" target="_blank" rel="noopener">vercel.com</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
             <span>2026-07-04</span>
           </div>
         </div>
@@ -67,12 +67,12 @@
       <div class="item-row">
         <span class="item-num">2.</span>
         <div>
-          <div class="item-title"><a href="https://blog.fsck.com/2026/06/15/Superpowers-6/" target="_blank" rel="noopener">Superpowers 6</a></div>
-          <div class="item-takeaway">Directly relevant to Claude Code / multi-agent skills work, a recurring area of interest.</div>
-          <div class="item-facts"><div>Superpowers 6 is the latest installment in an ongoing blog series about a Claude Code agent skills framework.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Article content was empty in the fetch; this entry is based on title and knowledge of the series, not the actual post text. Open the link directly before acting on it.</div>
+          <div class="item-title"><a href="https://github.com/ctxrs/ctx" target="_blank" rel="noopener">Show HN: ctx – Search the coding agent history already on your machine</a></div>
+          <div class="item-takeaway">This directly targets repeated-agent amnesia, which is still a real productivity tax in multi-session coding workflows.</div>
+          <div class="item-facts"><div>ctx imports local agent histories from tools like Codex, Claude Code, and Cursor, then exposes fast local search over those transcripts.</div></div>
+
           <div class="item-meta">
-            <span><a href="https://blog.fsck.com/2026/06/15/Superpowers-6/" target="_blank" rel="noopener">blog.fsck.com</a></span>
+            <span><a href="https://github.com/ctxrs/ctx" target="_blank" rel="noopener">github.com</a></span>
             <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
             <span>2026-07-04</span>
           </div>
@@ -84,64 +84,13 @@
       <div class="item-row">
         <span class="item-num">3.</span>
         <div>
-          <div class="item-title"><a href="https://vercel.com/changelog/manage-vercel-flags-segments-with-vercel-cli" target="_blank" rel="noopener">Manage Vercel Flags segments with Vercel CLI</a></div>
-          <div class="item-takeaway">Concrete, scriptable platform feature useful for CI/agent-driven feature-flag management, though narrow to Vercel Flags users.</div>
-          <div class="item-facts"><div>Vercel CLI added a `flags segments` command to manage feature-flag targeting, with scriptable JSON output.</div></div>
+          <div class="item-title"><a href="https://vercel.com/changelog/vercel-sandbox-now-supports-fuse-based-filesystems" target="_blank" rel="noopener">Vercel Sandbox now supports FUSE-based filesystems</a></div>
+          <div class="item-takeaway">Useful for data-heavy agent tasks and toolchains that expect POSIX paths instead of copying blobs into the sandbox first.</div>
+          <div class="item-facts"><div>Vercel Sandbox can mount FUSE-compatible filesystems, including S3-backed mounts, inside a running sandbox.</div></div>
 
           <div class="item-meta">
-            <span><a href="https://vercel.com/changelog/manage-vercel-flags-segments-with-vercel-cli" target="_blank" rel="noopener">vercel.com</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-07-04</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">4.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1um84bd/followup_deepseek_v4_flash_on_2x_rtx_pro_6000/" target="_blank" rel="noopener">DeepSeek V4 Flash vs Sonnet/Opus on real coding tasks</a></div>
-          <div class="item-takeaway">Directly relevant to choosing between local and API models for agentic coding work, with concrete timing numbers.</div>
-          <div class="item-facts"><div>DeepSeek V4 Flash finishes real coding tasks about 3x faster than Sonnet 5 at roughly comparable quality, per a self-reported indie benchmark.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Single-person self-reported benchmark; harness (OpenCode vs. Claude Code API) differences are conflated with model differences, and no third-party reproduction is cited.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1um84bd/followup_deepseek_v4_flash_on_2x_rtx_pro_6000/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-07-04</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">5.</span>
-        <div>
-          <div class="item-title"><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">More details on Fable 5's cyber safeguards and our jailbreak framework</a></div>
-          <div class="item-takeaway">Official first-party safety disclosure for the model family in active use.</div>
-          <div class="item-facts"><div>Anthropic published details on Fable 5's cyber safeguards and jailbreak-resistance framework.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Article body was not fetched (only nav text came through); specifics of the safeguards are not verified here.</div>
-          <div class="item-meta">
-            <span><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">anthropic.com</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-07-04</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">6.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1um2tbf/audiocpp_the_sound_of_ggml_cggml_native_acestep/" target="_blank" rel="noopener">[audio.cpp] The Sound of GGML — native audio model release</a></div>
-          <div class="item-takeaway">Real open-source release extending the GGML local-inference ecosystem into audio generation.</div>
-          <div class="item-facts"><div>A new open-source project, audio.cpp, provides GGML-native implementations of ACE-Step, Stable Audio, HeartMuLa, RoFormer, and HTDemucs for fast local audio generation.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Performance claims (10-min music in 60s) are self-reported without independent benchmarks in the fetched content.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1um2tbf/audiocpp_the_sound_of_ggml_cggml_native_acestep/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
+            <span><a href="https://vercel.com/changelog/vercel-sandbox-now-supports-fuse-based-filesystems" target="_blank" rel="noopener">vercel.com</a></span>
+            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
             <span>2026-07-04</span>
           </div>
         </div>
@@ -151,82 +100,63 @@
 
     <div class="item">
       <div class="item-row">
-        <span class="item-num">7.</span>
+        <span class="item-num">4.</span>
         <div>
-          <div class="item-title"><a href="https://github.com/HUANGCHIHHUNGLeo/claude-real-video" target="_blank" rel="noopener">Claude-real-video — any LLM can watch a video</a></div>
-          <div class="item-takeaway">Potentially useful agent-tooling pattern for video understanding, but unverified and single small repo.</div>
-          <div class="item-facts"><div>A GitHub project called claude-real-video claims to enable any LLM to watch a video.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Repo README/content not fetched; unclear how the technique works or how mature/maintained the project is.</div>
-          <div class="item-meta">
-            <span><a href="https://github.com/HUANGCHIHHUNGLeo/claude-real-video" target="_blank" rel="noopener">github.com</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-07-04</span>
-          </div>
-        </div>
-      </div>
-    </div>
+          <div class="item-title"><a href="https://hackers.pub/@fedify/2026/why-activitypub-is-hard" target="_blank" rel="noopener">Why implementing ActivityPub is hard, and why it doesn't have to be</a></div>
+          <div class="item-takeaway">Useful if federation work is on the roadmap, but it does not force an immediate decision today.</div>
+          <div class="item-facts"><div>The post argues that ActivityPub implementation pain comes from signature variants, JSON-LD shape drift, delivery ordering, ecosystem quirks, and unsafe defaults.</div></div>
 
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">8.</span>
-        <div>
-          <div class="item-title"><a href="https://ai.google.dev/gemini-api/docs/interactions-overview?hl=pt-br" target="_blank" rel="noopener">Gemini API: Interactions overview</a></div>
-          <div class="item-takeaway">Possible new Gemini API primitive worth checking directly if you build against Gemini.</div>
-          <div class="item-facts"><div>Google published a Gemini API documentation page describing an 'Interactions' concept.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Page content was empty in the fetch; nature and significance of the 'Interactions' feature is unconfirmed.</div>
           <div class="item-meta">
-            <span><a href="https://ai.google.dev/gemini-api/docs/interactions-overview?hl=pt-br" target="_blank" rel="noopener">ai.google.dev</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-07-04</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">9.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1um702y/claude_code_and_china_the_mechanism_is_activated/" target="_blank" rel="noopener">Claude Code and China: ANTHROPIC_BASE_URL claim</a></div>
-          <div class="item-takeaway">If true, this would be a real security concern for anyone using ANTHROPIC_BASE_URL with Claude Code; flagging for awareness while unverified.</div>
-          <div class="item-facts"><div>A Reddit post alleges that setting ANTHROPIC_BASE_URL in Claude Code activates an undisclosed mechanism.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Single-source Reddit claim with no reproducible evidence, code reference, or independent verification captured in the fetch. Could be misinformation or a misunderstanding of normal proxy/base-URL behavior.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1um702y/claude_code_and_china_the_mechanism_is_activated/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span><a href="https://hackers.pub/@fedify/2026/why-activitypub-is-hard" target="_blank" rel="noopener">hackers.pub</a></span>
+            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
             <span>2026-07-04</span>
           </div>
         </div>
       </div>
     </div>
     <details>
-      <summary>25 researched links (full index)</summary>
+      <summary>40 researched links (full index)</summary>
       <div class="link-index">
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ulymml/llamacpp_patch_deepseek_v4_flash_running_with/" target="_blank" rel="noopener">llamacpp patch: DeepSeek V4 Flash full 1M context on RTX 5090</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://blog.fsck.com/2026/06/15/Superpowers-6/" target="_blank" rel="noopener">Superpowers 6</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/changelog/manage-vercel-flags-segments-with-vercel-cli" target="_blank" rel="noopener">Manage Vercel Flags segments with Vercel CLI</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1um84bd/followup_deepseek_v4_flash_on_2x_rtx_pro_6000/" target="_blank" rel="noopener">DeepSeek V4 Flash vs Sonnet/Opus on real coding tasks</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://stefan.schueller.net/posts/the-free-market-lie/" target="_blank" rel="noopener">Why Switzerland has 25 gbit internet and America doesn't</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://github.com/HUANGCHIHHUNGLeo/claude-real-video" target="_blank" rel="noopener">Claude-real-video — any LLM can watch a video</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://growtheflowutah.org/laketracker/" target="_blank" rel="noopener">Great Salt Lake Tracker – Grow the Flow</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/segaboy/vulkan-netbsd" target="_blank" rel="noopener">This is my attempt to get Vulkan going on NetBSD</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://apple.github.io/foundationdb/flow.html" target="_blank" rel="noopener">FoundationDB's Flow – Bringing Actor-Based Concurrency to C++11</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">More details on Fable 5's cyber safeguards and our jailbreak framework</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1um9yog/just_hit_90_progress_on_my_custom_multimodular/" target="_blank" rel="noopener">Just hit 90% progress on my custom multi-modular Super App framework</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1umb17n/your_target_audience_may_never_buy_your_product/" target="_blank" rel="noopener">Your target audience may never buy your product. You know why?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1umapx9/solo_saas_founders_how_do_you_manage_the/" target="_blank" rel="noopener">Solo SaaS founders how do you manage the non-product side of the business?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1umalxi/looking_for_a_better_way_to_automate_social_media/" target="_blank" rel="noopener">Looking for a better way to automate social media content for my SaaS</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1um9tpy/saas_business_operating_since_2013_looking_for_a/" target="_blank" rel="noopener">SaaS business operating since 2013 looking for a reliable payment processor</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1um98t3/is_pm_tool_fatigue_real_or_is_it_just_me_building/" target="_blank" rel="noopener">Is &quot;PM Tool Fatigue&quot; real, or is it just me? (Building a zero-complexity alternative)</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://ai.google.dev/gemini-api/docs/interactions-overview?hl=pt-br" target="_blank" rel="noopener">Gemini API: Interactions overview</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/stable" target="_blank" rel="noopener">n8n stable release</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.28.6" target="_blank" rel="noopener">n8n@2.28.6</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.29.5" target="_blank" rel="noopener">n8n@2.29.5</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">n8n beta release</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://lobste.rs/s/rhgehk/what_are_you_doing_this_weekend" target="_blank" rel="noopener">What are you doing this weekend?</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1um702y/claude_code_and_china_the_mechanism_is_activated/" target="_blank" rel="noopener">Claude Code and China: ANTHROPIC_BASE_URL claim</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1um9j5q/deepseek_drops_another_huge_breakthrough_dspark/" target="_blank" rel="noopener">Deepseek drops another HUGE breakthrough - DSpark</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1ult0f4/its_officially_over_one_of_the_fathers_of_ai_at/" target="_blank" rel="noopener">It's officially over: AGI skepticism take</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/changelog/agent-runs-vercel-mcp-cli" target="_blank" rel="noopener">Agent Runs now available in the Vercel MCP and CLI</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/ctxrs/ctx" target="_blank" rel="noopener">Show HN: ctx – Search the coding agent history already on your machine</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/changelog/vercel-sandbox-now-supports-fuse-based-filesystems" target="_blank" rel="noopener">Vercel Sandbox now supports FUSE-based filesystems</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://hackers.pub/@fedify/2026/why-activitypub-is-hard" target="_blank" rel="noopener">Why implementing ActivityPub is hard, and why it doesn't have to be</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://mistral.ai/news/leanstral-1-5/" target="_blank" rel="noopener">Research    Leanstral 1.5: Proof Abundance for All      July 2, 2026    Leanstral Team at Mistral AI</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.2.32-beta.281" target="_blank" rel="noopener">CLI Beta @composio/cli@0.2.32-beta.281</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/kerlenton/mcpsnoop" target="_blank" rel="noopener">Show HN: Mcpsnoop – Wireshark for MCP (transparent proxy and live TUI)</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://try.piecesof.me/" target="_blank" rel="noopener">Show HN: Pieces – Social network for people</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1umtxkd/35k_gsc_clicks_a_day_1m_revenue_1m_arr_2m_run/" target="_blank" rel="noopener">3.5K GSC clicks a day, $1M revenue, $1M ARR, $2M run rate in &lt;9 months, all solo and half of it part time. Some insights into my success</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1umx93p/need_advice_validating_my_first_saas_idea/" target="_blank" rel="noopener">Need Advice: Validating My First SaaS Idea</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1umzepa/if_everyones_building_now_whats_the_point_of/" target="_blank" rel="noopener">If everyone’s “building” now, what’s the point of having a CEO, CFO, CISO, or CMO?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1un0hm3/i_made_every_feature_free_to_avoid_annoying/" target="_blank" rel="noopener">I made every feature free to avoid annoying paywalls… now I’m seeing people create multiple accounts. What would you do?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1umoizp/how_do_people_get_customers_for_their_app/" target="_blank" rel="noopener">How do people get customers for their app?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1un0pwr/how_are_you_making_product_walkthroughs_today/" target="_blank" rel="noopener">How are you making product walkthroughs today?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1umwotz/i_built_freeopensource_opencan_for_saas_customer/" target="_blank" rel="noopener">I built free/open-source OpenCan for SaaS Customer Feedback Management</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1un34c7/advice_i_built_a_product_but_now_im_being_blocked/" target="_blank" rel="noopener">Advice: I built a product, but now I'm being blocked by Mastercard</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1un2ydp/looking_for_feedback_on_my_free_web_scraper/" target="_blank" rel="noopener">Looking for feedback on my free web scraper Chrome extension</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1umypm2/which_would_you_prioritize/" target="_blank" rel="noopener">Which would you prioritize?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1un2rnk/i_built_sfomai_thinking_creators_wanted/" target="_blank" rel="noopener">I built SFOM.AI thinking creators wanted ready-to-use scripts. Turns out most people care more about something else.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1un2qd6/thanks_rsaasid_like_to_share_this_article_of_my/" target="_blank" rel="noopener">Thanks, r/SaaS-I'd like to share this article of my experience.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1un2ogv/need_advice_from_saas_founders/" target="_blank" rel="noopener">Need advice from SaaS founders</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1un2hnv/how_long_should_you_test/" target="_blank" rel="noopener">how long should you test</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1umxw40/fingers_crossed_and_then_the_real_work_begins/" target="_blank" rel="noopener">Fingers crossed! And then the real work begins.....</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1un1z8q/simple_landing_pages_always_have_higher/" target="_blank" rel="noopener">Simple Landing pages always have higher conversion rate</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1un1vay/the_product_i_built_to_manage_chaos_as_a_cto/" target="_blank" rel="noopener">The product I built to manage chaos as a CTO</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1un13df/5_week_old_facebook_ads_marketed_vertical_saas/" target="_blank" rel="noopener">5 week old Facebook Ads Marketed Vertical SaaS loses only customer. Adding 50 features a week with Codex. What are your thoughts? How can I get better retention? The software is desktop and mobile. 100% vibecoded.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1un10we/facebook_ads_marketed_vertical_saas_loses_only/" target="_blank" rel="noopener">Facebook ads marketed Vertical SaaS loses only customer $100 MRR Churn Analysis. What are your thoughts?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1un0l0p/building_a_real_estate_startup/" target="_blank" rel="noopener">Building a Real Estate Startup</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1umvwwd/building_a_saas_for_small_businesses/" target="_blank" rel="noopener">Building a SaaS for small businesses</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1un0arx/do_you_actually_keep_track_of_your_product/" target="_blank" rel="noopener">Do you actually keep track of your product warranties?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://ai.google.dev/gemini-api/docs/interactions-overview?hl=pl" target="_blank" rel="noopener">Interfejs Interactions API</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.77" target="_blank" rel="noopener">v16.3.0-canary.77</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://lobste.rs/s/zwz0wh/fourteener_lobsters" target="_blank" rel="noopener">Fourteener Lobsters</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://emacsair.me/2026/07/01/magit-4.6/" target="_blank" rel="noopener">Magit 4.6 released</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://cleberg.net/blog/homelab-maintenance.html" target="_blank" rel="noopener">I Don't Maintain My Homelab</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://fabiensanglard.net/keyboards/index.html" target="_blank" rel="noopener">My favorite keyboards</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://whitep4nth3r.com/blog/goodbye-forever-probably/" target="_blank" rel="noopener">Goodbye, forever, probably</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://deadsimpletech.com/blog/why-dont-people-use-git-properly" target="_blank" rel="noopener">Why don't people use git properly?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://purplesyringa.moe/blog/suffix-bwt-vs-cyclic-shift-bwt-and-fast-computation/" target="_blank" rel="noopener">Suffix BWT vs cyclic shift BWT, and fast computation</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://goodnameforablog.com/posts/very-average-prototypes/" target="_blank" rel="noopener">Very Average Prototypes</a></div>
       </div>
     </details>
     <div class="subscribe-strip">
