@@ -35,7 +35,7 @@
       <nav class="site-nav"><a href="/" class="nav-active">Archive</a><a href="/topics/">Topics</a><a href="/reports/">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
     </div>
     <div class="dateline">
-      <span>Latest issue · July 5, 2026</span>
+      <span>Latest issue · July 6, 2026</span>
       <span style="font-style:italic;">What changed. Why it matters. What to do.</span>
     </div>
   </header>
@@ -53,18 +53,100 @@
         <div class="section-label">Today's brief</div>
         <div class="lead-card">
         <p class="brief-valueprop">Every morning I read a few hundred links so you don't have to. This is what cleared the bar today.</p>
-        <div class="meta" style="margin-bottom:0.5rem;"><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></div>
-        <p class="lead-summary">AI Operations / Agent Control</p>
+        <div class="meta" style="margin-bottom:0.5rem;"><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></div>
+        <p class="lead-summary">Directly relevant to multi-agent/multi-session Claude Code workflows; if real, it's a data isolation issue worth checking before running concurrent sessions across accounts.</p>
         <div style="border-top:0.5px solid var(--border);">
-          <div class="item"><div class="item-takeaway">Tonight's brief tracks AI Operations / Agent Control. Synthesized Nightly Librarian run with 1 promoted item(s), 16 scored item(s), and 15 rejected item(s). The lead source signal is I built a CLI utility which prevents AI from breaking your codebase: A new CLI tool called CXGRD flags downstream dependencies before an AI coding agent's change ships to production. The operator read is Directly adjacent to this project's own GitNexus impact-analysis workflow — worth knowing who else is building in this space. Monitor-only context stays out of the publish list until reviewed: I built a CLI utility which prevents AI from breaking your codebase (Directly adjacent to this project's own GitNexus impact-analysis workflow — worth knowing who else is building in this space).</div></div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">1.</span>
+        <div>
+          <div class="item-title"><a href="https://github.com/anthropics/claude-code/issues/74066" target="_blank" rel="noopener">Potential session/cache leakage between workspace instances or consumer accounts</a></div>
+          <div class="item-takeaway">Directly relevant to multi-agent/multi-session Claude Code workflows; if real, it's a data isolation issue worth checking before running concurrent sessions across accounts.</div>
+          <div class="item-meta">
+            <span><a href="https://github.com/anthropics/claude-code/issues/74066" target="_blank" rel="noopener">github.com</a></span>
+            <span><a class="tag" style="border:none;padding:0;text-transform:none;letter-spacing:normal;font-weight:normal;font-size:inherit;color:inherit;" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a></span>
+          </div>
         </div>
-        <a href="/briefs/2026-07-05/" style="display:inline-block;margin-top:0.85rem;font-size:0.82rem;color:var(--accent);font-weight:600;border-bottom:1px solid var(--accent);padding-bottom:1px;">Read the full brief →</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">2.</span>
+        <div>
+          <div class="item-title"><a href="https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/" target="_blank" rel="noopener">sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)</a></div>
+          <div class="item-takeaway">Concrete cost and outcome for a practical, repeatable workflow: pay an AI agent to do a final review pass before shipping a breaking release.</div>
+          <div class="item-meta">
+            <span><a href="https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/" target="_blank" rel="noopener">simonwillison.net</a></span>
+            <span><a class="tag" style="border:none;padding:0;text-transform:none;letter-spacing:normal;font-weight:normal;font-size:inherit;color:inherit;" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">3.</span>
+        <div>
+          <div class="item-title"><a href="https://ui.shadcn.com/docs/changelog" target="_blank" rel="noopener">Shadcn/UI now defaults to Base UI instead of Radix</a></div>
+          <div class="item-takeaway">shadcn is a default choice for AI-generated and hand-built UI alike; a primitives swap changes behavior/APIs for anything newly scaffolded going forward.</div>
+          <div class="item-meta">
+            <span><a href="https://ui.shadcn.com/docs/changelog" target="_blank" rel="noopener">ui.shadcn.com</a></span>
+            <span><a class="tag" style="border:none;padding:0;text-transform:none;letter-spacing:normal;font-weight:normal;font-size:inherit;color:inherit;" href="/topics/model-api-changes/">Model + API Changes</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">4.</span>
+        <div>
+          <div class="item-title"><a href="https://ziglang.org/devlog/2026/#2026-06-30" target="_blank" rel="noopener">Zig: All Package Management Functionality Moved from Compiler to Build System</a></div>
+          <div class="item-takeaway">Concrete toolchain architecture change for anyone building or maintaining Zig projects.</div>
+          <div class="item-meta">
+            <span><a href="https://ziglang.org/devlog/2026/#2026-06-30" target="_blank" rel="noopener">ziglang.org</a></span>
+            <span><a class="tag" style="border:none;padding:0;text-transform:none;letter-spacing:normal;font-weight:normal;font-size:inherit;color:inherit;" href="/topics/data-infrastructure-verification-scraping/">Data Infrastructure / Verification / Scraping</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">5.</span>
+        <div>
+          <div class="item-title"><a href="https://hackerfactor.com/blog/index.php?/archives/1098-Metas-Un-Stable-Signature.html" target="_blank" rel="noopener">Meta's Un-Stable Signature</a></div>
+          <div class="item-takeaway">Relevant to anyone relying on AI-content provenance/watermarking claims for trust or compliance purposes.</div>
+          <div class="item-meta">
+            <span><a href="https://hackerfactor.com/blog/index.php?/archives/1098-Metas-Un-Stable-Signature.html" target="_blank" rel="noopener">hackerfactor.com</a></span>
+            <span><a class="tag" style="border:none;padding:0;text-transform:none;letter-spacing:normal;font-weight:normal;font-size:inherit;color:inherit;" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+        </div>
+        <a href="/briefs/2026-07-06/" style="display:inline-block;margin-top:0.85rem;font-size:0.82rem;color:var(--accent);font-weight:600;border-bottom:1px solid var(--accent);padding-bottom:1px;">Read the full brief →</a>
         </div>
 
 
 
         <div style="margin-top:1.75rem;">
           <div class="section-label">Archive</div>
+
+    <div class="item">
+      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
+        <a href="/briefs/2026-07-05/" style="color:var(--text);">Jul 5, 2026</a>
+      </div>
+      <div class="arc-themes"><a class="arc-tag" href="/topics/ai-operations-agent-control/">AI Operations / Agent Control</a><a class="arc-tag" href="/topics/model-api-changes/">Model + API Changes</a></div>
+      <div class="arc-teaser">Custom harness builders may see newer Anthropic models regress on non-Claude-Code tool schemas unless strict validation is enabled.</div>
+      <div class="item-meta">
+        <span>3 items</span>
+        <span>2 to watch</span>
+        <span>40 links researched</span>
+      </div>
+    </div>
 
     <div class="item">
       <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
@@ -312,20 +394,7 @@
         <span>40 links researched</span>
       </div>
     </div>
-
-    <div class="item">
-      <div class="item-title" style="font-family:var(--font-serif);font-size:0.92rem;">
-        <a href="/briefs/2026-06-15/" style="color:var(--text);">Jun 15, 2026</a>
-      </div>
-      <div class="arc-themes"><a class="arc-tag" href="/topics/data-infrastructure-verification-scraping/">Data Infrastructure / Verification / Scraping</a><a class="arc-tag" href="/topics/tools-worth-testing/">Tools Worth Testing</a></div>
-      <div class="arc-teaser">It reduces config drift for agent-heavy Postgres stacks and makes branch/env policy part of repo code.</div>
-      <div class="item-meta">
-        <span>4 items</span>
-        <span>1 to watch</span>
-        <span>40 links researched</span>
-      </div>
-    </div>
-          <a href="/archive/" style="display:inline-block;margin-top:0.85rem;font-size:0.8rem;color:var(--text-dim);">View full archive (46 briefs) →</a>
+          <a href="/archive/" style="display:inline-block;margin-top:0.85rem;font-size:0.8rem;color:var(--text-dim);">View full archive (47 briefs) →</a>
         </div>
       </div>
 
@@ -349,8 +418,13 @@
           <div class="section-label">Report log</div>
 
     <div class="sb-row">
+      <a href="/reports/2026-07-06/">Jul 6, 2026</a>
+      <span class="sb-count">9 items</span>
+    </div>
+
+    <div class="sb-row">
       <a href="/reports/2026-07-05/">Jul 5, 2026</a>
-      <span class="sb-count">1 item</span>
+      <span class="sb-count">5 items</span>
     </div>
 
     <div class="sb-row">
@@ -371,11 +445,6 @@
     <div class="sb-row">
       <a href="/reports/2026-07-01/">Jul 1, 2026</a>
       <span class="sb-count">12 items</span>
-    </div>
-
-    <div class="sb-row">
-      <a href="/reports/2026-06-30/">Jun 30, 2026</a>
-      <span class="sb-count">5 items</span>
     </div>
           <a href="/reports/" style="display:inline-block;margin-top:0.6rem;font-size:0.72rem;color:var(--text-dim);">All reports →</a>
         </div>

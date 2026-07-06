@@ -1,0 +1,776 @@
+{
+  "date": "2026-07-06",
+  "generated_at": "2026-07-06T06:23:27.860Z",
+  "imported_from": {
+    "importer_version": "digest-import/v1",
+    "source_artifact": "artifacts/synthesized/2026-07-06.json",
+    "source_sha256": "25ecc1d4e8ed9556d9173cfce9ba60423ffdae11e914510902e96597b3c07642"
+  },
+  "items": [
+    {
+      "builder_takeaway": "Directly relevant to multi-agent/multi-session Claude Code workflows; if real, it's a data isolation issue worth checking before running concurrent sessions across accounts.",
+      "category": "AI Operations / Agent Control",
+      "id": "5cf3a80c-488c-4f9f-80c9-4c4e1d8ffc80",
+      "importance": "lead",
+      "labels": [
+        "builder_reported",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "A GitHub issue (anthropics/claude-code #74066) reports potential session/cache leakage between workspace instances or consumer accounts."
+      ],
+      "title": "Potential session/cache leakage between workspace instances or consumer accounts",
+      "uncertainty": "Severity, reproduction steps, and whether Anthropic has confirmed or triaged this are not visible from the issue title alone; content fetch for this item returned empty.",
+      "url": "https://github.com/anthropics/claude-code/issues/74066"
+    },
+    {
+      "builder_takeaway": "Concrete cost and outcome for a practical, repeatable workflow: pay an AI agent to do a final review pass before shipping a breaking release.",
+      "category": "AI Operations / Agent Control",
+      "id": "c4fe219f-0290-442b-92d4-feed10f893c5",
+      "importance": "supporting",
+      "labels": [
+        "reproducible",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "Simon Willison used Claude Fable to do a final review before shipping sqlite-utils 4.0, which caught 5 release-blocking bugs (including a data-loss bug) for about $149.25."
+      ],
+      "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
+      "uncertainty": "This is one maintainer's single release review, not a controlled study, so the hit rate on catching real bugs vs. false positives may vary by codebase.",
+      "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/"
+    },
+    {
+      "builder_takeaway": "shadcn is a default choice for AI-generated and hand-built UI alike; a primitives swap changes behavior/APIs for anything newly scaffolded going forward.",
+      "category": "Model + API Changes",
+      "id": "ea812f1b-ade3-4ba2-82ea-a1fcb6e9b081",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "ui.shadcn.com",
+      "source_facts": [
+        "shadcn/ui changed its default underlying primitives library from Radix to Base UI."
+      ],
+      "title": "Shadcn/UI now defaults to Base UI instead of Radix",
+      "uncertainty": "Content for this item did not fetch; exact migration/compatibility details for existing Radix-based components aren't confirmed here — check the changelog directly before upgrading.",
+      "url": "https://ui.shadcn.com/docs/changelog"
+    },
+    {
+      "builder_takeaway": "Concrete toolchain architecture change for anyone building or maintaining Zig projects.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "995901a7-0cde-4ade-a67f-ba9837e02fdd",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "ziglang.org",
+      "source_facts": [
+        "Zig moved all package management functionality from the compiler into the build system."
+      ],
+      "title": "Zig: All Package Management Functionality Moved from Compiler to Build System",
+      "uncertainty": "Content did not fetch; migration impact on existing build.zig files and third-party package managers isn't detailed here.",
+      "url": "https://ziglang.org/devlog/2026/#2026-06-30"
+    },
+    {
+      "builder_takeaway": "Relevant to anyone relying on AI-content provenance/watermarking claims for trust or compliance purposes.",
+      "category": "AI Operations / Agent Control",
+      "id": "ade04766-5371-404e-825d-d259b2aac96b",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "hackerfactor.com",
+      "source_facts": [
+        "An independent analysis argues Meta's AI-content watermarking signature is not robust against tampering."
+      ],
+      "title": "Meta's Un-Stable Signature",
+      "uncertainty": "Content did not fetch; specific attack/removal method and Meta's response (if any) aren't visible here.",
+      "url": "https://hackerfactor.com/blog/index.php?/archives/1098-Metas-Un-Stable-Signature.html"
+    },
+    {
+      "builder_takeaway": "A reusable client-side trick for shipping tiny compressed payloads inline without a network request or build step.",
+      "category": "Tools Worth Testing",
+      "id": "f777a0f0-ec09-4932-b162-67ccbfb6bcc0",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "A working technique compresses a world map into ~445 bytes using fetch() with data: URIs piped through DecompressionStream('deflate-raw')."
+      ],
+      "title": "Building a World Map with only 500 bytes",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Jul/4/building-a-world-map-with-only-500-bytes/"
+    },
+    {
+      "builder_takeaway": "Practical vendor-risk lesson for solo builders who depend on a single niche SaaS tool for a core workflow.",
+      "category": "Small Business Automation",
+      "id": "e58961cc-def9-407c-ac89-f4a948b57368",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "The GummySearch shutdown illustrates the risk of building a research workflow around a single vendor tool rather than a portable process."
+      ],
+      "title": "One lesson from the GummySearch shutdown: never build your research process around one tool",
+      "uncertainty": "Opinion/anecdote from one builder, not a rigorous case study.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1unwf9p/one_lesson_i_took_from_the_gummysearch_shutdown/"
+    },
+    {
+      "builder_takeaway": "Worth tracking if it lands, since it would be a new built-in immutable mapping type in the standard language.",
+      "category": "Model + API Changes",
+      "id": "7717ffbf-7322-46c4-8406-be1bf728d1f9",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "vstinner.github.io",
+      "source_facts": [
+        "PEP 814 proposes adding a built-in frozendict type to Python."
+      ],
+      "title": "PEP 814: Add frozendict built-in type",
+      "uncertainty": "PEP status (draft/accepted/rejected) and target Python version aren't confirmed here.",
+      "url": "https://vstinner.github.io/pep-814-add-frozendict-builtin-type.html"
+    },
+    {
+      "builder_takeaway": "Worth tracking if you rely on Codex for reasoning-heavy tasks; not yet actionable.",
+      "category": "Model + API Changes",
+      "id": "ed2f8861-7824-4646-b56d-05addca128ab",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "A GitHub issue reports that GPT-5.5 Codex's reasoning-token clustering may be causing degraded performance."
+      ],
+      "title": "GPT-5.5 Codex reasoning-token clustering may be leading to degraded performance",
+      "uncertainty": "Content did not fetch; unclear if this is a confirmed regression, a misdiagnosis, or workload-specific.",
+      "url": "https://github.com/openai/codex/issues/30364"
+    },
+    {
+      "builder_takeaway": "Evergreen UX writing about button affordances; no new information or decision impact, and duplicated by the hn-top submission of the same article.",
+      "category": "Tools Worth Testing",
+      "id": "208699c0-938c-44c0-b2d5-9404ec58d679",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "unsung.aresluna.org",
+      "source_facts": [
+        "Buttons should behave predictably and have one clear job."
+      ],
+      "title": "If you're a button, you have one job",
+      "uncertainty": "",
+      "url": "https://unsung.aresluna.org/if-youre-a-button-you-have-one-job/"
+    },
+    {
+      "builder_takeaway": "Same article as the lobsters submission above.",
+      "category": "Tools Worth Testing",
+      "id": "cb3f01bf-99b4-41c5-b8fd-df8a12b28d86",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "unsung.aresluna.org",
+      "source_facts": [
+        "Duplicate submission of the button UX article."
+      ],
+      "title": "If you're a button, you have one job (hn-top)",
+      "uncertainty": "",
+      "url": "https://unsung.aresluna.org/if-youre-a-button-you-have-one-job/"
+    },
+    {
+      "builder_takeaway": "Self-promotional Reddit post seeking validation for a new AI dev tool; thin evidence, no independent verification.",
+      "category": "Tools Worth Testing",
+      "id": "2ce2323a-c127-4a68-82bb-ccd05533c92c",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A builder is asking whether a standalone AI dev app (vs. IDE extension) was the wrong approach."
+      ],
+      "title": "I spent 6 months building a standalone AI dev app instead of an IDE extension. Was this a mistake?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1unz6zu/i_spent_6_months_building_a_standalone_ai_dev_app/"
+    },
+    {
+      "builder_takeaway": "YouTube dev-diary anecdote; no fetched transcript/content, low decision impact for a general solo-dev audience.",
+      "category": "Tools Worth Testing",
+      "id": "35cc943c-e9b0-435f-a95a-42723861a1a1",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "youtube.com",
+      "source_facts": [
+        "A solo developer reports on 3 years of using Zig for game development."
+      ],
+      "title": "How is Zig working out after 3 years and 100k lines of game code?",
+      "uncertainty": "No transcript fetched.",
+      "url": "https://www.youtube.com/watch?v=HXpUShkr2VQ"
+    },
+    {
+      "builder_takeaway": "Vague generic musing with no concrete claim or evidence.",
+      "category": "Small Business Automation",
+      "id": "3d47dfde-ed33-4e32-ae1f-126b684d35c7",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "SaaS tools tend to solve similar problems in different ways."
+      ],
+      "title": "Most SaaS tools solve the same problems in different ways",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1unyoiu/most_saas_tools_solve_the_same_problems_in/"
+    },
+    {
+      "builder_takeaway": "Armin Ronacher's tool-schema-validation piece; already covered in a prior digest run (2026-07-05).",
+      "category": "AI Operations / Agent Control",
+      "id": "3fca8900-0253-413f-b436-c325541c3d5f",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "Newer Claude models sometimes add invented fields to nested edit-tool payloads, breaking strict schema validation in some agents."
+      ],
+      "title": "Better Models: Worse Tools (simon-willison mirror)",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Jul/4/better-models-worse-tools/"
+    },
+    {
+      "builder_takeaway": "Same article as above; already covered in a prior digest run.",
+      "category": "AI Operations / Agent Control",
+      "id": "1a97ce30-eed6-4d2e-a451-dc8b9ed628ea",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "lucumr.pocoo.org",
+      "source_facts": [
+        "Duplicate submission of the tool-schema-validation article already published previously."
+      ],
+      "title": "Better Models: Worse Tools (hn-top mirror)",
+      "uncertainty": "",
+      "url": "https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/"
+    },
+    {
+      "builder_takeaway": "Dated (2025) bounty listing on a book-archival project; no fetched content, no timely decision impact.",
+      "category": "Small Business Automation",
+      "id": "49397682-d025-4b68-95b2-ed658c9bbd45",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "software.annas-archive.gl",
+      "source_facts": [
+        "A $200k bounty exists for obtaining Google Books-scale book scans."
+      ],
+      "title": "Google Books (or similar) all book scans – $200k bounty (2025)",
+      "uncertainty": "No content fetched; legally sensitive archival/piracy context.",
+      "url": "https://software.annas-archive.gl/AnnaArchivist/annas-archive/-/work_items/234"
+    },
+    {
+      "builder_takeaway": "No content fetched; unclear mechanism, scope, or whether this affects any tooling a solo developer would use.",
+      "category": "AI Operations / Agent Control",
+      "id": "4fcbf7fa-cb14-4a3d-9836-78ec3ab570c7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "javoriuski.com",
+      "source_facts": [
+        "A claim that YouTube creators' private videos can leak."
+      ],
+      "title": "Leaking YouTube creators' private videos",
+      "uncertainty": "No content fetched; mechanism and scope unverified.",
+      "url": "https://javoriuski.com/post/youtube"
+    },
+    {
+      "builder_takeaway": "This is a localized (Farsi) Gemini API docs page, not a dated changelog entry describing an actual change; appears to be a scraper artifact rather than news.",
+      "category": "Model + API Changes",
+      "id": "8c975606-3bc8-43ac-972f-ffe74e170887",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "ai.google.dev",
+      "source_facts": [
+        "A Farsi-language Gemini API 'interactions overview' docs page was indexed."
+      ],
+      "title": "API تعاملات (Google AI changelog, Farsi)",
+      "uncertainty": "Not clear this represents an actual API change versus a static docs page being re-crawled.",
+      "url": "https://ai.google.dev/gemini-api/docs/interactions-overview?hl=fa"
+    },
+    {
+      "builder_takeaway": "Promotional milestone post with no generalizable lesson or evidence.",
+      "category": "Small Business Automation",
+      "id": "8efe70e6-e775-4e74-bbf4-d281686dd282",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A builder reports their first $3 of SaaS revenue."
+      ],
+      "title": "Built my first SaaS and got my first $3 in revenue",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uny4zh/built_my_first_saas_and_got_my_first_3_in_revenue/"
+    },
+    {
+      "builder_takeaway": "Static reference documentation, not news.",
+      "category": "Tools Worth Testing",
+      "id": "96f66763-208a-472f-b4cf-60df87e43edf",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "pandoc.org",
+      "source_facts": [
+        "Pandoc supports Lua filters for document conversion."
+      ],
+      "title": "Pandoc Lua Filters",
+      "uncertainty": "",
+      "url": "https://pandoc.org/lua-filters.html"
+    },
+    {
+      "builder_takeaway": "Self-promotional testimonial post.",
+      "category": "Small Business Automation",
+      "id": "a00187cd-6d57-4846-910e-4dec75f6f980",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A third party reportedly validated the poster's tool as most accurate among idea-validation tools."
+      ],
+      "title": "Someone tested several idea validation tools and told me my tool was the most accurate one...",
+      "uncertainty": "Unverifiable third-party claim.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1unz66w/someone_tested_several_idea_validation_tools_and/"
+    },
+    {
+      "builder_takeaway": "Off-topic biology/science story, no relevance to a solo software builder's decisions.",
+      "category": "Tools Worth Testing",
+      "id": "a3b64b43-3b34-41cf-a820-a2f4a895cf07",
+      "importance": "archive-only",
+      "labels": [
+        "production_proven",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "mbl.edu",
+      "source_facts": [
+        "Jellyfish exhibit rapid wound healing that scientists are studying."
+      ],
+      "title": "Jellyfish can heal wounds in minutes. Scientists want their secrets",
+      "uncertainty": "",
+      "url": "https://www.mbl.edu/news/jellyfish-can-heal-wounds-minutes-scientists-want-their-secrets"
+    },
+    {
+      "builder_takeaway": "Niche sysadmin/BSD memory-accounting anecdote; entertaining but no decision impact for a typical solo web/AI builder.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "ab552dee-fe85-40b7-ba1a-86fdcb0d660d",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "crocidb.com",
+      "source_facts": [
+        "A FreeBSD user investigated unexpectedly high memory usage."
+      ],
+      "title": "FreeBSD ate my ram",
+      "uncertainty": "",
+      "url": "https://crocidb.com/post/freebsd-ate-my-ram/"
+    },
+    {
+      "builder_takeaway": "This is a short release-note post that itself points to the fuller 'written by Claude Fable' story; duplicate topic, keeping the fuller writeup instead.",
+      "category": "AI Operations / Agent Control",
+      "id": "b1d91f55-5375-4cac-991d-7fb30962baf0",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "sqlite-utils 4.0rc2 was released."
+      ],
+      "title": "sqlite-utils 4.0rc2",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils/"
+    },
+    {
+      "builder_takeaway": "Hobbyist game-porting project; genuine engineering effort but a narrow niche (retro game compatibility) with no decision impact for typical solo SaaS/agent-work audience.",
+      "category": "Tools Worth Testing",
+      "id": "b37fb51d-9cde-4220-b94d-018638eb728f",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "An open-source project ports Command & Conquer Generals natively to macOS/iOS/iPadOS."
+      ],
+      "title": "Command and Conquer Generals natively ported to macOS, iPhone, iPad using Fable",
+      "uncertainty": "'Fable' here refers to a porting toolkit, not the Claude Fable model.",
+      "url": "https://github.com/ammaarreshi/Generals-Mac-iOS-iPad/tree/main"
+    },
+    {
+      "builder_takeaway": "Promotional beta-signup plug.",
+      "category": "Small Business Automation",
+      "id": "be30ff97-8e03-45e7-8832-6a27cdf2ff75",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A builder is promoting a free beta of an AI admin tool for freelance designers."
+      ],
+      "title": "I've made an AI Automated Admin work for freelance designers - anyone want to try while it's still free?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1unymn3/ive_made_an_ai_automated_admin_work_for_freelance/"
+    },
+    {
+      "builder_takeaway": "Niche personal-project UX writeup; nice but no broad decision impact.",
+      "category": "Tools Worth Testing",
+      "id": "ca53c072-bac3-4f6d-b42d-266c837dd097",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "w.on-t.work",
+      "source_facts": [
+        "A developer highlights small UX details in their Mastodon client."
+      ],
+      "title": "small details in my mastodon client that i wanted more people to notice",
+      "uncertainty": "",
+      "url": "https://w.on-t.work/outpost-frontend-details"
+    },
+    {
+      "builder_takeaway": "Legitimate console-hacking/security-research project, but narrow niche (PS5 jailbreaking) irrelevant to a solo software builder's business decisions.",
+      "category": "Tools Worth Testing",
+      "id": "ceb870a0-8672-4d84-ba9d-4fcdb3896dfc",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "An open-source project implements PS5 hypervisor exploits to load a custom Linux bootloader."
+      ],
+      "title": "ps5-linux-loader: Linux payload implementing HV exploits to run a custom bootloader",
+      "uncertainty": "",
+      "url": "https://github.com/ps5-linux/ps5-linux-loader"
+    },
+    {
+      "builder_takeaway": "Promotional milestone post, no generalizable lesson.",
+      "category": "Small Business Automation",
+      "id": "d517d898-2fb1-43ae-9f11-d3d0caa2ed9e",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A builder reports their SaaS passed 3,200 users."
+      ],
+      "title": "Guys my SaaS just passed 3,200 users!",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1unxhag/guys_my_saas_just_passed_3200_users/"
+    },
+    {
+      "builder_takeaway": "Open-ended discussion prompt, no concrete claim or evidence.",
+      "category": "Small Business Automation",
+      "id": "dcf7175f-ba20-45d3-a727-387d69ccbe6e",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A discussion asks what makes a SaaS tool feel intuitive."
+      ],
+      "title": "What makes a SaaS tool feel intuitive to you?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1unynlc/what_makes_a_saas_tool_feel_intuitive_to_you/"
+    },
+    {
+      "builder_takeaway": "Off-topic science/microscopy video, no relevance to the target audience.",
+      "category": "Tools Worth Testing",
+      "id": "e3772238-fa92-4e68-8fcd-f8fdbf596aaf",
+      "importance": "archive-only",
+      "labels": [
+        "production_proven",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "youtube.com",
+      "source_facts": [
+        "A video shows atomic force microscope footage of various micro-scale phenomena."
+      ],
+      "title": "Atomic Force Microscope high-speed video, stainless etching, bacteria, and more",
+      "uncertainty": "",
+      "url": "https://www.youtube.com/watch?v=DyIQkqBXhS0"
+    },
+    {
+      "builder_takeaway": "A 2004 mailing-list post; stale evergreen content with no timely news value.",
+      "category": "Tools Worth Testing",
+      "id": "e4f6f5a4-22b6-4752-ae69-dcbc313a7ef3",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "lists.debian.org",
+      "source_facts": [
+        "ABI and API are distinct concepts, discussed in a 2004 mailing list thread."
+      ],
+      "title": "ABI vs. API (2004)",
+      "uncertainty": "",
+      "url": "https://lists.debian.org/debian-user/2004/02/msg00648.html"
+    },
+    {
+      "builder_takeaway": "Niche systems-programming technique; reproducible but narrow audience.",
+      "category": "Tools Worth Testing",
+      "id": "e8c3fcdd-df8f-4138-977f-704adcdffddc",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "arcanenibble.com",
+      "source_facts": [
+        "A technique enables calling native Linux code from within a Wine process."
+      ],
+      "title": "How to call Linux code from a Wine process",
+      "uncertainty": "",
+      "url": "https://arcanenibble.com/how-to-call-linux-code-from-a-wine-process.html"
+    },
+    {
+      "builder_takeaway": "Off-topic space/astronomy policy story, no relevance to the target audience.",
+      "category": "Tools Worth Testing",
+      "id": "f2cf0ece-2cc5-48bd-a846-ff8c7c0b0c1a",
+      "importance": "archive-only",
+      "labels": [
+        "production_proven",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "eso.org",
+      "source_facts": [
+        "Satellites and orbital mirrors are increasingly threatening dark-sky astronomy."
+      ],
+      "title": "\"Beyond the limit\": Satellites and mirrors in space pose threat to the night sky",
+      "uncertainty": "",
+      "url": "https://www.eso.org/public/news/eso2607/"
+    },
+    {
+      "builder_takeaway": "A 12-year-old blog post; evergreen opinion, no timely news value.",
+      "category": "Tools Worth Testing",
+      "id": "f7e4bb03-20d1-4942-9ae9-d2d3ba321f09",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "wozniak.ca",
+      "source_facts": [
+        "Working with ORMs teaches the value of learning SQL directly."
+      ],
+      "title": "What ORMs have taught me: just learn SQL (2014)",
+      "uncertainty": "",
+      "url": "https://wozniak.ca/blog/2014/08/03/1/index.html"
+    },
+    {
+      "builder_takeaway": "Reddit 'roast my idea' validation-seeking post with no independent evidence.",
+      "category": "Small Business Automation",
+      "id": "fce24ce7-4a9c-4222-ba3a-69d5c1c91d1c",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A builder is seeking feedback on an idea for tracking commitments across Slack, meetings, and email."
+      ],
+      "title": "losing commitments between Slack, meetings, and email. Roast the idea",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1unyn0r/losing_commitments_between_slack_meetings_and/"
+    },
+    {
+      "builder_takeaway": "Vague open-ended discussion thread with no concrete claim.",
+      "category": "Small Business Automation",
+      "id": "7b2bb0f3-c40b-4bc6-aede-6ac1e09d02a6",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A discussion asks whether AI-powered SaaS is moving beyond thin wrappers."
+      ],
+      "title": "Innovative AI-Powered SaaS: Are We Moving Beyond Just Wrappers?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1unyxgo/innovative_aipowered_saas_are_we_moving_beyond/"
+    },
+    {
+      "builder_takeaway": "Niche retro-console dev tutorial, evergreen and narrow audience.",
+      "category": "Tools Worth Testing",
+      "id": "804b8086-e1c6-4334-8099-df6676c62c90",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "mattgreer.dev",
+      "source_facts": [
+        "A tutorial explains how to implement console logging for GBA development."
+      ],
+      "title": "Game Boy Advance Dev: Logging to the console",
+      "uncertainty": "",
+      "url": "https://www.mattgreer.dev/blog/gba-dev-logging/"
+    },
+    {
+      "builder_takeaway": "Academic paper on Emacs internals; evergreen educational content, not news.",
+      "category": "Tools Worth Testing",
+      "id": "8a77c6f9-02c7-41f9-8dc8-9365528d195f",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "source": "diva-portal.org",
+      "source_facts": [
+        "An academic paper documents the architecture of GNU Emacs."
+      ],
+      "title": "The GNU Emacs Architecture",
+      "uncertainty": "",
+      "url": "https://www.diva-portal.org/smash/get/diva2:2052282/FULLTEXT01.pdf"
+    }
+  ],
+  "mode": "primary",
+  "run_id": "a6412607-76ba-4867-9784-7ee66563af62",
+  "status": "completed",
+  "summary": "Synthesized Nightly Librarian run with 9 promoted item(s), 40 scored item(s), and 31 rejected item(s).",
+  "title": "Nightly Librarian - 2026-07-06"
+}

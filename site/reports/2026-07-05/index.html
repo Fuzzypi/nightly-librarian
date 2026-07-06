@@ -5,21 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>July 5, 2026 report log — The Nightly Librarian</title>
-  <meta name="description" content="1 stories cleared the bar, led by I built a CLI utility which prevents AI from breaking your codebase.">
+  <meta name="description" content="5 stories cleared the bar, led by Better Models: Worse Tools, Bad Epoll (CVE-2026-46242), and Introducing @neon/sdk, our new TypeScript client for the">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-07-05/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="July 5, 2026 report log | The Nightly Librarian">
-  <meta property="og:description" content="1 stories cleared the bar, led by I built a CLI utility which prevents AI from breaking your codebase.">
+  <meta property="og:description" content="5 stories cleared the bar, led by Better Models: Worse Tools, Bad Epoll (CVE-2026-46242), and Introducing @neon/sdk, our new TypeScript client for the">
   <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-07-05/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="July 5, 2026 report log | The Nightly Librarian">
-  <meta name="twitter:description" content="1 stories cleared the bar, led by I built a CLI utility which prevents AI from breaking your codebase.">
+  <meta name="twitter:description" content="5 stories cleared the bar, led by Better Models: Worse Tools, Bad Epoll (CVE-2026-46242), and Introducing @neon/sdk, our new TypeScript client for the">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
@@ -36,7 +36,7 @@
     </div>
     <div class="dateline">
       <span>July 5, 2026 · Report log</span>
-      <span>Jul 5, 2026, 2:14 AM</span>
+      <span>Jul 5, 2026, 7:06 AM</span>
     </div>
   </header>
   <main>
@@ -44,17 +44,37 @@
     <h1>July 5, 2026</h1>
     <div class="summary-card">
       <div class="eyebrow">Report summary</div>
-      <p>1 stories cleared the bar, led by I built a CLI utility which prevents AI from breaking your codebase.</p>
+      <p>5 stories cleared the bar, led by Better Models: Worse Tools, Bad Epoll (CVE-2026-46242), and Introducing @neon/sdk, our new TypeScript client for the Neon API.</p>
       <div class="meta" style="margin-top:0.4rem;">
-        <span>1 worth-attention item</span><span>16 digest lines</span>
+        <span>5 worth-attention items</span><span>40 digest lines</span>
       </div>
     </div>
     <h2>Worth attention</h2>
     <div class="item-stack">
 
       <div class="item">
-        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1un4j6b/i_built_a_cli_utility_which_prevents_ai_from/" target="_blank" rel="noopener">I built a CLI utility which prevents AI from breaking your codebase</a></div>
-        <div class="item-takeaway">A solo developer built CXGRD, a CLI tool that tries to warn an AI coding agent when a function it's about to change has downstream dependents, to catch breakage before it ships. This is the same blast-radius problem GitNexus's impact-analysis workflow already addresses for this project. Worth tracking as competitive/adjacent tooling, but it's a single self-promotional post with no adoption evidence, benchmarks, or open-source code shown.</div>
+        <div class="item-title"><a href="https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/" target="_blank" rel="noopener">Better Models: Worse Tools</a></div>
+        <div class="item-takeaway">Armin Ronacher reports newer Claude models invent extra tool-call fields in nested edit payloads; strict mode removed the failure in h…</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/J-jaeyoung/bad-epoll" target="_blank" rel="noopener">Bad Epoll (CVE-2026-46242)</a></div>
+        <div class="item-takeaway">Kernel epoll UAF exploit writeup says Linux v6.4+ systems need patch/backport a6dc643c6931; Android-rooting path is plausible.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://neon.com/blog/neon-sdk" target="_blank" rel="noopener">Introducing @neon/sdk, our new TypeScript client for the Neon API</a></div>
+        <div class="item-takeaway">Neon shipped @neon/sdk, a zero-dependency TS client with polling, retries, pagination, project transfer, and snapshot preview flows.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1unulsp/spent_weeks_building_a_niche_saas_got_5_visitors/" target="_blank" rel="noopener">Spent weeks building a niche SaaS, got ~5 visitors a day. Published one data report and traffic 5x'd off two Reddit posts. Here's the tactic (and the honest catch)</a></div>
+        <div class="item-takeaway">Founder says a niche data report drove 5x traffic from Reddit but zero signups until they added email capture and leaned on higher-int…</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/modelcontextprotocol/servers/releases/tag/2026.7.4" target="_blank" rel="noopener">Release 2026.7.4</a></div>
+        <div class="item-takeaway">MCP reference servers rolled to 2026.7.4 for filesystem, memory, sequential-thinking, and server-everything packages.</div>
       </div>
     </div>
     <h2>Full digest</h2>
@@ -63,9 +83,53 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1un5bnw/whats_the_most_powerful_unfair_advantage_a/" target="_blank" rel="noopener">What's the most powerful unfair advantage a startup can have?</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1un4pqd/i_tried_building_in_public/" target="_blank" rel="noopener">I Tried Building in Public</a>
         </div>
-        <div class="item-takeaway">A generic Reddit discussion prompt asking which single advantage (money, distribution, team, product, speed) matters most for a startup. No data, no conclusion, pure engagement bait for a solo-dev audience.</div>
+        <div class="item-takeaway">Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1un5m16/approach_to_distribution/" target="_blank" rel="noopener">approach to distribution</a>
+        </div>
+        <div class="item-takeaway">Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://neon.com/blog/neon-sdk" target="_blank" rel="noopener">Introducing @neon/sdk, our new TypeScript client for the Neon API</a>
+        </div>
+        <div class="item-takeaway">Neon shipped @neon/sdk, a zero-dependency TS client with polling, retries, pagination, project transfer, and snapshot preview flows.</div>
+        <div class="item-meta">
+          <span>neon-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unc1ch/just_vibecoded_my_2fa/" target="_blank" rel="noopener">Just vibecoded my 2FA 💀</a>
+        </div>
+        <div class="item-takeaway">Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unsz3e/is_saas_email_marketing_actually_worth_the/" target="_blank" rel="noopener">Is SaaS email marketing actually worth the monthly cost for a tiny business?</a>
+        </div>
+        <div class="item-takeaway">Question thread asking for advice, not new evidence or a decision-changing result.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -74,9 +138,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-m">M</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1un4j6b/i_built_a_cli_utility_which_prevents_ai_from/" target="_blank" rel="noopener">I built a CLI utility which prevents AI from breaking your codebase</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unulsp/spent_weeks_building_a_niche_saas_got_5_visitors/" target="_blank" rel="noopener">Spent weeks building a niche SaaS, got ~5 visitors a day. Published one data report and traffic 5x'd off two Reddit posts. Here's the tactic (and the honest catch)</a>
         </div>
-        <div class="item-takeaway">A solo developer built CXGRD, a CLI tool that tries to warn an AI coding agent when a function it's about to change has downstream dependents, to catch breakage before it ships. This is the same blast-radius problem GitNexus's impact-analysis workflow already addresses for this project. Worth tracking as competitive/adjacent tooling, but it's a single self-promotional post with no adoption evidence, benchmarks, or open-source code shown.</div>
+        <div class="item-takeaway">Founder says a niche data report drove 5x traffic from Reddit but zero signups until they added email capture and leaned on higher-int…</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -85,9 +149,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1un3m14/solo_founders_whove_gotten_their_first_paying/" target="_blank" rel="noopener">Solo founders who've gotten their first paying customers with $0 ad budget. What actually worked?</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unf1qe/the_oldest_trick_in_local_business_will_get_your/" target="_blank" rel="noopener">The oldest trick in local business will get your SaaS more users than any growth hack</a>
         </div>
-        <div class="item-takeaway">A solo founder asks the community what converted zero-budget marketing efforts into paying customers. Pure crowd-sourced question with no answers captured, no outcome data.</div>
+        <div class="item-takeaway">Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -96,9 +160,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1un65pl/i_spent_18_months_building_an_ai_marketing_tool/" target="_blank" rel="noopener">I spent 18 months building an AI marketing tool and the AI part was the easy part</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unetgm/many_failed_projects_last_one_is_taking_off_at/" target="_blank" rel="noopener">Many FAILED projects. Last one is taking off at $3,996 ARR</a>
         </div>
-        <div class="item-takeaway">Anecdotal founder reflection that the models were the easy part and the real challenge was convincing users the output wasn't generic AI slop. A familiar, well-worn observation with no specifics about the product, metrics, or outcome.</div>
+        <div class="item-takeaway">Self-reported founder milestone or launch anecdote with no supporting data beyond the post.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -107,9 +171,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1un5a5a/voice_agents_for_people_who_dont_know_how_to_use/" target="_blank" rel="noopener">Voice Agents for people who don't know how to use the phone (Roast My Idea)</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unruif/the_most_common_security_hole_in_saas_apps_and_a/" target="_blank" rel="noopener">The most common security hole in SaaS apps, and a 2-minute way to check if yours has it…</a>
         </div>
-        <div class="item-takeaway">An idea-stage pitch for voice agents that help less tech-confident users in India operate their phones by speaking naturally. No product, no evidence, explicitly asking for feedback on a concept.</div>
+        <div class="item-takeaway">Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -118,9 +182,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1un516z/we_just_launched_personalised_daily_briefs_on/" target="_blank" rel="noopener">We just launched personalised daily briefs on Newsletter Reader by Bilig</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unw3aj/the_18_rules_for_building_saas_in_2026/" target="_blank" rel="noopener">The 18 rules for building SaaS in 2026</a>
         </div>
-        <div class="item-takeaway">Straightforward promotional launch announcement for a personalized daily-brief feature in a consumer newsletter-reading app. Purely promotional, no independent evidence of value.</div>
+        <div class="item-takeaway">Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -129,9 +193,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1un41mj/built_a_tool_to_undo_aigenerated_code_changes/" target="_blank" rel="noopener">Built a tool to undo AI-generated code changes.</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unjk39/got_my_first_ever_com_domain_it_feels_more_real/" target="_blank" rel="noopener">Got my first ever .com domain :) It feels more real than I expected</a>
         </div>
-        <div class="item-takeaway">Another self-promotional post about a tool to roll back AI-made code edits. Same general space as CXGRD (item d5c1d0d9) but this one was capped/deferred this run and not given full content; treat as thin promotional builder report pending next pass.</div>
+        <div class="item-takeaway">Self-reported founder milestone or launch anecdote with no supporting data beyond the post.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -140,9 +204,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1un3wlu/iam_charging_per_guest_who_actually_uses_the/" target="_blank" rel="noopener">Iam charging per guest who actually uses the product at an event, not per seat. Fair pricing or revenue nightmare?</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unjwbz/my_saas_is_finally_earning_some_revenue/" target="_blank" rel="noopener">My SaaS is finally earning some revenue 😭😭</a>
         </div>
-        <div class="item-takeaway">Solo founder asks the community to weigh in on a per-active-guest event pricing model. No resolution or data captured.</div>
+        <div class="item-takeaway">Self-reported founder milestone or launch anecdote with no supporting data beyond the post.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -151,9 +215,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1umzwqk/what_does_a_person_with_valuable_ip_and_no/" target="_blank" rel="noopener">What does a person with valuable IP, and no money/assets - do when they are in a make-or-break scenario?</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unvk4j/starting_my_first_saas_where_should_i_deploy_it/" target="_blank" rel="noopener">Starting my first SaaS - where should I deploy it?</a>
         </div>
-        <div class="item-takeaway">A long personal narrative post seeking advice on monetizing IP with no capital. Not decision-relevant for a solo software builder's morning brief.</div>
+        <div class="item-takeaway">Question thread asking for advice, not new evidence or a decision-changing result.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -162,9 +226,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1un3sa0/how_do_you_handle_the_marketing_side/" target="_blank" rel="noopener">How do you handle the marketing side?</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unq6g0/hice_un_saas_que_funciona_genial_pero_no_vendo/" target="_blank" rel="noopener">Hice un SaaS que funciona genial pero no vendo nada. Dev que no sabe vender, pido consejos.</a>
         </div>
-        <div class="item-takeaway">Generic crowd-sourced question about SaaS marketing workflow. No answers or data captured.</div>
+        <div class="item-takeaway">Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -173,9 +237,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1un3klb/building_linkedin_b2b_saas/" target="_blank" rel="noopener">Building LinkedIn - B2B SaaS</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1un9fkn/on_track_to_hit_10bn_arr/" target="_blank" rel="noopener">On track to hit $10bn ARR</a>
         </div>
-        <div class="item-takeaway">A founder asks for advice on growing a new B2B SaaS's LinkedIn presence. No data or outcome shared.</div>
+        <div class="item-takeaway">Self-reported founder milestone or launch anecdote with no supporting data beyond the post.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -184,9 +248,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1un3c5e/whats_missing_from_loom_screen_studio_supademo_or/" target="_blank" rel="noopener">What's missing from Loom, Screen Studio, Supademo, or Arcade?</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unqmel/built_my_1st_software_countersign/" target="_blank" rel="noopener">Built my 1st Software - Countersign</a>
         </div>
-        <div class="item-takeaway">Open discussion prompt asking what's missing from popular screen-recording/demo tools. No substantive answers captured.</div>
+        <div class="item-takeaway">Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -195,42 +259,262 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://mirtitles.org" target="_blank" rel="noopener">Mir Books – Books from the Soviet Era</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unrl1f/what_do_you_think_in_regards_to_my_app_im_trying/" target="_blank" rel="noopener">What do you think in regards to my app? I’m trying to build in a difficult niche.</a>
         </div>
-        <div class="item-takeaway">A link to an archive of Soviet-era translated technical and children's books. Interesting as trivia but not relevant to a solo developer's practical decisions.</div>
+        <div class="item-takeaway">Question thread asking for advice, not new evidence or a decision-changing result.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.marginalia.nu/log/a_135_learn/" target="_blank" rel="noopener">Maybe you should learn something</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1untxaj/tech_stack_advice_for_building_a_lightweight/" target="_blank" rel="noopener">Tech stack advice for building a lightweight, AI-powered Coaching Management SaaS?</a>
         </div>
-        <div class="item-takeaway">A blog post title suggesting a reflection on learning, from marginalia.nu (the solo-built search engine's blog). Body text wasn't fetched, so substance can't be verified beyond the title.</div>
+        <div class="item-takeaway">Question thread asking for advice, not new evidence or a decision-changing result.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://interconnected.org/home/2026/07/03/factories" target="_blank" rel="noopener">Factories are just rooms</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unt4c4/blog_automation_help/" target="_blank" rel="noopener">Blog automation help</a>
         </div>
-        <div class="item-takeaway">A blog post title from interconnected.org (Matt Webb) likely exploring a metaphor about manufacturing and technology. Body text wasn't fetched, so it can't be judged for solo-dev relevance or substance.</div>
+        <div class="item-takeaway">Question thread asking for advice, not new evidence or a decision-changing result.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://ratfactor.com/cards/personal-website" target="_blank" rel="noopener">What should a personal website be?</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unvzrw/relaunched_my_best_pinescript_ai_in_the_world_as/" target="_blank" rel="noopener">Relaunched my best pinescript AI in the world as a TradingView copilot keeping the Ai 3 days ago. Just got a $790 customer.</a>
         </div>
-        <div class="item-takeaway">A lobste.rs-linked essay musing on what a personal website should be. Only a comments-link stub was fetched, no article body, so the actual argument is unknown. Personal-site philosophy is a well-trodden topic for this audience.</div>
+        <div class="item-takeaway">Self-reported founder milestone or launch anecdote with no supporting data beyond the post.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unvx4k/we_thought_wed_cracked_it_after_our_first_week/" target="_blank" rel="noopener">We thought we'd cracked it after our first week. Reality had other plans.</a>
+        </div>
+        <div class="item-takeaway">Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unvrm8/trial_paid_subscription_transition_flow_question/" target="_blank" rel="noopener">Trial -&gt; paid subscription transition flow question</a>
+        </div>
+        <div class="item-takeaway">Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unoad0/do_you_also_have_this_feeling_like_everybody_is/" target="_blank" rel="noopener">Do you also have this feeling like everybody is building something ?</a>
+        </div>
+        <div class="item-takeaway">Question thread asking for advice, not new evidence or a decision-changing result.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unubtq/looking_to_help_build_your_startup_from_day_one/" target="_blank" rel="noopener">Looking to help build your startup from day one</a>
+        </div>
+        <div class="item-takeaway">Question thread asking for advice, not new evidence or a decision-changing result.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unnpaw/ended_up_building_the_monitoring_tool_i_wanted/" target="_blank" rel="noopener">Ended up building the monitoring tool I wanted for myself</a>
+        </div>
+        <div class="item-takeaway">Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1unt2wr/paddle_for_accepting_payment/" target="_blank" rel="noopener">Paddle for accepting payment</a>
+        </div>
+        <div class="item-takeaway">Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://github.com/modelcontextprotocol/servers/releases/tag/2026.7.4" target="_blank" rel="noopener">Release 2026.7.4</a>
+        </div>
+        <div class="item-takeaway">MCP reference servers rolled to 2026.7.4 for filesystem, memory, sequential-thinking, and server-everything packages.</div>
+        <div class="item-meta">
+          <span>gh-mcp-servers</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.78" target="_blank" rel="noopener">v16.3.0-canary.78</a>
+        </div>
+        <div class="item-takeaway">Routine release increment with too little practical delta to matter for today's editorial cut.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://gracefulliberty.com/articles/return-to-zig/" target="_blank" rel="noopener">Returning to Zig</a>
+        </div>
+        <div class="item-takeaway">Title-level signal only; not enough verified detail or practical impact to make the cut.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/" target="_blank" rel="noopener">Better Models: Worse Tools</a>
+        </div>
+        <div class="item-takeaway">Armin Ronacher reports newer Claude models invent extra tool-call fields in nested edit payloads; strict mode removed the failure in h…</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.tymscar.com/posts/crinklecranklewalls/" target="_blank" rel="noopener">Do Wavy Walls Really Use Fewer Bricks? I Tested It in Blender</a>
+        </div>
+        <div class="item-takeaway">Title-level signal only; not enough verified detail or practical impact to make the cut.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://hauleth.dev/post/the-lion-the-witch-and-the-aduacity-of-recruiter/" target="_blank" rel="noopener">The Lion, The Witch, and the audacity of recruiters</a>
+        </div>
+        <div class="item-takeaway">Title-level signal only; not enough verified detail or practical impact to make the cut.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/J-jaeyoung/bad-epoll" target="_blank" rel="noopener">Bad Epoll (CVE-2026-46242)</a>
+        </div>
+        <div class="item-takeaway">Kernel epoll UAF exploit writeup says Linux v6.4+ systems need patch/backport a6dc643c6931; Android-rooting path is plausible.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ryelang.org/blog/posts/reducing_assumptions_but_exploding/" target="_blank" rel="noopener">Reducing Assumptions, Exploding Your Code</a>
+        </div>
+        <div class="item-takeaway">Title-level signal only; not enough verified detail or practical impact to make the cut.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://olliewilliams.xyz/blog/dark-mode/" target="_blank" rel="noopener">Dark mode with web standards</a>
+        </div>
+        <div class="item-takeaway">Title-level signal only; not enough verified detail or practical impact to make the cut.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://immich.app/blog/v3.0.0-release" target="_blank" rel="noopener">Immich v3.0.0 Released</a>
+        </div>
+        <div class="item-takeaway">Title-level signal only; not enough verified detail or practical impact to make the cut.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/tailscale/thundersnap/" target="_blank" rel="noopener">thundersnap v0.01: an undo button for everything</a>
+        </div>
+        <div class="item-takeaway">Interesting repo, but not enough adoption, specificity, or immediate leverage to elevate today.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.endbasic.dev/2026/07/endbasic-0.14.html" target="_blank" rel="noopener">EndBASIC 0.14: Are we multimedia yet?</a>
+        </div>
+        <div class="item-takeaway">Title-level signal only; not enough verified detail or practical impact to make the cut.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://gracefulliberty.com/notes/scheme-is-a-hoot/" target="_blank" rel="noopener">Scheme is a Hoot</a>
+        </div>
+        <div class="item-takeaway">Title-level signal only; not enough verified detail or practical impact to make the cut.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lobste.rs/s/0zha79/who_s_hiring_support_edition_q3_2026" target="_blank" rel="noopener">Who's Hiring? - Support Edition - Q3 2026</a>
+        </div>
+        <div class="item-takeaway">Title-level signal only; not enough verified detail or practical impact to make the cut.</div>
         <div class="item-meta">
           <span>lobsters</span>
         </div>
@@ -240,34 +524,70 @@
       <summary>Original markdown</summary>
       <pre class="raw-report"># Nightly Librarian — Newsletter draft
 
-Run: 1c1b9e22-09e1-4898-8ccf-d09a52a50339
-Started: 2026-07-05T06:10:12.700Z
-Completed: 2026-07-05T06:14:47.090Z
+Run: b3bc0a31-964b-486b-8f2c-eca4e3a1c99c
+Started: 2026-07-05T11:01:59.809Z
+Completed: 2026-07-05T11:06:17.240Z
 
 ## Worth attention
 
-- **I built a CLI utility which prevents AI from breaking your codebase**
-  https://www.reddit.com/r/SaaS/comments/1un4j6b/i_built_a_cli_utility_which_prevents_ai_from/
-  A solo developer built CXGRD, a CLI tool that tries to warn an AI coding agent when a function it's about to change has downstream dependents, to catch breakage before it ships. This is the same blast-radius problem GitNexus's impact-analysis workflow already addresses for this project. Worth tracking as competitive/adjacent tooling, but it's a single self-promotional post with no adoption evidence, benchmarks, or open-source code shown.
+- **Better Models: Worse Tools**
+  https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/
+  Armin Ronacher reports newer Claude models invent extra tool-call fields in nested edit payloads; strict mode removed the failure in h…
+- **Bad Epoll (CVE-2026-46242)**
+  https://github.com/J-jaeyoung/bad-epoll
+  Kernel epoll UAF exploit writeup says Linux v6.4+ systems need patch/backport a6dc643c6931; Android-rooting path is plausible.
+- **Introducing @neon/sdk, our new TypeScript client for the Neon API**
+  https://neon.com/blog/neon-sdk
+  Neon shipped @neon/sdk, a zero-dependency TS client with polling, retries, pagination, project transfer, and snapshot preview flows.
+- **Spent weeks building a niche SaaS, got ~5 visitors a day. Published one data report and traffic 5x'd off two Reddit posts. Here's the tactic (and the honest catch)**
+  https://www.reddit.com/r/SaaS/comments/1unulsp/spent_weeks_building_a_niche_saas_got_5_visitors/
+  Founder says a niche data report drove 5x traffic from Reddit but zero signups until they added email capture and leaned on higher-int…
+- **Release 2026.7.4**
+  https://github.com/modelcontextprotocol/servers/releases/tag/2026.7.4
+  MCP reference servers rolled to 2026.7.4 for filesystem, memory, sequential-thinking, and server-everything packages.
 
 ## Full digest
 
-- [R] [reddit-saas] What's the most powerful unfair advantage a startup can have? — https://www.reddit.com/r/SaaS/comments/1un5bnw/whats_the_most_powerful_unfair_advantage_a/ — A generic Reddit discussion prompt asking which single advantage (money, distribution, team, product, speed) matters most for a startup. No data, no conclusion, pure engagement bait for a solo-dev audience.
-- [M] [reddit-saas] I built a CLI utility which prevents AI from breaking your codebase — https://www.reddit.com/r/SaaS/comments/1un4j6b/i_built_a_cli_utility_which_prevents_ai_from/ — A solo developer built CXGRD, a CLI tool that tries to warn an AI coding agent when a function it's about to change has downstream dependents, to catch breakage before it ships. This is the same blast-radius problem GitNexus's impact-analysis workflow already addresses for this project. Worth tracking as competitive/adjacent tooling, but it's a single self-promotional post with no adoption evidence, benchmarks, or open-source code shown.
-- [R] [reddit-saas] Solo founders who've gotten their first paying customers with $0 ad budget. What actually worked? — https://www.reddit.com/r/SaaS/comments/1un3m14/solo_founders_whove_gotten_their_first_paying/ — A solo founder asks the community what converted zero-budget marketing efforts into paying customers. Pure crowd-sourced question with no answers captured, no outcome data.
-- [R] [reddit-saas] I spent 18 months building an AI marketing tool and the AI part was the easy part — https://www.reddit.com/r/SaaS/comments/1un65pl/i_spent_18_months_building_an_ai_marketing_tool/ — Anecdotal founder reflection that the models were the easy part and the real challenge was convincing users the output wasn't generic AI slop. A familiar, well-worn observation with no specifics about the product, metrics, or outcome.
-- [R] [reddit-saas] Voice Agents for people who don't know how to use the phone (Roast My Idea) — https://www.reddit.com/r/SaaS/comments/1un5a5a/voice_agents_for_people_who_dont_know_how_to_use/ — An idea-stage pitch for voice agents that help less tech-confident users in India operate their phones by speaking naturally. No product, no evidence, explicitly asking for feedback on a concept.
-- [R] [reddit-saas] We just launched personalised daily briefs on Newsletter Reader by Bilig — https://www.reddit.com/r/SaaS/comments/1un516z/we_just_launched_personalised_daily_briefs_on/ — Straightforward promotional launch announcement for a personalized daily-brief feature in a consumer newsletter-reading app. Purely promotional, no independent evidence of value.
-- [R] [reddit-saas] Built a tool to undo AI-generated code changes. — https://www.reddit.com/r/SaaS/comments/1un41mj/built_a_tool_to_undo_aigenerated_code_changes/ — Another self-promotional post about a tool to roll back AI-made code edits. Same general space as CXGRD (item d5c1d0d9) but this one was capped/deferred this run and not given full content; treat as thin promotional builder report pending next pass.
-- [R] [reddit-saas] Iam charging per guest who actually uses the product at an event, not per seat. Fair pricing or revenue nightmare? — https://www.reddit.com/r/SaaS/comments/1un3wlu/iam_charging_per_guest_who_actually_uses_the/ — Solo founder asks the community to weigh in on a per-active-guest event pricing model. No resolution or data captured.
-- [R] [reddit-saas] What does a person with valuable IP, and no money/assets - do when they are in a make-or-break scenario? — https://www.reddit.com/r/SaaS/comments/1umzwqk/what_does_a_person_with_valuable_ip_and_no/ — A long personal narrative post seeking advice on monetizing IP with no capital. Not decision-relevant for a solo software builder's morning brief.
-- [R] [reddit-saas] How do you handle the marketing side? — https://www.reddit.com/r/SaaS/comments/1un3sa0/how_do_you_handle_the_marketing_side/ — Generic crowd-sourced question about SaaS marketing workflow. No answers or data captured.
-- [R] [reddit-saas] Building LinkedIn - B2B SaaS — https://www.reddit.com/r/SaaS/comments/1un3klb/building_linkedin_b2b_saas/ — A founder asks for advice on growing a new B2B SaaS's LinkedIn presence. No data or outcome shared.
-- [R] [reddit-saas] What's missing from Loom, Screen Studio, Supademo, or Arcade? — https://www.reddit.com/r/SaaS/comments/1un3c5e/whats_missing_from_loom_screen_studio_supademo_or/ — Open discussion prompt asking what's missing from popular screen-recording/demo tools. No substantive answers captured.
-- [R] [hn-top] Mir Books – Books from the Soviet Era — https://mirtitles.org — A link to an archive of Soviet-era translated technical and children's books. Interesting as trivia but not relevant to a solo developer's practical decisions.
-- [R] [hn-top] Maybe you should learn something — https://www.marginalia.nu/log/a_135_learn/ — A blog post title suggesting a reflection on learning, from marginalia.nu (the solo-built search engine's blog). Body text wasn't fetched, so substance can't be verified beyond the title.
-- [R] [hn-top] Factories are just rooms — https://interconnected.org/home/2026/07/03/factories — A blog post title from interconnected.org (Matt Webb) likely exploring a metaphor about manufacturing and technology. Body text wasn't fetched, so it can't be judged for solo-dev relevance or substance.
-- [R] [lobsters] What should a personal website be? — https://ratfactor.com/cards/personal-website — A lobste.rs-linked essay musing on what a personal website should be. Only a comments-link stub was fetched, no article body, so the actual argument is unknown. Personal-site philosophy is a well-trodden topic for this audience.</pre>
+- [R] [reddit-saas] I Tried Building in Public — https://www.reddit.com/r/SaaS/comments/1un4pqd/i_tried_building_in_public/ — Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.
+- [R] [reddit-saas] approach to distribution — https://www.reddit.com/r/SaaS/comments/1un5m16/approach_to_distribution/ — Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.
+- [P] [neon-blog] Introducing @neon/sdk, our new TypeScript client for the Neon API — https://neon.com/blog/neon-sdk — Neon shipped @neon/sdk, a zero-dependency TS client with polling, retries, pagination, project transfer, and snapshot preview flows.
+- [R] [reddit-saas] Just vibecoded my 2FA 💀 — https://www.reddit.com/r/SaaS/comments/1unc1ch/just_vibecoded_my_2fa/ — Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.
+- [R] [reddit-saas] Is SaaS email marketing actually worth the monthly cost for a tiny business? — https://www.reddit.com/r/SaaS/comments/1unsz3e/is_saas_email_marketing_actually_worth_the/ — Question thread asking for advice, not new evidence or a decision-changing result.
+- [M] [reddit-saas] Spent weeks building a niche SaaS, got ~5 visitors a day. Published one data report and traffic 5x'd off two Reddit posts. Here's the tactic (and the honest catch) — https://www.reddit.com/r/SaaS/comments/1unulsp/spent_weeks_building_a_niche_saas_got_5_visitors/ — Founder says a niche data report drove 5x traffic from Reddit but zero signups until they added email capture and leaned on higher-int…
+- [R] [reddit-saas] The oldest trick in local business will get your SaaS more users than any growth hack — https://www.reddit.com/r/SaaS/comments/1unf1qe/the_oldest_trick_in_local_business_will_get_your/ — Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.
+- [R] [reddit-saas] Many FAILED projects. Last one is taking off at $3,996 ARR — https://www.reddit.com/r/SaaS/comments/1unetgm/many_failed_projects_last_one_is_taking_off_at/ — Self-reported founder milestone or launch anecdote with no supporting data beyond the post.
+- [R] [reddit-saas] The most common security hole in SaaS apps, and a 2-minute way to check if yours has it… — https://www.reddit.com/r/SaaS/comments/1unruif/the_most_common_security_hole_in_saas_apps_and_a/ — Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.
+- [R] [reddit-saas] The 18 rules for building SaaS in 2026 — https://www.reddit.com/r/SaaS/comments/1unw3aj/the_18_rules_for_building_saas_in_2026/ — Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.
+- [R] [reddit-saas] Got my first ever .com domain :) It feels more real than I expected — https://www.reddit.com/r/SaaS/comments/1unjk39/got_my_first_ever_com_domain_it_feels_more_real/ — Self-reported founder milestone or launch anecdote with no supporting data beyond the post.
+- [R] [reddit-saas] My SaaS is finally earning some revenue 😭😭 — https://www.reddit.com/r/SaaS/comments/1unjwbz/my_saas_is_finally_earning_some_revenue/ — Self-reported founder milestone or launch anecdote with no supporting data beyond the post.
+- [R] [reddit-saas] Starting my first SaaS - where should I deploy it? — https://www.reddit.com/r/SaaS/comments/1unvk4j/starting_my_first_saas_where_should_i_deploy_it/ — Question thread asking for advice, not new evidence or a decision-changing result.
+- [R] [reddit-saas] Hice un SaaS que funciona genial pero no vendo nada. Dev que no sabe vender, pido consejos. — https://www.reddit.com/r/SaaS/comments/1unq6g0/hice_un_saas_que_funciona_genial_pero_no_vendo/ — Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.
+- [R] [reddit-saas] On track to hit $10bn ARR — https://www.reddit.com/r/SaaS/comments/1un9fkn/on_track_to_hit_10bn_arr/ — Self-reported founder milestone or launch anecdote with no supporting data beyond the post.
+- [R] [reddit-saas] Built my 1st Software - Countersign — https://www.reddit.com/r/SaaS/comments/1unqmel/built_my_1st_software_countersign/ — Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.
+- [R] [reddit-saas] What do you think in regards to my app? I’m trying to build in a difficult niche. — https://www.reddit.com/r/SaaS/comments/1unrl1f/what_do_you_think_in_regards_to_my_app_im_trying/ — Question thread asking for advice, not new evidence or a decision-changing result.
+- [R] [reddit-saas] Tech stack advice for building a lightweight, AI-powered Coaching Management SaaS? — https://www.reddit.com/r/SaaS/comments/1untxaj/tech_stack_advice_for_building_a_lightweight/ — Question thread asking for advice, not new evidence or a decision-changing result.
+- [R] [reddit-saas] Blog automation help — https://www.reddit.com/r/SaaS/comments/1unt4c4/blog_automation_help/ — Question thread asking for advice, not new evidence or a decision-changing result.
+- [R] [reddit-saas] Relaunched my best pinescript AI in the world as a TradingView copilot keeping the Ai 3 days ago. Just got a $790 customer. — https://www.reddit.com/r/SaaS/comments/1unvzrw/relaunched_my_best_pinescript_ai_in_the_world_as/ — Self-reported founder milestone or launch anecdote with no supporting data beyond the post.
+- [R] [reddit-saas] We thought we'd cracked it after our first week. Reality had other plans. — https://www.reddit.com/r/SaaS/comments/1unvx4k/we_thought_wed_cracked_it_after_our_first_week/ — Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.
+- [R] [reddit-saas] Trial -&gt; paid subscription transition flow question — https://www.reddit.com/r/SaaS/comments/1unvrm8/trial_paid_subscription_transition_flow_question/ — Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.
+- [R] [reddit-saas] Do you also have this feeling like everybody is building something ? — https://www.reddit.com/r/SaaS/comments/1unoad0/do_you_also_have_this_feeling_like_everybody_is/ — Question thread asking for advice, not new evidence or a decision-changing result.
+- [R] [reddit-saas] Looking to help build your startup from day one — https://www.reddit.com/r/SaaS/comments/1unubtq/looking_to_help_build_your_startup_from_day_one/ — Question thread asking for advice, not new evidence or a decision-changing result.
+- [R] [reddit-saas] Ended up building the monitoring tool I wanted for myself — https://www.reddit.com/r/SaaS/comments/1unnpaw/ended_up_building_the_monitoring_tool_i_wanted/ — Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.
+- [R] [reddit-saas] Paddle for accepting payment — https://www.reddit.com/r/SaaS/comments/1unt2wr/paddle_for_accepting_payment/ — Founder self-report or promotion with thin evidence and limited decision value for tomorrow morning.
+- [M] [gh-mcp-servers] Release 2026.7.4 — https://github.com/modelcontextprotocol/servers/releases/tag/2026.7.4 — MCP reference servers rolled to 2026.7.4 for filesystem, memory, sequential-thinking, and server-everything packages.
+- [R] [gh-nextjs] v16.3.0-canary.78 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.78 — Routine release increment with too little practical delta to matter for today's editorial cut.
+- [R] [lobsters] Returning to Zig — https://gracefulliberty.com/articles/return-to-zig/ — Title-level signal only; not enough verified detail or practical impact to make the cut.
+- [P] [lobsters] Better Models: Worse Tools — https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/ — Armin Ronacher reports newer Claude models invent extra tool-call fields in nested edit payloads; strict mode removed the failure in h…
+- [R] [lobsters] Do Wavy Walls Really Use Fewer Bricks? I Tested It in Blender — https://blog.tymscar.com/posts/crinklecranklewalls/ — Title-level signal only; not enough verified detail or practical impact to make the cut.
+- [R] [lobsters] The Lion, The Witch, and the audacity of recruiters — https://hauleth.dev/post/the-lion-the-witch-and-the-aduacity-of-recruiter/ — Title-level signal only; not enough verified detail or practical impact to make the cut.
+- [P] [lobsters] Bad Epoll (CVE-2026-46242) — https://github.com/J-jaeyoung/bad-epoll — Kernel epoll UAF exploit writeup says Linux v6.4+ systems need patch/backport a6dc643c6931; Android-rooting path is plausible.
+- [R] [lobsters] Reducing Assumptions, Exploding Your Code — https://ryelang.org/blog/posts/reducing_assumptions_but_exploding/ — Title-level signal only; not enough verified detail or practical impact to make the cut.
+- [R] [lobsters] Dark mode with web standards — https://olliewilliams.xyz/blog/dark-mode/ — Title-level signal only; not enough verified detail or practical impact to make the cut.
+- [R] [lobsters] Immich v3.0.0 Released — https://immich.app/blog/v3.0.0-release — Title-level signal only; not enough verified detail or practical impact to make the cut.
+- [R] [lobsters] thundersnap v0.01: an undo button for everything — https://github.com/tailscale/thundersnap/ — Interesting repo, but not enough adoption, specificity, or immediate leverage to elevate today.
+- [R] [lobsters] EndBASIC 0.14: Are we multimedia yet? — https://www.endbasic.dev/2026/07/endbasic-0.14.html — Title-level signal only; not enough verified detail or practical impact to make the cut.
+- [R] [lobsters] Scheme is a Hoot — https://gracefulliberty.com/notes/scheme-is-a-hoot/ — Title-level signal only; not enough verified detail or practical impact to make the cut.
+- [R] [lobsters] Who's Hiring? - Support Edition - Q3 2026 — https://lobste.rs/s/0zha79/who_s_hiring_support_edition_q3_2026 — Title-level signal only; not enough verified detail or practical impact to make the cut.</pre>
     </details>
   </main>
   <footer>
