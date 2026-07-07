@@ -5,21 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>July 6, 2026 report log — The Nightly Librarian</title>
-  <meta name="description" content="9 stories cleared the bar, led by sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.">
+  <meta name="description" content="7 stories cleared the bar, led by API Interactions, 🤗 Kernels: Major Updates, and Does code cleanliness affect coding agents?">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-07-06/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="July 6, 2026 report log | The Nightly Librarian">
-  <meta property="og:description" content="9 stories cleared the bar, led by sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.">
+  <meta property="og:description" content="7 stories cleared the bar, led by API Interactions, 🤗 Kernels: Major Updates, and Does code cleanliness affect coding agents?">
   <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-07-06/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="July 6, 2026 report log | The Nightly Librarian">
-  <meta name="twitter:description" content="9 stories cleared the bar, led by sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.">
+  <meta name="twitter:description" content="7 stories cleared the bar, led by API Interactions, 🤗 Kernels: Major Updates, and Does code cleanliness affect coding agents?">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
@@ -36,7 +36,7 @@
     </div>
     <div class="dateline">
       <span>July 6, 2026 · Report log</span>
-      <span>Jul 6, 2026, 2:21 AM</span>
+      <span>Jul 6, 2026, 7:07 AM</span>
     </div>
   </header>
   <main>
@@ -44,57 +44,47 @@
     <h1>July 6, 2026</h1>
     <div class="summary-card">
       <div class="eyebrow">Report summary</div>
-      <p>9 stories cleared the bar, led by sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25), Potential session/cache leakage between workspace instances or consumer accounts, and Shadcn/UI now defaults to Base UI instead of Radix.</p>
+      <p>7 stories cleared the bar, led by API Interactions, 🤗 Kernels: Major Updates, and Does code cleanliness affect coding agents? A controlled minimal-pair study.</p>
       <div class="meta" style="margin-top:0.4rem;">
-        <span>9 worth-attention items</span><span>40 digest lines</span>
+        <span>7 worth-attention items</span><span>40 digest lines</span>
       </div>
     </div>
     <h2>Worth attention</h2>
     <div class="item-stack">
 
       <div class="item">
-        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything" target="_blank" rel="noopener">sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)</a></div>
-        <div class="item-takeaway">Simon Willison asked Claude Fable, via Claude Code for web, to do a final pre-release review of sqlite-utils 4.0. It found 5 release-blocking issues he hadn't caught himself, including a data-loss bug where delete_where() never commits and poisons the connection. Total cost: about $149.25. This is a concrete, priced data point on using an AI review pass as a release gate for solo-maintained tools.</div>
+        <div class="item-title"><a href="https://ai.google.dev/gemini-api/docs/interactions-overview?hl=fr" target="_blank" rel="noopener">API Interactions</a></div>
+        <div class="item-takeaway">Gemini Interactions API is now GA and the recommended default for new projects.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://github.com/anthropics/claude-code/issues/74066" target="_blank" rel="noopener">Potential session/cache leakage between workspace instances or consumer accounts</a></div>
-        <div class="item-takeaway">A user-filed GitHub issue on anthropics/claude-code reports that session or cache data may leak between separate workspace instances or consumer accounts. Not yet confirmed or fixed by Anthropic. Directly relevant to anyone running multiple Claude Code sessions or agent instances in parallel, since it implies a possible isolation failure between concurrent runs.</div>
+        <div class="item-title"><a href="https://huggingface.co/blog/revamped-kernels" target="_blank" rel="noopener">🤗 Kernels: Major Updates</a></div>
+        <div class="item-takeaway">Hugging Face Kernels adds a dedicated repo type, trusted publishers, signing, and better ABI coverage.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://ui.shadcn.com/docs/changelog" target="_blank" rel="noopener">Shadcn/UI now defaults to Base UI instead of Radix</a></div>
-        <div class="item-takeaway">shadcn/ui, one of the most widely used component toolkits in AI-assisted frontend work, switched its default underlying primitives from Radix to Base UI. Anything scaffolded going forward will inherit Base UI's component behavior and APIs instead of Radix's. If you have existing shadcn components pinned to Radix, upgrades may need review.</div>
+        <div class="item-title"><a href="https://arxiv.org/abs/2605.20049" target="_blank" rel="noopener">Does code cleanliness affect coding agents? A controlled minimal-pair study</a></div>
+        <div class="item-takeaway">A minimal-pair study found clean code cut coding-agent tokens 7-8% and file revisits 34%, without changing pass rate.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://github.com/openai/codex/issues/30364" target="_blank" rel="noopener">GPT-5.5 Codex reasoning-token clustering may be leading to degraded performance</a></div>
-        <div class="item-takeaway">A GitHub issue on openai/codex reports that reasoning-token clustering behavior in GPT-5.5 Codex may be degrading output quality. Not yet confirmed by OpenAI as a real regression versus a misdiagnosis.</div>
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/6/sqlite-utils/#atom-everything" target="_blank" rel="noopener">sqlite-utils 4.0rc3</a></div>
+        <div class="item-takeaway">sqlite-utils 4.0rc3 adds compound foreign keys and changes case-insensitive handling ahead of the 4.0 stable cut.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://hackerfactor.com/blog/index.php?/archives/1098-Metas-Un-Stable-Signature.html" target="_blank" rel="noopener">Meta's Un-Stable Signature</a></div>
-        <div class="item-takeaway">Independent researcher analysis (Hackerfactor, known for rigorous image-forensics writeups) examining weaknesses in Meta's AI content watermarking/provenance signature. If the watermark can be stripped or altered easily, it undermines Meta's content-provenance claims.</div>
+        <div class="item-title"><a href="https://www.uncommonapps.nyc/p/castro-podcasts-things-i-got-wrong-support" target="_blank" rel="noopener">Building relationships with customers through support didn't turn out as hoped</a></div>
+        <div class="item-takeaway">Castro owner says detailed support rarely builds loyalty; product improvements beat long explanatory replies.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://ziglang.org/devlog/2026/#2026-06-30" target="_blank" rel="noopener">Zig: All Package Management Functionality Moved from Compiler to Build System</a></div>
-        <div class="item-takeaway">Zig's official devlog confirms package management has been fully moved out of the compiler and into the build system. This is a real architectural change for Zig toolchains and build scripts, not a speculative RFC.</div>
+        <div class="item-title"><a href="https://demo.pcbjam.com/" target="_blank" rel="noopener">Show HN: KiCad in the Browser</a></div>
+        <div class="item-takeaway">PCBJam is an early alpha that edits KiCad projects in-browser from a local folder without uploading files.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1unwf9p/one_lesson_i_took_from_the_gummysearch_shutdown/" target="_blank" rel="noopener">One lesson from the GummySearch shutdown: never build your research process around one tool</a></div>
-        <div class="item-takeaway">After GummySearch (a Reddit research SaaS) shut down, the poster reframes customer research as a layered process (collect conversations, find patterns, act) rather than a single vendor tool, so a shutdown doesn't strand your workflow. Practical risk-management framing for solo builders who lean on niche SaaS tools for research or ops.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/4/building-a-world-map-with-only-500-bytes/#atom-everything" target="_blank" rel="noopener">Building a World Map with only 500 bytes</a></div>
-        <div class="item-takeaway">Iwo Kadziela (assisted by Codex) built a credible ASCII world map from roughly 445 bytes of data, using deflate compression piped through fetch() with a data: URI and DecompressionStream. The generalizable trick: fetch() can consume data: URIs, and DecompressionStream can decode inline compressed payloads client-side with no server round trip.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://vstinner.github.io/pep-814-add-frozendict-builtin-type.html" target="_blank" rel="noopener">PEP 814: Add frozendict built-in type</a></div>
-        <div class="item-takeaway">A Python Enhancement Proposal to add a built-in frozendict type. Still a proposal, not accepted or shipped — worth tracking if you rely on immutable-mapping patterns in Python, but no action is needed yet.</div>
+        <div class="item-title"><a href="https://vercel.com/changelog/chat-sdk-adds-twilio-adapter-support" target="_blank" rel="noopener">Chat SDK adds Twilio adapter support</a></div>
+        <div class="item-takeaway">Vercel Chat SDK now has a Twilio adapter for SMS, MMS, inbound media, and low-level voice helpers.</div>
       </div>
     </div>
     <h2>Full digest</h2>
@@ -103,405 +93,284 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://github.com/ps5-linux/ps5-linux-loader" target="_blank" rel="noopener">ps5-linux-loader: Linux payload implementing HV exploits to run a custom bootloader</a>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.6" target="_blank" rel="noopener">langchain-openrouter==0.2.6</a>
         </div>
-        <div class="item-takeaway">Legitimate console-hacking/security-research project, but narrow niche (PS5 jailbreaking) irrelevant to a solo software builder's business decisions.</div>
+        <div class="item-takeaway">Minor LangChain OpenRouter patch adds custom default header support.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-langchain</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://crocidb.com/post/freebsd-ate-my-ram/" target="_blank" rel="noopener">FreeBSD ate my ram</a>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-mistralai%3D%3D1.1.6" target="_blank" rel="noopener">langchain-mistralai==1.1.6</a>
         </div>
-        <div class="item-takeaway">Niche sysadmin/BSD memory-accounting anecdote; entertaining but no decision impact for a typical solo web/AI builder.</div>
+        <div class="item-takeaway">Minor LangChain Mistral patch surfaces citation metadata.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-langchain</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://arcanenibble.com/how-to-call-linux-code-from-a-wine-process.html" target="_blank" rel="noopener">How to call Linux code from a Wine process</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uo3mlj/rip_saas/" target="_blank" rel="noopener">RIP SaaS</a>
         </div>
-        <div class="item-takeaway">Niche systems-programming technique; reproducible but narrow audience.</div>
+        <div class="item-takeaway">Opinion post about &quot;agentic AI startup&quot; positioning; more vent than evidence.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.diva-portal.org/smash/get/diva2:2052282/FULLTEXT01.pdf" target="_blank" rel="noopener">The GNU Emacs Architecture</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uoko0q/security_holes_i_find_in_almost_every_vibecoded/" target="_blank" rel="noopener">Security holes I find in almost every vibecoded app</a>
         </div>
-        <div class="item-takeaway">Academic paper on Emacs internals; evergreen educational content, not news.</div>
+        <div class="item-takeaway">Anecdotal vibecoding security warning; Reddit blocked full review.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.mattgreer.dev/blog/gba-dev-logging/" target="_blank" rel="noopener">Game Boy Advance Dev: Logging to the console</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uop66f/how_much_do_you_and_your_team_spend_on_ai_per/" target="_blank" rel="noopener">How much do you and your team spend on AI per month?</a>
         </div>
-        <div class="item-takeaway">Niche retro-console dev tutorial, evergreen and narrow audience.</div>
+        <div class="item-takeaway">Open thread asking what small teams spend on AI each month.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://w.on-t.work/outpost-frontend-details" target="_blank" rel="noopener">small details in my mastodon client that i wanted more people to notice</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uoq8og/7_subreddits_where_you_can_promote_your_app/" target="_blank" rel="noopener">7 subreddits where you can promote your app without getting banned</a>
         </div>
-        <div class="item-takeaway">Niche personal-project UX writeup; nice but no broad decision impact.</div>
+        <div class="item-takeaway">List of subreddits for promotion; low signal.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uoc0n9/first_3_sales_on_the_macos_app_ive_been_building/" target="_blank" rel="noopener">First 3 sales on the macOS app I've been building solo 🎉</a>
+        </div>
+        <div class="item-takeaway">Solo macOS app hit first three sales; nice anecdote, low leverage.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uoprl2/i_took_a_brand_to_100k_arr_with_fb_ads_and_reels/" target="_blank" rel="noopener">I took a brand to $100k ARR with FB ads and reels. Tried the same playbook on a SaaS and none of it worked. 30-day breakdown.</a>
+        </div>
+        <div class="item-takeaway">FB ads/reels playbook failed on SaaS; interesting but narrow growth anecdote.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uo6yz1/one_reddit_thread_brought_me_13_paying_customers/" target="_blank" rel="noopener">One Reddit thread brought me 13 paying customers in a week</a>
+        </div>
+        <div class="item-takeaway">One Reddit thread reportedly drove 13 customers; anecdotal.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uomdn3/how_difficult_is_it_to_get_to_10k_mrr_and_for/" target="_blank" rel="noopener">How difficult is it to get to $10k MRR and for those who did or have seen people who got to $10K MRR, what did those people do differently?</a>
+        </div>
+        <div class="item-takeaway">Question about reaching $10k MRR; no concrete finding.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uo7l04/i_spent_weeks_finding_300_places_to_submit_a_saas/" target="_blank" rel="noopener">I spent weeks finding 300+ places to submit a SaaS. Here's the list (and what actually matters)</a>
+        </div>
+        <div class="item-takeaway">300+ SaaS submission places list; likely low-leverage distribution content.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uoh80l/i_spent_20_on_meta_ads_for_my_saas_heres_every/" target="_blank" rel="noopener">I spent $20 on Meta ads for my SaaS. Here's every number and what I learned.</a>
+        </div>
+        <div class="item-takeaway">Meta ads spend of $20 is too small to be broadly useful.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uop1f8/hello_seniors_where_do_you_get_the_demand_for/" target="_blank" rel="noopener">Hello seniors, where do you get the demand for your products?</a>
+        </div>
+        <div class="item-takeaway">Question about finding demand sources for products.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uoqthy/building_bugmojocom_need_a_mern_developer/" target="_blank" rel="noopener">Building BugMojo.com need a mern developer</a>
+        </div>
+        <div class="item-takeaway">Hiring post for a MERN developer.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uo4uzg/i_built_a_tool_that_lets_you_make_product_videos/" target="_blank" rel="noopener">I built a tool that lets you make product videos that look like they cost 10k, in an hour</a>
+        </div>
+        <div class="item-takeaway">Promo for a product-video tool; more pitch than report.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uo0z4y/i_am_tired_of_seeing_ai_slop_shitty_self/" target="_blank" rel="noopener">I am tired of seeing ai slop shitty self promotions</a>
+        </div>
+        <div class="item-takeaway">Complaint about AI slop promotions; no actionable takeaway.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uoljpf/can_superbase_handle_my_complete_backend/" target="_blank" rel="noopener">Can Superbase handle my complete backend?</a>
+        </div>
+        <div class="item-takeaway">Question about using Supabase for the full backend.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uoh2ld/im_struggling_to_give_advice_to_my_junior_devs/" target="_blank" rel="noopener">I'm struggling to give advice to my junior devs and I need help</a>
+        </div>
+        <div class="item-takeaway">Advice request on mentoring junior devs.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uoc4of/did_i_make_the_right_decision_moving_away_from/" target="_blank" rel="noopener">Did I make the right decision moving away from Supabase + Vercel?</a>
+        </div>
+        <div class="item-takeaway">Question about moving away from Supabase and Vercel.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uonmzj/should_i_give_all_my_50k_users_lifetime_free/" target="_blank" rel="noopener">Should I give all my 50k users lifetime free access?</a>
+        </div>
+        <div class="item-takeaway">Question about giving 50k users lifetime free access.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uonhg1/does_aigenerated_code_just_move_your_debugging/" target="_blank" rel="noopener">Does AI-generated code just move your debugging pain to later?</a>
+        </div>
+        <div class="item-takeaway">Question asking if AI-generated code delays debugging pain.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uonbe0/whats_one_small_website_change_that_made_a_bigger/" target="_blank" rel="noopener">What's one small website change that made a bigger difference than expected?</a>
+        </div>
+        <div class="item-takeaway">Question about small website changes that moved metrics.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uojzwx/biggest_mistake_ive_been_making/" target="_blank" rel="noopener">Biggest mistake I’ve been making</a>
+        </div>
+        <div class="item-takeaway">General mistake/advice thread; not specific enough.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://homegames.io" target="_blank" rel="noopener">Show HN: Homegames. An open-source game platform I've been making for 8 years</a>
+        </div>
+        <div class="item-takeaway">Open-source game platform show-and-tell; not central to this audience.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-m">M</span>
-          <a href="https://vstinner.github.io/pep-814-add-frozendict-builtin-type.html" target="_blank" rel="noopener">PEP 814: Add frozendict built-in type</a>
+          <a href="https://demo.pcbjam.com/" target="_blank" rel="noopener">Show HN: KiCad in the Browser</a>
         </div>
-        <div class="item-takeaway">A Python Enhancement Proposal to add a built-in frozendict type. Still a proposal, not accepted or shipped — worth tracking if you rely on immutable-mapping patterns in Python, but no action is needed yet.</div>
+        <div class="item-takeaway">PCBJam is an early alpha that edits KiCad projects in-browser from a local folder without uploading files.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>hn-show</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything" target="_blank" rel="noopener">sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)</a>
+          <a href="https://ai.google.dev/gemini-api/docs/interactions-overview?hl=fr" target="_blank" rel="noopener">API Interactions</a>
         </div>
-        <div class="item-takeaway">Simon Willison asked Claude Fable, via Claude Code for web, to do a final pre-release review of sqlite-utils 4.0. It found 5 release-blocking issues he hadn't caught himself, including a data-loss bug where delete_where() never commits and poisons the connection. Total cost: about $149.25. This is a concrete, priced data point on using an AI review pass as a release gate for solo-maintained tools.</div>
-        <div class="item-meta">
-          <span>simon-willison</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://simonwillison.net/2026/Jul/5/sqlite-utils/#atom-everything" target="_blank" rel="noopener">sqlite-utils 4.0rc2</a>
-        </div>
-        <div class="item-takeaway">This is a short release-note post that itself points to the fuller 'written by Claude Fable' story; duplicate topic, keeping the fuller writeup instead.</div>
-        <div class="item-meta">
-          <span>simon-willison</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://simonwillison.net/2026/Jul/4/building-a-world-map-with-only-500-bytes/#atom-everything" target="_blank" rel="noopener">Building a World Map with only 500 bytes</a>
-        </div>
-        <div class="item-takeaway">Iwo Kadziela (assisted by Codex) built a credible ASCII world map from roughly 445 bytes of data, using deflate compression piped through fetch() with a data: URI and DecompressionStream. The generalizable trick: fetch() can consume data: URIs, and DecompressionStream can decode inline compressed payloads client-side with no server round trip.</div>
-        <div class="item-meta">
-          <span>simon-willison</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything" target="_blank" rel="noopener">Better Models: Worse Tools (simon-willison mirror)</a>
-        </div>
-        <div class="item-takeaway">Armin Ronacher's tool-schema-validation piece; already covered in a prior digest run (2026-07-05).</div>
-        <div class="item-meta">
-          <span>simon-willison</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://ui.shadcn.com/docs/changelog" target="_blank" rel="noopener">Shadcn/UI now defaults to Base UI instead of Radix</a>
-        </div>
-        <div class="item-takeaway">shadcn/ui, one of the most widely used component toolkits in AI-assisted frontend work, switched its default underlying primitives from Radix to Base UI. Anything scaffolded going forward will inherit Base UI's component behavior and APIs instead of Radix's. If you have existing shadcn components pinned to Radix, upgrades may need review.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/ammaarreshi/Generals-Mac-iOS-iPad/tree/main" target="_blank" rel="noopener">Command and Conquer Generals natively ported to macOS, iPhone, iPad using Fable</a>
-        </div>
-        <div class="item-takeaway">Hobbyist game-porting project; genuine engineering effort but a narrow niche (retro game compatibility) with no decision impact for typical solo SaaS/agent-work audience.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://unsung.aresluna.org/if-youre-a-button-you-have-one-job/" target="_blank" rel="noopener">If you're a button, you have one job (hn-top)</a>
-        </div>
-        <div class="item-takeaway">Same article as the lobsters submission above.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://pandoc.org/lua-filters.html" target="_blank" rel="noopener">Pandoc Lua Filters</a>
-        </div>
-        <div class="item-takeaway">Static reference documentation, not news.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://github.com/openai/codex/issues/30364" target="_blank" rel="noopener">GPT-5.5 Codex reasoning-token clustering may be leading to degraded performance</a>
-        </div>
-        <div class="item-takeaway">A GitHub issue on openai/codex reports that reasoning-token clustering behavior in GPT-5.5 Codex may be degrading output quality. Not yet confirmed by OpenAI as a real regression versus a misdiagnosis.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://software.annas-archive.gl/AnnaArchivist/annas-archive/-/work_items/234" target="_blank" rel="noopener">Google Books (or similar) all book scans – $200k bounty (2025)</a>
-        </div>
-        <div class="item-takeaway">Dated (2025) bounty listing on a book-archival project; no fetched content, no timely decision impact.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.mbl.edu/news/jellyfish-can-heal-wounds-minutes-scientists-want-their-secrets" target="_blank" rel="noopener">Jellyfish can heal wounds in minutes. Scientists want their secrets</a>
-        </div>
-        <div class="item-takeaway">Off-topic biology/science story, no relevance to a solo software builder's decisions.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://javoriuski.com/post/youtube" target="_blank" rel="noopener">Leaking YouTube creators' private videos</a>
-        </div>
-        <div class="item-takeaway">No content fetched; unclear mechanism, scope, or whether this affects any tooling a solo developer would use.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.youtube.com/watch?v=DyIQkqBXhS0" target="_blank" rel="noopener">Atomic Force Microscope high-speed video, stainless etching, bacteria, and more</a>
-        </div>
-        <div class="item-takeaway">Off-topic science/microscopy video, no relevance to the target audience.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/" target="_blank" rel="noopener">Better Models: Worse Tools (hn-top mirror)</a>
-        </div>
-        <div class="item-takeaway">Same article as above; already covered in a prior digest run.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://hackerfactor.com/blog/index.php?/archives/1098-Metas-Un-Stable-Signature.html" target="_blank" rel="noopener">Meta's Un-Stable Signature</a>
-        </div>
-        <div class="item-takeaway">Independent researcher analysis (Hackerfactor, known for rigorous image-forensics writeups) examining weaknesses in Meta's AI content watermarking/provenance signature. If the watermark can be stripped or altered easily, it undermines Meta's content-provenance claims.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://github.com/anthropics/claude-code/issues/74066" target="_blank" rel="noopener">Potential session/cache leakage between workspace instances or consumer accounts</a>
-        </div>
-        <div class="item-takeaway">A user-filed GitHub issue on anthropics/claude-code reports that session or cache data may leak between separate workspace instances or consumer accounts. Not yet confirmed or fixed by Anthropic. Directly relevant to anyone running multiple Claude Code sessions or agent instances in parallel, since it implies a possible isolation failure between concurrent runs.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://ziglang.org/devlog/2026/#2026-06-30" target="_blank" rel="noopener">Zig: All Package Management Functionality Moved from Compiler to Build System</a>
-        </div>
-        <div class="item-takeaway">Zig's official devlog confirms package management has been fully moved out of the compiler and into the build system. This is a real architectural change for Zig toolchains and build scripts, not a speculative RFC.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.eso.org/public/news/eso2607/" target="_blank" rel="noopener">&quot;Beyond the limit&quot;: Satellites and mirrors in space pose threat to the night sky</a>
-        </div>
-        <div class="item-takeaway">Off-topic space/astronomy policy story, no relevance to the target audience.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://wozniak.ca/blog/2014/08/03/1/index.html" target="_blank" rel="noopener">What ORMs have taught me: just learn SQL (2014)</a>
-        </div>
-        <div class="item-takeaway">A 12-year-old blog post; evergreen opinion, no timely news value.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1unxhag/guys_my_saas_just_passed_3200_users/" target="_blank" rel="noopener">Guys my SaaS just passed 3,200 users!</a>
-        </div>
-        <div class="item-takeaway">Promotional milestone post, no generalizable lesson.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uny4zh/built_my_first_saas_and_got_my_first_3_in_revenue/" target="_blank" rel="noopener">Built my first SaaS and got my first $3 in revenue</a>
-        </div>
-        <div class="item-takeaway">Promotional milestone post with no generalizable lesson or evidence.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1unwf9p/one_lesson_i_took_from_the_gummysearch_shutdown/" target="_blank" rel="noopener">One lesson from the GummySearch shutdown: never build your research process around one tool</a>
-        </div>
-        <div class="item-takeaway">After GummySearch (a Reddit research SaaS) shut down, the poster reframes customer research as a layered process (collect conversations, find patterns, act) rather than a single vendor tool, so a shutdown doesn't strand your workflow. Practical risk-management framing for solo builders who lean on niche SaaS tools for research or ops.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1unyoiu/most_saas_tools_solve_the_same_problems_in/" target="_blank" rel="noopener">Most SaaS tools solve the same problems in different ways</a>
-        </div>
-        <div class="item-takeaway">Vague generic musing with no concrete claim or evidence.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1unyxgo/innovative_aipowered_saas_are_we_moving_beyond/" target="_blank" rel="noopener">Innovative AI-Powered SaaS: Are We Moving Beyond Just Wrappers?</a>
-        </div>
-        <div class="item-takeaway">Vague open-ended discussion thread with no concrete claim.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1unz6zu/i_spent_6_months_building_a_standalone_ai_dev_app/" target="_blank" rel="noopener">I spent 6 months building a standalone AI dev app instead of an IDE extension. Was this a mistake?</a>
-        </div>
-        <div class="item-takeaway">Self-promotional Reddit post seeking validation for a new AI dev tool; thin evidence, no independent verification.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1unz66w/someone_tested_several_idea_validation_tools_and/" target="_blank" rel="noopener">Someone tested several idea validation tools and told me my tool was the most accurate one...</a>
-        </div>
-        <div class="item-takeaway">Self-promotional testimonial post.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1unynlc/what_makes_a_saas_tool_feel_intuitive_to_you/" target="_blank" rel="noopener">What makes a SaaS tool feel intuitive to you?</a>
-        </div>
-        <div class="item-takeaway">Open-ended discussion prompt, no concrete claim or evidence.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1unyn0r/losing_commitments_between_slack_meetings_and/" target="_blank" rel="noopener">losing commitments between Slack, meetings, and email. Roast the idea</a>
-        </div>
-        <div class="item-takeaway">Reddit 'roast my idea' validation-seeking post with no independent evidence.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1unymn3/ive_made_an_ai_automated_admin_work_for_freelance/" target="_blank" rel="noopener">I've made an AI Automated Admin work for freelance designers - anyone want to try while it's still free?</a>
-        </div>
-        <div class="item-takeaway">Promotional beta-signup plug.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://ai.google.dev/gemini-api/docs/interactions-overview?hl=fa" target="_blank" rel="noopener">API تعاملات (Google AI changelog, Farsi)</a>
-        </div>
-        <div class="item-takeaway">This is a localized (Farsi) Gemini API docs page, not a dated changelog entry describing an actual change; appears to be a scraper artifact rather than news.</div>
+        <div class="item-takeaway">Gemini Interactions API is now GA and the recommended default for new projects.</div>
         <div class="item-meta">
           <span>google-ai-changelog</span>
         </div>
@@ -509,34 +378,155 @@
 
       <div class="item">
         <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://unsung.aresluna.org/if-youre-a-button-you-have-one-job/" target="_blank" rel="noopener">If you're a button, you have one job</a>
+          <span class="tag tag-p">P</span>
+          <a href="https://huggingface.co/blog/revamped-kernels" target="_blank" rel="noopener">🤗 Kernels: Major Updates</a>
         </div>
-        <div class="item-takeaway">Evergreen UX writing about button affordances; no new information or decision impact, and duplicated by the hn-top submission of the same article.</div>
+        <div class="item-takeaway">Hugging Face Kernels adds a dedicated repo type, trusted publishers, signing, and better ABI coverage.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://vercel.com/changelog/chat-sdk-adds-twilio-adapter-support" target="_blank" rel="noopener">Chat SDK adds Twilio adapter support</a>
+        </div>
+        <div class="item-takeaway">Vercel Chat SDK now has a Twilio adapter for SMS, MMS, inbound media, and low-level voice helpers.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jul/6/sqlite-utils/#atom-everything" target="_blank" rel="noopener">sqlite-utils 4.0rc3</a>
+        </div>
+        <div class="item-takeaway">sqlite-utils 4.0rc3 adds compound foreign keys and changes case-insensitive handling ahead of the 4.0 stable cut.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://lists.debian.org/debian-user/2004/02/msg00648.html" target="_blank" rel="noopener">ABI vs. API (2004)</a>
+          <a href="https://www.opentools.studio/" target="_blank" rel="noopener">OpenPrinter</a>
         </div>
-        <div class="item-takeaway">A 2004 mailing-list post; stale evergreen content with no timely news value.</div>
+        <div class="item-takeaway">OpenPrinter surfaced without enough context to justify inclusion.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>hn-top</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.youtube.com/watch?v=HXpUShkr2VQ" target="_blank" rel="noopener">How is Zig working out after 3 years and 100k lines of game code?</a>
+          <a href="https://twitter.com/thsottiaux/status/2073933490513752151" target="_blank" rel="noopener">GPT-5.6 Sol Ultra will be in Codex</a>
         </div>
-        <div class="item-takeaway">YouTube dev-diary anecdote; no fetched transcript/content, low decision impact for a general solo-dev audience.</div>
+        <div class="item-takeaway">Twitter claim about GPT-5.6 in Codex; too speculative.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://iamwillwang.com/notes/has-not-been-viewed-much/" target="_blank" rel="noopener">Has_not_been_viewed_much</a>
+        </div>
+        <div class="item-takeaway">Personal note/essay; low editorial leverage.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://organicmaps.app/" target="_blank" rel="noopener">Organic Maps</a>
+        </div>
+        <div class="item-takeaway">Organic Maps link without a decision-changing update.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.uncommonapps.nyc/p/castro-podcasts-things-i-got-wrong-support" target="_blank" rel="noopener">Building relationships with customers through support didn't turn out as hoped</a>
+        </div>
+        <div class="item-takeaway">Castro owner says detailed support rarely builds loyalty; product improvements beat long explanatory replies.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://homegames.io" target="_blank" rel="noopener">Show HN: Homegames. An open-source game platform I've been making for 8 years</a>
+        </div>
+        <div class="item-takeaway">Duplicate Homegames item.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://popcar.bearblog.dev/its-about-ownership/" target="_blank" rel="noopener">It's not about physical vs. digital games, it's about ownership</a>
+        </div>
+        <div class="item-takeaway">Essay about ownership in digital vs physical games.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://arxiv.org/abs/2605.20049" target="_blank" rel="noopener">Does code cleanliness affect coding agents? A controlled minimal-pair study</a>
+        </div>
+        <div class="item-takeaway">A minimal-pair study found clean code cut coding-agent tokens 7-8% and file revisits 34%, without changing pass rate.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://geastack.com/blog-the-age-of-personalized-hardware-is-coming" target="_blank" rel="noopener">The Age of Personalized Hardware Is Coming</a>
+        </div>
+        <div class="item-takeaway">Essay arguing for personalized hardware; speculative.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.starringthecomputer.com/computers.html" target="_blank" rel="noopener">Starring the Computer</a>
+        </div>
+        <div class="item-takeaway">Essay/project about computers as performers; low relevance.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reuters.com/business/zuckerberg-says-ai-agent-development-going-slower-than-expected-2026-07-02/" target="_blank" rel="noopener">Zuckerberg says AI agent development going slower than expected</a>
+        </div>
+        <div class="item-takeaway">Reuters article was unreadable here; headline says AI agents are progressing slower than expected.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
         </div>
       </div>
     </div>
@@ -544,82 +534,76 @@
       <summary>Original markdown</summary>
       <pre class="raw-report"># Nightly Librarian — Newsletter draft
 
-Run: a6412607-76ba-4867-9784-7ee66563af62
-Started: 2026-07-06T06:09:19.284Z
-Completed: 2026-07-06T06:21:47.744Z
+Run: c46bb35c-274b-442f-a1d2-4cd82fbe6e1f
+Started: 2026-07-06T11:03:01.823Z
+Completed: 2026-07-06T11:07:51.989Z
 
 ## Worth attention
 
-- **sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)**
-  https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything
-  Simon Willison asked Claude Fable, via Claude Code for web, to do a final pre-release review of sqlite-utils 4.0. It found 5 release-blocking issues he hadn't caught himself, including a data-loss bug where delete_where() never commits and poisons the connection. Total cost: about $149.25. This is a concrete, priced data point on using an AI review pass as a release gate for solo-maintained tools.
-- **Potential session/cache leakage between workspace instances or consumer accounts**
-  https://github.com/anthropics/claude-code/issues/74066
-  A user-filed GitHub issue on anthropics/claude-code reports that session or cache data may leak between separate workspace instances or consumer accounts. Not yet confirmed or fixed by Anthropic. Directly relevant to anyone running multiple Claude Code sessions or agent instances in parallel, since it implies a possible isolation failure between concurrent runs.
-- **Shadcn/UI now defaults to Base UI instead of Radix**
-  https://ui.shadcn.com/docs/changelog
-  shadcn/ui, one of the most widely used component toolkits in AI-assisted frontend work, switched its default underlying primitives from Radix to Base UI. Anything scaffolded going forward will inherit Base UI's component behavior and APIs instead of Radix's. If you have existing shadcn components pinned to Radix, upgrades may need review.
-- **GPT-5.5 Codex reasoning-token clustering may be leading to degraded performance**
-  https://github.com/openai/codex/issues/30364
-  A GitHub issue on openai/codex reports that reasoning-token clustering behavior in GPT-5.5 Codex may be degrading output quality. Not yet confirmed by OpenAI as a real regression versus a misdiagnosis.
-- **Meta's Un-Stable Signature**
-  https://hackerfactor.com/blog/index.php?/archives/1098-Metas-Un-Stable-Signature.html
-  Independent researcher analysis (Hackerfactor, known for rigorous image-forensics writeups) examining weaknesses in Meta's AI content watermarking/provenance signature. If the watermark can be stripped or altered easily, it undermines Meta's content-provenance claims.
-- **Zig: All Package Management Functionality Moved from Compiler to Build System**
-  https://ziglang.org/devlog/2026/#2026-06-30
-  Zig's official devlog confirms package management has been fully moved out of the compiler and into the build system. This is a real architectural change for Zig toolchains and build scripts, not a speculative RFC.
-- **One lesson from the GummySearch shutdown: never build your research process around one tool**
-  https://www.reddit.com/r/SaaS/comments/1unwf9p/one_lesson_i_took_from_the_gummysearch_shutdown/
-  After GummySearch (a Reddit research SaaS) shut down, the poster reframes customer research as a layered process (collect conversations, find patterns, act) rather than a single vendor tool, so a shutdown doesn't strand your workflow. Practical risk-management framing for solo builders who lean on niche SaaS tools for research or ops.
-- **Building a World Map with only 500 bytes**
-  https://simonwillison.net/2026/Jul/4/building-a-world-map-with-only-500-bytes/#atom-everything
-  Iwo Kadziela (assisted by Codex) built a credible ASCII world map from roughly 445 bytes of data, using deflate compression piped through fetch() with a data: URI and DecompressionStream. The generalizable trick: fetch() can consume data: URIs, and DecompressionStream can decode inline compressed payloads client-side with no server round trip.
-- **PEP 814: Add frozendict built-in type**
-  https://vstinner.github.io/pep-814-add-frozendict-builtin-type.html
-  A Python Enhancement Proposal to add a built-in frozendict type. Still a proposal, not accepted or shipped — worth tracking if you rely on immutable-mapping patterns in Python, but no action is needed yet.
+- **API Interactions**
+  https://ai.google.dev/gemini-api/docs/interactions-overview?hl=fr
+  Gemini Interactions API is now GA and the recommended default for new projects.
+- **🤗 Kernels: Major Updates**
+  https://huggingface.co/blog/revamped-kernels
+  Hugging Face Kernels adds a dedicated repo type, trusted publishers, signing, and better ABI coverage.
+- **Does code cleanliness affect coding agents? A controlled minimal-pair study**
+  https://arxiv.org/abs/2605.20049
+  A minimal-pair study found clean code cut coding-agent tokens 7-8% and file revisits 34%, without changing pass rate.
+- **sqlite-utils 4.0rc3**
+  https://simonwillison.net/2026/Jul/6/sqlite-utils/#atom-everything
+  sqlite-utils 4.0rc3 adds compound foreign keys and changes case-insensitive handling ahead of the 4.0 stable cut.
+- **Building relationships with customers through support didn't turn out as hoped**
+  https://www.uncommonapps.nyc/p/castro-podcasts-things-i-got-wrong-support
+  Castro owner says detailed support rarely builds loyalty; product improvements beat long explanatory replies.
+- **Show HN: KiCad in the Browser**
+  https://demo.pcbjam.com/
+  PCBJam is an early alpha that edits KiCad projects in-browser from a local folder without uploading files.
+- **Chat SDK adds Twilio adapter support**
+  https://vercel.com/changelog/chat-sdk-adds-twilio-adapter-support
+  Vercel Chat SDK now has a Twilio adapter for SMS, MMS, inbound media, and low-level voice helpers.
 
 ## Full digest
 
-- [R] [lobsters] ps5-linux-loader: Linux payload implementing HV exploits to run a custom bootloader — https://github.com/ps5-linux/ps5-linux-loader — Legitimate console-hacking/security-research project, but narrow niche (PS5 jailbreaking) irrelevant to a solo software builder's business decisions.
-- [R] [lobsters] FreeBSD ate my ram — https://crocidb.com/post/freebsd-ate-my-ram/ — Niche sysadmin/BSD memory-accounting anecdote; entertaining but no decision impact for a typical solo web/AI builder.
-- [R] [lobsters] How to call Linux code from a Wine process — https://arcanenibble.com/how-to-call-linux-code-from-a-wine-process.html — Niche systems-programming technique; reproducible but narrow audience.
-- [R] [lobsters] The GNU Emacs Architecture — https://www.diva-portal.org/smash/get/diva2:2052282/FULLTEXT01.pdf — Academic paper on Emacs internals; evergreen educational content, not news.
-- [R] [lobsters] Game Boy Advance Dev: Logging to the console — https://www.mattgreer.dev/blog/gba-dev-logging/ — Niche retro-console dev tutorial, evergreen and narrow audience.
-- [R] [lobsters] small details in my mastodon client that i wanted more people to notice — https://w.on-t.work/outpost-frontend-details — Niche personal-project UX writeup; nice but no broad decision impact.
-- [M] [lobsters] PEP 814: Add frozendict built-in type — https://vstinner.github.io/pep-814-add-frozendict-builtin-type.html — A Python Enhancement Proposal to add a built-in frozendict type. Still a proposal, not accepted or shipped — worth tracking if you rely on immutable-mapping patterns in Python, but no action is needed yet.
-- [P] [simon-willison] sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25) — https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything — Simon Willison asked Claude Fable, via Claude Code for web, to do a final pre-release review of sqlite-utils 4.0. It found 5 release-blocking issues he hadn't caught himself, including a data-loss bug where delete_where() never commits and poisons the connection. Total cost: about $149.25. This is a concrete, priced data point on using an AI review pass as a release gate for solo-maintained tools.
-- [R] [simon-willison] sqlite-utils 4.0rc2 — https://simonwillison.net/2026/Jul/5/sqlite-utils/#atom-everything — This is a short release-note post that itself points to the fuller 'written by Claude Fable' story; duplicate topic, keeping the fuller writeup instead.
-- [P] [simon-willison] Building a World Map with only 500 bytes — https://simonwillison.net/2026/Jul/4/building-a-world-map-with-only-500-bytes/#atom-everything — Iwo Kadziela (assisted by Codex) built a credible ASCII world map from roughly 445 bytes of data, using deflate compression piped through fetch() with a data: URI and DecompressionStream. The generalizable trick: fetch() can consume data: URIs, and DecompressionStream can decode inline compressed payloads client-side with no server round trip.
-- [R] [simon-willison] Better Models: Worse Tools (simon-willison mirror) — https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything — Armin Ronacher's tool-schema-validation piece; already covered in a prior digest run (2026-07-05).
-- [P] [hn-top] Shadcn/UI now defaults to Base UI instead of Radix — https://ui.shadcn.com/docs/changelog — shadcn/ui, one of the most widely used component toolkits in AI-assisted frontend work, switched its default underlying primitives from Radix to Base UI. Anything scaffolded going forward will inherit Base UI's component behavior and APIs instead of Radix's. If you have existing shadcn components pinned to Radix, upgrades may need review.
-- [R] [hn-top] Command and Conquer Generals natively ported to macOS, iPhone, iPad using Fable — https://github.com/ammaarreshi/Generals-Mac-iOS-iPad/tree/main — Hobbyist game-porting project; genuine engineering effort but a narrow niche (retro game compatibility) with no decision impact for typical solo SaaS/agent-work audience.
-- [R] [hn-top] If you're a button, you have one job (hn-top) — https://unsung.aresluna.org/if-youre-a-button-you-have-one-job/ — Same article as the lobsters submission above.
-- [R] [hn-top] Pandoc Lua Filters — https://pandoc.org/lua-filters.html — Static reference documentation, not news.
-- [M] [hn-top] GPT-5.5 Codex reasoning-token clustering may be leading to degraded performance — https://github.com/openai/codex/issues/30364 — A GitHub issue on openai/codex reports that reasoning-token clustering behavior in GPT-5.5 Codex may be degrading output quality. Not yet confirmed by OpenAI as a real regression versus a misdiagnosis.
-- [R] [hn-top] Google Books (or similar) all book scans – $200k bounty (2025) — https://software.annas-archive.gl/AnnaArchivist/annas-archive/-/work_items/234 — Dated (2025) bounty listing on a book-archival project; no fetched content, no timely decision impact.
-- [R] [hn-top] Jellyfish can heal wounds in minutes. Scientists want their secrets — https://www.mbl.edu/news/jellyfish-can-heal-wounds-minutes-scientists-want-their-secrets — Off-topic biology/science story, no relevance to a solo software builder's decisions.
-- [R] [hn-top] Leaking YouTube creators' private videos — https://javoriuski.com/post/youtube — No content fetched; unclear mechanism, scope, or whether this affects any tooling a solo developer would use.
-- [R] [hn-top] Atomic Force Microscope high-speed video, stainless etching, bacteria, and more — https://www.youtube.com/watch?v=DyIQkqBXhS0 — Off-topic science/microscopy video, no relevance to the target audience.
-- [R] [hn-top] Better Models: Worse Tools (hn-top mirror) — https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/ — Same article as above; already covered in a prior digest run.
-- [P] [hn-top] Meta's Un-Stable Signature — https://hackerfactor.com/blog/index.php?/archives/1098-Metas-Un-Stable-Signature.html — Independent researcher analysis (Hackerfactor, known for rigorous image-forensics writeups) examining weaknesses in Meta's AI content watermarking/provenance signature. If the watermark can be stripped or altered easily, it undermines Meta's content-provenance claims.
-- [P] [hn-top] Potential session/cache leakage between workspace instances or consumer accounts — https://github.com/anthropics/claude-code/issues/74066 — A user-filed GitHub issue on anthropics/claude-code reports that session or cache data may leak between separate workspace instances or consumer accounts. Not yet confirmed or fixed by Anthropic. Directly relevant to anyone running multiple Claude Code sessions or agent instances in parallel, since it implies a possible isolation failure between concurrent runs.
-- [P] [hn-top] Zig: All Package Management Functionality Moved from Compiler to Build System — https://ziglang.org/devlog/2026/#2026-06-30 — Zig's official devlog confirms package management has been fully moved out of the compiler and into the build system. This is a real architectural change for Zig toolchains and build scripts, not a speculative RFC.
-- [R] [hn-top] &quot;Beyond the limit&quot;: Satellites and mirrors in space pose threat to the night sky — https://www.eso.org/public/news/eso2607/ — Off-topic space/astronomy policy story, no relevance to the target audience.
-- [R] [hn-top] What ORMs have taught me: just learn SQL (2014) — https://wozniak.ca/blog/2014/08/03/1/index.html — A 12-year-old blog post; evergreen opinion, no timely news value.
-- [R] [reddit-saas] Guys my SaaS just passed 3,200 users! — https://www.reddit.com/r/SaaS/comments/1unxhag/guys_my_saas_just_passed_3200_users/ — Promotional milestone post, no generalizable lesson.
-- [R] [reddit-saas] Built my first SaaS and got my first $3 in revenue — https://www.reddit.com/r/SaaS/comments/1uny4zh/built_my_first_saas_and_got_my_first_3_in_revenue/ — Promotional milestone post with no generalizable lesson or evidence.
-- [P] [reddit-saas] One lesson from the GummySearch shutdown: never build your research process around one tool — https://www.reddit.com/r/SaaS/comments/1unwf9p/one_lesson_i_took_from_the_gummysearch_shutdown/ — After GummySearch (a Reddit research SaaS) shut down, the poster reframes customer research as a layered process (collect conversations, find patterns, act) rather than a single vendor tool, so a shutdown doesn't strand your workflow. Practical risk-management framing for solo builders who lean on niche SaaS tools for research or ops.
-- [R] [reddit-saas] Most SaaS tools solve the same problems in different ways — https://www.reddit.com/r/SaaS/comments/1unyoiu/most_saas_tools_solve_the_same_problems_in/ — Vague generic musing with no concrete claim or evidence.
-- [R] [reddit-saas] Innovative AI-Powered SaaS: Are We Moving Beyond Just Wrappers? — https://www.reddit.com/r/SaaS/comments/1unyxgo/innovative_aipowered_saas_are_we_moving_beyond/ — Vague open-ended discussion thread with no concrete claim.
-- [R] [reddit-saas] I spent 6 months building a standalone AI dev app instead of an IDE extension. Was this a mistake? — https://www.reddit.com/r/SaaS/comments/1unz6zu/i_spent_6_months_building_a_standalone_ai_dev_app/ — Self-promotional Reddit post seeking validation for a new AI dev tool; thin evidence, no independent verification.
-- [R] [reddit-saas] Someone tested several idea validation tools and told me my tool was the most accurate one... — https://www.reddit.com/r/SaaS/comments/1unz66w/someone_tested_several_idea_validation_tools_and/ — Self-promotional testimonial post.
-- [R] [reddit-saas] What makes a SaaS tool feel intuitive to you? — https://www.reddit.com/r/SaaS/comments/1unynlc/what_makes_a_saas_tool_feel_intuitive_to_you/ — Open-ended discussion prompt, no concrete claim or evidence.
-- [R] [reddit-saas] losing commitments between Slack, meetings, and email. Roast the idea — https://www.reddit.com/r/SaaS/comments/1unyn0r/losing_commitments_between_slack_meetings_and/ — Reddit 'roast my idea' validation-seeking post with no independent evidence.
-- [R] [reddit-saas] I've made an AI Automated Admin work for freelance designers - anyone want to try while it's still free? — https://www.reddit.com/r/SaaS/comments/1unymn3/ive_made_an_ai_automated_admin_work_for_freelance/ — Promotional beta-signup plug.
-- [R] [google-ai-changelog] API تعاملات (Google AI changelog, Farsi) — https://ai.google.dev/gemini-api/docs/interactions-overview?hl=fa — This is a localized (Farsi) Gemini API docs page, not a dated changelog entry describing an actual change; appears to be a scraper artifact rather than news.
-- [R] [lobsters] If you're a button, you have one job — https://unsung.aresluna.org/if-youre-a-button-you-have-one-job/ — Evergreen UX writing about button affordances; no new information or decision impact, and duplicated by the hn-top submission of the same article.
-- [R] [lobsters] ABI vs. API (2004) — https://lists.debian.org/debian-user/2004/02/msg00648.html — A 2004 mailing-list post; stale evergreen content with no timely news value.
-- [R] [lobsters] How is Zig working out after 3 years and 100k lines of game code? — https://www.youtube.com/watch?v=HXpUShkr2VQ — YouTube dev-diary anecdote; no fetched transcript/content, low decision impact for a general solo-dev audience.</pre>
+- [R] [gh-langchain] langchain-openrouter==0.2.6 — https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.6 — Minor LangChain OpenRouter patch adds custom default header support.
+- [R] [gh-langchain] langchain-mistralai==1.1.6 — https://github.com/langchain-ai/langchain/releases/tag/langchain-mistralai%3D%3D1.1.6 — Minor LangChain Mistral patch surfaces citation metadata.
+- [R] [reddit-saas] RIP SaaS — https://www.reddit.com/r/SaaS/comments/1uo3mlj/rip_saas/ — Opinion post about &quot;agentic AI startup&quot; positioning; more vent than evidence.
+- [R] [reddit-saas] Security holes I find in almost every vibecoded app — https://www.reddit.com/r/SaaS/comments/1uoko0q/security_holes_i_find_in_almost_every_vibecoded/ — Anecdotal vibecoding security warning; Reddit blocked full review.
+- [R] [reddit-saas] How much do you and your team spend on AI per month? — https://www.reddit.com/r/SaaS/comments/1uop66f/how_much_do_you_and_your_team_spend_on_ai_per/ — Open thread asking what small teams spend on AI each month.
+- [R] [reddit-saas] 7 subreddits where you can promote your app without getting banned — https://www.reddit.com/r/SaaS/comments/1uoq8og/7_subreddits_where_you_can_promote_your_app/ — List of subreddits for promotion; low signal.
+- [R] [reddit-saas] First 3 sales on the macOS app I've been building solo 🎉 — https://www.reddit.com/r/SaaS/comments/1uoc0n9/first_3_sales_on_the_macos_app_ive_been_building/ — Solo macOS app hit first three sales; nice anecdote, low leverage.
+- [R] [reddit-saas] I took a brand to $100k ARR with FB ads and reels. Tried the same playbook on a SaaS and none of it worked. 30-day breakdown. — https://www.reddit.com/r/SaaS/comments/1uoprl2/i_took_a_brand_to_100k_arr_with_fb_ads_and_reels/ — FB ads/reels playbook failed on SaaS; interesting but narrow growth anecdote.
+- [R] [reddit-saas] One Reddit thread brought me 13 paying customers in a week — https://www.reddit.com/r/SaaS/comments/1uo6yz1/one_reddit_thread_brought_me_13_paying_customers/ — One Reddit thread reportedly drove 13 customers; anecdotal.
+- [R] [reddit-saas] How difficult is it to get to $10k MRR and for those who did or have seen people who got to $10K MRR, what did those people do differently? — https://www.reddit.com/r/SaaS/comments/1uomdn3/how_difficult_is_it_to_get_to_10k_mrr_and_for/ — Question about reaching $10k MRR; no concrete finding.
+- [R] [reddit-saas] I spent weeks finding 300+ places to submit a SaaS. Here's the list (and what actually matters) — https://www.reddit.com/r/SaaS/comments/1uo7l04/i_spent_weeks_finding_300_places_to_submit_a_saas/ — 300+ SaaS submission places list; likely low-leverage distribution content.
+- [R] [reddit-saas] I spent $20 on Meta ads for my SaaS. Here's every number and what I learned. — https://www.reddit.com/r/SaaS/comments/1uoh80l/i_spent_20_on_meta_ads_for_my_saas_heres_every/ — Meta ads spend of $20 is too small to be broadly useful.
+- [R] [reddit-saas] Hello seniors, where do you get the demand for your products? — https://www.reddit.com/r/SaaS/comments/1uop1f8/hello_seniors_where_do_you_get_the_demand_for/ — Question about finding demand sources for products.
+- [R] [reddit-saas] Building BugMojo.com need a mern developer — https://www.reddit.com/r/SaaS/comments/1uoqthy/building_bugmojocom_need_a_mern_developer/ — Hiring post for a MERN developer.
+- [R] [reddit-saas] I built a tool that lets you make product videos that look like they cost 10k, in an hour — https://www.reddit.com/r/SaaS/comments/1uo4uzg/i_built_a_tool_that_lets_you_make_product_videos/ — Promo for a product-video tool; more pitch than report.
+- [R] [reddit-saas] I am tired of seeing ai slop shitty self promotions — https://www.reddit.com/r/SaaS/comments/1uo0z4y/i_am_tired_of_seeing_ai_slop_shitty_self/ — Complaint about AI slop promotions; no actionable takeaway.
+- [R] [reddit-saas] Can Superbase handle my complete backend? — https://www.reddit.com/r/SaaS/comments/1uoljpf/can_superbase_handle_my_complete_backend/ — Question about using Supabase for the full backend.
+- [R] [reddit-saas] I'm struggling to give advice to my junior devs and I need help — https://www.reddit.com/r/SaaS/comments/1uoh2ld/im_struggling_to_give_advice_to_my_junior_devs/ — Advice request on mentoring junior devs.
+- [R] [reddit-saas] Did I make the right decision moving away from Supabase + Vercel? — https://www.reddit.com/r/SaaS/comments/1uoc4of/did_i_make_the_right_decision_moving_away_from/ — Question about moving away from Supabase and Vercel.
+- [R] [reddit-saas] Should I give all my 50k users lifetime free access? — https://www.reddit.com/r/SaaS/comments/1uonmzj/should_i_give_all_my_50k_users_lifetime_free/ — Question about giving 50k users lifetime free access.
+- [R] [reddit-saas] Does AI-generated code just move your debugging pain to later? — https://www.reddit.com/r/SaaS/comments/1uonhg1/does_aigenerated_code_just_move_your_debugging/ — Question asking if AI-generated code delays debugging pain.
+- [R] [reddit-saas] What's one small website change that made a bigger difference than expected? — https://www.reddit.com/r/SaaS/comments/1uonbe0/whats_one_small_website_change_that_made_a_bigger/ — Question about small website changes that moved metrics.
+- [R] [reddit-saas] Biggest mistake I’ve been making — https://www.reddit.com/r/SaaS/comments/1uojzwx/biggest_mistake_ive_been_making/ — General mistake/advice thread; not specific enough.
+- [R] [hn-show] Show HN: Homegames. An open-source game platform I've been making for 8 years — https://homegames.io — Open-source game platform show-and-tell; not central to this audience.
+- [M] [hn-show] Show HN: KiCad in the Browser — https://demo.pcbjam.com/ — PCBJam is an early alpha that edits KiCad projects in-browser from a local folder without uploading files.
+- [P] [google-ai-changelog] API Interactions — https://ai.google.dev/gemini-api/docs/interactions-overview?hl=fr — Gemini Interactions API is now GA and the recommended default for new projects.
+- [P] [huggingface-blog] 🤗 Kernels: Major Updates — https://huggingface.co/blog/revamped-kernels — Hugging Face Kernels adds a dedicated repo type, trusted publishers, signing, and better ABI coverage.
+- [M] [vercel-changelog] Chat SDK adds Twilio adapter support — https://vercel.com/changelog/chat-sdk-adds-twilio-adapter-support — Vercel Chat SDK now has a Twilio adapter for SMS, MMS, inbound media, and low-level voice helpers.
+- [P] [simon-willison] sqlite-utils 4.0rc3 — https://simonwillison.net/2026/Jul/6/sqlite-utils/#atom-everything — sqlite-utils 4.0rc3 adds compound foreign keys and changes case-insensitive handling ahead of the 4.0 stable cut.
+- [R] [hn-top] OpenPrinter — https://www.opentools.studio/ — OpenPrinter surfaced without enough context to justify inclusion.
+- [R] [hn-top] GPT-5.6 Sol Ultra will be in Codex — https://twitter.com/thsottiaux/status/2073933490513752151 — Twitter claim about GPT-5.6 in Codex; too speculative.
+- [R] [hn-top] Has_not_been_viewed_much — https://iamwillwang.com/notes/has-not-been-viewed-much/ — Personal note/essay; low editorial leverage.
+- [R] [hn-top] Organic Maps — https://organicmaps.app/ — Organic Maps link without a decision-changing update.
+- [M] [hn-top] Building relationships with customers through support didn't turn out as hoped — https://www.uncommonapps.nyc/p/castro-podcasts-things-i-got-wrong-support — Castro owner says detailed support rarely builds loyalty; product improvements beat long explanatory replies.
+- [R] [hn-top] Show HN: Homegames. An open-source game platform I've been making for 8 years — https://homegames.io — Duplicate Homegames item.
+- [R] [hn-top] It's not about physical vs. digital games, it's about ownership — https://popcar.bearblog.dev/its-about-ownership/ — Essay about ownership in digital vs physical games.
+- [P] [hn-top] Does code cleanliness affect coding agents? A controlled minimal-pair study — https://arxiv.org/abs/2605.20049 — A minimal-pair study found clean code cut coding-agent tokens 7-8% and file revisits 34%, without changing pass rate.
+- [R] [hn-top] The Age of Personalized Hardware Is Coming — https://geastack.com/blog-the-age-of-personalized-hardware-is-coming — Essay arguing for personalized hardware; speculative.
+- [R] [hn-top] Starring the Computer — https://www.starringthecomputer.com/computers.html — Essay/project about computers as performers; low relevance.
+- [R] [hn-top] Zuckerberg says AI agent development going slower than expected — https://www.reuters.com/business/zuckerberg-says-ai-agent-development-going-slower-than-expected-2026-07-02/ — Reuters article was unreadable here; headline says AI agents are progressing slower than expected.</pre>
     </details>
   </main>
   <footer>
