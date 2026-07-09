@@ -5,21 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>July 8, 2026 report log — The Nightly Librarian</title>
-  <meta name="description" content="8 stories cleared the bar, led by Januscape: Guest-to-Host Escape in KVM/x86, tencent/Hy3, and Postgres Is Enough.">
+  <meta name="description" content="5 stories cleared the bar, led by Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more, Show HN: PostgreSQL performance and cost">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-07-08/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="July 8, 2026 report log | The Nightly Librarian">
-  <meta property="og:description" content="8 stories cleared the bar, led by Januscape: Guest-to-Host Escape in KVM/x86, tencent/Hy3, and Postgres Is Enough.">
+  <meta property="og:description" content="5 stories cleared the bar, led by Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more, Show HN: PostgreSQL performance and cost">
   <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-07-08/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="July 8, 2026 report log | The Nightly Librarian">
-  <meta name="twitter:description" content="8 stories cleared the bar, led by Januscape: Guest-to-Host Escape in KVM/x86, tencent/Hy3, and Postgres Is Enough.">
+  <meta name="twitter:description" content="5 stories cleared the bar, led by Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more, Show HN: PostgreSQL performance and cost">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
@@ -36,7 +36,7 @@
     </div>
     <div class="dateline">
       <span>July 8, 2026 · Report log</span>
-      <span>Jul 8, 2026, 2:16 AM</span>
+      <span>Jul 8, 2026, 7:09 AM</span>
     </div>
   </header>
   <main>
@@ -44,52 +44,37 @@
     <h1>July 8, 2026</h1>
     <div class="summary-card">
       <div class="eyebrow">Report summary</div>
-      <p>8 stories cleared the bar, led by Januscape: Guest-to-Host Escape in KVM/x86, tencent/Hy3, and Postgres Is Enough.</p>
+      <p>5 stories cleared the bar, led by Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more, Show HN: PostgreSQL performance and cost across 23 EC2 instance types, and Show HN: Docx-CLI: agents read/edit Word docs using 1/2 the time and tokens.</p>
       <div class="meta" style="margin-top:0.4rem;">
-        <span>8 worth-attention items</span><span>37 digest lines</span>
+        <span>5 worth-attention items</span><span>40 digest lines</span>
       </div>
     </div>
     <h2>Worth attention</h2>
     <div class="item-stack">
 
       <div class="item">
-        <div class="item-title"><a href="https://github.com/V4bel/Januscape" target="_blank" rel="noopener">Januscape: Guest-to-Host Escape in KVM/x86</a></div>
-        <div class="item-takeaway">A published proof-of-concept demonstrates a guest-to-host escape against KVM/x86 hypervisors. Since most cloud VPS providers (including Hetzner) run KVM-based virtualization, this is worth a quick check on host kernel/QEMU patch status. No CVE number or confirmed patch status was available in the fetched content, so treat this as an early warning rather than a confirmed active threat.</div>
+        <div class="item-title"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/" target="_blank" rel="noopener">Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more</a></div>
+        <div class="item-takeaway">Gemini managed agents add async background runs, remote MCP access, custom tools, and credential refresh in one hosted sandbox.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/6/hy3/#atom-everything" target="_blank" rel="noopener">tencent/Hy3</a></div>
-        <div class="item-takeaway">Tencent released Hy3, an Apache 2.0-licensed 295B-parameter Mixture-of-Experts model (21B active parameters) with a 256K context window, claimed to rival flagship open-source models with 2-5x the parameters. It's free on OpenRouter through July 21st, and Simon Willison confirmed it working with his standard pelican-on-a-bicycle SVG test.</div>
+        <div class="item-title"><a href="https://postgres.saneengineer.com" target="_blank" rel="noopener">Show HN: PostgreSQL performance and cost across 23 EC2 instance types</a></div>
+        <div class="item-takeaway">An interactive AWS Postgres benchmark maps throughput and latency across 23 EC2 and disk combinations, highlighting cheapest configs that clear a target load.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://postgresisenough.dev" target="_blank" rel="noopener">Postgres Is Enough</a></div>
-        <div class="item-takeaway">Argues Postgres alone (via LISTEN/NOTIFY, JSONB, full-text search, etc.) can replace Redis, a message queue, and a search engine for small-to-mid scale apps. Content was title-only, so the specific techniques weren't verified here.</div>
+        <div class="item-title"><a href="https://github.com/kklimuk/docx-cli" target="_blank" rel="noopener">Show HN: Docx-CLI: agents read/edit Word docs using 1/2 the time and tokens</a></div>
+        <div class="item-takeaway">docx-cli pitches a safer path for agent Word edits, with stable locators, redlines, and benchmark claims around fewer tokens and fewer broken files.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://thebuild.com/blog/preempt_none-is-dead-your-postgres-probably-doesnt-care/" target="_blank" rel="noopener">PREEMPT_NONE Is Dead; Your Postgres Probably Doesn’t Care</a></div>
-        <div class="item-takeaway">Discusses a recent Linux kernel preemption model change and argues it has negligible practical impact on Postgres performance for most workloads. Useful background if you're ever debugging Postgres latency on a self-managed VPS, but not an action item.</div>
+        <div class="item-title"><a href="https://vercel.com/changelog/chat-sdk-vercel-connect" target="_blank" rel="noopener">Chat SDK now supports Vercel Connect</a></div>
+        <div class="item-takeaway">Vercel says Chat SDK can now use Vercel Connect for Slack, GitHub, and Linear credentials, with short-lived tokens and OIDC webhook verification.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://www.pcmag.com/news/a-hackers-arrest-reveals-microsoft-can-track-users-via-a-windows-device" target="_blank" rel="noopener">Microsoft Can Track Users via a Windows Device ID</a></div>
-        <div class="item-takeaway">A hacker's arrest revealed that Microsoft can identify and track individual Windows machines via a device ID, raising fresh questions about the scope of Windows telemetry and tracking capability. Article content wasn't fetched, so details on exactly what's tracked and how are unconfirmed.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://www.openssh.org/releasenotes.html#10.4" target="_blank" rel="noopener">OpenSSH 10.4</a></div>
-        <div class="item-takeaway">New OpenSSH release. Specific changelog content wasn't fetched, so it's unknown whether this includes security fixes.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://github.com/deepset-ai/haystack/releases/tag/v2.31.0-rc2" target="_blank" rel="noopener">v2.31.0-rc2</a></div>
-        <div class="item-takeaway">Haystack (RAG/LLM orchestration framework) release candidate adds async support to LLM/faithfulness/context-relevance evaluators, YAML frontmatter extraction for Markdown documents, and an output_passthrough option on ConditionalRouter to preserve non-string types. It's an RC, not a stable release yet.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://stratechery.com/2026/a-script-for-mark-zuckerberg/" target="_blank" rel="noopener">A Script for Mark Zuckerberg</a></div>
-        <div class="item-takeaway">Stratechery piece (title: a suggested script for what Zuckerberg should say on Meta's next earnings call). Full article content wasn't fetched, so the specific argument is unknown.</div>
+        <div class="item-title"><a href="https://github.com/rowboatlabs/rowboat" target="_blank" rel="noopener">Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop</a></div>
+        <div class="item-takeaway">Rowboat is an open-source, local-first desktop AI coworker with a Markdown knowledge graph, project workspaces, and MCP hookups.</div>
       </div>
     </div>
     <h2>Full digest</h2>
@@ -98,207 +83,20 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://radicle.dev/" target="_blank" rel="noopener">Radicle: P2P Git Replication with Git Native Issues and Patches</a>
+          <a href="https://github.com/crewAIInc/crewAI/releases/tag/1.15.2" target="_blank" rel="noopener">1.15.2</a>
         </div>
-        <div class="item-takeaway">Link post pointing to Radicle, an existing peer-to-peer git collaboration tool with native issues/patches. No new release or news hook in the fetched content.</div>
+        <div class="item-takeaway">1.15.2</div>
         <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://postgresisenough.dev" target="_blank" rel="noopener">Postgres Is Enough</a>
-        </div>
-        <div class="item-takeaway">Argues Postgres alone (via LISTEN/NOTIFY, JSONB, full-text search, etc.) can replace Redis, a message queue, and a search engine for small-to-mid scale apps. Content was title-only, so the specific techniques weren't verified here.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://www.openssh.org/releasenotes.html#10.4" target="_blank" rel="noopener">OpenSSH 10.4</a>
-        </div>
-        <div class="item-takeaway">New OpenSSH release. Specific changelog content wasn't fetched, so it's unknown whether this includes security fixes.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-crewai</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://ebitengine.org/en/blog/native_compiling_for_nintendo_switch.html" target="_blank" rel="noopener">Compiling a Go program into a native binary for Nintendo Switch (2022)</a>
+          <a href="https://github.com/microsoft/semantic-kernel/releases/tag/dotnet-1.78.0" target="_blank" rel="noopener">dotnet-1.78.0</a>
         </div>
-        <div class="item-takeaway">A 2022 hobbyist writeup on cross-compiling Go for Nintendo Switch, resurfaced on Lobsters. Fun but not time-sensitive or business-relevant.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://thebuild.com/blog/preempt_none-is-dead-your-postgres-probably-doesnt-care/" target="_blank" rel="noopener">PREEMPT_NONE Is Dead; Your Postgres Probably Doesn’t Care</a>
-        </div>
-        <div class="item-takeaway">Discusses a recent Linux kernel preemption model change and argues it has negligible practical impact on Postgres performance for most workloads. Useful background if you're ever debugging Postgres latency on a self-managed VPS, but not an action item.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://github.com/V4bel/Januscape" target="_blank" rel="noopener">Januscape: Guest-to-Host Escape in KVM/x86</a>
-        </div>
-        <div class="item-takeaway">A published proof-of-concept demonstrates a guest-to-host escape against KVM/x86 hypervisors. Since most cloud VPS providers (including Hetzner) run KVM-based virtualization, this is worth a quick check on host kernel/QEMU patch status. No CVE number or confirmed patch status was available in the fetched content, so treat this as an early warning rather than a confirmed active threat.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://bruceediger.com/posts/git-config-spider/" target="_blank" rel="noopener">Caught a .git/config crawler</a>
-        </div>
-        <div class="item-takeaway">Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.youtube.com/watch?v=o0gOALTvkcc" target="_blank" rel="noopener">Can you run every line of code in Super Mario Bros.?</a>
-        </div>
-        <div class="item-takeaway">Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.electrospaces.net/2025/10/an-interesting-advertisement-for-stu.html" target="_blank" rel="noopener">AT&amp;T's very rare Security-Plus Telephone</a>
-        </div>
-        <div class="item-takeaway">Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://shomy.is-a.dev/blog/article/unlocking-kyocera-ky42c" target="_blank" rel="noopener">Hacking the Kyocera KY-42C</a>
-        </div>
-        <div class="item-takeaway">Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://arxiv.org/html/2605.30106" target="_blank" rel="noopener">A Rust-to-Lean verification pipeline with AI provers: An experience report</a>
-        </div>
-        <div class="item-takeaway">Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://blog.alexbeals.com/posts/owl-cam" target="_blank" rel="noopener">Turning a Chinese IoT camera into an owl livestream</a>
-        </div>
-        <div class="item-takeaway">Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://simonwillison.net/2026/Jul/6/hy3/#atom-everything" target="_blank" rel="noopener">tencent/Hy3</a>
-        </div>
-        <div class="item-takeaway">Tencent released Hy3, an Apache 2.0-licensed 295B-parameter Mixture-of-Experts model (21B active parameters) with a 256K context window, claimed to rival flagship open-source models with 2-5x the parameters. It's free on OpenRouter through July 21st, and Simon Willison confirmed it working with his standard pelican-on-a-bicycle SVG test.</div>
-        <div class="item-meta">
-          <span>simon-willison</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://status.claude.com/incidents/hh9hj15mxkrx" target="_blank" rel="noopener">Elevated errors on Claude Sonnet 5</a>
-        </div>
-        <div class="item-takeaway">Status-page incident: elevated errors on Claude Sonnet 5, investigated and resolved same day (Jul 7, 06:58-07:37 UTC).</div>
-        <div class="item-meta">
-          <span>claude-status</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://status.claude.com/incidents/d23j8s7t8rx2" target="_blank" rel="noopener">Claude Tag seeing elevated GitHub operation failures</a>
-        </div>
-        <div class="item-takeaway">Status-page incident: Claude Tag saw elevated error rates on GitHub operations (denied operations) starting Jul 6, 21:49 UTC, under investigation at last update in the fetched content.</div>
-        <div class="item-meta">
-          <span>claude-status</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://status.claude.com/incidents/k5yvlfppnp4f" target="_blank" rel="noopener">Elevated errors on Claude.ai</a>
-        </div>
-        <div class="item-takeaway">Status-page incident: elevated errors on Claude.ai on Jul 6 (19:18-20:05 UTC) that also broke OAuth login for Claude Code during the window; resolved same evening.</div>
-        <div class="item-meta">
-          <span>claude-status</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems</a>
-        </div>
-        <div class="item-takeaway">Anthropic customer case study headline about the Government of Alberta using Claude for cybersecurity work. The URL points to Anthropic's generic news index rather than the specific article, and no article content was fetched.</div>
-        <div class="item-meta">
-          <span>anthropic-blog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://github.com/deepset-ai/haystack/releases/tag/v2.31.0-rc2" target="_blank" rel="noopener">v2.31.0-rc2</a>
-        </div>
-        <div class="item-takeaway">Haystack (RAG/LLM orchestration framework) release candidate adds async support to LLM/faithfulness/context-relevance evaluators, YAML frontmatter extraction for Markdown documents, and an output_passthrough option on ConditionalRouter to preserve non-string types. It's an RC, not a stable release yet.</div>
-        <div class="item-meta">
-          <span>gh-haystack</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/microsoft/semantic-kernel/releases/tag/python-1.44.0" target="_blank" rel="noopener">python-1.44.0</a>
-        </div>
-        <div class="item-takeaway">Semantic Kernel Python release almost entirely made up of dependabot dependency bumps (tornado, pyjwt, starlette, pymongo, torch, etc.), with a couple of minor internal hardening changes (MCP tool exclusion enforcement, SSE server loopback default). No user-facing feature changes.</div>
+        <div class="item-takeaway">dotnet-1.78.0</div>
         <div class="item-meta">
           <span>gh-semantic-kernel</span>
         </div>
@@ -307,198 +105,418 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1upqvgi/i_am_so_frustrated_about_how_difficult_it_is_to/" target="_blank" rel="noopener">I am so frustrated about how difficult it is to get traffic 😢</a>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.2.32-beta.286" target="_blank" rel="noopener">CLI Beta @composio/cli@0.2.32-beta.286</a>
         </div>
-        <div class="item-takeaway">A solo builder vents about getting 40K+ daily social views but almost no website traffic or app installs despite an SNS-first content strategy and 100+ SEO pages.</div>
+        <div class="item-takeaway">CLI Beta @composio/cli@0.2.32-beta.286</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1upp66c/today_our_biggest_competitor_signed_up_for_our/" target="_blank" rel="noopener">Today our biggest competitor signed up for our SaaS.</a>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.2.32-beta.285" target="_blank" rel="noopener">CLI Beta @composio/cli@0.2.32-beta.285</a>
         </div>
-        <div class="item-takeaway">A founder shares that their much larger competitor (~$50k MRR) signed up for their small SaaS product (under $500 MRR), interpreting it as encouraging but with no clear conclusion or actionable data.</div>
+        <div class="item-takeaway">CLI Beta @composio/cli@0.2.32-beta.285</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1upqxjb/anyone_elses_team_using_ai_but_the_company_isnt/" target="_blank" rel="noopener">Anyone else's team &quot;using AI&quot; but the company isn't actually moving faster?</a>
-        </div>
-        <div class="item-takeaway">A small SaaS team lead questions whether their AI tool spend (Cursor, ChatGPT, Notion AI) is producing real leverage, theorizing that time is lost to feeding tools context and verifying AI output rather than genuine speedup.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1upqmta/uipath_arbitrage_automation/" target="_blank" rel="noopener">UIPATH arbitrage automation</a>
-        </div>
-        <div class="item-takeaway">A Reddit poster asks for help building a UIPath bot to auto-place sports betting arbitrage wagers based on a Telegram channel's tips.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1upqa68/i_dont_think_technical_founders_have_a_marketing/" target="_blank" rel="noopener">I don’t think technical founders have a marketing problem.</a>
-        </div>
-        <div class="item-takeaway">An engineer-turned-founder reflects that the real gap for technical founders isn't marketing channels but a missing systematic approach to customer acquisition (identify who has the problem, find where they talk about it, start conversations).</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uppiz2/created_this_saas_to_help_people_get_more_client/" target="_blank" rel="noopener">created this saas to help people get more client via cold call</a>
-        </div>
-        <div class="item-takeaway">Self-promotional post for Ringringa, a not-yet-deployed browser-based international calling tool for outbound sales/recruiting teams, with a waitlist link.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uppbd0/reliability_not_capability_seems_to_be_the_real/" target="_blank" rel="noopener">Reliability, not capability, seems to be the real blocker for agentic SaaS features right now, anyone else finding this?</a>
-        </div>
-        <div class="item-takeaway">Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1upnuqd/would_you_use_a_platform_that_rewards_people_for/" target="_blank" rel="noopener">Would you use a platform that rewards people for testing new apps?</a>
-        </div>
-        <div class="item-takeaway">Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uprosl/how_do_you_decide_pricing_for_your_saas/" target="_blank" rel="noopener">How do you decide pricing for your SAAS ?</a>
-        </div>
-        <div class="item-takeaway">Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uprnv7/hello_fellow_developer/" target="_blank" rel="noopener">Hello fellow Developer,</a>
-        </div>
-        <div class="item-takeaway">Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://stratechery.com/2026/a-script-for-mark-zuckerberg/" target="_blank" rel="noopener">A Script for Mark Zuckerberg</a>
-        </div>
-        <div class="item-takeaway">Stratechery piece (title: a suggested script for what Zuckerberg should say on Meta's next earnings call). Full article content wasn't fetched, so the specific argument is unknown.</div>
-        <div class="item-meta">
-          <span>stratechery</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://thisbugslife.com/2021/11/21/dolosse-a-south-african-invention-used-over-the-world/" target="_blank" rel="noopener">Dolosse – a South African invention used over the world</a>
-        </div>
-        <div class="item-takeaway">HN post about dolosse, concrete interlocking blocks used in coastal engineering to protect breakwaters — an engineering curiosity piece.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://www.pcmag.com/news/a-hackers-arrest-reveals-microsoft-can-track-users-via-a-windows-device" target="_blank" rel="noopener">Microsoft Can Track Users via a Windows Device ID</a>
+          <a href="https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/" target="_blank" rel="noopener">Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more</a>
         </div>
-        <div class="item-takeaway">A hacker's arrest revealed that Microsoft can identify and track individual Windows machines via a device ID, raising fresh questions about the scope of Windows telemetry and tracking capability. Article content wasn't fetched, so details on exactly what's tracked and how are unconfirmed.</div>
+        <div class="item-takeaway">Gemini managed agents add async background runs, remote MCP access, custom tools, and credential refresh in one hosted sandbox.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>google-ai-blog</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://blog.rust-lang.org/inside-rust/2026/07/06/unite-for-clippy/" target="_blank" rel="noopener">Together for a healthier Clippy</a>
+          <a href="https://neiltheseal.app/" target="_blank" rel="noopener">Show HN: Neil the Seal Game</a>
         </div>
-        <div class="item-takeaway">Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</div>
+        <div class="item-takeaway">Show HN: Neil the Seal Game</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>hn-show</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://doscienceto.it/waterpark" target="_blank" rel="noopener">Waterfall CAD Playground - A Haskell powered programmable-CAD environment, in the browser with WASM</a>
+          <a href="https://davit.app" target="_blank" rel="noopener">Show HN: Davit, a Apple Containers UI</a>
         </div>
-        <div class="item-takeaway">Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</div>
+        <div class="item-takeaway">Show HN: Davit, a Apple Containers UI</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://github.com/rowboatlabs/rowboat" target="_blank" rel="noopener">Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop</a>
+        </div>
+        <div class="item-takeaway">Rowboat is an open-source, local-first desktop AI coworker with a Markdown knowledge graph, project workspaces, and MCP hookups.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/kklimuk/docx-cli" target="_blank" rel="noopener">Show HN: Docx-CLI: agents read/edit Word docs using 1/2 the time and tokens</a>
+        </div>
+        <div class="item-takeaway">docx-cli pitches a safer path for agent Word edits, with stable locators, redlines, and benchmark claims around fewer tokens and fewer broken files.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://postgres.saneengineer.com" target="_blank" rel="noopener">Show HN: PostgreSQL performance and cost across 23 EC2 instance types</a>
+        </div>
+        <div class="item-takeaway">An interactive AWS Postgres benchmark maps throughput and latency across 23 EC2 and disk combinations, highlighting cheapest configs that clear a target load.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://monoid.github.io/posts/false-sharing-alignment/" target="_blank" rel="noopener">Why false sharing alignment should be 128 bytes on x64</a>
+          <a href="https://whimfiles.com" target="_blank" rel="noopener">Show HN: Fast, native Mac file manager (filters, fuzzy find, 9 MB, no Electron)</a>
         </div>
-        <div class="item-takeaway">Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</div>
+        <div class="item-takeaway">Show HN: Fast, native Mac file manager (filters, fuzzy find, 9 MB, no Electron)</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>hn-show</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://blog.andr2i.com/posts/2026-07-06-eliminating-go-bound-checks-with-unsafe" target="_blank" rel="noopener">Eliminating Go bound checks with unsafe</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1upx3g8/a_founder_paid_me_to_redesign_his_saas_because/" target="_blank" rel="noopener">A founder paid me to redesign his SaaS because trials weren’t converting. I checked one number and cancelled the redesign.</a>
         </div>
-        <div class="item-takeaway">Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</div>
+        <div class="item-takeaway">A founder paid me to redesign his SaaS because trials weren’t converting. I checked one number and cancelled the rede...</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://ketanjoshi.co/2026/07/01/googles-exponential-path-to-climate-wrecking-digital-bloat/" target="_blank" rel="noopener">Google’s exponential path to climate-wrecking digital bloat</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uql74k/customer_interviews_are_making_me_rethink_my/" target="_blank" rel="noopener">Customer interviews are making me rethink my entire SaaS positioning</a>
         </div>
-        <div class="item-takeaway">Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</div>
+        <div class="item-takeaway">Customer interviews are making me rethink my entire SaaS positioning</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1upvpdo/one_year_and_48k_clicks_from_google_later/" target="_blank" rel="noopener">One Year and 48K Clicks From Google Later</a>
+        </div>
+        <div class="item-takeaway">One Year and 48K Clicks From Google Later</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uqil9m/time_to_build_a_thin_wrapper_around_sol_and_call/" target="_blank" rel="noopener">Time to build a thin wrapper around Sol and call myself a visionary startup founder.😂</a>
+        </div>
+        <div class="item-takeaway">Time to build a thin wrapper around Sol and call myself a visionary startup founder.😂</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1upz8vh/made_500_from_my_vibecoded_plugin/" target="_blank" rel="noopener">Made $500 from my vibe-coded plugin</a>
+        </div>
+        <div class="item-takeaway">Made $500 from my vibe-coded plugin</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uqjamv/whats_missing_in_the_current_project_management/" target="_blank" rel="noopener">What's missing in the current Project Management Tools in the market?</a>
+        </div>
+        <div class="item-takeaway">What's missing in the current Project Management Tools in the market?</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uq0kvr/got_my_3rd_paying_customer_today_small_win_but_it/" target="_blank" rel="noopener">Got my 3rd paying customer today. Small win, but it means a lot.</a>
+        </div>
+        <div class="item-takeaway">Got my 3rd paying customer today. Small win, but it means a lot.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uq9g12/finally_got_my_first_paying_customer/" target="_blank" rel="noopener">Finally got my first paying customer!!</a>
+        </div>
+        <div class="item-takeaway">Finally got my first paying customer!!</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uqkc2g/stuck_in_distribution/" target="_blank" rel="noopener">Stuck in distribution 🫪🫪</a>
+        </div>
+        <div class="item-takeaway">Stuck in distribution 🫪🫪</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uqgzjb/cold_email_reply_rates_are_averaging_34_in_2026/" target="_blank" rel="noopener">Cold email reply rates are averaging 3.4% in 2026. What are you actually seeing?</a>
+        </div>
+        <div class="item-takeaway">Cold email reply rates are averaging 3.4% in 2026. What are you actually seeing?</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uqje9v/there_are_no_universal_saas_rules/" target="_blank" rel="noopener">There are no universal SaaS rules</a>
+        </div>
+        <div class="item-takeaway">There are no universal SaaS rules</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uqj6m2/breakeven_and_endofrunway_land_in_the_same_quarter/" target="_blank" rel="noopener">Break-even and end-of-runway land in the same quarter</a>
+        </div>
+        <div class="item-takeaway">Break-even and end-of-runway land in the same quarter</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uqchfn/genuinely_what_did_you_do_to_instantly_spike_your/" target="_blank" rel="noopener">Genuinely what did you do to instantly spike your impressions?</a>
+        </div>
+        <div class="item-takeaway">Genuinely what did you do to instantly spike your impressions?</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uqlxdh/psa_email_deliverability_isnt_all_about_your/" target="_blank" rel="noopener">PSA: Email deliverability isn’t all about your tools &amp; infra</a>
+        </div>
+        <div class="item-takeaway">PSA: Email deliverability isn’t all about your tools &amp; infra</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uqlo52/have_saas_teams_become_too_quick_to_blame_their/" target="_blank" rel="noopener">Have SaaS teams become too quick to blame their CRM?</a>
+        </div>
+        <div class="item-takeaway">Have SaaS teams become too quick to blame their CRM?</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uq5t4l/24_subs_feel_like_a_success_but_also_like_a/" target="_blank" rel="noopener">24 Subs feel like a success but also like a failure</a>
+        </div>
+        <div class="item-takeaway">24 Subs feel like a success but also like a failure</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uqgaaf/i_built_an_email_api_for_ai_agents_would_love/" target="_blank" rel="noopener">I built an email API for AI agents. Would love feedback from devs building agents.</a>
+        </div>
+        <div class="item-takeaway">I built an email API for AI agents. Would love feedback from devs building agents.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uqcrn6/can_you_tell_me_how_you_went_about_getting_the/" target="_blank" rel="noopener">Can you tell me how you went about getting the word out about your SaaS?</a>
+        </div>
+        <div class="item-takeaway">Can you tell me how you went about getting the word out about your SaaS?</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uqix2f/how_does_company_actually_keep_up_with_changing/" target="_blank" rel="noopener">How does company actually keep up with changing regulations?</a>
+        </div>
+        <div class="item-takeaway">How does company actually keep up with changing regulations?</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uqdtln/can_a_saas_survive_if_consumers_never_pay/" target="_blank" rel="noopener">Can a SaaS survive if consumers never pay?</a>
+        </div>
+        <div class="item-takeaway">Can a SaaS survive if consumers never pay?</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uq8ywl/what_decision_seemed_small_at_the_time_but_became/" target="_blank" rel="noopener">What decision seemed small at the time but became expensive to change later?</a>
+        </div>
+        <div class="item-takeaway">What decision seemed small at the time but became expensive to change later?</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/" target="_blank" rel="noopener">Cloudflare proudly joins the UK government's Cyber Resilience Pledge</a>
+        </div>
+        <div class="item-takeaway">Cloudflare proudly joins the UK government's Cyber Resilience Pledge</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/ainews-lilian-weng-summarizes-35" target="_blank" rel="noopener">[AINews] Lilian Weng summarizes 35 papers on Harness Engineering for RSI</a>
+        </div>
+        <div class="item-takeaway">[AINews] Lilian Weng summarizes 35 papers on Harness Engineering for RSI</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://huggingface.co/blog/amazon/one-click-to-sagemaker-studio" target="_blank" rel="noopener">From Hugging Face to Amazon SageMaker Studio in one click</a>
+        </div>
+        <div class="item-takeaway">From Hugging Face to Amazon SageMaker Studio in one click</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://huggingface.co/blog/microsoft/foundry-managed-compute" target="_blank" rel="noopener">Hugging Face Models on Foundry Managed Compute</a>
+        </div>
+        <div class="item-takeaway">Hugging Face Models on Foundry Managed Compute</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://huggingface.co/blog/skypilot-hf-storage" target="_blank" rel="noopener">Run AI workloads on any cloud, store on Hugging Face: zero-egress storage with SkyPilot</a>
+        </div>
+        <div class="item-takeaway">Run AI workloads on any cloud, store on Hugging Face: zero-egress storage with SkyPilot</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.80" target="_blank" rel="noopener">v16.3.0-canary.80</a>
+        </div>
+        <div class="item-takeaway">v16.3.0-canary.80</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/eve-chat-sdk-channel" target="_blank" rel="noopener">Use any Chat SDK adapter with eve</a>
+        </div>
+        <div class="item-takeaway">Use any Chat SDK adapter with eve</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/chat-sdk-vercel-connect" target="_blank" rel="noopener">Chat SDK now supports Vercel Connect</a>
+        </div>
+        <div class="item-takeaway">Vercel says Chat SDK can now use Vercel Connect for Slack, GitHub, and Linear credentials, with short-lived tokens and OIDC webhook verification.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
         </div>
       </div>
     </div>
@@ -506,76 +524,70 @@
       <summary>Original markdown</summary>
       <pre class="raw-report"># Nightly Librarian — Newsletter draft
 
-Run: 6db07e51-4b9b-40c5-954b-2a61c8e2d655
-Started: 2026-07-08T06:09:37.692Z
-Completed: 2026-07-08T06:16:56.525Z
+Run: 44572fdb-8e4d-4557-880d-f36bef4eea05
+Started: 2026-07-08T11:01:56.294Z
+Completed: 2026-07-08T11:09:05.420Z
 
 ## Worth attention
 
-- **Januscape: Guest-to-Host Escape in KVM/x86**
-  https://github.com/V4bel/Januscape
-  A published proof-of-concept demonstrates a guest-to-host escape against KVM/x86 hypervisors. Since most cloud VPS providers (including Hetzner) run KVM-based virtualization, this is worth a quick check on host kernel/QEMU patch status. No CVE number or confirmed patch status was available in the fetched content, so treat this as an early warning rather than a confirmed active threat.
-- **tencent/Hy3**
-  https://simonwillison.net/2026/Jul/6/hy3/#atom-everything
-  Tencent released Hy3, an Apache 2.0-licensed 295B-parameter Mixture-of-Experts model (21B active parameters) with a 256K context window, claimed to rival flagship open-source models with 2-5x the parameters. It's free on OpenRouter through July 21st, and Simon Willison confirmed it working with his standard pelican-on-a-bicycle SVG test.
-- **Postgres Is Enough**
-  https://postgresisenough.dev
-  Argues Postgres alone (via LISTEN/NOTIFY, JSONB, full-text search, etc.) can replace Redis, a message queue, and a search engine for small-to-mid scale apps. Content was title-only, so the specific techniques weren't verified here.
-- **PREEMPT_NONE Is Dead; Your Postgres Probably Doesn’t Care**
-  https://thebuild.com/blog/preempt_none-is-dead-your-postgres-probably-doesnt-care/
-  Discusses a recent Linux kernel preemption model change and argues it has negligible practical impact on Postgres performance for most workloads. Useful background if you're ever debugging Postgres latency on a self-managed VPS, but not an action item.
-- **Microsoft Can Track Users via a Windows Device ID**
-  https://www.pcmag.com/news/a-hackers-arrest-reveals-microsoft-can-track-users-via-a-windows-device
-  A hacker's arrest revealed that Microsoft can identify and track individual Windows machines via a device ID, raising fresh questions about the scope of Windows telemetry and tracking capability. Article content wasn't fetched, so details on exactly what's tracked and how are unconfirmed.
-- **OpenSSH 10.4**
-  https://www.openssh.org/releasenotes.html#10.4
-  New OpenSSH release. Specific changelog content wasn't fetched, so it's unknown whether this includes security fixes.
-- **v2.31.0-rc2**
-  https://github.com/deepset-ai/haystack/releases/tag/v2.31.0-rc2
-  Haystack (RAG/LLM orchestration framework) release candidate adds async support to LLM/faithfulness/context-relevance evaluators, YAML frontmatter extraction for Markdown documents, and an output_passthrough option on ConditionalRouter to preserve non-string types. It's an RC, not a stable release yet.
-- **A Script for Mark Zuckerberg**
-  https://stratechery.com/2026/a-script-for-mark-zuckerberg/
-  Stratechery piece (title: a suggested script for what Zuckerberg should say on Meta's next earnings call). Full article content wasn't fetched, so the specific argument is unknown.
+- **Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more**
+  https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/
+  Gemini managed agents add async background runs, remote MCP access, custom tools, and credential refresh in one hosted sandbox.
+- **Show HN: PostgreSQL performance and cost across 23 EC2 instance types**
+  https://postgres.saneengineer.com
+  An interactive AWS Postgres benchmark maps throughput and latency across 23 EC2 and disk combinations, highlighting cheapest configs that clear a target load.
+- **Show HN: Docx-CLI: agents read/edit Word docs using 1/2 the time and tokens**
+  https://github.com/kklimuk/docx-cli
+  docx-cli pitches a safer path for agent Word edits, with stable locators, redlines, and benchmark claims around fewer tokens and fewer broken files.
+- **Chat SDK now supports Vercel Connect**
+  https://vercel.com/changelog/chat-sdk-vercel-connect
+  Vercel says Chat SDK can now use Vercel Connect for Slack, GitHub, and Linear credentials, with short-lived tokens and OIDC webhook verification.
+- **Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop**
+  https://github.com/rowboatlabs/rowboat
+  Rowboat is an open-source, local-first desktop AI coworker with a Markdown knowledge graph, project workspaces, and MCP hookups.
 
 ## Full digest
 
-- [R] [lobsters] Radicle: P2P Git Replication with Git Native Issues and Patches — https://radicle.dev/ — Link post pointing to Radicle, an existing peer-to-peer git collaboration tool with native issues/patches. No new release or news hook in the fetched content.
-- [P] [lobsters] Postgres Is Enough — https://postgresisenough.dev — Argues Postgres alone (via LISTEN/NOTIFY, JSONB, full-text search, etc.) can replace Redis, a message queue, and a search engine for small-to-mid scale apps. Content was title-only, so the specific techniques weren't verified here.
-- [M] [lobsters] OpenSSH 10.4 — https://www.openssh.org/releasenotes.html#10.4 — New OpenSSH release. Specific changelog content wasn't fetched, so it's unknown whether this includes security fixes.
-- [R] [lobsters] Compiling a Go program into a native binary for Nintendo Switch (2022) — https://ebitengine.org/en/blog/native_compiling_for_nintendo_switch.html — A 2022 hobbyist writeup on cross-compiling Go for Nintendo Switch, resurfaced on Lobsters. Fun but not time-sensitive or business-relevant.
-- [P] [lobsters] PREEMPT_NONE Is Dead; Your Postgres Probably Doesn’t Care — https://thebuild.com/blog/preempt_none-is-dead-your-postgres-probably-doesnt-care/ — Discusses a recent Linux kernel preemption model change and argues it has negligible practical impact on Postgres performance for most workloads. Useful background if you're ever debugging Postgres latency on a self-managed VPS, but not an action item.
-- [P] [lobsters] Januscape: Guest-to-Host Escape in KVM/x86 — https://github.com/V4bel/Januscape — A published proof-of-concept demonstrates a guest-to-host escape against KVM/x86 hypervisors. Since most cloud VPS providers (including Hetzner) run KVM-based virtualization, this is worth a quick check on host kernel/QEMU patch status. No CVE number or confirmed patch status was available in the fetched content, so treat this as an early warning rather than a confirmed active threat.
-- [R] [lobsters] Caught a .git/config crawler — https://bruceediger.com/posts/git-config-spider/ — Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.
-- [R] [lobsters] Can you run every line of code in Super Mario Bros.? — https://www.youtube.com/watch?v=o0gOALTvkcc — Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.
-- [R] [lobsters] AT&amp;T's very rare Security-Plus Telephone — https://www.electrospaces.net/2025/10/an-interesting-advertisement-for-stu.html — Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.
-- [R] [lobsters] Hacking the Kyocera KY-42C — https://shomy.is-a.dev/blog/article/unlocking-kyocera-ky42c — Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.
-- [R] [lobsters] A Rust-to-Lean verification pipeline with AI provers: An experience report — https://arxiv.org/html/2605.30106 — Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.
-- [R] [lobsters] Turning a Chinese IoT camera into an owl livestream — https://blog.alexbeals.com/posts/owl-cam — Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.
-- [P] [simon-willison] tencent/Hy3 — https://simonwillison.net/2026/Jul/6/hy3/#atom-everything — Tencent released Hy3, an Apache 2.0-licensed 295B-parameter Mixture-of-Experts model (21B active parameters) with a 256K context window, claimed to rival flagship open-source models with 2-5x the parameters. It's free on OpenRouter through July 21st, and Simon Willison confirmed it working with his standard pelican-on-a-bicycle SVG test.
-- [R] [claude-status] Elevated errors on Claude Sonnet 5 — https://status.claude.com/incidents/hh9hj15mxkrx — Status-page incident: elevated errors on Claude Sonnet 5, investigated and resolved same day (Jul 7, 06:58-07:37 UTC).
-- [R] [claude-status] Claude Tag seeing elevated GitHub operation failures — https://status.claude.com/incidents/d23j8s7t8rx2 — Status-page incident: Claude Tag saw elevated error rates on GitHub operations (denied operations) starting Jul 6, 21:49 UTC, under investigation at last update in the fetched content.
-- [R] [claude-status] Elevated errors on Claude.ai — https://status.claude.com/incidents/k5yvlfppnp4f — Status-page incident: elevated errors on Claude.ai on Jul 6 (19:18-20:05 UTC) that also broke OAuth login for Claude Code during the window; resolved same evening.
-- [R] [anthropic-blog] Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems — https://www.anthropic.com/news — Anthropic customer case study headline about the Government of Alberta using Claude for cybersecurity work. The URL points to Anthropic's generic news index rather than the specific article, and no article content was fetched.
-- [M] [gh-haystack] v2.31.0-rc2 — https://github.com/deepset-ai/haystack/releases/tag/v2.31.0-rc2 — Haystack (RAG/LLM orchestration framework) release candidate adds async support to LLM/faithfulness/context-relevance evaluators, YAML frontmatter extraction for Markdown documents, and an output_passthrough option on ConditionalRouter to preserve non-string types. It's an RC, not a stable release yet.
-- [R] [gh-semantic-kernel] python-1.44.0 — https://github.com/microsoft/semantic-kernel/releases/tag/python-1.44.0 — Semantic Kernel Python release almost entirely made up of dependabot dependency bumps (tornado, pyjwt, starlette, pymongo, torch, etc.), with a couple of minor internal hardening changes (MCP tool exclusion enforcement, SSE server loopback default). No user-facing feature changes.
-- [R] [reddit-saas] I am so frustrated about how difficult it is to get traffic 😢 — https://www.reddit.com/r/SaaS/comments/1upqvgi/i_am_so_frustrated_about_how_difficult_it_is_to/ — A solo builder vents about getting 40K+ daily social views but almost no website traffic or app installs despite an SNS-first content strategy and 100+ SEO pages.
-- [R] [reddit-saas] Today our biggest competitor signed up for our SaaS. — https://www.reddit.com/r/SaaS/comments/1upp66c/today_our_biggest_competitor_signed_up_for_our/ — A founder shares that their much larger competitor (~$50k MRR) signed up for their small SaaS product (under $500 MRR), interpreting it as encouraging but with no clear conclusion or actionable data.
-- [R] [reddit-saas] Anyone else's team &quot;using AI&quot; but the company isn't actually moving faster? — https://www.reddit.com/r/SaaS/comments/1upqxjb/anyone_elses_team_using_ai_but_the_company_isnt/ — A small SaaS team lead questions whether their AI tool spend (Cursor, ChatGPT, Notion AI) is producing real leverage, theorizing that time is lost to feeding tools context and verifying AI output rather than genuine speedup.
-- [R] [reddit-saas] UIPATH arbitrage automation — https://www.reddit.com/r/SaaS/comments/1upqmta/uipath_arbitrage_automation/ — A Reddit poster asks for help building a UIPath bot to auto-place sports betting arbitrage wagers based on a Telegram channel's tips.
-- [R] [reddit-saas] I don’t think technical founders have a marketing problem. — https://www.reddit.com/r/SaaS/comments/1upqa68/i_dont_think_technical_founders_have_a_marketing/ — An engineer-turned-founder reflects that the real gap for technical founders isn't marketing channels but a missing systematic approach to customer acquisition (identify who has the problem, find where they talk about it, start conversations).
-- [R] [reddit-saas] created this saas to help people get more client via cold call — https://www.reddit.com/r/SaaS/comments/1uppiz2/created_this_saas_to_help_people_get_more_client/ — Self-promotional post for Ringringa, a not-yet-deployed browser-based international calling tool for outbound sales/recruiting teams, with a waitlist link.
-- [R] [reddit-saas] Reliability, not capability, seems to be the real blocker for agentic SaaS features right now, anyone else finding this? — https://www.reddit.com/r/SaaS/comments/1uppbd0/reliability_not_capability_seems_to_be_the_real/ — Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.
-- [R] [reddit-saas] Would you use a platform that rewards people for testing new apps? — https://www.reddit.com/r/SaaS/comments/1upnuqd/would_you_use_a_platform_that_rewards_people_for/ — Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.
-- [R] [reddit-saas] How do you decide pricing for your SAAS ? — https://www.reddit.com/r/SaaS/comments/1uprosl/how_do_you_decide_pricing_for_your_saas/ — Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.
-- [R] [reddit-saas] Hello fellow Developer, — https://www.reddit.com/r/SaaS/comments/1uprnv7/hello_fellow_developer/ — Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.
-- [M] [stratechery] A Script for Mark Zuckerberg — https://stratechery.com/2026/a-script-for-mark-zuckerberg/ — Stratechery piece (title: a suggested script for what Zuckerberg should say on Meta's next earnings call). Full article content wasn't fetched, so the specific argument is unknown.
-- [R] [hn-top] Dolosse – a South African invention used over the world — https://thisbugslife.com/2021/11/21/dolosse-a-south-african-invention-used-over-the-world/ — HN post about dolosse, concrete interlocking blocks used in coastal engineering to protect breakwaters — an engineering curiosity piece.
-- [P] [hn-top] Microsoft Can Track Users via a Windows Device ID — https://www.pcmag.com/news/a-hackers-arrest-reveals-microsoft-can-track-users-via-a-windows-device — A hacker's arrest revealed that Microsoft can identify and track individual Windows machines via a device ID, raising fresh questions about the scope of Windows telemetry and tracking capability. Article content wasn't fetched, so details on exactly what's tracked and how are unconfirmed.
-- [R] [lobsters] Together for a healthier Clippy — https://blog.rust-lang.org/inside-rust/2026/07/06/unite-for-clippy/ — Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.
-- [R] [lobsters] Waterfall CAD Playground - A Haskell powered programmable-CAD environment, in the browser with WASM — https://doscienceto.it/waterpark — Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.
-- [R] [lobsters] Why false sharing alignment should be 128 bytes on x64 — https://monoid.github.io/posts/false-sharing-alignment/ — Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.
-- [R] [lobsters] Eliminating Go bound checks with unsafe — https://blog.andr2i.com/posts/2026-07-06-eliminating-go-bound-checks-with-unsafe — Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.
-- [R] [lobsters] Google’s exponential path to climate-wrecking digital bloat — https://ketanjoshi.co/2026/07/01/googles-exponential-path-to-climate-wrecking-digital-bloat/ — Deferred by pre-triage volume cap (37 claimed, 22-item scoring cap this run); not evaluated.</pre>
+- [R] [gh-crewai] 1.15.2 — https://github.com/crewAIInc/crewAI/releases/tag/1.15.2 — 1.15.2
+- [R] [gh-semantic-kernel] dotnet-1.78.0 — https://github.com/microsoft/semantic-kernel/releases/tag/dotnet-1.78.0 — dotnet-1.78.0
+- [R] [gh-composio] CLI Beta @composio/cli@0.2.32-beta.286 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.2.32-beta.286 — CLI Beta @composio/cli@0.2.32-beta.286
+- [R] [gh-composio] CLI Beta @composio/cli@0.2.32-beta.285 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.2.32-beta.285 — CLI Beta @composio/cli@0.2.32-beta.285
+- [P] [google-ai-blog] Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more — https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/ — Gemini managed agents add async background runs, remote MCP access, custom tools, and credential refresh in one hosted sandbox.
+- [R] [hn-show] Show HN: Neil the Seal Game — https://neiltheseal.app/ — Show HN: Neil the Seal Game
+- [R] [hn-show] Show HN: Davit, a Apple Containers UI — https://davit.app — Show HN: Davit, a Apple Containers UI
+- [M] [hn-show] Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop — https://github.com/rowboatlabs/rowboat — Rowboat is an open-source, local-first desktop AI coworker with a Markdown knowledge graph, project workspaces, and MCP hookups.
+- [P] [hn-show] Show HN: Docx-CLI: agents read/edit Word docs using 1/2 the time and tokens — https://github.com/kklimuk/docx-cli — docx-cli pitches a safer path for agent Word edits, with stable locators, redlines, and benchmark claims around fewer tokens and fewer broken files.
+- [P] [hn-show] Show HN: PostgreSQL performance and cost across 23 EC2 instance types — https://postgres.saneengineer.com — An interactive AWS Postgres benchmark maps throughput and latency across 23 EC2 and disk combinations, highlighting cheapest configs that clear a target load.
+- [R] [hn-show] Show HN: Fast, native Mac file manager (filters, fuzzy find, 9 MB, no Electron) — https://whimfiles.com — Show HN: Fast, native Mac file manager (filters, fuzzy find, 9 MB, no Electron)
+- [R] [reddit-saas] A founder paid me to redesign his SaaS because trials weren’t converting. I checked one number and cancelled the redesign. — https://www.reddit.com/r/SaaS/comments/1upx3g8/a_founder_paid_me_to_redesign_his_saas_because/ — A founder paid me to redesign his SaaS because trials weren’t converting. I checked one number and cancelled the rede...
+- [R] [reddit-saas] Customer interviews are making me rethink my entire SaaS positioning — https://www.reddit.com/r/SaaS/comments/1uql74k/customer_interviews_are_making_me_rethink_my/ — Customer interviews are making me rethink my entire SaaS positioning
+- [R] [reddit-saas] One Year and 48K Clicks From Google Later — https://www.reddit.com/r/SaaS/comments/1upvpdo/one_year_and_48k_clicks_from_google_later/ — One Year and 48K Clicks From Google Later
+- [R] [reddit-saas] Time to build a thin wrapper around Sol and call myself a visionary startup founder.😂 — https://www.reddit.com/r/SaaS/comments/1uqil9m/time_to_build_a_thin_wrapper_around_sol_and_call/ — Time to build a thin wrapper around Sol and call myself a visionary startup founder.😂
+- [R] [reddit-saas] Made $500 from my vibe-coded plugin — https://www.reddit.com/r/SaaS/comments/1upz8vh/made_500_from_my_vibecoded_plugin/ — Made $500 from my vibe-coded plugin
+- [R] [reddit-saas] What's missing in the current Project Management Tools in the market? — https://www.reddit.com/r/SaaS/comments/1uqjamv/whats_missing_in_the_current_project_management/ — What's missing in the current Project Management Tools in the market?
+- [R] [reddit-saas] Got my 3rd paying customer today. Small win, but it means a lot. — https://www.reddit.com/r/SaaS/comments/1uq0kvr/got_my_3rd_paying_customer_today_small_win_but_it/ — Got my 3rd paying customer today. Small win, but it means a lot.
+- [R] [reddit-saas] Finally got my first paying customer!! — https://www.reddit.com/r/SaaS/comments/1uq9g12/finally_got_my_first_paying_customer/ — Finally got my first paying customer!!
+- [R] [reddit-saas] Stuck in distribution 🫪🫪 — https://www.reddit.com/r/SaaS/comments/1uqkc2g/stuck_in_distribution/ — Stuck in distribution 🫪🫪
+- [R] [reddit-saas] Cold email reply rates are averaging 3.4% in 2026. What are you actually seeing? — https://www.reddit.com/r/SaaS/comments/1uqgzjb/cold_email_reply_rates_are_averaging_34_in_2026/ — Cold email reply rates are averaging 3.4% in 2026. What are you actually seeing?
+- [R] [reddit-saas] There are no universal SaaS rules — https://www.reddit.com/r/SaaS/comments/1uqje9v/there_are_no_universal_saas_rules/ — There are no universal SaaS rules
+- [R] [reddit-saas] Break-even and end-of-runway land in the same quarter — https://www.reddit.com/r/SaaS/comments/1uqj6m2/breakeven_and_endofrunway_land_in_the_same_quarter/ — Break-even and end-of-runway land in the same quarter
+- [R] [reddit-saas] Genuinely what did you do to instantly spike your impressions? — https://www.reddit.com/r/SaaS/comments/1uqchfn/genuinely_what_did_you_do_to_instantly_spike_your/ — Genuinely what did you do to instantly spike your impressions?
+- [R] [reddit-saas] PSA: Email deliverability isn’t all about your tools &amp; infra — https://www.reddit.com/r/SaaS/comments/1uqlxdh/psa_email_deliverability_isnt_all_about_your/ — PSA: Email deliverability isn’t all about your tools &amp; infra
+- [R] [reddit-saas] Have SaaS teams become too quick to blame their CRM? — https://www.reddit.com/r/SaaS/comments/1uqlo52/have_saas_teams_become_too_quick_to_blame_their/ — Have SaaS teams become too quick to blame their CRM?
+- [R] [reddit-saas] 24 Subs feel like a success but also like a failure — https://www.reddit.com/r/SaaS/comments/1uq5t4l/24_subs_feel_like_a_success_but_also_like_a/ — 24 Subs feel like a success but also like a failure
+- [R] [reddit-saas] I built an email API for AI agents. Would love feedback from devs building agents. — https://www.reddit.com/r/SaaS/comments/1uqgaaf/i_built_an_email_api_for_ai_agents_would_love/ — I built an email API for AI agents. Would love feedback from devs building agents.
+- [R] [reddit-saas] Can you tell me how you went about getting the word out about your SaaS? — https://www.reddit.com/r/SaaS/comments/1uqcrn6/can_you_tell_me_how_you_went_about_getting_the/ — Can you tell me how you went about getting the word out about your SaaS?
+- [R] [reddit-saas] How does company actually keep up with changing regulations? — https://www.reddit.com/r/SaaS/comments/1uqix2f/how_does_company_actually_keep_up_with_changing/ — How does company actually keep up with changing regulations?
+- [R] [reddit-saas] Can a SaaS survive if consumers never pay? — https://www.reddit.com/r/SaaS/comments/1uqdtln/can_a_saas_survive_if_consumers_never_pay/ — Can a SaaS survive if consumers never pay?
+- [R] [reddit-saas] What decision seemed small at the time but became expensive to change later? — https://www.reddit.com/r/SaaS/comments/1uq8ywl/what_decision_seemed_small_at_the_time_but_became/ — What decision seemed small at the time but became expensive to change later?
+- [R] [cloudflare-blog] Cloudflare proudly joins the UK government's Cyber Resilience Pledge — https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/ — Cloudflare proudly joins the UK government's Cyber Resilience Pledge
+- [R] [latent-space] [AINews] Lilian Weng summarizes 35 papers on Harness Engineering for RSI — https://www.latent.space/p/ainews-lilian-weng-summarizes-35 — [AINews] Lilian Weng summarizes 35 papers on Harness Engineering for RSI
+- [R] [huggingface-blog] From Hugging Face to Amazon SageMaker Studio in one click — https://huggingface.co/blog/amazon/one-click-to-sagemaker-studio — From Hugging Face to Amazon SageMaker Studio in one click
+- [R] [huggingface-blog] Hugging Face Models on Foundry Managed Compute — https://huggingface.co/blog/microsoft/foundry-managed-compute — Hugging Face Models on Foundry Managed Compute
+- [R] [huggingface-blog] Run AI workloads on any cloud, store on Hugging Face: zero-egress storage with SkyPilot — https://huggingface.co/blog/skypilot-hf-storage — Run AI workloads on any cloud, store on Hugging Face: zero-egress storage with SkyPilot
+- [R] [gh-nextjs] v16.3.0-canary.80 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.80 — v16.3.0-canary.80
+- [R] [vercel-changelog] Use any Chat SDK adapter with eve — https://vercel.com/changelog/eve-chat-sdk-channel — Use any Chat SDK adapter with eve
+- [P] [vercel-changelog] Chat SDK now supports Vercel Connect — https://vercel.com/changelog/chat-sdk-vercel-connect — Vercel says Chat SDK can now use Vercel Connect for Slack, GitHub, and Linear credentials, with short-lived tokens and OIDC webhook verification.</pre>
     </details>
   </main>
   <footer>

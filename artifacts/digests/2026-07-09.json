@@ -1,0 +1,377 @@
+{
+  "date": "2026-07-09",
+  "generated_at": "2026-07-09T06:16:33.600Z",
+  "imported_from": {
+    "importer_version": "digest-import/v1",
+    "source_artifact": "artifacts/synthesized/2026-07-09.json",
+    "source_sha256": "d75166e8622347c9b2b604eadb5329402a96baa04a4cd852568e95d827353954"
+  },
+  "items": [
+    {
+      "builder_takeaway": "Directly changes how a solo dev should scope tokens and permissions for coding agents with GitHub access.",
+      "category": "AI Operations / Agent Control",
+      "id": "b4286e98-ba5d-4946-a2b0-df48979374ea",
+      "importance": "lead",
+      "labels": [
+        "reproducible",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "noma.security",
+      "source_facts": [
+        "Security researchers tricked GitHub's AI agent via prompt injection into leaking private repository contents."
+      ],
+      "title": "GitLost: GitHub's AI agent tricked into leaking private repos",
+      "uncertainty": "Unclear whether GitHub has fully remediated the specific exfiltration paths described.",
+      "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/"
+    },
+    {
+      "builder_takeaway": "Dependency-direction news for a very widely used OSS auth library; agent-identity roadmap is decision-relevant for agent builders.",
+      "category": "Tools Worth Testing",
+      "id": "c9f7be99-4296-42f6-8aa5-54b5fb04de67",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel acquired Better Auth and its core team to continue the open-source auth library and build agent identity."
+      ],
+      "title": "Vercel acquires Better Auth to accelerate open source auth",
+      "uncertainty": "Long-term licensing/governance of Better Auth under Vercel is not yet demonstrated.",
+      "url": "https://vercel.com/blog/vercel-acquires-better-auth"
+    },
+    {
+      "builder_takeaway": "Widely used SQLite tooling with breaking changes and a genuinely useful new migrations capability.",
+      "category": "Tools Worth Testing",
+      "id": "a711a8ab-6d6c-4048-aa62-93a33d1d07c0",
+      "importance": "supporting",
+      "labels": [
+        "reproducible",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "sqlite-utils 4.0 shipped with database schema migrations, nested transactions, and compound foreign keys, plus breaking changes."
+      ],
+      "title": "sqlite-utils 4.0: schema migrations, nested transactions, compound foreign keys",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Jul/7/sqlite-utils-4/"
+    },
+    {
+      "builder_takeaway": "Phone-channel agent building block relevant to voice/calling products like CalenCall.",
+      "category": "Voice AI / Realtime Agents",
+      "id": "2906cc3a-ec19-4ccb-89a0-4c886842656e",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel Chat SDK added a vendor-official Dial adapter enabling bots to use SMS/MMS/iMessage and receive voice-call transcripts on real phone numbers."
+      ],
+      "title": "Chat SDK adds Dial support (SMS/MMS/iMessage + voice transcripts)",
+      "uncertainty": "Pricing and per-number provisioning constraints of Dial are not described in the changelog.",
+      "url": "https://vercel.com/changelog/chat-sdk-adds-dial-support"
+    },
+    {
+      "builder_takeaway": "Agent tooling pattern (durable approval gates on write tools) applicable beyond this framework.",
+      "category": "AI Operations / Agent Control",
+      "id": "ce689fc3-7eff-47b2-b54b-74d4ff9273df",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "GitHub Tools released an eve integration that registers the full GitHub toolset with approval-gated write tools in minimal code."
+      ],
+      "title": "Give your eve agent GitHub tools",
+      "uncertainty": "Nine-lines claim untested; real-world approval UX unknown.",
+      "url": "https://vercel.com/changelog/github-tools-eve"
+    },
+    {
+      "builder_takeaway": "Corrects a common false sense of security for anyone publishing packages via OIDC.",
+      "category": "AI Operations / Agent Control",
+      "id": "590755ad-94a8-48cd-9697-22bbb8a96162",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "blog.yossarian.net",
+      "source_facts": [
+        "Trusted Publishing eliminates long-lived credentials but provides no integrity guarantee for what is published, especially under CI compromise."
+      ],
+      "title": "You shouldn't trust Trusted Publishing",
+      "uncertainty": "Opinion/analysis piece; no new vulnerability disclosed.",
+      "url": "https://blog.yossarian.net/2026/07/07/You-shouldnt-trust-trusted-publishing"
+    },
+    {
+      "builder_takeaway": "Root privesc on a production OS; immediate action for affected systems.",
+      "category": "AI Operations / Agent Control",
+      "id": "7e91828e-94ef-4366-ad27-c37e2190bbfe",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "nvd.nist.gov",
+      "source_facts": [
+        "CVE-2026-57589 is a use-after-free in OpenBSD through 7.9 allowing local privilege escalation to root."
+      ],
+      "title": "OpenBSD through 7.9: local privilege escalation to root (CVE-2026-57589)",
+      "uncertainty": "Patch/errata availability at time of triage not confirmed.",
+      "url": "https://nvd.nist.gov/vuln/detail/cve-2026-57589"
+    },
+    {
+      "builder_takeaway": "Actionable if any Tenda hardware is on your network; credible CERT sourcing.",
+      "category": "AI Operations / Agent Control",
+      "id": "5af6e805-e172-48cd-868d-2ce2b37fbe92",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "kb.cert.org",
+      "source_facts": [
+        "CERT/CC reports multiple Tenda firmware versions contain a hidden authentication backdoor."
+      ],
+      "title": "Tenda firmware ships hidden authentication backdoor",
+      "uncertainty": "Full list of affected models/versions and vendor response not reviewed.",
+      "url": "https://kb.cert.org/vuls/id/213560"
+    },
+    {
+      "builder_takeaway": "Early signal on iMessage as an agent channel; not yet decision-grade.",
+      "category": "AI Operations / Agent Control",
+      "id": "1cc9dc3f-02e6-4864-bd68-788e942a3b3f",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel Chat SDK added a vendor-official Photon adapter for native iMessage bot support including group chats and tapbacks."
+      ],
+      "title": "Chat SDK adds Photon support (native iMessage bots)",
+      "uncertainty": "Reliability and Apple ToS posture of iMessage automation are unclear.",
+      "url": "https://vercel.com/changelog/chat-sdk-adds-photon-support"
+    },
+    {
+      "builder_takeaway": "Cost-attribution tooling for agent sandboxes; incremental unless on this platform.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "d2a27109-99e6-4a96-8864-1859589e408e",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel Sandbox added detailed per-sandbox resource metrics aligned with billing, at team and project level."
+      ],
+      "title": "More granular observability for Vercel Sandbox",
+      "uncertainty": "",
+      "url": "https://vercel.com/changelog/more-granular-observability-for-vercel-sandbox"
+    },
+    {
+      "builder_takeaway": "Vercel's Project Settings now includes a project-scoped view of the team Activity Log. Minor console UI convenience with no API or workflow change.",
+      "category": "Model + API Changes",
+      "id": "acb6614a-eb01-4759-9bad-6f1e4e60ff4b",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel added a project-level view of the Activity Log in Project Settings."
+      ],
+      "title": "Vercel Activity Log now viewable at project level",
+      "uncertainty": "",
+      "url": "https://vercel.com/changelog/you-can-now-view-the-activity-log-at-a-project-level"
+    },
+    {
+      "builder_takeaway": "A 2024 guide to hand-rolling a ZFS NAS resurfaced on HN. Solid hobby-infra content but two years old and not a decision-changer for a solo software business.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "f25c033b-c476-4f29-926c-a019318e82ec",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "neil.computer",
+      "source_facts": [
+        "A 2024 guide describes building a minimal ZFS NAS without commercial NAS distros."
+      ],
+      "title": "How to build a minimal ZFS NAS without Synology/QNAP/TrueNAS (2024)",
+      "uncertainty": "",
+      "url": "https://neil.computer/notes/how-to-setup-minimal-zfs-nas-without-truenas/"
+    },
+    {
+      "builder_takeaway": "A Cambridge digital-preservation guide for rescuing data from aging floppy disks. Interesting archival niche with no relevance to solo-builder decisions.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "03f6284b-c5fd-4523-85ff-a11a3f36c29f",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "digipres.org",
+      "source_facts": [
+        "A Cambridge guide documents how to preserve data from fragile floppy disks."
+      ],
+      "title": "Copy That Floppy — guide for preserving data from fragile floppy disks",
+      "uncertainty": "",
+      "url": "https://www.digipres.org/the-floppy-guide/"
+    },
+    {
+      "builder_takeaway": "The classic 1986 MIT SICP lecture series resurfaced on HN. Evergreen educational content, not news.",
+      "category": "Tools Worth Testing",
+      "id": "1b8a9160-d27b-4e1b-a9d9-c07e0c2ea852",
+      "importance": "archive-only",
+      "labels": [
+        "production_proven",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "ocw.mit.edu",
+      "source_facts": [
+        "MIT's 1986 SICP video lectures are available on OpenCourseWare."
+      ],
+      "title": "SICP video lectures (1986)",
+      "uncertainty": "",
+      "url": "https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video_galleries/video-lectures/"
+    },
+    {
+      "builder_takeaway": "A GAO report criticizes DOE's nuclear cleanup option analysis. Government-policy content outside the audience's scope.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "ae343ca7-c69b-4c07-b57d-1a41211f6c44",
+      "importance": "archive-only",
+      "labels": [
+        "production_proven",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "gao.gov",
+      "source_facts": [
+        "GAO found DOE is prematurely excluding less expensive options for nuclear waste cleanup."
+      ],
+      "title": "GAO: DOE prematurely excluding cheaper nuclear cleanup options",
+      "uncertainty": "",
+      "url": "https://www.gao.gov/products/gao-26-108193"
+    },
+    {
+      "builder_takeaway": "sqlite-migrate 0.2 retires the standalone library, becoming a compatibility shim over sqlite-utils 4.0's built-in migrations. Covered as part of the main 4.0 story.",
+      "category": "Tools Worth Testing",
+      "id": "7922b906-37f1-4b15-bdf1-d27318b59582",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "sqlite-migrate 0.2 retires the library in favor of a compatibility shim over sqlite-utils 4.0."
+      ],
+      "title": "sqlite-migrate 0.2 retires into sqlite-utils 4.0",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Jul/7/sqlite-migrate/"
+    },
+    {
+      "builder_takeaway": "An experimental Web Component for embedding GitHub code ranges in a page, built with a short GPT-5.5 prompt. A fun demo, but thin — no decision impact.",
+      "category": "Tools Worth Testing",
+      "id": "f297cb5a-7420-46d9-a8d2-87f05b7845ea",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "An experimental github-code Web Component embeds line ranges from GitHub files via fetch to raw.githubusercontent.com."
+      ],
+      "title": "github-code Web Component",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Jul/7/github-code-component/"
+    },
+    {
+      "builder_takeaway": "A short link post pointing to the full sqlite-utils 4.0 write-up. Duplicate of the main story.",
+      "category": "Tools Worth Testing",
+      "id": "507b2dba-78c1-4d44-a175-f3766e55d9e2",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "sqlite-utils 4.0 was released."
+      ],
+      "title": "sqlite-utils 4.0 (release link post)",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Jul/7/sqlite-utils/"
+    },
+    {
+      "builder_takeaway": "The final release candidate before sqlite-utils 4.0 stable, mainly incorporating review feedback. Superseded by the stable release the same day.",
+      "category": "Tools Worth Testing",
+      "id": "c41b132c-2b4b-4530-b4a8-3edd8e89697c",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "sqlite-utils 4.0rc4 was the last release candidate before the 4.0 stable release."
+      ],
+      "title": "sqlite-utils 4.0rc4",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Jul/7/sqlite-utils-2/"
+    }
+  ],
+  "mode": "primary",
+  "run_id": "dd3c2efc-1d82-494c-afb4-2fe5c0bf0cce",
+  "status": "completed",
+  "summary": "Synthesized Nightly Librarian run with 10 promoted item(s), 19 scored item(s), and 9 rejected item(s).",
+  "title": "Nightly Librarian - 2026-07-09"
+}
