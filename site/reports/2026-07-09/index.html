@@ -5,21 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>July 9, 2026 report log — The Nightly Librarian</title>
-  <meta name="description" content="10 stories cleared the bar, led by GitLost: GitHub's AI agent tricked into leaking private repos, Vercel acquires Better Auth to accelerate open source">
+  <meta name="description" content="6 stories cleared the bar, led by Show HN: Microsoft releases Flint, a visualization language for AI agents, Vercel Agent: An agent you can let near">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-07-09/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="July 9, 2026 report log | The Nightly Librarian">
-  <meta property="og:description" content="10 stories cleared the bar, led by GitLost: GitHub's AI agent tricked into leaking private repos, Vercel acquires Better Auth to accelerate open source">
+  <meta property="og:description" content="6 stories cleared the bar, led by Show HN: Microsoft releases Flint, a visualization language for AI agents, Vercel Agent: An agent you can let near">
   <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-07-09/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="July 9, 2026 report log | The Nightly Librarian">
-  <meta name="twitter:description" content="10 stories cleared the bar, led by GitLost: GitHub's AI agent tricked into leaking private repos, Vercel acquires Better Auth to accelerate open source">
+  <meta name="twitter:description" content="6 stories cleared the bar, led by Show HN: Microsoft releases Flint, a visualization language for AI agents, Vercel Agent: An agent you can let near">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
@@ -36,7 +36,7 @@
     </div>
     <div class="dateline">
       <span>July 9, 2026 · Report log</span>
-      <span>Jul 9, 2026, 2:16 AM</span>
+      <span>Jul 9, 2026, 7:15 AM</span>
     </div>
   </header>
   <main>
@@ -44,62 +44,42 @@
     <h1>July 9, 2026</h1>
     <div class="summary-card">
       <div class="eyebrow">Report summary</div>
-      <p>10 stories cleared the bar, led by GitLost: GitHub's AI agent tricked into leaking private repos, Vercel acquires Better Auth to accelerate open source auth, and sqlite-utils 4.0: schema migrations, nested transactions, compound foreign keys.</p>
+      <p>6 stories cleared the bar, led by Show HN: Microsoft releases Flint, a visualization language for AI agents, Vercel Agent: An agent you can let near production, and Vercel CLI now supports verifying DNS configuration.</p>
       <div class="meta" style="margin-top:0.4rem;">
-        <span>10 worth-attention items</span><span>40 digest lines</span>
+        <span>6 worth-attention items</span><span>40 digest lines</span>
       </div>
     </div>
     <h2>Worth attention</h2>
     <div class="item-stack">
 
       <div class="item">
-        <div class="item-title"><a href="https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/" target="_blank" rel="noopener">GitLost: GitHub's AI agent tricked into leaking private repos</a></div>
-        <div class="item-takeaway">Noma Security researchers prompt-injected GitHub's AI coding agent into exfiltrating private repository contents. This is the live threat model for anyone running agentic coding tools with repo access. Action: least-privilege tokens, restrict what agents can read and post, review agent-initiated outbound actions.</div>
+        <div class="item-title"><a href="https://microsoft.github.io/flint-chart/#/" target="_blank" rel="noopener">Show HN: Microsoft releases Flint, a visualization language for AI agents</a></div>
+        <div class="item-takeaway">Flint gives agents a compact chart IR and compiles the low-level chart details for multiple backends.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://vercel.com/blog/vercel-acquires-better-auth" target="_blank" rel="noopener">Vercel acquires Better Auth to accelerate open source auth</a></div>
-        <div class="item-takeaway">Vercel is acquiring Better Auth (4.7M+ weekly npm downloads); founder Bereket Engida and the core team join to continue the open-source TypeScript auth library and build agent-identity primitives so each agent gets its own scoped credentials. If Better Auth is in your stack, watch governance and licensing direction.</div>
+        <div class="item-title"><a href="https://vercel.com/blog/vercel-agent" target="_blank" rel="noopener">Vercel Agent: An agent you can let near production</a></div>
+        <div class="item-takeaway">Vercel Agent expands from PR/alert help into dashboard-based production investigation with plan-gated actions.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything" target="_blank" rel="noopener">sqlite-utils 4.0: schema migrations, nested transactions, compound foreign keys</a></div>
-        <div class="item-takeaway">First major sqlite-utils release since 2020. Adds a migrations system, db.atomic() nested transactions, and compound foreign key support, with small breaking changes and an upgrade guide. If sqlite-utils is in your scripts or pipelines, pin or read the upgrade guide before bumping; migrations make it viable as a lightweight production migration tool.</div>
+        <div class="item-title"><a href="https://vercel.com/changelog/vercel-cli-now-supports-verifying-dns-configuration" target="_blank" rel="noopener">Vercel CLI now supports verifying DNS configuration</a></div>
+        <div class="item-takeaway">vercel domains verify now diagnoses DNS, ownership, conflicts, and can emit machine-readable JSON.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://vercel.com/changelog/chat-sdk-adds-dial-support" target="_blank" rel="noopener">Chat SDK adds Dial support (SMS/MMS/iMessage + voice transcripts)</a></div>
-        <div class="item-takeaway">Vercel's Chat SDK gained a vendor-official Dial adapter: bots send and receive SMS, MMS, and iMessage on a real phone number, and inbound voice-call transcripts land on the same thread with HMAC-verified webhooks. Collapses a lot of telephony plumbing for phone-channel agents.</div>
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything" target="_blank" rel="noopener">Rewriting Bun in Rust</a></div>
+        <div class="item-takeaway">Bun's creator details an 11-day Rust rewrite using Claude workflows, adversarial review, and a language-independent test suite.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://kb.cert.org/vuls/id/213560" target="_blank" rel="noopener">Tenda firmware ships hidden authentication backdoor</a></div>
-        <div class="item-takeaway">CERT/CC advisory: multiple Tenda firmware versions contain a hidden authentication backdoor. Replace or segment any Tenda gear in office or home-lab networks; another data point that budget network vendors are a supply-chain risk.</div>
+        <div class="item-title"><a href="https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/" target="_blank" rel="noopener">Announcing TypeScript 7.0</a></div>
+        <div class="item-takeaway">TypeScript 7 is now available, and Microsoft says the native port delivers roughly 8x-12x faster builds.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://nvd.nist.gov/vuln/detail/cve-2026-57589" target="_blank" rel="noopener">OpenBSD through 7.9: local privilege escalation to root (CVE-2026-57589)</a></div>
-        <div class="item-takeaway">A use-after-free in OpenBSD through 7.9 allows local privilege escalation to root. Niche audience, but act-now if you run OpenBSD: apply errata/patches as soon as available.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://vercel.com/changelog/github-tools-eve" target="_blank" rel="noopener">Give your eve agent GitHub tools</a></div>
-        <div class="item-takeaway">GitHub Tools now ships an eve subpath: one file registers the full GitHub toolset or presets (code-review, issue-triage, ci-ops), with write tools gated behind approvals that survive restarts and deploys. A working GitHub agent in nine lines; the safe-by-default approval-gating pattern is worth copying in MCP/agent tooling.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://blog.yossarian.net/2026/07/07/You-shouldnt-trust-trusted-publishing" target="_blank" rel="noopener">You shouldn't trust Trusted Publishing</a></div>
-        <div class="item-takeaway">Analysis from an author deeply involved in package-ecosystem security: OIDC trusted publishing removes long-lived secrets but does not authenticate what gets published or protect against compromised CI. If you publish packages this way, treat it as credential hygiene, not integrity — provenance/attestations and locked-down workflows are still needed.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://vercel.com/changelog/chat-sdk-adds-photon-support" target="_blank" rel="noopener">Chat SDK adds Photon support (native iMessage bots)</a></div>
-        <div class="item-takeaway">Chat SDK gained a vendor-official Photon adapter for native iMessage bots, including group chats, media, and tapbacks-as-reactions, runnable against Spectrum Cloud, your own server, or a Mac. iMessage automation is historically fragile; watch maturity before building on it.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://vercel.com/changelog/more-granular-observability-for-vercel-sandbox" target="_blank" rel="noopener">More granular observability for Vercel Sandbox</a></div>
-        <div class="item-takeaway">Vercel Sandbox now exposes per-sandbox resource metrics, groupable by name and session and queryable via CLI, aligned with billing so you can attribute costs to specific agent workloads. Only matters if you run workloads on Vercel Sandbox.</div>
+        <div class="item-title"><a href="https://blog.cloudflare.com/meerkat-introduction/" target="_blank" rel="noopener">Introducing Meerkat: an experiment in global consensus</a></div>
+        <div class="item-takeaway">Cloudflare introduced Meerkat, an experimental global consensus service built on QuePaxa rather than Raft.</div>
       </div>
     </div>
     <h2>Full digest</h2>
@@ -107,10 +87,296 @@
 
       <div class="item">
         <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://vercel.com/changelog/chat-sdk-adds-dial-support" target="_blank" rel="noopener">Chat SDK adds Dial support (SMS/MMS/iMessage + voice transcripts)</a>
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urjiam/someone_really_thought_my_env_was_just_sitting/" target="_blank" rel="noopener">Someone really thought my .env was just sitting there 😭</a>
         </div>
-        <div class="item-takeaway">Vercel's Chat SDK gained a vendor-official Dial adapter: bots send and receive SMS, MMS, and iMessage on a real phone number, and inbound voice-call transcripts land on the same thread with HMAC-verified webhooks. Collapses a lot of telephony plumbing for phone-channel agents.</div>
+        <div class="item-takeaway">Scanner probed common .env paths on one founder's app; amusing but not new.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urhh29/managing_platform_risk_and_trust_when_evaluating/" target="_blank" rel="noopener">Managing platform risk and trust when evaluating embedded legal infrastructure vendors</a>
+        </div>
+        <div class="item-takeaway">Open question about trusting embedded legal vendors, with no resolved finding.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uqvh7e/i_launched_my_freemium_saas_back_in_2013_here_are/" target="_blank" rel="noopener">I launched my freemium SaaS back in 2013. Here are the Monthly Active Users by year. [OC]</a>
+        </div>
+        <div class="item-takeaway">Long-run freemium MAU chart and growth anecdotes from one developer tool founder.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urdmiu/launched_my_first_saas_2_weeks_ago_sent_60_cold/" target="_blank" rel="noopener">Launched my first SaaS 2 weeks ago. Sent 60+ cold DMs and emails. Zero responses. Roast my approach and give feedback.</a>
+        </div>
+        <div class="item-takeaway">Solo founder asked for feedback after cold outreach to tradespeople got zero responses.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uqssai/how_do_you_guys_actually_market_your_saas/" target="_blank" rel="noopener">How do you guys ACTUALLY market your SaaS?</a>
+        </div>
+        <div class="item-takeaway">Generic thread asking what SaaS marketing channels are actually working.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urfl1f/got_sick_of_the_algorithm_so_i_started_creating/" target="_blank" rel="noopener">Got sick of the algorithm so I started creating &quot;Unpush&quot; - an anti-push media reader. What do you guys thinks?</a>
+        </div>
+        <div class="item-takeaway">Idea-stage anti-algorithm media reader pitch with a waitlist and landing page.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urjnmg/what_i_wish_existed/" target="_blank" rel="noopener">What I wish existed</a>
+        </div>
+        <div class="item-takeaway">Wish-list post for an AI growth team that automates audience building.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urjhcx/anyone_else_stressed_after_starting_a_company/" target="_blank" rel="noopener">Anyone else stressed after starting a company?</a>
+        </div>
+        <div class="item-takeaway">Founder-stress discussion from a doctor starting a company.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urjgdn/any_yc_b2b_founders_find_a_marketing_agency_that/" target="_blank" rel="noopener">Any YC / B2B founders find a marketing agency that actually delivers?</a>
+        </div>
+        <div class="item-takeaway">YC/B2B founders asked for marketing agency recommendations.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urjb10/this_tool_that_i_built_in_1_day_with_fable_gave/" target="_blank" rel="noopener">This tool that I built in 1 day with Fable gave more traction than any saas I took years to build.</a>
+        </div>
+        <div class="item-takeaway">Founder says a one-day Fable-built tool got more traction than past SaaS attempts.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urc7ng/200_onetime_or_smaller_monthlyannual_payments/" target="_blank" rel="noopener">$200 One-Time or Smaller Monthly/Annual Payments</a>
+        </div>
+        <div class="item-takeaway">Founder asked whether to charge $200 once or smaller recurring payments.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uriz2k/whats_actually_working_for_you_to_trust_aiwritten/" target="_blank" rel="noopener">What's actually working for you to trust AI-written code before it ships?</a>
+        </div>
+        <div class="item-takeaway">Thread asking how teams trust AI-written code before it ships.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urivnc/standardizing_website_health_audits_4utestcom/" target="_blank" rel="noopener">Standardizing Website Health Audits: 4utest.com Updates Pricing and Opens Full API Access</a>
+        </div>
+        <div class="item-takeaway">4utest.com pricing/API announcement around website health audits.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urirfv/developers_on_the_frontline_of_the_saas/" target="_blank" rel="noopener">Developers on the frontline of the SaaS replacement wave</a>
+        </div>
+        <div class="item-takeaway">LeadDev commentary on developers dealing with SaaS replacement pressure from leadership.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ure3si/i_got_tired_of_all_my_business_failing_to_find_pmf/" target="_blank" rel="noopener">I got tired of all my business failing to find PMF...</a>
+        </div>
+        <div class="item-takeaway">Meta post mocking endless PMF-chasing startup posts.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1ure2of/help_how_are_you_all_handling/" target="_blank" rel="noopener">[Help] How are you all handling deployment/production once your Lovable/Bolt/Replit app actually needs to go live?</a>
+        </div>
+        <div class="item-takeaway">Request for advice on moving vibe-coded apps into production.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uri9g0/a_screen_recorder_that_lets_claude_understand/" target="_blank" rel="noopener">A screen recorder that lets Claude understand bugs without writing prompts.</a>
+        </div>
+        <div class="item-takeaway">Product pitch for a screen recorder that explains bugs to Claude.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uraqcv/how_are_you_all_handling_in_saas_ai_usage/" target="_blank" rel="noopener">How are you all handling in SaaS AI Usage?</a>
+        </div>
+        <div class="item-takeaway">Question about how SaaS products handle AI usage pricing.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.yamanote.fun/" target="_blank" rel="noopener">Show HN: Yamanote.fun – A complete soundscape for Tokyo's Yamanote line</a>
+        </div>
+        <div class="item-takeaway">Complete Tokyo Yamanote line soundscape site assembled as a personal project.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://microsoft.github.io/flint-chart/#/" target="_blank" rel="noopener">Show HN: Microsoft releases Flint, a visualization language for AI agents</a>
+        </div>
+        <div class="item-takeaway">Flint gives agents a compact chart IR and compiles the low-level chart details for multiple backends.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ride.nexttrain.london/" target="_blank" rel="noopener">Show HN: Follow London Trains in 3D</a>
+        </div>
+        <div class="item-takeaway">3D train-tracking demo built on deck.gl and transport APIs.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://moxiedocs.com/mermaid-diagram-editor" target="_blank" rel="noopener">Show HN: Free Mermaid Diagram Editor</a>
+        </div>
+        <div class="item-takeaway">Free Mermaid editor shared as part of a docs tool suite.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/ainews-spacexai-launches-grok-45" target="_blank" rel="noopener">[AINews] SpaceXAI launches Grok 4.5, first Opus-class model post Cursor acquisition</a>
+        </div>
+        <div class="item-takeaway">Latent Space roundup leads with Grok 4.5 and other AI news.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          Why AI Infrastructure must evolve for Agent Experience
+        </div>
+        <div class="item-takeaway">Akshat Bubna, Modal CTO — https://www.latent.space/p/modal2026 — Modal CTO interview on why agent infrastructure is changing.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://huggingface.co/blog/nvidia/open-data-for-agents" target="_blank" rel="noopener">Data for Agents</a>
+        </div>
+        <div class="item-takeaway">Hugging Face post title suggests open data work for agents, but the page was unreadable via browse.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://huggingface.co/blog/native-speed-vllm-transformers-backend" target="_blank" rel="noopener">Native-speed vLLM transformers modeling backend</a>
+        </div>
+        <div class="item-takeaway">Hugging Face post title suggests a native-speed vLLM backend, but browse could not read it.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/blog/vercel-agent" target="_blank" rel="noopener">Vercel Agent: An agent you can let near production</a>
+        </div>
+        <div class="item-takeaway">Vercel Agent expands from PR/alert help into dashboard-based production investigation with plan-gated actions.</div>
         <div class="item-meta">
           <span>vercel-changelog</span>
         </div>
@@ -118,10 +384,10 @@
 
       <div class="item">
         <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://vercel.com/changelog/chat-sdk-adds-photon-support" target="_blank" rel="noopener">Chat SDK adds Photon support (native iMessage bots)</a>
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/grok-4-5-now-available-on-ai-gateway" target="_blank" rel="noopener">Grok 4.5 now available on AI Gateway</a>
         </div>
-        <div class="item-takeaway">Chat SDK gained a vendor-official Photon adapter for native iMessage bots, including group chats, media, and tapbacks-as-reactions, runnable against Spectrum Cloud, your own server, or a Mac. iMessage automation is historically fragile; watch maturity before building on it.</div>
+        <div class="item-takeaway">Vercel AI Gateway now routes to Grok 4.5 with reasoning controls.</div>
         <div class="item-meta">
           <span>vercel-changelog</span>
         </div>
@@ -130,42 +396,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://vercel.com/changelog/you-can-now-view-the-activity-log-at-a-project-level" target="_blank" rel="noopener">Vercel Activity Log now viewable at project level</a>
+          <a href="https://vercel.com/changelog/update-project-settings-from-the-vercel-cli" target="_blank" rel="noopener">Update Project Settings from the Vercel CLI</a>
         </div>
-        <div class="item-takeaway">Vercel's Project Settings now includes a project-scoped view of the team Activity Log. Minor console UI convenience with no API or workflow change.</div>
-        <div class="item-meta">
-          <span>vercel-changelog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://vercel.com/blog/vercel-acquires-better-auth" target="_blank" rel="noopener">Vercel acquires Better Auth to accelerate open source auth</a>
-        </div>
-        <div class="item-takeaway">Vercel is acquiring Better Auth (4.7M+ weekly npm downloads); founder Bereket Engida and the core team join to continue the open-source TypeScript auth library and build agent-identity primitives so each agent gets its own scoped credentials. If Better Auth is in your stack, watch governance and licensing direction.</div>
-        <div class="item-meta">
-          <span>vercel-changelog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://vercel.com/changelog/more-granular-observability-for-vercel-sandbox" target="_blank" rel="noopener">More granular observability for Vercel Sandbox</a>
-        </div>
-        <div class="item-takeaway">Vercel Sandbox now exposes per-sandbox resource metrics, groupable by name and session and queryable via CLI, aligned with billing so you can attribute costs to specific agent workloads. Only matters if you run workloads on Vercel Sandbox.</div>
-        <div class="item-meta">
-          <span>vercel-changelog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://vercel.com/changelog/github-tools-eve" target="_blank" rel="noopener">Give your eve agent GitHub tools</a>
-        </div>
-        <div class="item-takeaway">GitHub Tools now ships an eve subpath: one file registers the full GitHub toolset or presets (code-review, issue-triage, ci-ops), with write tools gated behind approvals that survive restarts and deploys. A working GitHub agent in nine lines; the safe-by-default approval-gating pattern is worth copying in MCP/agent tooling.</div>
+        <div class="item-takeaway">Vercel CLI can now update framework presets and build settings directly.</div>
         <div class="item-meta">
           <span>vercel-changelog</span>
         </div>
@@ -174,295 +407,64 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://neil.computer/notes/how-to-setup-minimal-zfs-nas-without-truenas/" target="_blank" rel="noopener">How to build a minimal ZFS NAS without Synology/QNAP/TrueNAS (2024)</a>
+          <a href="https://vercel.com/changelog/vercel-microfrontends-checks-for-missing-configuration" target="_blank" rel="noopener">Vercel Microfrontends checks for missing configuration</a>
         </div>
-        <div class="item-takeaway">A 2024 guide to hand-rolling a ZFS NAS resurfaced on HN. Solid hobby-infra content but two years old and not a decision-changer for a solo software business.</div>
+        <div class="item-takeaway">Vercel added a blocking deployment check for missing microfrontends config.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/flags-sdk-now-evaluates-flags-10x-faster" target="_blank" rel="noopener">Flags SDK now evaluates flags 10x faster</a>
+        </div>
+        <div class="item-takeaway">Flags SDK bulk evaluation is roughly 10x faster via less promise overhead.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/" target="_blank" rel="noopener">GitLost: GitHub's AI agent tricked into leaking private repos</a>
+          <a href="https://vercel.com/changelog/vercel-cli-now-supports-verifying-dns-configuration" target="_blank" rel="noopener">Vercel CLI now supports verifying DNS configuration</a>
         </div>
-        <div class="item-takeaway">Noma Security researchers prompt-injected GitHub's AI coding agent into exfiltrating private repository contents. This is the live threat model for anyone running agentic coding tools with repo access. Action: least-privilege tokens, restrict what agents can read and post, review agent-initiated outbound actions.</div>
+        <div class="item-takeaway">vercel domains verify now diagnoses DNS, ownership, conflicts, and can emit machine-readable JSON.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.81" target="_blank" rel="noopener">v16.3.0-canary.81</a>
+        </div>
+        <div class="item-takeaway">Next.js canary release with a long miscellany of internal fixes and test changes.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://kb.cert.org/vuls/id/213560" target="_blank" rel="noopener">Tenda firmware ships hidden authentication backdoor</a>
+          <a href="https://blog.cloudflare.com/meerkat-introduction/" target="_blank" rel="noopener">Introducing Meerkat: an experiment in global consensus</a>
         </div>
-        <div class="item-takeaway">CERT/CC advisory: multiple Tenda firmware versions contain a hidden authentication backdoor. Replace or segment any Tenda gear in office or home-lab networks; another data point that budget network vendors are a supply-chain risk.</div>
+        <div class="item-takeaway">Cloudflare introduced Meerkat, an experimental global consensus service built on QuePaxa rather than Raft.</div>
         <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          Copy That Floppy
-        </div>
-        <div class="item-takeaway">guide for preserving data from fragile floppy disks — https://www.digipres.org/the-floppy-guide/ — A Cambridge digital-preservation guide for rescuing data from aging floppy disks. Interesting archival niche with no relevance to solo-builder decisions.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video_galleries/video-lectures/" target="_blank" rel="noopener">SICP video lectures (1986)</a>
-        </div>
-        <div class="item-takeaway">The classic 1986 MIT SICP lecture series resurfaced on HN. Evergreen educational content, not news.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.gao.gov/products/gao-26-108193" target="_blank" rel="noopener">GAO: DOE prematurely excluding cheaper nuclear cleanup options</a>
-        </div>
-        <div class="item-takeaway">A GAO report criticizes DOE's nuclear cleanup option analysis. Government-policy content outside the audience's scope.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.cbc.ca/news/canada/montreal/canada-s-only-watchmaking-school-9.7254211" target="_blank" rel="noopener">Canada's only watchmaking school still ticking after 80 years</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://fightchatcontrol.eu/chat-control-overview" target="_blank" rel="noopener">Chat Control 1.0 and 2.0 Explained</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://ariya.io/2026/03/local-cpu-friendly-high-quality-tts-text-to-speech-with-kokoro/" target="_blank" rel="noopener">Local, CPU-Friendly, High-Quality TTS (Text-to-Speech) with Kokoro</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://twitter.com/OpenAI/status/2074704958419792299" target="_blank" rel="noopener">GPT-5.6 Sol, along with Terra and Luna, will launch publicly this Thursday</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://neiltheseal.app/" target="_blank" rel="noopener">Show HN: Neil the Seal Game</a>
-        </div>
-        <div class="item-takeaway">Neil the seal now has a game to destroy Battery Point.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://30papers.com/" target="_blank" rel="noopener">30papers.com – Ilya's 30 essential ML papers, in a beginner friendly format</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://stats.lineageos.org" target="_blank" rel="noopener">LineageOS Statistics</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://davit.app" target="_blank" rel="noopener">Show HN: Davit, a Apple Containers UI</a>
-        </div>
-        <div class="item-takeaway">Mostly vibe-coded Apple Containers front-end that I&amp;#x27;d like to use myself. But if others want to use it, here&amp;#x27;s the source code.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://herdr.dev/" target="_blank" rel="noopener">Herdr: One terminal to rule them all</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/rowboatlabs/rowboat" target="_blank" rel="noopener">Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop</a>
-        </div>
-        <div class="item-takeaway">Claude’s desktop app is brilliant, but for our own daily work we kept wanting it to be less like a chat app and more like a full-fledged wor…</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://lv1.sh/" target="_blank" rel="noopener">l: A new runtime for k and q</a>
-        </div>
-        <div class="item-takeaway">https:&amp;#x2F;&amp;#x2F;lv1.sh&amp;#x2F;blog&amp;#x2F;why-l&amp;#x2F;</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://gracefulliberty.com/notes/scheme-is-a-hoot/" target="_blank" rel="noopener">Scheme Is a Hoot</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://spectrum.ieee.org/large-language-models-ieee-course" target="_blank" rel="noopener">IEEE Rolls Out Large Language Models Training Course</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://twitter.com/claudeai/status/2074548242386178258" target="_blank" rel="noopener">We're extending access to Fable 5 on all paid plans through July 12</a>
-        </div>
-        <div class="item-takeaway">https:&amp;#x2F;&amp;#x2F;xcancel.com&amp;#x2F;claudeai&amp;#x2F;status&amp;#x2F;2074548242386178258</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://allaboutcookies.org/eu-mandatory-distracted-driver-system" target="_blank" rel="noopener">Every new car sold in the European Union must include a driver monitoring camera</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.dw.com/en/germany-migrants-skilled-workers-integration-labor-market-bureaucracy-language-housing/a-77853162" target="_blank" rel="noopener">Why skilled workers come to Germany and then leave again</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/jimparis/qr-font" target="_blank" rel="noopener">Jim's TrueType QR Code Font</a>
-        </div>
-        <div class="item-takeaway">https:&amp;#x2F;&amp;#x2F;qr.jim.sh&amp;#x2F;</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://anthonyhobday.com/blog/20260410" target="_blank" rel="noopener">Notes on Software Quality</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://pgdog.dev/blog/why-yet-another-connection-pooler" target="_blank" rel="noopener">Why we built yet another Postgres connection pooler</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://streetcomplete.app/" target="_blank" rel="noopener">StreetComplete: Fixing OpenStreetMap, one tiny quest at a time</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
+          <span>cloudflare-blog</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything" target="_blank" rel="noopener">sqlite-utils 4.0: schema migrations, nested transactions, compound foreign keys</a>
+          <a href="https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything" target="_blank" rel="noopener">Rewriting Bun in Rust</a>
         </div>
-        <div class="item-takeaway">First major sqlite-utils release since 2020. Adds a migrations system, db.atomic() nested transactions, and compound foreign key support, with small breaking changes and an upgrade guide. If sqlite-utils is in your scripts or pipelines, pin or read the upgrade guide before bumping; migrations make it viable as a lightweight production migration tool.</div>
+        <div class="item-takeaway">Bun's creator details an 11-day Rust rewrite using Claude workflows, adversarial review, and a language-independent test suite.</div>
         <div class="item-meta">
           <span>simon-willison</span>
         </div>
@@ -471,9 +473,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://simonwillison.net/2026/Jul/7/sqlite-migrate/#atom-everything" target="_blank" rel="noopener">sqlite-migrate 0.2 retires into sqlite-utils 4.0</a>
+          <a href="https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything" target="_blank" rel="noopener">Introducing GPT‑Live</a>
         </div>
-        <div class="item-takeaway">sqlite-migrate 0.2 retires the standalone library, becoming a compatibility shim over sqlite-utils 4.0's built-in migrations. Covered as part of the main 4.0 story.</div>
+        <div class="item-takeaway">OpenAI introduced GPT-Live, a new voice-mode model that can delegate harder work to GPT-5.5 in the background.</div>
         <div class="item-meta">
           <span>simon-willison</span>
         </div>
@@ -482,9 +484,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://simonwillison.net/2026/Jul/7/github-code-component/#atom-everything" target="_blank" rel="noopener">github-code Web Component</a>
+          <a href="https://simonwillison.net/2026/Jul/8/kenton-varda/#atom-everything" target="_blank" rel="noopener">Quoting Kenton Varda</a>
         </div>
-        <div class="item-takeaway">An experimental Web Component for embedding GitHub code ranges in a page, built with a short GPT-5.5 prompt. A fun demo, but thin — no decision impact.</div>
+        <div class="item-takeaway">Simon Willison highlighted Kenton Varda's complaint about AI-written PR and commit descriptions.</div>
         <div class="item-meta">
           <span>simon-willison</span>
         </div>
@@ -493,42 +495,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://simonwillison.net/2026/Jul/7/sqlite-utils/#atom-everything" target="_blank" rel="noopener">sqlite-utils 4.0 (release link post)</a>
+          <a href="https://bun.com/blog/bun-in-rust" target="_blank" rel="noopener">Rewriting Bun in Rust</a>
         </div>
-        <div class="item-takeaway">A short link post pointing to the full sqlite-utils 4.0 write-up. Duplicate of the main story.</div>
-        <div class="item-meta">
-          <span>simon-willison</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://simonwillison.net/2026/Jul/7/sqlite-utils-2/#atom-everything" target="_blank" rel="noopener">sqlite-utils 4.0rc4</a>
-        </div>
-        <div class="item-takeaway">The final release candidate before sqlite-utils 4.0 stable, mainly incorporating review feedback. Superseded by the stable release the same day.</div>
-        <div class="item-meta">
-          <span>simon-willison</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://blog.yossarian.net/2026/07/07/You-shouldnt-trust-trusted-publishing" target="_blank" rel="noopener">You shouldn't trust Trusted Publishing</a>
-        </div>
-        <div class="item-takeaway">Analysis from an author deeply involved in package-ecosystem security: OIDC trusted publishing removes long-lived secrets but does not authenticate what gets published or protect against compromised CI. If you publish packages this way, treat it as credential hygiene, not integrity — provenance/attestations and locked-down workflows are still needed.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://qr.jim.sh/" target="_blank" rel="noopener">Jim's TrueType QR Code Font</a>
-        </div>
-        <div class="item-takeaway">Comments</div>
+        <div class="item-takeaway">Lobsters discussion link pointing to the Bun rewrite post.</div>
         <div class="item-meta">
           <span>lobsters</span>
         </div>
@@ -537,9 +506,20 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://nvd.nist.gov/vuln/detail/cve-2026-57589" target="_blank" rel="noopener">OpenBSD through 7.9: local privilege escalation to root (CVE-2026-57589)</a>
+          <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/" target="_blank" rel="noopener">Announcing TypeScript 7.0</a>
         </div>
-        <div class="item-takeaway">A use-after-free in OpenBSD through 7.9 allows local privilege escalation to root. Niche audience, but act-now if you run OpenBSD: apply errata/patches as soon as available.</div>
+        <div class="item-takeaway">TypeScript 7 is now available, and Microsoft says the native port delivers roughly 8x-12x faster builds.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://jasonpolak.substack.com/p/interview-drew-devault-on-an-ai-free" target="_blank" rel="noopener">Interview: Drew DeVault on an AI-free version of Vim</a>
+        </div>
+        <div class="item-takeaway">Interview with Drew DeVault about an AI-free version of Vim.</div>
         <div class="item-meta">
           <span>lobsters</span>
         </div>
@@ -549,85 +529,73 @@
       <summary>Original markdown</summary>
       <pre class="raw-report"># Nightly Librarian — Newsletter draft
 
-Run: dd3c2efc-1d82-494c-afb4-2fe5c0bf0cce
-Started: 2026-07-09T06:10:01.977Z
-Completed: 2026-07-09T06:16:16.612Z
+Run: 81b9c93e-63a5-48ef-b965-7a7944929d18
+Started: 2026-07-09T11:01:29.545Z
+Completed: 2026-07-09T11:15:43.220Z
 
 ## Worth attention
 
-- **GitLost: GitHub's AI agent tricked into leaking private repos**
-  https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/
-  Noma Security researchers prompt-injected GitHub's AI coding agent into exfiltrating private repository contents. This is the live threat model for anyone running agentic coding tools with repo access. Action: least-privilege tokens, restrict what agents can read and post, review agent-initiated outbound actions.
-- **Vercel acquires Better Auth to accelerate open source auth**
-  https://vercel.com/blog/vercel-acquires-better-auth
-  Vercel is acquiring Better Auth (4.7M+ weekly npm downloads); founder Bereket Engida and the core team join to continue the open-source TypeScript auth library and build agent-identity primitives so each agent gets its own scoped credentials. If Better Auth is in your stack, watch governance and licensing direction.
-- **sqlite-utils 4.0: schema migrations, nested transactions, compound foreign keys**
-  https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything
-  First major sqlite-utils release since 2020. Adds a migrations system, db.atomic() nested transactions, and compound foreign key support, with small breaking changes and an upgrade guide. If sqlite-utils is in your scripts or pipelines, pin or read the upgrade guide before bumping; migrations make it viable as a lightweight production migration tool.
-- **Chat SDK adds Dial support (SMS/MMS/iMessage + voice transcripts)**
-  https://vercel.com/changelog/chat-sdk-adds-dial-support
-  Vercel's Chat SDK gained a vendor-official Dial adapter: bots send and receive SMS, MMS, and iMessage on a real phone number, and inbound voice-call transcripts land on the same thread with HMAC-verified webhooks. Collapses a lot of telephony plumbing for phone-channel agents.
-- **Tenda firmware ships hidden authentication backdoor**
-  https://kb.cert.org/vuls/id/213560
-  CERT/CC advisory: multiple Tenda firmware versions contain a hidden authentication backdoor. Replace or segment any Tenda gear in office or home-lab networks; another data point that budget network vendors are a supply-chain risk.
-- **OpenBSD through 7.9: local privilege escalation to root (CVE-2026-57589)**
-  https://nvd.nist.gov/vuln/detail/cve-2026-57589
-  A use-after-free in OpenBSD through 7.9 allows local privilege escalation to root. Niche audience, but act-now if you run OpenBSD: apply errata/patches as soon as available.
-- **Give your eve agent GitHub tools**
-  https://vercel.com/changelog/github-tools-eve
-  GitHub Tools now ships an eve subpath: one file registers the full GitHub toolset or presets (code-review, issue-triage, ci-ops), with write tools gated behind approvals that survive restarts and deploys. A working GitHub agent in nine lines; the safe-by-default approval-gating pattern is worth copying in MCP/agent tooling.
-- **You shouldn't trust Trusted Publishing**
-  https://blog.yossarian.net/2026/07/07/You-shouldnt-trust-trusted-publishing
-  Analysis from an author deeply involved in package-ecosystem security: OIDC trusted publishing removes long-lived secrets but does not authenticate what gets published or protect against compromised CI. If you publish packages this way, treat it as credential hygiene, not integrity — provenance/attestations and locked-down workflows are still needed.
-- **Chat SDK adds Photon support (native iMessage bots)**
-  https://vercel.com/changelog/chat-sdk-adds-photon-support
-  Chat SDK gained a vendor-official Photon adapter for native iMessage bots, including group chats, media, and tapbacks-as-reactions, runnable against Spectrum Cloud, your own server, or a Mac. iMessage automation is historically fragile; watch maturity before building on it.
-- **More granular observability for Vercel Sandbox**
-  https://vercel.com/changelog/more-granular-observability-for-vercel-sandbox
-  Vercel Sandbox now exposes per-sandbox resource metrics, groupable by name and session and queryable via CLI, aligned with billing so you can attribute costs to specific agent workloads. Only matters if you run workloads on Vercel Sandbox.
+- **Show HN: Microsoft releases Flint, a visualization language for AI agents**
+  https://microsoft.github.io/flint-chart/#/
+  Flint gives agents a compact chart IR and compiles the low-level chart details for multiple backends.
+- **Vercel Agent: An agent you can let near production**
+  https://vercel.com/blog/vercel-agent
+  Vercel Agent expands from PR/alert help into dashboard-based production investigation with plan-gated actions.
+- **Vercel CLI now supports verifying DNS configuration**
+  https://vercel.com/changelog/vercel-cli-now-supports-verifying-dns-configuration
+  vercel domains verify now diagnoses DNS, ownership, conflicts, and can emit machine-readable JSON.
+- **Rewriting Bun in Rust**
+  https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything
+  Bun's creator details an 11-day Rust rewrite using Claude workflows, adversarial review, and a language-independent test suite.
+- **Announcing TypeScript 7.0**
+  https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/
+  TypeScript 7 is now available, and Microsoft says the native port delivers roughly 8x-12x faster builds.
+- **Introducing Meerkat: an experiment in global consensus**
+  https://blog.cloudflare.com/meerkat-introduction/
+  Cloudflare introduced Meerkat, an experimental global consensus service built on QuePaxa rather than Raft.
 
 ## Full digest
 
-- [P] [vercel-changelog] Chat SDK adds Dial support (SMS/MMS/iMessage + voice transcripts) — https://vercel.com/changelog/chat-sdk-adds-dial-support — Vercel's Chat SDK gained a vendor-official Dial adapter: bots send and receive SMS, MMS, and iMessage on a real phone number, and inbound voice-call transcripts land on the same thread with HMAC-verified webhooks. Collapses a lot of telephony plumbing for phone-channel agents.
-- [M] [vercel-changelog] Chat SDK adds Photon support (native iMessage bots) — https://vercel.com/changelog/chat-sdk-adds-photon-support — Chat SDK gained a vendor-official Photon adapter for native iMessage bots, including group chats, media, and tapbacks-as-reactions, runnable against Spectrum Cloud, your own server, or a Mac. iMessage automation is historically fragile; watch maturity before building on it.
-- [R] [vercel-changelog] Vercel Activity Log now viewable at project level — https://vercel.com/changelog/you-can-now-view-the-activity-log-at-a-project-level — Vercel's Project Settings now includes a project-scoped view of the team Activity Log. Minor console UI convenience with no API or workflow change.
-- [P] [vercel-changelog] Vercel acquires Better Auth to accelerate open source auth — https://vercel.com/blog/vercel-acquires-better-auth — Vercel is acquiring Better Auth (4.7M+ weekly npm downloads); founder Bereket Engida and the core team join to continue the open-source TypeScript auth library and build agent-identity primitives so each agent gets its own scoped credentials. If Better Auth is in your stack, watch governance and licensing direction.
-- [M] [vercel-changelog] More granular observability for Vercel Sandbox — https://vercel.com/changelog/more-granular-observability-for-vercel-sandbox — Vercel Sandbox now exposes per-sandbox resource metrics, groupable by name and session and queryable via CLI, aligned with billing so you can attribute costs to specific agent workloads. Only matters if you run workloads on Vercel Sandbox.
-- [P] [vercel-changelog] Give your eve agent GitHub tools — https://vercel.com/changelog/github-tools-eve — GitHub Tools now ships an eve subpath: one file registers the full GitHub toolset or presets (code-review, issue-triage, ci-ops), with write tools gated behind approvals that survive restarts and deploys. A working GitHub agent in nine lines; the safe-by-default approval-gating pattern is worth copying in MCP/agent tooling.
-- [R] [hn-top] How to build a minimal ZFS NAS without Synology/QNAP/TrueNAS (2024) — https://neil.computer/notes/how-to-setup-minimal-zfs-nas-without-truenas/ — A 2024 guide to hand-rolling a ZFS NAS resurfaced on HN. Solid hobby-infra content but two years old and not a decision-changer for a solo software business.
-- [P] [hn-top] GitLost: GitHub's AI agent tricked into leaking private repos — https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/ — Noma Security researchers prompt-injected GitHub's AI coding agent into exfiltrating private repository contents. This is the live threat model for anyone running agentic coding tools with repo access. Action: least-privilege tokens, restrict what agents can read and post, review agent-initiated outbound actions.
-- [P] [hn-top] Tenda firmware ships hidden authentication backdoor — https://kb.cert.org/vuls/id/213560 — CERT/CC advisory: multiple Tenda firmware versions contain a hidden authentication backdoor. Replace or segment any Tenda gear in office or home-lab networks; another data point that budget network vendors are a supply-chain risk.
-- [R] [hn-top] Copy That Floppy — guide for preserving data from fragile floppy disks — https://www.digipres.org/the-floppy-guide/ — A Cambridge digital-preservation guide for rescuing data from aging floppy disks. Interesting archival niche with no relevance to solo-builder decisions.
-- [R] [hn-top] SICP video lectures (1986) — https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video_galleries/video-lectures/ — The classic 1986 MIT SICP lecture series resurfaced on HN. Evergreen educational content, not news.
-- [R] [hn-top] GAO: DOE prematurely excluding cheaper nuclear cleanup options — https://www.gao.gov/products/gao-26-108193 — A GAO report criticizes DOE's nuclear cleanup option analysis. Government-policy content outside the audience's scope.
-- [R] [hn-top] Canada's only watchmaking school still ticking after 80 years — https://www.cbc.ca/news/canada/montreal/canada-s-only-watchmaking-school-9.7254211 — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Chat Control 1.0 and 2.0 Explained — https://fightchatcontrol.eu/chat-control-overview — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Local, CPU-Friendly, High-Quality TTS (Text-to-Speech) with Kokoro — https://ariya.io/2026/03/local-cpu-friendly-high-quality-tts-text-to-speech-with-kokoro/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] GPT-5.6 Sol, along with Terra and Luna, will launch publicly this Thursday — https://twitter.com/OpenAI/status/2074704958419792299 — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Show HN: Neil the Seal Game — https://neiltheseal.app/ — Neil the seal now has a game to destroy Battery Point.
-- [R] [hn-top] 30papers.com – Ilya's 30 essential ML papers, in a beginner friendly format — https://30papers.com/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] LineageOS Statistics — https://stats.lineageos.org — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Show HN: Davit, a Apple Containers UI — https://davit.app — Mostly vibe-coded Apple Containers front-end that I&amp;#x27;d like to use myself. But if others want to use it, here&amp;#x27;s the source code.
-- [R] [hn-top] Herdr: One terminal to rule them all — https://herdr.dev/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop — https://github.com/rowboatlabs/rowboat — Claude’s desktop app is brilliant, but for our own daily work we kept wanting it to be less like a chat app and more like a full-fledged wor…
-- [R] [hn-top] l: A new runtime for k and q — https://lv1.sh/ — https:&amp;#x2F;&amp;#x2F;lv1.sh&amp;#x2F;blog&amp;#x2F;why-l&amp;#x2F;
-- [R] [hn-top] Scheme Is a Hoot — https://gracefulliberty.com/notes/scheme-is-a-hoot/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] IEEE Rolls Out Large Language Models Training Course — https://spectrum.ieee.org/large-language-models-ieee-course — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] We're extending access to Fable 5 on all paid plans through July 12 — https://twitter.com/claudeai/status/2074548242386178258 — https:&amp;#x2F;&amp;#x2F;xcancel.com&amp;#x2F;claudeai&amp;#x2F;status&amp;#x2F;2074548242386178258
-- [R] [hn-top] Every new car sold in the European Union must include a driver monitoring camera — https://allaboutcookies.org/eu-mandatory-distracted-driver-system — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Why skilled workers come to Germany and then leave again — https://www.dw.com/en/germany-migrants-skilled-workers-integration-labor-market-bureaucracy-language-housing/a-77853162 — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Jim's TrueType QR Code Font — https://github.com/jimparis/qr-font — https:&amp;#x2F;&amp;#x2F;qr.jim.sh&amp;#x2F;
-- [R] [hn-top] Notes on Software Quality — https://anthonyhobday.com/blog/20260410 — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Why we built yet another Postgres connection pooler — https://pgdog.dev/blog/why-yet-another-connection-pooler — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] StreetComplete: Fixing OpenStreetMap, one tiny quest at a time — https://streetcomplete.app/ — Scheduled agent omitted this claimed item from the completion payload.
-- [P] [simon-willison] sqlite-utils 4.0: schema migrations, nested transactions, compound foreign keys — https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything — First major sqlite-utils release since 2020. Adds a migrations system, db.atomic() nested transactions, and compound foreign key support, with small breaking changes and an upgrade guide. If sqlite-utils is in your scripts or pipelines, pin or read the upgrade guide before bumping; migrations make it viable as a lightweight production migration tool.
-- [R] [simon-willison] sqlite-migrate 0.2 retires into sqlite-utils 4.0 — https://simonwillison.net/2026/Jul/7/sqlite-migrate/#atom-everything — sqlite-migrate 0.2 retires the standalone library, becoming a compatibility shim over sqlite-utils 4.0's built-in migrations. Covered as part of the main 4.0 story.
-- [R] [simon-willison] github-code Web Component — https://simonwillison.net/2026/Jul/7/github-code-component/#atom-everything — An experimental Web Component for embedding GitHub code ranges in a page, built with a short GPT-5.5 prompt. A fun demo, but thin — no decision impact.
-- [R] [simon-willison] sqlite-utils 4.0 (release link post) — https://simonwillison.net/2026/Jul/7/sqlite-utils/#atom-everything — A short link post pointing to the full sqlite-utils 4.0 write-up. Duplicate of the main story.
-- [R] [simon-willison] sqlite-utils 4.0rc4 — https://simonwillison.net/2026/Jul/7/sqlite-utils-2/#atom-everything — The final release candidate before sqlite-utils 4.0 stable, mainly incorporating review feedback. Superseded by the stable release the same day.
-- [P] [lobsters] You shouldn't trust Trusted Publishing — https://blog.yossarian.net/2026/07/07/You-shouldnt-trust-trusted-publishing — Analysis from an author deeply involved in package-ecosystem security: OIDC trusted publishing removes long-lived secrets but does not authenticate what gets published or protect against compromised CI. If you publish packages this way, treat it as credential hygiene, not integrity — provenance/attestations and locked-down workflows are still needed.
-- [R] [lobsters] Jim's TrueType QR Code Font — https://qr.jim.sh/ — Comments
-- [P] [lobsters] OpenBSD through 7.9: local privilege escalation to root (CVE-2026-57589) — https://nvd.nist.gov/vuln/detail/cve-2026-57589 — A use-after-free in OpenBSD through 7.9 allows local privilege escalation to root. Niche audience, but act-now if you run OpenBSD: apply errata/patches as soon as available.</pre>
+- [R] [reddit-saas] Someone really thought my .env was just sitting there 😭 — https://www.reddit.com/r/SaaS/comments/1urjiam/someone_really_thought_my_env_was_just_sitting/ — Scanner probed common .env paths on one founder's app; amusing but not new.
+- [R] [reddit-saas] Managing platform risk and trust when evaluating embedded legal infrastructure vendors — https://www.reddit.com/r/SaaS/comments/1urhh29/managing_platform_risk_and_trust_when_evaluating/ — Open question about trusting embedded legal vendors, with no resolved finding.
+- [R] [reddit-saas] I launched my freemium SaaS back in 2013. Here are the Monthly Active Users by year. [OC] — https://www.reddit.com/r/SaaS/comments/1uqvh7e/i_launched_my_freemium_saas_back_in_2013_here_are/ — Long-run freemium MAU chart and growth anecdotes from one developer tool founder.
+- [R] [reddit-saas] Launched my first SaaS 2 weeks ago. Sent 60+ cold DMs and emails. Zero responses. Roast my approach and give feedback. — https://www.reddit.com/r/SaaS/comments/1urdmiu/launched_my_first_saas_2_weeks_ago_sent_60_cold/ — Solo founder asked for feedback after cold outreach to tradespeople got zero responses.
+- [R] [reddit-saas] How do you guys ACTUALLY market your SaaS? — https://www.reddit.com/r/SaaS/comments/1uqssai/how_do_you_guys_actually_market_your_saas/ — Generic thread asking what SaaS marketing channels are actually working.
+- [R] [reddit-saas] Got sick of the algorithm so I started creating &quot;Unpush&quot; - an anti-push media reader. What do you guys thinks? — https://www.reddit.com/r/SaaS/comments/1urfl1f/got_sick_of_the_algorithm_so_i_started_creating/ — Idea-stage anti-algorithm media reader pitch with a waitlist and landing page.
+- [R] [reddit-saas] What I wish existed — https://www.reddit.com/r/SaaS/comments/1urjnmg/what_i_wish_existed/ — Wish-list post for an AI growth team that automates audience building.
+- [R] [reddit-saas] Anyone else stressed after starting a company? — https://www.reddit.com/r/SaaS/comments/1urjhcx/anyone_else_stressed_after_starting_a_company/ — Founder-stress discussion from a doctor starting a company.
+- [R] [reddit-saas] Any YC / B2B founders find a marketing agency that actually delivers? — https://www.reddit.com/r/SaaS/comments/1urjgdn/any_yc_b2b_founders_find_a_marketing_agency_that/ — YC/B2B founders asked for marketing agency recommendations.
+- [R] [reddit-saas] This tool that I built in 1 day with Fable gave more traction than any saas I took years to build. — https://www.reddit.com/r/SaaS/comments/1urjb10/this_tool_that_i_built_in_1_day_with_fable_gave/ — Founder says a one-day Fable-built tool got more traction than past SaaS attempts.
+- [R] [reddit-saas] $200 One-Time or Smaller Monthly/Annual Payments — https://www.reddit.com/r/SaaS/comments/1urc7ng/200_onetime_or_smaller_monthlyannual_payments/ — Founder asked whether to charge $200 once or smaller recurring payments.
+- [R] [reddit-saas] What's actually working for you to trust AI-written code before it ships? — https://www.reddit.com/r/SaaS/comments/1uriz2k/whats_actually_working_for_you_to_trust_aiwritten/ — Thread asking how teams trust AI-written code before it ships.
+- [R] [reddit-saas] Standardizing Website Health Audits: 4utest.com Updates Pricing and Opens Full API Access — https://www.reddit.com/r/SaaS/comments/1urivnc/standardizing_website_health_audits_4utestcom/ — 4utest.com pricing/API announcement around website health audits.
+- [R] [reddit-saas] Developers on the frontline of the SaaS replacement wave — https://www.reddit.com/r/SaaS/comments/1urirfv/developers_on_the_frontline_of_the_saas/ — LeadDev commentary on developers dealing with SaaS replacement pressure from leadership.
+- [R] [reddit-saas] I got tired of all my business failing to find PMF... — https://www.reddit.com/r/SaaS/comments/1ure3si/i_got_tired_of_all_my_business_failing_to_find_pmf/ — Meta post mocking endless PMF-chasing startup posts.
+- [R] [reddit-saas] [Help] How are you all handling deployment/production once your Lovable/Bolt/Replit app actually needs to go live? — https://www.reddit.com/r/SaaS/comments/1ure2of/help_how_are_you_all_handling/ — Request for advice on moving vibe-coded apps into production.
+- [R] [reddit-saas] A screen recorder that lets Claude understand bugs without writing prompts. — https://www.reddit.com/r/SaaS/comments/1uri9g0/a_screen_recorder_that_lets_claude_understand/ — Product pitch for a screen recorder that explains bugs to Claude.
+- [R] [reddit-saas] How are you all handling in SaaS AI Usage? — https://www.reddit.com/r/SaaS/comments/1uraqcv/how_are_you_all_handling_in_saas_ai_usage/ — Question about how SaaS products handle AI usage pricing.
+- [R] [hn-show] Show HN: Yamanote.fun – A complete soundscape for Tokyo's Yamanote line — https://www.yamanote.fun/ — Complete Tokyo Yamanote line soundscape site assembled as a personal project.
+- [P] [hn-show] Show HN: Microsoft releases Flint, a visualization language for AI agents — https://microsoft.github.io/flint-chart/#/ — Flint gives agents a compact chart IR and compiles the low-level chart details for multiple backends.
+- [R] [hn-show] Show HN: Follow London Trains in 3D — https://ride.nexttrain.london/ — 3D train-tracking demo built on deck.gl and transport APIs.
+- [R] [hn-show] Show HN: Free Mermaid Diagram Editor — https://moxiedocs.com/mermaid-diagram-editor — Free Mermaid editor shared as part of a docs tool suite.
+- [R] [latent-space] [AINews] SpaceXAI launches Grok 4.5, first Opus-class model post Cursor acquisition — https://www.latent.space/p/ainews-spacexai-launches-grok-45 — Latent Space roundup leads with Grok 4.5 and other AI news.
+- [R] [latent-space] Why AI Infrastructure must evolve for Agent Experience — Akshat Bubna, Modal CTO — https://www.latent.space/p/modal2026 — Modal CTO interview on why agent infrastructure is changing.
+- [R] [huggingface-blog] Data for Agents — https://huggingface.co/blog/nvidia/open-data-for-agents — Hugging Face post title suggests open data work for agents, but the page was unreadable via browse.
+- [R] [huggingface-blog] Native-speed vLLM transformers modeling backend — https://huggingface.co/blog/native-speed-vllm-transformers-backend — Hugging Face post title suggests a native-speed vLLM backend, but browse could not read it.
+- [P] [vercel-changelog] Vercel Agent: An agent you can let near production — https://vercel.com/blog/vercel-agent — Vercel Agent expands from PR/alert help into dashboard-based production investigation with plan-gated actions.
+- [R] [vercel-changelog] Grok 4.5 now available on AI Gateway — https://vercel.com/changelog/grok-4-5-now-available-on-ai-gateway — Vercel AI Gateway now routes to Grok 4.5 with reasoning controls.
+- [R] [vercel-changelog] Update Project Settings from the Vercel CLI — https://vercel.com/changelog/update-project-settings-from-the-vercel-cli — Vercel CLI can now update framework presets and build settings directly.
+- [R] [vercel-changelog] Vercel Microfrontends checks for missing configuration — https://vercel.com/changelog/vercel-microfrontends-checks-for-missing-configuration — Vercel added a blocking deployment check for missing microfrontends config.
+- [R] [vercel-changelog] Flags SDK now evaluates flags 10x faster — https://vercel.com/changelog/flags-sdk-now-evaluates-flags-10x-faster — Flags SDK bulk evaluation is roughly 10x faster via less promise overhead.
+- [P] [vercel-changelog] Vercel CLI now supports verifying DNS configuration — https://vercel.com/changelog/vercel-cli-now-supports-verifying-dns-configuration — vercel domains verify now diagnoses DNS, ownership, conflicts, and can emit machine-readable JSON.
+- [R] [gh-nextjs] v16.3.0-canary.81 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.81 — Next.js canary release with a long miscellany of internal fixes and test changes.
+- [P] [cloudflare-blog] Introducing Meerkat: an experiment in global consensus — https://blog.cloudflare.com/meerkat-introduction/ — Cloudflare introduced Meerkat, an experimental global consensus service built on QuePaxa rather than Raft.
+- [P] [simon-willison] Rewriting Bun in Rust — https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything — Bun's creator details an 11-day Rust rewrite using Claude workflows, adversarial review, and a language-independent test suite.
+- [R] [simon-willison] Introducing GPT‑Live — https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything — OpenAI introduced GPT-Live, a new voice-mode model that can delegate harder work to GPT-5.5 in the background.
+- [R] [simon-willison] Quoting Kenton Varda — https://simonwillison.net/2026/Jul/8/kenton-varda/#atom-everything — Simon Willison highlighted Kenton Varda's complaint about AI-written PR and commit descriptions.
+- [R] [lobsters] Rewriting Bun in Rust — https://bun.com/blog/bun-in-rust — Lobsters discussion link pointing to the Bun rewrite post.
+- [P] [lobsters] Announcing TypeScript 7.0 — https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/ — TypeScript 7 is now available, and Microsoft says the native port delivers roughly 8x-12x faster builds.
+- [R] [lobsters] Interview: Drew DeVault on an AI-free version of Vim — https://jasonpolak.substack.com/p/interview-drew-devault-on-an-ai-free — Interview with Drew DeVault about an AI-free version of Vim.</pre>
     </details>
   </main>
   <footer>
