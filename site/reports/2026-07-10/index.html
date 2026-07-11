@@ -5,21 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>July 10, 2026 report log — The Nightly Librarian</title>
-  <meta name="description" content="12 stories cleared the bar, led by Benchmarking coding agents on Databricks' multi-million line codebase, Separating signal from noise in coding">
+  <meta name="description" content="7 stories cleared the bar, led by Introducing the New Neon API Command, Searchable field-level encryption on Supabase with CipherStash, and How to Achieve">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-07-10/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="July 10, 2026 report log | The Nightly Librarian">
-  <meta property="og:description" content="12 stories cleared the bar, led by Benchmarking coding agents on Databricks' multi-million line codebase, Separating signal from noise in coding">
+  <meta property="og:description" content="7 stories cleared the bar, led by Introducing the New Neon API Command, Searchable field-level encryption on Supabase with CipherStash, and How to Achieve">
   <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-07-10/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="July 10, 2026 report log | The Nightly Librarian">
-  <meta name="twitter:description" content="12 stories cleared the bar, led by Benchmarking coding agents on Databricks' multi-million line codebase, Separating signal from noise in coding">
+  <meta name="twitter:description" content="7 stories cleared the bar, led by Introducing the New Neon API Command, Searchable field-level encryption on Supabase with CipherStash, and How to Achieve">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
@@ -36,7 +36,7 @@
     </div>
     <div class="dateline">
       <span>July 10, 2026 · Report log</span>
-      <span>Jul 10, 2026, 2:16 AM</span>
+      <span>Jul 10, 2026, 7:09 AM</span>
     </div>
   </header>
   <main>
@@ -44,72 +44,47 @@
     <h1>July 10, 2026</h1>
     <div class="summary-card">
       <div class="eyebrow">Report summary</div>
-      <p>12 stories cleared the bar, led by Benchmarking coding agents on Databricks' multi-million line codebase, Separating signal from noise in coding evaluations (OpenAI), and Haystack v2.31.0 begins core slim-down ahead of 3.0.</p>
+      <p>7 stories cleared the bar, led by Introducing the New Neon API Command, Searchable field-level encryption on Supabase with CipherStash, and How to Achieve Pruning When Querying by Non-Partitioned Columns in PostgreSQL.</p>
       <div class="meta" style="margin-top:0.4rem;">
-        <span>12 worth-attention items</span><span>40 digest lines</span>
+        <span>7 worth-attention items</span><span>40 digest lines</span>
       </div>
     </div>
     <h2>Worth attention</h2>
     <div class="item-stack">
 
       <div class="item">
-        <div class="item-title"><a href="https://www.databricks.com/blog/benchmarking-coding-agents-databricks-multi-million-line-codebase" target="_blank" rel="noopener">Benchmarking coding agents on Databricks' multi-million line codebase</a></div>
-        <div class="item-takeaway">Databricks benchmarked coding agents against their real multi-million-line production codebase rather than toy benchmark repos, reporting where agents succeed and fail on enterprise-scale tasks. This is rare production-scale evidence for calibrating how much to trust agents on large-repo work. Read for the methodology and failure patterns before pointing agents at big refactors.</div>
+        <div class="item-title"><a href="https://neon.com/blog/introducing-neon-api-command" target="_blank" rel="noopener">Introducing the New Neon API Command</a></div>
+        <div class="item-takeaway">Neon CLI adds an authenticated api passthrough so agents can hit any endpoint without handling raw tokens.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://openai.com/index/separating-signal-from-noise-coding-evaluations/" target="_blank" rel="noopener">Separating signal from noise in coding evaluations (OpenAI)</a></div>
-        <div class="item-takeaway">OpenAI published a methodology piece on the variance inherent in coding-agent evaluations — how noisy benchmark runs are, how to size test sets, and when a measured difference between models or prompts is statistically real. Directly applicable if you compare models or prompts for coding work: borrow the statistical framing before trusting your own eval deltas.</div>
+        <div class="item-title"><a href="https://supabase.com/blog/searchable-field-level-encryption-with-cipherstash" target="_blank" rel="noopener">Searchable field-level encryption on Supabase with CipherStash</a></div>
+        <div class="item-takeaway">Supabase now supports searchable field-level encryption via CipherStash without schema changes.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://github.com/deepset-ai/haystack/releases/tag/v2.31.0" target="_blank" rel="noopener">Haystack v2.31.0 begins core slim-down ahead of 3.0</a></div>
-        <div class="item-takeaway">Haystack 2.31 deprecates a large set of core components — SentenceTransformers embedders/rankers, Hugging Face API components, Whisper transcribers, OCR converters, web search connectors, and tracers — moving them to dedicated integration packages before 3.0 removes them from core. Everything still works today and migration is a one-line import change per component. Haystack users should pin versions and schedule the import migration now.</div>
+        <div class="item-title"><a href="https://hakibenita.com/postgresql-partition-pruning" target="_blank" rel="noopener">How to Achieve Pruning When Querying by Non-Partitioned Columns in PostgreSQL</a></div>
+        <div class="item-takeaway">Postgres can prune partitions on non-partition columns by adding check constraints over correlated value ranges.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://nexte.st/" target="_blank" rel="noopener">cargo-nextest: 3x faster than cargo test, per-test isolation, first-class CI</a></div>
-        <div class="item-takeaway">cargo-nextest resurfaced on HN: a mature, drop-in test runner for Rust claiming roughly 3x faster runs, per-test process isolation, flaky-test retries, and first-class CI support. Widely adopted and low-risk to try if you have a Rust project with a slow suite — but it is not new, so treat this as a reminder rather than news.</div>
+        <div class="item-title"><a href="https://mistral.ai/news/manage-prompts-and-skills-in-studio/" target="_blank" rel="noopener">Product    Your Prompts and Skills need a system of record.  Studio gives AI prompts &amp; skills a system of record—versioned, owned, and traceable.     July 9, 2026    By Mistral</a></div>
+        <div class="item-takeaway">Mistral Studio now versions prompts and skills as owned, auditable production assets with promotion controls.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://shkspr.mobi/blog/2026/07/a-bug-which-only-affected-left-handed-users/" target="_blank" rel="noopener">A bug which only affected left-handed users</a></div>
-        <div class="item-takeaway">Terence Eden traces a bug that only manifested for left-handed users: the OS-level primary-mouse-button swap changed which button events the application received. A concrete reminder that OS accessibility and preference settings are an under-tested input dimension — worth adding pointer/handedness settings to manual QA checklists for shipped UIs.</div>
+        <div class="item-title"><a href="https://github.com/ronak-create/FableCut" target="_blank" rel="noopener">Show HN: FableCut – A browser video editor AI agents can drive (zero deps)</a></div>
+        <div class="item-takeaway">FableCut is a zero-dependency browser video editor whose JSON timeline is directly controllable via MCP, REST, or file edits.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://tris.sherliker.net/blog/obfuscated-self-evaluating-bash-script-by-cdn-akamai-being-supplied-to-consumers-via-retail-stores/" target="_blank" rel="noopener">Obfuscated Akamai bash script shipped to consumers via retail stores</a></div>
-        <div class="item-takeaway">A researcher found an obfuscated, self-evaluating bash script authored by Akamai on consumer hardware sold in retail stores, and deobfuscated it to see what it does. No exploit demonstrated, but it's a useful supply-chain trust datapoint: CDN-vendor code shipping deliberately obscured on devices consumers own.</div>
+        <div class="item-title"><a href="https://andrewkelley.me/post/my-thoughts-bun-rust-rewrite.html" target="_blank" rel="noopener">My Thoughts on the Bun Rust Rewrite</a></div>
+        <div class="item-takeaway">Andrew Kelley argues Bun’s rewrite story is really about engineering discipline and overdue cleanup, not language choice alone.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://yorickpeterse.com/articles/funding-open-source-software-without-compromising-it/" target="_blank" rel="noopener">Funding open-source software without compromising it</a></div>
-        <div class="item-takeaway">Yorick Peterse (maintainer of the Inko language) writes about funding open source without compromising the project — the real trade-offs of donations, grants, dual licensing, and paid features from a solo maintainer's perspective. Useful framing for any solo builder weighing OSS monetization.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://github.com/nasa/spacewasm" target="_blank" rel="noopener">SpaceWASM: NASA/JPL's Wasm interpreter for spacecraft sequencing</a></div>
-        <div class="item-takeaway">NASA/JPL open-sourced SpaceWASM, a WebAssembly interpreter used for spacecraft command sequencing. The use case is niche, but NASA adopting Wasm for flight-adjacent tooling is a strong credibility signal for Wasm as a sandboxed embedded runtime — relevant if you're considering Wasm for plugin or agent sandboxing.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://www.liamcvw.com/p/remote-attestation" target="_blank" rel="noopener">Remote Attestation</a></div>
-        <div class="item-takeaway">An explainer on remote attestation: how devices cryptographically prove what software they are running, and what that enables — and threatens — for client trust on the open web. Useful background as attestation spreads from TPMs into browser and API integrity checks.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://linuxiac.com/openmandriva-says-former-contributor-sabotaged-its-repositories/" target="_blank" rel="noopener">OpenMandriva says former contributor sabotaged its repositories</a></div>
-        <div class="item-takeaway">OpenMandriva reports that a former contributor sabotaged its package repositories. Another insider-threat datapoint for open-source supply chains; details are still emerging. No action needed unless you use OpenMandriva, but worth tracking how access revocation failed and what the blast radius was.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://mistral.ai/news/robostral-navigate/" target="_blank" rel="noopener">Mistral introduces Robostral Navigate, its first embodied-navigation model</a></div>
-        <div class="item-takeaway">Mistral announced Robostral Navigate, described as its first model built for embodied navigation (robotics). The fetched page content was nearly empty, so capabilities, availability, and pricing are unknown. Signals Mistral expanding into robotics; nothing actionable for solo software builders today.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02" target="_blank" rel="noopener">John Deere owners get right to repair under FTC settlement</a></div>
-        <div class="item-takeaway">An FTC settlement gives John Deere equipment owners the right to repair their machines. A notable right-to-repair precedent that may ripple into other locked-down hardware/software ecosystems, but there is no direct action for solo software developers.</div>
+        <div class="item-title"><a href="https://tomesphere.com/atlas" target="_blank" rel="noopener">Show HN: I mapped 8.5M research papers into an interactive atlas</a></div>
+        <div class="item-takeaway">Tomesphere’s beta atlas maps millions of papers with paper pages, an extension, and an MCP surface, but it is still rough and heavy.</div>
       </div>
     </div>
     <h2>Full digest</h2>
@@ -117,21 +92,296 @@
 
       <div class="item">
         <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urjqjw/i_built_the_product_but_now_im_stuck_on/" target="_blank" rel="noopener">I built the product, but now I’m stuck on distribution.</a>
+        </div>
+        <div class="item-takeaway">Founder asks for generic distribution advice after building an AI product.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urm6qt/aws_account_recovery_nightmare/" target="_blank" rel="noopener">AWS account recovery nightmare</a>
+        </div>
+        <div class="item-takeaway">Single-account AWS recovery horror story without a reusable workaround yet.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urfmsr/feels_like_the_ai_agency_bubble_is_starting_to/" target="_blank" rel="noopener">Feels like the AI agency bubble is starting to pop. Anyone else seeing it?</a>
+        </div>
+        <div class="item-takeaway">Opinion thread predicting an AI agency shakeout based on hype normalizing.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urm0hm/saas_post_launch_maintenance/" target="_blank" rel="noopener">SaaS post launch maintenance</a>
+        </div>
+        <div class="item-takeaway">Reminder that post-launch maintenance matters, but no concrete new signal.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urlajv/ive_documented_how_100_startups_grew_would/" target="_blank" rel="noopener">I've documented how 100 startups grew. Would something like this actually be useful?</a>
+        </div>
+        <div class="item-takeaway">Founder asks whether a searchable library of 100 startup growth stories would be useful.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1url2tx/need_help_finding_a_global_psp_for_my_saas/" target="_blank" rel="noopener">Need help finding a global PSP for my SaaS. Running out of realistic options.</a>
+        </div>
+        <div class="item-takeaway">Crypto-adjacent SaaS founder reports repeated PSP rejections despite not handling funds directly.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urkm68/is_there_a_saas_filling_the_gap_in_tech_blog/" target="_blank" rel="noopener">Is there a SaaS filling the gap in tech blog market?</a>
+        </div>
+        <div class="item-takeaway">Question asking for a better tech-blog aggregation SaaS.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urkb7m/built_an_saas_for_manufacturing_engineers_3/" target="_blank" rel="noopener">built an saas for manufacturing engineers 3 months ago, been emailing since, no replies. need help</a>
+        </div>
+        <div class="item-takeaway">Founder says cold emails for a manufacturing SaaS got no replies and asks for help.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urjvr5/building_an_email_marketing_platform_for/" target="_blank" rel="noopener">Building an email marketing platform for mid-market WooCommerce. What’s the single biggest pain point I should solve first?</a>
+        </div>
+        <div class="item-takeaway">Founder asks WooCommerce operators which email-marketing pain point hurts most.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urmq4d/why_cheap_docusign_alternatives_wont_save_you/" target="_blank" rel="noopener">Why &quot;Cheap DocuSign Alternatives&quot; Won't Save You From the Upcoming Wave of AI Document Forgery</a>
+        </div>
+        <div class="item-takeaway">Solo founder pitches an AI document-forgery wave as a reason to use a cheaper DocuSign alternative.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urm0t1/for_anyone_building_a_personal_brand_on_linkedin/" target="_blank" rel="noopener">For anyone building a personal brand on LinkedIn or Twitter?</a>
+        </div>
+        <div class="item-takeaway">Free ghostwriting offer for LinkedIn/Twitter personal brands.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urlyyo/how_do_you_validate_a_saas_application_beyond/" target="_blank" rel="noopener">How do you validate a SaaS application beyond your personal network?</a>
+        </div>
+        <div class="item-takeaway">Founder asks how to validate a B2B SaaS outside their personal network.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/stable" target="_blank" rel="noopener">stable</a>
+        </div>
+        <div class="item-takeaway">n8n stable alias points to 2.29.9 with no decision-changing detail in the release notes snippet.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.29.9" target="_blank" rel="noopener">n8n@2.29.9</a>
+        </div>
+        <div class="item-takeaway">n8n 2.29.9 is a routine patch release without notable leverage for most readers.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.30.2" target="_blank" rel="noopener">n8n@2.30.2</a>
+        </div>
+        <div class="item-takeaway">n8n 2.30.2 fixes expression-isolate bugs, but it reads like normal patch maintenance.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">beta</a>
+        </div>
+        <div class="item-takeaway">n8n beta alias duplicates 2.30.2 rather than adding new signal.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://github.com/deepset-ai/haystack/releases/tag/v2.31.0" target="_blank" rel="noopener">Haystack v2.31.0 begins core slim-down ahead of 3.0</a>
+          <a href="https://supabase.com/blog/searchable-field-level-encryption-with-cipherstash" target="_blank" rel="noopener">Searchable field-level encryption on Supabase with CipherStash</a>
         </div>
-        <div class="item-takeaway">Haystack 2.31 deprecates a large set of core components — SentenceTransformers embedders/rankers, Hugging Face API components, Whisper transcribers, OCR converters, web search connectors, and tracers — moving them to dedicated integration packages before 3.0 removes them from core. Everything still works today and migration is a one-line import change per component. Haystack users should pin versions and schedule the import migration now.</div>
+        <div class="item-takeaway">Supabase now supports searchable field-level encryption via CipherStash without schema changes.</div>
         <div class="item-meta">
-          <span>gh-haystack</span>
+          <span>supabase-blog</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.12" target="_blank" rel="noopener">langchain==1.3.12</a>
+          <a href="https://stratechery.com/2026/muse-image-grok-4-5-alex-karp-on-cnbc/" target="_blank" rel="noopener">Muse Image, Grok 4.5, Alex Karp on CNBC</a>
         </div>
-        <div class="item-takeaway">Patch release of langchain with bug fixes to middleware interrupt propagation, shell middleware process handling, and Anthropic cache marker sanitization. No new features or user-facing changes.</div>
+        <div class="item-takeaway">Stratechery roundup on Muse Image, Grok 4.5, and Alex Karp is commentary rather than a direct actionable change.</div>
+        <div class="item-meta">
+          <span>stratechery</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.networkworld.com/article/4192827/meta-reuses-old-ram-in-new-servers-with-custom-bridge-chip.html" target="_blank" rel="noopener">Meta reuses old RAM in new servers with custom bridge chip</a>
+        </div>
+        <div class="item-takeaway">Meta’s RAM-reuse server design is interesting infra engineering, but too far from most solo-dev decisions.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.howtogeek.com/why-developers-are-ditching-github-for-codeberg-and-self-hosting-alternatives/" target="_blank" rel="noopener">Why developers are ditching GitHub for Codeberg and self-hosting alternatives</a>
+        </div>
+        <div class="item-takeaway">How-to-Geek trend piece about Codeberg/self-hosting is thin and title-level.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.theautopian.com/i-bet-my-company-on-an-impossible-jeep-build-then-a-miracle-happened/" target="_blank" rel="noopener">I Built the Only 2026 WWII Jeep</a>
+        </div>
+        <div class="item-takeaway">Automotive feature story about a custom Jeep build; off-topic for the memo.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://andrewkelley.me/post/my-thoughts-bun-rust-rewrite.html" target="_blank" rel="noopener">My Thoughts on the Bun Rust Rewrite</a>
+        </div>
+        <div class="item-takeaway">Andrew Kelley argues Bun’s rewrite story is really about engineering discipline and overdue cleanup, not language choice alone.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://andrewkelley.me/post/my-thoughts-bun-rust-rewrite.html" target="_blank" rel="noopener">My Thoughts on the Bun Rust Rewrite</a>
+        </div>
+        <div class="item-takeaway">Duplicate Lobsters link to the same Bun rewrite piece already covered from HN.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://sebsite.pw/w/20260709-nan.html" target="_blank" rel="noopener">two case studies of NaN</a>
+        </div>
+        <div class="item-takeaway">NaN edge-case writeup is clever, but not a practical next-morning decision item.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://hakibenita.com/postgresql-partition-pruning" target="_blank" rel="noopener">How to Achieve Pruning When Querying by Non-Partitioned Columns in PostgreSQL</a>
+        </div>
+        <div class="item-takeaway">Postgres can prune partitions on non-partition columns by adding check constraints over correlated value ranges.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.howtogeek.com/why-developers-are-ditching-github-for-codeberg-and-self-hosting-alternatives/" target="_blank" rel="noopener">Why developers are ditching GitHub for Codeberg and self-hosting alternatives</a>
+        </div>
+        <div class="item-takeaway">Duplicate Lobsters link to the same Codeberg/self-hosting article.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.4.4" target="_blank" rel="noopener">langchain-fireworks==1.4.4</a>
+        </div>
+        <div class="item-takeaway">langchain-fireworks 1.4.4 is a small integration patch around cached prompt token usage.</div>
         <div class="item-meta">
           <span>gh-langchain</span>
         </div>
@@ -139,32 +389,10 @@
 
       <div class="item">
         <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.3.4" target="_blank" rel="noopener">langchain-openai==1.3.4</a>
+          <span class="tag tag-p">P</span>
+          <a href="https://mistral.ai/news/manage-prompts-and-skills-in-studio/" target="_blank" rel="noopener">Product    Your Prompts and Skills need a system of record.  Studio gives AI prompts &amp; skills a system of record—versioned, owned, and traceable.     July 9, 2026    By Mistral</a>
         </div>
-        <div class="item-takeaway">Patch release of langchain-openai: Pydantic serializer warning suppression, test housekeeping, dependency bumps. No user-facing changes.</div>
-        <div class="item-meta">
-          <span>gh-langchain</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.4.9" target="_blank" rel="noopener">langchain-core==1.4.9</a>
-        </div>
-        <div class="item-takeaway">Patch release of langchain-core: error message improvements, output parser fixes, async loop handling, dependency bumps. No user-facing changes.</div>
-        <div class="item-meta">
-          <span>gh-langchain</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://mistral.ai/news/robostral-navigate/" target="_blank" rel="noopener">Mistral introduces Robostral Navigate, its first embodied-navigation model</a>
-        </div>
-        <div class="item-takeaway">Mistral announced Robostral Navigate, described as its first model built for embodied navigation (robotics). The fetched page content was nearly empty, so capabilities, availability, and pricing are unknown. Signals Mistral expanding into robotics; nothing actionable for solo software builders today.</div>
+        <div class="item-takeaway">Mistral Studio now versions prompts and skills as owned, auditable production assets with promotion controls.</div>
         <div class="item-meta">
           <span>mistral-blog</span>
         </div>
@@ -173,385 +401,132 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1ur3xtv/my_first_day_as_an_entrepreneur_vs_now/" target="_blank" rel="noopener">My first day as an entrepreneur vs. now</a>
+          <a href="https://github.com/JustVugg/colibri" target="_blank" rel="noopener">Show HN: Getting GLM 5.2 running on my slow computer</a>
         </div>
-        <div class="item-takeaway">Viral image post on r/SaaS comparing an entrepreneur's first day to now. No content beyond the image; no transferable lesson.</div>
+        <div class="item-takeaway">Running GLM 5.2 locally on a slow laptop is an impressive experiment, but 0.1 tok/s is novelty more than workflow leverage.</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
+          <span>hn-show</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uref1s/just_got_my_first_customer_after_only_1_month/" target="_blank" rel="noopener">Just got my first customer after only 1 month</a>
+          <a href="https://18words.com/" target="_blank" rel="noopener">Show HN: 18 Words</a>
         </div>
-        <div class="item-takeaway">Celebration post about a first customer on a month-old product. Nice milestone, no transferable detail on how the customer was acquired.</div>
+        <div class="item-takeaway">18 Words is a Show HN game/puzzle site, not memo material.</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1urbo4r/theres_no_competition_for_this_is_the_most/" target="_blank" rel="noopener">&quot;There's no competition for this&quot; is the most dangerous sentence a founder can say</a>
-        </div>
-        <div class="item-takeaway">Discussion thread arguing that 'no competition' usually means the founder hasn't looked in the right places (app store reviews, complaint threads, G2 one-star sections). Reasonable but well-worn founder advice framed as an engagement question.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uricyy/best_visual_collaboration_software_in_2026_heres/" target="_blank" rel="noopener">Best visual collaboration software in 2026</a>
-        </div>
-        <div class="item-takeaway">Tool-by-tool comparison of FigJam, Lucidchart, Microsoft Whiteboard and others for collaboration workflows. Reads like a listicle with promotional flavor; no decision-changing information.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uri9fd/got_my_first_paying_trial_today_and_ngl_it_feels/" target="_blank" rel="noopener">Got my first paying trial today</a>
-        </div>
-        <div class="item-takeaway">Celebration post about a first paying trial on a study-quiz app built solo over months. Encouraging but no transferable acquisition or product detail.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://shkspr.mobi/blog/2026/07/a-bug-which-only-affected-left-handed-users/" target="_blank" rel="noopener">A bug which only affected left-handed users</a>
-        </div>
-        <div class="item-takeaway">Terence Eden traces a bug that only manifested for left-handed users: the OS-level primary-mouse-button swap changed which button events the application received. A concrete reminder that OS accessibility and preference settings are an under-tested input dimension — worth adding pointer/handedness settings to manual QA checklists for shipped UIs.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://tris.sherliker.net/blog/obfuscated-self-evaluating-bash-script-by-cdn-akamai-being-supplied-to-consumers-via-retail-stores/" target="_blank" rel="noopener">Obfuscated Akamai bash script shipped to consumers via retail stores</a>
-        </div>
-        <div class="item-takeaway">A researcher found an obfuscated, self-evaluating bash script authored by Akamai on consumer hardware sold in retail stores, and deobfuscated it to see what it does. No exploit demonstrated, but it's a useful supply-chain trust datapoint: CDN-vendor code shipping deliberately obscured on devices consumers own.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://yorickpeterse.com/articles/funding-open-source-software-without-compromising-it/" target="_blank" rel="noopener">Funding open-source software without compromising it</a>
-        </div>
-        <div class="item-takeaway">Yorick Peterse (maintainer of the Inko language) writes about funding open source without compromising the project — the real trade-offs of donations, grants, dual licensing, and paid features from a solo maintainer's perspective. Useful framing for any solo builder weighing OSS monetization.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.keygenchurch.com" target="_blank" rel="noopener">Keygen Church - Oscuro Domine</a>
-        </div>
-        <div class="item-takeaway">A music release (keygen/chiptune-style album) shared on Lobsters. Entertainment, not developer news.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://github.com/nasa/spacewasm" target="_blank" rel="noopener">SpaceWASM: NASA/JPL's Wasm interpreter for spacecraft sequencing</a>
-        </div>
-        <div class="item-takeaway">NASA/JPL open-sourced SpaceWASM, a WebAssembly interpreter used for spacecraft command sequencing. The use case is niche, but NASA adopting Wasm for flight-adjacent tooling is a strong credibility signal for Wasm as a sandboxed embedded runtime — relevant if you're considering Wasm for plugin or agent sandboxing.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
+          <span>hn-show</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-m">M</span>
-          <a href="https://linuxiac.com/openmandriva-says-former-contributor-sabotaged-its-repositories/" target="_blank" rel="noopener">OpenMandriva says former contributor sabotaged its repositories</a>
+          <a href="https://tomesphere.com/atlas" target="_blank" rel="noopener">Show HN: I mapped 8.5M research papers into an interactive atlas</a>
         </div>
-        <div class="item-takeaway">OpenMandriva reports that a former contributor sabotaged its package repositories. Another insider-threat datapoint for open-source supply chains; details are still emerging. No action needed unless you use OpenMandriva, but worth tracking how access revocation failed and what the blast radius was.</div>
+        <div class="item-takeaway">Tomesphere’s beta atlas maps millions of papers with paper pages, an extension, and an MCP surface, but it is still rough and heavy.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>hn-show</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://seriot.ch/computation/uts35/" target="_blank" rel="noopener">Unicode's Transliteration Rules Are Turing-Complete</a>
+          <a href="https://analog.watch" target="_blank" rel="noopener">Show HN: Analog Watch</a>
         </div>
-        <div class="item-takeaway">Comments</div>
+        <div class="item-takeaway">Analog Watch is a Show HN design toy rather than a tool or workflow change.</div>
         <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://mhloppy.com/2026/05/mechcommander-weapons-left-arm-bug-fix/" target="_blank" rel="noopener">Patching MechCommander’s “left arm bug” for fun and profit</a>
-        </div>
-        <div class="item-takeaway">Comments</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.gamesindustry.biz/eve-onlines-carbon-engine-is-now-open-source-fenris-creations-explains-why" target="_blank" rel="noopener">Eve Online's Carbon engine is now open source: Fenris Creations explains why</a>
-        </div>
-        <div class="item-takeaway">Comments</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://graphitemaster.github.io/aau/" target="_blank" rel="noopener">Almost Always Unsigned (2022)</a>
-        </div>
-        <div class="item-takeaway">Comments</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://manualmeida.dev/articles/noiselang/" target="_blank" rel="noopener">NoiseLang: Where N = 5 is a Dirac delta</a>
-        </div>
-        <div class="item-takeaway">Comments</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://polypane.app/blog/experimenting-with-random-in-css/" target="_blank" rel="noopener">Experimenting with random() in CSS</a>
-        </div>
-        <div class="item-takeaway">Comments</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://00f.net/2026/07/08/webassembly-compilation-to-c-2026/" target="_blank" rel="noopener">The best WebAssembly runtime may still be no runtime at all</a>
-        </div>
-        <div class="item-takeaway">Comments</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://zine-ssg.io/log/?v0.12.0#v0.12.0" target="_blank" rel="noopener">Zine 0.12.0</a>
-        </div>
-        <div class="item-takeaway">Comments</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/ardentsia-cgs/kparser" target="_blank" rel="noopener">kparser - small, readable parser for K</a>
-        </div>
-        <div class="item-takeaway">Comments</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://re.factorcode.org/2026/07/peace-for-all.html" target="_blank" rel="noopener">Peace For All – Re: Factor</a>
-        </div>
-        <div class="item-takeaway">Comments</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/alexthecat123/LisaFPGA" target="_blank" rel="noopener">LisaFPGA: the Apple Lisa computer implemented inside an FPGA</a>
-        </div>
-        <div class="item-takeaway">Comments</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://geopjr.dev/blog/democratizing-abandonware" target="_blank" rel="noopener">Democratizing Abandonware</a>
-        </div>
-        <div class="item-takeaway">Comments</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02" target="_blank" rel="noopener">John Deere owners get right to repair under FTC settlement</a>
-        </div>
-        <div class="item-takeaway">An FTC settlement gives John Deere equipment owners the right to repair their machines. A notable right-to-repair precedent that may ripple into other locked-down hardware/software ecosystems, but there is no direct action for solo software developers.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://connectsci.au/news/news-parent/9703/Spider-venom-kills-varroa-mites-without-harming" target="_blank" rel="noopener">Spider venom kills varroa mites without harming honeybees</a>
-        </div>
-        <div class="item-takeaway">Science news about a spider-venom-derived treatment for varroa mites that spares honeybees. Interesting, but entirely outside the software/solo-builder scope of this digest.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
+          <span>hn-show</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://nexte.st/" target="_blank" rel="noopener">cargo-nextest: 3x faster than cargo test, per-test isolation, first-class CI</a>
+          <a href="https://github.com/ronak-create/FableCut" target="_blank" rel="noopener">Show HN: FableCut – A browser video editor AI agents can drive (zero deps)</a>
         </div>
-        <div class="item-takeaway">cargo-nextest resurfaced on HN: a mature, drop-in test runner for Rust claiming roughly 3x faster runs, per-test process isolation, flaky-test retries, and first-class CI support. Widely adopted and low-risk to try if you have a Rust project with a slow suite — but it is not new, so treat this as a reminder rather than news.</div>
+        <div class="item-takeaway">FableCut is a zero-dependency browser video editor whose JSON timeline is directly controllable via MCP, REST, or file edits.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>hn-show</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://www.databricks.com/blog/benchmarking-coding-agents-databricks-multi-million-line-codebase" target="_blank" rel="noopener">Benchmarking coding agents on Databricks' multi-million line codebase</a>
+          <a href="https://neon.com/blog/introducing-neon-api-command" target="_blank" rel="noopener">Introducing the New Neon API Command</a>
         </div>
-        <div class="item-takeaway">Databricks benchmarked coding agents against their real multi-million-line production codebase rather than toy benchmark repos, reporting where agents succeed and fail on enterprise-scale tasks. This is rare production-scale evidence for calibrating how much to trust agents on large-repo work. Read for the methodology and failure patterns before pointing agents at big refactors.</div>
+        <div class="item-takeaway">Neon CLI adds an authenticated api passthrough so agents can hit any endpoint without handling raw tokens.</div>
         <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://openai.com/index/separating-signal-from-noise-coding-evaluations/" target="_blank" rel="noopener">Separating signal from noise in coding evaluations (OpenAI)</a>
-        </div>
-        <div class="item-takeaway">OpenAI published a methodology piece on the variance inherent in coding-agent evaluations — how noisy benchmark runs are, how to size test sets, and when a measured difference between models or prompts is statistically real. Directly applicable if you compare models or prompts for coding work: borrow the statistical framing before trusting your own eval deltas.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://www.liamcvw.com/p/remote-attestation" target="_blank" rel="noopener">Remote Attestation</a>
-        </div>
-        <div class="item-takeaway">An explainer on remote attestation: how devices cryptographically prove what software they are running, and what that enables — and threatens — for client trust on the open web. Useful background as attestation spreads from TPMs into browser and API integrity checks.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
+          <span>neon-blog</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.yamanote.fun/" target="_blank" rel="noopener">Show HN: Yamanote.fun – A complete soundscape for Tokyo's Yamanote line</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1urv4mu/keep_going_no_matter_what/" target="_blank" rel="noopener">Keep going. No matter what.</a>
         </div>
-        <div class="item-takeaway">After visiting Japan for the first time a decade ago I became completely enamoured with Tokyo&amp;#x27;s Yamanote Line railway loop. Particularl…</div>
+        <div class="item-takeaway">Motivation image post about coding in public with an exposed .env joke.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://seriot.ch/computation/uts35/" target="_blank" rel="noopener">Unicode's transliteration rules are Turing-complete</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1use08c/wt_someone_just_paid_for_my_app_before_i_launched/" target="_blank" rel="noopener">wt*, someone just paid for my app before I launched it</a>
         </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-takeaway">Coffee-shop passerby allegedly bought a prelaunch app after seeing it on a laptop screen.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.cloudflare.com/drop/" target="_blank" rel="noopener">Cloudflare Drop</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1useail/whats_been_harder_for_you_building_your_saas_or/" target="_blank" rel="noopener">What's been harder for you: building your SaaS or finding the first customer?</a>
         </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-takeaway">Thread asking whether product or customer acquisition is harder for founders.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://microsoft.github.io/flint-chart/#/" target="_blank" rel="noopener">Show HN: Microsoft releases Flint, a visualization language for AI agents</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1us2gvo/we_sold_our_first_lifetime_backlink/" target="_blank" rel="noopener">We sold our first lifetime backlink!</a>
         </div>
-        <div class="item-takeaway">Data visualizations are the bridge between user and data. But building AI agents that can generate visualizations reliably can be very trick…</div>
+        <div class="item-takeaway">Founder celebrates first lifetime backlink sale after changing pricing.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://x.ai/news/grok-4-5" target="_blank" rel="noopener">Grok 4.5</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1usdtv3/how_long_before_i_can_sell/" target="_blank" rel="noopener">How long before I can sell</a>
         </div>
-        <div class="item-takeaway">https:&amp;#x2F;&amp;#x2F;cursor.com&amp;#x2F;blog&amp;#x2F;grok-4-5</div>
+        <div class="item-takeaway">Founder asks how many months of data they need before selling a one-month-old SaaS.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://mhloppy.com/2026/05/mechcommander-weapons-left-arm-bug-fix/" target="_blank" rel="noopener">Patching MechCommander's &quot;left arm bug&quot; for fun and profit</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1usf38h/do_you_guys_ever_actually_look_at_your_photos/" target="_blank" rel="noopener">Do you guys ever actually look at your photos after a trip?</a>
         </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-takeaway">Waitlist post for an AI photo-search app framed around forgotten vacation photos.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
     </div>
@@ -559,91 +534,76 @@
       <summary>Original markdown</summary>
       <pre class="raw-report"># Nightly Librarian — Newsletter draft
 
-Run: 7f26ce54-955c-4fbe-aee5-ae0472edfcd1
-Started: 2026-07-10T06:10:17.486Z
-Completed: 2026-07-10T06:16:14.155Z
+Run: 8783ae74-303b-4337-b649-bcac804a9caf
+Started: 2026-07-10T11:01:15.088Z
+Completed: 2026-07-10T11:09:56.812Z
 
 ## Worth attention
 
-- **Benchmarking coding agents on Databricks' multi-million line codebase**
-  https://www.databricks.com/blog/benchmarking-coding-agents-databricks-multi-million-line-codebase
-  Databricks benchmarked coding agents against their real multi-million-line production codebase rather than toy benchmark repos, reporting where agents succeed and fail on enterprise-scale tasks. This is rare production-scale evidence for calibrating how much to trust agents on large-repo work. Read for the methodology and failure patterns before pointing agents at big refactors.
-- **Separating signal from noise in coding evaluations (OpenAI)**
-  https://openai.com/index/separating-signal-from-noise-coding-evaluations/
-  OpenAI published a methodology piece on the variance inherent in coding-agent evaluations — how noisy benchmark runs are, how to size test sets, and when a measured difference between models or prompts is statistically real. Directly applicable if you compare models or prompts for coding work: borrow the statistical framing before trusting your own eval deltas.
-- **Haystack v2.31.0 begins core slim-down ahead of 3.0**
-  https://github.com/deepset-ai/haystack/releases/tag/v2.31.0
-  Haystack 2.31 deprecates a large set of core components — SentenceTransformers embedders/rankers, Hugging Face API components, Whisper transcribers, OCR converters, web search connectors, and tracers — moving them to dedicated integration packages before 3.0 removes them from core. Everything still works today and migration is a one-line import change per component. Haystack users should pin versions and schedule the import migration now.
-- **cargo-nextest: 3x faster than cargo test, per-test isolation, first-class CI**
-  https://nexte.st/
-  cargo-nextest resurfaced on HN: a mature, drop-in test runner for Rust claiming roughly 3x faster runs, per-test process isolation, flaky-test retries, and first-class CI support. Widely adopted and low-risk to try if you have a Rust project with a slow suite — but it is not new, so treat this as a reminder rather than news.
-- **A bug which only affected left-handed users**
-  https://shkspr.mobi/blog/2026/07/a-bug-which-only-affected-left-handed-users/
-  Terence Eden traces a bug that only manifested for left-handed users: the OS-level primary-mouse-button swap changed which button events the application received. A concrete reminder that OS accessibility and preference settings are an under-tested input dimension — worth adding pointer/handedness settings to manual QA checklists for shipped UIs.
-- **Obfuscated Akamai bash script shipped to consumers via retail stores**
-  https://tris.sherliker.net/blog/obfuscated-self-evaluating-bash-script-by-cdn-akamai-being-supplied-to-consumers-via-retail-stores/
-  A researcher found an obfuscated, self-evaluating bash script authored by Akamai on consumer hardware sold in retail stores, and deobfuscated it to see what it does. No exploit demonstrated, but it's a useful supply-chain trust datapoint: CDN-vendor code shipping deliberately obscured on devices consumers own.
-- **Funding open-source software without compromising it**
-  https://yorickpeterse.com/articles/funding-open-source-software-without-compromising-it/
-  Yorick Peterse (maintainer of the Inko language) writes about funding open source without compromising the project — the real trade-offs of donations, grants, dual licensing, and paid features from a solo maintainer's perspective. Useful framing for any solo builder weighing OSS monetization.
-- **SpaceWASM: NASA/JPL's Wasm interpreter for spacecraft sequencing**
-  https://github.com/nasa/spacewasm
-  NASA/JPL open-sourced SpaceWASM, a WebAssembly interpreter used for spacecraft command sequencing. The use case is niche, but NASA adopting Wasm for flight-adjacent tooling is a strong credibility signal for Wasm as a sandboxed embedded runtime — relevant if you're considering Wasm for plugin or agent sandboxing.
-- **Remote Attestation**
-  https://www.liamcvw.com/p/remote-attestation
-  An explainer on remote attestation: how devices cryptographically prove what software they are running, and what that enables — and threatens — for client trust on the open web. Useful background as attestation spreads from TPMs into browser and API integrity checks.
-- **OpenMandriva says former contributor sabotaged its repositories**
-  https://linuxiac.com/openmandriva-says-former-contributor-sabotaged-its-repositories/
-  OpenMandriva reports that a former contributor sabotaged its package repositories. Another insider-threat datapoint for open-source supply chains; details are still emerging. No action needed unless you use OpenMandriva, but worth tracking how access revocation failed and what the blast radius was.
-- **Mistral introduces Robostral Navigate, its first embodied-navigation model**
-  https://mistral.ai/news/robostral-navigate/
-  Mistral announced Robostral Navigate, described as its first model built for embodied navigation (robotics). The fetched page content was nearly empty, so capabilities, availability, and pricing are unknown. Signals Mistral expanding into robotics; nothing actionable for solo software builders today.
-- **John Deere owners get right to repair under FTC settlement**
-  https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02
-  An FTC settlement gives John Deere equipment owners the right to repair their machines. A notable right-to-repair precedent that may ripple into other locked-down hardware/software ecosystems, but there is no direct action for solo software developers.
+- **Introducing the New Neon API Command**
+  https://neon.com/blog/introducing-neon-api-command
+  Neon CLI adds an authenticated api passthrough so agents can hit any endpoint without handling raw tokens.
+- **Searchable field-level encryption on Supabase with CipherStash**
+  https://supabase.com/blog/searchable-field-level-encryption-with-cipherstash
+  Supabase now supports searchable field-level encryption via CipherStash without schema changes.
+- **How to Achieve Pruning When Querying by Non-Partitioned Columns in PostgreSQL**
+  https://hakibenita.com/postgresql-partition-pruning
+  Postgres can prune partitions on non-partition columns by adding check constraints over correlated value ranges.
+- **Product    Your Prompts and Skills need a system of record.  Studio gives AI prompts &amp; skills a system of record—versioned, owned, and traceable.     July 9, 2026    By Mistral**
+  https://mistral.ai/news/manage-prompts-and-skills-in-studio/
+  Mistral Studio now versions prompts and skills as owned, auditable production assets with promotion controls.
+- **Show HN: FableCut – A browser video editor AI agents can drive (zero deps)**
+  https://github.com/ronak-create/FableCut
+  FableCut is a zero-dependency browser video editor whose JSON timeline is directly controllable via MCP, REST, or file edits.
+- **My Thoughts on the Bun Rust Rewrite**
+  https://andrewkelley.me/post/my-thoughts-bun-rust-rewrite.html
+  Andrew Kelley argues Bun’s rewrite story is really about engineering discipline and overdue cleanup, not language choice alone.
+- **Show HN: I mapped 8.5M research papers into an interactive atlas**
+  https://tomesphere.com/atlas
+  Tomesphere’s beta atlas maps millions of papers with paper pages, an extension, and an MCP surface, but it is still rough and heavy.
 
 ## Full digest
 
-- [P] [gh-haystack] Haystack v2.31.0 begins core slim-down ahead of 3.0 — https://github.com/deepset-ai/haystack/releases/tag/v2.31.0 — Haystack 2.31 deprecates a large set of core components — SentenceTransformers embedders/rankers, Hugging Face API components, Whisper transcribers, OCR converters, web search connectors, and tracers — moving them to dedicated integration packages before 3.0 removes them from core. Everything still works today and migration is a one-line import change per component. Haystack users should pin versions and schedule the import migration now.
-- [R] [gh-langchain] langchain==1.3.12 — https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.12 — Patch release of langchain with bug fixes to middleware interrupt propagation, shell middleware process handling, and Anthropic cache marker sanitization. No new features or user-facing changes.
-- [R] [gh-langchain] langchain-openai==1.3.4 — https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.3.4 — Patch release of langchain-openai: Pydantic serializer warning suppression, test housekeeping, dependency bumps. No user-facing changes.
-- [R] [gh-langchain] langchain-core==1.4.9 — https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.4.9 — Patch release of langchain-core: error message improvements, output parser fixes, async loop handling, dependency bumps. No user-facing changes.
-- [M] [mistral-blog] Mistral introduces Robostral Navigate, its first embodied-navigation model — https://mistral.ai/news/robostral-navigate/ — Mistral announced Robostral Navigate, described as its first model built for embodied navigation (robotics). The fetched page content was nearly empty, so capabilities, availability, and pricing are unknown. Signals Mistral expanding into robotics; nothing actionable for solo software builders today.
-- [R] [reddit-saas] My first day as an entrepreneur vs. now — https://www.reddit.com/r/SaaS/comments/1ur3xtv/my_first_day_as_an_entrepreneur_vs_now/ — Viral image post on r/SaaS comparing an entrepreneur's first day to now. No content beyond the image; no transferable lesson.
-- [R] [reddit-saas] Just got my first customer after only 1 month — https://www.reddit.com/r/SaaS/comments/1uref1s/just_got_my_first_customer_after_only_1_month/ — Celebration post about a first customer on a month-old product. Nice milestone, no transferable detail on how the customer was acquired.
-- [R] [reddit-saas] &quot;There's no competition for this&quot; is the most dangerous sentence a founder can say — https://www.reddit.com/r/SaaS/comments/1urbo4r/theres_no_competition_for_this_is_the_most/ — Discussion thread arguing that 'no competition' usually means the founder hasn't looked in the right places (app store reviews, complaint threads, G2 one-star sections). Reasonable but well-worn founder advice framed as an engagement question.
-- [R] [reddit-saas] Best visual collaboration software in 2026 — https://www.reddit.com/r/SaaS/comments/1uricyy/best_visual_collaboration_software_in_2026_heres/ — Tool-by-tool comparison of FigJam, Lucidchart, Microsoft Whiteboard and others for collaboration workflows. Reads like a listicle with promotional flavor; no decision-changing information.
-- [R] [reddit-saas] Got my first paying trial today — https://www.reddit.com/r/SaaS/comments/1uri9fd/got_my_first_paying_trial_today_and_ngl_it_feels/ — Celebration post about a first paying trial on a study-quiz app built solo over months. Encouraging but no transferable acquisition or product detail.
-- [P] [lobsters] A bug which only affected left-handed users — https://shkspr.mobi/blog/2026/07/a-bug-which-only-affected-left-handed-users/ — Terence Eden traces a bug that only manifested for left-handed users: the OS-level primary-mouse-button swap changed which button events the application received. A concrete reminder that OS accessibility and preference settings are an under-tested input dimension — worth adding pointer/handedness settings to manual QA checklists for shipped UIs.
-- [P] [lobsters] Obfuscated Akamai bash script shipped to consumers via retail stores — https://tris.sherliker.net/blog/obfuscated-self-evaluating-bash-script-by-cdn-akamai-being-supplied-to-consumers-via-retail-stores/ — A researcher found an obfuscated, self-evaluating bash script authored by Akamai on consumer hardware sold in retail stores, and deobfuscated it to see what it does. No exploit demonstrated, but it's a useful supply-chain trust datapoint: CDN-vendor code shipping deliberately obscured on devices consumers own.
-- [P] [lobsters] Funding open-source software without compromising it — https://yorickpeterse.com/articles/funding-open-source-software-without-compromising-it/ — Yorick Peterse (maintainer of the Inko language) writes about funding open source without compromising the project — the real trade-offs of donations, grants, dual licensing, and paid features from a solo maintainer's perspective. Useful framing for any solo builder weighing OSS monetization.
-- [R] [lobsters] Keygen Church - Oscuro Domine — https://www.keygenchurch.com — A music release (keygen/chiptune-style album) shared on Lobsters. Entertainment, not developer news.
-- [P] [lobsters] SpaceWASM: NASA/JPL's Wasm interpreter for spacecraft sequencing — https://github.com/nasa/spacewasm — NASA/JPL open-sourced SpaceWASM, a WebAssembly interpreter used for spacecraft command sequencing. The use case is niche, but NASA adopting Wasm for flight-adjacent tooling is a strong credibility signal for Wasm as a sandboxed embedded runtime — relevant if you're considering Wasm for plugin or agent sandboxing.
-- [M] [lobsters] OpenMandriva says former contributor sabotaged its repositories — https://linuxiac.com/openmandriva-says-former-contributor-sabotaged-its-repositories/ — OpenMandriva reports that a former contributor sabotaged its package repositories. Another insider-threat datapoint for open-source supply chains; details are still emerging. No action needed unless you use OpenMandriva, but worth tracking how access revocation failed and what the blast radius was.
-- [R] [lobsters] Unicode's Transliteration Rules Are Turing-Complete — https://seriot.ch/computation/uts35/ — Comments
-- [R] [lobsters] Patching MechCommander’s “left arm bug” for fun and profit — https://mhloppy.com/2026/05/mechcommander-weapons-left-arm-bug-fix/ — Comments
-- [R] [lobsters] Eve Online's Carbon engine is now open source: Fenris Creations explains why — https://www.gamesindustry.biz/eve-onlines-carbon-engine-is-now-open-source-fenris-creations-explains-why — Comments
-- [R] [lobsters] Almost Always Unsigned (2022) — https://graphitemaster.github.io/aau/ — Comments
-- [R] [lobsters] NoiseLang: Where N = 5 is a Dirac delta — https://manualmeida.dev/articles/noiselang/ — Comments
-- [R] [lobsters] Experimenting with random() in CSS — https://polypane.app/blog/experimenting-with-random-in-css/ — Comments
-- [R] [lobsters] The best WebAssembly runtime may still be no runtime at all — https://00f.net/2026/07/08/webassembly-compilation-to-c-2026/ — Comments
-- [R] [lobsters] Zine 0.12.0 — https://zine-ssg.io/log/?v0.12.0#v0.12.0 — Comments
-- [R] [lobsters] kparser - small, readable parser for K — https://github.com/ardentsia-cgs/kparser — Comments
-- [R] [lobsters] Peace For All – Re: Factor — https://re.factorcode.org/2026/07/peace-for-all.html — Comments
-- [R] [lobsters] LisaFPGA: the Apple Lisa computer implemented inside an FPGA — https://github.com/alexthecat123/LisaFPGA — Comments
-- [R] [lobsters] Democratizing Abandonware — https://geopjr.dev/blog/democratizing-abandonware — Comments
-- [M] [hn-top] John Deere owners get right to repair under FTC settlement — https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02 — An FTC settlement gives John Deere equipment owners the right to repair their machines. A notable right-to-repair precedent that may ripple into other locked-down hardware/software ecosystems, but there is no direct action for solo software developers.
-- [R] [hn-top] Spider venom kills varroa mites without harming honeybees — https://connectsci.au/news/news-parent/9703/Spider-venom-kills-varroa-mites-without-harming — Science news about a spider-venom-derived treatment for varroa mites that spares honeybees. Interesting, but entirely outside the software/solo-builder scope of this digest.
-- [P] [hn-top] cargo-nextest: 3x faster than cargo test, per-test isolation, first-class CI — https://nexte.st/ — cargo-nextest resurfaced on HN: a mature, drop-in test runner for Rust claiming roughly 3x faster runs, per-test process isolation, flaky-test retries, and first-class CI support. Widely adopted and low-risk to try if you have a Rust project with a slow suite — but it is not new, so treat this as a reminder rather than news.
-- [P] [hn-top] Benchmarking coding agents on Databricks' multi-million line codebase — https://www.databricks.com/blog/benchmarking-coding-agents-databricks-multi-million-line-codebase — Databricks benchmarked coding agents against their real multi-million-line production codebase rather than toy benchmark repos, reporting where agents succeed and fail on enterprise-scale tasks. This is rare production-scale evidence for calibrating how much to trust agents on large-repo work. Read for the methodology and failure patterns before pointing agents at big refactors.
-- [P] [hn-top] Separating signal from noise in coding evaluations (OpenAI) — https://openai.com/index/separating-signal-from-noise-coding-evaluations/ — OpenAI published a methodology piece on the variance inherent in coding-agent evaluations — how noisy benchmark runs are, how to size test sets, and when a measured difference between models or prompts is statistically real. Directly applicable if you compare models or prompts for coding work: borrow the statistical framing before trusting your own eval deltas.
-- [P] [hn-top] Remote Attestation — https://www.liamcvw.com/p/remote-attestation — An explainer on remote attestation: how devices cryptographically prove what software they are running, and what that enables — and threatens — for client trust on the open web. Useful background as attestation spreads from TPMs into browser and API integrity checks.
-- [R] [hn-top] Show HN: Yamanote.fun – A complete soundscape for Tokyo's Yamanote line — https://www.yamanote.fun/ — After visiting Japan for the first time a decade ago I became completely enamoured with Tokyo&amp;#x27;s Yamanote Line railway loop. Particularl…
-- [R] [hn-top] Unicode's transliteration rules are Turing-complete — https://seriot.ch/computation/uts35/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Cloudflare Drop — https://www.cloudflare.com/drop/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Show HN: Microsoft releases Flint, a visualization language for AI agents — https://microsoft.github.io/flint-chart/#/ — Data visualizations are the bridge between user and data. But building AI agents that can generate visualizations reliably can be very trick…
-- [R] [hn-top] Grok 4.5 — https://x.ai/news/grok-4-5 — https:&amp;#x2F;&amp;#x2F;cursor.com&amp;#x2F;blog&amp;#x2F;grok-4-5
-- [R] [hn-top] Patching MechCommander's &quot;left arm bug&quot; for fun and profit — https://mhloppy.com/2026/05/mechcommander-weapons-left-arm-bug-fix/ — Scheduled agent omitted this claimed item from the completion payload.</pre>
+- [R] [reddit-saas] I built the product, but now I’m stuck on distribution. — https://www.reddit.com/r/SaaS/comments/1urjqjw/i_built_the_product_but_now_im_stuck_on/ — Founder asks for generic distribution advice after building an AI product.
+- [R] [reddit-saas] AWS account recovery nightmare — https://www.reddit.com/r/SaaS/comments/1urm6qt/aws_account_recovery_nightmare/ — Single-account AWS recovery horror story without a reusable workaround yet.
+- [R] [reddit-saas] Feels like the AI agency bubble is starting to pop. Anyone else seeing it? — https://www.reddit.com/r/SaaS/comments/1urfmsr/feels_like_the_ai_agency_bubble_is_starting_to/ — Opinion thread predicting an AI agency shakeout based on hype normalizing.
+- [R] [reddit-saas] SaaS post launch maintenance — https://www.reddit.com/r/SaaS/comments/1urm0hm/saas_post_launch_maintenance/ — Reminder that post-launch maintenance matters, but no concrete new signal.
+- [R] [reddit-saas] I've documented how 100 startups grew. Would something like this actually be useful? — https://www.reddit.com/r/SaaS/comments/1urlajv/ive_documented_how_100_startups_grew_would/ — Founder asks whether a searchable library of 100 startup growth stories would be useful.
+- [R] [reddit-saas] Need help finding a global PSP for my SaaS. Running out of realistic options. — https://www.reddit.com/r/SaaS/comments/1url2tx/need_help_finding_a_global_psp_for_my_saas/ — Crypto-adjacent SaaS founder reports repeated PSP rejections despite not handling funds directly.
+- [R] [reddit-saas] Is there a SaaS filling the gap in tech blog market? — https://www.reddit.com/r/SaaS/comments/1urkm68/is_there_a_saas_filling_the_gap_in_tech_blog/ — Question asking for a better tech-blog aggregation SaaS.
+- [R] [reddit-saas] built an saas for manufacturing engineers 3 months ago, been emailing since, no replies. need help — https://www.reddit.com/r/SaaS/comments/1urkb7m/built_an_saas_for_manufacturing_engineers_3/ — Founder says cold emails for a manufacturing SaaS got no replies and asks for help.
+- [R] [reddit-saas] Building an email marketing platform for mid-market WooCommerce. What’s the single biggest pain point I should solve first? — https://www.reddit.com/r/SaaS/comments/1urjvr5/building_an_email_marketing_platform_for/ — Founder asks WooCommerce operators which email-marketing pain point hurts most.
+- [R] [reddit-saas] Why &quot;Cheap DocuSign Alternatives&quot; Won't Save You From the Upcoming Wave of AI Document Forgery — https://www.reddit.com/r/SaaS/comments/1urmq4d/why_cheap_docusign_alternatives_wont_save_you/ — Solo founder pitches an AI document-forgery wave as a reason to use a cheaper DocuSign alternative.
+- [R] [reddit-saas] For anyone building a personal brand on LinkedIn or Twitter? — https://www.reddit.com/r/SaaS/comments/1urm0t1/for_anyone_building_a_personal_brand_on_linkedin/ — Free ghostwriting offer for LinkedIn/Twitter personal brands.
+- [R] [reddit-saas] How do you validate a SaaS application beyond your personal network? — https://www.reddit.com/r/SaaS/comments/1urlyyo/how_do_you_validate_a_saas_application_beyond/ — Founder asks how to validate a B2B SaaS outside their personal network.
+- [R] [gh-n8n] stable — https://github.com/n8n-io/n8n/releases/tag/stable — n8n stable alias points to 2.29.9 with no decision-changing detail in the release notes snippet.
+- [R] [gh-n8n] n8n@2.29.9 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.29.9 — n8n 2.29.9 is a routine patch release without notable leverage for most readers.
+- [R] [gh-n8n] n8n@2.30.2 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.30.2 — n8n 2.30.2 fixes expression-isolate bugs, but it reads like normal patch maintenance.
+- [R] [gh-n8n] beta — https://github.com/n8n-io/n8n/releases/tag/beta — n8n beta alias duplicates 2.30.2 rather than adding new signal.
+- [P] [supabase-blog] Searchable field-level encryption on Supabase with CipherStash — https://supabase.com/blog/searchable-field-level-encryption-with-cipherstash — Supabase now supports searchable field-level encryption via CipherStash without schema changes.
+- [R] [stratechery] Muse Image, Grok 4.5, Alex Karp on CNBC — https://stratechery.com/2026/muse-image-grok-4-5-alex-karp-on-cnbc/ — Stratechery roundup on Muse Image, Grok 4.5, and Alex Karp is commentary rather than a direct actionable change.
+- [R] [hn-top] Meta reuses old RAM in new servers with custom bridge chip — https://www.networkworld.com/article/4192827/meta-reuses-old-ram-in-new-servers-with-custom-bridge-chip.html — Meta’s RAM-reuse server design is interesting infra engineering, but too far from most solo-dev decisions.
+- [R] [hn-top] Why developers are ditching GitHub for Codeberg and self-hosting alternatives — https://www.howtogeek.com/why-developers-are-ditching-github-for-codeberg-and-self-hosting-alternatives/ — How-to-Geek trend piece about Codeberg/self-hosting is thin and title-level.
+- [R] [hn-top] I Built the Only 2026 WWII Jeep — https://www.theautopian.com/i-bet-my-company-on-an-impossible-jeep-build-then-a-miracle-happened/ — Automotive feature story about a custom Jeep build; off-topic for the memo.
+- [P] [hn-top] My Thoughts on the Bun Rust Rewrite — https://andrewkelley.me/post/my-thoughts-bun-rust-rewrite.html — Andrew Kelley argues Bun’s rewrite story is really about engineering discipline and overdue cleanup, not language choice alone.
+- [R] [lobsters] My Thoughts on the Bun Rust Rewrite — https://andrewkelley.me/post/my-thoughts-bun-rust-rewrite.html — Duplicate Lobsters link to the same Bun rewrite piece already covered from HN.
+- [R] [lobsters] two case studies of NaN — https://sebsite.pw/w/20260709-nan.html — NaN edge-case writeup is clever, but not a practical next-morning decision item.
+- [P] [lobsters] How to Achieve Pruning When Querying by Non-Partitioned Columns in PostgreSQL — https://hakibenita.com/postgresql-partition-pruning — Postgres can prune partitions on non-partition columns by adding check constraints over correlated value ranges.
+- [R] [lobsters] Why developers are ditching GitHub for Codeberg and self-hosting alternatives — https://www.howtogeek.com/why-developers-are-ditching-github-for-codeberg-and-self-hosting-alternatives/ — Duplicate Lobsters link to the same Codeberg/self-hosting article.
+- [R] [gh-langchain] langchain-fireworks==1.4.4 — https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.4.4 — langchain-fireworks 1.4.4 is a small integration patch around cached prompt token usage.
+- [P] [mistral-blog] Product    Your Prompts and Skills need a system of record.  Studio gives AI prompts &amp; skills a system of record—versioned, owned, and traceable.     July 9, 2026    By Mistral — https://mistral.ai/news/manage-prompts-and-skills-in-studio/ — Mistral Studio now versions prompts and skills as owned, auditable production assets with promotion controls.
+- [R] [hn-show] Show HN: Getting GLM 5.2 running on my slow computer — https://github.com/JustVugg/colibri — Running GLM 5.2 locally on a slow laptop is an impressive experiment, but 0.1 tok/s is novelty more than workflow leverage.
+- [R] [hn-show] Show HN: 18 Words — https://18words.com/ — 18 Words is a Show HN game/puzzle site, not memo material.
+- [M] [hn-show] Show HN: I mapped 8.5M research papers into an interactive atlas — https://tomesphere.com/atlas — Tomesphere’s beta atlas maps millions of papers with paper pages, an extension, and an MCP surface, but it is still rough and heavy.
+- [R] [hn-show] Show HN: Analog Watch — https://analog.watch — Analog Watch is a Show HN design toy rather than a tool or workflow change.
+- [P] [hn-show] Show HN: FableCut – A browser video editor AI agents can drive (zero deps) — https://github.com/ronak-create/FableCut — FableCut is a zero-dependency browser video editor whose JSON timeline is directly controllable via MCP, REST, or file edits.
+- [P] [neon-blog] Introducing the New Neon API Command — https://neon.com/blog/introducing-neon-api-command — Neon CLI adds an authenticated api passthrough so agents can hit any endpoint without handling raw tokens.
+- [R] [reddit-saas] Keep going. No matter what. — https://www.reddit.com/r/SaaS/comments/1urv4mu/keep_going_no_matter_what/ — Motivation image post about coding in public with an exposed .env joke.
+- [R] [reddit-saas] wt*, someone just paid for my app before I launched it — https://www.reddit.com/r/SaaS/comments/1use08c/wt_someone_just_paid_for_my_app_before_i_launched/ — Coffee-shop passerby allegedly bought a prelaunch app after seeing it on a laptop screen.
+- [R] [reddit-saas] What's been harder for you: building your SaaS or finding the first customer? — https://www.reddit.com/r/SaaS/comments/1useail/whats_been_harder_for_you_building_your_saas_or/ — Thread asking whether product or customer acquisition is harder for founders.
+- [R] [reddit-saas] We sold our first lifetime backlink! — https://www.reddit.com/r/SaaS/comments/1us2gvo/we_sold_our_first_lifetime_backlink/ — Founder celebrates first lifetime backlink sale after changing pricing.
+- [R] [reddit-saas] How long before I can sell — https://www.reddit.com/r/SaaS/comments/1usdtv3/how_long_before_i_can_sell/ — Founder asks how many months of data they need before selling a one-month-old SaaS.
+- [R] [reddit-saas] Do you guys ever actually look at your photos after a trip? — https://www.reddit.com/r/SaaS/comments/1usf38h/do_you_guys_ever_actually_look_at_your_photos/ — Waitlist post for an AI photo-search app framed around forgotten vacation photos.</pre>
     </details>
   </main>
   <footer>
