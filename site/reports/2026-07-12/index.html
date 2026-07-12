@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>July 12, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="5 stories cleared the bar, led by An update on residential proxies and the scraper situation, I converted an Android app to a webpage, and Apple sues">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-07-12/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="July 12, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="5 stories cleared the bar, led by An update on residential proxies and the scraper situation, I converted an Android app to a webpage, and Apple sues">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-07-12/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="July 12, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="5 stories cleared the bar, led by An update on residential proxies and the scraper situation, I converted an Android app to a webpage, and Apple sues">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>July 12, 2026 · Report log</span>
+      <span>Jul 12, 2026, 2:16 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>July 12, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>5 stories cleared the bar, led by An update on residential proxies and the scraper situation, I converted an Android app to a webpage, and Apple sues OpenAI, accuses ex-employees of stealing trade secrets.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>5 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://lwn.net/SubscriberLink/1080822/990a8a5e2d379085/" target="_blank" rel="noopener">An update on residential proxies and the scraper situation</a></div>
+        <div class="item-takeaway">LWN published an operational update on AI-scraper crawl load: abusive bots now route through residential proxy networks, making IP-based blocking largely useless, and LWN details the countermeasures it is running in production. Directly relevant to anyone operating a public site — hostile crawl traffic increasingly looks like ordinary home users. Read it to calibrate your own rate-limiting and bot-defense strategy.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://danq.me/2026/07/09/your-app-could-have-been-a-webpage/" target="_blank" rel="noopener">I converted an Android app to a webpage</a></div>
+        <div class="item-takeaway">Dan Q converted his Android app into a plain webpage and documents what was gained and lost, arguing most apps could have been webpages. A concrete, first-hand datapoint for solo builders weighing native app delivery (store fees, review friction, platform lock-in) against web reach. Useful framing when deciding whether a new product needs a native client at all.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/" target="_blank" rel="noopener">Apple sues OpenAI, accuses ex-employees of stealing trade secrets</a></div>
+        <div class="item-takeaway">Apple has reportedly filed suit against OpenAI, accusing former Apple employees of taking trade secrets. Reporting is early and secondhand (9to5mac citing MacRumors); no court filings analyzed yet. No direct action for solo devs, but sustained legal pressure on OpenAI is platform risk worth tracking if you build on their APIs.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/malisper/pgrust" target="_blank" rel="noopener">Postgres rewritten in Rust, now passing 100% of the Postgres regression tests</a></div>
+        <div class="item-takeaway">pgrust is a rewrite of Postgres in Rust that the author says now passes the entire Postgres regression suite. If the claim holds it is a remarkable open-source milestone, though regression-test parity is far from production readiness (performance, replication, extensions, ecosystem). Nothing to act on now; watch for independent verification and benchmarks.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.iroh.computer/blog/an-iroh-powered-smart-fan" target="_blank" rel="noopener">An iroh powered smart fan</a></div>
+        <div class="item-takeaway">A builder wired a smart fan using iroh, the Rust p2p networking library, demonstrating direct device-to-device control with no cloud broker. Toy project, but a clean demo of iroh's leverage for local-first tooling — a plausible alternative transport for agent/device communication without hosting a relay.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://stratechery.com/2026/xbox-on-the-rocks/" target="_blank" rel="noopener">2026.28: XBOX On the Rocks</a>
+        </div>
+        <div class="item-takeaway">Stratechery's weekly recap email pointing to the week's paywalled essays, headlined by analysis of Microsoft's Xbox strategy. It is a roundup wrapper with no standalone claim or action for a solo builder.</div>
+        <div class="item-meta">
+          <span>stratechery</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/ainews-not-much-happened-today-f5c" target="_blank" rel="noopener">[AINews] not much happened today</a>
+        </div>
+        <div class="item-takeaway">Latent Space's AINews digest explicitly describing a quiet day after a week of model releases. Nothing substantive to extract.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.brown.edu/news/2026-07-09/chemical-bonds-relativity" target="_blank" rel="noopener">Einstein's relativity rules chemical bonds in heavy elements, new research shows</a>
+        </div>
+        <div class="item-takeaway">Brown University research showing relativistic effects govern chemical bonding in heavy elements. Interesting science, but no relevance to software building or any near-term decision.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.jeffgeerling.com/blog/2026/quadrf-can-spot-drones-and-see-wifi-through-my-wall/" target="_blank" rel="noopener">QuadRF can spot drones and see WiFi through my wall</a>
+        </div>
+        <div class="item-takeaway">Jeff Geerling reviews QuadRF, an RF-sensing device that can detect drones and visualize WiFi through walls. Fun hobbyist hardware content with no actionable relevance to a solo software business.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/" target="_blank" rel="noopener">Apple sues OpenAI, accuses ex-employees of stealing trade secrets</a>
+        </div>
+        <div class="item-takeaway">Apple has reportedly filed suit against OpenAI, accusing former Apple employees of taking trade secrets. Reporting is early and secondhand (9to5mac citing MacRumors); no court filings analyzed yet. No direct action for solo devs, but sustained legal pressure on OpenAI is platform risk worth tracking if you build on their APIs.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://designyoutrust.com/2018/01/vintage-beauty-soviet-control-rooms/" target="_blank" rel="noopener">The vintage beauty of Soviet control rooms (2018)</a>
+        </div>
+        <div class="item-takeaway">A 2018 photo gallery of Soviet-era control rooms recirculating on HN. Nostalgia/design content with zero actionable signal.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.iroh.computer/blog/an-iroh-powered-smart-fan" target="_blank" rel="noopener">An iroh powered smart fan</a>
+        </div>
+        <div class="item-takeaway">A builder wired a smart fan using iroh, the Rust p2p networking library, demonstrating direct device-to-device control with no cloud broker. Toy project, but a clean demo of iroh's leverage for local-first tooling — a plausible alternative transport for agent/device communication without hosting a relay.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://lwn.net/SubscriberLink/1080822/990a8a5e2d379085/" target="_blank" rel="noopener">An update on residential proxies and the scraper situation</a>
+        </div>
+        <div class="item-takeaway">LWN published an operational update on AI-scraper crawl load: abusive bots now route through residential proxy networks, making IP-based blocking largely useless, and LWN details the countermeasures it is running in production. Directly relevant to anyone operating a public site — hostile crawl traffic increasingly looks like ordinary home users. Read it to calibrate your own rate-limiting and bot-defense strategy.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.zdnet.com/home-and-office/networking/spacex-wants-to-launch-100000-more-starlink-satellites/" target="_blank" rel="noopener">SpaceX wants to launch 100k more Starlink satellites for 100x the bandwidth</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ai-2040.com/" target="_blank" rel="noopener">AI 2040: Plan A</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.gingerbill.org/article/2026/07/10/good-tools-are-invisible/" target="_blank" rel="noopener">Good Tools Are Invisible</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://combustionlab.net" target="_blank" rel="noopener">Combustion engine web-based simulator</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vfxblog.com/2017/08/23/the-tech-of-terminator-2-an-oral-history/" target="_blank" rel="noopener">The tech of 'Terminator 2' – an oral history (2017)</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf" target="_blank" rel="noopener">GPT-5.6 Sol Ultra produces proof of the Cycle Double Cover Conjecture [pdf]</a>
+        </div>
+        <div class="item-takeaway">https:&amp;#x2F;&amp;#x2F;x.com&amp;#x2F;__eknight__&amp;#x2F;status&amp;#x2F;2075643450196971805 , https:&amp;#x2F;&amp;#x2F;xcancel.com&amp;#x2F;__eknight__&amp;#x2F;status&amp;#…</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://acoup.blog/2026/01/30/collections-the-late-bronze-age-collapse-a-very-brief-introduction/" target="_blank" rel="noopener">Late Bronze Age Collapse</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://mimo.xiaomi.com/blog/mimo-v2-5-inference" target="_blank" rel="noopener">Inference Optimization for MiMo v2.5: Pushing Hybrid SWA Efficiency to the Limit</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://avi.press/posts/2026-07-10-after-7-years-in-production-scarf-has-reluctantly-moved-away-from-haskell.html" target="_blank" rel="noopener">After 7 years in production, Scarf has reluctantly moved away from Haskell</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.theguardian.com/us-news/2026/jul/10/new-york-city-deceptive-subscriptions-ban" target="_blank" rel="noopener">New York City to ban deceptive subscription practices</a>
+        </div>
+        <div class="item-takeaway">https:&amp;#x2F;&amp;#x2F;www.nyc.gov&amp;#x2F;mayors-office&amp;#x2F;news&amp;#x2F;2026&amp;#x2F;07&amp;#x2F;mayor-mamdani...</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://serialc.github.io/altClocks/" target="_blank" rel="noopener">Alternate clock designs and time systems</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ergo.org/courses/computation-as-a-universal-and-fundamental-concept" target="_blank" rel="noopener">Computation as a universal and fundamental concept</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.smithsonianmag.com/smart-news/spider-silk-loses-top-spot-natures-strongest-material-snails-teeth-180954346/" target="_blank" rel="noopener">Snails' teeth beats spider silk as nature's strongest material (2015)</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://nebusec.ai/research/ionstack-part-2/" target="_blank" rel="noopener">GhostLock, a stack-UAF that has existed in ALL Linux distributions for 15 years</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lesleylai.info/en/flashcards/" target="_blank" rel="noopener">A love letter to flashcards</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://waratlas.org" target="_blank" rel="noopener">War Atlas: An interactive cartography of every named war in human history</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.dailymail.com/sciencetech/article-15956159/Incredible-lost-city-discovered-Egypts-desert.html" target="_blank" rel="noopener">Lost city discovered beneath Egypt's desert with ancient church</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lwn.net/SubscriberLink/1080822/990a8a5e2d379085/" target="_blank" rel="noopener">An update on the scraper situation</a>
+        </div>
+        <div class="item-takeaway">Same LWN scraper/residential-proxy story as the hn-top item; the hn-top copy was kept as the canonical entry.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://gitlab.com/DecaCagle/hannahmontanalinux26" target="_blank" rel="noopener">Hannah Montana Linux v26.0</a>
+        </div>
+        <div class="item-takeaway">A new release of the long-running joke Linux distribution. Viral novelty content, no signal.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/malisper/pgrust" target="_blank" rel="noopener">Postgres rewritten in Rust, now passing 100% of the Postgres regression tests</a>
+        </div>
+        <div class="item-takeaway">pgrust is a rewrite of Postgres in Rust that the author says now passes the entire Postgres regression suite. If the claim holds it is a remarkable open-source milestone, though regression-test parity is far from production readiness (performance, replication, extensions, ecosystem). Nothing to act on now; watch for independent verification and benchmarks.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://danq.me/2026/07/09/your-app-could-have-been-a-webpage/" target="_blank" rel="noopener">I converted an Android app to a webpage</a>
+        </div>
+        <div class="item-takeaway">Dan Q converted his Android app into a plain webpage and documents what was gained and lost, arguing most apps could have been webpages. A concrete, first-hand datapoint for solo builders weighing native app delivery (store fees, review friction, platform lock-in) against web reach. Useful framing when deciding whether a new product needs a native client at all.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://avi.press/posts/2026-07-10-after-7-years-in-production-scarf-has-reluctantly-moved-away-from-haskell.html" target="_blank" rel="noopener">After 7 years in production, Scarf has reluctantly moved away from Haskell</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.howtogeek.com/i-tried-netbsd-as-a-desktop-and-it-felt-like-stepping-into-the-90s-in-a-good-way/" target="_blank" rel="noopener">I tried NetBSD as a desktop, and it felt like stepping into the '90s in a good way</a>
+        </div>
+        <div class="item-takeaway">HowToGeek retro-computing lifestyle piece about running NetBSD as a daily desktop. Entertainment/nostalgia, no actionable content.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://zeal8bit.com/" target="_blank" rel="noopener">Zeal Z80-based computer</a>
+        </div>
+        <div class="item-takeaway">A hobbyist 8-bit Z80 computer project. Charming retro hardware, but irrelevant to a solo software business.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://marvinh.dev/blog/running-1000-test-in-1s/" target="_blank" rel="noopener">Running 1000 tests in 1s (2022)</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://labs.quansight.org/blog/python-abi-abi3t" target="_blank" rel="noopener">What Every Python Developer Should Know About the CPython ABI</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.lvmbdv.dev/posts/adding-go-to-a-browser-code-runner/" target="_blank" rel="noopener">Adding Go to a browser code runner</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://wiki.c2.com/?TwoWaysToDesign" target="_blank" rel="noopener">Two Ways To Design</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/1997/Archive/CSD-97-946.pdf" target="_blank" rel="noopener">Practical Algorithms for Incremental Software Development Environments</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://nesbitt.io/2026/07/10/package-management-as-org-chart.html" target="_blank" rel="noopener">Package Management as Org Chart</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://hpc.guix.info/blog/2026/07/debugging-performance-regressions/" target="_blank" rel="noopener">Debugging performance regressions</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Jul/10/nilay-patel/#atom-everything" target="_blank" rel="noopener">Quoting Nilay Patel</a>
+        </div>
+        <div class="item-takeaway">Simon Willison quotes Nilay Patel arguing that AR glasses inherently require always-on cameras streaming to the cloud, making privacy invasion structural to the product category. Thought-provoking commentary but purely opinion, with no near-term action for a solo builder.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: dd22767a-af84-4909-802c-510f4d3aa35d
+Started: 2026-07-12T06:09:26.081Z
+Completed: 2026-07-12T06:16:01.780Z
+
+## Worth attention
+
+- **An update on residential proxies and the scraper situation**
+  https://lwn.net/SubscriberLink/1080822/990a8a5e2d379085/
+  LWN published an operational update on AI-scraper crawl load: abusive bots now route through residential proxy networks, making IP-based blocking largely useless, and LWN details the countermeasures it is running in production. Directly relevant to anyone operating a public site — hostile crawl traffic increasingly looks like ordinary home users. Read it to calibrate your own rate-limiting and bot-defense strategy.
+- **I converted an Android app to a webpage**
+  https://danq.me/2026/07/09/your-app-could-have-been-a-webpage/
+  Dan Q converted his Android app into a plain webpage and documents what was gained and lost, arguing most apps could have been webpages. A concrete, first-hand datapoint for solo builders weighing native app delivery (store fees, review friction, platform lock-in) against web reach. Useful framing when deciding whether a new product needs a native client at all.
+- **Apple sues OpenAI, accuses ex-employees of stealing trade secrets**
+  https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/
+  Apple has reportedly filed suit against OpenAI, accusing former Apple employees of taking trade secrets. Reporting is early and secondhand (9to5mac citing MacRumors); no court filings analyzed yet. No direct action for solo devs, but sustained legal pressure on OpenAI is platform risk worth tracking if you build on their APIs.
+- **Postgres rewritten in Rust, now passing 100% of the Postgres regression tests**
+  https://github.com/malisper/pgrust
+  pgrust is a rewrite of Postgres in Rust that the author says now passes the entire Postgres regression suite. If the claim holds it is a remarkable open-source milestone, though regression-test parity is far from production readiness (performance, replication, extensions, ecosystem). Nothing to act on now; watch for independent verification and benchmarks.
+- **An iroh powered smart fan**
+  https://www.iroh.computer/blog/an-iroh-powered-smart-fan
+  A builder wired a smart fan using iroh, the Rust p2p networking library, demonstrating direct device-to-device control with no cloud broker. Toy project, but a clean demo of iroh's leverage for local-first tooling — a plausible alternative transport for agent/device communication without hosting a relay.
+
+## Full digest
+
+- [R] [stratechery] 2026.28: XBOX On the Rocks — https://stratechery.com/2026/xbox-on-the-rocks/ — Stratechery's weekly recap email pointing to the week's paywalled essays, headlined by analysis of Microsoft's Xbox strategy. It is a roundup wrapper with no standalone claim or action for a solo builder.
+- [R] [latent-space] [AINews] not much happened today — https://www.latent.space/p/ainews-not-much-happened-today-f5c — Latent Space's AINews digest explicitly describing a quiet day after a week of model releases. Nothing substantive to extract.
+- [R] [hn-top] Einstein's relativity rules chemical bonds in heavy elements, new research shows — https://www.brown.edu/news/2026-07-09/chemical-bonds-relativity — Brown University research showing relativistic effects govern chemical bonding in heavy elements. Interesting science, but no relevance to software building or any near-term decision.
+- [R] [hn-top] QuadRF can spot drones and see WiFi through my wall — https://www.jeffgeerling.com/blog/2026/quadrf-can-spot-drones-and-see-wifi-through-my-wall/ — Jeff Geerling reviews QuadRF, an RF-sensing device that can detect drones and visualize WiFi through walls. Fun hobbyist hardware content with no actionable relevance to a solo software business.
+- [M] [hn-top] Apple sues OpenAI, accuses ex-employees of stealing trade secrets — https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/ — Apple has reportedly filed suit against OpenAI, accusing former Apple employees of taking trade secrets. Reporting is early and secondhand (9to5mac citing MacRumors); no court filings analyzed yet. No direct action for solo devs, but sustained legal pressure on OpenAI is platform risk worth tracking if you build on their APIs.
+- [R] [hn-top] The vintage beauty of Soviet control rooms (2018) — https://designyoutrust.com/2018/01/vintage-beauty-soviet-control-rooms/ — A 2018 photo gallery of Soviet-era control rooms recirculating on HN. Nostalgia/design content with zero actionable signal.
+- [M] [hn-top] An iroh powered smart fan — https://www.iroh.computer/blog/an-iroh-powered-smart-fan — A builder wired a smart fan using iroh, the Rust p2p networking library, demonstrating direct device-to-device control with no cloud broker. Toy project, but a clean demo of iroh's leverage for local-first tooling — a plausible alternative transport for agent/device communication without hosting a relay.
+- [P] [hn-top] An update on residential proxies and the scraper situation — https://lwn.net/SubscriberLink/1080822/990a8a5e2d379085/ — LWN published an operational update on AI-scraper crawl load: abusive bots now route through residential proxy networks, making IP-based blocking largely useless, and LWN details the countermeasures it is running in production. Directly relevant to anyone operating a public site — hostile crawl traffic increasingly looks like ordinary home users. Read it to calibrate your own rate-limiting and bot-defense strategy.
+- [R] [hn-top] SpaceX wants to launch 100k more Starlink satellites for 100x the bandwidth — https://www.zdnet.com/home-and-office/networking/spacex-wants-to-launch-100000-more-starlink-satellites/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] AI 2040: Plan A — https://ai-2040.com/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Good Tools Are Invisible — https://www.gingerbill.org/article/2026/07/10/good-tools-are-invisible/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Combustion engine web-based simulator — https://combustionlab.net — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] The tech of 'Terminator 2' – an oral history (2017) — https://vfxblog.com/2017/08/23/the-tech-of-terminator-2-an-oral-history/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] GPT-5.6 Sol Ultra produces proof of the Cycle Double Cover Conjecture [pdf] — https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf — https:&amp;#x2F;&amp;#x2F;x.com&amp;#x2F;__eknight__&amp;#x2F;status&amp;#x2F;2075643450196971805 , https:&amp;#x2F;&amp;#x2F;xcancel.com&amp;#x2F;__eknight__&amp;#x2F;status&amp;#…
+- [R] [hn-top] Late Bronze Age Collapse — https://acoup.blog/2026/01/30/collections-the-late-bronze-age-collapse-a-very-brief-introduction/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Inference Optimization for MiMo v2.5: Pushing Hybrid SWA Efficiency to the Limit — https://mimo.xiaomi.com/blog/mimo-v2-5-inference — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] After 7 years in production, Scarf has reluctantly moved away from Haskell — https://avi.press/posts/2026-07-10-after-7-years-in-production-scarf-has-reluctantly-moved-away-from-haskell.html — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] New York City to ban deceptive subscription practices — https://www.theguardian.com/us-news/2026/jul/10/new-york-city-deceptive-subscriptions-ban — https:&amp;#x2F;&amp;#x2F;www.nyc.gov&amp;#x2F;mayors-office&amp;#x2F;news&amp;#x2F;2026&amp;#x2F;07&amp;#x2F;mayor-mamdani...
+- [R] [hn-top] Alternate clock designs and time systems — https://serialc.github.io/altClocks/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Computation as a universal and fundamental concept — https://ergo.org/courses/computation-as-a-universal-and-fundamental-concept — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Snails' teeth beats spider silk as nature's strongest material (2015) — https://www.smithsonianmag.com/smart-news/spider-silk-loses-top-spot-natures-strongest-material-snails-teeth-180954346/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] GhostLock, a stack-UAF that has existed in ALL Linux distributions for 15 years — https://nebusec.ai/research/ionstack-part-2/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] A love letter to flashcards — https://lesleylai.info/en/flashcards/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] War Atlas: An interactive cartography of every named war in human history — https://waratlas.org — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Lost city discovered beneath Egypt's desert with ancient church — https://www.dailymail.com/sciencetech/article-15956159/Incredible-lost-city-discovered-Egypts-desert.html — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [lobsters] An update on the scraper situation — https://lwn.net/SubscriberLink/1080822/990a8a5e2d379085/ — Same LWN scraper/residential-proxy story as the hn-top item; the hn-top copy was kept as the canonical entry.
+- [R] [lobsters] Hannah Montana Linux v26.0 — https://gitlab.com/DecaCagle/hannahmontanalinux26 — A new release of the long-running joke Linux distribution. Viral novelty content, no signal.
+- [P] [lobsters] Postgres rewritten in Rust, now passing 100% of the Postgres regression tests — https://github.com/malisper/pgrust — pgrust is a rewrite of Postgres in Rust that the author says now passes the entire Postgres regression suite. If the claim holds it is a remarkable open-source milestone, though regression-test parity is far from production readiness (performance, replication, extensions, ecosystem). Nothing to act on now; watch for independent verification and benchmarks.
+- [P] [lobsters] I converted an Android app to a webpage — https://danq.me/2026/07/09/your-app-could-have-been-a-webpage/ — Dan Q converted his Android app into a plain webpage and documents what was gained and lost, arguing most apps could have been webpages. A concrete, first-hand datapoint for solo builders weighing native app delivery (store fees, review friction, platform lock-in) against web reach. Useful framing when deciding whether a new product needs a native client at all.
+- [R] [lobsters] After 7 years in production, Scarf has reluctantly moved away from Haskell — https://avi.press/posts/2026-07-10-after-7-years-in-production-scarf-has-reluctantly-moved-away-from-haskell.html — Comments
+- [R] [lobsters] I tried NetBSD as a desktop, and it felt like stepping into the '90s in a good way — https://www.howtogeek.com/i-tried-netbsd-as-a-desktop-and-it-felt-like-stepping-into-the-90s-in-a-good-way/ — HowToGeek retro-computing lifestyle piece about running NetBSD as a daily desktop. Entertainment/nostalgia, no actionable content.
+- [R] [lobsters] Zeal Z80-based computer — https://zeal8bit.com/ — A hobbyist 8-bit Z80 computer project. Charming retro hardware, but irrelevant to a solo software business.
+- [R] [lobsters] Running 1000 tests in 1s (2022) — https://marvinh.dev/blog/running-1000-test-in-1s/ — Comments
+- [R] [lobsters] What Every Python Developer Should Know About the CPython ABI — https://labs.quansight.org/blog/python-abi-abi3t — Comments
+- [R] [lobsters] Adding Go to a browser code runner — https://blog.lvmbdv.dev/posts/adding-go-to-a-browser-code-runner/ — Comments
+- [R] [lobsters] Two Ways To Design — https://wiki.c2.com/?TwoWaysToDesign — Comments
+- [R] [lobsters] Practical Algorithms for Incremental Software Development Environments — https://www2.eecs.berkeley.edu/Pubs/TechRpts/1997/Archive/CSD-97-946.pdf — Comments
+- [R] [lobsters] Package Management as Org Chart — https://nesbitt.io/2026/07/10/package-management-as-org-chart.html — Comments
+- [R] [lobsters] Debugging performance regressions — https://hpc.guix.info/blog/2026/07/debugging-performance-regressions/ — Comments
+- [R] [simon-willison] Quoting Nilay Patel — https://simonwillison.net/2026/Jul/10/nilay-patel/#atom-everything — Simon Willison quotes Nilay Patel arguing that AR glasses inherently require always-on cameras streaming to the cloud, making privacy invasion structural to the product category. Thought-provoking commentary but purely opinion, with no near-term action for a solo builder.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
