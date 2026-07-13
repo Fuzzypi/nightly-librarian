@@ -1,0 +1,776 @@
+{
+  "date": "2026-07-13",
+  "generated_at": "2026-07-13T06:16:29.944Z",
+  "imported_from": {
+    "importer_version": "digest-import/v1",
+    "source_artifact": "artifacts/synthesized/2026-07-13.json",
+    "source_sha256": "4a02834e36399ad77232c3d75d97ffbea56f4807f46b7e82e35966c800093dc5"
+  },
+  "items": [
+    {
+      "builder_takeaway": "Directly relevant to running large local models on Mac (Ollama workflow); reproducible fixes.",
+      "category": "Tools Worth Testing",
+      "id": "c1375e3b-2ca9-47a6-b596-ed1d4cb177b6",
+      "importance": "lead",
+      "labels": [
+        "builder_reported",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "mrzk.io",
+      "source_facts": [
+        "Three bug fixes made Qwen3.5-122B stable enough to be a daily-driver local model on a Mac Studio."
+      ],
+      "title": "Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio",
+      "uncertainty": "Fixes may be specific to his exact hardware/stack version.",
+      "url": "https://mrzk.io/posts/qmlx-maximising-ai-psychosis-minmaxing-mac-studio/"
+    },
+    {
+      "builder_takeaway": "Broadly applicable, zero-cost practice change for the most widely used embedded DB.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "b599329e-cc7c-4055-951a-2666e87882b6",
+      "importance": "supporting",
+      "labels": [
+        "reproducible",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "evanhahn.com",
+      "source_facts": [
+        "Using STRICT tables in SQLite enforces column types and prevents silent type-coercion bugs."
+      ],
+      "title": "Prefer strict tables in SQLite",
+      "uncertainty": "",
+      "url": "https://evanhahn.com/prefer-strict-tables-in-sqlite/"
+    },
+    {
+      "builder_takeaway": "Agent-session observability is directly relevant to multi-agent workflows.",
+      "category": "AI Operations / Agent Control",
+      "id": "25489a0c-776e-4e0e-9a44-318bf9f84835",
+      "importance": "supporting",
+      "labels": [
+        "early_signal",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Mindwalk replays coding-agent sessions as a visualization over a 3D map of your codebase."
+      ],
+      "title": "Mindwalk – Replay coding-agent sessions on a 3D map of your codebase",
+      "uncertainty": "Unclear which agent formats/harnesses it supports and how mature it is.",
+      "url": "https://github.com/cosmtrek/mindwalk"
+    },
+    {
+      "builder_takeaway": "Transferable Postgres pooling knowledge for the Hetzner-hosted DB.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "c0c2a2f0-68f6-4262-9139-64429a3ffc4d",
+      "importance": "supporting",
+      "labels": [
+        "production_proven",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "clickhouse.com",
+      "source_facts": [
+        "ClickHouse scaled PgBouncer to 4x throughput for their managed Postgres service."
+      ],
+      "title": "We scaled PgBouncer to 4x throughput",
+      "uncertainty": "Techniques may assume traffic volumes far beyond a solo deployment's needs.",
+      "url": "https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres"
+    },
+    {
+      "builder_takeaway": "Relevant to local-model infrastructure direction.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "57d444ef-90f4-4f69-aced-440f47a67fb8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "iroh.computer",
+      "source_facts": [
+        "iroh demonstrated distributed LLM inference across machines over its p2p mesh stack."
+      ],
+      "title": "Mesh LLM: distributed AI computing on iroh",
+      "uncertainty": "Unclear real-world performance vs. single-machine inference.",
+      "url": "https://www.iroh.computer/blog/mesh-llm"
+    },
+    {
+      "builder_takeaway": "Reinforces that agent harnesses are simple loops; useful mental model for MCP/agent work.",
+      "category": "AI Operations / Agent Control",
+      "id": "cacb3090-617b-412b-9de1-d11ea4addc33",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "thebeach.dev",
+      "source_facts": [
+        "A complete working coding agent loop can be implemented in roughly 100 lines of Lisp."
+      ],
+      "title": "An Agent in 100 Lines of Lisp",
+      "uncertainty": "",
+      "url": "https://thebeach.dev/posts/lisp-agent/"
+    },
+    {
+      "builder_takeaway": "Useful CLI ETL improvement in a widely used solo-dev tool.",
+      "category": "Tools Worth Testing",
+      "id": "a465799b-afbb-4f1e-abbf-c3fa2ed947f2",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "sqlite-utils 4.1 adds a --code option letting insert/upsert generate rows from inline Python code."
+      ],
+      "title": "sqlite-utils 4.1",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Jul/11/sqlite-utils/"
+    },
+    {
+      "builder_takeaway": "Directly analogous to ContractorVerify document pipelines.",
+      "category": "Tools Worth Testing",
+      "id": "ee4c2b2b-e03a-450c-956f-2bf219b0d5e9",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "In a contract-analysis SaaS, document classification failed more often than parsing, redirecting the roadmap toward accuracy over features."
+      ],
+      "title": "Real users changed my SaaS roadmap faster than months of planning (Trothix)",
+      "uncertainty": "Single anecdote with very small usage numbers.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uuc2se/real_users_changed_my_saas_roadmap_faster_than/"
+    },
+    {
+      "builder_takeaway": "New-runtime signals occasionally matter; too early to act.",
+      "category": "Tools Worth Testing",
+      "id": "e28e268b-550b-4fc4-8d89-3fae46d59ae4",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "antjs.org",
+      "source_facts": [
+        "Ant is a new JavaScript runtime and full ecosystem (registry, hosting, desktop framework) positioned as an end-to-end alternative stack."
+      ],
+      "title": "Ant – A JavaScript runtime and ecosystem",
+      "uncertainty": "Single-author ecosystem; longevity and compatibility unproven.",
+      "url": "https://antjs.org"
+    },
+    {
+      "builder_takeaway": "Potential future GPU/cloud pricing instability affects AI cost planning.",
+      "category": "Small Business Automation",
+      "id": "4214ed9b-0136-47a4-a637-162f9ceaf8da",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "io-fund.com",
+      "source_facts": [
+        "Nvidia's investments in CoreWeave and Nebius create circular financing that props up GPU demand."
+      ],
+      "title": "Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom",
+      "uncertainty": "Financial analysis from an investment site; thesis, not established fact.",
+      "url": "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom"
+    },
+    {
+      "builder_takeaway": "Same article as the lobsters submission of 'An Agent in 100 Lines of Lisp'. Rejected as a duplicate; the lobsters copy carries the verdict.",
+      "category": "AI Operations / Agent Control",
+      "id": "ec3255f1-bb9f-428e-a9d3-146d6bc8090f",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "thebeach.dev",
+      "source_facts": [
+        "A complete working agent loop can be implemented in roughly 100 lines of Lisp."
+      ],
+      "title": "An agent in 100 lines of Lisp (HN copy)",
+      "uncertainty": "",
+      "url": "https://thebeach.dev/posts/lisp-agent/"
+    },
+    {
+      "builder_takeaway": "Duplicate of the HN RISCBoy submission. Hobby hardware project; neat but not relevant to solo-builder decisions either way.",
+      "category": "Tools Worth Testing",
+      "id": "8a0cd32f-b2e5-44f3-b52a-ff5f0b415bbf",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "RISCBoy is an open-source RISC-V homebrew portable game console designed from scratch."
+      ],
+      "title": "RISCBoy RISC-V homebrew portable game console (lobsters copy)",
+      "uncertainty": "",
+      "url": "https://github.com/Wren6991/RISCBoy"
+    },
+    {
+      "builder_takeaway": "Duplicate of the HN Ant submission, which carries the monitor verdict. Rejected as the redundant copy.",
+      "category": "Tools Worth Testing",
+      "id": "ad341849-0e1d-448e-af00-9c205e72bd87",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "antjs.org",
+      "source_facts": [
+        "Ant is a new lightweight JavaScript runtime with its own engine and ecosystem."
+      ],
+      "title": "Ant, a lightweight JavaScript runtime (lobsters copy)",
+      "uncertainty": "",
+      "url": "https://antjs.org/"
+    },
+    {
+      "builder_takeaway": "Clojure framework library for representing a codebase as a queryable graph. Conceptually adjacent to code-graph tooling but locked to the Clojure/Biff ecosystem. Not useful outside that niche.",
+      "category": "Tools Worth Testing",
+      "id": "3be23404-2730-4928-bf84-07adb54fa60d",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Biff.graph lets you structure a Clojure codebase as a queryable graph."
+      ],
+      "title": "Biff.graph: structure your Clojure codebase as a queryable graph",
+      "uncertainty": "",
+      "url": "https://github.com/jacobobryant/biff/tree/v2.x/libs/graph"
+    },
+    {
+      "builder_takeaway": "Art/culture piece about drawing on the 9front OS. Entertaining niche writing with no relevance to builder decisions.",
+      "category": "Tools Worth Testing",
+      "id": "747b5b9c-6570-4e3c-b41b-794cc73b74b2",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "triapul.cz",
+      "source_facts": [
+        "An essay about drawing workflows on the 9front operating system."
+      ],
+      "title": "I Did Not Kill Stanley Lieber: How to Draw (With 9front)",
+      "uncertainty": "",
+      "url": "https://triapul.cz/automa/i_did_not_kill_stanley_lieber"
+    },
+    {
+      "builder_takeaway": "Research paper analyzing billions of drawings to show cultural variation in how humans represent concepts. Interesting science, zero near-term relevance to solo-builder decisions.",
+      "category": "Tools Worth Testing",
+      "id": "e4dae45b-6dfe-4785-97c1-ba6e515bc479",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "arxiv.org",
+      "source_facts": [
+        "Analysis of billions of sketches reveals cultural variation in human concept representation."
+      ],
+      "title": "Billions of Sketches Reveal Hidden Cultural Variation in Human Concepts",
+      "uncertainty": "",
+      "url": "https://arxiv.org/abs/2607.07267"
+    },
+    {
+      "builder_takeaway": "Learning platform selling build-from-scratch courses for Redis, Git, and databases. Educational but promotional, and doesn't change any near-term decision.",
+      "category": "Small Business Automation",
+      "id": "ed50c0d4-0161-476c-b4b2-5817d6abef09",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "shipthatcode.com",
+      "source_facts": [
+        "shipthatcode.com teaches programming by rebuilding Redis, Git, and a database from scratch."
+      ],
+      "title": "Show HN: Learn by rebuilding Redis, Git, a database from scratch",
+      "uncertainty": "",
+      "url": "https://shipthatcode.com"
+    },
+    {
+      "builder_takeaway": "Historical math paper on the SVD. No relevance to current builder decisions.",
+      "category": "Tools Worth Testing",
+      "id": "3dc72c60-67c5-4105-b595-9897d7bba869",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "math.ucdavis.edu",
+      "source_facts": [
+        "A 1993 paper documents the early history of the singular value decomposition."
+      ],
+      "title": "The early History of the Singular Value Decomposition (1993)",
+      "uncertainty": "",
+      "url": "https://www.math.ucdavis.edu/~saito/courses/229A/stewart-svd.pdf"
+    },
+    {
+      "builder_takeaway": "Deep-dive into India's UPI payment architecture. Well-written systems analysis but not actionable for a US-focused solo builder.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "3135ec96-074c-43b0-a33e-31b44b07529a",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "timeseriesofindia.com",
+      "source_facts": [
+        "An architectural walkthrough of how a UPI payment transaction works end to end."
+      ],
+      "title": "UPI: Anatomy of a Payment Transaction",
+      "uncertainty": "",
+      "url": "https://timeseriesofindia.com/economy/reads/upi-architecture/"
+    },
+    {
+      "builder_takeaway": "Impressive open-source RISC-V handheld console hardware project. Hobby hardware with no bearing on software-business decisions.",
+      "category": "Tools Worth Testing",
+      "id": "e6b74443-b462-4e6a-9763-1e66c2add917",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "RISCBoy is a from-scratch open-source RISC-V portable game console."
+      ],
+      "title": "RISCBoy is an open-source portable games console, designed from scratch",
+      "uncertainty": "",
+      "url": "https://github.com/Wren6991/RISCBoy"
+    },
+    {
+      "builder_takeaway": "Essay on end-of-life choices among physicians. Off-topic for a builder digest.",
+      "category": "Tools Worth Testing",
+      "id": "b5538586-23b5-4d22-846e-7ef9307bca28",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "archive.cancerworld.net",
+      "source_facts": [
+        "Doctors tend to choose less aggressive end-of-life care than the general public."
+      ],
+      "title": "How Doctors die. It's not like the rest of us (2016)",
+      "uncertainty": "",
+      "url": "https://archive.cancerworld.net/featured/how-doctors-die/"
+    },
+    {
+      "builder_takeaway": "Obituary news item. Off-topic for a builder digest.",
+      "category": "Tools Worth Testing",
+      "id": "137614a2-dd01-4614-9bc8-1673a5ab6b78",
+      "importance": "archive-only",
+      "labels": [
+        "production_proven",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "abcnews.com",
+      "source_facts": [
+        "Martha Lillard, the last US polio patient living in an iron lung, died at 78."
+      ],
+      "title": "Martha Lillard, last US polio patient using iron lung, dies at 78",
+      "uncertainty": "",
+      "url": "https://abcnews.com/US/wireStory/martha-lillard-us-polio-patient-iron-lung-dies-134668491"
+    },
+    {
+      "builder_takeaway": "Fabien Sanglard's writeup on Thunderbolt dock wake reliability. Niche hardware troubleshooting; mildly interesting, no broad action.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "aaf24bc1-b882-4453-abe8-d978857cf02b",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "fabiensanglard.net",
+      "source_facts": [
+        "A detailed investigation into making a Thunderbolt 4 dock wake from sleep reliably."
+      ],
+      "title": "A dock that wakes up reliably",
+      "uncertainty": "",
+      "url": "https://fabiensanglard.net/tb4/index.html"
+    },
+    {
+      "builder_takeaway": "Scheme-based web programming tool. Niche language ecosystem, no relevance to current work.",
+      "category": "Tools Worth Testing",
+      "id": "d8815d18-0f56-425d-9d0e-bf5ca9ad8a09",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "goeteia.dev",
+      "source_facts": [
+        "Goeteia is a pure Scheme web programming tool."
+      ],
+      "title": "A pure scheme web programming tool",
+      "uncertainty": "",
+      "url": "https://goeteia.dev"
+    },
+    {
+      "builder_takeaway": "Erlang-style webserver written in Scheme. Same niche as the companion goeteia submission; no relevance.",
+      "category": "Tools Worth Testing",
+      "id": "7b23df15-d750-4782-aa35-1fd2a74c4418",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "igropyr.com",
+      "source_facts": [
+        "An Erlang-style webserver implemented in pure Scheme."
+      ],
+      "title": "A Erlang style pure Scheme Webserver and further",
+      "uncertainty": "",
+      "url": "https://igropyr.com"
+    },
+    {
+      "builder_takeaway": "Quanta piece on physics research showing simple liquids can fracture like solids. Fascinating, entirely off-scope.",
+      "category": "Tools Worth Testing",
+      "id": "33b75803-0a90-45b7-b776-50092f02de3e",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "quantamagazine.org",
+      "source_facts": [
+        "New research shows simple liquids can fracture in a solidlike way."
+      ],
+      "title": "Unexpected Solidlike Fracture in Simple Liquids",
+      "uncertainty": "",
+      "url": "https://www.quantamagazine.org/we-know-simple-fluids-can-flow-turns-out-some-can-fracture-20260710/"
+    },
+    {
+      "builder_takeaway": "US higher-education policy news. Off-topic for a builder digest.",
+      "category": "Tools Worth Testing",
+      "id": "504069fc-973b-4229-bb37-cfe20eba9929",
+      "importance": "archive-only",
+      "labels": [
+        "production_proven",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "npr.org",
+      "source_facts": [
+        "A federal rule ties college financial-aid eligibility to graduate outcomes."
+      ],
+      "title": "Under federal rule, colleges must leave grads better off or lose financial aid",
+      "uncertainty": "",
+      "url": "https://www.npr.org/2026/06/30/nx-s1-5835631/turner-camhi-do-no-harm-college-loans"
+    },
+    {
+      "builder_takeaway": "Humorous essay on semantic versioning culture. Entertaining, no action.",
+      "category": "Tools Worth Testing",
+      "id": "e3367c6c-8083-4a16-afbc-38b2d8483382",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "nesbitt.io",
+      "source_facts": [
+        "An essay satirizing how developers relate to semantic versioning."
+      ],
+      "title": "Madame Semver Will See You Now",
+      "uncertainty": "",
+      "url": "https://nesbitt.io/2026/05/10/madame-semver-will-see-you-now.html"
+    },
+    {
+      "builder_takeaway": "Blog post presenting a color grid for checking accessible contrast ratios. Handy micro-tool but thin; standard contrast checkers already cover this.",
+      "category": "Tools Worth Testing",
+      "id": "855bbf61-3df8-47d7-a1b1-84c7855f397c",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "beeps.website",
+      "source_facts": [
+        "A grid visualization for finding color pairs that meet accessible contrast ratios."
+      ],
+      "title": "The accessible contrast ratio colour grid thing",
+      "uncertainty": "",
+      "url": "https://beeps.website/blog/2026-07-09-accessible-contrast-ratio-colour-grid-thing/"
+    },
+    {
+      "builder_takeaway": "Small open-source UI text diff tool. Potentially handy utility but thin announcement with no differentiating detail.",
+      "category": "Tools Worth Testing",
+      "id": "b06850b9-6b7c-4334-82cb-c49052a4774c",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "gap is a UI-based text diff tool."
+      ],
+      "title": "gap: UI text diff",
+      "uncertainty": "",
+      "url": "https://github.com/cdacamar/gap"
+    },
+    {
+      "builder_takeaway": "Podcast episode discussing Naur's 'Programming as Theory Building'. Worthwhile idea but a podcast episode isn't actionable digest material.",
+      "category": "Tools Worth Testing",
+      "id": "66c3c330-7f02-4853-9a43-9aaa2bc07de9",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "rss.com",
+      "source_facts": [
+        "A podcast episode discusses Peter Naur's 'Programming as Theory Building'."
+      ],
+      "title": "Computer Science Off Course - Programming as Theory Building",
+      "uncertainty": "",
+      "url": "https://rss.com/podcasts/computer-science-off-course/2968986/"
+    },
+    {
+      "builder_takeaway": "First-launch diary with tiny numbers and no transferable lesson beyond 'keep shipping'. Thin.",
+      "category": "Tools Worth Testing",
+      "id": "0d5db5ef-658d-44e5-ae16-a73fd970b185",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A first-time founder got 45 visitors in the first 24 hours after launching."
+      ],
+      "title": "24 hours after launching my first SaaS: 45 visitors, 58 page views",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uu9i4j/24_hours_after_launching_my_first_saas_45/"
+    },
+    {
+      "builder_takeaway": "Promotion for an 'invisible' tool to cheat proctored coding assessments. Ethically dubious product promo; reject.",
+      "category": "Small Business Automation",
+      "id": "d9402d31-9f94-484b-96a0-3726cdc94b57",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A founder claims 1,000 users for a tool designed to evade detection during online coding assessments."
+      ],
+      "title": "When you work on real problems, Grab 1,000 users recently",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uu9qe0/when_you_work_on_real_problems_grab_1000_users/"
+    },
+    {
+      "builder_takeaway": "First-day launch numbers post (32 visitors, 6 signups). No transferable insight; thin.",
+      "category": "Tools Worth Testing",
+      "id": "0c813fea-b1fb-4e10-9db4-5605370c7490",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A proposal-generation SaaS got 32 visitors and 6 signups on day one."
+      ],
+      "title": "Launched my first product, are this good numbers for first days?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uua0wp/launched_my_first_product_are_this_good_numbers/"
+    },
+    {
+      "builder_takeaway": "Bare Product Hunt upvote solicitation with no content. Reject.",
+      "category": "Small Business Automation",
+      "id": "c3a65461-47f4-4693-8b30-1e4d0909e67d",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A founder launched on Product Hunt and asks for upvotes."
+      ],
+      "title": "launched on Product hunt",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uua421/launched_on_product_hunt/"
+    },
+    {
+      "builder_takeaway": "Feedback request for a staff-presence tool with a modest positioning lesson (simplify the message). Too thin to publish.",
+      "category": "Tools Worth Testing",
+      "id": "26d1f0e9-c473-4dbc-a8c1-900c7f8c749f",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A founder rebuilt his staff-availability tool's website around the core problem after feature-heavy messaging failed."
+      ],
+      "title": "I built a staff availability tool and would love some honest feedback",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uua6e5/i_built_a_staff_availability_tool_and_would_love/"
+    },
+    {
+      "builder_takeaway": "Non-technical founder shipped a micro-SaaS with AI coding tools. Anecdote doubles as a promo for a specific AI builder; no new signal beyond the well-known 'AI lets non-coders ship' narrative.",
+      "category": "Small Business Automation",
+      "id": "fca440b9-b962-4669-9e08-76d868163e24",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A non-technical founder launched a paying micro-SaaS using AI coding tools instead of hiring a developer."
+      ],
+      "title": "Stop waiting for a technical co-founder. I just launched a B2C tool by myself",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uua6zn/stop_waiting_for_a_technical_cofounder_i_just/"
+    },
+    {
+      "builder_takeaway": "Lead-generation offer for a GSC-analysis tool. Promotional; no publishable signal.",
+      "category": "Small Business Automation",
+      "id": "d87c9d80-9be5-498e-a379-0ad7e5d04b1f",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A founder offers free Search Console analyses to promote his GSC-to-action-list tool."
+      ],
+      "title": "Send me your Search Console export and I'll tell you the 3 SEO moves I'd make next",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uuagsz/send_me_your_search_console_export_and_ill_tell/"
+    },
+    {
+      "builder_takeaway": "Product Hunt upvote-exchange solicitation. Engagement bait; reject.",
+      "category": "Small Business Automation",
+      "id": "e3ad9f5d-8e87-4c9e-ac08-c2b3c9bf294d",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A founder asks for Product Hunt support to reach the top."
+      ],
+      "title": "If you're on product hunt, This is only for you",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uubmqa/if_youre_on_product_hunt_this_is_only_for_you/"
+    },
+    {
+      "builder_takeaway": "Pre-build validation survey solicitation. Sound instinct, but the post is a survey link with no findings yet. Nothing to act on.",
+      "category": "Small Business Automation",
+      "id": "b61c1335-41e9-4646-90ef-acf49285fac0",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-13T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A would-be founder is collecting 500 survey responses about painful workflows before deciding what to build."
+      ],
+      "title": "I'm trying to validate a SaaS idea the right way instead of building first",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uuc8os/im_trying_to_validate_a_saas_idea_the_right_way/"
+    }
+  ],
+  "mode": "primary",
+  "run_id": "1cb59998-936a-4d21-89d5-5e3d1875cbdb",
+  "status": "completed",
+  "summary": "Synthesized Nightly Librarian run with 10 promoted item(s), 40 scored item(s), and 30 rejected item(s).",
+  "title": "Nightly Librarian - 2026-07-13"
+}

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>July 13, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="10 stories cleared the bar, led by Fixed three bugs that made Qwen3.">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-07-13/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="July 13, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="10 stories cleared the bar, led by Fixed three bugs that made Qwen3.">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-07-13/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="July 13, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="10 stories cleared the bar, led by Fixed three bugs that made Qwen3.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>July 13, 2026 · Report log</span>
+      <span>Jul 13, 2026, 2:16 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>July 13, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>10 stories cleared the bar, led by Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio, Prefer strict tables in SQLite, and We scaled PgBouncer to 4x throughput.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>10 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://mrzk.io/posts/qmlx-maximising-ai-psychosis-minmaxing-mac-studio/" target="_blank" rel="noopener">Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio</a></div>
+        <div class="item-takeaway">A builder tracked down three inference-stack bugs that made Qwen3.5-122B unstable on Mac Studio and now runs it as a daily driver. Both the specific fixes and the debugging approach are reusable for anyone running large local models on Apple silicon. Worth reading before investing further in local-first inference on the Mac.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://evanhahn.com/prefer-strict-tables-in-sqlite/" target="_blank" rel="noopener">Prefer strict tables in SQLite</a></div>
+        <div class="item-takeaway">SQLite's STRICT keyword makes tables enforce declared column types instead of silently coercing anything into any column. It is a one-keyword change at table creation that eliminates a whole class of silent data bugs. Adopt as the default for any new SQLite schema.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres" target="_blank" rel="noopener">We scaled PgBouncer to 4x throughput</a></div>
+        <div class="item-takeaway">ClickHouse engineering details how they pushed PgBouncer to 4x throughput for their managed Postgres offering. The pooler-tuning techniques are transferable to any Postgres deployment under connection pressure, including a single VPS. File for when pooling becomes the bottleneck.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/cosmtrek/mindwalk" target="_blank" rel="noopener">Mindwalk – Replay coding-agent sessions on a 3D map of your codebase</a></div>
+        <div class="item-takeaway">Show HN tool that replays coding-agent sessions spatially over a 3D map of the codebase. Early, but it targets agent observability and auditability — a real gap in most agent workflows. Worth a look for anyone running unattended multi-agent coding sessions.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1uuc2se/real_users_changed_my_saas_roadmap_faster_than/" target="_blank" rel="noopener">Real users changed my SaaS roadmap faster than months of planning (Trothix)</a></div>
+        <div class="item-takeaway">A legal-tech builder doing deterministic contract analysis reports that document classification fails more often than the parser itself, and that watching user behavior beat feature brainstorming. Small numbers (311 views, 30 completed analyses) but a concrete lesson for document-analysis pipelines: instrument classification accuracy before adding features.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://thebeach.dev/posts/lisp-agent/" target="_blank" rel="noopener">An Agent in 100 Lines of Lisp</a></div>
+        <div class="item-takeaway">Compact walkthrough showing a complete agent loop — model call, tool dispatch, iteration — fits in about 100 lines. A good demystifier and clean mental model for building minimal agents without heavyweight frameworks.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.iroh.computer/blog/mesh-llm" target="_blank" rel="noopener">Mesh LLM: distributed AI computing on iroh</a></div>
+        <div class="item-takeaway">The iroh team demonstrated LLM inference distributed across multiple machines over their p2p networking stack. Early signal for pooling heterogeneous home/office hardware to run bigger local models. No action now; watch the space.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/11/sqlite-utils/#atom-everything" target="_blank" rel="noopener">sqlite-utils 4.1</a></div>
+        <div class="item-takeaway">Simon Willison's sqlite-utils 4.1 adds a --code option to insert/upsert: generate rows from an inline Python snippet or .py file instead of importing from a data file. Handy for one-liner ETL into SQLite databases.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://antjs.org" target="_blank" rel="noopener">Ant – A JavaScript runtime and ecosystem</a></div>
+        <div class="item-takeaway">Ant is a new JavaScript runtime with its own engine, plus a package manager, registry, hosting platform, and Electron-like desktop framework. Ambitious end-to-end alternative to Node/Bun stacks, but very early and unproven. Track; don't adopt.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom" target="_blank" rel="noopener">Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom</a></div>
+        <div class="item-takeaway">Analysis of circular financing among Nvidia and GPU-cloud providers — Nvidia invests in customers who use the money to buy Nvidia hardware. If the credit structure unwinds, GPU cloud pricing and availability could shift. No action now, but a real cost-environment signal.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://nesbitt.io/2026/05/10/madame-semver-will-see-you-now.html" target="_blank" rel="noopener">Madame Semver Will See You Now</a>
+        </div>
+        <div class="item-takeaway">Humorous essay on semantic versioning culture. Entertaining, no action.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/cdacamar/gap" target="_blank" rel="noopener">gap: UI text diff</a>
+        </div>
+        <div class="item-takeaway">Small open-source UI text diff tool. Potentially handy utility but thin announcement with no differentiating detail.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://thebeach.dev/posts/lisp-agent/" target="_blank" rel="noopener">An Agent in 100 Lines of Lisp</a>
+        </div>
+        <div class="item-takeaway">Compact walkthrough showing a complete agent loop — model call, tool dispatch, iteration — fits in about 100 lines. A good demystifier and clean mental model for building minimal agents without heavyweight frameworks.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://rss.com/podcasts/computer-science-off-course/2968986/" target="_blank" rel="noopener">Computer Science Off Course - Programming as Theory Building</a>
+        </div>
+        <div class="item-takeaway">Podcast episode discussing Naur's 'Programming as Theory Building'. Worthwhile idea but a podcast episode isn't actionable digest material.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://antjs.org/" target="_blank" rel="noopener">Ant, a lightweight JavaScript runtime (lobsters copy)</a>
+        </div>
+        <div class="item-takeaway">Duplicate of the HN Ant submission, which carries the monitor verdict. Rejected as the redundant copy.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://beeps.website/blog/2026-07-09-accessible-contrast-ratio-colour-grid-thing/" target="_blank" rel="noopener">The accessible contrast ratio colour grid thing</a>
+        </div>
+        <div class="item-takeaway">Blog post presenting a color grid for checking accessible contrast ratios. Handy micro-tool but thin; standard contrast checkers already cover this.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/Wren6991/RISCBoy" target="_blank" rel="noopener">RISCBoy RISC-V homebrew portable game console (lobsters copy)</a>
+        </div>
+        <div class="item-takeaway">Duplicate of the HN RISCBoy submission. Hobby hardware project; neat but not relevant to solo-builder decisions either way.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.iroh.computer/blog/mesh-llm" target="_blank" rel="noopener">Mesh LLM: distributed AI computing on iroh</a>
+        </div>
+        <div class="item-takeaway">The iroh team demonstrated LLM inference distributed across multiple machines over their p2p networking stack. Early signal for pooling heterogeneous home/office hardware to run bigger local models. No action now; watch the space.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://antjs.org" target="_blank" rel="noopener">Ant – A JavaScript runtime and ecosystem</a>
+        </div>
+        <div class="item-takeaway">Ant is a new JavaScript runtime with its own engine, plus a package manager, registry, hosting platform, and Electron-like desktop framework. Ambitious end-to-end alternative to Node/Bun stacks, but very early and unproven. Track; don't adopt.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/Wren6991/RISCBoy" target="_blank" rel="noopener">RISCBoy is an open-source portable games console, designed from scratch</a>
+        </div>
+        <div class="item-takeaway">Impressive open-source RISC-V handheld console hardware project. Hobby hardware with no bearing on software-business decisions.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://thebeach.dev/posts/lisp-agent/" target="_blank" rel="noopener">An agent in 100 lines of Lisp (HN copy)</a>
+        </div>
+        <div class="item-takeaway">Same article as the lobsters submission of 'An Agent in 100 Lines of Lisp'. Rejected as a duplicate; the lobsters copy carries the verdict.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom" target="_blank" rel="noopener">Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom</a>
+        </div>
+        <div class="item-takeaway">Analysis of circular financing among Nvidia and GPU-cloud providers — Nvidia invests in customers who use the money to buy Nvidia hardware. If the credit structure unwinds, GPU cloud pricing and availability could shift. No action now, but a real cost-environment signal.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://triapul.cz/automa/i_did_not_kill_stanley_lieber" target="_blank" rel="noopener">I Did Not Kill Stanley Lieber: How to Draw (With 9front)</a>
+        </div>
+        <div class="item-takeaway">Art/culture piece about drawing on the 9front OS. Entertaining niche writing with no relevance to builder decisions.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://timeseriesofindia.com/economy/reads/upi-architecture/" target="_blank" rel="noopener">UPI: Anatomy of a Payment Transaction</a>
+        </div>
+        <div class="item-takeaway">Deep-dive into India's UPI payment architecture. Well-written systems analysis but not actionable for a US-focused solo builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.npr.org/2026/06/30/nx-s1-5835631/turner-camhi-do-no-harm-college-loans" target="_blank" rel="noopener">Under federal rule, colleges must leave grads better off or lose financial aid</a>
+        </div>
+        <div class="item-takeaway">US higher-education policy news. Off-topic for a builder digest.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres" target="_blank" rel="noopener">We scaled PgBouncer to 4x throughput</a>
+        </div>
+        <div class="item-takeaway">ClickHouse engineering details how they pushed PgBouncer to 4x throughput for their managed Postgres offering. The pooler-tuning techniques are transferable to any Postgres deployment under connection pressure, including a single VPS. File for when pooling becomes the bottleneck.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://goeteia.dev" target="_blank" rel="noopener">A pure scheme web programming tool</a>
+        </div>
+        <div class="item-takeaway">Scheme-based web programming tool. Niche language ecosystem, no relevance to current work.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://arxiv.org/abs/2607.07267" target="_blank" rel="noopener">Billions of Sketches Reveal Hidden Cultural Variation in Human Concepts</a>
+        </div>
+        <div class="item-takeaway">Research paper analyzing billions of drawings to show cultural variation in how humans represent concepts. Interesting science, zero near-term relevance to solo-builder decisions.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.quantamagazine.org/we-know-simple-fluids-can-flow-turns-out-some-can-fracture-20260710/" target="_blank" rel="noopener">Unexpected Solidlike Fracture in Simple Liquids</a>
+        </div>
+        <div class="item-takeaway">Quanta piece on physics research showing simple liquids can fracture like solids. Fascinating, entirely off-scope.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://mrzk.io/posts/qmlx-maximising-ai-psychosis-minmaxing-mac-studio/" target="_blank" rel="noopener">Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio</a>
+        </div>
+        <div class="item-takeaway">A builder tracked down three inference-stack bugs that made Qwen3.5-122B unstable on Mac Studio and now runs it as a daily driver. Both the specific fixes and the debugging approach are reusable for anyone running large local models on Apple silicon. Worth reading before investing further in local-first inference on the Mac.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.math.ucdavis.edu/~saito/courses/229A/stewart-svd.pdf" target="_blank" rel="noopener">The early History of the Singular Value Decomposition (1993)</a>
+        </div>
+        <div class="item-takeaway">Historical math paper on the SVD. No relevance to current builder decisions.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://evanhahn.com/prefer-strict-tables-in-sqlite/" target="_blank" rel="noopener">Prefer strict tables in SQLite</a>
+        </div>
+        <div class="item-takeaway">SQLite's STRICT keyword makes tables enforce declared column types instead of silently coercing anything into any column. It is a one-keyword change at table creation that eliminates a whole class of silent data bugs. Adopt as the default for any new SQLite schema.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/jacobobryant/biff/tree/v2.x/libs/graph" target="_blank" rel="noopener">Biff.graph: structure your Clojure codebase as a queryable graph</a>
+        </div>
+        <div class="item-takeaway">Clojure framework library for representing a codebase as a queryable graph. Conceptually adjacent to code-graph tooling but locked to the Clojure/Biff ecosystem. Not useful outside that niche.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://igropyr.com" target="_blank" rel="noopener">A Erlang style pure Scheme Webserver and further</a>
+        </div>
+        <div class="item-takeaway">Erlang-style webserver written in Scheme. Same niche as the companion goeteia submission; no relevance.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://shipthatcode.com" target="_blank" rel="noopener">Show HN: Learn by rebuilding Redis, Git, a database from scratch</a>
+        </div>
+        <div class="item-takeaway">Learning platform selling build-from-scratch courses for Redis, Git, and databases. Educational but promotional, and doesn't change any near-term decision.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://fabiensanglard.net/tb4/index.html" target="_blank" rel="noopener">A dock that wakes up reliably</a>
+        </div>
+        <div class="item-takeaway">Fabien Sanglard's writeup on Thunderbolt dock wake reliability. Niche hardware troubleshooting; mildly interesting, no broad action.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://archive.cancerworld.net/featured/how-doctors-die/" target="_blank" rel="noopener">How Doctors die. It's not like the rest of us (2016)</a>
+        </div>
+        <div class="item-takeaway">Essay on end-of-life choices among physicians. Off-topic for a builder digest.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://abcnews.com/US/wireStory/martha-lillard-us-polio-patient-iron-lung-dies-134668491" target="_blank" rel="noopener">Martha Lillard, last US polio patient using iron lung, dies at 78</a>
+        </div>
+        <div class="item-takeaway">Obituary news item. Off-topic for a builder digest.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jul/11/sqlite-utils/#atom-everything" target="_blank" rel="noopener">sqlite-utils 4.1</a>
+        </div>
+        <div class="item-takeaway">Simon Willison's sqlite-utils 4.1 adds a --code option to insert/upsert: generate rows from an inline Python snippet or .py file instead of importing from a data file. Handy for one-liner ETL into SQLite databases.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/cosmtrek/mindwalk" target="_blank" rel="noopener">Mindwalk – Replay coding-agent sessions on a 3D map of your codebase</a>
+        </div>
+        <div class="item-takeaway">Show HN tool that replays coding-agent sessions spatially over a 3D map of the codebase. Early, but it targets agent observability and auditability — a real gap in most agent workflows. Worth a look for anyone running unattended multi-agent coding sessions.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uu9i4j/24_hours_after_launching_my_first_saas_45/" target="_blank" rel="noopener">24 hours after launching my first SaaS: 45 visitors, 58 page views</a>
+        </div>
+        <div class="item-takeaway">First-launch diary with tiny numbers and no transferable lesson beyond 'keep shipping'. Thin.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uua421/launched_on_product_hunt/" target="_blank" rel="noopener">launched on Product hunt</a>
+        </div>
+        <div class="item-takeaway">Bare Product Hunt upvote solicitation with no content. Reject.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uuc8os/im_trying_to_validate_a_saas_idea_the_right_way/" target="_blank" rel="noopener">I'm trying to validate a SaaS idea the right way instead of building first</a>
+        </div>
+        <div class="item-takeaway">Pre-build validation survey solicitation. Sound instinct, but the post is a survey link with no findings yet. Nothing to act on.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uuc2se/real_users_changed_my_saas_roadmap_faster_than/" target="_blank" rel="noopener">Real users changed my SaaS roadmap faster than months of planning (Trothix)</a>
+        </div>
+        <div class="item-takeaway">A legal-tech builder doing deterministic contract analysis reports that document classification fails more often than the parser itself, and that watching user behavior beat feature brainstorming. Small numbers (311 views, 30 completed analyses) but a concrete lesson for document-analysis pipelines: instrument classification accuracy before adding features.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uubmqa/if_youre_on_product_hunt_this_is_only_for_you/" target="_blank" rel="noopener">If you're on product hunt, This is only for you</a>
+        </div>
+        <div class="item-takeaway">Product Hunt upvote-exchange solicitation. Engagement bait; reject.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uuagsz/send_me_your_search_console_export_and_ill_tell/" target="_blank" rel="noopener">Send me your Search Console export and I'll tell you the 3 SEO moves I'd make next</a>
+        </div>
+        <div class="item-takeaway">Lead-generation offer for a GSC-analysis tool. Promotional; no publishable signal.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uua6zn/stop_waiting_for_a_technical_cofounder_i_just/" target="_blank" rel="noopener">Stop waiting for a technical co-founder. I just launched a B2C tool by myself</a>
+        </div>
+        <div class="item-takeaway">Non-technical founder shipped a micro-SaaS with AI coding tools. Anecdote doubles as a promo for a specific AI builder; no new signal beyond the well-known 'AI lets non-coders ship' narrative.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uua6e5/i_built_a_staff_availability_tool_and_would_love/" target="_blank" rel="noopener">I built a staff availability tool and would love some honest feedback</a>
+        </div>
+        <div class="item-takeaway">Feedback request for a staff-presence tool with a modest positioning lesson (simplify the message). Too thin to publish.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uua0wp/launched_my_first_product_are_this_good_numbers/" target="_blank" rel="noopener">Launched my first product, are this good numbers for first days?</a>
+        </div>
+        <div class="item-takeaway">First-day launch numbers post (32 visitors, 6 signups). No transferable insight; thin.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uu9qe0/when_you_work_on_real_problems_grab_1000_users/" target="_blank" rel="noopener">When you work on real problems, Grab 1,000 users recently</a>
+        </div>
+        <div class="item-takeaway">Promotion for an 'invisible' tool to cheat proctored coding assessments. Ethically dubious product promo; reject.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 1cb59998-936a-4d21-89d5-5e3d1875cbdb
+Started: 2026-07-13T06:09:43.775Z
+Completed: 2026-07-13T06:16:07.079Z
+
+## Worth attention
+
+- **Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio**
+  https://mrzk.io/posts/qmlx-maximising-ai-psychosis-minmaxing-mac-studio/
+  A builder tracked down three inference-stack bugs that made Qwen3.5-122B unstable on Mac Studio and now runs it as a daily driver. Both the specific fixes and the debugging approach are reusable for anyone running large local models on Apple silicon. Worth reading before investing further in local-first inference on the Mac.
+- **Prefer strict tables in SQLite**
+  https://evanhahn.com/prefer-strict-tables-in-sqlite/
+  SQLite's STRICT keyword makes tables enforce declared column types instead of silently coercing anything into any column. It is a one-keyword change at table creation that eliminates a whole class of silent data bugs. Adopt as the default for any new SQLite schema.
+- **We scaled PgBouncer to 4x throughput**
+  https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres
+  ClickHouse engineering details how they pushed PgBouncer to 4x throughput for their managed Postgres offering. The pooler-tuning techniques are transferable to any Postgres deployment under connection pressure, including a single VPS. File for when pooling becomes the bottleneck.
+- **Mindwalk – Replay coding-agent sessions on a 3D map of your codebase**
+  https://github.com/cosmtrek/mindwalk
+  Show HN tool that replays coding-agent sessions spatially over a 3D map of the codebase. Early, but it targets agent observability and auditability — a real gap in most agent workflows. Worth a look for anyone running unattended multi-agent coding sessions.
+- **Real users changed my SaaS roadmap faster than months of planning (Trothix)**
+  https://www.reddit.com/r/SaaS/comments/1uuc2se/real_users_changed_my_saas_roadmap_faster_than/
+  A legal-tech builder doing deterministic contract analysis reports that document classification fails more often than the parser itself, and that watching user behavior beat feature brainstorming. Small numbers (311 views, 30 completed analyses) but a concrete lesson for document-analysis pipelines: instrument classification accuracy before adding features.
+- **An Agent in 100 Lines of Lisp**
+  https://thebeach.dev/posts/lisp-agent/
+  Compact walkthrough showing a complete agent loop — model call, tool dispatch, iteration — fits in about 100 lines. A good demystifier and clean mental model for building minimal agents without heavyweight frameworks.
+- **Mesh LLM: distributed AI computing on iroh**
+  https://www.iroh.computer/blog/mesh-llm
+  The iroh team demonstrated LLM inference distributed across multiple machines over their p2p networking stack. Early signal for pooling heterogeneous home/office hardware to run bigger local models. No action now; watch the space.
+- **sqlite-utils 4.1**
+  https://simonwillison.net/2026/Jul/11/sqlite-utils/#atom-everything
+  Simon Willison's sqlite-utils 4.1 adds a --code option to insert/upsert: generate rows from an inline Python snippet or .py file instead of importing from a data file. Handy for one-liner ETL into SQLite databases.
+- **Ant – A JavaScript runtime and ecosystem**
+  https://antjs.org
+  Ant is a new JavaScript runtime with its own engine, plus a package manager, registry, hosting platform, and Electron-like desktop framework. Ambitious end-to-end alternative to Node/Bun stacks, but very early and unproven. Track; don't adopt.
+- **Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom**
+  https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom
+  Analysis of circular financing among Nvidia and GPU-cloud providers — Nvidia invests in customers who use the money to buy Nvidia hardware. If the credit structure unwinds, GPU cloud pricing and availability could shift. No action now, but a real cost-environment signal.
+
+## Full digest
+
+- [R] [lobsters] Madame Semver Will See You Now — https://nesbitt.io/2026/05/10/madame-semver-will-see-you-now.html — Humorous essay on semantic versioning culture. Entertaining, no action.
+- [R] [lobsters] gap: UI text diff — https://github.com/cdacamar/gap — Small open-source UI text diff tool. Potentially handy utility but thin announcement with no differentiating detail.
+- [P] [lobsters] An Agent in 100 Lines of Lisp — https://thebeach.dev/posts/lisp-agent/ — Compact walkthrough showing a complete agent loop — model call, tool dispatch, iteration — fits in about 100 lines. A good demystifier and clean mental model for building minimal agents without heavyweight frameworks.
+- [R] [lobsters] Computer Science Off Course - Programming as Theory Building — https://rss.com/podcasts/computer-science-off-course/2968986/ — Podcast episode discussing Naur's 'Programming as Theory Building'. Worthwhile idea but a podcast episode isn't actionable digest material.
+- [R] [lobsters] Ant, a lightweight JavaScript runtime (lobsters copy) — https://antjs.org/ — Duplicate of the HN Ant submission, which carries the monitor verdict. Rejected as the redundant copy.
+- [R] [lobsters] The accessible contrast ratio colour grid thing — https://beeps.website/blog/2026-07-09-accessible-contrast-ratio-colour-grid-thing/ — Blog post presenting a color grid for checking accessible contrast ratios. Handy micro-tool but thin; standard contrast checkers already cover this.
+- [R] [lobsters] RISCBoy RISC-V homebrew portable game console (lobsters copy) — https://github.com/Wren6991/RISCBoy — Duplicate of the HN RISCBoy submission. Hobby hardware project; neat but not relevant to solo-builder decisions either way.
+- [P] [hn-top] Mesh LLM: distributed AI computing on iroh — https://www.iroh.computer/blog/mesh-llm — The iroh team demonstrated LLM inference distributed across multiple machines over their p2p networking stack. Early signal for pooling heterogeneous home/office hardware to run bigger local models. No action now; watch the space.
+- [M] [hn-top] Ant – A JavaScript runtime and ecosystem — https://antjs.org — Ant is a new JavaScript runtime with its own engine, plus a package manager, registry, hosting platform, and Electron-like desktop framework. Ambitious end-to-end alternative to Node/Bun stacks, but very early and unproven. Track; don't adopt.
+- [R] [hn-top] RISCBoy is an open-source portable games console, designed from scratch — https://github.com/Wren6991/RISCBoy — Impressive open-source RISC-V handheld console hardware project. Hobby hardware with no bearing on software-business decisions.
+- [R] [hn-top] An agent in 100 lines of Lisp (HN copy) — https://thebeach.dev/posts/lisp-agent/ — Same article as the lobsters submission of 'An Agent in 100 Lines of Lisp'. Rejected as a duplicate; the lobsters copy carries the verdict.
+- [M] [hn-top] Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom — https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom — Analysis of circular financing among Nvidia and GPU-cloud providers — Nvidia invests in customers who use the money to buy Nvidia hardware. If the credit structure unwinds, GPU cloud pricing and availability could shift. No action now, but a real cost-environment signal.
+- [R] [hn-top] I Did Not Kill Stanley Lieber: How to Draw (With 9front) — https://triapul.cz/automa/i_did_not_kill_stanley_lieber — Art/culture piece about drawing on the 9front OS. Entertaining niche writing with no relevance to builder decisions.
+- [R] [hn-top] UPI: Anatomy of a Payment Transaction — https://timeseriesofindia.com/economy/reads/upi-architecture/ — Deep-dive into India's UPI payment architecture. Well-written systems analysis but not actionable for a US-focused solo builder.
+- [R] [hn-top] Under federal rule, colleges must leave grads better off or lose financial aid — https://www.npr.org/2026/06/30/nx-s1-5835631/turner-camhi-do-no-harm-college-loans — US higher-education policy news. Off-topic for a builder digest.
+- [P] [hn-top] We scaled PgBouncer to 4x throughput — https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres — ClickHouse engineering details how they pushed PgBouncer to 4x throughput for their managed Postgres offering. The pooler-tuning techniques are transferable to any Postgres deployment under connection pressure, including a single VPS. File for when pooling becomes the bottleneck.
+- [R] [hn-top] A pure scheme web programming tool — https://goeteia.dev — Scheme-based web programming tool. Niche language ecosystem, no relevance to current work.
+- [R] [hn-top] Billions of Sketches Reveal Hidden Cultural Variation in Human Concepts — https://arxiv.org/abs/2607.07267 — Research paper analyzing billions of drawings to show cultural variation in how humans represent concepts. Interesting science, zero near-term relevance to solo-builder decisions.
+- [R] [hn-top] Unexpected Solidlike Fracture in Simple Liquids — https://www.quantamagazine.org/we-know-simple-fluids-can-flow-turns-out-some-can-fracture-20260710/ — Quanta piece on physics research showing simple liquids can fracture like solids. Fascinating, entirely off-scope.
+- [P] [hn-top] Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio — https://mrzk.io/posts/qmlx-maximising-ai-psychosis-minmaxing-mac-studio/ — A builder tracked down three inference-stack bugs that made Qwen3.5-122B unstable on Mac Studio and now runs it as a daily driver. Both the specific fixes and the debugging approach are reusable for anyone running large local models on Apple silicon. Worth reading before investing further in local-first inference on the Mac.
+- [R] [hn-top] The early History of the Singular Value Decomposition (1993) — https://www.math.ucdavis.edu/~saito/courses/229A/stewart-svd.pdf — Historical math paper on the SVD. No relevance to current builder decisions.
+- [P] [hn-top] Prefer strict tables in SQLite — https://evanhahn.com/prefer-strict-tables-in-sqlite/ — SQLite's STRICT keyword makes tables enforce declared column types instead of silently coercing anything into any column. It is a one-keyword change at table creation that eliminates a whole class of silent data bugs. Adopt as the default for any new SQLite schema.
+- [R] [hn-top] Biff.graph: structure your Clojure codebase as a queryable graph — https://github.com/jacobobryant/biff/tree/v2.x/libs/graph — Clojure framework library for representing a codebase as a queryable graph. Conceptually adjacent to code-graph tooling but locked to the Clojure/Biff ecosystem. Not useful outside that niche.
+- [R] [hn-top] A Erlang style pure Scheme Webserver and further — https://igropyr.com — Erlang-style webserver written in Scheme. Same niche as the companion goeteia submission; no relevance.
+- [R] [hn-top] Show HN: Learn by rebuilding Redis, Git, a database from scratch — https://shipthatcode.com — Learning platform selling build-from-scratch courses for Redis, Git, and databases. Educational but promotional, and doesn't change any near-term decision.
+- [R] [hn-top] A dock that wakes up reliably — https://fabiensanglard.net/tb4/index.html — Fabien Sanglard's writeup on Thunderbolt dock wake reliability. Niche hardware troubleshooting; mildly interesting, no broad action.
+- [R] [hn-top] How Doctors die. It's not like the rest of us (2016) — https://archive.cancerworld.net/featured/how-doctors-die/ — Essay on end-of-life choices among physicians. Off-topic for a builder digest.
+- [R] [hn-top] Martha Lillard, last US polio patient using iron lung, dies at 78 — https://abcnews.com/US/wireStory/martha-lillard-us-polio-patient-iron-lung-dies-134668491 — Obituary news item. Off-topic for a builder digest.
+- [P] [simon-willison] sqlite-utils 4.1 — https://simonwillison.net/2026/Jul/11/sqlite-utils/#atom-everything — Simon Willison's sqlite-utils 4.1 adds a --code option to insert/upsert: generate rows from an inline Python snippet or .py file instead of importing from a data file. Handy for one-liner ETL into SQLite databases.
+- [P] [hn-show] Mindwalk – Replay coding-agent sessions on a 3D map of your codebase — https://github.com/cosmtrek/mindwalk — Show HN tool that replays coding-agent sessions spatially over a 3D map of the codebase. Early, but it targets agent observability and auditability — a real gap in most agent workflows. Worth a look for anyone running unattended multi-agent coding sessions.
+- [R] [reddit-saas] 24 hours after launching my first SaaS: 45 visitors, 58 page views — https://www.reddit.com/r/SaaS/comments/1uu9i4j/24_hours_after_launching_my_first_saas_45/ — First-launch diary with tiny numbers and no transferable lesson beyond 'keep shipping'. Thin.
+- [R] [reddit-saas] launched on Product hunt — https://www.reddit.com/r/SaaS/comments/1uua421/launched_on_product_hunt/ — Bare Product Hunt upvote solicitation with no content. Reject.
+- [R] [reddit-saas] I'm trying to validate a SaaS idea the right way instead of building first — https://www.reddit.com/r/SaaS/comments/1uuc8os/im_trying_to_validate_a_saas_idea_the_right_way/ — Pre-build validation survey solicitation. Sound instinct, but the post is a survey link with no findings yet. Nothing to act on.
+- [P] [reddit-saas] Real users changed my SaaS roadmap faster than months of planning (Trothix) — https://www.reddit.com/r/SaaS/comments/1uuc2se/real_users_changed_my_saas_roadmap_faster_than/ — A legal-tech builder doing deterministic contract analysis reports that document classification fails more often than the parser itself, and that watching user behavior beat feature brainstorming. Small numbers (311 views, 30 completed analyses) but a concrete lesson for document-analysis pipelines: instrument classification accuracy before adding features.
+- [R] [reddit-saas] If you're on product hunt, This is only for you — https://www.reddit.com/r/SaaS/comments/1uubmqa/if_youre_on_product_hunt_this_is_only_for_you/ — Product Hunt upvote-exchange solicitation. Engagement bait; reject.
+- [R] [reddit-saas] Send me your Search Console export and I'll tell you the 3 SEO moves I'd make next — https://www.reddit.com/r/SaaS/comments/1uuagsz/send_me_your_search_console_export_and_ill_tell/ — Lead-generation offer for a GSC-analysis tool. Promotional; no publishable signal.
+- [R] [reddit-saas] Stop waiting for a technical co-founder. I just launched a B2C tool by myself — https://www.reddit.com/r/SaaS/comments/1uua6zn/stop_waiting_for_a_technical_cofounder_i_just/ — Non-technical founder shipped a micro-SaaS with AI coding tools. Anecdote doubles as a promo for a specific AI builder; no new signal beyond the well-known 'AI lets non-coders ship' narrative.
+- [R] [reddit-saas] I built a staff availability tool and would love some honest feedback — https://www.reddit.com/r/SaaS/comments/1uua6e5/i_built_a_staff_availability_tool_and_would_love/ — Feedback request for a staff-presence tool with a modest positioning lesson (simplify the message). Too thin to publish.
+- [R] [reddit-saas] Launched my first product, are this good numbers for first days? — https://www.reddit.com/r/SaaS/comments/1uua0wp/launched_my_first_product_are_this_good_numbers/ — First-day launch numbers post (32 visitors, 6 signups). No transferable insight; thin.
+- [R] [reddit-saas] When you work on real problems, Grab 1,000 users recently — https://www.reddit.com/r/SaaS/comments/1uu9qe0/when_you_work_on_real_problems_grab_1000_users/ — Promotion for an 'invisible' tool to cheat proctored coding assessments. Ethically dubious product promo; reject.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
