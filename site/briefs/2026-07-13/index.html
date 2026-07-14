@@ -5,23 +5,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>July 13, 2026 — The Nightly Librarian</title>
-  <meta name="description" content="Tonight's brief tracks Tools Worth Testing, Data Infrastructure / Verification / Scraping, AI Operations / Agent Control, and Small Business Automation.">
+  <meta name="description" content="Tonight's brief tracks AI Operations / Agent Control and Tools Worth Testing.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/briefs/2026-07-13/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="July 13, 2026 | The Nightly Librarian">
-  <meta property="og:description" content="Tonight's brief tracks Tools Worth Testing, Data Infrastructure / Verification / Scraping, AI Operations / Agent Control, and Small Business Automation.">
+  <meta property="og:description" content="Tonight's brief tracks AI Operations / Agent Control and Tools Worth Testing.">
   <meta property="og:url" content="https://thenightlylibrarian.com/briefs/2026-07-13/">
-  <meta property="og:image" content="https://thenightlylibrarian.com/og/tools-worth-testing.png">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="July 13, 2026 | The Nightly Librarian">
-  <meta name="twitter:description" content="Tonight's brief tracks Tools Worth Testing, Data Infrastructure / Verification / Scraping, AI Operations / Agent Control, and Small Business Automation.">
-  <meta name="twitter:image" content="https://thenightlylibrarian.com/og/tools-worth-testing.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio","description":"Tonight's brief tracks Tools Worth Testing, Data Infrastructure / Verification / Scraping, AI Operations / Agent Control, and Small Business Automation. Synthesized Nightly Librarian run with 10 promoted item(s), 40 scored item(s), and 30 rejected item(s). The lead source signal is Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio: Three bug fixes made Qwen3.5-122B stable enough to be a daily-driver local model on a Mac Studio. The operator read is Directly relevant to running","url":"https://thenightlylibrarian.com/briefs/2026-07-13/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-07-13","dateModified":"2026-07-13"}</script>
+  <meta name="twitter:description" content="Tonight's brief tracks AI Operations / Agent Control and Tools Worth Testing.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"GhostLock, a stack-UAF that has existed in all Linux distributions for 15 years","description":"Tonight's brief tracks AI Operations / Agent Control and Tools Worth Testing. Synthesized Nightly Librarian run with 5 promoted item(s), 40 scored item(s), and 35 rejected item(s). The lead source signal is GhostLock, a stack-UAF that has existed in all Linux distributions for 15 years: NebuSec says GhostLock (CVE-2026-43499) affects every major Linux distribution since 2011 and can be turned into a 97% stable privilege escalation and container escape. The operator read is Decision-changing loca","url":"https://thenightlylibrarian.com/briefs/2026-07-13/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-07-13","dateModified":"2026-07-13"}</script>
   <link rel="stylesheet" href="/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
 </head>
@@ -42,21 +42,21 @@
   <main>
     <a class="back-link" href="/">All briefs</a>
     <h1>July 13, 2026</h1>
-    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span><span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span><span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span></div>
-    <p class="lead-summary" style="margin-top:0.85rem;">Directly relevant to running large local models on Mac (Ollama workflow); reproducible fixes.</p>
+    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span><span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span></div>
+    <p class="lead-summary" style="margin-top:0.85rem;">This is a decision-changing local privilege-escalation issue for anyone shipping Linux hosts or containers.</p>
     <h2>Worth mentioning</h2>
 
     <div class="item">
       <div class="item-row">
         <span class="item-num">1.</span>
         <div>
-          <div class="item-title"><a href="https://mrzk.io/posts/qmlx-maximising-ai-psychosis-minmaxing-mac-studio/" target="_blank" rel="noopener">Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio</a></div>
-          <div class="item-takeaway">Directly relevant to running large local models on Mac (Ollama workflow); reproducible fixes.</div>
-          <div class="item-facts"><div>Three bug fixes made Qwen3.5-122B stable enough to be a daily-driver local model on a Mac Studio.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Fixes may be specific to his exact hardware/stack version.</div>
+          <div class="item-title"><a href="https://nebusec.ai/research/ionstack-part-2/" target="_blank" rel="noopener">GhostLock, a stack-UAF that has existed in all Linux distributions for 15 years</a></div>
+          <div class="item-takeaway">This is a decision-changing local privilege-escalation issue for anyone shipping Linux hosts or containers.</div>
+          <div class="item-facts"><div>NebuSec says GhostLock (CVE-2026-43499) affects every major Linux distribution since 2011 and can be turned into a 97% stable privilege escalation and container escape.</div></div>
+
           <div class="item-meta">
-            <span><a href="https://mrzk.io/posts/qmlx-maximising-ai-psychosis-minmaxing-mac-studio/" target="_blank" rel="noopener">mrzk.io</a></span>
-            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
+            <span><a href="https://nebusec.ai/research/ionstack-part-2/" target="_blank" rel="noopener">nebusec.ai</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
             <span>2026-07-13</span>
           </div>
         </div>
@@ -67,27 +67,10 @@
       <div class="item-row">
         <span class="item-num">2.</span>
         <div>
-          <div class="item-title"><a href="https://evanhahn.com/prefer-strict-tables-in-sqlite/" target="_blank" rel="noopener">Prefer strict tables in SQLite</a></div>
-          <div class="item-takeaway">Broadly applicable, zero-cost practice change for the most widely used embedded DB.</div>
-          <div class="item-facts"><div>Using STRICT tables in SQLite enforces column types and prevents silent type-coercion bugs.</div></div>
+          <div class="item-title"><a href="https://github.com/cosmtrek/mindwalk" target="_blank" rel="noopener">Show HN: Mindwalk – Replay coding-agent sessions on a 3D map of your codebase</a></div>
+          <div class="item-takeaway">Useful if you review or debug coding-agent behavior and want a faster read on scope creep or verification gaps.</div>
+          <div class="item-facts"><div>The README says Mindwalk is a local Go binary that reads Claude Code and Codex session logs and visualizes search, read, edit, and verify activity on a repository map.</div></div>
 
-          <div class="item-meta">
-            <span><a href="https://evanhahn.com/prefer-strict-tables-in-sqlite/" target="_blank" rel="noopener">evanhahn.com</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
-            <span>2026-07-13</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">3.</span>
-        <div>
-          <div class="item-title"><a href="https://github.com/cosmtrek/mindwalk" target="_blank" rel="noopener">Mindwalk – Replay coding-agent sessions on a 3D map of your codebase</a></div>
-          <div class="item-takeaway">Agent-session observability is directly relevant to multi-agent workflows.</div>
-          <div class="item-facts"><div>Mindwalk replays coding-agent sessions as a visualization over a 3D map of your codebase.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Unclear which agent formats/harnesses it supports and how mature it is.</div>
           <div class="item-meta">
             <span><a href="https://github.com/cosmtrek/mindwalk" target="_blank" rel="noopener">github.com</a></span>
             <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
@@ -99,65 +82,14 @@
 
     <div class="item">
       <div class="item-row">
-        <span class="item-num">4.</span>
+        <span class="item-num">3.</span>
         <div>
-          <div class="item-title"><a href="https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres" target="_blank" rel="noopener">We scaled PgBouncer to 4x throughput</a></div>
-          <div class="item-takeaway">Transferable Postgres pooling knowledge for the Hetzner-hosted DB.</div>
-          <div class="item-facts"><div>ClickHouse scaled PgBouncer to 4x throughput for their managed Postgres service.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Techniques may assume traffic volumes far beyond a solo deployment's needs.</div>
+          <div class="item-title"><a href="https://buf.build/blog/protobuf-py" target="_blank" rel="noopener">Protobuf-py: Protobuf for Python, without compromises</a></div>
+          <div class="item-takeaway">Worth a look if Python protobuf ergonomics or generated code readability are a bottleneck in agent or backend tooling.</div>
+          <div class="item-facts"><div>Buf says protobuf-py passes the protobuf conformance suite across proto2, proto3, and editions, supports extensions and unknown fields, and runs on pure Python 3.10+.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Performance and ergonomics claims are vendor-stated; independent adoption signal is not visible yet.</div>
           <div class="item-meta">
-            <span><a href="https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres" target="_blank" rel="noopener">clickhouse.com</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
-            <span>2026-07-13</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">5.</span>
-        <div>
-          <div class="item-title"><a href="https://www.iroh.computer/blog/mesh-llm" target="_blank" rel="noopener">Mesh LLM: distributed AI computing on iroh</a></div>
-          <div class="item-takeaway">Relevant to local-model infrastructure direction.</div>
-          <div class="item-facts"><div>iroh demonstrated distributed LLM inference across machines over its p2p mesh stack.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Unclear real-world performance vs. single-machine inference.</div>
-          <div class="item-meta">
-            <span><a href="https://www.iroh.computer/blog/mesh-llm" target="_blank" rel="noopener">iroh.computer</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
-            <span>2026-07-13</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">6.</span>
-        <div>
-          <div class="item-title"><a href="https://thebeach.dev/posts/lisp-agent/" target="_blank" rel="noopener">An Agent in 100 Lines of Lisp</a></div>
-          <div class="item-takeaway">Reinforces that agent harnesses are simple loops; useful mental model for MCP/agent work.</div>
-          <div class="item-facts"><div>A complete working coding agent loop can be implemented in roughly 100 lines of Lisp.</div></div>
-
-          <div class="item-meta">
-            <span><a href="https://thebeach.dev/posts/lisp-agent/" target="_blank" rel="noopener">thebeach.dev</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-07-13</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">7.</span>
-        <div>
-          <div class="item-title"><a href="https://simonwillison.net/2026/Jul/11/sqlite-utils/" target="_blank" rel="noopener">sqlite-utils 4.1</a></div>
-          <div class="item-takeaway">Useful CLI ETL improvement in a widely used solo-dev tool.</div>
-          <div class="item-facts"><div>sqlite-utils 4.1 adds a --code option letting insert/upsert generate rows from inline Python code.</div></div>
-
-          <div class="item-meta">
-            <span><a href="https://simonwillison.net/2026/Jul/11/sqlite-utils/" target="_blank" rel="noopener">simonwillison.net</a></span>
+            <span><a href="https://buf.build/blog/protobuf-py" target="_blank" rel="noopener">buf.build</a></span>
             <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
             <span>2026-07-13</span>
           </div>
@@ -167,14 +99,14 @@
 
     <div class="item">
       <div class="item-row">
-        <span class="item-num">8.</span>
+        <span class="item-num">4.</span>
         <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1uuc2se/real_users_changed_my_saas_roadmap_faster_than/" target="_blank" rel="noopener">Real users changed my SaaS roadmap faster than months of planning (Trothix)</a></div>
-          <div class="item-takeaway">Directly analogous to ContractorVerify document pipelines.</div>
-          <div class="item-facts"><div>In a contract-analysis SaaS, document classification failed more often than parsing, redirecting the roadmap toward accuracy over features.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Single anecdote with very small usage numbers.</div>
+          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1uulws9/my_2_api_products_make_5kmonth_combined_what/" target="_blank" rel="noopener">My 2 API products make $5K/month combined. What actually grew them</a></div>
+          <div class="item-takeaway">Concrete acquisition tactics for developer APIs are more useful than generic growth advice, especially the LLM-surfaced competitor-page angle.</div>
+          <div class="item-facts"><div>The founder says SocialKit and PostPeer together make about $5K MRR, with SEO, tutorials, free tools, and competitor pages doing most of the acquisition work.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Reddit page did not load cleanly in the browse tool, so this relies on the fetched post body rather than a full live page read.</div>
           <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/SaaS/comments/1uuc2se/real_users_changed_my_saas_roadmap_faster_than/" target="_blank" rel="noopener">reddit.com</a></span>
+            <span><a href="https://www.reddit.com/r/SaaS/comments/1uulws9/my_2_api_products_make_5kmonth_combined_what/" target="_blank" rel="noopener">reddit.com</a></span>
             <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
             <span>2026-07-13</span>
           </div>
@@ -185,32 +117,15 @@
 
     <div class="item">
       <div class="item-row">
-        <span class="item-num">9.</span>
+        <span class="item-num">5.</span>
         <div>
-          <div class="item-title"><a href="https://antjs.org" target="_blank" rel="noopener">Ant – A JavaScript runtime and ecosystem</a></div>
-          <div class="item-takeaway">New-runtime signals occasionally matter; too early to act.</div>
-          <div class="item-facts"><div>Ant is a new JavaScript runtime and full ecosystem (registry, hosting, desktop framework) positioned as an end-to-end alternative stack.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Single-author ecosystem; longevity and compatibility unproven.</div>
+          <div class="item-title"><a href="https://projectdiscovery.io/blog/hacking-apple-with-sql-injection" target="_blank" rel="noopener">Hacking Apple - SQL Injection to Remote Code Execution — ProjectDiscovery Blog</a></div>
+          <div class="item-takeaway">Useful to monitor if you maintain legacy CMS estates or want a concrete example of finding exploitable sinks in older stacks.</div>
+          <div class="item-facts"><div>The post walks through a pre-auth SQL injection in Masa/Mura CMS, exploitation to RCE, and says Apple patched its affected portal within two hours of disclosure.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: The writeup is from May 8, 2024, so the vulnerability itself is not new; this is more useful as exploit-method reading than fresh incident news.</div>
           <div class="item-meta">
-            <span><a href="https://antjs.org" target="_blank" rel="noopener">antjs.org</a></span>
-            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
-            <span>2026-07-13</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">10.</span>
-        <div>
-          <div class="item-title"><a href="https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom" target="_blank" rel="noopener">Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom</a></div>
-          <div class="item-takeaway">Potential future GPU/cloud pricing instability affects AI cost planning.</div>
-          <div class="item-facts"><div>Nvidia's investments in CoreWeave and Nebius create circular financing that props up GPU demand.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Financial analysis from an investment site; thesis, not established fact.</div>
-          <div class="item-meta">
-            <span><a href="https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom" target="_blank" rel="noopener">io-fund.com</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
+            <span><a href="https://projectdiscovery.io/blog/hacking-apple-with-sql-injection" target="_blank" rel="noopener">projectdiscovery.io</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
             <span>2026-07-13</span>
           </div>
         </div>
@@ -219,46 +134,46 @@
     <details>
       <summary>40 researched links (full index)</summary>
       <div class="link-index">
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://mrzk.io/posts/qmlx-maximising-ai-psychosis-minmaxing-mac-studio/" target="_blank" rel="noopener">Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://evanhahn.com/prefer-strict-tables-in-sqlite/" target="_blank" rel="noopener">Prefer strict tables in SQLite</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/cosmtrek/mindwalk" target="_blank" rel="noopener">Mindwalk – Replay coding-agent sessions on a 3D map of your codebase</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres" target="_blank" rel="noopener">We scaled PgBouncer to 4x throughput</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.iroh.computer/blog/mesh-llm" target="_blank" rel="noopener">Mesh LLM: distributed AI computing on iroh</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://thebeach.dev/posts/lisp-agent/" target="_blank" rel="noopener">An Agent in 100 Lines of Lisp</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://simonwillison.net/2026/Jul/11/sqlite-utils/" target="_blank" rel="noopener">sqlite-utils 4.1</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/SaaS/comments/1uuc2se/real_users_changed_my_saas_roadmap_faster_than/" target="_blank" rel="noopener">Real users changed my SaaS roadmap faster than months of planning (Trothix)</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://antjs.org" target="_blank" rel="noopener">Ant – A JavaScript runtime and ecosystem</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom" target="_blank" rel="noopener">Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://thebeach.dev/posts/lisp-agent/" target="_blank" rel="noopener">An agent in 100 lines of Lisp (HN copy)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/Wren6991/RISCBoy" target="_blank" rel="noopener">RISCBoy RISC-V homebrew portable game console (lobsters copy)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://antjs.org/" target="_blank" rel="noopener">Ant, a lightweight JavaScript runtime (lobsters copy)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/jacobobryant/biff/tree/v2.x/libs/graph" target="_blank" rel="noopener">Biff.graph: structure your Clojure codebase as a queryable graph</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://triapul.cz/automa/i_did_not_kill_stanley_lieber" target="_blank" rel="noopener">I Did Not Kill Stanley Lieber: How to Draw (With 9front)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://arxiv.org/abs/2607.07267" target="_blank" rel="noopener">Billions of Sketches Reveal Hidden Cultural Variation in Human Concepts</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://shipthatcode.com" target="_blank" rel="noopener">Show HN: Learn by rebuilding Redis, Git, a database from scratch</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.math.ucdavis.edu/~saito/courses/229A/stewart-svd.pdf" target="_blank" rel="noopener">The early History of the Singular Value Decomposition (1993)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://timeseriesofindia.com/economy/reads/upi-architecture/" target="_blank" rel="noopener">UPI: Anatomy of a Payment Transaction</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/Wren6991/RISCBoy" target="_blank" rel="noopener">RISCBoy is an open-source portable games console, designed from scratch</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://archive.cancerworld.net/featured/how-doctors-die/" target="_blank" rel="noopener">How Doctors die. It's not like the rest of us (2016)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://abcnews.com/US/wireStory/martha-lillard-us-polio-patient-iron-lung-dies-134668491" target="_blank" rel="noopener">Martha Lillard, last US polio patient using iron lung, dies at 78</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://fabiensanglard.net/tb4/index.html" target="_blank" rel="noopener">A dock that wakes up reliably</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://goeteia.dev" target="_blank" rel="noopener">A pure scheme web programming tool</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://igropyr.com" target="_blank" rel="noopener">A Erlang style pure Scheme Webserver and further</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.quantamagazine.org/we-know-simple-fluids-can-flow-turns-out-some-can-fracture-20260710/" target="_blank" rel="noopener">Unexpected Solidlike Fracture in Simple Liquids</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.npr.org/2026/06/30/nx-s1-5835631/turner-camhi-do-no-harm-college-loans" target="_blank" rel="noopener">Under federal rule, colleges must leave grads better off or lose financial aid</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://nesbitt.io/2026/05/10/madame-semver-will-see-you-now.html" target="_blank" rel="noopener">Madame Semver Will See You Now</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://beeps.website/blog/2026-07-09-accessible-contrast-ratio-colour-grid-thing/" target="_blank" rel="noopener">The accessible contrast ratio colour grid thing</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/cdacamar/gap" target="_blank" rel="noopener">gap: UI text diff</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://rss.com/podcasts/computer-science-off-course/2968986/" target="_blank" rel="noopener">Computer Science Off Course - Programming as Theory Building</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uu9i4j/24_hours_after_launching_my_first_saas_45/" target="_blank" rel="noopener">24 hours after launching my first SaaS: 45 visitors, 58 page views</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uu9qe0/when_you_work_on_real_problems_grab_1000_users/" target="_blank" rel="noopener">When you work on real problems, Grab 1,000 users recently</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uua0wp/launched_my_first_product_are_this_good_numbers/" target="_blank" rel="noopener">Launched my first product, are this good numbers for first days?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uua421/launched_on_product_hunt/" target="_blank" rel="noopener">launched on Product hunt</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uua6e5/i_built_a_staff_availability_tool_and_would_love/" target="_blank" rel="noopener">I built a staff availability tool and would love some honest feedback</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uua6zn/stop_waiting_for_a_technical_cofounder_i_just/" target="_blank" rel="noopener">Stop waiting for a technical co-founder. I just launched a B2C tool by myself</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uuagsz/send_me_your_search_console_export_and_ill_tell/" target="_blank" rel="noopener">Send me your Search Console export and I'll tell you the 3 SEO moves I'd make next</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uubmqa/if_youre_on_product_hunt_this_is_only_for_you/" target="_blank" rel="noopener">If you're on product hunt, This is only for you</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uuc8os/im_trying_to_validate_a_saas_idea_the_right_way/" target="_blank" rel="noopener">I'm trying to validate a SaaS idea the right way instead of building first</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://nebusec.ai/research/ionstack-part-2/" target="_blank" rel="noopener">GhostLock, a stack-UAF that has existed in all Linux distributions for 15 years</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/cosmtrek/mindwalk" target="_blank" rel="noopener">Show HN: Mindwalk – Replay coding-agent sessions on a 3D map of your codebase</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://buf.build/blog/protobuf-py" target="_blank" rel="noopener">Protobuf-py: Protobuf for Python, without compromises</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/SaaS/comments/1uulws9/my_2_api_products_make_5kmonth_combined_what/" target="_blank" rel="noopener">My 2 API products make $5K/month combined. What actually grew them</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uu9fdj/landing_pages_should_be_more_interactive_check/" target="_blank" rel="noopener">Landing pages should be more interactive (check out the end)</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://entropicthoughts.com/sicp-2-4-data-directed-programming-in-haskell" target="_blank" rel="noopener">Data-directed programming in Haskell (SICP2.4.3)</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://projectdiscovery.io/blog/hacking-apple-with-sql-injection" target="_blank" rel="noopener">Hacking Apple - SQL Injection to Remote Code Execution — ProjectDiscovery Blog</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.youtube.com/watch?v=zUm5eW_XGMU" target="_blank" rel="noopener">Make your own Windows 98 OEM Install</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/" target="_blank" rel="noopener">Vint Cerf, a “father of the Internet”, is retiring</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://hlnet.notion.site/text-art-tools" target="_blank" rel="noopener">Text art tools</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://visitfaroeislands.com/en/plan-your-stay/getting-around/world-first-under-sea-roundabout" target="_blank" rel="noopener">Jellyfish Undersea Roundabout</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://studyfinds.com/modern-decor-may-be-straining-peoples-brains/" target="_blank" rel="noopener">Modern decor may be straining people's brains</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://my.uscap.org/uscap/program/S0tc675/index.cfm?pgid=5167&amp;sid=14770&amp;abid=51228" target="_blank" rel="noopener">Autopsy Study Finds Replicating SARS-CoV-2 in the Hearts of Long Covid</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://status.openai.com//incidents/01KXAVPTZ85KG478DP1YC0SV2V" target="_blank" rel="noopener">Elevated conversation error rates on ChatGPT for iOS</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/hasenj/go-shirei/" target="_blank" rel="noopener">Show HN: Shirei, cross-platform GUI framework in native Go</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/skorotkiewicz/earth-game" target="_blank" rel="noopener">Show HN: Earth Game – An offline CLI for turning life goals into quests</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uuybi9/celebrating_my_first_month_of_my_startup/" target="_blank" rel="noopener">Celebrating my first month of my startup!</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uuph5o/first_customer_first_lifetime_deal/" target="_blank" rel="noopener">First customer. First lifetime deal. 🚀</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uut6xa/you_can_still_beat_99_of_your_competitors_without/" target="_blank" rel="noopener">You can still beat 99% of your competitors without stunts or 996</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uv11f0/im_putting_together_a_focused_discord_server_for/" target="_blank" rel="noopener">I’m putting together a focused Discord server for people who are actively building or preparing to launch a SaaS product.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uuxr1x/idk_if_seo_is_worth_it_early_on_for_a_saas/" target="_blank" rel="noopener">idk if SEO is worth it early on for a SaaS</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uv2ods/need_advice_should_i_make_my_1_trial_free/" target="_blank" rel="noopener">Need advice: Should I make my $1 trial free?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uuui2x/45_years_and_one_big_pivot_later_i_got_my_first/" target="_blank" rel="noopener">4–5 years and one big pivot later, I got my First Paying Customer!</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uv2dyf/whats_the_earliest_signal_your_company_is_about/" target="_blank" rel="noopener">What's the earliest signal your company is about to lose revenue?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uv227n/first_6_months_dealing_with_chargebacks_on_my/" target="_blank" rel="noopener">First 6 months dealing with chargebacks on my SaaS, is any chargeback alerts system actually worth it?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uv489g/one_year_after_launch/" target="_blank" rel="noopener">One year after launch</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uuzq7g/how_i_found_a_niche_with_a_gap/" target="_blank" rel="noopener">How I found a niche with a gap</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uv3sce/repo_graveyard_vibe_coding_the_connection/" target="_blank" rel="noopener">🪦Repo Graveyard &amp; Vibe Coding: The connection</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uv2xc9/appreciate_the_feedback_good_or_bad_it_will_help/" target="_blank" rel="noopener">Appreciate the feedback - good or bad, it will help</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uv2qta/80_of_your_new_accounts_will_never_see_value/" target="_blank" rel="noopener">80% of your new accounts will never see value</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uuxu0h/what_building_a_saas_solo_actually_looks_like_the/" target="_blank" rel="noopener">What building a SaaS solo actually looks like (the part nobody talks about)</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uutf40/finally_got_a_paying_customer/" target="_blank" rel="noopener">Finally Got a Paying Customer!</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uv1mi0/building_something_cool_raspberry_pi_picoclaw/" target="_blank" rel="noopener">Building something Cool Raspberry Pi + picoclaw</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uv54n9/task_failed_successfully/" target="_blank" rel="noopener">Task failed successfully.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uv5288/looking_for_advice_on_first_steps_to_marketing_a/" target="_blank" rel="noopener">Looking for advice on first steps to marketing a product I have built!</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uv4zad/is_it_ok_to_publish_your_saas_without_custom/" target="_blank" rel="noopener">Is it ok to publish your SaaS without custom domain?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uv4yqs/building_an_ai_product/" target="_blank" rel="noopener">Building an AI product?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uv4uy0/practical_payments_platform_suggestion/" target="_blank" rel="noopener">Practical payments platform suggestion!</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.65" target="_blank" rel="noopener">n8n@1.123.65</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.84" target="_blank" rel="noopener">v16.3.0-canary.84</a></div>
       </div>
     </details>
     <div class="subscribe-strip">
