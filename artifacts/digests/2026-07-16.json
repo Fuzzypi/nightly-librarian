@@ -1,339 +1,16 @@
 {
   "date": "2026-07-16",
-  "generated_at": "2026-07-16T06:16:38.309Z",
+  "generated_at": "2026-07-16T11:08:04.209Z",
   "imported_from": {
     "importer_version": "digest-import/v1",
     "source_artifact": "artifacts/synthesized/2026-07-16.json",
-    "source_sha256": "1b5743d44fb3f76dea8a5f16475e9b120ade3af54a44cd03f7fc17c56423c581"
+    "source_sha256": "f1dd46c47ec0e27160983a3a8b84b83075e2cd61c67afb1347dca6a0ee8123a6"
   },
   "items": [
     {
-      "builder_takeaway": "A canary release of Next.js with only miscellaneous changes: CLI spinner tweaks, doc updates, a DevTools request panel item, and dependency bumps (React, swc 73). No user-facing feature changes.",
-      "category": "Tools Worth Testing",
-      "id": "c7c8e284-df86-41c9-8258-6f8e82564c5f",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "Next.js v16.3.0-canary.86 ships miscellaneous internal changes, docs, and dependency bumps with no new user-facing features."
-      ],
-      "title": "Next.js v16.3.0-canary.86",
-      "uncertainty": "",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.86"
-    },
-    {
-      "builder_takeaway": "Directly relevant to building agents/MCP servers with persistent memory, which is core to the owner's work.",
-      "category": "AI Operations / Agent Control",
-      "id": "4f33440b-da98-4663-9df7-a778f3628a31",
-      "importance": "supporting",
-      "labels": [
-        "builder_reported",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "ayush.digital",
-      "source_facts": [
-        "A demonstrated attack uses Claude's memory feature to leak user data via injected instructions that persist across sessions."
-      ],
-      "title": "I tricked Claude into leaking your deepest, darkest secrets (The Memory Heist)",
-      "uncertainty": "Exact reproducibility and current mitigations by Anthropic are unclear from the post alone.",
-      "url": "https://www.ayush.digital/blog/the-memory-heist"
-    },
-    {
-      "builder_takeaway": "A deep, nostalgic dissection of the computer systems depicted in Jurassic Park. Entertaining but with no practical takeaway for a solo builder.",
-      "category": "Tools Worth Testing",
-      "id": "e12c3787-aef2-4078-a0d3-04c1ca0b3b07",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "fabiensanglard.net",
-      "source_facts": [
-        "A detailed retrospective catalogues the real and fictional computer systems shown in Jurassic Park."
-      ],
-      "title": "Jurassic Park computers in excruciating detail",
-      "uncertainty": "",
-      "url": "https://fabiensanglard.net/jurrasic_park_computers/index.html"
-    },
-    {
-      "builder_takeaway": "The Vancouver PD site adds a 'Quick Escape' button that navigates away and scrubs the page from browser history for at-risk visitors. An interesting privacy/safety UX pattern but not a decision-driving item for most solo builders.",
-      "category": "Tools Worth Testing",
-      "id": "9d8aeb76-443d-4f8b-9388-3c0dd51dfa72",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "vpd.ca",
-      "source_facts": [
-        "The Vancouver PD website implements a Quick Escape button that redirects and removes itself from browser history."
-      ],
-      "title": "Vancouver PD website features a Quick Escape button that wipes itself from history",
-      "uncertainty": "",
-      "url": "https://vpd.ca/"
-    },
-    {
-      "builder_takeaway": "Credible privilege-escalation vulnerability with an immediate patch action; the owner runs SSH-accessed VPS infrastructure.",
-      "category": "AI Operations / Agent Control",
-      "id": "5b5103b5-215b-4587-9896-58039b6534e4",
-      "importance": "lead",
-      "labels": [
-        "vendor_claim",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "tailscale.com",
-      "source_facts": [
-        "Tailscale disclosed a vulnerability (TS-2026-009) where insecure argument handling in Tailscale SSH permitted root access."
-      ],
-      "title": "TS-2026-009: Insecure argument handling in Tailscale SSH permitted root access",
-      "uncertainty": "Whether the owner's infrastructure uses Tailscale SSH specifically.",
-      "url": "https://tailscale.com/security-bulletins"
-    },
-    {
-      "builder_takeaway": "On-device large models are relevant to solo builders who run local inference (e.g., Ollama).",
-      "category": "Model + API Changes",
-      "id": "cd2a9b4b-b4c5-4d0c-971a-3781396a8968",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "prismml.com",
-      "source_facts": [
-        "PrismML claims Bonsai 27B is a 27B-class model capable of running on a phone."
-      ],
-      "title": "Bonsai 27B: a 27B-class model that runs on a phone",
-      "uncertainty": "Real-world quality, memory footprint, and speed on-device are unverified.",
-      "url": "https://prismml.com/news/bonsai-27b"
-    },
-    {
-      "builder_takeaway": "Relevant framing for the owner's multi-agent development workflows.",
-      "category": "AI Operations / Agent Control",
-      "id": "cfbe1aa0-429a-4b5c-8159-235610a1a250",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "lucumr.pocoo.org",
-      "source_facts": [
-        "Armin Ronacher argues that AI agents erode the friction that historically maintained a team's shared understanding of a codebase."
-      ],
-      "title": "The Tower Keeps Rising",
-      "uncertainty": "It is an opinion essay, not an empirical study.",
-      "url": "https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/"
-    },
-    {
-      "builder_takeaway": "Broadly useful default that reduces supply-chain risk for any repo using Dependabot.",
-      "category": "Model + API Changes",
-      "id": "9a256fb0-437e-41f9-ae4f-acc68a35ecb9",
-      "importance": "supporting",
-      "labels": [
-        "vendor_claim",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "github.blog",
-      "source_facts": [
-        "Dependabot now waits at least three days after a release before opening a version-update PR, by default and with no configuration."
-      ],
-      "title": "GitHub Dependabot introduces a default 3-day package cooldown",
-      "uncertainty": "",
-      "url": "https://github.blog/changelog/2026-07-14-dependabot-version-updates-introduce-default-package-cooldown/"
-    },
-    {
-      "builder_takeaway": "Simon Willison created a custom animated 'pet' for Codex Desktop — a pelican on a bicycle that reports on Codex task progress. Fun, but purely cosmetic with no practical leverage.",
-      "category": "Tools Worth Testing",
-      "id": "a09421d4-4c54-43cc-a53c-ab3510499c51",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "Simon Willison built pedalican, a custom animated desktop pet for Codex Desktop that surfaces task updates."
-      ],
-      "title": "simonw/pedalican",
-      "uncertainty": "",
-      "url": "https://simonwillison.net/2026/Jul/14/pedalican/"
-    },
-    {
-      "builder_takeaway": "Concrete cost/performance evidence for SQLite in production, relevant to cost-conscious solo VPS operators.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "82b530e1-1057-4e1a-b5bf-50ac15689bcf",
-      "importance": "supporting",
-      "labels": [
-        "builder_reported",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "Lobsters migrated from MariaDB to SQLite in production and reports lower CPU, lower memory, and about half the VPS cost."
-      ],
-      "title": "lobste.rs is now running on SQLite",
-      "uncertainty": "Their workload characteristics may not match yours (write concurrency in particular).",
-      "url": "https://simonwillison.net/2026/Jul/14/lobsters-sqlite/"
-    },
-    {
-      "builder_takeaway": "Simon Willison quotes Armin Ronacher's essay 'The Tower Keeps Rising' about agents eroding a project's shared understanding. Duplicate of the original essay already selected in this run.",
-      "category": "AI Operations / Agent Control",
-      "id": "197df341-34c2-4716-9d57-f9893e9128f6",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "Simon Willison quotes Armin Ronacher's argument that AI agents erode a project's shared understanding."
-      ],
-      "title": "Quoting Armin Ronacher (The Tower Keeps Rising)",
-      "uncertainty": "",
-      "url": "https://simonwillison.net/2026/Jul/14/armin-ronacher/"
-    },
-    {
-      "builder_takeaway": "A minor Datasette pre-release with performance and documentation improvements to the permissions system, plus a reverted cosmetic API change that had broken plugin test suites. Routine maintenance with no significant new capability.",
-      "category": "Tools Worth Testing",
-      "id": "5d3dc1a0-bb4f-47c7-89fc-e65d73ff1a48",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "Datasette 1.0a37 is a minor release with permissions performance/docs improvements and a reverted cosmetic API change."
-      ],
-      "title": "datasette 1.0a37",
-      "uncertainty": "",
-      "url": "https://simonwillison.net/2026/Jul/14/datasette/"
-    },
-    {
-      "builder_takeaway": "Xe Iaso warns about the security and surveillance behavior of smart TVs and appliances and recommends auditing what they phone home. Sensible consumer-security advice but with limited relevance to building software.",
-      "category": "AI Operations / Agent Control",
-      "id": "f39b57f0-92cd-4ce8-a71b-084423dabf27",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "xeiaso.net",
-      "source_facts": [
-        "Smart TVs and appliances exhibit concerning surveillance behavior and should be audited or network-restricted."
-      ],
-      "title": "You should probably check on your smart appliances",
-      "uncertainty": "",
-      "url": "https://xeiaso.net/notes/2026/check-your-smart-tv/"
-    },
-    {
-      "builder_takeaway": "A Rust crate that helps generate QR codes while avoiding patterns that resemble a swastika. A niche novelty release with minimal practical signal.",
-      "category": "Tools Worth Testing",
-      "id": "26e547b0-052f-4581-893f-50bf31eb5b5b",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "crates.io",
-      "source_facts": [
-        "qr-swastika-avoider v0.1.0 is a Rust crate that avoids generating QR codes resembling a swastika."
-      ],
-      "title": "qr-swastika-avoider v0.1.0",
-      "uncertainty": "",
-      "url": "https://crates.io/crates/qr-swastika-avoider"
-    },
-    {
-      "builder_takeaway": "Useful everyday utility for the owner, who works on a Mac.",
-      "category": "Tools Worth Testing",
-      "id": "881518b6-1768-42cb-9b6a-d667b95f49c7",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "whatcable is an open-source macOS menu-bar app that reports the real capabilities of each connected USB-C cable."
-      ],
-      "title": "whatcable: a macOS menu-bar app for what each USB-C cable can do",
-      "uncertainty": "",
-      "url": "https://github.com/darrylmorley/whatcable"
-    },
-    {
-      "builder_takeaway": "Steve Klabnik writes a long explainer on Decentralized Identifiers (DIDs), their design, and trade-offs. Educational but niche, with no near-term decision for most solo builders.",
-      "category": "Tools Worth Testing",
-      "id": "b1dde4e7-e60e-408d-9111-d335a3e2d406",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "steveklabnik.com",
-      "source_facts": [
-        "Steve Klabnik provides a detailed explainer on Decentralized Identifiers (DIDs) and their trade-offs."
-      ],
-      "title": "Too many words about DIDs",
-      "uncertainty": "",
-      "url": "https://steveklabnik.com/writing/too-many-words-about-dids/"
-    },
-    {
-      "builder_takeaway": "Reproducible performance technique worth bookmarking for hot code paths.",
-      "category": "Tools Worth Testing",
-      "id": "8a79d479-233d-479e-bea7-11db7c4e9948",
-      "importance": "archive-only",
-      "labels": [
-        "reproducible",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "pythonspeed.com",
-      "source_facts": [
-        "A branchless binary search using mechanical-sympathy techniques can run roughly 6x faster than a naive implementation."
-      ],
-      "title": "6x faster binary search: from compiled code to mechanical sympathy",
-      "uncertainty": "Gains depend heavily on data size, hardware, and access patterns.",
-      "url": "https://pythonspeed.com/articles/branchless-binary-search/"
-    },
-    {
-      "builder_takeaway": "Early signal for cross-language code sharing, potentially useful for future multi-stack work.",
-      "category": "Tools Worth Testing",
-      "id": "066cc6a2-3a29-42a2-bcae-a034f2266d0a",
+      "builder_takeaway": "Weak but relevant signal that AI discovery could matter for distribution positioning.",
+      "category": "Small Business Automation",
+      "id": "75afc120-d066-4502-a614-a41949b0aba8",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -341,18 +18,759 @@
       ],
       "product_relevance": [],
       "published_at": "2026-07-16T00:00:00.000Z",
-      "source": "temperlang.dev",
+      "source": "reddit.com",
       "source_facts": [
-        "Temper is a new language designed to compile shared logic to multiple target languages."
+        "Reddit discussion suggests founders are checking ChatGPT/Perplexity for SaaS discovery before search, but this is still anecdotal."
       ],
-      "title": "Temper Language",
-      "uncertainty": "Maturity, ecosystem, and real-world adoption are unproven.",
-      "url": "https://temperlang.dev/"
+      "title": "Are people actually finding SaaS tools through AI now?",
+      "uncertainty": "Direct page access hit Reddit network blocking in browse; assessment relies on the feed excerpt plus blocked-page note.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uxrsiw/are_people_actually_finding_saas_tools_through_ai/"
+    },
+    {
+      "builder_takeaway": "Launched my little pdf translation tool a week ago. today someone subscribed, $12/mo. first money the thing has ever made ! kinda cant be…",
+      "category": "Tools Worth Testing",
+      "id": "8f5015a5-4303-421e-bb4f-aad3351d42b6",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Launched my little pdf translation tool a week ago. today someone subscribed, $12/mo. first money the thing has ever made ! kinda cant be…"
+      ],
+      "title": "got my first paying customer today !!",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1ux5cge/got_my_first_paying_customer_today/"
+    },
+    {
+      "builder_takeaway": "I run a profitable subscription app doing around $5K/month and want to test affiliate marketing. Is that enough scale to make an affiliat…",
+      "category": "Tools Worth Testing",
+      "id": "e8ddfd1e-bb6a-42ef-a4f1-d32dddd93b93",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I run a profitable subscription app doing around $5K/month and want to test affiliate marketing. Is that enough scale to make an affiliat…"
+      ],
+      "title": "Can affiliate marketing work for a $5K/month SaaS?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uxuwab/can_affiliate_marketing_work_for_a_5kmonth_saas/"
+    },
+    {
+      "builder_takeaway": "Anecdotal but directionally relevant if AI keeps eroding narrow SaaS add-ons.",
+      "category": "Small Business Automation",
+      "id": "f5aefe23-ed67-4df7-92d1-f60b05cf14e5",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A Shopify operator says AI let them replace a stack of paid apps with a stitched-together in-house workflow, a weak signal against small app bundles."
+      ],
+      "title": "I stopped paying $100+/month in Shopify apps and built my own \"Frankenstein\" with AI. I think SaaS companies are about to have a real problem.",
+      "uncertainty": "Reddit page was blocked during direct browse, so evidence remains anecdotal and incomplete.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uxseg0/i_stopped_paying_100month_in_shopify_apps_and/"
+    },
+    {
+      "builder_takeaway": "As soon as I got my first sign ups I was hooked; refreshing my dashboards is now like an addiction. I can barely focus on my real day job…",
+      "category": "Tools Worth Testing",
+      "id": "2c171972-45f6-42be-a57c-3e937a8e4dd0",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "As soon as I got my first sign ups I was hooked; refreshing my dashboards is now like an addiction. I can barely focus on my real day job…"
+      ],
+      "title": "I am becoming obsessed with growth",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uxoixx/i_am_becoming_obsessed_with_growth/"
+    },
+    {
+      "builder_takeaway": "Stripe isn’t available where I’m from. Is there any good payment gateway alternatives for a sass? submitted by /u/rayanka420 [link] [comm…",
+      "category": "Small Business Automation",
+      "id": "68c94588-f0b7-46c0-941d-083dcf9782f6",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Stripe isn’t available where I’m from. Is there any good payment gateway alternatives for a sass? submitted by /u/rayanka420 [link] [comm…"
+      ],
+      "title": "Stripe alternatives",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uxugkd/stripe_alternatives/"
+    },
+    {
+      "builder_takeaway": "Hey, Over the last few weeks I’ve been building modern landing pages and waitlists using Framer, focused specifically on SaaS and solo fo…",
+      "category": "Tools Worth Testing",
+      "id": "d7ce6d4b-1dde-4465-b503-04f8cbc9acf7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Hey, Over the last few weeks I’ve been building modern landing pages and waitlists using Framer, focused specifically on SaaS and solo fo…"
+      ],
+      "title": "Framer Modern landing page + waitlist first 3 for free",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uxtmuj/framer_modern_landing_page_waitlist_first_3_for/"
+    },
+    {
+      "builder_takeaway": "submitted by /u/daddieslittleson [link] [comments]",
+      "category": "Tools Worth Testing",
+      "id": "1f6bafd0-6ab3-42f5-bedf-6df087e88480",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "submitted by /u/daddieslittleson [link] [comments]"
+      ],
+      "title": "Developers, what's your starting point for a new project? • Backend first • Frontend first",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1ux5fkq/developers_whats_your_starting_point_for_a_new/"
+    },
+    {
+      "builder_takeaway": "I'm one of the early team members at a startup that launched about 3 months ago. We're building a platform for marketers that combines ma…",
+      "category": "Tools Worth Testing",
+      "id": "5552649f-1fa8-49b5-8114-a4176063b375",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I'm one of the early team members at a startup that launched about 3 months ago. We're building a platform for marketers that combines ma…"
+      ],
+      "title": "How often should i try growth experiments with my startup (early-stage)",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uxswgk/how_often_should_i_try_growth_experiments_with_my/"
+    },
+    {
+      "builder_takeaway": "How do you guys collect feedbacks for the services you provide to your users or how do you track what features are being requested by you…",
+      "category": "Tools Worth Testing",
+      "id": "cdfc9932-3394-4c0b-ae15-2601d8720751",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "How do you guys collect feedbacks for the services you provide to your users or how do you track what features are being requested by you…"
+      ],
+      "title": "Service Feedback Collection",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uxwb5b/service_feedback_collection/"
+    },
+    {
+      "builder_takeaway": "Manual feedback triage is a massive time sink when you start scaling, and copy-pasting entries into spreadsheets gets exhausting fast. To…",
+      "category": "Tools Worth Testing",
+      "id": "ff14846d-46c1-4ce0-83d4-7f0d370bd93d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Manual feedback triage is a massive time sink when you start scaling, and copy-pasting entries into spreadsheets gets exhausting fast. To…"
+      ],
+      "title": "How I built an autopilot system to route and tag scaling customer feedback (using n8n & AI)",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uxw0pc/how_i_built_an_autopilot_system_to_route_and_tag/"
+    },
+    {
+      "builder_takeaway": "Howdy! I am a trader and need some help automating my process, I am looking for a coder or a software engineer that can assist me in impl…",
+      "category": "Tools Worth Testing",
+      "id": "a4dbdf91-9f8f-4f37-8c23-469fa3bacddf",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Howdy! I am a trader and need some help automating my process, I am looking for a coder or a software engineer that can assist me in impl…"
+      ],
+      "title": "Looking For Help",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uxw0nn/looking_for_help/"
+    },
+    {
+      "builder_takeaway": "submitted by /u/Southern_Account_265 [link] [comments]",
+      "category": "Tools Worth Testing",
+      "id": "d2801888-8f61-4d38-8ee2-8015b1ed4eb0",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "submitted by /u/Southern_Account_265 [link] [comments]"
+      ],
+      "title": "I’m gonna buy something for my mom today 😭💯",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1uxvzdi/im_gonna_buy_something_for_my_mom_today/"
+    },
+    {
+      "builder_takeaway": "Thinky's first full LLM release is a banger and bonus: it's open weights!",
+      "category": "Model + API Changes",
+      "id": "5e042bb0-3bd6-4324-8520-bf8ded274de5",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "latent.space",
+      "source_facts": [
+        "Thinky's first full LLM release is a banger and bonus: it's open weights!"
+      ],
+      "title": "[AINews] Thinky's Inkling: 975B-A41B multimodal, new best American Apache 2.0 open model (with Inkling-Small, 276B-A12B)",
+      "uncertainty": "",
+      "url": "https://www.latent.space/p/ainews-thinkys-inkling-975b-a41b"
+    },
+    {
+      "builder_takeaway": "Speechify on Vercel 500,000+ pages served across 40+ languages Cut costs 50% by auto-scaling with Fluid compute Zero user impact on bad d…",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "be3a5608-e936-4e15-b46f-3338a0507b23",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Speechify on Vercel 500,000+ pages served across 40+ languages Cut costs 50% by auto-scaling with Fluid compute Zero user impact on bad d…"
+      ],
+      "title": "How Speechify serves 500,000 dynamic pages to 60 million users on Vercel",
+      "uncertainty": "",
+      "url": "https://vercel.com/blog/how-speechify-serves-50000-dynamic-pages-to-60-million-users-on-vercel"
+    },
+    {
+      "builder_takeaway": "Cuts secret sprawl in agent workflows and changes how to wire GitHub auth on Vercel.",
+      "category": "AI Operations / Agent Control",
+      "id": "2149c029-593c-404c-91a9-d1ce871b0c97",
+      "importance": "lead",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "GitHub Tools can now mint short-lived scoped GitHub tokens through Vercel Connect instead of storing PATs."
+      ],
+      "title": "Vercel Connect support in GitHub Tools",
+      "uncertainty": "Vendor changelog; feature claims not independently tested in this run.",
+      "url": "https://vercel.com/changelog/vercel-connect-support-in-github-tools"
+    },
+    {
+      "builder_takeaway": "Relevant for CI and agent automation that relied on implicit team selection.",
+      "category": "AI Operations / Agent Control",
+      "id": "7353df0b-f879-4f25-8cd4-abfb6096371b",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel CLI v55 makes project linking team-explicit in non-interactive flows and fails fast when scope is missing."
+      ],
+      "title": "Faster, predictable project linking in the Vercel CLI",
+      "uncertainty": "Vendor changelog; impact depends on whether your scripts relied on implicit scope selection.",
+      "url": "https://vercel.com/changelog/faster-predictable-project-linking-in-the-vercel-cli"
+    },
+    {
+      "builder_takeaway": "is now available on AI Gateway. Inkling from Thinking Machines Inkling is a broad generalist model, trained across agentic, reasoning, co…",
+      "category": "Model + API Changes",
+      "id": "07443935-585a-43de-a437-2389d1eebc5f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "is now available on AI Gateway. Inkling from Thinking Machines Inkling is a broad generalist model, trained across agentic, reasoning, co…"
+      ],
+      "title": "Inkling from Thinking Machines is now available on AI Gateway",
+      "uncertainty": "",
+      "url": "https://vercel.com/changelog/inkling-from-thinking-machines-is-now-available-on-ai-gateway"
+    },
+    {
+      "builder_takeaway": "The trace viewer for now has a minimap that shows the entire run in one view. Vercel Workflows Drag the viewport to pan, resize it to zoo…",
+      "category": "AI Operations / Agent Control",
+      "id": "df5833f5-7f20-4b3a-812d-e2815935c30d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "The trace viewer for now has a minimap that shows the entire run in one view. Vercel Workflows Drag the viewport to pan, resize it to zoo…"
+      ],
+      "title": "Vercel Workflows trace viewer now has a minimap",
+      "uncertainty": "",
+      "url": "https://vercel.com/changelog/vercel-workflows-trace-viewer-now-has-a-minimap"
+    },
+    {
+      "builder_takeaway": "You can now send Discord bot messages with , an opt-in layout system that treats text, images, files, and buttons as flexible components…",
+      "category": "AI Operations / Agent Control",
+      "id": "e55ddf14-d30b-40a3-a007-c487a530469d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "You can now send Discord bot messages with , an opt-in layout system that treats text, images, files, and buttons as flexible components…"
+      ],
+      "title": "Chat SDK adds Discord Components V2 support",
+      "uncertainty": "",
+      "url": "https://vercel.com/changelog/chat-sdk-adds-discord-components-v2-support"
+    },
+    {
+      "builder_takeaway": "Potentially useful for custom reporting, but stale relative to today and not a fresh morning-memo development.",
+      "category": "Model + API Changes",
+      "id": "d0095567-58e9-43a1-9e26-0072f576fe68",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel’s Web Analytics API exposes aggregated visits, visitors, and custom events; useful, but the changelog entry is from May 18, 2026."
+      ],
+      "title": "Public Web Analytics API now available",
+      "uncertainty": "Surfaced in today’s claim despite the changelog date being May 18, 2026.",
+      "url": "https://vercel.com/changelog/web-analytics-api"
+    },
+    {
+      "builder_takeaway": "### Misc Changes - [turbopack] Generate component chunks for each merged group to increase cache hits: #95261 - Exclude stale under 5 min…",
+      "category": "Tools Worth Testing",
+      "id": "25b33d45-8637-4184-916a-d29821da5970",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "### Misc Changes - [turbopack] Generate component chunks for each merged group to increase cache hits: #95261 - Exclude stale under 5 min…"
+      ],
+      "title": "v16.3.0-canary.87",
+      "uncertainty": "",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.87"
+    },
+    {
+      "builder_takeaway": "Pro growth, Business churn, and a GTM engineering focus",
+      "category": "Small Business Automation",
+      "id": "14480b90-7e3e-4044-9e28-b740a24dadfc",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "blog.val.town",
+      "source_facts": [
+        "Pro growth, Business churn, and a GTM engineering focus"
+      ],
+      "title": "Investor Update – June 2026",
+      "uncertainty": "",
+      "url": "https://blog.val.town/june-2026"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "85103965-a2ec-4d22-990f-2044f8cfd3ac",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "mort.coffee",
+      "source_facts": [
+        "Comments"
+      ],
+      "title": "SQLite should have (Rust-style) editions",
+      "uncertainty": "",
+      "url": "https://mort.coffee/home/sqlite-editions/"
+    },
+    {
+      "builder_takeaway": "Kernel-adjacent stance on LLM use could matter culturally, but there was not enough readable source material to score it higher.",
+      "category": "AI Operations / Agent Control",
+      "id": "a081d590-1a9b-4322-9893-3a4c0c30b301",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "lore.kernel.org",
+      "source_facts": [
+        "The linked kernel thread was blocked by Anubis during direct browse, so this remains only a title-level signal about Linus discussing LLM usage."
+      ],
+      "title": "Linus Torvalds on LLM usage in kernel development",
+      "uncertainty": "Direct source access failed behind Anubis; no reliable content beyond the title and aggregator link.",
+      "url": "https://lore.kernel.org/linux-media/CAHk-=wi4zC+Ze8e+p3tMv8TtG_80KzsZ1syL9anBtmEh5Z40vg@mail.gmail.com/"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "2c39b9e0-d889-44ac-b2b3-af87030049c7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "crowdhailer.me",
+      "source_facts": [
+        "Comments"
+      ],
+      "title": "Abstracting effects with continuations",
+      "uncertainty": "",
+      "url": "https://crowdhailer.me/2026-07-15/abstracting-effects-with-continuations/"
+    },
+    {
+      "builder_takeaway": "Direct performance guardrail idea for Rails/SQLite stacks with low implementation overhead.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "a36f64b1-1038-4c74-aa6d-acc431abfd2a",
+      "importance": "supporting",
+      "labels": [
+        "reproducible",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "tenderlovemaking.com",
+      "source_facts": [
+        "Shows how to detect SQLite full table scans after execution via prepared-statement stats, making test-time guardrails plausible."
+      ],
+      "title": "Detecting Full Table Scans With SQLite",
+      "uncertainty": "Single-post implementation note; no repo/package shipped here.",
+      "url": "https://tenderlovemaking.com/2026/07/15/detecting-full-table-scans-with-sqlite/"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "AI Operations / Agent Control",
+      "id": "6fea3d04-e62e-40d9-86bc-5c5165726d60",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "lucumr.pocoo.org",
+      "source_facts": [
+        "Comments"
+      ],
+      "title": "The Tower Keeps Rising",
+      "uncertainty": "",
+      "url": "https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "b54923c0-eefa-4a1f-bb5c-083c4411d7d8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "phoronix.com",
+      "source_facts": [
+        "Comments"
+      ],
+      "title": "FreeBSD 16 Retires The Last Of Its GPL Code From Its Base System",
+      "uncertainty": "",
+      "url": "https://www.phoronix.com/news/FreeBSD-16-Goes-GPL-Free"
+    },
+    {
+      "builder_takeaway": "Serious privacy/security implication for Windows users, but the reporting path is secondary and some telemetry details remain unclear.",
+      "category": "AI Operations / Agent Control",
+      "id": "95e6c92c-5634-44ed-a29e-d72207d115af",
+      "importance": "supporting",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "ghacks.net",
+      "source_facts": [
+        "A ghacks report says Windows installs tied to Microsoft Accounts carry a persistent GDID that aided FBI tracking across changing IPs and VPNs."
+      ],
+      "title": "Microsoft Confirms Windows GDID Device Identifier That Cannot Be Disabled, Documented in FBI Case Filing",
+      "uncertainty": "Secondary report based on a federal complaint and scattered Microsoft references; exact URL-level telemetry mechanism is not fully explained.",
+      "url": "https://www.ghacks.net/2026/07/12/microsoft-confirms-windows-gdid-device-identifier-that-cannot-be-disabled-documented-in-fbi-case-filing/"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "5aed0d88-5594-4e04-8708-3dad49aa7558",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "theconvivialsociety.substack.com",
+      "source_facts": [
+        "Comments"
+      ],
+      "title": "Your AI Is Not a Tool",
+      "uncertainty": "",
+      "url": "https://theconvivialsociety.substack.com/p/your-ai-is-not-a-tool"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "89e5b766-0d37-4d93-86c0-c51051207da1",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "schneier.com",
+      "source_facts": [
+        "Comments"
+      ],
+      "title": "AI Data Centers and the Concentration of Wealth",
+      "uncertainty": "",
+      "url": "https://www.schneier.com/blog/archives/2026/07/ai-data-centers-and-the-concentration-of-wealth.html"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "60d524a6-582f-4b53-bd7b-201b189b1235",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "sebsite.pw",
+      "source_facts": [
+        "Comments"
+      ],
+      "title": "i've been thinking about null pointers",
+      "uncertainty": "",
+      "url": "https://sebsite.pw/w/20260715-null.html"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "92ce38c3-ad31-4316-a9a2-3af7dd6c5d9c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "sebsite.pw",
+      "source_facts": [
+        "Comments"
+      ],
+      "title": "a bunch of stuff i used to not know about K&R C",
+      "uncertainty": "",
+      "url": "https://sebsite.pw/w/20260712-kandr.html"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "AI Operations / Agent Control",
+      "id": "fb37a0cc-4cd9-4bac-8a1b-7c52c748b0cb",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "soatok.blog",
+      "source_facts": [
+        "Comments"
+      ],
+      "title": "The Long Tail of Work Left Until ActivityPub Has E2EE",
+      "uncertainty": "",
+      "url": "https://soatok.blog/2026/07/15/the-long-tail-of-work-left-until-activitypub-has-e2ee/"
+    },
+    {
+      "builder_takeaway": "Useful for infrastructure/security monitoring if you rely on distro kernels and want lag visibility.",
+      "category": "AI Operations / Agent Control",
+      "id": "08261137-f634-45c7-b387-900930815bd4",
+      "importance": "supporting",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "patchless.natey.sh",
+      "source_facts": [
+        "Patchless indexes upstream Linux security fixes that look unpropagated, giving operators a way to watch patch-lag risk."
+      ],
+      "title": "A Filtering engine and DB for unpropagated kernel security patches",
+      "uncertainty": "Site uses deterministic heuristics and explicitly says it is not an authoritative advisory feed.",
+      "url": "https://patchless.natey.sh"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "940862f0-b023-4c89-a0b9-39a77f78a61d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "blog.lvmbdv.dev",
+      "source_facts": [
+        "Comments"
+      ],
+      "title": "The dailyprog puzzle safety net",
+      "uncertainty": "",
+      "url": "https://blog.lvmbdv.dev/posts/the-puzzle-safety-net/"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "Small Business Automation",
+      "id": "7592f9dd-d497-4442-a4ad-8b6cbe4d36db",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "arstechnica.com",
+      "source_facts": [
+        "Comments"
+      ],
+      "title": "Third-party app stores coming to Google Play next week as Epic settlement withdrawn",
+      "uncertainty": "",
+      "url": "https://arstechnica.com/gadgets/2026/07/third-party-app-stores-coming-to-google-play-next-week-as-epic-settlement-withdrawn/"
+    },
+    {
+      "builder_takeaway": "The book \"Inventing ELIZA - How the First Chatbot Shaped the Future of AI\". It is Open Access so the link to the PDF is here The book has…",
+      "category": "Tools Worth Testing",
+      "id": "66a64012-7d69-456a-beef-550a01613f0f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "mitpress.mit.edu",
+      "source_facts": [
+        "The book \"Inventing ELIZA - How the First Chatbot Shaped the Future of AI\". It is Open Access so the link to the PDF is here The book has…"
+      ],
+      "title": "Inventing ELIZA - How the First Chatbot Shaped the Future of AI",
+      "uncertainty": "",
+      "url": "https://mitpress.mit.edu/9780262052481/inventing-eliza/"
+    },
+    {
+      "builder_takeaway": "Meaningful workflow leverage for Mac-based toolchain and test-harness work if it proves stable.",
+      "category": "Tools Worth Testing",
+      "id": "044ec89f-1b61-466f-b97c-bee0090a1ad3",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "elfuse runs Linux aarch64/x86_64 ELF binaries directly on Apple Silicon macOS without Docker, a disk image, or a daemon."
+      ],
+      "title": "elfuse: Run Arm64/x86-64 Linux ELF binaries on macOS Apple Silicon",
+      "uncertainty": "Readme describes capabilities; no local validation performed in this run.",
+      "url": "https://github.com/sysprog21/elfuse"
     }
   ],
   "mode": "primary",
-  "run_id": "55201887-efc4-4896-9005-5d19c100e609",
+  "run_id": "23b7d747-1a65-4cb9-96b5-fd7a1ac331f6",
   "status": "completed",
-  "summary": "Synthesized Nightly Librarian run with 9 promoted item(s), 18 scored item(s), and 9 rejected item(s).",
+  "summary": "Synthesized Nightly Librarian run with 10 promoted item(s), 40 scored item(s), and 30 rejected item(s).",
   "title": "Nightly Librarian - 2026-07-16"
 }

@@ -5,23 +5,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>July 16, 2026 — The Nightly Librarian</title>
-  <meta name="description" content="Tonight's brief tracks AI Operations / Agent Control, Model + API Changes, Data Infrastructure / Verification / Scraping, and Tools Worth Testing.">
+  <meta name="description" content="Tonight's brief tracks AI Operations / Agent Control, Data Infrastructure / Verification / Scraping, Tools Worth Testing, and Small Business Automation.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/briefs/2026-07-16/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="July 16, 2026 | The Nightly Librarian">
-  <meta property="og:description" content="Tonight's brief tracks AI Operations / Agent Control, Model + API Changes, Data Infrastructure / Verification / Scraping, and Tools Worth Testing.">
+  <meta property="og:description" content="Tonight's brief tracks AI Operations / Agent Control, Data Infrastructure / Verification / Scraping, Tools Worth Testing, and Small Business Automation.">
   <meta property="og:url" content="https://thenightlylibrarian.com/briefs/2026-07-16/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="July 16, 2026 | The Nightly Librarian">
-  <meta name="twitter:description" content="Tonight's brief tracks AI Operations / Agent Control, Model + API Changes, Data Infrastructure / Verification / Scraping, and Tools Worth Testing.">
+  <meta name="twitter:description" content="Tonight's brief tracks AI Operations / Agent Control, Data Infrastructure / Verification / Scraping, Tools Worth Testing, and Small Business Automation.">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"TS-2026-009: Insecure argument handling in Tailscale SSH permitted root access","description":"Tonight's brief tracks AI Operations / Agent Control, Model + API Changes, Data Infrastructure / Verification / Scraping, and Tools Worth Testing. Synthesized Nightly Librarian run with 9 promoted item(s), 18 scored item(s), and 9 rejected item(s). The lead source signal is TS-2026-009: Insecure argument handling in Tailscale SSH permitted root access: Tailscale disclosed a vulnerability (TS-2026-009) where insecure argument handling in Tailscale SSH permitted root access. The operator read is C","url":"https://thenightlylibrarian.com/briefs/2026-07-16/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-07-16","dateModified":"2026-07-16"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Vercel Connect support in GitHub Tools","description":"Tonight's brief tracks AI Operations / Agent Control, Data Infrastructure / Verification / Scraping, Tools Worth Testing, and Small Business Automation. Synthesized Nightly Librarian run with 10 promoted item(s), 40 scored item(s), and 30 rejected item(s). The lead source signal is Vercel Connect support in GitHub Tools: GitHub Tools can now mint short-lived scoped GitHub tokens through Vercel Connect instead of storing PATs. The operator read is Cuts secret sprawl in agent workflows and changes","url":"https://thenightlylibrarian.com/briefs/2026-07-16/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-07-16","dateModified":"2026-07-16"}</script>
   <link rel="stylesheet" href="/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
 </head>
@@ -42,20 +42,20 @@
   <main>
     <a class="back-link" href="/">All briefs</a>
     <h1>July 16, 2026</h1>
-    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span><span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span><span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span><span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span></div>
-    <p class="lead-summary" style="margin-top:0.85rem;">Credible privilege-escalation vulnerability with an immediate patch action; the owner runs SSH-accessed VPS infrastructure.</p>
+    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span><span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span><span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span><span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span></div>
+    <p class="lead-summary" style="margin-top:0.85rem;">Cuts secret sprawl in agent workflows and changes how to wire GitHub auth on Vercel.</p>
     <h2>Worth mentioning</h2>
 
     <div class="item">
       <div class="item-row">
         <span class="item-num">1.</span>
         <div>
-          <div class="item-title"><a href="https://tailscale.com/security-bulletins" target="_blank" rel="noopener">TS-2026-009: Insecure argument handling in Tailscale SSH permitted root access</a></div>
-          <div class="item-takeaway">Credible privilege-escalation vulnerability with an immediate patch action; the owner runs SSH-accessed VPS infrastructure.</div>
-          <div class="item-facts"><div>Tailscale disclosed a vulnerability (TS-2026-009) where insecure argument handling in Tailscale SSH permitted root access.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Whether the owner's infrastructure uses Tailscale SSH specifically.</div>
+          <div class="item-title"><a href="https://vercel.com/changelog/vercel-connect-support-in-github-tools" target="_blank" rel="noopener">Vercel Connect support in GitHub Tools</a></div>
+          <div class="item-takeaway">Cuts secret sprawl in agent workflows and changes how to wire GitHub auth on Vercel.</div>
+          <div class="item-facts"><div>GitHub Tools can now mint short-lived scoped GitHub tokens through Vercel Connect instead of storing PATs.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Vendor changelog; feature claims not independently tested in this run.</div>
           <div class="item-meta">
-            <span><a href="https://tailscale.com/security-bulletins" target="_blank" rel="noopener">tailscale.com</a></span>
+            <span><a href="https://vercel.com/changelog/vercel-connect-support-in-github-tools" target="_blank" rel="noopener">vercel.com</a></span>
             <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
             <span>2026-07-16</span>
           </div>
@@ -67,13 +67,13 @@
       <div class="item-row">
         <span class="item-num">2.</span>
         <div>
-          <div class="item-title"><a href="https://www.ayush.digital/blog/the-memory-heist" target="_blank" rel="noopener">I tricked Claude into leaking your deepest, darkest secrets (The Memory Heist)</a></div>
-          <div class="item-takeaway">Directly relevant to building agents/MCP servers with persistent memory, which is core to the owner's work.</div>
-          <div class="item-facts"><div>A demonstrated attack uses Claude's memory feature to leak user data via injected instructions that persist across sessions.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Exact reproducibility and current mitigations by Anthropic are unclear from the post alone.</div>
+          <div class="item-title"><a href="https://tenderlovemaking.com/2026/07/15/detecting-full-table-scans-with-sqlite/" target="_blank" rel="noopener">Detecting Full Table Scans With SQLite</a></div>
+          <div class="item-takeaway">Direct performance guardrail idea for Rails/SQLite stacks with low implementation overhead.</div>
+          <div class="item-facts"><div>Shows how to detect SQLite full table scans after execution via prepared-statement stats, making test-time guardrails plausible.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Single-post implementation note; no repo/package shipped here.</div>
           <div class="item-meta">
-            <span><a href="https://www.ayush.digital/blog/the-memory-heist" target="_blank" rel="noopener">ayush.digital</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span><a href="https://tenderlovemaking.com/2026/07/15/detecting-full-table-scans-with-sqlite/" target="_blank" rel="noopener">tenderlovemaking.com</a></span>
+            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
             <span>2026-07-16</span>
           </div>
         </div>
@@ -84,13 +84,13 @@
       <div class="item-row">
         <span class="item-num">3.</span>
         <div>
-          <div class="item-title"><a href="https://github.blog/changelog/2026-07-14-dependabot-version-updates-introduce-default-package-cooldown/" target="_blank" rel="noopener">GitHub Dependabot introduces a default 3-day package cooldown</a></div>
-          <div class="item-takeaway">Broadly useful default that reduces supply-chain risk for any repo using Dependabot.</div>
-          <div class="item-facts"><div>Dependabot now waits at least three days after a release before opening a version-update PR, by default and with no configuration.</div></div>
-
+          <div class="item-title"><a href="https://patchless.natey.sh" target="_blank" rel="noopener">A Filtering engine and DB for unpropagated kernel security patches</a></div>
+          <div class="item-takeaway">Useful for infrastructure/security monitoring if you rely on distro kernels and want lag visibility.</div>
+          <div class="item-facts"><div>Patchless indexes upstream Linux security fixes that look unpropagated, giving operators a way to watch patch-lag risk.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Site uses deterministic heuristics and explicitly says it is not an authoritative advisory feed.</div>
           <div class="item-meta">
-            <span><a href="https://github.blog/changelog/2026-07-14-dependabot-version-updates-introduce-default-package-cooldown/" target="_blank" rel="noopener">github.blog</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
+            <span><a href="https://patchless.natey.sh" target="_blank" rel="noopener">patchless.natey.sh</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
             <span>2026-07-16</span>
           </div>
         </div>
@@ -101,80 +101,12 @@
       <div class="item-row">
         <span class="item-num">4.</span>
         <div>
-          <div class="item-title"><a href="https://simonwillison.net/2026/Jul/14/lobsters-sqlite/" target="_blank" rel="noopener">lobste.rs is now running on SQLite</a></div>
-          <div class="item-takeaway">Concrete cost/performance evidence for SQLite in production, relevant to cost-conscious solo VPS operators.</div>
-          <div class="item-facts"><div>Lobsters migrated from MariaDB to SQLite in production and reports lower CPU, lower memory, and about half the VPS cost.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Their workload characteristics may not match yours (write concurrency in particular).</div>
+          <div class="item-title"><a href="https://github.com/sysprog21/elfuse" target="_blank" rel="noopener">elfuse: Run Arm64/x86-64 Linux ELF binaries on macOS Apple Silicon</a></div>
+          <div class="item-takeaway">Meaningful workflow leverage for Mac-based toolchain and test-harness work if it proves stable.</div>
+          <div class="item-facts"><div>elfuse runs Linux aarch64/x86_64 ELF binaries directly on Apple Silicon macOS without Docker, a disk image, or a daemon.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Readme describes capabilities; no local validation performed in this run.</div>
           <div class="item-meta">
-            <span><a href="https://simonwillison.net/2026/Jul/14/lobsters-sqlite/" target="_blank" rel="noopener">simonwillison.net</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
-            <span>2026-07-16</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">5.</span>
-        <div>
-          <div class="item-title"><a href="https://prismml.com/news/bonsai-27b" target="_blank" rel="noopener">Bonsai 27B: a 27B-class model that runs on a phone</a></div>
-          <div class="item-takeaway">On-device large models are relevant to solo builders who run local inference (e.g., Ollama).</div>
-          <div class="item-facts"><div>PrismML claims Bonsai 27B is a 27B-class model capable of running on a phone.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Real-world quality, memory footprint, and speed on-device are unverified.</div>
-          <div class="item-meta">
-            <span><a href="https://prismml.com/news/bonsai-27b" target="_blank" rel="noopener">prismml.com</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-07-16</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">6.</span>
-        <div>
-          <div class="item-title"><a href="https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/" target="_blank" rel="noopener">The Tower Keeps Rising</a></div>
-          <div class="item-takeaway">Relevant framing for the owner's multi-agent development workflows.</div>
-          <div class="item-facts"><div>Armin Ronacher argues that AI agents erode the friction that historically maintained a team's shared understanding of a codebase.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: It is an opinion essay, not an empirical study.</div>
-          <div class="item-meta">
-            <span><a href="https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/" target="_blank" rel="noopener">lucumr.pocoo.org</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-07-16</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">7.</span>
-        <div>
-          <div class="item-title"><a href="https://github.com/darrylmorley/whatcable" target="_blank" rel="noopener">whatcable: a macOS menu-bar app for what each USB-C cable can do</a></div>
-          <div class="item-takeaway">Useful everyday utility for the owner, who works on a Mac.</div>
-          <div class="item-facts"><div>whatcable is an open-source macOS menu-bar app that reports the real capabilities of each connected USB-C cable.</div></div>
-
-          <div class="item-meta">
-            <span><a href="https://github.com/darrylmorley/whatcable" target="_blank" rel="noopener">github.com</a></span>
-            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
-            <span>2026-07-16</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">8.</span>
-        <div>
-          <div class="item-title"><a href="https://pythonspeed.com/articles/branchless-binary-search/" target="_blank" rel="noopener">6x faster binary search: from compiled code to mechanical sympathy</a></div>
-          <div class="item-takeaway">Reproducible performance technique worth bookmarking for hot code paths.</div>
-          <div class="item-facts"><div>A branchless binary search using mechanical-sympathy techniques can run roughly 6x faster than a naive implementation.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Gains depend heavily on data size, hardware, and access patterns.</div>
-          <div class="item-meta">
-            <span><a href="https://pythonspeed.com/articles/branchless-binary-search/" target="_blank" rel="noopener">pythonspeed.com</a></span>
+            <span><a href="https://github.com/sysprog21/elfuse" target="_blank" rel="noopener">github.com</a></span>
             <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
             <span>2026-07-16</span>
           </div>
@@ -185,41 +117,147 @@
 
     <div class="item">
       <div class="item-row">
+        <span class="item-num">5.</span>
+        <div>
+          <div class="item-title"><a href="https://www.ghacks.net/2026/07/12/microsoft-confirms-windows-gdid-device-identifier-that-cannot-be-disabled-documented-in-fbi-case-filing/" target="_blank" rel="noopener">Microsoft Confirms Windows GDID Device Identifier That Cannot Be Disabled, Documented in FBI Case Filing</a></div>
+          <div class="item-takeaway">Serious privacy/security implication for Windows users, but the reporting path is secondary and some telemetry details remain unclear.</div>
+          <div class="item-facts"><div>A ghacks report says Windows installs tied to Microsoft Accounts carry a persistent GDID that aided FBI tracking across changing IPs and VPNs.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Secondary report based on a federal complaint and scattered Microsoft references; exact URL-level telemetry mechanism is not fully explained.</div>
+          <div class="item-meta">
+            <span><a href="https://www.ghacks.net/2026/07/12/microsoft-confirms-windows-gdid-device-identifier-that-cannot-be-disabled-documented-in-fbi-case-filing/" target="_blank" rel="noopener">ghacks.net</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span>2026-07-16</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">6.</span>
+        <div>
+          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1uxrsiw/are_people_actually_finding_saas_tools_through_ai/" target="_blank" rel="noopener">Are people actually finding SaaS tools through AI now?</a></div>
+          <div class="item-takeaway">Weak but relevant signal that AI discovery could matter for distribution positioning.</div>
+          <div class="item-facts"><div>Reddit discussion suggests founders are checking ChatGPT/Perplexity for SaaS discovery before search, but this is still anecdotal.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Direct page access hit Reddit network blocking in browse; assessment relies on the feed excerpt plus blocked-page note.</div>
+          <div class="item-meta">
+            <span><a href="https://www.reddit.com/r/SaaS/comments/1uxrsiw/are_people_actually_finding_saas_tools_through_ai/" target="_blank" rel="noopener">reddit.com</a></span>
+            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
+            <span>2026-07-16</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">7.</span>
+        <div>
+          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1uxseg0/i_stopped_paying_100month_in_shopify_apps_and/" target="_blank" rel="noopener">I stopped paying $100+/month in Shopify apps and built my own &quot;Frankenstein&quot; with AI. I think SaaS companies are about to have a real problem.</a></div>
+          <div class="item-takeaway">Anecdotal but directionally relevant if AI keeps eroding narrow SaaS add-ons.</div>
+          <div class="item-facts"><div>A Shopify operator says AI let them replace a stack of paid apps with a stitched-together in-house workflow, a weak signal against small app bundles.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Reddit page was blocked during direct browse, so evidence remains anecdotal and incomplete.</div>
+          <div class="item-meta">
+            <span><a href="https://www.reddit.com/r/SaaS/comments/1uxseg0/i_stopped_paying_100month_in_shopify_apps_and/" target="_blank" rel="noopener">reddit.com</a></span>
+            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
+            <span>2026-07-16</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">8.</span>
+        <div>
+          <div class="item-title"><a href="https://vercel.com/changelog/faster-predictable-project-linking-in-the-vercel-cli" target="_blank" rel="noopener">Faster, predictable project linking in the Vercel CLI</a></div>
+          <div class="item-takeaway">Relevant for CI and agent automation that relied on implicit team selection.</div>
+          <div class="item-facts"><div>Vercel CLI v55 makes project linking team-explicit in non-interactive flows and fails fast when scope is missing.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Vendor changelog; impact depends on whether your scripts relied on implicit scope selection.</div>
+          <div class="item-meta">
+            <span><a href="https://vercel.com/changelog/faster-predictable-project-linking-in-the-vercel-cli" target="_blank" rel="noopener">vercel.com</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span>2026-07-16</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
         <span class="item-num">9.</span>
         <div>
-          <div class="item-title"><a href="https://temperlang.dev/" target="_blank" rel="noopener">Temper Language</a></div>
-          <div class="item-takeaway">Early signal for cross-language code sharing, potentially useful for future multi-stack work.</div>
-          <div class="item-facts"><div>Temper is a new language designed to compile shared logic to multiple target languages.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Maturity, ecosystem, and real-world adoption are unproven.</div>
+          <div class="item-title"><a href="https://vercel.com/changelog/web-analytics-api" target="_blank" rel="noopener">Public Web Analytics API now available</a></div>
+          <div class="item-takeaway">Potentially useful for custom reporting, but stale relative to today and not a fresh morning-memo development.</div>
+          <div class="item-facts"><div>Vercel’s Web Analytics API exposes aggregated visits, visitors, and custom events; useful, but the changelog entry is from May 18, 2026.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Surfaced in today’s claim despite the changelog date being May 18, 2026.</div>
           <div class="item-meta">
-            <span><a href="https://temperlang.dev/" target="_blank" rel="noopener">temperlang.dev</a></span>
-            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
+            <span><a href="https://vercel.com/changelog/web-analytics-api" target="_blank" rel="noopener">vercel.com</a></span>
+            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
+            <span>2026-07-16</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">10.</span>
+        <div>
+          <div class="item-title"><a href="https://lore.kernel.org/linux-media/CAHk-=wi4zC+Ze8e+p3tMv8TtG_80KzsZ1syL9anBtmEh5Z40vg@mail.gmail.com/" target="_blank" rel="noopener">Linus Torvalds on LLM usage in kernel development</a></div>
+          <div class="item-takeaway">Kernel-adjacent stance on LLM use could matter culturally, but there was not enough readable source material to score it higher.</div>
+          <div class="item-facts"><div>The linked kernel thread was blocked by Anubis during direct browse, so this remains only a title-level signal about Linus discussing LLM usage.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Direct source access failed behind Anubis; no reliable content beyond the title and aggregator link.</div>
+          <div class="item-meta">
+            <span><a href="https://lore.kernel.org/linux-media/CAHk-=wi4zC+Ze8e+p3tMv8TtG_80KzsZ1syL9anBtmEh5Z40vg@mail.gmail.com/" target="_blank" rel="noopener">lore.kernel.org</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
             <span>2026-07-16</span>
           </div>
         </div>
       </div>
     </div>
     <details>
-      <summary>18 researched links (full index)</summary>
+      <summary>39 researched links (full index)</summary>
       <div class="link-index">
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://tailscale.com/security-bulletins" target="_blank" rel="noopener">TS-2026-009: Insecure argument handling in Tailscale SSH permitted root access</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.ayush.digital/blog/the-memory-heist" target="_blank" rel="noopener">I tricked Claude into leaking your deepest, darkest secrets (The Memory Heist)</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.blog/changelog/2026-07-14-dependabot-version-updates-introduce-default-package-cooldown/" target="_blank" rel="noopener">GitHub Dependabot introduces a default 3-day package cooldown</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://simonwillison.net/2026/Jul/14/lobsters-sqlite/" target="_blank" rel="noopener">lobste.rs is now running on SQLite</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.86" target="_blank" rel="noopener">Next.js v16.3.0-canary.86</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://fabiensanglard.net/jurrasic_park_computers/index.html" target="_blank" rel="noopener">Jurassic Park computers in excruciating detail</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://vpd.ca/" target="_blank" rel="noopener">Vancouver PD website features a Quick Escape button that wipes itself from history</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://prismml.com/news/bonsai-27b" target="_blank" rel="noopener">Bonsai 27B: a 27B-class model that runs on a phone</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/" target="_blank" rel="noopener">The Tower Keeps Rising</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://simonwillison.net/2026/Jul/14/pedalican/" target="_blank" rel="noopener">simonw/pedalican</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://simonwillison.net/2026/Jul/14/armin-ronacher/" target="_blank" rel="noopener">Quoting Armin Ronacher (The Tower Keeps Rising)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://simonwillison.net/2026/Jul/14/datasette/" target="_blank" rel="noopener">datasette 1.0a37</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://xeiaso.net/notes/2026/check-your-smart-tv/" target="_blank" rel="noopener">You should probably check on your smart appliances</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://crates.io/crates/qr-swastika-avoider" target="_blank" rel="noopener">qr-swastika-avoider v0.1.0</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/darrylmorley/whatcable" target="_blank" rel="noopener">whatcable: a macOS menu-bar app for what each USB-C cable can do</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://steveklabnik.com/writing/too-many-words-about-dids/" target="_blank" rel="noopener">Too many words about DIDs</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://pythonspeed.com/articles/branchless-binary-search/" target="_blank" rel="noopener">6x faster binary search: from compiled code to mechanical sympathy</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://temperlang.dev/" target="_blank" rel="noopener">Temper Language</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/changelog/vercel-connect-support-in-github-tools" target="_blank" rel="noopener">Vercel Connect support in GitHub Tools</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://tenderlovemaking.com/2026/07/15/detecting-full-table-scans-with-sqlite/" target="_blank" rel="noopener">Detecting Full Table Scans With SQLite</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.ghacks.net/2026/07/12/microsoft-confirms-windows-gdid-device-identifier-that-cannot-be-disabled-documented-in-fbi-case-filing/" target="_blank" rel="noopener">Microsoft Confirms Windows GDID Device Identifier That Cannot Be Disabled, Documented in FBI Case Filing</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://patchless.natey.sh" target="_blank" rel="noopener">A Filtering engine and DB for unpropagated kernel security patches</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.reddit.com/r/SaaS/comments/1uxrsiw/are_people_actually_finding_saas_tools_through_ai/" target="_blank" rel="noopener">Are people actually finding SaaS tools through AI now?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1ux5cge/got_my_first_paying_customer_today/" target="_blank" rel="noopener">got my first paying customer today !!</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uxuwab/can_affiliate_marketing_work_for_a_5kmonth_saas/" target="_blank" rel="noopener">Can affiliate marketing work for a $5K/month SaaS?</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.reddit.com/r/SaaS/comments/1uxseg0/i_stopped_paying_100month_in_shopify_apps_and/" target="_blank" rel="noopener">I stopped paying $100+/month in Shopify apps and built my own &quot;Frankenstein&quot; with AI. I think SaaS companies are about to have a real problem.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uxoixx/i_am_becoming_obsessed_with_growth/" target="_blank" rel="noopener">I am becoming obsessed with growth</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uxugkd/stripe_alternatives/" target="_blank" rel="noopener">Stripe alternatives</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uxtmuj/framer_modern_landing_page_waitlist_first_3_for/" target="_blank" rel="noopener">Framer Modern landing page + waitlist first 3 for free</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1ux5fkq/developers_whats_your_starting_point_for_a_new/" target="_blank" rel="noopener">Developers, what's your starting point for a new project? • Backend first • Frontend first</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uxswgk/how_often_should_i_try_growth_experiments_with_my/" target="_blank" rel="noopener">How often should i try growth experiments with my startup (early-stage)</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uxwb5b/service_feedback_collection/" target="_blank" rel="noopener">Service Feedback Collection</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uxw0pc/how_i_built_an_autopilot_system_to_route_and_tag/" target="_blank" rel="noopener">How I built an autopilot system to route and tag scaling customer feedback (using n8n &amp; AI)</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uxw0nn/looking_for_help/" target="_blank" rel="noopener">Looking For Help</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1uxvzdi/im_gonna_buy_something_for_my_mom_today/" target="_blank" rel="noopener">I’m gonna buy something for my mom today 😭💯</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://vercel.com/blog/how-speechify-serves-50000-dynamic-pages-to-60-million-users-on-vercel" target="_blank" rel="noopener">How Speechify serves 500,000 dynamic pages to 60 million users on Vercel</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://vercel.com/changelog/faster-predictable-project-linking-in-the-vercel-cli" target="_blank" rel="noopener">Faster, predictable project linking in the Vercel CLI</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://vercel.com/changelog/inkling-from-thinking-machines-is-now-available-on-ai-gateway" target="_blank" rel="noopener">Inkling from Thinking Machines is now available on AI Gateway</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://vercel.com/changelog/vercel-workflows-trace-viewer-now-has-a-minimap" target="_blank" rel="noopener">Vercel Workflows trace viewer now has a minimap</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://vercel.com/changelog/chat-sdk-adds-discord-components-v2-support" target="_blank" rel="noopener">Chat SDK adds Discord Components V2 support</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://vercel.com/changelog/web-analytics-api" target="_blank" rel="noopener">Public Web Analytics API now available</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.87" target="_blank" rel="noopener">v16.3.0-canary.87</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://blog.val.town/june-2026" target="_blank" rel="noopener">Investor Update – June 2026</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://mort.coffee/home/sqlite-editions/" target="_blank" rel="noopener">SQLite should have (Rust-style) editions</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://lore.kernel.org/linux-media/CAHk-=wi4zC+Ze8e+p3tMv8TtG_80KzsZ1syL9anBtmEh5Z40vg@mail.gmail.com/" target="_blank" rel="noopener">Linus Torvalds on LLM usage in kernel development</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://crowdhailer.me/2026-07-15/abstracting-effects-with-continuations/" target="_blank" rel="noopener">Abstracting effects with continuations</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/" target="_blank" rel="noopener">The Tower Keeps Rising</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.phoronix.com/news/FreeBSD-16-Goes-GPL-Free" target="_blank" rel="noopener">FreeBSD 16 Retires The Last Of Its GPL Code From Its Base System</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://theconvivialsociety.substack.com/p/your-ai-is-not-a-tool" target="_blank" rel="noopener">Your AI Is Not a Tool</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.schneier.com/blog/archives/2026/07/ai-data-centers-and-the-concentration-of-wealth.html" target="_blank" rel="noopener">AI Data Centers and the Concentration of Wealth</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://sebsite.pw/w/20260715-null.html" target="_blank" rel="noopener">i've been thinking about null pointers</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://sebsite.pw/w/20260712-kandr.html" target="_blank" rel="noopener">a bunch of stuff i used to not know about K&amp;R C</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://soatok.blog/2026/07/15/the-long-tail-of-work-left-until-activitypub-has-e2ee/" target="_blank" rel="noopener">The Long Tail of Work Left Until ActivityPub Has E2EE</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://blog.lvmbdv.dev/posts/the-puzzle-safety-net/" target="_blank" rel="noopener">The dailyprog puzzle safety net</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://arstechnica.com/gadgets/2026/07/third-party-app-stores-coming-to-google-play-next-week-as-epic-settlement-withdrawn/" target="_blank" rel="noopener">Third-party app stores coming to Google Play next week as Epic settlement withdrawn</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://mitpress.mit.edu/9780262052481/inventing-eliza/" target="_blank" rel="noopener">Inventing ELIZA - How the First Chatbot Shaped the Future of AI</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/sysprog21/elfuse" target="_blank" rel="noopener">elfuse: Run Arm64/x86-64 Linux ELF binaries on macOS Apple Silicon</a></div>
       </div>
     </details>
     <div class="subscribe-strip">
