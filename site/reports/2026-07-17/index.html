@@ -5,21 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>July 17, 2026 report log — The Nightly Librarian</title>
-  <meta name="description" content="7 stories cleared the bar, led by How I tricked Claude into leaking your deepest, darkest secrets, xai-org/grok-build, now open source, and Test out the">
+  <meta name="description" content="7 stories cleared the bar, led by Security incident disclosure — July 2026, Quoting Thibault Sottiaux, and Kimi K3: Open Frontier Intelligence.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-07-17/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="July 17, 2026 report log | The Nightly Librarian">
-  <meta property="og:description" content="7 stories cleared the bar, led by How I tricked Claude into leaking your deepest, darkest secrets, xai-org/grok-build, now open source, and Test out the">
+  <meta property="og:description" content="7 stories cleared the bar, led by Security incident disclosure — July 2026, Quoting Thibault Sottiaux, and Kimi K3: Open Frontier Intelligence.">
   <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-07-17/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="July 17, 2026 report log | The Nightly Librarian">
-  <meta name="twitter:description" content="7 stories cleared the bar, led by How I tricked Claude into leaking your deepest, darkest secrets, xai-org/grok-build, now open source, and Test out the">
+  <meta name="twitter:description" content="7 stories cleared the bar, led by Security incident disclosure — July 2026, Quoting Thibault Sottiaux, and Kimi K3: Open Frontier Intelligence.">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
@@ -36,7 +36,7 @@
     </div>
     <div class="dateline">
       <span>July 17, 2026 · Report log</span>
-      <span>Jul 17, 2026, 2:16 AM</span>
+      <span>Jul 17, 2026, 7:09 AM</span>
     </div>
   </header>
   <main>
@@ -44,7 +44,7 @@
     <h1>July 17, 2026</h1>
     <div class="summary-card">
       <div class="eyebrow">Report summary</div>
-      <p>7 stories cleared the bar, led by How I tricked Claude into leaking your deepest, darkest secrets, xai-org/grok-build, now open source, and Test out the Neon backend: Object Storage, Functions, and AI Gateway are beta.</p>
+      <p>7 stories cleared the bar, led by Security incident disclosure — July 2026, Quoting Thibault Sottiaux, and Kimi K3: Open Frontier Intelligence.</p>
       <div class="meta" style="margin-top:0.4rem;">
         <span>7 worth-attention items</span><span>40 digest lines</span>
       </div>
@@ -53,38 +53,38 @@
     <div class="item-stack">
 
       <div class="item">
-        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything" target="_blank" rel="noopener">How I tricked Claude into leaking your deepest, darkest secrets</a></div>
-        <div class="item-takeaway">Ayush Paul found a hole in Claude's web_fetch exfiltration protections (write-up via Simon Willison). web_fetch normally only visits user- or search-supplied URLs, but it also followed URLs embedded in pages it had already fetched — so a honeypot page can chain the agent into exfiltrating memory/answers via attacker URLs. If you build agents with fetch + private context, treat 'follow links from fetched pages' as an exfiltration vector and constrain it.</div>
+        <div class="item-title"><a href="https://huggingface.co/blog/security-incident-july-2026" target="_blank" rel="noopener">Security incident disclosure — July 2026</a></div>
+        <div class="item-takeaway">Hugging Face disclosed an AI-driven intrusion via dataset-processing bugs; rotate tokens and review exposure.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything" target="_blank" rel="noopener">xai-org/grok-build, now open source</a></div>
-        <div class="item-takeaway">xAI's grok CLI was found to upload the entire working directory (users reported SSH keys, password DBs, documents) to xAI cloud buckets; xAI disabled the feature, said it deleted uploaded data, and open-sourced the whole Grok Build codebase (Apache 2.0) to rebuild trust. Lesson: audit what any coding-agent CLI transmits before running it in a real directory; the open-source drop lets you inspect it directly.</div>
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything" target="_blank" rel="noopener">Quoting Thibault Sottiaux</a></div>
+        <div class="item-takeaway">OpenAI’s Thibault Sottiaux says unexpected file deletions cluster around full-access runs without sandboxing.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://neon.com/blog/neon-backend-is-beta" target="_blank" rel="noopener">Test out the Neon backend: Object Storage, Functions, and AI Gateway are beta</a></div>
-        <div class="item-takeaway">Neon put Object Storage, Functions, and an AI Gateway into beta: object storage that branches with your data, compute next to the DB, and one API/one bill fronting seven model providers (backed by Databricks). You can declare a full backend in a single neon.ts and `neon deploy`. The AI Gateway (one key, seven providers, one invoice) is the decision-relevant piece for agent builders wanting to consolidate model spend.</div>
+        <div class="item-title"><a href="https://www.kimi.com/blog/kimi-k3" target="_blank" rel="noopener">Kimi K3: Open Frontier Intelligence</a></div>
+        <div class="item-takeaway">Moonshot launched Kimi K3: 2.8T params, 1M context, API pricing at $3 in/$15 out per MTok, weights due July 27.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://thinkingmachines.ai/news/introducing-inkling/" target="_blank" rel="noopener">Inkling: Our Open-Weights Model</a></div>
-        <div class="item-takeaway">Thinking Machines released Inkling, an open-weights model. An open-weights release from a well-funded lab is decision-relevant for anyone running or fine-tuning models locally: it's another candidate to evaluate against your current local stack. Details/benchmarks were not readable from the fetched item, so treat leverage claims as unverified until you check licence and sizes.</div>
+        <div class="item-title"><a href="https://supabase.com/blog/unified-logs-open-beta" target="_blank" rel="noopener">Unified Logs is now in open beta</a></div>
+        <div class="item-takeaway">Supabase now shows gateway, Postgres, Auth, Storage, and Realtime logs in one searchable stream.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://www.reuters.com/business/finance/stripe-advent-offer-buy-paypal-more-than-53-billion-sources-say-2026-07-15/" target="_blank" rel="noopener">Stripe and Advent have made a joint offer to acquire PayPal – sources</a></div>
-        <div class="item-takeaway">Reuters reports Stripe and Advent have made a joint offer (&gt;$53B) to acquire PayPal. If it happens, it reshapes payments consolidation and could affect Stripe's roadmap and pricing over time. It's a sourced rumor, not a signed deal, so no action today beyond awareness if you bill through Stripe or PayPal.</div>
+        <div class="item-title"><a href="https://vercel.com/changelog/runtime-logs-now-show-cache-reasons" target="_blank" rel="noopener">Runtime logs now show cache reasons</a></div>
+        <div class="item-takeaway">Vercel runtime logs now expose cache-miss reasons like revalidation, bypass, and stale states.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://github.com/ollama/ollama/releases/tag/v0.32.1" target="_blank" rel="noopener">v0.32.1</a></div>
-        <div class="item-takeaway">Ollama 0.32.1 ships improved Gemma 4 tool calling and multi-turn reasoning, fixes a recurrent MLX model-cache memory leak that grew across requests, and makes the agent web-search/fetch prompt for `ollama signin` when auth is needed. If you run Ollama locally for agent work, the MLX leak fix alone is worth updating for.</div>
+        <div class="item-title"><a href="https://vercel.com/changelog/write-utilization-now-available-in-isr-observability" target="_blank" rel="noopener">Write utilization now available in ISR Observability</a></div>
+        <div class="item-takeaway">Vercel added ISR write-utilization, a metric for pages that regenerate often without enough cached reads.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://neon.com/blog/provision-your-stack-neon-stripe-projects-build" target="_blank" rel="noopener">Provision Your Entire Stack with Neon and Stripe Projects Build</a></div>
-        <div class="item-takeaway">Neon added `stripe projects build`-style scaffolding: discover and provision a fully-wired stack template in a single command. Useful if you spin up new Postgres-backed projects often and want agent-friendly scaffolding, but it's a narrow vendor workflow tied to Neon+Stripe.</div>
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/16/inkling/#atom-everything" target="_blank" rel="noopener">Inkling: Our open-weights model</a></div>
+        <div class="item-takeaway">Thinking Machines released Inkling, a 975B/41B-active Apache-2.0 multimodal base model with 1M context.</div>
       </div>
     </div>
     <h2>Full digest</h2>
@@ -92,87 +92,10 @@
 
       <div class="item">
         <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://github.com/ollama/ollama/releases/tag/v0.32.1" target="_blank" rel="noopener">v0.32.1</a>
-        </div>
-        <div class="item-takeaway">Ollama 0.32.1 ships improved Gemma 4 tool calling and multi-turn reasoning, fixes a recurrent MLX model-cache memory leak that grew across requests, and makes the agent web-search/fetch prompt for `ollama signin` when auth is needed. If you run Ollama locally for agent work, the MLX leak fix alone is worth updating for.</div>
-        <div class="item-meta">
-          <span>gh-ollama</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.2.33-beta.291" target="_blank" rel="noopener">CLI Beta @composio/cli@0.2.33-beta.291</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uymw9h/launched_a_curated_app_store_3_days_ago_and_1_in/" target="_blank" rel="noopener">Launched a curated app store 3 days ago, and 1 in 5 visitors click through, and the first 60 seconds decides almost everything.</a>
         </div>
-        <div class="item-takeaway">Docs-only beta bump for the Composio CLI; no user-facing change.</div>
-        <div class="item-meta">
-          <span>gh-composio</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://playonemoreletter.com/" target="_blank" rel="noopener">Show HN: One More Letter</a>
-        </div>
-        <div class="item-takeaway">Browser word game; entertainment.</div>
-        <div class="item-meta">
-          <span>hn-show</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://developer.puter.com/labs/firefox-wasm/" target="_blank" rel="noopener">Show HN: Firefox in WebAssembly</a>
-        </div>
-        <div class="item-takeaway">Impressive engineering demo (Firefox compiled to WASM) but no practical leverage or decision for a solo builder.</div>
-        <div class="item-meta">
-          <span>hn-show</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/welcome-to-the-sunny-side/misa77" target="_blank" rel="noopener">Show HN: misa77 - a codec that decodes 2x faster than LZ4 (at better ratios)</a>
-        </div>
-        <div class="item-takeaway">Niche compression codec Show HN; interesting benchmarks but no relevance to current or likely work.</div>
-        <div class="item-meta">
-          <span>hn-show</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://neon.com/blog/neon-backend-is-beta" target="_blank" rel="noopener">Test out the Neon backend: Object Storage, Functions, and AI Gateway are beta</a>
-        </div>
-        <div class="item-takeaway">Neon put Object Storage, Functions, and an AI Gateway into beta: object storage that branches with your data, compute next to the DB, and one API/one bill fronting seven model providers (backed by Databricks). You can declare a full backend in a single neon.ts and `neon deploy`. The AI Gateway (one key, seven providers, one invoice) is the decision-relevant piece for agent builders wanting to consolidate model spend.</div>
-        <div class="item-meta">
-          <span>neon-blog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://neon.com/blog/provision-your-stack-neon-stripe-projects-build" target="_blank" rel="noopener">Provision Your Entire Stack with Neon and Stripe Projects Build</a>
-        </div>
-        <div class="item-takeaway">Neon added `stripe projects build`-style scaffolding: discover and provision a fully-wired stack template in a single command. Useful if you spin up new Postgres-backed projects often and want agent-friendly scaffolding, but it's a narrow vendor workflow tied to Neon+Stripe.</div>
-        <div class="item-meta">
-          <span>neon-blog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uxvce9/if_whatsapp_is_free_and_adfre_how_does_it_pay_for/" target="_blank" rel="noopener">If WhatsApp is free and ad-fre... How does it pay for the infrastructure behind billions of messages every single day?</a>
-        </div>
-        <div class="item-takeaway">Reddit explainer question about WhatsApp economics; off-topic.</div>
+        <div class="item-takeaway">Single founder anecdote on app-store conversion; useful color, not decision-grade evidence.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -181,9 +104,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uxmbmg/mrr_p0rn_6_years_of_grinding_thanks_ai/" target="_blank" rel="noopener">MRR P0rn - 6 years of Grinding - Thanks AI!</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uyqp0d/legaltech_startup_in_berlin_looking_for_a_third/" target="_blank" rel="noopener">Legal-tech startup in Berlin looking for a third co-founder (Product/Growth)</a>
         </div>
-        <div class="item-takeaway">Reddit 'MRR porn' brag thread; engagement bait.</div>
+        <div class="item-takeaway">Cofounder search post, not a product, platform, or market update.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -192,9 +115,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uxpk90/i_have_enough_runway_to_quit_my_software_job_but/" target="_blank" rel="noopener">I have enough runway to quit my software job, but I’m afraid of working hard inside an echo chamber</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uyq1gk/how_are_you_managing_permissions_across_your_ai/" target="_blank" rel="noopener">How are you managing permissions across your AI stack?</a>
         </div>
-        <div class="item-takeaway">Reddit personal-career venting; no builder signal.</div>
+        <div class="item-takeaway">Permissions hygiene discussion prompt; no concrete incident, tool, or practice change.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -203,9 +126,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uxd18n/im_a_5_year_old_with_a_100k_mrr_saas_heres_what_i/" target="_blank" rel="noopener">I’m a 5 year old with a $100K MRR SaaS. Here’s what I did.</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uxzooc/how_did_you_actually_find_your_first_10_users/" target="_blank" rel="noopener">How did you actually find your first 10 users?</a>
         </div>
-        <div class="item-takeaway">Reddit clickbait MRR claim; unverifiable, likely inflated.</div>
+        <div class="item-takeaway">Generic first-users question thread, not a new tactic or measured result.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -214,9 +137,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uxqtec/researching_my_niche_competitors_i_found_that/" target="_blank" rel="noopener">Researching my niche competitors, I found that they are vibe coding too much. They just develop and don't test anything.</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uyt9c8/quick_validation_on_my_idea_and_problem_that_i/" target="_blank" rel="noopener">Quick validation on my idea and problem that I solved for myself</a>
         </div>
-        <div class="item-takeaway">Reddit anecdote about competitors vibe-coding; thin.</div>
+        <div class="item-takeaway">Founder idea-validation post with no launch, users, or hard evidence yet.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -225,9 +148,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1ux6svc/200_dead_startups_later_i_owe_every_founder_an/" target="_blank" rel="noopener">200 dead startups later, I owe every founder an apology.</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uyt748/thinking_about_building_an_ai_customer_success/" target="_blank" rel="noopener">Thinking about building an AI customer success agent, is this actually useful or overkill</a>
         </div>
-        <div class="item-takeaway">Reddit engagement-bait retrospective; no verifiable signal.</div>
+        <div class="item-takeaway">Speculative AI customer-success agent idea, not a launch or measured builder report.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -236,108 +159,130 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uxgft5/just_got_my_first_sale_it_came_from_word_of_mouth/" target="_blank" rel="noopener">Just got my first sale. It came from word of mouth, not marketing</a>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.88" target="_blank" rel="noopener">v16.3.0-canary.88</a>
         </div>
-        <div class="item-takeaway">Reddit anecdote about a first sale; thin, no leverage.</div>
+        <div class="item-takeaway">Routine Next.js canary fixes and flags, not a stable release worth highlighting.</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
+          <span>gh-nextjs</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uxvlal/whats_the_best_acquisition_strategy_for_a_saas_in/" target="_blank" rel="noopener">What's the best acquisition strategy for a SaaS in 2026?</a>
+          <a href="https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb" target="_blank" rel="noopener">NVIDIA Nemotron 3 Embed Ranks #1 Overall on RTEB, Advancing Agentic Retrieval</a>
         </div>
-        <div class="item-takeaway">Reddit open question on SaaS acquisition strategy; speculative discussion.</div>
+        <div class="item-takeaway">Nemotron embedding benchmark claim; interesting, but too benchmark-led for the memo.</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
+          <span>huggingface-blog</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uxv9m2/i_dont_think_most_saas_products_fail_because_of/" target="_blank" rel="noopener">I don't think most SaaS products fail because of bad code anymore</a>
+          <a href="https://huggingface.co/blog/Dharma-AI/newer-models-same-advantages" target="_blank" rel="noopener">Newer Models, Same Advantage</a>
         </div>
-        <div class="item-takeaway">Reddit opinion on why SaaS fails; generic, no evidence.</div>
+        <div class="item-takeaway">Opinion piece on newer models, without a concrete release or decision signal.</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.tomica.net/blog/2026/07/tls-certificate-validation-on-linux/" target="_blank" rel="noopener">TLS Certificate Validation on Linux</a>
-        </div>
-        <div class="item-takeaway">Evergreen TLS-on-Linux reference; useful but not news.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://parakeet.co/blog/the-shape-of-apps/" target="_blank" rel="noopener">The Shape of Apps</a>
-        </div>
-        <div class="item-takeaway">Generic 'shape of apps' opinion post; trend filler.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://research.mozilla.org/browser-competition/over-the-edge-2/" target="_blank" rel="noopener">Over the Edge 2.0: Microsoft’s Design Tactics Still Undermine Browser Choice</a>
-        </div>
-        <div class="item-takeaway">Browser-competition advocacy research; political/advocacy, no builder action.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.computerworld.com/article/4192438/how-to-unionize-your-tech-workplace.html" target="_blank" rel="noopener">How to unionize your tech workplace</a>
-        </div>
-        <div class="item-takeaway">Workplace-unionization how-to; off-topic, culture/labor.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://simonwillison.net/2026/Jul/16/grok-mermaid/#atom-everything" target="_blank" rel="noopener">Mermaid to Unicode box art (grok-mermaid)</a>
-        </div>
-        <div class="item-takeaway">Minor toy tool (Mermaid to Unicode box art); low leverage.</div>
-        <div class="item-meta">
-          <span>simon-willison</span>
+          <span>huggingface-blog</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything" target="_blank" rel="noopener">xai-org/grok-build, now open source</a>
+          Security incident disclosure
         </div>
-        <div class="item-takeaway">xAI's grok CLI was found to upload the entire working directory (users reported SSH keys, password DBs, documents) to xAI cloud buckets; xAI disabled the feature, said it deleted uploaded data, and open-sourced the whole Grok Build codebase (Apache 2.0) to rebuild trust. Lesson: audit what any coding-agent CLI transmits before running it in a real directory; the open-source drop lets you inspect it directly.</div>
+        <div class="item-takeaway">July 2026 — https://huggingface.co/blog/security-incident-july-2026 — Hugging Face disclosed an AI-driven intrusion via dataset-processing bugs; rotate tokens and review exposure.</div>
         <div class="item-meta">
-          <span>simon-willison</span>
+          <span>huggingface-blog</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything" target="_blank" rel="noopener">How I tricked Claude into leaking your deepest, darkest secrets</a>
+          <a href="https://supabase.com/blog/unified-logs-open-beta" target="_blank" rel="noopener">Unified Logs is now in open beta</a>
         </div>
-        <div class="item-takeaway">Ayush Paul found a hole in Claude's web_fetch exfiltration protections (write-up via Simon Willison). web_fetch normally only visits user- or search-supplied URLs, but it also followed URLs embedded in pages it had already fetched — so a honeypot page can chain the agent into exfiltrating memory/answers via attacker URLs. If you build agents with fetch + private context, treat 'follow links from fetched pages' as an exfiltration vector and constrain it.</div>
+        <div class="item-takeaway">Supabase now shows gateway, Postgres, Auth, Storage, and Realtime logs in one searchable stream.</div>
+        <div class="item-meta">
+          <span>supabase-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-buns-rapid-rust-rewrite-with-ai/" target="_blank" rel="noopener">The Pulse: What can we learn from Bun’s rapid Rust rewrite with AI?</a>
+        </div>
+        <div class="item-takeaway">Commentary on Bun’s AI-assisted rewrite economics, but no new product or platform shift.</div>
+        <div class="item-meta">
+          <span>pragmatic-engineer</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/ainews-kimi-k3-28t-a50b-the-largest" target="_blank" rel="noopener">[AINews] Kimi K3 2.8T-A50B: the largest open model ever released; Opus 4.8-class at Sonnet 5 pricing</a>
+        </div>
+        <div class="item-takeaway">Latent Space roundup echoes the Kimi K3 launch; keeping the primary source instead.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          🔬 The Lab of the Future Should Feel Like a Data Center
+        </div>
+        <div class="item-takeaway">Andy Beam &amp; Rafa Gómez-Bombarelli, Lila Sciences — https://www.latent.space/p/the-lab-of-the-future-should-feel — Lila Sciences profile on robotic labs is interesting, but not an immediate solo-dev decision input.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/runtime-logs-now-show-cache-reasons" target="_blank" rel="noopener">Runtime logs now show cache reasons</a>
+        </div>
+        <div class="item-takeaway">Vercel runtime logs now expose cache-miss reasons like revalidation, bypass, and stale states.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/write-utilization-now-available-in-isr-observability" target="_blank" rel="noopener">Write utilization now available in ISR Observability</a>
+        </div>
+        <div class="item-takeaway">Vercel added ISR write-utilization, a metric for pages that regenerate often without enough cached reads.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/kimi-k3-is-now-available-on-ai-gateway" target="_blank" rel="noopener">Kimi K3 is now available on AI Gateway</a>
+        </div>
+        <div class="item-takeaway">Vercel AI Gateway added Kimi K3, but that is a packaging follow-on to the main model launch.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Jul/17/spot-birds-not-golf/#atom-everything" target="_blank" rel="noopener">Spot birds not golf</a>
+        </div>
+        <div class="item-takeaway">Water-use commentary post, not a developer, tooling, or platform update.</div>
         <div class="item-meta">
           <span>simon-willison</span>
         </div>
@@ -346,9 +291,86 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.pigeonsandplanes.com/read/music-piracy-what-cd-oink-nine-inch-nails-streaming" target="_blank" rel="noopener">The lost joy of music piracy</a>
+          <a href="https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/#atom-everything" target="_blank" rel="noopener">Firefox in WebAssembly</a>
         </div>
-        <div class="item-takeaway">Culture/nostalgia essay on music piracy; entertainment.</div>
+        <div class="item-takeaway">Firefox compiled to WebAssembly is impressive engineering, but not yet a practical workflow change.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Jul/16/kimi-k3/#atom-everything" target="_blank" rel="noopener">Kimi K3, and what we can still learn from the pelican benchmark</a>
+        </div>
+        <div class="item-takeaway">Simon Willison’s Kimi K3 analysis adds context, but the official launch is the better primary item.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything" target="_blank" rel="noopener">Quoting Thibault Sottiaux</a>
+        </div>
+        <div class="item-takeaway">OpenAI’s Thibault Sottiaux says unexpected file deletions cluster around full-access runs without sandboxing.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://simonwillison.net/2026/Jul/16/inkling/#atom-everything" target="_blank" rel="noopener">Inkling: Our open-weights model</a>
+        </div>
+        <div class="item-takeaway">Thinking Machines released Inkling, a 975B/41B-active Apache-2.0 multimodal base model with 1M context.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Jul/16/mermaid-ascii/#atom-everything" target="_blank" rel="noopener">Mermaid to ASCII art (mermaid-ascii)</a>
+        </div>
+        <div class="item-takeaway">Mermaid-to-ASCII tool update is neat, but too small for the morning memo.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Jul/16/linus-torvalds/#atom-everything" target="_blank" rel="noopener">Quoting Linus Torvalds</a>
+        </div>
+        <div class="item-takeaway">Linus says Linux is not anti-AI, but this is commentary rather than a workflow change.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003876" target="_blank" rel="noopener">EEG shows brain can simultaneous encode two speech streams</a>
+        </div>
+        <div class="item-takeaway">Interesting neuroscience paper, but outside the AI/dev-tooling editorial lane.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.smithsonianmag.com/smart-news/how-has-roman-concrete-lasted-for-millennia-a-1900-year-old-latrine-offers-new-clues-about-the-materials-impressive-durability-180989115/" target="_blank" rel="noopener">How Has Roman Concrete Lasted for Millennia? 1,900-Year-Old Latrine Offers Clues</a>
+        </div>
+        <div class="item-takeaway">Roman concrete durability story is interesting science, but not relevant to the memo audience.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -357,9 +379,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://thinkingmachines.ai/news/introducing-inkling/" target="_blank" rel="noopener">Inkling: Our Open-Weights Model</a>
+          <a href="https://www.kimi.com/blog/kimi-k3" target="_blank" rel="noopener">Kimi K3: Open Frontier Intelligence</a>
         </div>
-        <div class="item-takeaway">Thinking Machines released Inkling, an open-weights model. An open-weights release from a well-funded lab is decision-relevant for anyone running or fine-tuning models locally: it's another candidate to evaluate against your current local stack. Details/benchmarks were not readable from the fetched item, so treat leverage claims as unverified until you check licence and sizes.</div>
+        <div class="item-takeaway">Moonshot launched Kimi K3: 2.8T params, 1M context, API pricing at $3 in/$15 out per MTok, weights due July 27.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -368,9 +390,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://madcampos.dev/blog/2026/07/accessibility-from-scratch/" target="_blank" rel="noopener">If you want to create a button from scratch, you must first create the universe</a>
+          <a href="https://repebble.com/blog/pebble-mega-update-july-2026" target="_blank" rel="noopener">Pebble Mega Update – July 2026</a>
         </div>
-        <div class="item-takeaway">Evergreen accessibility tutorial; useful but not news and no near-term decision impact.</div>
+        <div class="item-takeaway">Pebble watch update is outside the AI/dev-tooling lane for this memo.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -379,9 +401,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://mort.coffee/home/sqlite-editions/" target="_blank" rel="noopener">SQLite should have (Rust-style) editions</a>
+          <a href="https://www.ti.com/lit/eb/slyy228/slyy228.pdf?ts=1759892558029" target="_blank" rel="noopener">An Engineer's Guide to USB Typе-С (2024)</a>
         </div>
-        <div class="item-takeaway">Opinion proposal about SQLite versioning; speculative, no action.</div>
+        <div class="item-takeaway">TI’s USB-C guide is useful reference material, but not a new development.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -390,9 +412,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.openculture.com/2026/07/explore-1300-beautiful-wildlife-illustrations-from-the-19th-century.html" target="_blank" rel="noopener">1,300 Beautiful Wildlife Illustrations from the 19th Century Now Restored</a>
+          <a href="https://opensource.microsoft.com/blog/2026/07/16/microsoft-comic-chat-is-now-open-source/" target="_blank" rel="noopener">Microsoft Comic Chat is now open source</a>
         </div>
-        <div class="item-takeaway">19th-century wildlife illustrations; entertainment/culture, off-topic.</div>
+        <div class="item-takeaway">Microsoft open-sourced Comic Chat, but it is more nostalgia than actionable leverage.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -401,9 +423,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://github.com/xai-org/grok-build" target="_blank" rel="noopener">Grok Build is open source</a>
+          <a href="https://www.mixfont.com/experiments/decoy-font" target="_blank" rel="noopener">Decoy Font</a>
         </div>
-        <div class="item-takeaway">Duplicate of the Simon Willison grok-build write-up (kept #39, the better-sourced version).</div>
+        <div class="item-takeaway">Decoy Font is a design experiment, not a developer platform or workflow update.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -412,9 +434,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://planetscale.com/blog/making-768-servers-look-like-1" target="_blank" rel="noopener">Making 768 servers look like 1</a>
+          <a href="https://lmstudio.ai/blog/introducing-lm-studio-bionic" target="_blank" rel="noopener">LM Studio Bionic: the AI agent for open models</a>
         </div>
-        <div class="item-takeaway">Large-scale sharding architecture story; impressive but not relevant to a solo/single-node stack.</div>
+        <div class="item-takeaway">LM Studio Bionic may matter later, but this launch note is too thin for today’s memo.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -423,9 +445,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://atproto.com/blog/at-protocol-trademark" target="_blank" rel="noopener">Bluesky Trademarks ATProto</a>
+          <a href="https://privacypros.com.au/privacy-hub/articles/dv-safe-phone-australia/" target="_blank" rel="noopener">GrapheneOS recommended for domestic abuse victims</a>
         </div>
-        <div class="item-takeaway">ATProto trademark housekeeping; niche protocol-governance signal, no action.</div>
+        <div class="item-takeaway">GrapheneOS safety advice is important, but it is outside this AI/dev-tooling brief.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -434,20 +456,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.siegelendowment.org/wp-content/uploads/2026/07/fortune-david-siegel-open-source-ai.pdf" target="_blank" rel="noopener">Governments, companies, nonprofits should invest in free, open source AI [pdf]</a>
+          <a href="https://www.tryai.dev/blog/ai-music-video-arena-claude-vs-gpt-5.6" target="_blank" rel="noopener">$100 AI Music Video: Claude Fable 5 vs. GPT-5.6 Sol</a>
         </div>
-        <div class="item-takeaway">Opinion/advocacy PDF on funding open-source AI; editorial, not decision-changing.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://www.reuters.com/business/finance/stripe-advent-offer-buy-paypal-more-than-53-billion-sources-say-2026-07-15/" target="_blank" rel="noopener">Stripe and Advent have made a joint offer to acquire PayPal – sources</a>
-        </div>
-        <div class="item-takeaway">Reuters reports Stripe and Advent have made a joint offer (&gt;$53B) to acquire PayPal. If it happens, it reshapes payments consolidation and could affect Stripe's roadmap and pricing over time. It's a sourced rumor, not a signed deal, so no action today beyond awareness if you bill through Stripe or PayPal.</div>
+        <div class="item-takeaway">AI music-video comparison is more demo content than decision-grade signal.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -456,9 +467,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://davidobando.github.io/gsharp/" target="_blank" rel="noopener">G# – A modern .NET language with Go, Kotlin, and Swift ergonomics</a>
+          <a href="https://solod.dev" target="_blank" rel="noopener">Solod: Go can be a better C</a>
         </div>
-        <div class="item-takeaway">Hobby .NET language experiment; no leverage.</div>
+        <div class="item-takeaway">Solod may be interesting for systems hackers, but not enough signal for this memo.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -467,9 +478,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.brt.fyi/posts/mac-book-filing/" target="_blank" rel="noopener">I also filed the corners off my MacBook</a>
+          <a href="https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/" target="_blank" rel="noopener">NotebookLM is now Gemini Notebook</a>
         </div>
-        <div class="item-takeaway">Personal hardware-mod blog post; entertainment.</div>
+        <div class="item-takeaway">NotebookLM becoming Gemini Notebook looks mostly like product packaging, not a major workflow change.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -478,9 +489,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://pmbanugo.me/blog/why-async-await-complect-concurrency" target="_blank" rel="noopener">The Tokio/Rayon Trap and Why Async/Await Fails Concurrency</a>
+          <a href="https://github.com/alxndrTL/little-book-rl/" target="_blank" rel="noopener">The Little Book of Reinforcement Learning</a>
         </div>
-        <div class="item-takeaway">Rust async/concurrency deep-dive; niche, no current-stack relevance.</div>
+        <div class="item-takeaway">The Little Book of Reinforcement Learning is a useful resource, but not a memo item.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -489,9 +500,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.neomindlabs.com/2026/06/08/running-gemma-4-26b-at-5-tokens-sec-on-a-13-year-old-xeon-with-no-gpu/" target="_blank" rel="noopener">Running Gemma 4 26B at 5 tokens/sec on a 13-year-old Xeon with no GPU</a>
+          <a href="https://earthquake.usgs.gov/earthquakes/eventpage/us7000t13l/executive" target="_blank" rel="noopener">M 3.9 Experimental Explosion – 147 Km ENE of Ponce Inlet, Florida</a>
         </div>
-        <div class="item-takeaway">Niche 'local LLM on ancient hardware' curiosity; no practical leverage at 5 tok/s.</div>
+        <div class="item-takeaway">USGS explosion report is real, but unrelated to the memo’s editorial scope.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -500,9 +511,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://typesanitizer.com/blog/job-queues.html" target="_blank" rel="noopener">Job queues are deceptively tricky</a>
+          <a href="https://immersivemath.com/ila/" target="_blank" rel="noopener">Immersive Linear Algebra Book with Interactive Figures (2015)</a>
         </div>
-        <div class="item-takeaway">Evergreen engineering essay on job-queue pitfalls; no immediate decision.</div>
+        <div class="item-takeaway">Immersive Math is a nice evergreen resource, but not relevant news for today.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -511,20 +522,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://clig.dev/" target="_blank" rel="noopener">Command Line Interface Guidelines</a>
+          <a href="https://blog.lyc8503.net/en/post/llm-classifier/" target="_blank" rel="noopener">Detecting LLM-Generated Texts with “Classical” Machine Learning</a>
         </div>
-        <div class="item-takeaway">Evergreen CLI-design guide, not news; well-known reference with high novelty penalty.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://blog.greg.technology/2026/07/14/llm-networking-with-mikrotik.html" target="_blank" rel="noopener">LLM Networking with MikroTik</a>
-        </div>
-        <div class="item-takeaway">Niche home-lab networking write-up; hobbyist, off-topic.</div>
+        <div class="item-takeaway">Classical ML for LLM-text detection may be useful research, but not a top memo item.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -534,76 +534,76 @@
       <summary>Original markdown</summary>
       <pre class="raw-report"># Nightly Librarian — Newsletter draft
 
-Run: e776bbbb-5678-4dbf-8c2b-407a930f98cc
-Started: 2026-07-17T06:10:14.972Z
-Completed: 2026-07-17T06:16:48.630Z
+Run: e6765f0b-a422-4c85-8f2c-95e7cbb4b5d0
+Started: 2026-07-17T11:02:22.297Z
+Completed: 2026-07-17T11:09:51.982Z
 
 ## Worth attention
 
-- **How I tricked Claude into leaking your deepest, darkest secrets**
-  https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything
-  Ayush Paul found a hole in Claude's web_fetch exfiltration protections (write-up via Simon Willison). web_fetch normally only visits user- or search-supplied URLs, but it also followed URLs embedded in pages it had already fetched — so a honeypot page can chain the agent into exfiltrating memory/answers via attacker URLs. If you build agents with fetch + private context, treat 'follow links from fetched pages' as an exfiltration vector and constrain it.
-- **xai-org/grok-build, now open source**
-  https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything
-  xAI's grok CLI was found to upload the entire working directory (users reported SSH keys, password DBs, documents) to xAI cloud buckets; xAI disabled the feature, said it deleted uploaded data, and open-sourced the whole Grok Build codebase (Apache 2.0) to rebuild trust. Lesson: audit what any coding-agent CLI transmits before running it in a real directory; the open-source drop lets you inspect it directly.
-- **Test out the Neon backend: Object Storage, Functions, and AI Gateway are beta**
-  https://neon.com/blog/neon-backend-is-beta
-  Neon put Object Storage, Functions, and an AI Gateway into beta: object storage that branches with your data, compute next to the DB, and one API/one bill fronting seven model providers (backed by Databricks). You can declare a full backend in a single neon.ts and `neon deploy`. The AI Gateway (one key, seven providers, one invoice) is the decision-relevant piece for agent builders wanting to consolidate model spend.
-- **Inkling: Our Open-Weights Model**
-  https://thinkingmachines.ai/news/introducing-inkling/
-  Thinking Machines released Inkling, an open-weights model. An open-weights release from a well-funded lab is decision-relevant for anyone running or fine-tuning models locally: it's another candidate to evaluate against your current local stack. Details/benchmarks were not readable from the fetched item, so treat leverage claims as unverified until you check licence and sizes.
-- **Stripe and Advent have made a joint offer to acquire PayPal – sources**
-  https://www.reuters.com/business/finance/stripe-advent-offer-buy-paypal-more-than-53-billion-sources-say-2026-07-15/
-  Reuters reports Stripe and Advent have made a joint offer (&gt;$53B) to acquire PayPal. If it happens, it reshapes payments consolidation and could affect Stripe's roadmap and pricing over time. It's a sourced rumor, not a signed deal, so no action today beyond awareness if you bill through Stripe or PayPal.
-- **v0.32.1**
-  https://github.com/ollama/ollama/releases/tag/v0.32.1
-  Ollama 0.32.1 ships improved Gemma 4 tool calling and multi-turn reasoning, fixes a recurrent MLX model-cache memory leak that grew across requests, and makes the agent web-search/fetch prompt for `ollama signin` when auth is needed. If you run Ollama locally for agent work, the MLX leak fix alone is worth updating for.
-- **Provision Your Entire Stack with Neon and Stripe Projects Build**
-  https://neon.com/blog/provision-your-stack-neon-stripe-projects-build
-  Neon added `stripe projects build`-style scaffolding: discover and provision a fully-wired stack template in a single command. Useful if you spin up new Postgres-backed projects often and want agent-friendly scaffolding, but it's a narrow vendor workflow tied to Neon+Stripe.
+- **Security incident disclosure — July 2026**
+  https://huggingface.co/blog/security-incident-july-2026
+  Hugging Face disclosed an AI-driven intrusion via dataset-processing bugs; rotate tokens and review exposure.
+- **Quoting Thibault Sottiaux**
+  https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything
+  OpenAI’s Thibault Sottiaux says unexpected file deletions cluster around full-access runs without sandboxing.
+- **Kimi K3: Open Frontier Intelligence**
+  https://www.kimi.com/blog/kimi-k3
+  Moonshot launched Kimi K3: 2.8T params, 1M context, API pricing at $3 in/$15 out per MTok, weights due July 27.
+- **Unified Logs is now in open beta**
+  https://supabase.com/blog/unified-logs-open-beta
+  Supabase now shows gateway, Postgres, Auth, Storage, and Realtime logs in one searchable stream.
+- **Runtime logs now show cache reasons**
+  https://vercel.com/changelog/runtime-logs-now-show-cache-reasons
+  Vercel runtime logs now expose cache-miss reasons like revalidation, bypass, and stale states.
+- **Write utilization now available in ISR Observability**
+  https://vercel.com/changelog/write-utilization-now-available-in-isr-observability
+  Vercel added ISR write-utilization, a metric for pages that regenerate often without enough cached reads.
+- **Inkling: Our open-weights model**
+  https://simonwillison.net/2026/Jul/16/inkling/#atom-everything
+  Thinking Machines released Inkling, a 975B/41B-active Apache-2.0 multimodal base model with 1M context.
 
 ## Full digest
 
-- [P] [gh-ollama] v0.32.1 — https://github.com/ollama/ollama/releases/tag/v0.32.1 — Ollama 0.32.1 ships improved Gemma 4 tool calling and multi-turn reasoning, fixes a recurrent MLX model-cache memory leak that grew across requests, and makes the agent web-search/fetch prompt for `ollama signin` when auth is needed. If you run Ollama locally for agent work, the MLX leak fix alone is worth updating for.
-- [R] [gh-composio] CLI Beta @composio/cli@0.2.33-beta.291 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.2.33-beta.291 — Docs-only beta bump for the Composio CLI; no user-facing change.
-- [R] [hn-show] Show HN: One More Letter — https://playonemoreletter.com/ — Browser word game; entertainment.
-- [R] [hn-show] Show HN: Firefox in WebAssembly — https://developer.puter.com/labs/firefox-wasm/ — Impressive engineering demo (Firefox compiled to WASM) but no practical leverage or decision for a solo builder.
-- [R] [hn-show] Show HN: misa77 - a codec that decodes 2x faster than LZ4 (at better ratios) — https://github.com/welcome-to-the-sunny-side/misa77 — Niche compression codec Show HN; interesting benchmarks but no relevance to current or likely work.
-- [P] [neon-blog] Test out the Neon backend: Object Storage, Functions, and AI Gateway are beta — https://neon.com/blog/neon-backend-is-beta — Neon put Object Storage, Functions, and an AI Gateway into beta: object storage that branches with your data, compute next to the DB, and one API/one bill fronting seven model providers (backed by Databricks). You can declare a full backend in a single neon.ts and `neon deploy`. The AI Gateway (one key, seven providers, one invoice) is the decision-relevant piece for agent builders wanting to consolidate model spend.
-- [P] [neon-blog] Provision Your Entire Stack with Neon and Stripe Projects Build — https://neon.com/blog/provision-your-stack-neon-stripe-projects-build — Neon added `stripe projects build`-style scaffolding: discover and provision a fully-wired stack template in a single command. Useful if you spin up new Postgres-backed projects often and want agent-friendly scaffolding, but it's a narrow vendor workflow tied to Neon+Stripe.
-- [R] [reddit-saas] If WhatsApp is free and ad-fre... How does it pay for the infrastructure behind billions of messages every single day? — https://www.reddit.com/r/SaaS/comments/1uxvce9/if_whatsapp_is_free_and_adfre_how_does_it_pay_for/ — Reddit explainer question about WhatsApp economics; off-topic.
-- [R] [reddit-saas] MRR P0rn - 6 years of Grinding - Thanks AI! — https://www.reddit.com/r/SaaS/comments/1uxmbmg/mrr_p0rn_6_years_of_grinding_thanks_ai/ — Reddit 'MRR porn' brag thread; engagement bait.
-- [R] [reddit-saas] I have enough runway to quit my software job, but I’m afraid of working hard inside an echo chamber — https://www.reddit.com/r/SaaS/comments/1uxpk90/i_have_enough_runway_to_quit_my_software_job_but/ — Reddit personal-career venting; no builder signal.
-- [R] [reddit-saas] I’m a 5 year old with a $100K MRR SaaS. Here’s what I did. — https://www.reddit.com/r/SaaS/comments/1uxd18n/im_a_5_year_old_with_a_100k_mrr_saas_heres_what_i/ — Reddit clickbait MRR claim; unverifiable, likely inflated.
-- [R] [reddit-saas] Researching my niche competitors, I found that they are vibe coding too much. They just develop and don't test anything. — https://www.reddit.com/r/SaaS/comments/1uxqtec/researching_my_niche_competitors_i_found_that/ — Reddit anecdote about competitors vibe-coding; thin.
-- [R] [reddit-saas] 200 dead startups later, I owe every founder an apology. — https://www.reddit.com/r/SaaS/comments/1ux6svc/200_dead_startups_later_i_owe_every_founder_an/ — Reddit engagement-bait retrospective; no verifiable signal.
-- [R] [reddit-saas] Just got my first sale. It came from word of mouth, not marketing — https://www.reddit.com/r/SaaS/comments/1uxgft5/just_got_my_first_sale_it_came_from_word_of_mouth/ — Reddit anecdote about a first sale; thin, no leverage.
-- [R] [reddit-saas] What's the best acquisition strategy for a SaaS in 2026? — https://www.reddit.com/r/SaaS/comments/1uxvlal/whats_the_best_acquisition_strategy_for_a_saas_in/ — Reddit open question on SaaS acquisition strategy; speculative discussion.
-- [R] [reddit-saas] I don't think most SaaS products fail because of bad code anymore — https://www.reddit.com/r/SaaS/comments/1uxv9m2/i_dont_think_most_saas_products_fail_because_of/ — Reddit opinion on why SaaS fails; generic, no evidence.
-- [R] [lobsters] TLS Certificate Validation on Linux — https://www.tomica.net/blog/2026/07/tls-certificate-validation-on-linux/ — Evergreen TLS-on-Linux reference; useful but not news.
-- [R] [lobsters] The Shape of Apps — https://parakeet.co/blog/the-shape-of-apps/ — Generic 'shape of apps' opinion post; trend filler.
-- [R] [lobsters] Over the Edge 2.0: Microsoft’s Design Tactics Still Undermine Browser Choice — https://research.mozilla.org/browser-competition/over-the-edge-2/ — Browser-competition advocacy research; political/advocacy, no builder action.
-- [R] [lobsters] How to unionize your tech workplace — https://www.computerworld.com/article/4192438/how-to-unionize-your-tech-workplace.html — Workplace-unionization how-to; off-topic, culture/labor.
-- [R] [simon-willison] Mermaid to Unicode box art (grok-mermaid) — https://simonwillison.net/2026/Jul/16/grok-mermaid/#atom-everything — Minor toy tool (Mermaid to Unicode box art); low leverage.
-- [P] [simon-willison] xai-org/grok-build, now open source — https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything — xAI's grok CLI was found to upload the entire working directory (users reported SSH keys, password DBs, documents) to xAI cloud buckets; xAI disabled the feature, said it deleted uploaded data, and open-sourced the whole Grok Build codebase (Apache 2.0) to rebuild trust. Lesson: audit what any coding-agent CLI transmits before running it in a real directory; the open-source drop lets you inspect it directly.
-- [P] [simon-willison] How I tricked Claude into leaking your deepest, darkest secrets — https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything — Ayush Paul found a hole in Claude's web_fetch exfiltration protections (write-up via Simon Willison). web_fetch normally only visits user- or search-supplied URLs, but it also followed URLs embedded in pages it had already fetched — so a honeypot page can chain the agent into exfiltrating memory/answers via attacker URLs. If you build agents with fetch + private context, treat 'follow links from fetched pages' as an exfiltration vector and constrain it.
-- [R] [hn-top] The lost joy of music piracy — https://www.pigeonsandplanes.com/read/music-piracy-what-cd-oink-nine-inch-nails-streaming — Culture/nostalgia essay on music piracy; entertainment.
-- [P] [hn-top] Inkling: Our Open-Weights Model — https://thinkingmachines.ai/news/introducing-inkling/ — Thinking Machines released Inkling, an open-weights model. An open-weights release from a well-funded lab is decision-relevant for anyone running or fine-tuning models locally: it's another candidate to evaluate against your current local stack. Details/benchmarks were not readable from the fetched item, so treat leverage claims as unverified until you check licence and sizes.
-- [R] [hn-top] If you want to create a button from scratch, you must first create the universe — https://madcampos.dev/blog/2026/07/accessibility-from-scratch/ — Evergreen accessibility tutorial; useful but not news and no near-term decision impact.
-- [R] [hn-top] SQLite should have (Rust-style) editions — https://mort.coffee/home/sqlite-editions/ — Opinion proposal about SQLite versioning; speculative, no action.
-- [R] [hn-top] 1,300 Beautiful Wildlife Illustrations from the 19th Century Now Restored — https://www.openculture.com/2026/07/explore-1300-beautiful-wildlife-illustrations-from-the-19th-century.html — 19th-century wildlife illustrations; entertainment/culture, off-topic.
-- [R] [hn-top] Grok Build is open source — https://github.com/xai-org/grok-build — Duplicate of the Simon Willison grok-build write-up (kept #39, the better-sourced version).
-- [R] [hn-top] Making 768 servers look like 1 — https://planetscale.com/blog/making-768-servers-look-like-1 — Large-scale sharding architecture story; impressive but not relevant to a solo/single-node stack.
-- [R] [hn-top] Bluesky Trademarks ATProto — https://atproto.com/blog/at-protocol-trademark — ATProto trademark housekeeping; niche protocol-governance signal, no action.
-- [R] [hn-top] Governments, companies, nonprofits should invest in free, open source AI [pdf] — https://www.siegelendowment.org/wp-content/uploads/2026/07/fortune-david-siegel-open-source-ai.pdf — Opinion/advocacy PDF on funding open-source AI; editorial, not decision-changing.
-- [P] [hn-top] Stripe and Advent have made a joint offer to acquire PayPal – sources — https://www.reuters.com/business/finance/stripe-advent-offer-buy-paypal-more-than-53-billion-sources-say-2026-07-15/ — Reuters reports Stripe and Advent have made a joint offer (&gt;$53B) to acquire PayPal. If it happens, it reshapes payments consolidation and could affect Stripe's roadmap and pricing over time. It's a sourced rumor, not a signed deal, so no action today beyond awareness if you bill through Stripe or PayPal.
-- [R] [hn-top] G# – A modern .NET language with Go, Kotlin, and Swift ergonomics — https://davidobando.github.io/gsharp/ — Hobby .NET language experiment; no leverage.
-- [R] [hn-top] I also filed the corners off my MacBook — https://www.brt.fyi/posts/mac-book-filing/ — Personal hardware-mod blog post; entertainment.
-- [R] [hn-top] The Tokio/Rayon Trap and Why Async/Await Fails Concurrency — https://pmbanugo.me/blog/why-async-await-complect-concurrency — Rust async/concurrency deep-dive; niche, no current-stack relevance.
-- [R] [hn-top] Running Gemma 4 26B at 5 tokens/sec on a 13-year-old Xeon with no GPU — https://www.neomindlabs.com/2026/06/08/running-gemma-4-26b-at-5-tokens-sec-on-a-13-year-old-xeon-with-no-gpu/ — Niche 'local LLM on ancient hardware' curiosity; no practical leverage at 5 tok/s.
-- [R] [hn-top] Job queues are deceptively tricky — https://typesanitizer.com/blog/job-queues.html — Evergreen engineering essay on job-queue pitfalls; no immediate decision.
-- [R] [hn-top] Command Line Interface Guidelines — https://clig.dev/ — Evergreen CLI-design guide, not news; well-known reference with high novelty penalty.
-- [R] [hn-top] LLM Networking with MikroTik — https://blog.greg.technology/2026/07/14/llm-networking-with-mikrotik.html — Niche home-lab networking write-up; hobbyist, off-topic.</pre>
+- [R] [reddit-saas] Launched a curated app store 3 days ago, and 1 in 5 visitors click through, and the first 60 seconds decides almost everything. — https://www.reddit.com/r/SaaS/comments/1uymw9h/launched_a_curated_app_store_3_days_ago_and_1_in/ — Single founder anecdote on app-store conversion; useful color, not decision-grade evidence.
+- [R] [reddit-saas] Legal-tech startup in Berlin looking for a third co-founder (Product/Growth) — https://www.reddit.com/r/SaaS/comments/1uyqp0d/legaltech_startup_in_berlin_looking_for_a_third/ — Cofounder search post, not a product, platform, or market update.
+- [R] [reddit-saas] How are you managing permissions across your AI stack? — https://www.reddit.com/r/SaaS/comments/1uyq1gk/how_are_you_managing_permissions_across_your_ai/ — Permissions hygiene discussion prompt; no concrete incident, tool, or practice change.
+- [R] [reddit-saas] How did you actually find your first 10 users? — https://www.reddit.com/r/SaaS/comments/1uxzooc/how_did_you_actually_find_your_first_10_users/ — Generic first-users question thread, not a new tactic or measured result.
+- [R] [reddit-saas] Quick validation on my idea and problem that I solved for myself — https://www.reddit.com/r/SaaS/comments/1uyt9c8/quick_validation_on_my_idea_and_problem_that_i/ — Founder idea-validation post with no launch, users, or hard evidence yet.
+- [R] [reddit-saas] Thinking about building an AI customer success agent, is this actually useful or overkill — https://www.reddit.com/r/SaaS/comments/1uyt748/thinking_about_building_an_ai_customer_success/ — Speculative AI customer-success agent idea, not a launch or measured builder report.
+- [R] [gh-nextjs] v16.3.0-canary.88 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.88 — Routine Next.js canary fixes and flags, not a stable release worth highlighting.
+- [R] [huggingface-blog] NVIDIA Nemotron 3 Embed Ranks #1 Overall on RTEB, Advancing Agentic Retrieval — https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb — Nemotron embedding benchmark claim; interesting, but too benchmark-led for the memo.
+- [R] [huggingface-blog] Newer Models, Same Advantage — https://huggingface.co/blog/Dharma-AI/newer-models-same-advantages — Opinion piece on newer models, without a concrete release or decision signal.
+- [P] [huggingface-blog] Security incident disclosure — July 2026 — https://huggingface.co/blog/security-incident-july-2026 — Hugging Face disclosed an AI-driven intrusion via dataset-processing bugs; rotate tokens and review exposure.
+- [P] [supabase-blog] Unified Logs is now in open beta — https://supabase.com/blog/unified-logs-open-beta — Supabase now shows gateway, Postgres, Auth, Storage, and Realtime logs in one searchable stream.
+- [R] [pragmatic-engineer] The Pulse: What can we learn from Bun’s rapid Rust rewrite with AI? — https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-buns-rapid-rust-rewrite-with-ai/ — Commentary on Bun’s AI-assisted rewrite economics, but no new product or platform shift.
+- [R] [latent-space] [AINews] Kimi K3 2.8T-A50B: the largest open model ever released; Opus 4.8-class at Sonnet 5 pricing — https://www.latent.space/p/ainews-kimi-k3-28t-a50b-the-largest — Latent Space roundup echoes the Kimi K3 launch; keeping the primary source instead.
+- [R] [latent-space] 🔬 The Lab of the Future Should Feel Like a Data Center — Andy Beam &amp; Rafa Gómez-Bombarelli, Lila Sciences — https://www.latent.space/p/the-lab-of-the-future-should-feel — Lila Sciences profile on robotic labs is interesting, but not an immediate solo-dev decision input.
+- [P] [vercel-changelog] Runtime logs now show cache reasons — https://vercel.com/changelog/runtime-logs-now-show-cache-reasons — Vercel runtime logs now expose cache-miss reasons like revalidation, bypass, and stale states.
+- [P] [vercel-changelog] Write utilization now available in ISR Observability — https://vercel.com/changelog/write-utilization-now-available-in-isr-observability — Vercel added ISR write-utilization, a metric for pages that regenerate often without enough cached reads.
+- [R] [vercel-changelog] Kimi K3 is now available on AI Gateway — https://vercel.com/changelog/kimi-k3-is-now-available-on-ai-gateway — Vercel AI Gateway added Kimi K3, but that is a packaging follow-on to the main model launch.
+- [R] [simon-willison] Spot birds not golf — https://simonwillison.net/2026/Jul/17/spot-birds-not-golf/#atom-everything — Water-use commentary post, not a developer, tooling, or platform update.
+- [R] [simon-willison] Firefox in WebAssembly — https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/#atom-everything — Firefox compiled to WebAssembly is impressive engineering, but not yet a practical workflow change.
+- [R] [simon-willison] Kimi K3, and what we can still learn from the pelican benchmark — https://simonwillison.net/2026/Jul/16/kimi-k3/#atom-everything — Simon Willison’s Kimi K3 analysis adds context, but the official launch is the better primary item.
+- [P] [simon-willison] Quoting Thibault Sottiaux — https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything — OpenAI’s Thibault Sottiaux says unexpected file deletions cluster around full-access runs without sandboxing.
+- [M] [simon-willison] Inkling: Our open-weights model — https://simonwillison.net/2026/Jul/16/inkling/#atom-everything — Thinking Machines released Inkling, a 975B/41B-active Apache-2.0 multimodal base model with 1M context.
+- [R] [simon-willison] Mermaid to ASCII art (mermaid-ascii) — https://simonwillison.net/2026/Jul/16/mermaid-ascii/#atom-everything — Mermaid-to-ASCII tool update is neat, but too small for the morning memo.
+- [R] [simon-willison] Quoting Linus Torvalds — https://simonwillison.net/2026/Jul/16/linus-torvalds/#atom-everything — Linus says Linux is not anti-AI, but this is commentary rather than a workflow change.
+- [R] [hn-top] EEG shows brain can simultaneous encode two speech streams — https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003876 — Interesting neuroscience paper, but outside the AI/dev-tooling editorial lane.
+- [R] [hn-top] How Has Roman Concrete Lasted for Millennia? 1,900-Year-Old Latrine Offers Clues — https://www.smithsonianmag.com/smart-news/how-has-roman-concrete-lasted-for-millennia-a-1900-year-old-latrine-offers-new-clues-about-the-materials-impressive-durability-180989115/ — Roman concrete durability story is interesting science, but not relevant to the memo audience.
+- [P] [hn-top] Kimi K3: Open Frontier Intelligence — https://www.kimi.com/blog/kimi-k3 — Moonshot launched Kimi K3: 2.8T params, 1M context, API pricing at $3 in/$15 out per MTok, weights due July 27.
+- [R] [hn-top] Pebble Mega Update – July 2026 — https://repebble.com/blog/pebble-mega-update-july-2026 — Pebble watch update is outside the AI/dev-tooling lane for this memo.
+- [R] [hn-top] An Engineer's Guide to USB Typе-С (2024) — https://www.ti.com/lit/eb/slyy228/slyy228.pdf?ts=1759892558029 — TI’s USB-C guide is useful reference material, but not a new development.
+- [R] [hn-top] Microsoft Comic Chat is now open source — https://opensource.microsoft.com/blog/2026/07/16/microsoft-comic-chat-is-now-open-source/ — Microsoft open-sourced Comic Chat, but it is more nostalgia than actionable leverage.
+- [R] [hn-top] Decoy Font — https://www.mixfont.com/experiments/decoy-font — Decoy Font is a design experiment, not a developer platform or workflow update.
+- [R] [hn-top] LM Studio Bionic: the AI agent for open models — https://lmstudio.ai/blog/introducing-lm-studio-bionic — LM Studio Bionic may matter later, but this launch note is too thin for today’s memo.
+- [R] [hn-top] GrapheneOS recommended for domestic abuse victims — https://privacypros.com.au/privacy-hub/articles/dv-safe-phone-australia/ — GrapheneOS safety advice is important, but it is outside this AI/dev-tooling brief.
+- [R] [hn-top] $100 AI Music Video: Claude Fable 5 vs. GPT-5.6 Sol — https://www.tryai.dev/blog/ai-music-video-arena-claude-vs-gpt-5.6 — AI music-video comparison is more demo content than decision-grade signal.
+- [R] [hn-top] Solod: Go can be a better C — https://solod.dev — Solod may be interesting for systems hackers, but not enough signal for this memo.
+- [R] [hn-top] NotebookLM is now Gemini Notebook — https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/ — NotebookLM becoming Gemini Notebook looks mostly like product packaging, not a major workflow change.
+- [R] [hn-top] The Little Book of Reinforcement Learning — https://github.com/alxndrTL/little-book-rl/ — The Little Book of Reinforcement Learning is a useful resource, but not a memo item.
+- [R] [hn-top] M 3.9 Experimental Explosion – 147 Km ENE of Ponce Inlet, Florida — https://earthquake.usgs.gov/earthquakes/eventpage/us7000t13l/executive — USGS explosion report is real, but unrelated to the memo’s editorial scope.
+- [R] [hn-top] Immersive Linear Algebra Book with Interactive Figures (2015) — https://immersivemath.com/ila/ — Immersive Math is a nice evergreen resource, but not relevant news for today.
+- [R] [hn-top] Detecting LLM-Generated Texts with “Classical” Machine Learning — https://blog.lyc8503.net/en/post/llm-classifier/ — Classical ML for LLM-text detection may be useful research, but not a top memo item.</pre>
     </details>
   </main>
   <footer>
