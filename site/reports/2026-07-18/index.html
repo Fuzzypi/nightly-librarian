@@ -5,21 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>July 18, 2026 report log — The Nightly Librarian</title>
-  <meta name="description" content="8 stories cleared the bar, led by Google connects third-party apps to Search AI Mode, Leaves — a text-UI disk usage treemap visualizer, and The">
+  <meta name="description" content="6 stories cleared the bar, led by Cloudflare adds WAF coverage for two new WordPress vulnerabilities, Dify 1.16.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-07-18/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="July 18, 2026 report log | The Nightly Librarian">
-  <meta property="og:description" content="8 stories cleared the bar, led by Google connects third-party apps to Search AI Mode, Leaves — a text-UI disk usage treemap visualizer, and The">
+  <meta property="og:description" content="6 stories cleared the bar, led by Cloudflare adds WAF coverage for two new WordPress vulnerabilities, Dify 1.16.">
   <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-07-18/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="July 18, 2026 report log | The Nightly Librarian">
-  <meta name="twitter:description" content="8 stories cleared the bar, led by Google connects third-party apps to Search AI Mode, Leaves — a text-UI disk usage treemap visualizer, and The">
+  <meta name="twitter:description" content="6 stories cleared the bar, led by Cloudflare adds WAF coverage for two new WordPress vulnerabilities, Dify 1.16.">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
@@ -36,7 +36,7 @@
     </div>
     <div class="dateline">
       <span>July 18, 2026 · Report log</span>
-      <span>Jul 18, 2026, 2:14 AM</span>
+      <span>Jul 18, 2026, 7:07 AM</span>
     </div>
   </header>
   <main>
@@ -44,52 +44,42 @@
     <h1>July 18, 2026</h1>
     <div class="summary-card">
       <div class="eyebrow">Report summary</div>
-      <p>8 stories cleared the bar, led by Google connects third-party apps to Search AI Mode, Leaves — a text-UI disk usage treemap visualizer, and The Human-in-the-Loop is Tired.</p>
+      <p>6 stories cleared the bar, led by Cloudflare adds WAF coverage for two new WordPress vulnerabilities, Dify 1.16.0 adds sandboxed agents and warns users off Chat Completions defaults, and Vercel stops charging Sandbox ingress downloads.</p>
       <div class="meta" style="margin-top:0.4rem;">
-        <span>8 worth-attention items</span><span>40 digest lines</span>
+        <span>6 worth-attention items</span><span>40 digest lines</span>
       </div>
     </div>
     <h2>Worth attention</h2>
     <div class="item-stack">
 
       <div class="item">
-        <div class="item-title"><a href="https://blog.google/products-and-platforms/products/search/connected-apps/" target="_blank" rel="noopener">Google connects third-party apps to Search AI Mode</a></div>
-        <div class="item-takeaway">Google announced that users will be able to securely link external services and interact with them directly inside Search AI Mode. The post is announcement-level only, with no developer surface, partner list, or integration documentation yet. If Search becomes an agent surface that calls into connected apps, it is a distribution channel worth tracking early rather than discovering late.</div>
+        <div class="item-title"><a href="https://blog.cloudflare.com/wordpress-vulnerabilities/" target="_blank" rel="noopener">Cloudflare adds WAF coverage for two new WordPress vulnerabilities</a></div>
+        <div class="item-takeaway">Cloudflare shipped WAF rules for a new WordPress SQL injection flaw (CVE-2026-60137) and a critical unauthenticated RCE (CVE-2026-63030). The practical point is not the rules themselves but the patch window: affected sites on 6.8+ need to verify they are on 6.8.6, 6.9.5, 7.0.2, or 7.1 Beta 2. If you run or advise on WordPress properties, treat this as patch-now, and treat the WAF as temporary exposure reduction rather than the fix.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://github.com/patonw/leaves" target="_blank" rel="noopener">Leaves — a text-UI disk usage treemap visualizer</a></div>
-        <div class="item-takeaway">Rust TUI that renders a WinDirStat-style treemap of disk usage inside a terminal, filling the gap where GUI analyzers cannot reach and ncdu shows only one directory at a time. Multi-threaded and reported to handle millions of files, with per-directory file-type summaries so you see both where space went and what kind. Practical for diagnosing disk pressure on a remote VPS or inside a container.</div>
+        <div class="item-title"><a href="https://github.com/langgenius/dify/releases/tag/1.16.0" target="_blank" rel="noopener">Dify 1.16.0 adds sandboxed agents and warns users off Chat Completions defaults</a></div>
+        <div class="item-takeaway">Dify 1.16.0 launches its new agent experience around a Linux sandbox, skills, agent reuse, and workflow integration, which is notable but still mostly a product-platform expansion story. The more decision-changing part is the explicit warning that older OpenAI plugin setups may still be pinned to Chat Completions and should be moved to Responses, especially for GPT-5.6-family models. If you touch Dify or similar agent builders, audit any saved OpenAI config now instead of waiting for model-specific errors to surface later.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://pydantic.dev/articles/the-human-in-the-loop-is-tired" target="_blank" rel="noopener">The Human-in-the-Loop is Tired</a></div>
-        <div class="item-takeaway">Pydantic essay on the cognitive cost of supervising AI-generated work, opening with a maintainer waking to thirty overnight agent PRs each demanding a snap judgment call. It frames this as a human reward function problem: automation removed the satisfying part of the job and grew the review burden without adding new rewards. The practical implication for anyone running agent fleets is that review throughput, not generation capacity, is the binding constraint, which argues for investing in automated verification and batching rather than more parallel agents.</div>
+        <div class="item-title"><a href="https://vercel.com/changelog/data-downloaded-by-vercel-sandbox-is-now-free" target="_blank" rel="noopener">Vercel stops charging Sandbox ingress downloads</a></div>
+        <div class="item-takeaway">Vercel Sandbox no longer bills for data it downloads from the internet, which means package installs, repo clones, and pulling datasets into a sandbox stop counting toward transfer spend. This matters if you use sandboxes for agent or build tasks with heavy setup cost, because the variable cost profile shifts toward CPU, memory, snapshots, and outbound traffic only. If sandboxed automation is on your shortlist, re-run the cost model with ingress removed before dismissing it as too expensive.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://github.com/crewAIInc/crewAI/releases/tag/1.15.3" target="_blank" rel="noopener">crewAI 1.15.3</a></div>
-        <div class="item-takeaway">Adds execution-boundary interception points and a generic interception-hook dispatcher via @on, plus per-call token usage reporting on kickoff and agent results. The notable behavioural change is that tool-result caching is now opt-in rather than on by default, so upgrades will silently start re-executing tools that were previously cached. Also fixes after_llm_call hooks breaking native tool execution.</div>
+        <div class="item-title"><a href="https://blog.val.town/agents-dot-md" target="_blank" rel="noopener">Val Town now surfaces AGENTS.md to Townie and external agents</a></div>
+        <div class="item-takeaway">Val Town added AGENTS.md support at the val, user, and org levels, and says those instructions are exposed through its MCP server to outside agents like Claude Code, Codex, and Cursor. That makes Val Town more viable as a durable instruction surface rather than just a place to run snippets. If you use Val Town for agent-adjacent tooling, the practical question is whether shared instruction files are now good enough to replace ad hoc prompt scaffolding for small internal tools.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.14" target="_blank" rel="noopener">langchain 1.3.14 adds ToolErrorMiddleware</a></div>
-        <div class="item-takeaway">Adds a new ToolErrorMiddleware for handling tool failures, and narrows ToolRetryMiddleware so it only retries genuinely retryable exceptions. The retry fix removes a real footgun where a deterministic failure would consume the whole retry budget and its token spend.</div>
+        <div class="item-title"><a href="https://vercel.com/changelog/optimized-cdn-caching-and-deploying-of-immutable-static-assets" target="_blank" rel="noopener">Vercel now reuses immutable assets across deployments</a></div>
+        <div class="item-takeaway">Vercel says supported frameworks now reuse content-addressed static assets across deployments with zero config, reporting lower CDN requests and bytes, faster deploys, and materially better TTFB for frequently deployed apps. The practical takeaway is that framework upgrades, especially Next.js 16.3 preview and later, may now buy operational wins without extra infra work. If you deploy often and pay attention to edge cost or cache churn, this is worth a test on a staging branch rather than a blind assumption.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1uysl5t/1_month_since_we_launched_this_what_i_learned/" target="_blank" rel="noopener">One month post-launch: paid acquisition numbers</a></div>
-        <div class="item-takeaway">Founder reports the first month after launching paid plans. Week one produced a single organic payment and revealed a broken funnel; week two started ads. Google Ads delivered the lowest cost-per-result of the channels tried but took roughly a week to exit the learning phase while burning cash, and Meta produced conversations at the highest CPR. Useful calibration that the first week of paid spend is tuition rather than performance.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://github.com/samyeyo/clx" target="_blank" rel="noopener">Clx — compile Lua to native executables through C++20</a></div>
-        <div class="item-takeaway">Ahead-of-time Lua compiler that emits C++20 and hands off to GCC, Clang or MSVC rather than using LLVM directly. The latest release replaces NaN-tagged values with a shadow-types representation, adds full int64 support and ARM64 macOS coroutine support. Author reports beating the Lua interpreter broadly and LuaJIT on some compute-heavy workloads.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://mojibake.zaerl.com/" target="_blank" rel="noopener">Mojibake — a low-level Unicode library in C</a></div>
-        <div class="item-takeaway">Two-file amalgamation C library covering normalization, case conversion, segmentation, bidirectional text, collation and confusables, tested across Linux, macOS, three BSDs and Windows 11. A WASM demo of the full public API is available on the project site.</div>
+        <div class="item-title"><a href="https://jvns.ca/blog/2026/07/17/learning-about-running-sqlite/" target="_blank" rel="noopener">Julia Evans notes a few hard-earned SQLite operations lessons</a></div>
+        <div class="item-takeaway">Julia Evans wrote up practical notes from running SQLite behind a Django site, including a dramatic query-speed improvement from running ANALYZE and the operational pain of long-running deletes when only one writer can proceed at a time. This is not a product launch, but it is grounded builder experience that sharpens the usual “SQLite is fine” advice into something more operationally honest. If you are defaulting small projects to SQLite, keep the article around as a checklist for WAL mode, maintenance batching, and backup discipline.</div>
       </div>
     </div>
     <h2>Full digest</h2>
@@ -98,119 +88,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/vercel%400.11.1" target="_blank" rel="noopener">@composio/vercel@0.11.1</a>
+          <a href="https://github.com/crewAIInc/crewAI/releases/tag/1.15.4" target="_blank" rel="noopener">1.15.4</a>
         </div>
-        <div class="item-takeaway">Patch release that fixes the homepage field in package.json so npm and editor tooltip links stop 404ing. No functional change to the SDK.</div>
-        <div class="item-meta">
-          <span>gh-composio</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/ts-builders%400.2.1" target="_blank" rel="noopener">@composio/ts-builders@0.2.1</a>
-        </div>
-        <div class="item-takeaway">Refreshes dependency ranges and lockfiles across the Composio workspace. No behavioural change.</div>
-        <div class="item-meta">
-          <span>gh-composio</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/slim%400.14.0" target="_blank" rel="noopener">@composio/slim@0.14.0</a>
-        </div>
-        <div class="item-takeaway">Lockfile refresh plus the shared homepage-link fix, with dependency bumps pulled through from sibling packages. Version number implies a minor but the contents are patch-level.</div>
-        <div class="item-meta">
-          <span>gh-composio</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/openai%400.10.1" target="_blank" rel="noopener">@composio/openai@0.10.1</a>
-        </div>
-        <div class="item-takeaway">Normalizes duplicate JSON Schema required entries before provider tool schemas are emitted, alongside the homepage link fix. Minor correctness patch for tool schema generation.</div>
-        <div class="item-meta">
-          <span>gh-composio</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/openai-agents%400.10.1" target="_blank" rel="noopener">@composio/openai-agents@0.10.1</a>
-        </div>
-        <div class="item-takeaway">### Patch Changes - 7125576: Normalize duplicate JSON Schema `required` entries before provider tool schemas are emitted. - 58bc93b: Refresh…</div>
-        <div class="item-meta">
-          <span>gh-composio</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/mastra%400.10.2" target="_blank" rel="noopener">@composio/mastra@0.10.2</a>
-        </div>
-        <div class="item-takeaway">Lockfile refresh and homepage link correction for the Mastra adapter. No functional change.</div>
-        <div class="item-meta">
-          <span>gh-composio</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/llamaindex%400.10.1" target="_blank" rel="noopener">@composio/llamaindex@0.10.1</a>
-        </div>
-        <div class="item-takeaway">Homepage link fix only for the LlamaIndex adapter package.</div>
-        <div class="item-meta">
-          <span>gh-composio</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/langchain%400.10.1" target="_blank" rel="noopener">@composio/langchain@0.10.1</a>
-        </div>
-        <div class="item-takeaway">### Patch Changes - 58bc93b: Refresh dependency ranges and lockfiles across the workspace. - fa933a6: Fix the `homepage` links in these pack…</div>
-        <div class="item-meta">
-          <span>gh-composio</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/json-schema-to-zod%400.2.1" target="_blank" rel="noopener">@composio/json-schema-to-zod@0.2.1</a>
-        </div>
-        <div class="item-takeaway">### Patch Changes - 58bc93b: Refresh dependency ranges and lockfiles across the workspace. - fa933a6: Fix the `homepage` links in these pack…</div>
-        <div class="item-meta">
-          <span>gh-composio</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/google%400.10.1" target="_blank" rel="noopener">@composio/google@0.10.1</a>
-        </div>
-        <div class="item-takeaway">### Patch Changes - 7125576: Normalize duplicate JSON Schema `required` entries before provider tool schemas are emitted. - fa933a6: Fix the…</div>
-        <div class="item-meta">
-          <span>gh-composio</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://github.com/crewAIInc/crewAI/releases/tag/1.15.3" target="_blank" rel="noopener">crewAI 1.15.3</a>
-        </div>
-        <div class="item-takeaway">Adds execution-boundary interception points and a generic interception-hook dispatcher via @on, plus per-call token usage reporting on kickoff and agent results. The notable behavioural change is that tool-result caching is now opt-in rather than on by default, so upgrades will silently start re-executing tools that were previously cached. Also fixes after_llm_call hooks breaking native tool execution.</div>
+        <div class="item-takeaway">Minor crewAI point release with light feature/docs notes; not a meaningful decision change.</div>
         <div class="item-meta">
           <span>gh-crewai</span>
         </div>
@@ -219,108 +99,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://github.com/crewAIInc/crewAI/releases/tag/1.15.3a2" target="_blank" rel="noopener">crewAI 1.15.3a2</a>
+          <a href="https://app.everything.diena.co/" target="_blank" rel="noopener">Show HN: A zoomable timeline of 4M Wikipedia events</a>
         </div>
-        <div class="item-takeaway">Alpha prerelease containing a subset of what shipped in the final 1.15.3. Superseded within hours.</div>
-        <div class="item-meta">
-          <span>gh-crewai</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/crewAIInc/crewAI/releases/tag/1.15.3a1" target="_blank" rel="noopener">crewAI 1.15.3a1</a>
-        </div>
-        <div class="item-takeaway">First alpha of the 1.15.3 line, contents rolled into the stable release the same day.</div>
-        <div class="item-meta">
-          <span>gh-crewai</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/browser-use/browser-use/releases/tag/0.13.6" target="_blank" rel="noopener">browser-use 0.13.6</a>
-        </div>
-        <div class="item-takeaway">Point release pairing browser-use with Browser Harness 0.1.6. The release notes describe no user-facing change beyond the version bump.</div>
-        <div class="item-meta">
-          <span>gh-browser-use</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/browser-use/browser-use/releases/tag/0.13.5" target="_blank" rel="noopener">0.13.5</a>
-        </div>
-        <div class="item-takeaway">## What's Changed * Update README.md by @ShawnPana in https://github.com/browser-use/browser-use/pull/5197 * feat: accept bu-qa-1 model alia…</div>
-        <div class="item-meta">
-          <span>gh-browser-use</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.14" target="_blank" rel="noopener">langchain 1.3.14 adds ToolErrorMiddleware</a>
-        </div>
-        <div class="item-takeaway">Adds a new ToolErrorMiddleware for handling tool failures, and narrows ToolRetryMiddleware so it only retries genuinely retryable exceptions. The retry fix removes a real footgun where a deterministic failure would consume the whole retry budget and its token spend.</div>
-        <div class="item-meta">
-          <span>gh-langchain</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://blog.google/products-and-platforms/products/search/connected-apps/" target="_blank" rel="noopener">Google connects third-party apps to Search AI Mode</a>
-        </div>
-        <div class="item-takeaway">Google announced that users will be able to securely link external services and interact with them directly inside Search AI Mode. The post is announcement-level only, with no developer surface, partner list, or integration documentation yet. If Search becomes an agent surface that calls into connected apps, it is a distribution channel worth tracking early rather than discovering late.</div>
-        <div class="item-meta">
-          <span>google-ai-blog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/" target="_blank" rel="noopener">Gemini Omni and personal avatars in Google Vids</a>
-        </div>
-        <div class="item-takeaway">Consumer-facing update adding Gemini Omni and personal avatars to Google Vids for easier video creation. No developer surface or builder-relevant change.</div>
-        <div class="item-meta">
-          <span>google-ai-blog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          Clx
-        </div>
-        <div class="item-takeaway">compile Lua to native executables through C++20 — https://github.com/samyeyo/clx — Ahead-of-time Lua compiler that emits C++20 and hands off to GCC, Clang or MSVC rather than using LLVM directly. The latest release replaces NaN-tagged values with a shadow-types representation, adds full int64 support and ARM64 macOS coroutine support. Author reports beating the Lua interpreter broadly and LuaJIT on some compute-heavy workloads.</div>
-        <div class="item-meta">
-          <span>hn-show</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          Mojibake
-        </div>
-        <div class="item-takeaway">a low-level Unicode library in C — https://mojibake.zaerl.com/ — Two-file amalgamation C library covering normalization, case conversion, segmentation, bidirectional text, collation and confusables, tested across Linux, macOS, three BSDs and Windows 11. A WASM demo of the full public API is available on the project site.</div>
-        <div class="item-meta">
-          <span>hn-show</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          Leaves
-        </div>
-        <div class="item-takeaway">a text-UI disk usage treemap visualizer — https://github.com/patonw/leaves — Rust TUI that renders a WinDirStat-style treemap of disk usage inside a terminal, filling the gap where GUI analyzers cannot reach and ncdu shows only one directory at a time. Multi-threaded and reported to handle millions of files, with per-directory file-type summaries so you see both where space went and what kind. Practical for diagnosing disk pressure on a remote VPS or inside a container.</div>
+        <div class="item-takeaway">Interesting visualization demo, but not a decision-changing tool or workflow signal.</div>
         <div class="item-meta">
           <span>hn-show</span>
         </div>
@@ -329,64 +110,31 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uykvc7/just_hit_my_first_2k_mrr_and_im_honestly_a_bit/" target="_blank" rel="noopener">Solo builder reaches €2k MRR with a CV tailoring tool</a>
+          <a href="https://honeypotlive.cc/" target="_blank" rel="noopener">Show HN: Watch bots interact with an SSH honeypot in real time</a>
         </div>
-        <div class="item-takeaway">Founder built a CV tailoring and grading tool to solve their own job-hunting problem, shared it with friends, and it now sits at €2k MRR. No detail on channels, pricing, conversion or timeline.</div>
+        <div class="item-takeaway">Fun honeypot demo; security theater value, not a practical workflow change.</div>
         <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uyjn81/the_evolution_of_software_investing/" target="_blank" rel="noopener">The Evolution of Software Investing</a>
-        </div>
-        <div class="item-takeaway">Newsletter-promoted image post with no body text captured. Nothing evaluable in the item content.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uyq0ys/how_did_you_get_your_first_users_what_actually/" target="_blank" rel="noopener">How did you get your first users? What actually worked?</a>
-        </div>
-        <div class="item-takeaway">Founder asks how others acquired first users after cold outreach, marketplace listings and expert outreach all failed. An open question thread with no answers captured at fetch time.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uy3s1z/pov_youre_a_solo_founder/" target="_blank" rel="noopener">pov: you're a solo founder</a>
-        </div>
-        <div class="item-takeaway">Meme image post about solo founder life. No substantive content.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uyh8gw/anyone_added_whitelabel_payroll_to_an_existing/" target="_blank" rel="noopener">Anyone added white-label payroll to an existing SaaS product?</a>
-        </div>
-        <div class="item-takeaway">Team weighing turnkey branded payroll against building on a payroll API, asking whether integration or the post-launch support, compliance and multi-state burden consumes more time. Unanswered at fetch time.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
+          <span>hn-show</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uysl5t/1_month_since_we_launched_this_what_i_learned/" target="_blank" rel="noopener">One month post-launch: paid acquisition numbers</a>
+          <a href="https://jvns.ca/blog/2026/07/17/learning-about-running-sqlite/" target="_blank" rel="noopener">Julia Evans notes a few hard-earned SQLite operations lessons</a>
         </div>
-        <div class="item-takeaway">Founder reports the first month after launching paid plans. Week one produced a single organic payment and revealed a broken funnel; week two started ads. Google Ads delivered the lowest cost-per-result of the channels tried but took roughly a week to exit the learning phase while burning cash, and Meta produced conversations at the highest CPR. Useful calibration that the first week of paid spend is tuition rather than performance.</div>
+        <div class="item-takeaway">Julia Evans wrote up practical notes from running SQLite behind a Django site, including a dramatic query-speed improvement from running ANALYZE and the operational pain of long-running deletes when only one writer can proceed at a time. This is not a product launch, but it is grounded builder experience that sharpens the usual “SQLite is fine” advice into something more operationally honest. If you are defaulting small projects to SQLite, keep the article around as a checklist for WAL mode, maintenance batching, and backup discipline.</div>
+        <div class="item-meta">
+          <span>julia-evans</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uzhi1q/first_customer_baby_lets_go_5_mrr/" target="_blank" rel="noopener">First customer baby lets GO! $5 MRR</a>
+        </div>
+        <div class="item-takeaway">First-customer milestone story; encouraging but not broadly actionable.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -395,9 +143,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uyslw6/ill_give_your_saas_an_honest_critique_if_you_do/" target="_blank" rel="noopener">I'll give your SaaS an honest critique if you do the same for mine</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uzops2/first_sale_after_7_months_of_hard_work/" target="_blank" rel="noopener">First Sale After 7 Months of Hard Work</a>
         </div>
-        <div class="item-takeaway">Hi, I've been staring at my own SaaS for so long that I can't see it clearly anymore. Is the same happening to you too? I am looking for oth…</div>
+        <div class="item-takeaway">Another personal first-sale milestone; no reusable lesson beyond perseverance.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -406,9 +154,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uybyae/the_grind_is_paying_off/" target="_blank" rel="noopener">The Grind is paying off!!!</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uzh21v/every_saas_now/" target="_blank" rel="noopener">Every SaaS now</a>
         </div>
-        <div class="item-takeaway">Sat there staring at the notification for a solid minute. Three and a half months ago I was refreshing Stripe hoping for a single $24 sale.…</div>
+        <div class="item-takeaway">Meme post, no substantive information.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -417,9 +165,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uyp5qo/we_let_devs_use_cursor_claude_at_work_but_ban/" target="_blank" rel="noopener">We let devs use Cursor &amp; Claude at work, but ban them in interviews. Make it make sense.</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uzhus8/if_you_dont_have_mcp_for_your_saas_youre_missing/" target="_blank" rel="noopener">If you don't have MCP for your SaaS - you're missing out.</a>
         </div>
-        <div class="item-takeaway">Let’s be real: If a dev isn’t daily-driving AI today, they’re falling behind. Yet, our hiring loops still act like it’s 2015. We block inter…</div>
+        <div class="item-takeaway">Opinion thread about MCP as a SaaS wedge without evidence or concrete operator data.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -428,9 +176,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uyms0g/feels_great_seeing_my_ad_on_the_front_page_of/" target="_blank" rel="noopener">Feels great seeing my ad on the front page of Reddit today. Small wins.</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uyzjc5/software_engineer_in_2022_open_vs_code_and_start/" target="_blank" rel="noopener">Software Engineer in 2022: Open VS Code and start coding. 😎 Software Engineer in 2026: Which AI should I ask first?🤯</a>
         </div>
-        <div class="item-takeaway">&gt; Simple clean, searchable web UI for your database tables. www.dataspeeder.com &amp;#32; submitted by &amp;#32; /u/dataspeeder2 [link] &amp;#32; [comme…</div>
+        <div class="item-takeaway">Meme-format AI gripe; no durable signal.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -439,9 +187,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uyi81j/anyone_building_payroll_into_construction/" target="_blank" rel="noopener">Anyone building payroll into construction workforce software?</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uzmo87/so_damn_sick_and_stuck_with_ai/" target="_blank" rel="noopener">So damn sick and stuck with AI</a>
         </div>
-        <div class="item-takeaway">Our product already handles crews, timesheets and job sites. Customers keep asking why payroll still means exporting everything into a diffe…</div>
+        <div class="item-takeaway">General frustration post about AI everywhere; no new evidence or decision leverage.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -450,9 +198,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uyrrzy/looking_for_feedback_on_my_free_meeting_app_built/" target="_blank" rel="noopener">Looking for feedback on my free meeting app (built it because Granola kept frustrating me)</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uzoabp/how_do_you_collect_good_and_honest_feedback_for/" target="_blank" rel="noopener">How do you collect good and honest feedback for your product?</a>
         </div>
-        <div class="item-takeaway">Not sure if this is the right sub, mods feel free to remove. I built a small app called Lamponi and I want some honest feedback before I pus…</div>
+        <div class="item-takeaway">Open-ended customer-feedback question, not a report or concrete tactic.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -461,9 +209,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uyrr7h/looking_for_saas_admin_dashboard_to_review_data/" target="_blank" rel="noopener">Looking for Saas admin dashboard to review data</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uz6gn0/anyone_seeing_measurable_roi_from_enterprise_ai/" target="_blank" rel="noopener">Anyone seeing measurable ROI from enterprise AI?</a>
         </div>
-        <div class="item-takeaway">Hello everyone, for context: I am currently developing a webapp with VSCode + ClaudeCode. I've seen people posting their SaaS' KPIs and stat…</div>
+        <div class="item-takeaway">Discussion prompt about enterprise AI ROI without hard numbers.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -472,9 +220,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uyrepn/i_built_this_because_finding_customers_across/" target="_blank" rel="noopener">I built this because finding customers across Slack communities was taking 30 minutes every day</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uzp881/founder_here_solo_bootstrapped_went_live_with_a/" target="_blank" rel="noopener">Founder here: solo bootstrapped, went live with a SaaS for AI agent audit trails. Some notes on the wedge.</a>
         </div>
-        <div class="item-takeaway">I run a SaaS and I belong to 4-5 different Slack communities. Every day I'd open Slack and engage with the community, search for my competit…</div>
+        <div class="item-takeaway">Self-promotional launch note for an audit-trail SaaS; thin evidence.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -483,9 +231,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1uyrdfb/are_repeated_signup_popups_worth_the_ux_cost/" target="_blank" rel="noopener">Are repeated signup pop-ups worth the UX cost?</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uyyccn/i_built_myself_a_lil_buddy_to_keep_me_motivated/" target="_blank" rel="noopener">i built myself a lil buddy to keep me motivated</a>
         </div>
-        <div class="item-takeaway">consider pinterest or instagram where the signup modals just keep popping up if you aren't signed in I know this is bad for UX, but my quest…</div>
+        <div class="item-takeaway">Cute Raspberry Pi dashboard build, but not an important workflow shift.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -494,44 +242,286 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.science.org/doi/10.1126/science.aea9708" target="_blank" rel="noopener">Helium escaping from atmosphere of nearby rocky exoplanet</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uzkjkp/we_built_a_workforce_management_tool_for_small/" target="_blank" rel="noopener">We built a workforce management tool for small businesses looking for honest feedback from owners and managers</a>
         </div>
-        <div class="item-takeaway">Planetary science paper in Science on atmospheric helium escape from a rocky exoplanet in a habitable zone. No relevance to software or business decisions.</div>
+        <div class="item-takeaway">Feedback request for a workforce tool; marketing/discussion post, not a finding.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://arxiv.org/abs/2607.11938" target="_blank" rel="noopener">Mathematics of Data Science</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uzodtm/the_biggest_mistake_firsttime_saas_founders_make/" target="_blank" rel="noopener">The Biggest Mistake First-Time SaaS Founders Make Isn't Building Too Slow</a>
         </div>
-        <div class="item-takeaway">arXiv survey or textbook on the mathematical foundations of data science. Reference material rather than news, with no near-term decision impact.</div>
+        <div class="item-takeaway">Generic founder-advice framing without concrete evidence.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://news.yale.edu/2026/07/15/meet-likweli-new-monkey-species-discovered-congo-basin" target="_blank" rel="noopener">'Likweli': a new monkey species discovered in the Congo Basin</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uzoah4/what_ai_task_still_takes_saas_founders_too_many/" target="_blank" rel="noopener">What AI task still takes SaaS founders too many attempts?</a>
         </div>
-        <div class="item-takeaway">Yale news item on the discovery of a new monkey species in the Congo Basin. No software or business relevance.</div>
+        <div class="item-takeaway">Prompt for founders to share AI pain points; discussion bait.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uzjwm7/be_honest_is_your_distribution_problem_that_you/" target="_blank" rel="noopener">Be honest: is your distribution problem that you didn’t know what to do, or that you knew exactly what to do but kept finding reasons not to do it?</a>
+        </div>
+        <div class="item-takeaway">Another mindset/distribution prompt rather than a report.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uzd1ff/built_a_visual_way_to_be_on_top_of_work_and_life/" target="_blank" rel="noopener">Built a visual way to be on top of work and life - what I've learnt so far</a>
+        </div>
+        <div class="item-takeaway">Personal project retrospective with no specific leverage for tomorrow-morning decisions.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uznu4q/how_notion_built_an_ecosystem_that_became_its/" target="_blank" rel="noopener">How Notion Built an Ecosystem That Became Its Biggest Growth Engine</a>
+        </div>
+        <div class="item-takeaway">Notion ecosystem growth essay link from Reddit; second-hand and not time-sensitive.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uz1jxp/2_weeks_since_i_launch_ads_on_my_app_this_is_what/" target="_blank" rel="noopener">2 weeks since I launch ads on my app, this is what I learned</a>
+        </div>
+        <div class="item-takeaway">Small paid-ads learning post without enough detail to generalize.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uzlr7t/windows_unsupported_hardware_linux_unsupported/" target="_blank" rel="noopener">Windows:- Unsupported hardware.. Linux:- Unsupported? Challenge accepted.</a>
+        </div>
+        <div class="item-takeaway">Linux-on-old-hardware post is off-topic for the memo audience.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uzlk32/if_you_ship_an_ai_product_what_is_the_failure/" target="_blank" rel="noopener">If you ship an AI product, what is the failure mode that actually costs you users?</a>
+        </div>
+        <div class="item-takeaway">Question thread about AI product failure modes; no concrete outcomes.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1uz53rn/launched_my_cravingtracker_app_fully_organic_a/" target="_blank" rel="noopener">Launched my craving-tracker app fully organic a few weeks ago, no ad spend, and it's finally starting to click</a>
+        </div>
+        <div class="item-takeaway">Organic-growth anecdote without a reusable tactic or measured result.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel" target="_blank" rel="noopener">Fine-tune video and image models at scale with NVIDIA NeMo Automodel and 🤗 Diffusers</a>
+        </div>
+        <div class="item-takeaway">NVIDIA/Hugging Face fine-tuning announcement is specialized and not urgent for this audience.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://pydantic.dev/articles/the-human-in-the-loop-is-tired" target="_blank" rel="noopener">The Human-in-the-Loop is Tired</a>
+          <a href="https://blog.cloudflare.com/wordpress-vulnerabilities/" target="_blank" rel="noopener">Cloudflare adds WAF coverage for two new WordPress vulnerabilities</a>
         </div>
-        <div class="item-takeaway">Pydantic essay on the cognitive cost of supervising AI-generated work, opening with a maintainer waking to thirty overnight agent PRs each demanding a snap judgment call. It frames this as a human reward function problem: automation removed the satisfying part of the job and grew the review burden without adding new rewards. The practical implication for anyone running agent fleets is that review throughput, not generation capacity, is the binding constraint, which argues for investing in automated verification and batching rather than more parallel agents.</div>
+        <div class="item-takeaway">Cloudflare shipped WAF rules for a new WordPress SQL injection flaw (CVE-2026-60137) and a critical unauthenticated RCE (CVE-2026-63030). The practical point is not the rules themselves but the patch window: affected sites on 6.8+ need to verify they are on 6.8.6, 6.9.5, 7.0.2, or 7.1 Beta 2. If you run or advise on WordPress properties, treat this as patch-now, and treat the WAF as temporary exposure reduction rather than the fix.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://stratechery.com/2026/mainframes-and-main-characters/" target="_blank" rel="noopener">2026.29: Mainframes and Main Characters</a>
+        </div>
+        <div class="item-takeaway">Essay/opinion piece, not a concrete tooling or platform change.</div>
+        <div class="item-meta">
+          <span>stratechery</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/langgenius/dify/releases/tag/1.16.0" target="_blank" rel="noopener">Dify 1.16.0 adds sandboxed agents and warns users off Chat Completions defaults</a>
+        </div>
+        <div class="item-takeaway">Dify 1.16.0 launches its new agent experience around a Linux sandbox, skills, agent reuse, and workflow integration, which is notable but still mostly a product-platform expansion story. The more decision-changing part is the explicit warning that older OpenAI plugin setups may still be pinned to Chat Completions and should be moved to Responses, especially for GPT-5.6-family models. If you touch Dify or similar agent builders, audit any saved OpenAI config now instead of waiting for model-specific errors to surface later.</div>
+        <div class="item-meta">
+          <span>gh-dify</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/ainews-not-much-happened-today-830" target="_blank" rel="noopener">[AINews] not much happened today</a>
+        </div>
+        <div class="item-takeaway">Quiet-day newsletter meta item; no underlying signal to act on.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.val.town/agents-dot-md" target="_blank" rel="noopener">Val Town now surfaces AGENTS.md to Townie and external agents</a>
+        </div>
+        <div class="item-takeaway">Val Town added AGENTS.md support at the val, user, and org levels, and says those instructions are exposed through its MCP server to outside agents like Claude Code, Codex, and Cursor. That makes Val Town more viable as a durable instruction surface rather than just a place to run snippets. If you use Val Town for agent-adjacent tooling, the practical question is whether shared instruction files are now good enough to replace ad hoc prompt scaffolding for small internal tools.</div>
+        <div class="item-meta">
+          <span>val-town-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/data-downloaded-by-vercel-sandbox-is-now-free" target="_blank" rel="noopener">Vercel stops charging Sandbox ingress downloads</a>
+        </div>
+        <div class="item-takeaway">Vercel Sandbox no longer bills for data it downloads from the internet, which means package installs, repo clones, and pulling datasets into a sandbox stop counting toward transfer spend. This matters if you use sandboxes for agent or build tasks with heavy setup cost, because the variable cost profile shifts toward CPU, memory, snapshots, and outbound traffic only. If sandboxed automation is on your shortlist, re-run the cost model with ingress removed before dismissing it as too expensive.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/glm-5-2-is-35-off-via-novita-on-ai-gateway" target="_blank" rel="noopener">GLM 5.2 is 35% off via Novita on AI Gateway</a>
+        </div>
+        <div class="item-takeaway">Short-term model discount via one provider route; too promotional and narrow.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/optimized-cdn-caching-and-deploying-of-immutable-static-assets" target="_blank" rel="noopener">Vercel now reuses immutable assets across deployments</a>
+        </div>
+        <div class="item-takeaway">Vercel says supported frameworks now reuse content-addressed static assets across deployments with zero config, reporting lower CDN requests and bytes, faster deploys, and materially better TTFB for frequently deployed apps. The practical takeaway is that framework upgrades, especially Next.js 16.3 preview and later, may now buy operational wins without extra infra work. If you deploy often and pay attention to edge cost or cache churn, this is worth a test on a staging branch rather than a blind assumption.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/vercel-plugin-now-available-in-kimi-code-cli" target="_blank" rel="noopener">Vercel Plugin now available in Kimi Code CLI</a>
+        </div>
+        <div class="item-takeaway">Plugin availability in Kimi Code CLI is narrow ecosystem plumbing.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/chat-sdk-adds-native-slack-agent-support" target="_blank" rel="noopener">Chat SDK adds native Slack agent support</a>
+        </div>
+        <div class="item-takeaway">Slack adapter improvement is real but too niche for today’s cut.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.89" target="_blank" rel="noopener">v16.3.0-canary.89</a>
+        </div>
+        <div class="item-takeaway">Next.js canary release note is incremental and preview-only.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://dustycloud.org/blog/faulty-towers-vibe-sickness-and-the-vibe-bobsled/" target="_blank" rel="noopener">Faulty Towers, vibe sickness, and the vibe bobsled</a>
+        </div>
+        <div class="item-takeaway">Opinionated anti-vibe-coding essay; more commentary than actionable evidence.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://jvns.ca/blog/2026/07/17/learning-about-running-sqlite/" target="_blank" rel="noopener">Learning a few things about running SQLite</a>
+        </div>
+        <div class="item-takeaway">Duplicate Lobsters submission of the Julia Evans SQLite post.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.haskell.org/enterprise-haskell-at-h-e-b/" target="_blank" rel="noopener">Enterprise Haskell at H-E-B</a>
+        </div>
+        <div class="item-takeaway">Enterprise Haskell profile is interesting but outside the memo’s decision scope.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://alexalejandre.com/interviews/interview-with-matheus-moreira/" target="_blank" rel="noopener">Lobsters Interview with matheusmoreira about Lone Lisp</a>
+        </div>
+        <div class="item-takeaway">Lisp interview is off-lane for the morning memo.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
         </div>
       </div>
     </div>
@@ -539,79 +529,73 @@
       <summary>Original markdown</summary>
       <pre class="raw-report"># Nightly Librarian — Newsletter draft
 
-Run: c235ab01-9950-4d83-8cf5-bc280b624812
-Started: 2026-07-18T06:10:15.419Z
-Completed: 2026-07-18T06:14:44.737Z
+Run: f083e6b5-a045-45a6-9e4a-215c0fa42216
+Started: 2026-07-18T11:02:34.930Z
+Completed: 2026-07-18T11:07:13.494Z
 
 ## Worth attention
 
-- **Google connects third-party apps to Search AI Mode**
-  https://blog.google/products-and-platforms/products/search/connected-apps/
-  Google announced that users will be able to securely link external services and interact with them directly inside Search AI Mode. The post is announcement-level only, with no developer surface, partner list, or integration documentation yet. If Search becomes an agent surface that calls into connected apps, it is a distribution channel worth tracking early rather than discovering late.
-- **Leaves — a text-UI disk usage treemap visualizer**
-  https://github.com/patonw/leaves
-  Rust TUI that renders a WinDirStat-style treemap of disk usage inside a terminal, filling the gap where GUI analyzers cannot reach and ncdu shows only one directory at a time. Multi-threaded and reported to handle millions of files, with per-directory file-type summaries so you see both where space went and what kind. Practical for diagnosing disk pressure on a remote VPS or inside a container.
-- **The Human-in-the-Loop is Tired**
-  https://pydantic.dev/articles/the-human-in-the-loop-is-tired
-  Pydantic essay on the cognitive cost of supervising AI-generated work, opening with a maintainer waking to thirty overnight agent PRs each demanding a snap judgment call. It frames this as a human reward function problem: automation removed the satisfying part of the job and grew the review burden without adding new rewards. The practical implication for anyone running agent fleets is that review throughput, not generation capacity, is the binding constraint, which argues for investing in automated verification and batching rather than more parallel agents.
-- **crewAI 1.15.3**
-  https://github.com/crewAIInc/crewAI/releases/tag/1.15.3
-  Adds execution-boundary interception points and a generic interception-hook dispatcher via @on, plus per-call token usage reporting on kickoff and agent results. The notable behavioural change is that tool-result caching is now opt-in rather than on by default, so upgrades will silently start re-executing tools that were previously cached. Also fixes after_llm_call hooks breaking native tool execution.
-- **langchain 1.3.14 adds ToolErrorMiddleware**
-  https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.14
-  Adds a new ToolErrorMiddleware for handling tool failures, and narrows ToolRetryMiddleware so it only retries genuinely retryable exceptions. The retry fix removes a real footgun where a deterministic failure would consume the whole retry budget and its token spend.
-- **One month post-launch: paid acquisition numbers**
-  https://www.reddit.com/r/SaaS/comments/1uysl5t/1_month_since_we_launched_this_what_i_learned/
-  Founder reports the first month after launching paid plans. Week one produced a single organic payment and revealed a broken funnel; week two started ads. Google Ads delivered the lowest cost-per-result of the channels tried but took roughly a week to exit the learning phase while burning cash, and Meta produced conversations at the highest CPR. Useful calibration that the first week of paid spend is tuition rather than performance.
-- **Clx — compile Lua to native executables through C++20**
-  https://github.com/samyeyo/clx
-  Ahead-of-time Lua compiler that emits C++20 and hands off to GCC, Clang or MSVC rather than using LLVM directly. The latest release replaces NaN-tagged values with a shadow-types representation, adds full int64 support and ARM64 macOS coroutine support. Author reports beating the Lua interpreter broadly and LuaJIT on some compute-heavy workloads.
-- **Mojibake — a low-level Unicode library in C**
-  https://mojibake.zaerl.com/
-  Two-file amalgamation C library covering normalization, case conversion, segmentation, bidirectional text, collation and confusables, tested across Linux, macOS, three BSDs and Windows 11. A WASM demo of the full public API is available on the project site.
+- **Cloudflare adds WAF coverage for two new WordPress vulnerabilities**
+  https://blog.cloudflare.com/wordpress-vulnerabilities/
+  Cloudflare shipped WAF rules for a new WordPress SQL injection flaw (CVE-2026-60137) and a critical unauthenticated RCE (CVE-2026-63030). The practical point is not the rules themselves but the patch window: affected sites on 6.8+ need to verify they are on 6.8.6, 6.9.5, 7.0.2, or 7.1 Beta 2. If you run or advise on WordPress properties, treat this as patch-now, and treat the WAF as temporary exposure reduction rather than the fix.
+- **Dify 1.16.0 adds sandboxed agents and warns users off Chat Completions defaults**
+  https://github.com/langgenius/dify/releases/tag/1.16.0
+  Dify 1.16.0 launches its new agent experience around a Linux sandbox, skills, agent reuse, and workflow integration, which is notable but still mostly a product-platform expansion story. The more decision-changing part is the explicit warning that older OpenAI plugin setups may still be pinned to Chat Completions and should be moved to Responses, especially for GPT-5.6-family models. If you touch Dify or similar agent builders, audit any saved OpenAI config now instead of waiting for model-specific errors to surface later.
+- **Vercel stops charging Sandbox ingress downloads**
+  https://vercel.com/changelog/data-downloaded-by-vercel-sandbox-is-now-free
+  Vercel Sandbox no longer bills for data it downloads from the internet, which means package installs, repo clones, and pulling datasets into a sandbox stop counting toward transfer spend. This matters if you use sandboxes for agent or build tasks with heavy setup cost, because the variable cost profile shifts toward CPU, memory, snapshots, and outbound traffic only. If sandboxed automation is on your shortlist, re-run the cost model with ingress removed before dismissing it as too expensive.
+- **Val Town now surfaces AGENTS.md to Townie and external agents**
+  https://blog.val.town/agents-dot-md
+  Val Town added AGENTS.md support at the val, user, and org levels, and says those instructions are exposed through its MCP server to outside agents like Claude Code, Codex, and Cursor. That makes Val Town more viable as a durable instruction surface rather than just a place to run snippets. If you use Val Town for agent-adjacent tooling, the practical question is whether shared instruction files are now good enough to replace ad hoc prompt scaffolding for small internal tools.
+- **Vercel now reuses immutable assets across deployments**
+  https://vercel.com/changelog/optimized-cdn-caching-and-deploying-of-immutable-static-assets
+  Vercel says supported frameworks now reuse content-addressed static assets across deployments with zero config, reporting lower CDN requests and bytes, faster deploys, and materially better TTFB for frequently deployed apps. The practical takeaway is that framework upgrades, especially Next.js 16.3 preview and later, may now buy operational wins without extra infra work. If you deploy often and pay attention to edge cost or cache churn, this is worth a test on a staging branch rather than a blind assumption.
+- **Julia Evans notes a few hard-earned SQLite operations lessons**
+  https://jvns.ca/blog/2026/07/17/learning-about-running-sqlite/
+  Julia Evans wrote up practical notes from running SQLite behind a Django site, including a dramatic query-speed improvement from running ANALYZE and the operational pain of long-running deletes when only one writer can proceed at a time. This is not a product launch, but it is grounded builder experience that sharpens the usual “SQLite is fine” advice into something more operationally honest. If you are defaulting small projects to SQLite, keep the article around as a checklist for WAL mode, maintenance batching, and backup discipline.
 
 ## Full digest
 
-- [R] [gh-composio] @composio/vercel@0.11.1 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/vercel%400.11.1 — Patch release that fixes the homepage field in package.json so npm and editor tooltip links stop 404ing. No functional change to the SDK.
-- [R] [gh-composio] @composio/ts-builders@0.2.1 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/ts-builders%400.2.1 — Refreshes dependency ranges and lockfiles across the Composio workspace. No behavioural change.
-- [R] [gh-composio] @composio/slim@0.14.0 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/slim%400.14.0 — Lockfile refresh plus the shared homepage-link fix, with dependency bumps pulled through from sibling packages. Version number implies a minor but the contents are patch-level.
-- [R] [gh-composio] @composio/openai@0.10.1 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/openai%400.10.1 — Normalizes duplicate JSON Schema required entries before provider tool schemas are emitted, alongside the homepage link fix. Minor correctness patch for tool schema generation.
-- [R] [gh-composio] @composio/openai-agents@0.10.1 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/openai-agents%400.10.1 — ### Patch Changes - 7125576: Normalize duplicate JSON Schema `required` entries before provider tool schemas are emitted. - 58bc93b: Refresh…
-- [R] [gh-composio] @composio/mastra@0.10.2 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/mastra%400.10.2 — Lockfile refresh and homepage link correction for the Mastra adapter. No functional change.
-- [R] [gh-composio] @composio/llamaindex@0.10.1 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/llamaindex%400.10.1 — Homepage link fix only for the LlamaIndex adapter package.
-- [R] [gh-composio] @composio/langchain@0.10.1 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/langchain%400.10.1 — ### Patch Changes - 58bc93b: Refresh dependency ranges and lockfiles across the workspace. - fa933a6: Fix the `homepage` links in these pack…
-- [R] [gh-composio] @composio/json-schema-to-zod@0.2.1 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/json-schema-to-zod%400.2.1 — ### Patch Changes - 58bc93b: Refresh dependency ranges and lockfiles across the workspace. - fa933a6: Fix the `homepage` links in these pack…
-- [R] [gh-composio] @composio/google@0.10.1 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/google%400.10.1 — ### Patch Changes - 7125576: Normalize duplicate JSON Schema `required` entries before provider tool schemas are emitted. - fa933a6: Fix the…
-- [P] [gh-crewai] crewAI 1.15.3 — https://github.com/crewAIInc/crewAI/releases/tag/1.15.3 — Adds execution-boundary interception points and a generic interception-hook dispatcher via @on, plus per-call token usage reporting on kickoff and agent results. The notable behavioural change is that tool-result caching is now opt-in rather than on by default, so upgrades will silently start re-executing tools that were previously cached. Also fixes after_llm_call hooks breaking native tool execution.
-- [R] [gh-crewai] crewAI 1.15.3a2 — https://github.com/crewAIInc/crewAI/releases/tag/1.15.3a2 — Alpha prerelease containing a subset of what shipped in the final 1.15.3. Superseded within hours.
-- [R] [gh-crewai] crewAI 1.15.3a1 — https://github.com/crewAIInc/crewAI/releases/tag/1.15.3a1 — First alpha of the 1.15.3 line, contents rolled into the stable release the same day.
-- [R] [gh-browser-use] browser-use 0.13.6 — https://github.com/browser-use/browser-use/releases/tag/0.13.6 — Point release pairing browser-use with Browser Harness 0.1.6. The release notes describe no user-facing change beyond the version bump.
-- [R] [gh-browser-use] 0.13.5 — https://github.com/browser-use/browser-use/releases/tag/0.13.5 — ## What's Changed * Update README.md by @ShawnPana in https://github.com/browser-use/browser-use/pull/5197 * feat: accept bu-qa-1 model alia…
-- [P] [gh-langchain] langchain 1.3.14 adds ToolErrorMiddleware — https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.14 — Adds a new ToolErrorMiddleware for handling tool failures, and narrows ToolRetryMiddleware so it only retries genuinely retryable exceptions. The retry fix removes a real footgun where a deterministic failure would consume the whole retry budget and its token spend.
-- [P] [google-ai-blog] Google connects third-party apps to Search AI Mode — https://blog.google/products-and-platforms/products/search/connected-apps/ — Google announced that users will be able to securely link external services and interact with them directly inside Search AI Mode. The post is announcement-level only, with no developer surface, partner list, or integration documentation yet. If Search becomes an agent surface that calls into connected apps, it is a distribution channel worth tracking early rather than discovering late.
-- [R] [google-ai-blog] Gemini Omni and personal avatars in Google Vids — https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/ — Consumer-facing update adding Gemini Omni and personal avatars to Google Vids for easier video creation. No developer surface or builder-relevant change.
-- [P] [hn-show] Clx — compile Lua to native executables through C++20 — https://github.com/samyeyo/clx — Ahead-of-time Lua compiler that emits C++20 and hands off to GCC, Clang or MSVC rather than using LLVM directly. The latest release replaces NaN-tagged values with a shadow-types representation, adds full int64 support and ARM64 macOS coroutine support. Author reports beating the Lua interpreter broadly and LuaJIT on some compute-heavy workloads.
-- [M] [hn-show] Mojibake — a low-level Unicode library in C — https://mojibake.zaerl.com/ — Two-file amalgamation C library covering normalization, case conversion, segmentation, bidirectional text, collation and confusables, tested across Linux, macOS, three BSDs and Windows 11. A WASM demo of the full public API is available on the project site.
-- [P] [hn-show] Leaves — a text-UI disk usage treemap visualizer — https://github.com/patonw/leaves — Rust TUI that renders a WinDirStat-style treemap of disk usage inside a terminal, filling the gap where GUI analyzers cannot reach and ncdu shows only one directory at a time. Multi-threaded and reported to handle millions of files, with per-directory file-type summaries so you see both where space went and what kind. Practical for diagnosing disk pressure on a remote VPS or inside a container.
-- [R] [reddit-saas] Solo builder reaches €2k MRR with a CV tailoring tool — https://www.reddit.com/r/SaaS/comments/1uykvc7/just_hit_my_first_2k_mrr_and_im_honestly_a_bit/ — Founder built a CV tailoring and grading tool to solve their own job-hunting problem, shared it with friends, and it now sits at €2k MRR. No detail on channels, pricing, conversion or timeline.
-- [R] [reddit-saas] The Evolution of Software Investing — https://www.reddit.com/r/SaaS/comments/1uyjn81/the_evolution_of_software_investing/ — Newsletter-promoted image post with no body text captured. Nothing evaluable in the item content.
-- [R] [reddit-saas] How did you get your first users? What actually worked? — https://www.reddit.com/r/SaaS/comments/1uyq0ys/how_did_you_get_your_first_users_what_actually/ — Founder asks how others acquired first users after cold outreach, marketplace listings and expert outreach all failed. An open question thread with no answers captured at fetch time.
-- [R] [reddit-saas] pov: you're a solo founder — https://www.reddit.com/r/SaaS/comments/1uy3s1z/pov_youre_a_solo_founder/ — Meme image post about solo founder life. No substantive content.
-- [R] [reddit-saas] Anyone added white-label payroll to an existing SaaS product? — https://www.reddit.com/r/SaaS/comments/1uyh8gw/anyone_added_whitelabel_payroll_to_an_existing/ — Team weighing turnkey branded payroll against building on a payroll API, asking whether integration or the post-launch support, compliance and multi-state burden consumes more time. Unanswered at fetch time.
-- [P] [reddit-saas] One month post-launch: paid acquisition numbers — https://www.reddit.com/r/SaaS/comments/1uysl5t/1_month_since_we_launched_this_what_i_learned/ — Founder reports the first month after launching paid plans. Week one produced a single organic payment and revealed a broken funnel; week two started ads. Google Ads delivered the lowest cost-per-result of the channels tried but took roughly a week to exit the learning phase while burning cash, and Meta produced conversations at the highest CPR. Useful calibration that the first week of paid spend is tuition rather than performance.
-- [R] [reddit-saas] I'll give your SaaS an honest critique if you do the same for mine — https://www.reddit.com/r/SaaS/comments/1uyslw6/ill_give_your_saas_an_honest_critique_if_you_do/ — Hi, I've been staring at my own SaaS for so long that I can't see it clearly anymore. Is the same happening to you too? I am looking for oth…
-- [R] [reddit-saas] The Grind is paying off!!! — https://www.reddit.com/r/SaaS/comments/1uybyae/the_grind_is_paying_off/ — Sat there staring at the notification for a solid minute. Three and a half months ago I was refreshing Stripe hoping for a single $24 sale.…
-- [R] [reddit-saas] We let devs use Cursor &amp; Claude at work, but ban them in interviews. Make it make sense. — https://www.reddit.com/r/SaaS/comments/1uyp5qo/we_let_devs_use_cursor_claude_at_work_but_ban/ — Let’s be real: If a dev isn’t daily-driving AI today, they’re falling behind. Yet, our hiring loops still act like it’s 2015. We block inter…
-- [R] [reddit-saas] Feels great seeing my ad on the front page of Reddit today. Small wins. — https://www.reddit.com/r/SaaS/comments/1uyms0g/feels_great_seeing_my_ad_on_the_front_page_of/ — &gt; Simple clean, searchable web UI for your database tables. www.dataspeeder.com &amp;#32; submitted by &amp;#32; /u/dataspeeder2 [link] &amp;#32; [comme…
-- [R] [reddit-saas] Anyone building payroll into construction workforce software? — https://www.reddit.com/r/SaaS/comments/1uyi81j/anyone_building_payroll_into_construction/ — Our product already handles crews, timesheets and job sites. Customers keep asking why payroll still means exporting everything into a diffe…
-- [R] [reddit-saas] Looking for feedback on my free meeting app (built it because Granola kept frustrating me) — https://www.reddit.com/r/SaaS/comments/1uyrrzy/looking_for_feedback_on_my_free_meeting_app_built/ — Not sure if this is the right sub, mods feel free to remove. I built a small app called Lamponi and I want some honest feedback before I pus…
-- [R] [reddit-saas] Looking for Saas admin dashboard to review data — https://www.reddit.com/r/SaaS/comments/1uyrr7h/looking_for_saas_admin_dashboard_to_review_data/ — Hello everyone, for context: I am currently developing a webapp with VSCode + ClaudeCode. I've seen people posting their SaaS' KPIs and stat…
-- [R] [reddit-saas] I built this because finding customers across Slack communities was taking 30 minutes every day — https://www.reddit.com/r/SaaS/comments/1uyrepn/i_built_this_because_finding_customers_across/ — I run a SaaS and I belong to 4-5 different Slack communities. Every day I'd open Slack and engage with the community, search for my competit…
-- [R] [reddit-saas] Are repeated signup pop-ups worth the UX cost? — https://www.reddit.com/r/SaaS/comments/1uyrdfb/are_repeated_signup_popups_worth_the_ux_cost/ — consider pinterest or instagram where the signup modals just keep popping up if you aren't signed in I know this is bad for UX, but my quest…
-- [R] [hn-top] Helium escaping from atmosphere of nearby rocky exoplanet — https://www.science.org/doi/10.1126/science.aea9708 — Planetary science paper in Science on atmospheric helium escape from a rocky exoplanet in a habitable zone. No relevance to software or business decisions.
-- [R] [hn-top] Mathematics of Data Science — https://arxiv.org/abs/2607.11938 — arXiv survey or textbook on the mathematical foundations of data science. Reference material rather than news, with no near-term decision impact.
-- [R] [hn-top] 'Likweli': a new monkey species discovered in the Congo Basin — https://news.yale.edu/2026/07/15/meet-likweli-new-monkey-species-discovered-congo-basin — Yale news item on the discovery of a new monkey species in the Congo Basin. No software or business relevance.
-- [P] [hn-top] The Human-in-the-Loop is Tired — https://pydantic.dev/articles/the-human-in-the-loop-is-tired — Pydantic essay on the cognitive cost of supervising AI-generated work, opening with a maintainer waking to thirty overnight agent PRs each demanding a snap judgment call. It frames this as a human reward function problem: automation removed the satisfying part of the job and grew the review burden without adding new rewards. The practical implication for anyone running agent fleets is that review throughput, not generation capacity, is the binding constraint, which argues for investing in automated verification and batching rather than more parallel agents.</pre>
+- [R] [gh-crewai] 1.15.4 — https://github.com/crewAIInc/crewAI/releases/tag/1.15.4 — Minor crewAI point release with light feature/docs notes; not a meaningful decision change.
+- [R] [hn-show] Show HN: A zoomable timeline of 4M Wikipedia events — https://app.everything.diena.co/ — Interesting visualization demo, but not a decision-changing tool or workflow signal.
+- [R] [hn-show] Show HN: Watch bots interact with an SSH honeypot in real time — https://honeypotlive.cc/ — Fun honeypot demo; security theater value, not a practical workflow change.
+- [P] [julia-evans] Julia Evans notes a few hard-earned SQLite operations lessons — https://jvns.ca/blog/2026/07/17/learning-about-running-sqlite/ — Julia Evans wrote up practical notes from running SQLite behind a Django site, including a dramatic query-speed improvement from running ANALYZE and the operational pain of long-running deletes when only one writer can proceed at a time. This is not a product launch, but it is grounded builder experience that sharpens the usual “SQLite is fine” advice into something more operationally honest. If you are defaulting small projects to SQLite, keep the article around as a checklist for WAL mode, maintenance batching, and backup discipline.
+- [R] [reddit-saas] First customer baby lets GO! $5 MRR — https://www.reddit.com/r/SaaS/comments/1uzhi1q/first_customer_baby_lets_go_5_mrr/ — First-customer milestone story; encouraging but not broadly actionable.
+- [R] [reddit-saas] First Sale After 7 Months of Hard Work — https://www.reddit.com/r/SaaS/comments/1uzops2/first_sale_after_7_months_of_hard_work/ — Another personal first-sale milestone; no reusable lesson beyond perseverance.
+- [R] [reddit-saas] Every SaaS now — https://www.reddit.com/r/SaaS/comments/1uzh21v/every_saas_now/ — Meme post, no substantive information.
+- [R] [reddit-saas] If you don't have MCP for your SaaS - you're missing out. — https://www.reddit.com/r/SaaS/comments/1uzhus8/if_you_dont_have_mcp_for_your_saas_youre_missing/ — Opinion thread about MCP as a SaaS wedge without evidence or concrete operator data.
+- [R] [reddit-saas] Software Engineer in 2022: Open VS Code and start coding. 😎 Software Engineer in 2026: Which AI should I ask first?🤯 — https://www.reddit.com/r/SaaS/comments/1uyzjc5/software_engineer_in_2022_open_vs_code_and_start/ — Meme-format AI gripe; no durable signal.
+- [R] [reddit-saas] So damn sick and stuck with AI — https://www.reddit.com/r/SaaS/comments/1uzmo87/so_damn_sick_and_stuck_with_ai/ — General frustration post about AI everywhere; no new evidence or decision leverage.
+- [R] [reddit-saas] How do you collect good and honest feedback for your product? — https://www.reddit.com/r/SaaS/comments/1uzoabp/how_do_you_collect_good_and_honest_feedback_for/ — Open-ended customer-feedback question, not a report or concrete tactic.
+- [R] [reddit-saas] Anyone seeing measurable ROI from enterprise AI? — https://www.reddit.com/r/SaaS/comments/1uz6gn0/anyone_seeing_measurable_roi_from_enterprise_ai/ — Discussion prompt about enterprise AI ROI without hard numbers.
+- [R] [reddit-saas] Founder here: solo bootstrapped, went live with a SaaS for AI agent audit trails. Some notes on the wedge. — https://www.reddit.com/r/SaaS/comments/1uzp881/founder_here_solo_bootstrapped_went_live_with_a/ — Self-promotional launch note for an audit-trail SaaS; thin evidence.
+- [R] [reddit-saas] i built myself a lil buddy to keep me motivated — https://www.reddit.com/r/SaaS/comments/1uyyccn/i_built_myself_a_lil_buddy_to_keep_me_motivated/ — Cute Raspberry Pi dashboard build, but not an important workflow shift.
+- [R] [reddit-saas] We built a workforce management tool for small businesses looking for honest feedback from owners and managers — https://www.reddit.com/r/SaaS/comments/1uzkjkp/we_built_a_workforce_management_tool_for_small/ — Feedback request for a workforce tool; marketing/discussion post, not a finding.
+- [R] [reddit-saas] The Biggest Mistake First-Time SaaS Founders Make Isn't Building Too Slow — https://www.reddit.com/r/SaaS/comments/1uzodtm/the_biggest_mistake_firsttime_saas_founders_make/ — Generic founder-advice framing without concrete evidence.
+- [R] [reddit-saas] What AI task still takes SaaS founders too many attempts? — https://www.reddit.com/r/SaaS/comments/1uzoah4/what_ai_task_still_takes_saas_founders_too_many/ — Prompt for founders to share AI pain points; discussion bait.
+- [R] [reddit-saas] Be honest: is your distribution problem that you didn’t know what to do, or that you knew exactly what to do but kept finding reasons not to do it? — https://www.reddit.com/r/SaaS/comments/1uzjwm7/be_honest_is_your_distribution_problem_that_you/ — Another mindset/distribution prompt rather than a report.
+- [R] [reddit-saas] Built a visual way to be on top of work and life - what I've learnt so far — https://www.reddit.com/r/SaaS/comments/1uzd1ff/built_a_visual_way_to_be_on_top_of_work_and_life/ — Personal project retrospective with no specific leverage for tomorrow-morning decisions.
+- [R] [reddit-saas] How Notion Built an Ecosystem That Became Its Biggest Growth Engine — https://www.reddit.com/r/SaaS/comments/1uznu4q/how_notion_built_an_ecosystem_that_became_its/ — Notion ecosystem growth essay link from Reddit; second-hand and not time-sensitive.
+- [R] [reddit-saas] 2 weeks since I launch ads on my app, this is what I learned — https://www.reddit.com/r/SaaS/comments/1uz1jxp/2_weeks_since_i_launch_ads_on_my_app_this_is_what/ — Small paid-ads learning post without enough detail to generalize.
+- [R] [reddit-saas] Windows:- Unsupported hardware.. Linux:- Unsupported? Challenge accepted. — https://www.reddit.com/r/SaaS/comments/1uzlr7t/windows_unsupported_hardware_linux_unsupported/ — Linux-on-old-hardware post is off-topic for the memo audience.
+- [R] [reddit-saas] If you ship an AI product, what is the failure mode that actually costs you users? — https://www.reddit.com/r/SaaS/comments/1uzlk32/if_you_ship_an_ai_product_what_is_the_failure/ — Question thread about AI product failure modes; no concrete outcomes.
+- [R] [reddit-saas] Launched my craving-tracker app fully organic a few weeks ago, no ad spend, and it's finally starting to click — https://www.reddit.com/r/SaaS/comments/1uz53rn/launched_my_cravingtracker_app_fully_organic_a/ — Organic-growth anecdote without a reusable tactic or measured result.
+- [R] [huggingface-blog] Fine-tune video and image models at scale with NVIDIA NeMo Automodel and 🤗 Diffusers — https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel — NVIDIA/Hugging Face fine-tuning announcement is specialized and not urgent for this audience.
+- [P] [cloudflare-blog] Cloudflare adds WAF coverage for two new WordPress vulnerabilities — https://blog.cloudflare.com/wordpress-vulnerabilities/ — Cloudflare shipped WAF rules for a new WordPress SQL injection flaw (CVE-2026-60137) and a critical unauthenticated RCE (CVE-2026-63030). The practical point is not the rules themselves but the patch window: affected sites on 6.8+ need to verify they are on 6.8.6, 6.9.5, 7.0.2, or 7.1 Beta 2. If you run or advise on WordPress properties, treat this as patch-now, and treat the WAF as temporary exposure reduction rather than the fix.
+- [R] [stratechery] 2026.29: Mainframes and Main Characters — https://stratechery.com/2026/mainframes-and-main-characters/ — Essay/opinion piece, not a concrete tooling or platform change.
+- [P] [gh-dify] Dify 1.16.0 adds sandboxed agents and warns users off Chat Completions defaults — https://github.com/langgenius/dify/releases/tag/1.16.0 — Dify 1.16.0 launches its new agent experience around a Linux sandbox, skills, agent reuse, and workflow integration, which is notable but still mostly a product-platform expansion story. The more decision-changing part is the explicit warning that older OpenAI plugin setups may still be pinned to Chat Completions and should be moved to Responses, especially for GPT-5.6-family models. If you touch Dify or similar agent builders, audit any saved OpenAI config now instead of waiting for model-specific errors to surface later.
+- [R] [latent-space] [AINews] not much happened today — https://www.latent.space/p/ainews-not-much-happened-today-830 — Quiet-day newsletter meta item; no underlying signal to act on.
+- [P] [val-town-blog] Val Town now surfaces AGENTS.md to Townie and external agents — https://blog.val.town/agents-dot-md — Val Town added AGENTS.md support at the val, user, and org levels, and says those instructions are exposed through its MCP server to outside agents like Claude Code, Codex, and Cursor. That makes Val Town more viable as a durable instruction surface rather than just a place to run snippets. If you use Val Town for agent-adjacent tooling, the practical question is whether shared instruction files are now good enough to replace ad hoc prompt scaffolding for small internal tools.
+- [P] [vercel-changelog] Vercel stops charging Sandbox ingress downloads — https://vercel.com/changelog/data-downloaded-by-vercel-sandbox-is-now-free — Vercel Sandbox no longer bills for data it downloads from the internet, which means package installs, repo clones, and pulling datasets into a sandbox stop counting toward transfer spend. This matters if you use sandboxes for agent or build tasks with heavy setup cost, because the variable cost profile shifts toward CPU, memory, snapshots, and outbound traffic only. If sandboxed automation is on your shortlist, re-run the cost model with ingress removed before dismissing it as too expensive.
+- [R] [vercel-changelog] GLM 5.2 is 35% off via Novita on AI Gateway — https://vercel.com/changelog/glm-5-2-is-35-off-via-novita-on-ai-gateway — Short-term model discount via one provider route; too promotional and narrow.
+- [P] [vercel-changelog] Vercel now reuses immutable assets across deployments — https://vercel.com/changelog/optimized-cdn-caching-and-deploying-of-immutable-static-assets — Vercel says supported frameworks now reuse content-addressed static assets across deployments with zero config, reporting lower CDN requests and bytes, faster deploys, and materially better TTFB for frequently deployed apps. The practical takeaway is that framework upgrades, especially Next.js 16.3 preview and later, may now buy operational wins without extra infra work. If you deploy often and pay attention to edge cost or cache churn, this is worth a test on a staging branch rather than a blind assumption.
+- [R] [vercel-changelog] Vercel Plugin now available in Kimi Code CLI — https://vercel.com/changelog/vercel-plugin-now-available-in-kimi-code-cli — Plugin availability in Kimi Code CLI is narrow ecosystem plumbing.
+- [R] [vercel-changelog] Chat SDK adds native Slack agent support — https://vercel.com/changelog/chat-sdk-adds-native-slack-agent-support — Slack adapter improvement is real but too niche for today’s cut.
+- [R] [gh-nextjs] v16.3.0-canary.89 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.89 — Next.js canary release note is incremental and preview-only.
+- [R] [lobsters] Faulty Towers, vibe sickness, and the vibe bobsled — https://dustycloud.org/blog/faulty-towers-vibe-sickness-and-the-vibe-bobsled/ — Opinionated anti-vibe-coding essay; more commentary than actionable evidence.
+- [R] [lobsters] Learning a few things about running SQLite — https://jvns.ca/blog/2026/07/17/learning-about-running-sqlite/ — Duplicate Lobsters submission of the Julia Evans SQLite post.
+- [R] [lobsters] Enterprise Haskell at H-E-B — https://blog.haskell.org/enterprise-haskell-at-h-e-b/ — Enterprise Haskell profile is interesting but outside the memo’s decision scope.
+- [R] [lobsters] Lobsters Interview with matheusmoreira about Lone Lisp — https://alexalejandre.com/interviews/interview-with-matheus-moreira/ — Lisp interview is off-lane for the morning memo.</pre>
     </details>
   </main>
   <footer>
