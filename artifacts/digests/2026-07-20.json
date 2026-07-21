@@ -1,662 +1,529 @@
 {
   "date": "2026-07-20",
-  "generated_at": "2026-07-20T06:17:09.366Z",
+  "generated_at": "2026-07-20T11:08:57.660Z",
   "imported_from": {
     "importer_version": "digest-import/v1",
     "source_artifact": "artifacts/synthesized/2026-07-20.json",
-    "source_sha256": "9c6e2836ac8018c452ec17e3af6004d157c658cb19e9739e4a4da7a4abe8606f"
+    "source_sha256": "4e499905fb953e6be1796ab3823e2f2e3c370b63836b71bfe0227c18ab06fe10"
   },
   "items": [
     {
-      "builder_takeaway": "Claude Code is core daily tooling; a runtime and packaging change can silently break wrappers, version pins, and container builds.",
-      "category": "Model + API Changes",
-      "id": "acdeb0fc-4852-476e-9edf-87bdd268369e",
+      "builder_takeaway": "Strong example of cheap embedded hardware and open software collapsing old niche-vendor margins.",
+      "category": "Tools Worth Testing",
+      "id": "52537750-e2c4-4597-a07b-45d4b1e57f62",
       "importance": "lead",
       "labels": [
         "builder_reported",
-        "publish_public"
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "simonwillison.net",
+      "source": "news.ycombinator.com",
       "source_facts": [
-        "Claude Code now ships as a Bun runtime compiled with Rust rather than its previous Node-based distribution."
+        "The HN post describes replacing expensive locked-down bowling control gear with commodity microcontrollers, Redis-backed event streaming, and a plan to open source the stack."
       ],
-      "title": "Claude Code uses Bun written in Rust now",
-      "uncertainty": "Content extraction failed for this item, so the summary rests on the title plus Simon Willison's general reliability rather than on the article text.",
-      "url": "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/"
+      "title": "Bowling-alley owner replaced a six-figure scoring stack with ESP32s",
+      "uncertainty": "HN builder report rather than a polished write-up, but the architecture and cost claims are detailed enough to be worth attention.",
+      "url": "https://news.ycombinator.com/item?id=48968606"
     },
     {
-      "builder_takeaway": "On-device speech at this footprint would remove a recurring per-minute API cost from any voice-agent product.",
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
       "category": "Tools Worth Testing",
-      "id": "ca4a7d80-927d-4257-b0ee-c285801b299e",
-      "importance": "supporting",
+      "id": "47152ace-a4ad-4f44-b42f-45f7bed8d3d1",
+      "importance": "archive-only",
       "labels": [
-        "vendor_claim",
-        "publish_public"
+        "early_signal",
+        "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "github.com",
+      "source": "passinote.app",
       "source_facts": [
-        "Moonshine Micro provides open-source speech recognition and text-to-speech in a footprint under 500 KB."
+        "Canvas notes app demo is polished, but it reads as an early product showcase rather than a decision-changing workflow signal."
       ],
-      "title": "Speech Recognition and TTS in less than 500kb (Moonshine Micro)",
-      "uncertainty": "Content extraction failed; the size claim comes from the title and is unverified, and accuracy relative to hosted models is unknown.",
-      "url": "https://github.com/moonshine-ai/moonshine/tree/main/micro"
+      "title": "Show HN: A canvas-based note taking and organizer app",
+      "uncertainty": "",
+      "url": "https://www.passinote.app/"
     },
     {
-      "builder_takeaway": "Concrete, self-reported inference spend is a rare and directly comparable cost datapoint.",
-      "category": "Small Business Automation",
-      "id": "c97f4181-02d9-4def-8fe1-25fcdd648b05",
-      "importance": "supporting",
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "eaa346e3-15ab-474d-ae6f-99d764f64b83",
+      "importance": "archive-only",
       "labels": [
-        "builder_reported",
-        "publish_public"
+        "early_signal",
+        "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-07-20T00:00:00.000Z",
       "source": "reddit.com",
       "source_facts": [
-        "An AI-core SaaS reported roughly $3,000 in OpenRouter inference spend for the month of June."
+        "First-payment screenshot post is too anecdotal to generalize into an operator takeaway."
       ],
-      "title": "Our AI bill for June: $3,000",
-      "uncertainty": "Revenue, request volume, and model mix are not stated, so the figure is hard to normalize against a different product's usage.",
-      "url": "https://www.reddit.com/r/SaaS/comments/1v0mlyu/our_ai_bill_for_june_3000/"
+      "title": "Yo gang 😎 1st payment ..from 1st july to 15th of July.. i launched in 1st July",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v19q31/yo_gang_1st_payment_from_1st_july_to_15th_of_july/"
     },
     {
-      "builder_takeaway": "Local transcription removes a recurring API cost and a privacy exposure for audio workloads.",
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
       "category": "Tools Worth Testing",
-      "id": "40453055-9674-4318-9e69-3caf27125f52",
+      "id": "31a6287d-6c44-47f8-b6f1-b8cdd089da9d",
       "importance": "archive-only",
       "labels": [
         "early_signal",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "workshop.cjpais.com",
-      "source_facts": [
-        "Transcribe.cpp is a local-first speech transcription implementation runnable without a hosted API."
-      ],
-      "title": "Transcribe.cpp",
-      "uncertainty": "Content extraction failed, so accuracy, model backing, and maturity are all unknown from this item alone.",
-      "url": "https://workshop.cjpais.com/projects/transcribe-cpp"
-    },
-    {
-      "builder_takeaway": "Quota timing is a real scheduling constraint for anyone running Codex agents on a cadence.",
-      "category": "AI Operations / Agent Control",
-      "id": "672dcca9-7614-46a6-9dfa-278af215df08",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "codex-resets.com",
-      "source_facts": [
-        "Codex Resets is a site that tracks when Codex usage-limit windows reset."
-      ],
-      "title": "Codex Resets",
-      "uncertainty": "Content extraction failed; whether the reset times are measured, crowd-sourced, or merely inferred is unknown.",
-      "url": "https://codex-resets.com/"
-    },
-    {
-      "builder_takeaway": "Establishes a concrete lower bound for independent hosting cost.",
-      "category": "Small Business Automation",
-      "id": "9e22ec8d-93ae-4ad7-ac95-d50c09d33d38",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "neatnik.net",
-      "source_facts": [
-        "A fully self-hosted, independent website can be operated for approximately $0.01 per day."
-      ],
-      "title": "Hardcore IndieWeb: run your own website 100% independently for only $0.01/day",
-      "uncertainty": "Content extraction failed, so what the figure includes — domain, bandwidth, electricity, labor — is unclear and the headline number may exclude real costs.",
-      "url": "https://www.neatnik.net/hardcore-indieweb"
-    },
-    {
-      "builder_takeaway": "Directly applicable to multi-agent workflows, and the dedicated-machine pattern meaningfully limits blast radius.",
-      "category": "AI Operations / Agent Control",
-      "id": "e049bcc5-a06e-404a-9a45-b65f25726e00",
-      "importance": "supporting",
-      "labels": [
-        "builder_reported",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "ykdojo.github.io",
-      "source_facts": [
-        "A spare Mac can be configured as a dedicated machine for Claude Code to control autonomously."
-      ],
-      "title": "Setting up your spare Mac for Claude Code to control, a step-by-step guide",
-      "uncertainty": "Content extraction failed, so the guide's security posture and which permissions it asks the reader to grant are unreviewed.",
-      "url": "https://ykdojo.github.io/claude-controls-mac/"
-    },
-    {
-      "builder_takeaway": "Measured comparisons of prompting scaffolds are rarer and more useful than asserted best practices.",
-      "category": "AI Operations / Agent Control",
-      "id": "0dae3c73-d1dc-48b8-b43f-846ca6dfc88a",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "charlesazam.com",
-      "source_facts": [
-        "A builder compared Fable 5 and GPT-5.6 Sol on an NP-hard problem to test whether a /goal directive improves results."
-      ],
-      "title": "Fable 5 vs. GPT-5.6 Sol on an NP-Hard Problem: Does /goal help?",
-      "uncertainty": "Content extraction failed; sample size, problem instance, and whether runs were repeated are all unknown, so the result may not be reproducible.",
-      "url": "https://charlesazam.com/blog/fable-5-gpt-5-6-sol-goal/"
-    },
-    {
-      "builder_takeaway": "Concrete launch numbers with the traffic source broken out, which is the part most launch posts omit.",
-      "category": "Tools Worth Testing",
-      "id": "bdd1afec-0219-4c3e-bc20-8a53faf4b3fd",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "publish_private"
+        "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-07-20T00:00:00.000Z",
       "source": "reddit.com",
       "source_facts": [
-        "A first Android app launch produced about 120 installs and a 33% store-listing-to-install conversion rate over two weeks, driven mostly by Reddit rather than organic Play Store traffic."
+        "Meta discussion about SaaS culture, not a factual report or tactical lesson."
       ],
-      "title": "Two weeks after launching my first Android app on Google Play",
-      "uncertainty": "Single anecdote from one app in one category; the 33% conversion rate is flattered by the traffic being pre-qualified Reddit referrals rather than cold search.",
-      "url": "https://www.reddit.com/r/SaaS/comments/1v0l2ht/two_weeks_ago_i_launched_my_first_android_app/"
+      "title": "Why are people here so obsessed with money only?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v110pi/why_are_people_here_so_obsessed_with_money_only/"
     },
     {
-      "builder_takeaway": "Open-weight capability shifts matter for cost planning, but this needs corroboration first.",
-      "category": "Model + API Changes",
-      "id": "3725b096-0d85-4c13-968a-35011de2ed95",
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "c89eb535-ffee-4d58-8aae-efeb8977a238",
       "importance": "archive-only",
       "labels": [
         "early_signal",
-        "monitor"
+        "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "stephen.bochinski.dev",
+      "source": "reddit.com",
       "source_facts": [
-        "A commentator argues that the Kimi K3 release represents a significant inflection point in open model capability."
+        "Small revenue milestone with no reusable lesson beyond generic perseverance."
       ],
-      "title": "The Kimi K3 Moment",
-      "uncertainty": "Content extraction failed; whether the post contains benchmarks or is pure narrative is unknown.",
-      "url": "https://stephen.bochinski.dev/blog/2026/07/18/the-kimi-k3-moment/"
+      "title": "First $652 from my side project. Slowest graph you'll see today, but it only goes up.",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v0w8is/first_652_from_my_side_project_slowest_graph/"
     },
     {
-      "builder_takeaway": "If substantiated it would be a genuine capability milestone, but the sourcing does not currently support that.",
-      "category": "Model + API Changes",
-      "id": "0c21ea56-dfcf-4616-a187-ea90edd1c04c",
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "dfbc772d-bee0-40e3-aaec-c330286a1792",
       "importance": "archive-only",
       "labels": [
         "early_signal",
-        "monitor"
+        "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "old.reddit.com",
+      "source": "reddit.com",
       "source_facts": [
-        "A Reddit thread claims GPT-5.6 produced a proof closing a 30-year-old gap in convex optimization."
+        "First customer validation is good for the founder, but too thin for the memo."
       ],
-      "title": "GPT-5.6 used a prompt to close a 30-year gap in convex optimization",
-      "uncertainty": "Sourced from a Reddit discussion with no content captured; the degree of human guidance and whether the proof has been verified are both unknown.",
-      "url": "https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/"
+      "title": "My first revenue as a solo founder feels better than my first 1,000 downloads.",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v19ztn/my_first_revenue_as_a_solo_founder_feels_better/"
     },
     {
-      "builder_takeaway": "Open-weight releases at this tier directly affect whether local inference can replace paid API calls.",
-      "category": "Model + API Changes",
-      "id": "4276b8f4-9f88-4b78-b9e7-9273e395298f",
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "88fcca99-d2ca-4e35-b5a0-0ca6df8132df",
       "importance": "archive-only",
       "labels": [
-        "vendor_claim",
-        "monitor"
+        "early_signal",
+        "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "twitter.com",
+      "source": "reddit.com",
       "source_facts": [
-        "Alibaba announced that Qwen3.8 will launch and be released with open weights."
+        "Request for free launch-site lists is a forum help thread, not a report."
       ],
-      "title": "Qwen3.8 is launching and going open-weight soon",
-      "uncertainty": "Pre-announcement only; release timing, licence terms, and model sizes are all unstated.",
-      "url": "https://twitter.com/Alibaba_Qwen/status/2078759124914098291"
+      "title": "Please give me the list for free Product Launch sites",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v1a10d/please_give_me_the_list_for_free_product_launch/"
     },
     {
-      "builder_takeaway": "Post-mortems on self-hosted failures often carry transferable backup and recovery lessons.",
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "7bdc32a8-46b2-4c01-b019-b8790422bb12",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Consumer-app traction struggle is common but not evidenced enough to promote."
+      ],
+      "title": "I’ve been building a couples app for the past five months, but I’m struggling to get traction.",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v1dnud/ive_been_building_a_couples_app_for_the_past_five/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "46a293c0-43ca-4e4b-b6cf-3ca73cb31e16",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Cold-outbound personalization claim is interesting, but it is still an unsupported self-report."
+      ],
+      "title": "I claimed Personalised Landing pages for cold outbound can work at scale, and I made it work with zero reccuring costs, zero ai costs",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v16mmm/i_claimed_personalised_landing_pages_for_cold/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "d0cc906e-c1ab-4239-a779-2fd4aa8a399f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Career advice thread about starting a business, not a concrete builder report."
+      ],
+      "title": "Should I start my own business?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v17z9c/should_i_start_my_own_business/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "5e07dd31-320b-4d0c-a511-c9e4e3dfa260",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Speculation about headless SaaS and agents, without evidence or a concrete implementation result."
+      ],
+      "title": "Is the future of SaaS headless?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v14t4r/is_the_future_of_saas_headless/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "96927806-8a0d-4e07-a3bf-6b95fd5b4975",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Domain-choice anxiety thread does not carry a strong practical signal."
+      ],
+      "title": "Have I made a mistake buying .xyz domain for my SaaS?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v1f31i/have_i_made_a_mistake_buying_xyz_domain_for_my/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "03fed8b2-12ef-4f52-917a-9ecb89004fac",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Useful founder intuition about pain vs willingness to pay, but still just a forum reflection."
+      ],
+      "title": "starting to realize “this workflow sucks” doesn’t mean anyone will pay to fix it",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v1f13b/starting_to_realize_this_workflow_sucks_doesnt/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "f4d726e0-4ac6-4e82-a84c-0512db28b08e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Early international-user milestone is encouraging, but too small and generic to promote."
+      ],
+      "title": "Launched my site 7 days ago. Today I noticed people from 10+ countries using it.",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v1eork/launched_my_site_7_days_ago_today_i_noticed/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "f9b55d6f-60ee-43e7-9687-12ccd2ee4ed9",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "50-user milestone without stronger retention, revenue, or workflow insight."
+      ],
+      "title": "50 users, no funding, no team. Small milestone but wanted to share.",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v1em3s/50_users_no_funding_no_team_small_milestone_but/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "d67d7cfb-3459-44b8-84c8-c633d9760ec3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Open-ended bottleneck discussion thread, not a sourced report."
+      ],
+      "title": "What's the biggest bottleneck stopping your SaaS from growing right now?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v1ej5j/whats_the_biggest_bottleneck_stopping_your_saas/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "6d256974-8d7f-4c14-a7d2-939b7cd6c507",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Idea post about persistent AI memory across tools, but no shipped product or evidence."
+      ],
+      "title": "An idea: your AI remembers you, even when you switch AIs",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v1e447/an_idea_your_ai_remembers_you_even_when_you/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "5cb20d2f-b9b7-441b-b97f-2f463b92e365",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Generic help post with no factual signal."
+      ],
+      "title": "Help me!!",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v1e0hx/help_me/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "4af8aac5-1c35-4267-9370-22dbfe1b23a3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Rejected-by-YC turnaround story is motivational but not especially actionable."
+      ],
+      "title": "I got rejected by YC. Today we're on track for $1M ARR.",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v1dyce/i_got_rejected_by_yc_today_were_on_track_for_1m/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "e77fc18a-dc63-4e97-bc1a-ee28ac3df384",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Consulting handoff checklist question is useful for a thread, not for the memo."
+      ],
+      "title": "If you hire an agency to build an AI feature, what should the handoff include?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v0zaeu/if_you_hire_an_agency_to_build_an_ai_feature_what/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "80ad605f-2c27-4782-bc6c-0e32f3cb78d5",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "ERP recommendation request is off-topic for this audience and format."
+      ],
+      "title": "Best ERP system for a Surgicals Items distribution company",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v1d6jn/best_erp_system_for_a_surgicals_items/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "4423b874-f443-4ada-9a05-c7cef42936bd",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Day-one customer-acquisition diary is too raw to carry signal yet."
+      ],
+      "title": "Day 1 of trying to get my first 10 SaaS customers",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v0nqh9/day_1_of_trying_to_get_my_first_10_saas_customers/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "4eb50b97-88b3-4632-a4c7-525252d03687",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Demand-testing landing-page question is generic forum discussion, not a result."
+      ],
+      "title": "Does product sign-up page for B2B market demand testing still work in this day-and-age?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v1d2i8/does_product_signup_page_for_b2b_market_demand/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "0e52c8ad-27e5-4ab5-9394-0a0412ec202c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Explainer-video feedback request does not meet the evidence bar."
+      ],
+      "title": "Is this good enough as an explainer video?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v0uqfn/is_this_good_enough_as_an_explainer_video/"
+    },
+    {
+      "builder_takeaway": "Concrete infra/product direction for agent workloads, with immediate implications for teams comparing orchestration stacks.",
       "category": "Data Infrastructure / Verification / Scraping",
-      "id": "3b5d9d6f-917b-4441-86cd-98b792933c41",
-      "importance": "archive-only",
+      "id": "b30bffed-1b29-44d7-b9f8-9884962df720",
+      "importance": "supporting",
       "labels": [
-        "builder_reported",
-        "monitor"
+        "vendor_claim",
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "sgt.hootr.club",
+      "source": "render.com",
       "source_facts": [
-        "A builder documents the failure and subsequent rebuild of their self-hosted home server."
+        "Render says AI-native apps need runtime-selected compute, long-running tasks, and managed orchestration; Workflows is the first shipping primitive."
       ],
-      "title": "The death and rebirth of my home server",
-      "uncertainty": "Content extraction returned only the string \"Comments\", so the substance of the post is entirely unknown.",
-      "url": "https://sgt.hootr.club/blog/home-server-rebirth/"
+      "title": "Render launches Application-Defined Compute and Workflows pitch",
+      "uncertainty": "Source is Render marketing and keynote framing, so the capability claims should be treated as vendor-positioned until independently pressure-tested.",
+      "url": "https://render.com/blog/localhost-our-first-user-conference-and-why-the-cloud-needs-to-get-out-of-your-way"
     },
     {
-      "builder_takeaway": "A media streaming tool positioned as an IPTV alternative. Entertainment tooling with no bearing on solo software development decisions.",
+      "builder_takeaway": "Duplicate item already represented elsewhere in the run.",
       "category": "Tools Worth Testing",
-      "id": "0f5c3485-d562-48e6-b51e-9862f1788af1",
+      "id": "f2ebe2ff-ad87-4328-bedf-c082e01452e5",
       "importance": "archive-only",
       "labels": [
-        "vendor_claim",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-07-20T00:00:00.000Z",
       "source": "github.com",
       "source_facts": [
-        "Castor is presented as a cheaper alternative to IPTV streaming services."
+        "Duplicate stable tag for n8n 2.30.8; same release already covered by the versioned tag."
       ],
-      "title": "Better and Cheaper Than IPTV",
-      "uncertainty": "",
-      "url": "https://github.com/stupside/castor"
+      "title": "stable",
+      "uncertainty": "Duplicate stable tag for n8n 2.30.8; same release already covered by the versioned tag.",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/stable"
     },
     {
-      "builder_takeaway": "A popular-science piece on open problems in multiplication complexity. Intellectually interesting but changes no near-term engineering decision.",
-      "category": "Tools Worth Testing",
-      "id": "2ea65edf-d3ea-43a4-a38c-d9a6ddc35373",
-      "importance": "archive-only",
-      "labels": [
-        "reproducible",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "scientificamerican.com",
-      "source_facts": [
-        "The optimal asymptotic algorithm for integer multiplication remains an open problem in computer science."
-      ],
-      "title": "Mathematicians still don't know the fastest way to multiply numbers",
-      "uncertainty": "",
-      "url": "https://www.scientificamerican.com/article/mathematicians-still-dont-know-the-fastest-way-to-multiply-numbers/"
-    },
-    {
-      "builder_takeaway": "A general essay on building and distribution. No specific, testable claims or actionable specifics.",
-      "category": "Small Business Automation",
-      "id": "c3914e07-7d6d-49e1-8ae7-3d734caf3093",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "benlandautaylor.com",
-      "source_facts": [
-        "An essay argues about the relationship between building a product and attracting an audience."
-      ],
-      "title": "If You Build It, They Will Come",
-      "uncertainty": "",
-      "url": "https://www.benlandautaylor.com/p/if-you-build-it-they-will-come"
-    },
-    {
-      "builder_takeaway": "An archive of freely downloadable classic Amiga software. Retro-computing interest only.",
-      "category": "Tools Worth Testing",
-      "id": "256cc200-111a-4e1c-bbac-8f003fd15b5a",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "amigafreeware.downer.tech",
-      "source_facts": [
-        "A site offers a collection of classic Amiga titles for free download."
-      ],
-      "title": "Classic Amiga titles, free to download",
-      "uncertainty": "",
-      "url": "https://amigafreeware.downer.tech/"
-    },
-    {
-      "builder_takeaway": "A personal creative project writeup about designing a live-action roleplaying game. Off-topic for this digest.",
-      "category": "Tools Worth Testing",
-      "id": "64fb577c-61ee-40b5-9bab-c5f8923cd7fa",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "mssv.net",
-      "source_facts": [
-        "A creator describes building Strandfall, a solarpunk orienteering live-action roleplaying game."
-      ],
-      "title": "I'm Making Strandfall, a Solarpunk Orienteering Larp",
-      "uncertainty": "",
-      "url": "https://mssv.net/2026/04/29/im-making-strandfall-a-solarpunk-orienteering-larp/"
-    },
-    {
-      "builder_takeaway": "A valedictory column from ACM Queue. Reflective rather than operational; nothing to act on.",
-      "category": "Tools Worth Testing",
-      "id": "0e94a33e-389c-4e8a-812f-547e73640227",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "queue.acm.org",
-      "source_facts": [
-        "An ACM Queue columnist publishes a farewell piece reflecting on software engineering culture."
-      ],
-      "title": "Goodbye, and Thanks for All the Bikesheds",
-      "uncertainty": "",
-      "url": "https://queue.acm.org/detail.cfm?id=3818307"
-    },
-    {
-      "builder_takeaway": "Local policy news on AI-generated imagery in property listings. Politically framed and jurisdiction-specific; out of scope for this digest.",
-      "category": "Small Business Automation",
-      "id": "babd91f6-8a54-4561-b4e7-35a6f6a3878c",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "petapixel.com",
-      "source_facts": [
-        "New York's mayor stated that landlords may not secretly use AI-generated images to advertise properties."
-      ],
-      "title": "Mayor Mamdani Says Landlords Can't Secretly Use AI Images to Advertise Properties",
-      "uncertainty": "",
-      "url": "https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/"
-    },
-    {
-      "builder_takeaway": "The Elixir language website received a visual redesign. No language or tooling change behind it.",
-      "category": "Tools Worth Testing",
-      "id": "152962ed-fc90-4024-9f17-ec20f890b622",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "elixir-lang.org",
-      "source_facts": [
-        "The official Elixir language website has been redesigned."
-      ],
-      "title": "Elixir-lang.org has a new design",
-      "uncertainty": "",
-      "url": "https://elixir-lang.org/"
-    },
-    {
-      "builder_takeaway": "An opinion piece on AI hype and its effect on institutional decision-making. Editorial commentary rather than evidence.",
-      "category": "Tools Worth Testing",
-      "id": "665c0a99-9280-43fc-be2d-4ad9c108cd10",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "ludic.mataroa.blog",
-      "source_facts": [
-        "An essayist argues that enthusiasm for AI is degrading the quality of global institutional decision-making."
-      ],
-      "title": "AI Mania Is Eviscerating Global Decision-Making",
-      "uncertainty": "",
-      "url": "https://ludic.mataroa.blog/blog/ai-mania-is-eviscerating-global-decision-making/#fnref:3"
-    },
-    {
-      "builder_takeaway": "The Gleam language project moved its repository hosting to Tangled. Relevant only to Gleam contributors.",
-      "category": "Tools Worth Testing",
-      "id": "dd5e9d39-7419-4986-993f-aeaf93daf467",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "tangled.org",
-      "source_facts": [
-        "The Gleam programming language project has migrated its repository to the Tangled hosting platform."
-      ],
-      "title": "Gleam Is Now on Tangled",
-      "uncertainty": "",
-      "url": "https://tangled.org/gleam.run/gleam"
-    },
-    {
-      "builder_takeaway": "Consumer hardware business commentary on GoPro's decline. No relevance to software development decisions.",
-      "category": "Small Business Automation",
-      "id": "305b3cd5-5761-442f-8005-6ebec79ef3dc",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "amateurphotographer.com",
-      "source_facts": [
-        "A photography publication questions whether GoPro's business decline is terminal."
-      ],
-      "title": "Is this the end of the once-mighty GoPro?",
-      "uncertainty": "",
-      "url": "https://amateurphotographer.com/latest/photo-news/going-going-gone-is-this-the-end-of-the-once-mighty-gopro/"
-    },
-    {
-      "builder_takeaway": "An arXiv artificial-life paper on emergent self-replication in a digital substrate. Research interest only, no practical application here.",
-      "category": "Tools Worth Testing",
-      "id": "1eede60e-62f9-4f9d-8fca-1f6164c5d3ec",
-      "importance": "archive-only",
-      "labels": [
-        "reproducible",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "arxiv.org",
-      "source_facts": [
-        "Researchers report co-evolution of self-replication and function in a simulated digital primordial soup."
-      ],
-      "title": "Co-evolution of self-replication and function in a digital primordial soup",
-      "uncertainty": "",
-      "url": "https://arxiv.org/abs/2607.09211"
-    },
-    {
-      "builder_takeaway": "Consumer vehicle pricing announcement. Entirely off-topic.",
-      "category": "Small Business Automation",
-      "id": "1f0fc35d-5e21-47b2-91b1-26523513db09",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "reotrucks.com",
-      "source_facts": [
-        "REO Trucks announced an I4 4WD pickup truck starting at $21,500."
-      ],
-      "title": "REO Trucks I4 4WD Pickup Truck Starts at $21,500",
-      "uncertainty": "",
-      "url": "https://reotrucks.com"
-    },
-    {
-      "builder_takeaway": "Documentation page on dictionary and table concepts in the q/kdb+ ecosystem. Niche reference material with no news value.",
-      "category": "Tools Worth Testing",
-      "id": "4e035bfe-3b94-4283-b375-22f6a64ffacf",
-      "importance": "archive-only",
-      "labels": [
-        "reproducible",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "defconq.tech",
-      "source_facts": [
-        "A documentation page explains dictionary and table data structures in the q/kdb+ language."
-      ],
-      "title": "Dictionaries and Tables",
-      "uncertainty": "",
-      "url": "https://www.defconq.tech/docs/concepts/dictionariesTables"
-    },
-    {
-      "builder_takeaway": "A vendor index of APL case studies. Marketing collateral for a niche language.",
-      "category": "Tools Worth Testing",
-      "id": "dbe92cdc-cf62-4b4a-a478-b6a00b13546a",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "dyalog.com",
-      "source_facts": [
-        "Dyalog publishes a collection of case studies describing commercial APL deployments."
-      ],
-      "title": "APL Case Studies",
-      "uncertainty": "",
-      "url": "https://www.dyalog.com/case-studies/index.htm"
-    },
-    {
-      "builder_takeaway": "A retro-computing achievement: emulating Itanium well enough to boot Windows. Technically impressive but offers no practical leverage.",
-      "category": "Tools Worth Testing",
-      "id": "d7467b86-3bfb-4433-b4a3-fa9f0d899cdb",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "raymii.org",
-      "source_facts": [
-        "A developer built an Intel Itanium IA-64 emulator capable of booting Windows."
-      ],
-      "title": "An Intel Itanium (IA-64) emulator that boots Windows",
-      "uncertainty": "",
-      "url": "https://raymii.org/s/blog/Intel_Itanium_IA-64-Emulator_that_boots_Windows.html"
-    },
-    {
-      "builder_takeaway": "A low-effort request for launch-directory recommendations. No findings or data.",
-      "category": "Small Business Automation",
-      "id": "46803d05-fa20-4d10-969f-2f20e925598b",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A poster asks for recommendations of websites and subreddits suitable for launching an app."
-      ],
-      "title": "I need recommendations for list of places where I can launch",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1v0nm4m/i_need_recommendations_for_list_of_places_where_i/"
-    },
-    {
-      "builder_takeaway": "An open-ended discussion prompt about ICP definition and go-to-market. Asserts that 99% of founders skip validation without supporting data.",
-      "category": "Small Business Automation",
-      "id": "ca0f5c66-263b-481a-8304-41cd7c3f9dff",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A poster claims that over 99% of new entrepreneurs they interviewed lacked a defined target customer profile."
-      ],
-      "title": "What are you doing and did you do validation for your saas?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1v0n476/what_are_you_doing_and_did_you_do_validation_for/"
-    },
-    {
-      "builder_takeaway": "A founder in corporate travel SaaS asks for growth advice with one waitlist customer. A generic help request rather than a report.",
-      "category": "Small Business Automation",
-      "id": "d422e5ae-a1c0-437e-92e8-68b00711a711",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A B2B corporate travel SaaS founder with one waitlist customer asks how to grow their customer base."
-      ],
-      "title": "How do I get customers?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1v0n0nr/how_do_i_get_customers/"
-    },
-    {
-      "builder_takeaway": "Framed as a question about recruiting interview subjects, but resolves into a pitch for the poster's own booking platform. Promotional.",
-      "category": "Small Business Automation",
-      "id": "7d75173d-62b7-48cd-a0b4-1739786f4b83",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A poster describes building a platform for booking short validation calls with target users, framed around a Mom Test question structure."
-      ],
-      "title": "How are you all finding people to interview when validating your SaaS idea?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1v0mppj/how_are_you_all_finding_people_to_interview_when/"
-    },
-    {
-      "builder_takeaway": "Argues for replacing PDF email attachments with tracked, access-controlled document links. The reasoning is sound but the post is promotional content for a virtual data room product.",
+      "builder_takeaway": "Narrow operational fix for teams already using n8n agent workflows, but not broad enough for a lead item.",
       "category": "AI Operations / Agent Control",
-      "id": "a73b00f1-9317-4a85-9101-7f867821b00b",
+      "id": "dd14932e-9d43-4aa6-b477-d3fcfdb50f0e",
       "importance": "archive-only",
       "labels": [
         "vendor_claim",
-        "reject"
+        "monitor"
       ],
       "product_relevance": [],
       "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "github.com",
       "source_facts": [
-        "Sending PDFs as email attachments forfeits visibility and access control compared with using a permissioned document link."
+        "Release notes show a narrow but relevant agent-workflow bug fix: tools wired through HITL could become invisible to the AI Agent."
       ],
-      "title": "Stop sending important PDFs as email attachments",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1v0lwz6/stop_sending_important_pdfs_as_email_attachments/"
+      "title": "n8n 2.30.8 fixes AI Agent tool visibility with HITL tools",
+      "uncertainty": "Release page loaded with some GitHub UI errors, but the bug-fix text itself was readable.",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.30.8"
     },
     {
-      "builder_takeaway": "Standard positioning advice — sell outcomes not features, fit existing workflows, double down on what converts — followed by a link to the author's own service.",
-      "category": "Small Business Automation",
-      "id": "c1b1e3ab-089f-4beb-bca4-53fbc0955a38",
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "488a4a49-fcf6-4a93-847f-c283d8e4e3d0",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -664,18 +531,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "github.com",
       "source_facts": [
-        "A founder advises selling outcomes rather than features and minimizing the workflow change a product demands of users."
+        "Next.js canary only bumps React internals in this entry; too thin for the memo."
       ],
-      "title": "It's so important to figure out your product's USP and messaging",
+      "title": "v16.3.0-canary.90",
       "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1v0ltmi/its_so_important_to_figure_out_your_products_usp/"
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.90"
     },
     {
-      "builder_takeaway": "A developer asks how to enforce licence expiry and deter piracy in a Python desktop app, preferring open-source tooling. A legitimate engineering question, but an unanswered ask rather than a finding.",
-      "category": "Small Business Automation",
-      "id": "2060ce7e-a506-44bf-a2e7-74f4f93a8b14",
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "d8c7220e-a91a-4e4e-b453-46584322f287",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -683,18 +550,37 @@
       ],
       "product_relevance": [],
       "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "robotics.xiaomi.com",
       "source_facts": [
-        "A developer seeks approaches for enforcing subscription licence expiration and deterring piracy in a Python desktop application."
+        "Xiaomi robotics teaser may be interesting, but it is outside this memo’s practical solo-dev filter."
       ],
-      "title": "How do desktop applications implement monthly/yearly subscriptions securely?",
+      "title": "Xiaomi-Robotics-1",
       "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1v0l39p/how_do_desktop_applications_implement/"
+      "url": "https://robotics.xiaomi.com/xiaomi-robotics-1.html"
     },
     {
-      "builder_takeaway": "A student asks for a complete tech stack recommendation for a micro-SaaS idea. No signal.",
-      "category": "Small Business Automation",
-      "id": "08d27cd2-81c7-4cd4-8450-97cb73948e28",
+      "builder_takeaway": "Useful if you care about practical PEFT speed rather than benchmark storytelling.",
+      "category": "Tools Worth Testing",
+      "id": "be285c28-1f1e-457e-9c7e-052154c77d07",
+      "importance": "supporting",
+      "labels": [
+        "reproducible",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "The repo benchmarks LoRA/QLoRA methods on fixed tracks with free verification runs on the same Modal L40S hardware and public reports."
+      ],
+      "title": "LoRA Speedrun sets up a public fine-tuning wall-clock benchmark",
+      "uncertainty": "Project is early and currently founder-led, but the rules and verification model are explicit and inspectable.",
+      "url": "https://github.com/Saivineeth147/lora-speedrun"
+    },
+    {
+      "builder_takeaway": "Duplicate item already represented elsewhere in the run.",
+      "category": "Tools Worth Testing",
+      "id": "0b905c3c-e8a4-4a83-a465-9a2dabfdd646",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -702,18 +588,189 @@
       ],
       "product_relevance": [],
       "published_at": "2026-07-20T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "news.ycombinator.com",
       "source_facts": [
-        "A student with basic Python knowledge requests a full technology stack recommendation for building a micro-SaaS."
+        "Duplicate HN listing of the bowling-center retrofit already covered from hn-show."
       ],
-      "title": "Please help",
+      "title": "Show HN: I replaced a $120k bowling center system with $1,600 in ESP32s",
+      "uncertainty": "Duplicate HN listing of the bowling-center retrofit already covered from hn-show.",
+      "url": "https://news.ycombinator.com/item?id=48968606"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "7424ed59-28a4-494a-87fc-917973c8499a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Open-source game streaming is neat, but not a pressing operator or builder decision signal."
+      ],
+      "title": "Moonshine: Lets you stream games from your PC to any device running Moonlight",
       "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1v0l0v5/please_help/"
+      "url": "https://github.com/hgaiser/moonshine"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "a3a2f692-69d0-470b-8bb0-11d478c5183f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "orionbrowser.com",
+      "source_facts": [
+        "Kagi’s Orion browser is an established product page, not a concrete new development here."
+      ],
+      "title": "Orion Browser by Kagi",
+      "uncertainty": "",
+      "url": "https://orionbrowser.com/"
+    },
+    {
+      "builder_takeaway": "Grounded counterexample to the reflex that hardware is automatically harder than software for niche products.",
+      "category": "Tools Worth Testing",
+      "id": "7dbd3ccd-3df1-4147-b173-ca6f5a4d9573",
+      "importance": "supporting",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "chipweinberger.com",
+      "source_facts": [
+        "The builder says 2,500 units sold, first 500 hand-assembled in four days, and the real complexity lived in roughly 200K lines of firmware, app, and factory software."
+      ],
+      "title": "Jamcorder founder says hardware was easier than the software",
+      "uncertainty": "Single-founder retrospective, so margins and process claims are self-reported.",
+      "url": "https://chipweinberger.com/articles/20260719-hardware-is-not-so-hard"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "bd28e96f-e03f-450b-918c-4ce56dcc376d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "xcancel.com",
+      "source_facts": [
+        "Claim about a Jacobian Conjecture counterexample via Claude is too speculative to carry without stronger evidence."
+      ],
+      "title": "Claude Fable produced a counterexample to the Jacobian Conjecture",
+      "uncertainty": "",
+      "url": "https://xcancel.com/__alpoge__/status/2079028340955197566"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "9d7a94a7-3a24-4175-b87a-a5e2a3d18bf8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "smolnero.com",
+      "source_facts": [
+        "Parallel-programming essay title may be worthwhile, but it is not decision-changing on this pass."
+      ],
+      "title": "The Zen of Parallel Programming",
+      "uncertainty": "",
+      "url": "https://smolnero.com/posts/the-zen-of-parallel-programming"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "3a8474dc-06d1-4f4b-8dd5-20377fbfa16a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "minecraft.net",
+      "source_facts": [
+        "Minecraft moving to SDL3 is a niche platform note, not a top memo item."
+      ],
+      "title": "Minecraft: Java Edition now uses SDL3",
+      "uncertainty": "",
+      "url": "https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-4"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "43a22b64-6533-456f-9547-baa3ceefd760",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "blog.documentfoundation.org",
+      "source_facts": [
+        "Document Foundation lock-in essay is more commentary than immediate action signal."
+      ],
+      "title": "How proprietary formats have become Microsoft’s main tool for lock-in",
+      "uncertainty": "",
+      "url": "https://blog.documentfoundation.org/blog/2026/07/17/microsofts-main-tool-for-lock-in/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "b17784ac-ccff-4357-b7ac-259a09562dd5",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "fortune.com",
+      "source_facts": [
+        "Data-center eminent-domain story matters strategically, but without a readable source here it stays out of the memo."
+      ],
+      "title": "Power companies are using eminent domain to seize land for data centers",
+      "uncertainty": "",
+      "url": "https://fortune.com/2026/07/19/data-center-eminent-domain-public-use/"
+    },
+    {
+      "builder_takeaway": "Did not clear the worth-mentioning bar.",
+      "category": "Tools Worth Testing",
+      "id": "9273d51e-6923-4412-8197-1ba4313aa1fb",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-20T00:00:00.000Z",
+      "source": "bbc.com",
+      "source_facts": [
+        "Banana-growing curiosity has no relevance to this workflow."
+      ],
+      "title": "Bananas sprout in Rayleigh Garden UK after 15 years",
+      "uncertainty": "",
+      "url": "https://www.bbc.com/news/articles/cvg8edqq5g5o"
     }
   ],
   "mode": "primary",
-  "run_id": "38646545-5985-4ef9-abd9-3856e22318fe",
+  "run_id": "09c6ee36-7c0e-4a26-b0ac-963662c3bf0c",
   "status": "completed",
-  "summary": "Synthesized Nightly Librarian run with 13 promoted item(s), 37 scored item(s), and 24 rejected item(s).",
+  "summary": "Synthesized Nightly Librarian run with 5 promoted item(s), 40 scored item(s), and 35 rejected item(s).",
   "title": "Nightly Librarian - 2026-07-20"
 }
