@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>July 23, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="12 stories cleared the bar, led by v16.2.11, v15.5.21, and Gemini last models: temperature, top_p, and top_k are deprecated and ignored.">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-07-23/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="July 23, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="12 stories cleared the bar, led by v16.2.11, v15.5.21, and Gemini last models: temperature, top_p, and top_k are deprecated and ignored.">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-07-23/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="July 23, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="12 stories cleared the bar, led by v16.2.11, v15.5.21, and Gemini last models: temperature, top_p, and top_k are deprecated and ignored.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>July 23, 2026 · Report log</span>
+      <span>Jul 23, 2026, 2:16 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>July 23, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>12 stories cleared the bar, led by v16.2.11, v15.5.21, and Gemini last models: temperature, top_p, and top_k are deprecated and ignored.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>12 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/vercel/next.js/releases/tag/v16.2.11" target="_blank" rel="noopener">v16.2.11</a></div>
+        <div class="item-takeaway">Next.js 16.2.11 ships fixes for two High-severity advisories: a Denial of Service in the App Router via Server Actions and a Middleware/Proxy bypass. If you run Next.js 16.x, upgrade now.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/vercel/next.js/releases/tag/v15.5.21" target="_blank" rel="noopener">v15.5.21</a></div>
+        <div class="item-takeaway">Same two High-severity Next.js advisories (App Router DoS via Server Actions, Middleware/Proxy bypass) backported to the 15.x line as 15.5.21. Upgrade if you're still on Next.js 15.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://ai.google.dev/gemini-api/docs/latest-model" target="_blank" rel="noopener">Gemini last models: temperature, top_p, and top_k are deprecated and ignored</a></div>
+        <div class="item-takeaway">Google says the latest Gemini models now deprecate and ignore temperature, top_p, and top_k. If your code sets these sampling params against current Gemini models, they no longer do anything — review and adjust expectations.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/" target="_blank" rel="noopener">OpenAI and Hugging Face address security incident during model evaluation</a></div>
+        <div class="item-takeaway">OpenAI and Hugging Face disclosed a security incident that occurred during a model evaluation. Notable for anyone running or evaluating agentic models against live services — a reminder to sandbox eval harnesses. Details still thin from the vendors.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/21/nativ/#atom-everything" target="_blank" rel="noopener">Nativ: Run AI models locally on your Mac</a></div>
+        <div class="item-takeaway">Simon Willison covers Nativ, a macOS desktop app wrapping Apple's MLX to run vision-LLMs and other models locally on a Mac. Directly useful if you run local models on Mac hardware — a friendlier front-end than raw MLX/Ollama scripting.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/vercel-connect-preset-connectors" target="_blank" rel="noopener">Vercel Connect adds 90+ preset connectors</a></div>
+        <div class="item-takeaway">Vercel Connect adds 90+ preset connectors (Shopify, Okta, Workday, Jira, Sanity) that pre-populate integration setup. Reduces boilerplate if you build on Vercel's integration layer.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/vercel-mcp-now-supports-purchases" target="_blank" rel="noopener">Vercel MCP now supports purchases</a></div>
+        <div class="item-takeaway">Vercel MCP can now complete purchases: it quotes price, states one-time vs recurring, and only charges after explicit confirmation. An early example of agents transacting through MCP — relevant if you build MCP servers or agent tooling.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/laguna-s-2-1-is-now-available-on-ai-gateway" target="_blank" rel="noopener">Laguna S 2.1 is now available on AI Gateway</a></div>
+        <div class="item-takeaway">Poolside's Laguna S 2.1, an open-weight MoE coding model with up to 1M-token context and thinking/no-thinking modes, is now on Vercel AI Gateway. Worth a look if you want an open-weight coding model with large context.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/gemini-3-6-flash-3-5-flash-lite-on-ai-gateway" target="_blank" rel="noopener">Gemini 3.6 Flash and Gemini 3.5 Flash-Lite are now available on AI Gateway</a></div>
+        <div class="item-takeaway">Gemini 3.6 Flash and 3.5 Flash-Lite are now on Vercel AI Gateway. 3.6 Flash claims better coding/agentic quality while using fewer tokens and calls. Consider for cost-sensitive agentic workloads.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/service-tiers-now-available-on-ai-gateway" target="_blank" rel="noopener">Service tiers now available on AI Gateway</a></div>
+        <div class="item-takeaway">AI Gateway adds service tiers letting you trade latency, throughput, and cost per request. Pick a faster tier for interactive work or a cheaper tier for batch. A cost lever if you route models through the gateway.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://ads.openai.com/" target="_blank" rel="noopener">Advertise in ChatGPT</a></div>
+        <div class="item-takeaway">OpenAI launched an ads offering for ChatGPT (ads.openai.com). A meaningful shift in the assistant-distribution landscape — relevant if you think about discovery, marketing, or building on top of ChatGPT.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-everything" target="_blank" rel="noopener">A Fireside Chat with Cat and Thariq from the Claude Code team</a></div>
+        <div class="item-takeaway">Simon Willison's writeup of a fireside chat with Anthropic's Claude Code team covering Claude Code, coding-agent security, evals, and tool design. Useful context if you build with or on top of Claude Code and agent tooling.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/blog/how-searchable-ships-customer-requested-features-in-30-minutes-on-vercel" target="_blank" rel="noopener">How Searchable ships customer-requested features in 30 minutes on Vercel</a>
+        </div>
+        <div class="item-takeaway">Vercel case study claiming a customer shipped features 5x faster using AI Gateway. Pure vendor marketing with no reproducible detail.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://vercel.com/changelog/python-function-bundles-now-include-precompiled-bytecode" target="_blank" rel="noopener">Python function bundles now include precompiled bytecode</a>
+        </div>
+        <div class="item-takeaway">Vercel now precompiles Python functions to bytecode at build time, cutting median cold starts from 2.8s to 1.3s. Automatic for Python functions on Vercel; nothing to do unless you run Python serverless there.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/vercel-connect-preset-connectors" target="_blank" rel="noopener">Vercel Connect adds 90+ preset connectors</a>
+        </div>
+        <div class="item-takeaway">Vercel Connect adds 90+ preset connectors (Shopify, Okta, Workday, Jira, Sanity) that pre-populate integration setup. Reduces boilerplate if you build on Vercel's integration layer.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/vercel-mcp-now-supports-purchases" target="_blank" rel="noopener">Vercel MCP now supports purchases</a>
+        </div>
+        <div class="item-takeaway">Vercel MCP can now complete purchases: it quotes price, states one-time vs recurring, and only charges after explicit confirmation. An early example of agents transacting through MCP — relevant if you build MCP servers or agent tooling.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/laguna-s-2-1-is-now-available-on-ai-gateway" target="_blank" rel="noopener">Laguna S 2.1 is now available on AI Gateway</a>
+        </div>
+        <div class="item-takeaway">Poolside's Laguna S 2.1, an open-weight MoE coding model with up to 1M-token context and thinking/no-thinking modes, is now on Vercel AI Gateway. Worth a look if you want an open-weight coding model with large context.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/gemini-3-6-flash-3-5-flash-lite-on-ai-gateway" target="_blank" rel="noopener">Gemini 3.6 Flash and Gemini 3.5 Flash-Lite are now available on AI Gateway</a>
+        </div>
+        <div class="item-takeaway">Gemini 3.6 Flash and 3.5 Flash-Lite are now on Vercel AI Gateway. 3.6 Flash claims better coding/agentic quality while using fewer tokens and calls. Consider for cost-sensitive agentic workloads.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/service-tiers-now-available-on-ai-gateway" target="_blank" rel="noopener">Service tiers now available on AI Gateway</a>
+        </div>
+        <div class="item-takeaway">AI Gateway adds service tiers letting you trade latency, throughput, and cost per request. Pick a faster tier for interactive work or a cheaper tier for batch. A cost lever if you route models through the gateway.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-preview.7" target="_blank" rel="noopener">v16.3.0-preview.7</a>
+        </div>
+        <div class="item-takeaway">Next.js preview build changelog — example fixes and dependency bumps only.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.93" target="_blank" rel="noopener">v16.3.0-canary.93</a>
+        </div>
+        <div class="item-takeaway">Next.js canary changelog — internal Turbopack/docs tweaks and dependency bumps.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.92" target="_blank" rel="noopener">v16.3.0-canary.92</a>
+        </div>
+        <div class="item-takeaway">Next.js canary changelog — example fixes and dependency bumps.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.2.11" target="_blank" rel="noopener">v16.2.11</a>
+        </div>
+        <div class="item-takeaway">Next.js 16.2.11 ships fixes for two High-severity advisories: a Denial of Service in the App Router via Server Actions and a Middleware/Proxy bypass. If you run Next.js 16.x, upgrade now.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v15.5.21" target="_blank" rel="noopener">v15.5.21</a>
+        </div>
+        <div class="item-takeaway">Same two High-severity Next.js advisories (App Router DoS via Server Actions, Middleware/Proxy bypass) backported to the 15.x line as 15.5.21. Upgrade if you're still on Next.js 15.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/" target="_blank" rel="noopener">OpenAI and Hugging Face address security incident during model evaluation</a>
+        </div>
+        <div class="item-takeaway">OpenAI and Hugging Face disclosed a security incident that occurred during a model evaluation. Notable for anyone running or evaluating agentic models against live services — a reminder to sandbox eval harnesses. Details still thin from the vendors.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://fireworks.ai/blog/kimik3-fable" target="_blank" rel="noopener">Kimi K3 Is Competitive with Fable; Kimi K3 and Fable Is SoTA</a>
+        </div>
+        <div class="item-takeaway">Fireworks/Moonshot claim Kimi K3 is competitive with Fable and near-SoTA on agentic benchmarks (second only to Fable 5 on AA-Briefcase). Benchmark-only for now; worth tracking as an open model option.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://late.sh/" target="_blank" rel="noopener">Late.sh – a command-line Clubhouse for computer people</a>
+        </div>
+        <div class="item-takeaway">A command-line social/chat toy. Novelty, no builder leverage.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://freeink.org/" target="_blank" rel="noopener">FreeInk: Open ecosystem for e-readers</a>
+        </div>
+        <div class="item-takeaway">Open ecosystem project for e-readers. Niche hardware, not dev-relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://ads.openai.com/" target="_blank" rel="noopener">Advertise in ChatGPT</a>
+        </div>
+        <div class="item-takeaway">OpenAI launched an ads offering for ChatGPT (ads.openai.com). A meaningful shift in the assistant-distribution landscape — relevant if you think about discovery, marketing, or building on top of ChatGPT.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0d63" target="_blank" rel="noopener">Judge approves $1.5B Anthropic settlement for pirated books used to train Claude</a>
+        </div>
+        <div class="item-takeaway">A judge approved the $1.5B Anthropic settlement over pirated books used to train Claude. Context worth knowing for anyone building on Claude or watching AI copyright precedent; no direct action.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/" target="_blank" rel="noopener">Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber</a>
+        </div>
+        <div class="item-takeaway">Google's own announcement of Gemini 3.6 Flash / 3.5 Flash-Lite / Flash Cyber — same story already covered via the AI Gateway item.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/" target="_blank" rel="noopener">A digestion of the Jacobian conjecture counterexample</a>
+        </div>
+        <div class="item-takeaway">Terence Tao's math post on a Jacobian conjecture counterexample. Fascinating but not relevant to a software shop.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/" target="_blank" rel="noopener">LG to ban residential proxies from smart TV apps</a>
+        </div>
+        <div class="item-takeaway">LG plans to ban residential-proxy apps from its smart-TV app store. Part of a broader squeeze on residential proxy supply — worth tracking if you rely on proxies for scraping.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="http://hintjens.com/blog:99" target="_blank" rel="noopener">Ten Steps Towards Happiness (2015)</a>
+        </div>
+        <div class="item-takeaway">A 2015 reflective essay on happiness. Not actionable dev content.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://e360.yale.edu/digest/benin-coral-reef" target="_blank" rel="noopener">Long presumed dead, a thriving coral reef is discovered in West Africa</a>
+        </div>
+        <div class="item-takeaway">Science story about a coral reef discovered off West Africa. Off-topic.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://runtimewire.com/article/jack-dorsey-block-buzz-team-chat-ai-agents-git" target="_blank" rel="noopener">Jack Dorsey launches Buzz to combine team chat, AI agents and Git hosting</a>
+        </div>
+        <div class="item-takeaway">Jack Dorsey's Block launched Buzz, combining team chat, AI agents, and Git hosting. Early and unproven, but an interesting bundled-workspace play worth watching.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.tryai.dev/blog/ai-drawing-arena-colored-pencils-claude-gpt-grok" target="_blank" rel="noopener">&quot;Drawing&quot; the Mona Lisa with GPT-5.6, Claude, Gemini, and Grok</a>
+        </div>
+        <div class="item-takeaway">Fun experiment having LLMs 'draw' the Mona Lisa. Entertainment, no signal.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.ericgoldman.org/archives/2026/07/apple-defeats-liability-for-not-scanning-icloud-for-csam-but-the-judge-was-not-pleased-amy-v-apple.htm" target="_blank" rel="noopener">Apple defeats liability for not scanning iCloud for CSAM</a>
+        </div>
+        <div class="item-takeaway">Legal analysis of Apple defeating CSAM-scanning liability. Sensitive, off-topic for a solo dev shop.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.jimgrey.net/2026/07/21/its-a-shame-whats-happened-to-radio-3/" target="_blank" rel="noopener">It's a shame what's happened to radio</a>
+        </div>
+        <div class="item-takeaway">Personal essay on the decline of radio. Off-topic.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://thecastlemap.com/" target="_blank" rel="noopener">Map of the world's great castles and fortresses</a>
+        </div>
+        <div class="item-takeaway">An interactive map of castles and fortresses. Entertainment.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://poolside.ai/blog/introducing-laguna-s-2-1" target="_blank" rel="noopener">Laguna S 2.1</a>
+        </div>
+        <div class="item-takeaway">Poolside's own announcement of Laguna S 2.1 — same model already covered via the AI Gateway item.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://ai.google.dev/gemini-api/docs/latest-model" target="_blank" rel="noopener">Gemini last models: temperature, top_p, and top_k are deprecated and ignored</a>
+        </div>
+        <div class="item-takeaway">Google says the latest Gemini models now deprecate and ignore temperature, top_p, and top_k. If your code sets these sampling params against current Gemini models, they no longer do anything — review and adjust expectations.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.techradar.com/vpn/vpn-privacy-security/vpns-are-lawful-technical-tools-says-eu-court-in-landmark-anne-frank-copyright-ruling" target="_blank" rel="noopener">'VPNs are lawful technical tools,' says EU Court in landmark copyright ruling</a>
+        </div>
+        <div class="item-takeaway">EU court ruling that VPNs are lawful technical tools. Interesting but not dev-actionable.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://dl.acm.org/doi/10.1145/234286.1057820" target="_blank" rel="noopener">The Birth of Prolog (1996)</a>
+        </div>
+        <div class="item-takeaway">A 1996 history of the Prolog language. Interesting, not actionable.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://rootkitlabs.com/2026/06/22/I%27m-Building-a-Secure-USB-Drive/" target="_blank" rel="noopener">My USB Drive Has a Hidden Encrypted Vault</a>
+        </div>
+        <div class="item-takeaway">A hobbyist build log for a USB drive with a hidden encrypted vault. Niche.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://justif.lyall.co/" target="_blank" rel="noopener">Show HN: Justif – Knuth-Plass justification and microtypography for the web</a>
+        </div>
+        <div class="item-takeaway">Justif is a drop-in JS library that adds TeX-quality (Knuth-Plass) justification and microtypography to web pages via a single script tag, degrading gracefully without JS. Nice low-effort polish for content-heavy sites.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://en.help.roblox.com/hc/en-us/articles/49648939984916-Android-Remote-Attestation" target="_blank" rel="noopener">Roblox Officially Supports GrapheneOS</a>
+        </div>
+        <div class="item-takeaway">Roblox now supports GrapheneOS via Android remote attestation. Niche.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jul/21/nativ/#atom-everything" target="_blank" rel="noopener">Nativ: Run AI models locally on your Mac</a>
+        </div>
+        <div class="item-takeaway">Simon Willison covers Nativ, a macOS desktop app wrapping Apple's MLX to run vision-LLMs and other models locally on a Mac. Directly useful if you run local models on Mac hardware — a friendlier front-end than raw MLX/Ollama scripting.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-everything" target="_blank" rel="noopener">A Fireside Chat with Cat and Thariq from the Claude Code team</a>
+        </div>
+        <div class="item-takeaway">Simon Willison's writeup of a fireside chat with Anthropic's Claude Code team covering Claude Code, coding-agent security, evals, and tool design. Useful context if you build with or on top of Claude Code and agent tooling.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://thorsell.io/2026/07/21/github-ssh-keys.html" target="_blank" rel="noopener">GitHub suddenly rejected my SSH key (the fix was a .pub file?!)</a>
+        </div>
+        <div class="item-takeaway">A debugging anecdote about a rejected GitHub SSH key. Low signal.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/" target="_blank" rel="noopener">OpenAI model breaks out of security sandbox, hacks Hugging Face for data to pass test</a>
+        </div>
+        <div class="item-takeaway">Sensationalized retelling of the OpenAI/Hugging Face eval incident ('model breaks out of sandbox, hacks HF'). Covered better via the official disclosure.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://nesbitt.io/2026/07/21/end-of-options.html" target="_blank" rel="noopener">git --end-of-options</a>
+        </div>
+        <div class="item-takeaway">A reminder about git's `--end-of-options` separator to stop attacker- or agent-supplied refs/paths from being parsed as flags. Small but real hardening for scripts and agents that shell out to git.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 4b7626cf-c01b-4153-bebf-9d0d1d7c5d14
+Started: 2026-07-23T06:10:10.690Z
+Completed: 2026-07-23T06:16:33.286Z
+
+## Worth attention
+
+- **v16.2.11**
+  https://github.com/vercel/next.js/releases/tag/v16.2.11
+  Next.js 16.2.11 ships fixes for two High-severity advisories: a Denial of Service in the App Router via Server Actions and a Middleware/Proxy bypass. If you run Next.js 16.x, upgrade now.
+- **v15.5.21**
+  https://github.com/vercel/next.js/releases/tag/v15.5.21
+  Same two High-severity Next.js advisories (App Router DoS via Server Actions, Middleware/Proxy bypass) backported to the 15.x line as 15.5.21. Upgrade if you're still on Next.js 15.
+- **Gemini last models: temperature, top_p, and top_k are deprecated and ignored**
+  https://ai.google.dev/gemini-api/docs/latest-model
+  Google says the latest Gemini models now deprecate and ignore temperature, top_p, and top_k. If your code sets these sampling params against current Gemini models, they no longer do anything — review and adjust expectations.
+- **OpenAI and Hugging Face address security incident during model evaluation**
+  https://openai.com/index/hugging-face-model-evaluation-security-incident/
+  OpenAI and Hugging Face disclosed a security incident that occurred during a model evaluation. Notable for anyone running or evaluating agentic models against live services — a reminder to sandbox eval harnesses. Details still thin from the vendors.
+- **Nativ: Run AI models locally on your Mac**
+  https://simonwillison.net/2026/Jul/21/nativ/#atom-everything
+  Simon Willison covers Nativ, a macOS desktop app wrapping Apple's MLX to run vision-LLMs and other models locally on a Mac. Directly useful if you run local models on Mac hardware — a friendlier front-end than raw MLX/Ollama scripting.
+- **Vercel Connect adds 90+ preset connectors**
+  https://vercel.com/changelog/vercel-connect-preset-connectors
+  Vercel Connect adds 90+ preset connectors (Shopify, Okta, Workday, Jira, Sanity) that pre-populate integration setup. Reduces boilerplate if you build on Vercel's integration layer.
+- **Vercel MCP now supports purchases**
+  https://vercel.com/changelog/vercel-mcp-now-supports-purchases
+  Vercel MCP can now complete purchases: it quotes price, states one-time vs recurring, and only charges after explicit confirmation. An early example of agents transacting through MCP — relevant if you build MCP servers or agent tooling.
+- **Laguna S 2.1 is now available on AI Gateway**
+  https://vercel.com/changelog/laguna-s-2-1-is-now-available-on-ai-gateway
+  Poolside's Laguna S 2.1, an open-weight MoE coding model with up to 1M-token context and thinking/no-thinking modes, is now on Vercel AI Gateway. Worth a look if you want an open-weight coding model with large context.
+- **Gemini 3.6 Flash and Gemini 3.5 Flash-Lite are now available on AI Gateway**
+  https://vercel.com/changelog/gemini-3-6-flash-3-5-flash-lite-on-ai-gateway
+  Gemini 3.6 Flash and 3.5 Flash-Lite are now on Vercel AI Gateway. 3.6 Flash claims better coding/agentic quality while using fewer tokens and calls. Consider for cost-sensitive agentic workloads.
+- **Service tiers now available on AI Gateway**
+  https://vercel.com/changelog/service-tiers-now-available-on-ai-gateway
+  AI Gateway adds service tiers letting you trade latency, throughput, and cost per request. Pick a faster tier for interactive work or a cheaper tier for batch. A cost lever if you route models through the gateway.
+- **Advertise in ChatGPT**
+  https://ads.openai.com/
+  OpenAI launched an ads offering for ChatGPT (ads.openai.com). A meaningful shift in the assistant-distribution landscape — relevant if you think about discovery, marketing, or building on top of ChatGPT.
+- **A Fireside Chat with Cat and Thariq from the Claude Code team**
+  https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-everything
+  Simon Willison's writeup of a fireside chat with Anthropic's Claude Code team covering Claude Code, coding-agent security, evals, and tool design. Useful context if you build with or on top of Claude Code and agent tooling.
+
+## Full digest
+
+- [R] [vercel-changelog] How Searchable ships customer-requested features in 30 minutes on Vercel — https://vercel.com/blog/how-searchable-ships-customer-requested-features-in-30-minutes-on-vercel — Vercel case study claiming a customer shipped features 5x faster using AI Gateway. Pure vendor marketing with no reproducible detail.
+- [M] [vercel-changelog] Python function bundles now include precompiled bytecode — https://vercel.com/changelog/python-function-bundles-now-include-precompiled-bytecode — Vercel now precompiles Python functions to bytecode at build time, cutting median cold starts from 2.8s to 1.3s. Automatic for Python functions on Vercel; nothing to do unless you run Python serverless there.
+- [P] [vercel-changelog] Vercel Connect adds 90+ preset connectors — https://vercel.com/changelog/vercel-connect-preset-connectors — Vercel Connect adds 90+ preset connectors (Shopify, Okta, Workday, Jira, Sanity) that pre-populate integration setup. Reduces boilerplate if you build on Vercel's integration layer.
+- [P] [vercel-changelog] Vercel MCP now supports purchases — https://vercel.com/changelog/vercel-mcp-now-supports-purchases — Vercel MCP can now complete purchases: it quotes price, states one-time vs recurring, and only charges after explicit confirmation. An early example of agents transacting through MCP — relevant if you build MCP servers or agent tooling.
+- [P] [vercel-changelog] Laguna S 2.1 is now available on AI Gateway — https://vercel.com/changelog/laguna-s-2-1-is-now-available-on-ai-gateway — Poolside's Laguna S 2.1, an open-weight MoE coding model with up to 1M-token context and thinking/no-thinking modes, is now on Vercel AI Gateway. Worth a look if you want an open-weight coding model with large context.
+- [P] [vercel-changelog] Gemini 3.6 Flash and Gemini 3.5 Flash-Lite are now available on AI Gateway — https://vercel.com/changelog/gemini-3-6-flash-3-5-flash-lite-on-ai-gateway — Gemini 3.6 Flash and 3.5 Flash-Lite are now on Vercel AI Gateway. 3.6 Flash claims better coding/agentic quality while using fewer tokens and calls. Consider for cost-sensitive agentic workloads.
+- [P] [vercel-changelog] Service tiers now available on AI Gateway — https://vercel.com/changelog/service-tiers-now-available-on-ai-gateway — AI Gateway adds service tiers letting you trade latency, throughput, and cost per request. Pick a faster tier for interactive work or a cheaper tier for batch. A cost lever if you route models through the gateway.
+- [R] [gh-nextjs] v16.3.0-preview.7 — https://github.com/vercel/next.js/releases/tag/v16.3.0-preview.7 — Next.js preview build changelog — example fixes and dependency bumps only.
+- [R] [gh-nextjs] v16.3.0-canary.93 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.93 — Next.js canary changelog — internal Turbopack/docs tweaks and dependency bumps.
+- [R] [gh-nextjs] v16.3.0-canary.92 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.92 — Next.js canary changelog — example fixes and dependency bumps.
+- [P] [gh-nextjs] v16.2.11 — https://github.com/vercel/next.js/releases/tag/v16.2.11 — Next.js 16.2.11 ships fixes for two High-severity advisories: a Denial of Service in the App Router via Server Actions and a Middleware/Proxy bypass. If you run Next.js 16.x, upgrade now.
+- [P] [gh-nextjs] v15.5.21 — https://github.com/vercel/next.js/releases/tag/v15.5.21 — Same two High-severity Next.js advisories (App Router DoS via Server Actions, Middleware/Proxy bypass) backported to the 15.x line as 15.5.21. Upgrade if you're still on Next.js 15.
+- [P] [hn-top] OpenAI and Hugging Face address security incident during model evaluation — https://openai.com/index/hugging-face-model-evaluation-security-incident/ — OpenAI and Hugging Face disclosed a security incident that occurred during a model evaluation. Notable for anyone running or evaluating agentic models against live services — a reminder to sandbox eval harnesses. Details still thin from the vendors.
+- [M] [hn-top] Kimi K3 Is Competitive with Fable; Kimi K3 and Fable Is SoTA — https://fireworks.ai/blog/kimik3-fable — Fireworks/Moonshot claim Kimi K3 is competitive with Fable and near-SoTA on agentic benchmarks (second only to Fable 5 on AA-Briefcase). Benchmark-only for now; worth tracking as an open model option.
+- [R] [hn-top] Late.sh – a command-line Clubhouse for computer people — https://late.sh/ — A command-line social/chat toy. Novelty, no builder leverage.
+- [R] [hn-top] FreeInk: Open ecosystem for e-readers — https://freeink.org/ — Open ecosystem project for e-readers. Niche hardware, not dev-relevant.
+- [P] [hn-top] Advertise in ChatGPT — https://ads.openai.com/ — OpenAI launched an ads offering for ChatGPT (ads.openai.com). A meaningful shift in the assistant-distribution landscape — relevant if you think about discovery, marketing, or building on top of ChatGPT.
+- [P] [hn-top] Judge approves $1.5B Anthropic settlement for pirated books used to train Claude — https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0d63 — A judge approved the $1.5B Anthropic settlement over pirated books used to train Claude. Context worth knowing for anyone building on Claude or watching AI copyright precedent; no direct action.
+- [R] [hn-top] Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber — https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/ — Google's own announcement of Gemini 3.6 Flash / 3.5 Flash-Lite / Flash Cyber — same story already covered via the AI Gateway item.
+- [R] [hn-top] A digestion of the Jacobian conjecture counterexample — https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/ — Terence Tao's math post on a Jacobian conjecture counterexample. Fascinating but not relevant to a software shop.
+- [M] [hn-top] LG to ban residential proxies from smart TV apps — https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/ — LG plans to ban residential-proxy apps from its smart-TV app store. Part of a broader squeeze on residential proxy supply — worth tracking if you rely on proxies for scraping.
+- [R] [hn-top] Ten Steps Towards Happiness (2015) — http://hintjens.com/blog:99 — A 2015 reflective essay on happiness. Not actionable dev content.
+- [R] [hn-top] Long presumed dead, a thriving coral reef is discovered in West Africa — https://e360.yale.edu/digest/benin-coral-reef — Science story about a coral reef discovered off West Africa. Off-topic.
+- [M] [hn-top] Jack Dorsey launches Buzz to combine team chat, AI agents and Git hosting — https://runtimewire.com/article/jack-dorsey-block-buzz-team-chat-ai-agents-git — Jack Dorsey's Block launched Buzz, combining team chat, AI agents, and Git hosting. Early and unproven, but an interesting bundled-workspace play worth watching.
+- [R] [hn-top] &quot;Drawing&quot; the Mona Lisa with GPT-5.6, Claude, Gemini, and Grok — https://www.tryai.dev/blog/ai-drawing-arena-colored-pencils-claude-gpt-grok — Fun experiment having LLMs 'draw' the Mona Lisa. Entertainment, no signal.
+- [R] [hn-top] Apple defeats liability for not scanning iCloud for CSAM — https://blog.ericgoldman.org/archives/2026/07/apple-defeats-liability-for-not-scanning-icloud-for-csam-but-the-judge-was-not-pleased-amy-v-apple.htm — Legal analysis of Apple defeating CSAM-scanning liability. Sensitive, off-topic for a solo dev shop.
+- [R] [hn-top] It's a shame what's happened to radio — https://blog.jimgrey.net/2026/07/21/its-a-shame-whats-happened-to-radio-3/ — Personal essay on the decline of radio. Off-topic.
+- [R] [hn-top] Map of the world's great castles and fortresses — https://thecastlemap.com/ — An interactive map of castles and fortresses. Entertainment.
+- [R] [hn-top] Laguna S 2.1 — https://poolside.ai/blog/introducing-laguna-s-2-1 — Poolside's own announcement of Laguna S 2.1 — same model already covered via the AI Gateway item.
+- [P] [hn-top] Gemini last models: temperature, top_p, and top_k are deprecated and ignored — https://ai.google.dev/gemini-api/docs/latest-model — Google says the latest Gemini models now deprecate and ignore temperature, top_p, and top_k. If your code sets these sampling params against current Gemini models, they no longer do anything — review and adjust expectations.
+- [R] [hn-top] 'VPNs are lawful technical tools,' says EU Court in landmark copyright ruling — https://www.techradar.com/vpn/vpn-privacy-security/vpns-are-lawful-technical-tools-says-eu-court-in-landmark-anne-frank-copyright-ruling — EU court ruling that VPNs are lawful technical tools. Interesting but not dev-actionable.
+- [R] [hn-top] The Birth of Prolog (1996) — https://dl.acm.org/doi/10.1145/234286.1057820 — A 1996 history of the Prolog language. Interesting, not actionable.
+- [R] [hn-top] My USB Drive Has a Hidden Encrypted Vault — https://rootkitlabs.com/2026/06/22/I%27m-Building-a-Secure-USB-Drive/ — A hobbyist build log for a USB drive with a hidden encrypted vault. Niche.
+- [P] [hn-top] Show HN: Justif – Knuth-Plass justification and microtypography for the web — https://justif.lyall.co/ — Justif is a drop-in JS library that adds TeX-quality (Knuth-Plass) justification and microtypography to web pages via a single script tag, degrading gracefully without JS. Nice low-effort polish for content-heavy sites.
+- [R] [hn-top] Roblox Officially Supports GrapheneOS — https://en.help.roblox.com/hc/en-us/articles/49648939984916-Android-Remote-Attestation — Roblox now supports GrapheneOS via Android remote attestation. Niche.
+- [P] [simon-willison] Nativ: Run AI models locally on your Mac — https://simonwillison.net/2026/Jul/21/nativ/#atom-everything — Simon Willison covers Nativ, a macOS desktop app wrapping Apple's MLX to run vision-LLMs and other models locally on a Mac. Directly useful if you run local models on Mac hardware — a friendlier front-end than raw MLX/Ollama scripting.
+- [P] [simon-willison] A Fireside Chat with Cat and Thariq from the Claude Code team — https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-everything — Simon Willison's writeup of a fireside chat with Anthropic's Claude Code team covering Claude Code, coding-agent security, evals, and tool design. Useful context if you build with or on top of Claude Code and agent tooling.
+- [R] [lobsters] GitHub suddenly rejected my SSH key (the fix was a .pub file?!) — https://thorsell.io/2026/07/21/github-ssh-keys.html — A debugging anecdote about a rejected GitHub SSH key. Low signal.
+- [R] [lobsters] OpenAI model breaks out of security sandbox, hacks Hugging Face for data to pass test — https://openai.com/index/hugging-face-model-evaluation-security-incident/ — Sensationalized retelling of the OpenAI/Hugging Face eval incident ('model breaks out of sandbox, hacks HF'). Covered better via the official disclosure.
+- [P] [lobsters] git --end-of-options — https://nesbitt.io/2026/07/21/end-of-options.html — A reminder about git's `--end-of-options` separator to stop attacker- or agent-supplied refs/paths from being parsed as flags. Small but real hardening for scripts and agents that shell out to git.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
