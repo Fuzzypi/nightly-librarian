@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>July 26, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="8 stories cleared the bar, led by Introducing Claude Opus 5, Workflow steps now support extended function durations, and Claude Opus 5 now available on AI">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-07-26/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="July 26, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="8 stories cleared the bar, led by Introducing Claude Opus 5, Workflow steps now support extended function durations, and Claude Opus 5 now available on AI">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-07-26/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="July 26, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="8 stories cleared the bar, led by Introducing Claude Opus 5, Workflow steps now support extended function durations, and Claude Opus 5 now available on AI">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>July 26, 2026 · Report log</span>
+      <span>Jul 26, 2026, 2:17 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>July 26, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>8 stories cleared the bar, led by Introducing Claude Opus 5, Workflow steps now support extended function durations, and Claude Opus 5 now available on AI Gateway.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>8 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything" target="_blank" rel="noopener">Introducing Claude Opus 5</a></div>
+        <div class="item-takeaway">Anthropic shipped Claude Opus 5, pitched as approaching Fable 5's frontier intelligence at about half the price, and it's currently topping the Artificial Analysis leaderboard ahead of Fable 5. It's priced the same as Opus 4.8 with an optional 'fast mode' at 2x cost, is notably strong on long-horizon agentic coding and multi-agent coordination, and has improved vision for charts/diagrams/UI work. Simon Willison hasn't run his own tests yet but relays credible early buzz. Worth knowing if you're choosing a model for coding-agent or multi-agent work.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/workflow-steps-now-support-extended-function-durations" target="_blank" rel="noopener">Workflow steps now support extended function durations</a></div>
+        <div class="item-takeaway">Vercel raised the max duration for Workflow steps from 800 seconds to 1800 seconds (30 minutes) on Pro and Enterprise plans, opt-in via an environment variable plus Fluid compute and a supported Node/Python runtime. Hobby plans stay capped at 5 minutes. This directly changes what's feasible to build as a long-running background job or agent task on Vercel without needing a separate worker/queue service.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/claude-opus-5-now-available-on-ai-gateway" target="_blank" rel="noopener">Claude Opus 5 now available on AI Gateway</a></div>
+        <div class="item-takeaway">Vercel added Claude Opus 5 to AI Gateway, with practical notes: reasoning effort is on by default and configurable from minimal to xhigh (or none) via AI SDK 7, Opus 5 ships with elevated cybersecurity safeguards that can occasionally block benign security-related requests (mitigate with AI Gateway's model-fallback list), and it's ZDR-compatible. Directly actionable for anyone wiring Opus 5 into an app via Vercel's gateway.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/ollama/ollama/releases/tag/v0.32.4-rc0" target="_blank" rel="noopener">Ollama v0.32.4-rc0</a></div>
+        <div class="item-takeaway">Release candidate for Ollama adds agent-oriented features: permission-based skill loading and a new TUI command for setting agent system prompts, plus keeping MLX models resident in memory and fixing a scheduler data race. Relevant to anyone running local agent workflows on Ollama, though it's still an RC.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything" target="_blank" rel="noopener">Quoting Boris Cherny</a></div>
+        <div class="item-takeaway">Simon Willison highlights a quote from Anthropic's Boris Cherny (via the Opus 5 system card) stating Opus 5 is the hardest-to-prompt-inject Claude model to date, based on internal red-teaming and prompt-injection evals. Relevant for anyone building agents that process untrusted tool output or web content, though it's a vendor self-report rather than independent verification.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/bgp-origin-attribute/" target="_blank" rel="noopener">BGP ORIGIN attribute manipulation and its impact on the Internet</a></div>
+        <div class="item-takeaway">Cloudflare's research shows most BGP paths have their ORIGIN attribute manipulated by transit providers for competitive routing advantage, undermining a signal that's supposed to indicate route trustworthiness. They argue for deprecating ORIGIN from route-selection decisions. Relevant to anyone running or reasoning about network infrastructure/BGP, more niche than most solo-dev concerns.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://globaloilnetwork.staffinganalytics.io/" target="_blank" rel="noopener">Show HN: I simulated closing the Strait of Hormuz on real oil trade data</a></div>
+        <div class="item-takeaway">An independent builder (a supply-chain instructor) built a visualization applying a financial-contagion model (Eisenberg-Noe) to global oil trade, showing how a Hormuz shutdown cascades through reserves and prices even for countries with no direct dependency. Built with a small Flask+JS app, LLM-assisted, with an accompanying arXiv paper. Interesting as a technique example more than as actionable news.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/vercel-waf-for-blob-is-now-in-beta" target="_blank" rel="noopener">Vercel WAF for Blob is now in beta</a></div>
+        <div class="item-takeaway">Vercel's Web Application Firewall now covers Blob storage in beta — the same rate-limiting, geo-restriction, and IP-blocking rules that protect deployments now apply to blob downloads, with setup as a single dashboard toggle. Useful for anyone serving files/assets through Vercel Blob who wants to stop scraping or abusive traffic without adding a proxy.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.5.2" target="_blank" rel="noopener">langchain-anthropic==1.5.2</a>
+        </div>
+        <div class="item-takeaway">Patch release of the langchain-anthropic package adding compatibility for Claude Opus 5. No other changes. The actual Opus 5 news is better covered by direct provider sources elsewhere in this batch.</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/ollama/ollama/releases/tag/v0.32.4-rc0" target="_blank" rel="noopener">Ollama v0.32.4-rc0</a>
+        </div>
+        <div class="item-takeaway">Release candidate for Ollama adds agent-oriented features: permission-based skill loading and a new TUI command for setting agent system prompts, plus keeping MLX models resident in memory and fixing a scheduler data race. Relevant to anyone running local agent workflows on Ollama, though it's still an RC.</div>
+        <div class="item-meta">
+          <span>gh-ollama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/crewAIInc/crewAI/releases/tag/1.15.6" target="_blank" rel="noopener">crewAI 1.15.6</a>
+        </div>
+        <div class="item-takeaway">Routine bug-fix release for crewAI: fixes Anthropic tool-use block detection, preserves strict tool schema names, and dispatches execution-end hooks on failed crews/flows. No new features.</div>
+        <div class="item-meta">
+          <span>gh-crewai</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://globaloilnetwork.staffinganalytics.io/" target="_blank" rel="noopener">Show HN: I simulated closing the Strait of Hormuz on real oil trade data</a>
+        </div>
+        <div class="item-takeaway">An independent builder (a supply-chain instructor) built a visualization applying a financial-contagion model (Eisenberg-Noe) to global oil trade, showing how a Hormuz shutdown cascades through reserves and prices even for countries with no direct dependency. Built with a small Flask+JS app, LLM-assisted, with an accompanying arXiv paper. Interesting as a technique example more than as actionable news.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v5i59c/a_reddit_meme_is_about_to_make_me_my_first_1000/" target="_blank" rel="noopener">A Reddit meme is about to make me my first $1,000.</a>
+        </div>
+        <div class="item-takeaway">Personal anecdote from a solo app developer approaching their first $1,000 in App Store revenue, crediting ASO iteration, 40+ blog posts/landing pages, and organic search over paid channels. No new information for other builders beyond generic distribution advice.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v61huc/it_finally_happened_a_sale_after_3_years/" target="_blank" rel="noopener">It finally happened! A sale after 3 years!</a>
+        </div>
+        <div class="item-takeaway">Founder milestone post: first sale after three years of building, following changes to trial gating (card-required trials, full feature access during trial). Anecdotal, single data point.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v5ob7e/stop_begging_yc_for_a_500k_permission_slip_go/" target="_blank" rel="noopener">Stop begging YC for a $500k permission slip. Go build a real business.</a>
+        </div>
+        <div class="item-takeaway">Opinion post arguing founders shouldn't fixate on YC acceptance and should focus on building instead. General career advice/rant, no new information.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v5nkin/got_my_first_customer_im_gonna_cry/" target="_blank" rel="noopener">GOT MY FIRST CUSTOMER, im gonna cry</a>
+        </div>
+        <div class="item-takeaway">Emotional milestone post about landing a first customer after multiple failed attempts. No actionable detail on how it happened.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v606sr/can_anyone_tell_me_why_i_am_getting_so_much/" target="_blank" rel="noopener">Can anyone tell me why I am getting so much direct traffic?</a>
+        </div>
+        <div class="item-takeaway">Open question about unexplained direct-traffic spike; likely dark social/referrer-stripping, but no answer or analysis provided in the post itself.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v5ldrl/i_lost/" target="_blank" rel="noopener">I lost.</a>
+        </div>
+        <div class="item-takeaway">A developer describes spending months building three SaaS products only to discover they can't accept payments because of their country's sanctions status, and found no workaround. A real structural problem for builders in sanctioned countries, but framed purely as a personal lament rather than new information or a solvable angle for this audience.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v5zhlp/invitation_for_sales_marketing_partner_for_a_saas/" target="_blank" rel="noopener">Invitation for Sales &amp; Marketing Partner for a SaaS Product</a>
+        </div>
+        <div class="item-takeaway">We have developed a SaaS product tailored for a niche industry, featuring both web and mobile-based interfaces. While there are existing pro…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v61vo0/founders_who_make_demo_or_promo_videos_for_your/" target="_blank" rel="noopener">Founders who make demo or promo videos for your product, how do you actually do it?</a>
+        </div>
+        <div class="item-takeaway">Any founders constantly making promo, tutorial or teaser videos for your product? even just marketing videos consistently posted on tik tok/…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v61d4y/wie_findet_ihr_eure_ersten_betatester_für_ein/" target="_blank" rel="noopener">Wie findet ihr eure ersten Beta-Tester für ein sehr spezielles B2C-SaaS?</a>
+        </div>
+        <div class="item-takeaway">Ich arbeite gerade an meinem ersten SaaS-Projekt und stehe vor einem Problem, bei dem mich eure Erfahrungen interessieren würden. Das Produk…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v619d7/building_a_hedging_tool_for_bettors/" target="_blank" rel="noopener">building a hedging tool for bettors</a>
+        </div>
+        <div class="item-takeaway">Sportsbooks, prediction markets, Input your bets and we tell you where to hedge and when https://www.hedgybet.com &amp;#32; submitted by &amp;#32; /…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v5fooz/should_ai_agents_have_permanent_payment/" target="_blank" rel="noopener">Should AI agents have permanent payment credentials?</a>
+        </div>
+        <div class="item-takeaway">This is something that's been crossing my mind for a bit so I thought I'd ask here. I've been wondering how payments are supposed to work li…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v5qcmk/how_do_i_get_my_first_few_beta_users/" target="_blank" rel="noopener">How do I get my first few beta users?</a>
+        </div>
+        <div class="item-takeaway">I just finished building a SaaS app and I'm looking for my first few users to test it. I'm not trying to sell anything yet I just want hones…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v5jofq/one_or_two_people_come_in_like_this_every_day/" target="_blank" rel="noopener">One or two people come in like this every day.</a>
+        </div>
+        <div class="item-takeaway">I started doing SEO and organic content work, and for the past few weeks, we’ve been getting new clients every day. It’s an incredible feeli…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v61qwa/audit_sécurité_avec_ia/" target="_blank" rel="noopener">Audit sécurité avec IA</a>
+        </div>
+        <div class="item-takeaway">Bonjour, Pourriez-vous me conseiller des app ou des prompts pour auditer mon saas avec IA (claude code ou OpenIA ou autres) ? Merci par avan…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v5size/well_800_users_taught_me_that_signups_mean_almost/" target="_blank" rel="noopener">Well, 800 users taught me that signups mean almost nothing</a>
+        </div>
+        <div class="item-takeaway">Five months ago, I started building an AI job-search SaaS during nights and weekends. I kept watching the signup count grow: 800 registered…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v61h1a/ive_been_ghostwriting_linkedin_content_for_5/" target="_blank" rel="noopener">I've been ghostwriting LinkedIn content for 5+ years. I write for CEOs, Investors, founders, and b2b leaders.</a>
+        </div>
+        <div class="item-takeaway">I've written posts that did 500,000+ impressions. I've also written posts that got 17 likes and died quietly. For better or for worse, I kno…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v619nx/cold_called_my_way_to_booked_meetings_then/" target="_blank" rel="noopener">Cold called my way to booked meetings, then watched almost all of them ghost me. 2 months in and burning out.</a>
+        </div>
+        <div class="item-takeaway">Been running an AI automation business for about two months. I build AI receptionists and automated review/follow-up systems, mainly for loc…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v615ly/can_someone_recommend_an_absolute_beast_of_a/" target="_blank" rel="noopener">Can someone recommend an absolute beast of a freelancer or agency for SaaS B2B outreach for pipeline building?</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/Beneficial_Sail6320 [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v5wc2i/i_refuse_to_use_the_word_compliant_and_i_think/" target="_blank" rel="noopener">I refuse to use the word &quot;compliant&quot; and I think it's costing me signups</a>
+        </div>
+        <div class="item-takeaway">Built a thing that checks small shops for accessibility problems every Monday and emails you what changed since last week. The EU has a law…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v60ric/exsde_building_a_whatsapp_business_api_saas_in/" target="_blank" rel="noopener">Ex-SDE building a WhatsApp Business API SaaS in India need advice on company setup, Meta partnership, GST &amp; legal aspects</a>
+        </div>
+        <div class="item-takeaway">Hi everyone, I'm an ex-software engineer from India, and for the past 2 years I've been working extensively with the WhatsApp Business API a…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v5g2c5/how_did_you_land_your_first_10_customers_cold/" target="_blank" rel="noopener">How did you land your first 10 customers? (Cold email, Reddit, SEO, Ads, IG, YT, LinkedIn?)</a>
+        </div>
+        <div class="item-takeaway">Bootstrapping a B2B SaaS, pre-revenue, trying to figure out where to spend my time before throwing money at ads. For those who've been throu…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1v5gy99/generational_wealth_loading/" target="_blank" rel="noopener">Generational wealth loading</a>
+        </div>
+        <div class="item-takeaway">No but seriously, it will never ceases to amaze me how I can just build something, ship it to the internet, have people start using it and e…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://stratechery.com/2026/the-copium-wars/" target="_blank" rel="noopener">2026.30: The Copium Wars</a>
+        </div>
+        <div class="item-takeaway">Weekly link-roundup teaser for Stratechery's paid content; no specifics captured beyond the topic list (Chinese AI models, Hugging Face's trajectory, NBA second-apron rules).</div>
+        <div class="item-meta">
+          <span>stratechery</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/ainews-claude-opus-5-fable-level" target="_blank" rel="noopener">[AINews] Claude Opus 5: Fable-level performance at Opus price (half Fable)</a>
+        </div>
+        <div class="item-takeaway">One-line AINews teaser noting Opus 5 matches Fable-5-level performance at about half the price. No additional analysis in the captured content; the underlying story is already covered by better-sourced Opus 5 items elsewhere in this batch.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.32.5" target="_blank" rel="noopener">n8n@2.32.5</a>
+        </div>
+        <div class="item-takeaway">Single bug fix in n8n's core: S3 object paths now use strict RFC 3986 encoding when signing. No new features.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">beta (n8n 2.32.5)</a>
+        </div>
+        <div class="item-takeaway">Duplicate GitHub tag ('beta') pointing to the same n8n 2.32.5 bug-fix release already covered above.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/bgp-origin-attribute/" target="_blank" rel="noopener">BGP ORIGIN attribute manipulation and its impact on the Internet</a>
+        </div>
+        <div class="item-takeaway">Cloudflare's research shows most BGP paths have their ORIGIN attribute manipulated by transit providers for competitive routing advantage, undermining a signal that's supposed to indicate route trustworthiness. They argue for deprecating ORIGIN from route-selection decisions. Relevant to anyone running or reasoning about network infrastructure/BGP, more niche than most solo-dev concerns.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/vercel-waf-for-blob-is-now-in-beta" target="_blank" rel="noopener">Vercel WAF for Blob is now in beta</a>
+        </div>
+        <div class="item-takeaway">Vercel's Web Application Firewall now covers Blob storage in beta — the same rate-limiting, geo-restriction, and IP-blocking rules that protect deployments now apply to blob downloads, with setup as a single dashboard toggle. Useful for anyone serving files/assets through Vercel Blob who wants to stop scraping or abusive traffic without adding a proxy.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/workflow-steps-now-support-extended-function-durations" target="_blank" rel="noopener">Workflow steps now support extended function durations</a>
+        </div>
+        <div class="item-takeaway">Vercel raised the max duration for Workflow steps from 800 seconds to 1800 seconds (30 minutes) on Pro and Enterprise plans, opt-in via an environment variable plus Fluid compute and a supported Node/Python runtime. Hobby plans stay capped at 5 minutes. This directly changes what's feasible to build as a long-running background job or agent task on Vercel without needing a separate worker/queue service.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/claude-opus-5-now-available-on-ai-gateway" target="_blank" rel="noopener">Claude Opus 5 now available on AI Gateway</a>
+        </div>
+        <div class="item-takeaway">Vercel added Claude Opus 5 to AI Gateway, with practical notes: reasoning effort is on by default and configurable from minimal to xhigh (or none) via AI SDK 7, Opus 5 ships with elevated cybersecurity safeguards that can occasionally block benign security-related requests (mitigate with AI Gateway's model-fallback list), and it's ZDR-compatible. Directly actionable for anyone wiring Opus 5 into an app via Vercel's gateway.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.96" target="_blank" rel="noopener">Next.js v16.3.0-canary.96</a>
+        </div>
+        <div class="item-takeaway">Internal performance and code-shape optimizations (monomorphic route trees, Turbopack tree-shaking/dead-code tracking) plus doc updates in a Next.js canary build. No user-facing feature changes.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything" target="_blank" rel="noopener">Quoting Boris Cherny</a>
+        </div>
+        <div class="item-takeaway">Simon Willison highlights a quote from Anthropic's Boris Cherny (via the Opus 5 system card) stating Opus 5 is the hardest-to-prompt-inject Claude model to date, based on internal red-teaming and prompt-injection evals. Relevant for anyone building agents that process untrusted tool output or web content, though it's a vendor self-report rather than independent verification.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything" target="_blank" rel="noopener">Introducing Claude Opus 5</a>
+        </div>
+        <div class="item-takeaway">Anthropic shipped Claude Opus 5, pitched as approaching Fable 5's frontier intelligence at about half the price, and it's currently topping the Artificial Analysis leaderboard ahead of Fable 5. It's priced the same as Opus 4.8 with an optional 'fast mode' at 2x cost, is notably strong on long-horizon agentic coding and multi-agent coordination, and has improved vision for charts/diagrams/UI work. Simon Willison hasn't run his own tests yet but relays credible early buzz. Worth knowing if you're choosing a model for coding-agent or multi-agent work.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://unsung.aresluna.org/chromes-breaking-and-entering/" target="_blank" rel="noopener">Chrome registers a global shortcut for Gemini popup window</a>
+        </div>
+        <div class="item-takeaway">Lobsters discussion thread about Chrome apparently registering a global keyboard shortcut for a Gemini popup window; the fetched content only contains a link to comments, not the source article, so no further detail is available here.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://theconsensus.dev/p/2026/07/19/observing-gos-garbage-collector-old-and-new.html" target="_blank" rel="noopener">Watching Go's new garbage collector move through the heap</a>
+        </div>
+        <div class="item-takeaway">Lobsters link to an article about observing Go's new garbage collector behavior in the heap; only a comments-link stub was fetched, not the article body.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.hillelwayne.com/post/we-are-not-special/" target="_blank" rel="noopener">We Are Not Special</a>
+        </div>
+        <div class="item-takeaway">Lobsters link to Hillel Wayne's post 'We Are Not Special'; only a comments-link stub was fetched, not the article body, so the actual argument can't be summarized here.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 20f082b5-7d21-4ce0-9596-5e0308f52b75
+Started: 2026-07-26T06:10:03.464Z
+Completed: 2026-07-26T06:17:28.873Z
+
+## Worth attention
+
+- **Introducing Claude Opus 5**
+  https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything
+  Anthropic shipped Claude Opus 5, pitched as approaching Fable 5's frontier intelligence at about half the price, and it's currently topping the Artificial Analysis leaderboard ahead of Fable 5. It's priced the same as Opus 4.8 with an optional 'fast mode' at 2x cost, is notably strong on long-horizon agentic coding and multi-agent coordination, and has improved vision for charts/diagrams/UI work. Simon Willison hasn't run his own tests yet but relays credible early buzz. Worth knowing if you're choosing a model for coding-agent or multi-agent work.
+- **Workflow steps now support extended function durations**
+  https://vercel.com/changelog/workflow-steps-now-support-extended-function-durations
+  Vercel raised the max duration for Workflow steps from 800 seconds to 1800 seconds (30 minutes) on Pro and Enterprise plans, opt-in via an environment variable plus Fluid compute and a supported Node/Python runtime. Hobby plans stay capped at 5 minutes. This directly changes what's feasible to build as a long-running background job or agent task on Vercel without needing a separate worker/queue service.
+- **Claude Opus 5 now available on AI Gateway**
+  https://vercel.com/changelog/claude-opus-5-now-available-on-ai-gateway
+  Vercel added Claude Opus 5 to AI Gateway, with practical notes: reasoning effort is on by default and configurable from minimal to xhigh (or none) via AI SDK 7, Opus 5 ships with elevated cybersecurity safeguards that can occasionally block benign security-related requests (mitigate with AI Gateway's model-fallback list), and it's ZDR-compatible. Directly actionable for anyone wiring Opus 5 into an app via Vercel's gateway.
+- **Ollama v0.32.4-rc0**
+  https://github.com/ollama/ollama/releases/tag/v0.32.4-rc0
+  Release candidate for Ollama adds agent-oriented features: permission-based skill loading and a new TUI command for setting agent system prompts, plus keeping MLX models resident in memory and fixing a scheduler data race. Relevant to anyone running local agent workflows on Ollama, though it's still an RC.
+- **Quoting Boris Cherny**
+  https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything
+  Simon Willison highlights a quote from Anthropic's Boris Cherny (via the Opus 5 system card) stating Opus 5 is the hardest-to-prompt-inject Claude model to date, based on internal red-teaming and prompt-injection evals. Relevant for anyone building agents that process untrusted tool output or web content, though it's a vendor self-report rather than independent verification.
+- **BGP ORIGIN attribute manipulation and its impact on the Internet**
+  https://blog.cloudflare.com/bgp-origin-attribute/
+  Cloudflare's research shows most BGP paths have their ORIGIN attribute manipulated by transit providers for competitive routing advantage, undermining a signal that's supposed to indicate route trustworthiness. They argue for deprecating ORIGIN from route-selection decisions. Relevant to anyone running or reasoning about network infrastructure/BGP, more niche than most solo-dev concerns.
+- **Show HN: I simulated closing the Strait of Hormuz on real oil trade data**
+  https://globaloilnetwork.staffinganalytics.io/
+  An independent builder (a supply-chain instructor) built a visualization applying a financial-contagion model (Eisenberg-Noe) to global oil trade, showing how a Hormuz shutdown cascades through reserves and prices even for countries with no direct dependency. Built with a small Flask+JS app, LLM-assisted, with an accompanying arXiv paper. Interesting as a technique example more than as actionable news.
+- **Vercel WAF for Blob is now in beta**
+  https://vercel.com/changelog/vercel-waf-for-blob-is-now-in-beta
+  Vercel's Web Application Firewall now covers Blob storage in beta — the same rate-limiting, geo-restriction, and IP-blocking rules that protect deployments now apply to blob downloads, with setup as a single dashboard toggle. Useful for anyone serving files/assets through Vercel Blob who wants to stop scraping or abusive traffic without adding a proxy.
+
+## Full digest
+
+- [R] [gh-langchain] langchain-anthropic==1.5.2 — https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.5.2 — Patch release of the langchain-anthropic package adding compatibility for Claude Opus 5. No other changes. The actual Opus 5 news is better covered by direct provider sources elsewhere in this batch.
+- [P] [gh-ollama] Ollama v0.32.4-rc0 — https://github.com/ollama/ollama/releases/tag/v0.32.4-rc0 — Release candidate for Ollama adds agent-oriented features: permission-based skill loading and a new TUI command for setting agent system prompts, plus keeping MLX models resident in memory and fixing a scheduler data race. Relevant to anyone running local agent workflows on Ollama, though it's still an RC.
+- [R] [gh-crewai] crewAI 1.15.6 — https://github.com/crewAIInc/crewAI/releases/tag/1.15.6 — Routine bug-fix release for crewAI: fixes Anthropic tool-use block detection, preserves strict tool schema names, and dispatches execution-end hooks on failed crews/flows. No new features.
+- [P] [hn-show] Show HN: I simulated closing the Strait of Hormuz on real oil trade data — https://globaloilnetwork.staffinganalytics.io/ — An independent builder (a supply-chain instructor) built a visualization applying a financial-contagion model (Eisenberg-Noe) to global oil trade, showing how a Hormuz shutdown cascades through reserves and prices even for countries with no direct dependency. Built with a small Flask+JS app, LLM-assisted, with an accompanying arXiv paper. Interesting as a technique example more than as actionable news.
+- [R] [reddit-saas] A Reddit meme is about to make me my first $1,000. — https://www.reddit.com/r/SaaS/comments/1v5i59c/a_reddit_meme_is_about_to_make_me_my_first_1000/ — Personal anecdote from a solo app developer approaching their first $1,000 in App Store revenue, crediting ASO iteration, 40+ blog posts/landing pages, and organic search over paid channels. No new information for other builders beyond generic distribution advice.
+- [R] [reddit-saas] It finally happened! A sale after 3 years! — https://www.reddit.com/r/SaaS/comments/1v61huc/it_finally_happened_a_sale_after_3_years/ — Founder milestone post: first sale after three years of building, following changes to trial gating (card-required trials, full feature access during trial). Anecdotal, single data point.
+- [R] [reddit-saas] Stop begging YC for a $500k permission slip. Go build a real business. — https://www.reddit.com/r/SaaS/comments/1v5ob7e/stop_begging_yc_for_a_500k_permission_slip_go/ — Opinion post arguing founders shouldn't fixate on YC acceptance and should focus on building instead. General career advice/rant, no new information.
+- [R] [reddit-saas] GOT MY FIRST CUSTOMER, im gonna cry — https://www.reddit.com/r/SaaS/comments/1v5nkin/got_my_first_customer_im_gonna_cry/ — Emotional milestone post about landing a first customer after multiple failed attempts. No actionable detail on how it happened.
+- [R] [reddit-saas] Can anyone tell me why I am getting so much direct traffic? — https://www.reddit.com/r/SaaS/comments/1v606sr/can_anyone_tell_me_why_i_am_getting_so_much/ — Open question about unexplained direct-traffic spike; likely dark social/referrer-stripping, but no answer or analysis provided in the post itself.
+- [R] [reddit-saas] I lost. — https://www.reddit.com/r/SaaS/comments/1v5ldrl/i_lost/ — A developer describes spending months building three SaaS products only to discover they can't accept payments because of their country's sanctions status, and found no workaround. A real structural problem for builders in sanctioned countries, but framed purely as a personal lament rather than new information or a solvable angle for this audience.
+- [R] [reddit-saas] Invitation for Sales &amp; Marketing Partner for a SaaS Product — https://www.reddit.com/r/SaaS/comments/1v5zhlp/invitation_for_sales_marketing_partner_for_a_saas/ — We have developed a SaaS product tailored for a niche industry, featuring both web and mobile-based interfaces. While there are existing pro…
+- [R] [reddit-saas] Founders who make demo or promo videos for your product, how do you actually do it? — https://www.reddit.com/r/SaaS/comments/1v61vo0/founders_who_make_demo_or_promo_videos_for_your/ — Any founders constantly making promo, tutorial or teaser videos for your product? even just marketing videos consistently posted on tik tok/…
+- [R] [reddit-saas] Wie findet ihr eure ersten Beta-Tester für ein sehr spezielles B2C-SaaS? — https://www.reddit.com/r/SaaS/comments/1v61d4y/wie_findet_ihr_eure_ersten_betatester_für_ein/ — Ich arbeite gerade an meinem ersten SaaS-Projekt und stehe vor einem Problem, bei dem mich eure Erfahrungen interessieren würden. Das Produk…
+- [R] [reddit-saas] building a hedging tool for bettors — https://www.reddit.com/r/SaaS/comments/1v619d7/building_a_hedging_tool_for_bettors/ — Sportsbooks, prediction markets, Input your bets and we tell you where to hedge and when https://www.hedgybet.com &amp;#32; submitted by &amp;#32; /…
+- [R] [reddit-saas] Should AI agents have permanent payment credentials? — https://www.reddit.com/r/SaaS/comments/1v5fooz/should_ai_agents_have_permanent_payment/ — This is something that's been crossing my mind for a bit so I thought I'd ask here. I've been wondering how payments are supposed to work li…
+- [R] [reddit-saas] How do I get my first few beta users? — https://www.reddit.com/r/SaaS/comments/1v5qcmk/how_do_i_get_my_first_few_beta_users/ — I just finished building a SaaS app and I'm looking for my first few users to test it. I'm not trying to sell anything yet I just want hones…
+- [R] [reddit-saas] One or two people come in like this every day. — https://www.reddit.com/r/SaaS/comments/1v5jofq/one_or_two_people_come_in_like_this_every_day/ — I started doing SEO and organic content work, and for the past few weeks, we’ve been getting new clients every day. It’s an incredible feeli…
+- [R] [reddit-saas] Audit sécurité avec IA — https://www.reddit.com/r/SaaS/comments/1v61qwa/audit_sécurité_avec_ia/ — Bonjour, Pourriez-vous me conseiller des app ou des prompts pour auditer mon saas avec IA (claude code ou OpenIA ou autres) ? Merci par avan…
+- [R] [reddit-saas] Well, 800 users taught me that signups mean almost nothing — https://www.reddit.com/r/SaaS/comments/1v5size/well_800_users_taught_me_that_signups_mean_almost/ — Five months ago, I started building an AI job-search SaaS during nights and weekends. I kept watching the signup count grow: 800 registered…
+- [R] [reddit-saas] I've been ghostwriting LinkedIn content for 5+ years. I write for CEOs, Investors, founders, and b2b leaders. — https://www.reddit.com/r/SaaS/comments/1v61h1a/ive_been_ghostwriting_linkedin_content_for_5/ — I've written posts that did 500,000+ impressions. I've also written posts that got 17 likes and died quietly. For better or for worse, I kno…
+- [R] [reddit-saas] Cold called my way to booked meetings, then watched almost all of them ghost me. 2 months in and burning out. — https://www.reddit.com/r/SaaS/comments/1v619nx/cold_called_my_way_to_booked_meetings_then/ — Been running an AI automation business for about two months. I build AI receptionists and automated review/follow-up systems, mainly for loc…
+- [R] [reddit-saas] Can someone recommend an absolute beast of a freelancer or agency for SaaS B2B outreach for pipeline building? — https://www.reddit.com/r/SaaS/comments/1v615ly/can_someone_recommend_an_absolute_beast_of_a/ — &amp;#32; submitted by &amp;#32; /u/Beneficial_Sail6320 [link] &amp;#32; [comments]
+- [R] [reddit-saas] I refuse to use the word &quot;compliant&quot; and I think it's costing me signups — https://www.reddit.com/r/SaaS/comments/1v5wc2i/i_refuse_to_use_the_word_compliant_and_i_think/ — Built a thing that checks small shops for accessibility problems every Monday and emails you what changed since last week. The EU has a law…
+- [R] [reddit-saas] Ex-SDE building a WhatsApp Business API SaaS in India need advice on company setup, Meta partnership, GST &amp; legal aspects — https://www.reddit.com/r/SaaS/comments/1v60ric/exsde_building_a_whatsapp_business_api_saas_in/ — Hi everyone, I'm an ex-software engineer from India, and for the past 2 years I've been working extensively with the WhatsApp Business API a…
+- [R] [reddit-saas] How did you land your first 10 customers? (Cold email, Reddit, SEO, Ads, IG, YT, LinkedIn?) — https://www.reddit.com/r/SaaS/comments/1v5g2c5/how_did_you_land_your_first_10_customers_cold/ — Bootstrapping a B2B SaaS, pre-revenue, trying to figure out where to spend my time before throwing money at ads. For those who've been throu…
+- [R] [reddit-saas] Generational wealth loading — https://www.reddit.com/r/SaaS/comments/1v5gy99/generational_wealth_loading/ — No but seriously, it will never ceases to amaze me how I can just build something, ship it to the internet, have people start using it and e…
+- [R] [stratechery] 2026.30: The Copium Wars — https://stratechery.com/2026/the-copium-wars/ — Weekly link-roundup teaser for Stratechery's paid content; no specifics captured beyond the topic list (Chinese AI models, Hugging Face's trajectory, NBA second-apron rules).
+- [R] [latent-space] [AINews] Claude Opus 5: Fable-level performance at Opus price (half Fable) — https://www.latent.space/p/ainews-claude-opus-5-fable-level — One-line AINews teaser noting Opus 5 matches Fable-5-level performance at about half the price. No additional analysis in the captured content; the underlying story is already covered by better-sourced Opus 5 items elsewhere in this batch.
+- [R] [gh-n8n] n8n@2.32.5 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.32.5 — Single bug fix in n8n's core: S3 object paths now use strict RFC 3986 encoding when signing. No new features.
+- [R] [gh-n8n] beta (n8n 2.32.5) — https://github.com/n8n-io/n8n/releases/tag/beta — Duplicate GitHub tag ('beta') pointing to the same n8n 2.32.5 bug-fix release already covered above.
+- [P] [cloudflare-blog] BGP ORIGIN attribute manipulation and its impact on the Internet — https://blog.cloudflare.com/bgp-origin-attribute/ — Cloudflare's research shows most BGP paths have their ORIGIN attribute manipulated by transit providers for competitive routing advantage, undermining a signal that's supposed to indicate route trustworthiness. They argue for deprecating ORIGIN from route-selection decisions. Relevant to anyone running or reasoning about network infrastructure/BGP, more niche than most solo-dev concerns.
+- [P] [vercel-changelog] Vercel WAF for Blob is now in beta — https://vercel.com/changelog/vercel-waf-for-blob-is-now-in-beta — Vercel's Web Application Firewall now covers Blob storage in beta — the same rate-limiting, geo-restriction, and IP-blocking rules that protect deployments now apply to blob downloads, with setup as a single dashboard toggle. Useful for anyone serving files/assets through Vercel Blob who wants to stop scraping or abusive traffic without adding a proxy.
+- [P] [vercel-changelog] Workflow steps now support extended function durations — https://vercel.com/changelog/workflow-steps-now-support-extended-function-durations — Vercel raised the max duration for Workflow steps from 800 seconds to 1800 seconds (30 minutes) on Pro and Enterprise plans, opt-in via an environment variable plus Fluid compute and a supported Node/Python runtime. Hobby plans stay capped at 5 minutes. This directly changes what's feasible to build as a long-running background job or agent task on Vercel without needing a separate worker/queue service.
+- [P] [vercel-changelog] Claude Opus 5 now available on AI Gateway — https://vercel.com/changelog/claude-opus-5-now-available-on-ai-gateway — Vercel added Claude Opus 5 to AI Gateway, with practical notes: reasoning effort is on by default and configurable from minimal to xhigh (or none) via AI SDK 7, Opus 5 ships with elevated cybersecurity safeguards that can occasionally block benign security-related requests (mitigate with AI Gateway's model-fallback list), and it's ZDR-compatible. Directly actionable for anyone wiring Opus 5 into an app via Vercel's gateway.
+- [R] [gh-nextjs] Next.js v16.3.0-canary.96 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.96 — Internal performance and code-shape optimizations (monomorphic route trees, Turbopack tree-shaking/dead-code tracking) plus doc updates in a Next.js canary build. No user-facing feature changes.
+- [P] [simon-willison] Quoting Boris Cherny — https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything — Simon Willison highlights a quote from Anthropic's Boris Cherny (via the Opus 5 system card) stating Opus 5 is the hardest-to-prompt-inject Claude model to date, based on internal red-teaming and prompt-injection evals. Relevant for anyone building agents that process untrusted tool output or web content, though it's a vendor self-report rather than independent verification.
+- [P] [simon-willison] Introducing Claude Opus 5 — https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything — Anthropic shipped Claude Opus 5, pitched as approaching Fable 5's frontier intelligence at about half the price, and it's currently topping the Artificial Analysis leaderboard ahead of Fable 5. It's priced the same as Opus 4.8 with an optional 'fast mode' at 2x cost, is notably strong on long-horizon agentic coding and multi-agent coordination, and has improved vision for charts/diagrams/UI work. Simon Willison hasn't run his own tests yet but relays credible early buzz. Worth knowing if you're choosing a model for coding-agent or multi-agent work.
+- [R] [lobsters] Chrome registers a global shortcut for Gemini popup window — https://unsung.aresluna.org/chromes-breaking-and-entering/ — Lobsters discussion thread about Chrome apparently registering a global keyboard shortcut for a Gemini popup window; the fetched content only contains a link to comments, not the source article, so no further detail is available here.
+- [R] [lobsters] Watching Go's new garbage collector move through the heap — https://theconsensus.dev/p/2026/07/19/observing-gos-garbage-collector-old-and-new.html — Lobsters link to an article about observing Go's new garbage collector behavior in the heap; only a comments-link stub was fetched, not the article body.
+- [R] [lobsters] We Are Not Special — https://www.hillelwayne.com/post/we-are-not-special/ — Lobsters link to Hillel Wayne's post 'We Are Not Special'; only a comments-link stub was fetched, not the article body, so the actual argument can't be summarized here.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
