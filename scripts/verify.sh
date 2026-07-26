@@ -72,6 +72,13 @@ patterns = [
     re.compile(r"-----BEGIN (?:RSA |OPENSSH |EC |DSA |)PRIVATE KEY-----"),
 ]
 
+# URLs (news links, releases, etc.) commonly contain long hyphenated slugs
+# that coincidentally match secret-key shapes (e.g. "sk-telecom-..." from a
+# story about SK Telecom). Strip URL spans before scanning so slugs can't
+# false-positive as leaked secrets. Real inline secrets are never inside a
+# well-formed http(s) URL, so this does not weaken the scan.
+url_pattern = re.compile(r"https?://\S+")
+
 tracked = subprocess.check_output(["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"])
 files = [item.decode() for item in tracked.split(b"\0") if item and (root / item.decode()).exists()]
 hits = []
@@ -83,8 +90,9 @@ for name in files:
     except UnicodeDecodeError:
         continue
     for line_no, line in enumerate(text.splitlines(), start=1):
+        sanitized = url_pattern.sub("", line)
         for pattern in patterns:
-            if pattern.search(line):
+            if pattern.search(sanitized):
                 hits.append(f"{name}:{line_no}: {pattern.pattern}")
 
 if hits:
