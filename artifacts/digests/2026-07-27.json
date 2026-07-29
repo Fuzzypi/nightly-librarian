@@ -1,16 +1,35 @@
 {
   "date": "2026-07-27",
-  "generated_at": "2026-07-27T06:24:42.087Z",
+  "generated_at": "2026-07-27T14:09:32.777Z",
   "imported_from": {
     "importer_version": "digest-import/v1",
     "source_artifact": "artifacts/synthesized/2026-07-27.json",
-    "source_sha256": "ac5d25bb87641d0018d45d3734f296a41a61a55b1acf0df5bf88dade0871161e"
+    "source_sha256": "4c1458f0c3a2000e0a3a3d26c682f423eea7bd478cbf1f5335985b72b8955fa0"
   },
   "items": [
     {
-      "builder_takeaway": "Directly affects how Fuzzy builds multi-agent workflows on Claude. Official vendor guidance on a model family he uses daily.",
+      "builder_takeaway": "## What's Changed * mlx update by @dhiltgen in https://github.com/ollama/ollama/pull/17397 **Full Changelog**:…",
+      "category": "Tools Worth Testing",
+      "id": "88299d2d-fd5f-4b84-9e06-276a195355d5",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "## What's Changed * mlx update by @dhiltgen in https://github.com/ollama/ollama/pull/17397 **Full Changelog**:…"
+      ],
+      "title": "v0.32.5",
+      "uncertainty": "",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.32.5-rc0"
+    },
+    {
+      "builder_takeaway": "Concrete fixes to agent runtimes plus a security patch can change upgrade priority for active users.",
       "category": "AI Operations / Agent Control",
-      "id": "3b83ad27-9b05-4649-8d2e-b0bf59c53ed2",
+      "id": "43f54fb4-4d34-4940-b8f1-99a8ba9907a4",
       "importance": "lead",
       "labels": [
         "vendor_claim",
@@ -18,284 +37,37 @@
       ],
       "product_relevance": [],
       "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "claude.com",
+      "source": "github.com",
       "source_facts": [
-        "Anthropic released new context engineering guidelines specifically for Claude 5 generation models that change established prompting patterns."
+        "CrewAI 1.15.7 fixes Responses API/tool-calling failures, GPT-5.6 reasoning errors, and patches a Bedrock CVE."
       ],
-      "title": "The new rules of context engineering for Claude 5 generation models",
-      "uncertainty": "Content not fully read — scoring based on title and source authority.",
-      "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models"
+      "title": "1.15.7",
+      "uncertainty": "",
+      "url": "https://github.com/crewAIInc/crewAI/releases/tag/1.15.7"
     },
     {
-      "builder_takeaway": "Fuzzy uses Cloudflare Pages for thenightlylibrarian.com. Platform change that could affect content visibility.",
-      "category": "Model + API Changes",
-      "id": "3434391e-693c-4d29-809d-783138413c25",
-      "importance": "supporting",
-      "labels": [
-        "vendor_claim",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "blog.cloudflare.com",
-      "source_facts": [
-        "Cloudflare launched new controls for site owners to manage how AI crawlers and agents interact with their content."
-      ],
-      "title": "Cloudflare's new AI traffic options for customers",
-      "uncertainty": "Full blog post not read — specifics of opt-in/opt-out defaults unknown.",
-      "url": "https://blog.cloudflare.com/content-independence-day-ai-options/"
-    },
-    {
-      "builder_takeaway": "Tiny TTS model could be practical for local/edge voice agent deployments. Directly relevant to CalenCall voice work.",
-      "category": "Voice AI / Realtime Agents",
-      "id": "b9dc9d48-a21c-401b-85d8-e4384692ce07",
-      "importance": "supporting",
-      "labels": [
-        "builder_reported",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "huggingface.co",
-      "source_facts": [
-        "Inflect-Micro-v2 achieves complete voice synthesis in only 9.36M parameters."
-      ],
-      "title": "Inflect-Micro-v2: complete voice in 9.36M parameters",
-      "uncertainty": "Quality vs larger models unknown. Licensing terms not checked.",
-      "url": "https://huggingface.co/owensong/Inflect-Micro-v2"
-    },
-    {
-      "builder_takeaway": "Industry intelligence on a major AI lab's trajectory. Affects model selection decisions.",
-      "category": "Model + API Changes",
-      "id": "47c894b3-41a4-413d-b751-2473a8e555ec",
-      "importance": "supporting",
+      "builder_takeaway": "## What's Changed ### Bug Fixes - Fix registry skills resolution through the runtime's CrewAI+ client. - Recover from the GPT-5.6…",
+      "category": "Tools Worth Testing",
+      "id": "ab1d1ffa-7d02-4eed-aaf0-ffbe13e7a35c",
+      "importance": "archive-only",
       "labels": [
         "early_signal",
-        "publish_private"
+        "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-07-27T00:00:00.000Z",
       "source": "github.com",
       "source_facts": [
-        "DeepSeek paused its fundraise after leaked investor meeting transcript revealed founder acknowledging significant compute gap to US labs."
+        "## What's Changed ### Bug Fixes - Fix registry skills resolution through the runtime's CrewAI+ client. - Recover from the GPT-5.6…"
       ],
-      "title": "DeepSeek pause fundraise after comments on compute gap to US leaked (transcript)",
-      "uncertainty": "Transcript authenticity not independently verified. Translation quality unknown.",
-      "url": "https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf"
+      "title": "1.15.7a1",
+      "uncertainty": "",
+      "url": "https://github.com/crewAIInc/crewAI/releases/tag/1.15.7a1"
     },
     {
-      "builder_takeaway": "Precedent-setting policy decision for the open-source ecosystem that could ripple into other projects.",
+      "builder_takeaway": "We have a black hole at home — with actual relativistic physics, live in your browser. I'm Sasha (Alexander) Plavin, an…",
       "category": "Tools Worth Testing",
-      "id": "3ac098ff-3c77-4696-b136-fd95de6fb535",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "debian.org",
-      "source_facts": [
-        "Debian is conducting a formal General Resolution vote on three proposals to govern LLM usage in project contributions."
-      ],
-      "title": "General Resolution: LLM usage in Debian",
-      "uncertainty": "Vote outcome not yet determined.",
-      "url": "https://www.debian.org/vote/2026/vote_002"
-    },
-    {
-      "builder_takeaway": "Pattern of instability on a platform Fuzzy depends on for production workloads.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "877a3833-168c-4048-b82b-e9bf1bdf930d",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
-        "monitor"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "status.claude.com",
-      "source_facts": [
-        "Claude API experienced three separate outage incidents on July 25, 2026, affecting multiple model families."
-      ],
-      "title": "Elevated errors for Claude Fable 5, Claude Sonnet 5, Claude Haiku 4.5, and other models",
-      "uncertainty": "",
-      "url": "https://status.claude.com/incidents/j6gv862066n7"
-    },
-    {
-      "builder_takeaway": "Broad platform outage on a major AI provider.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "1835fae2-f7d2-4abe-b2f5-9887557b6396",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
-        "monitor"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "status.openai.com",
-      "source_facts": [
-        "OpenAI experienced a broad outage affecting API, ChatGPT, embeddings, agents, and multiple other services."
-      ],
-      "title": "Elevated error rates",
-      "uncertainty": "",
-      "url": "https://status.openai.com//incidents/01KYCGY017EG43XZS6GFVXA8VH"
-    },
-    {
-      "builder_takeaway": "Brief ~10 minute incident affecting Sonnet models. Resolved quickly.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "9ff97cd3-ae39-4547-9555-f0841b62162e",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "status.claude.com",
-      "source_facts": [
-        "Sonnet 4.6 and Sonnet 5 had elevated errors for approximately 10 minutes on July 25."
-      ],
-      "title": "Sonnet 4.6 and Sonnet 5 errors elevated",
-      "uncertainty": "",
-      "url": "https://status.claude.com/incidents/1019wwb67615"
-    },
-    {
-      "builder_takeaway": "Second Claude outage on July 25 affecting Mythos 5, Fable 5, and Haiku 4.5. Resolved.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "60ead9ec-8000-49cb-858b-4958be6118ee",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "status.claude.com",
-      "source_facts": [
-        "Claude API had a second outage on July 25 affecting Mythos 5, Fable 5, Opus 5, and Haiku 4.5."
-      ],
-      "title": "Elevated errors for Mythos 5, Fable 5, Opus 5 and Claude Haiku 4.5",
-      "uncertainty": "",
-      "url": "https://status.claude.com/incidents/f1q2wvw4qj4j"
-    },
-    {
-      "builder_takeaway": "ChatGPT-specific outage, mitigation implemented. Narrower scope than the broad OpenAI incident.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "bed33fd3-3695-4f73-b1c3-bbe06baed3df",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "status.openai.com",
-      "source_facts": [
-        "ChatGPT conversations experienced elevated errors with mitigation in monitoring phase."
-      ],
-      "title": "Elevated errors affecting ChatGPT conversations",
-      "uncertainty": "",
-      "url": "https://status.openai.com//incidents/01KYDN6YPS6ARY1EC9089N089G"
-    },
-    {
-      "builder_takeaway": "Duplicate of OpenAI elevated error rates incident.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "46fa70fd-01ef-4b49-a64f-027c65b54e0c",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "status.openai.com",
-      "source_facts": [
-        "Duplicate OpenAI status incident."
-      ],
-      "title": "Elevated error rates",
-      "uncertainty": "",
-      "url": "https://status.openai.com//incidents/01KYC921K145JTR1JK7DYKGWH1"
-    },
-    {
-      "builder_takeaway": "Article about the shell colon (:) builtin and its uses in scripts. Developer trivia, not decision-changing.",
-      "category": "Tools Worth Testing",
-      "id": "006f3539-a42c-4988-9b3a-197ae90a278c",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "refp.se",
-      "source_facts": [
-        "The shell colon (:) builtin has practical uses in scripts despite being a no-op."
-      ],
-      "title": "A shell colon does nothing. Use it anyway",
-      "uncertainty": "",
-      "url": "https://refp.se/articles/your-shell-and-the-magic-colon"
-    },
-    {
-      "builder_takeaway": "Hardware hobby project building a plane radar with an ESP32. Fun but not relevant to software development.",
-      "category": "Tools Worth Testing",
-      "id": "c9c4afed-d10d-4032-a24f-0ec57309d5ce",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "blog.ktz.me",
-      "source_facts": [
-        "Builder created a desk-sized plane radar using an ESP32 microcontroller."
-      ],
-      "title": "An ESP32 based plane radar for my desk",
-      "uncertainty": "",
-      "url": "https://blog.ktz.me/esp32-plane-radar/"
-    },
-    {
-      "builder_takeaway": "Solo builder created a free, ad-free golf course directory using OpenStreetMap data. Interesting as a Show HN success story but niche domain.",
-      "category": "Tools Worth Testing",
-      "id": "a541d093-f895-42a4-b4c3-bb49a88fa463",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "golfcoursebrowser.com",
-      "source_facts": [
-        "Developer built a free OSM-backed US golf course directory with community-verified data."
-      ],
-      "title": "Show HN: I mapped every US golf course",
-      "uncertainty": "",
-      "url": "https://golfcoursebrowser.com/"
-    },
-    {
-      "builder_takeaway": "Blog post about setting up Emacs as a dedicated writing machine. Niche editor workflow.",
-      "category": "Tools Worth Testing",
-      "id": "b92f17f1-034d-4a23-ba7c-2e07f1f2e903",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "chainsawriot.com",
-      "source_facts": [
-        "Author describes an Emacs-based dedicated writing machine setup."
-      ],
-      "title": "Emacs Writing Machine",
-      "uncertainty": "",
-      "url": "https://chainsawriot.com/postmannheim/2026/07/25/writeredeck.html"
-    },
-    {
-      "builder_takeaway": "Web art/design project showcasing banner advertisements. Entertainment, not actionable.",
-      "category": "Tools Worth Testing",
-      "id": "c91db572-1820-4352-bf93-c3c731a2cb8f",
+      "id": "d1beacea-fc03-4c18-a24a-9cac50ceb132",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -303,75 +75,588 @@
       ],
       "product_relevance": [],
       "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "highway-01.banner-depot-2000.net",
+      "source": "blackhole.plav.in",
       "source_facts": [
-        "Banner Highway 01 is a web art project featuring banner advertisements."
+        "We have a black hole at home — with actual relativistic physics, live in your browser. I'm Sasha (Alexander) Plavin, an…"
       ],
-      "title": "Banner Highway 01",
+      "title": "Show HN: Physically accurate black hole you can put in your room",
       "uncertainty": "",
-      "url": "https://highway-01.banner-depot-2000.net/"
+      "url": "https://blackhole.plav.in"
     },
     {
-      "builder_takeaway": "Programming language theory essay drawing analogies between language design and latent spaces. Academic interest only.",
+      "builder_takeaway": "Show HN: CheapSecurity – Lightweight, Self-Hosted CCTV for Linux SBCs",
       "category": "Tools Worth Testing",
-      "id": "f10823be-40f5-440d-988a-fef2d844e68f",
+      "id": "e8ae6766-cbdb-409a-ac52-890b5110a230",
       "importance": "archive-only",
       "labels": [
-        "builder_reported",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "blog.jsbarretto.com",
+      "source": "github.com",
       "source_facts": [
-        "Author argues programming languages can be understood as designed latent spaces."
+        "Show HN: CheapSecurity – Lightweight, Self-Hosted CCTV for Linux SBCs"
       ],
-      "title": "Languages as designed latent spaces",
+      "title": "Show HN: CheapSecurity – Lightweight, Self-Hosted CCTV for Linux SBCs",
       "uncertainty": "",
-      "url": "https://blog.jsbarretto.com/post/languages-as-latent-spaces"
+      "url": "https://github.com/gmrandazzo/CheapSecurity"
     },
     {
-      "builder_takeaway": "Video tutorial on the J programming language. Niche language tutorial.",
+      "builder_takeaway": "Show HN: Reverse Minesweeper",
       "category": "Tools Worth Testing",
-      "id": "9dc5744f-5ed5-49cf-b808-91444a3a3898",
+      "id": "6ea00f29-2519-4cbb-9d08-3e229d3eb5f9",
       "importance": "archive-only",
       "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "sunflowersgame.com",
+      "source_facts": [
+        "Show HN: Reverse Minesweeper"
+      ],
+      "title": "Show HN: Reverse Minesweeper",
+      "uncertainty": "",
+      "url": "https://sunflowersgame.com/"
+    },
+    {
+      "builder_takeaway": "A lightweight editor with strong test coverage is a credible component to keep on the shortlist for content tools.",
+      "category": "Tools Worth Testing",
+      "id": "70c3ab7e-a746-4b4f-b80f-25f5ebe46d8d",
+      "importance": "supporting",
+      "labels": [
         "builder_reported",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "news.ycombinator.com",
+      "source_facts": [
+        "Writemark is a dependency-free Markdown editor web component with split/preview modes and 951 Playwright checks."
+      ],
+      "title": "Show HN: Writemark, a dependency free web component for inline Markdown editing",
+      "uncertainty": "",
+      "url": "https://news.ycombinator.com/item?id=49051130"
+    },
+    {
+      "builder_takeaway": "submitted by /u/codebusted [link] [comments]",
+      "category": "Tools Worth Testing",
+      "id": "ab17313c-7e5c-4fd2-b3b5-b87965d681d8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "submitted by /u/codebusted [link] [comments]"
+      ],
+      "title": "devs vs users explained",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v73tan/devs_vs_users_explained/"
+    },
+    {
+      "builder_takeaway": "So about a week ago I created a MacOS app that added some features that I miss on my old windows laptop such as the cut tool…",
+      "category": "Tools Worth Testing",
+      "id": "b4abb960-8cb9-4246-8242-c25b5c8caf35",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "So about a week ago I created a MacOS app that added some features that I miss on my old windows laptop such as the cut tool…"
+      ],
+      "title": "Just got my first sale! Don't give up",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7fl1e/just_got_my_first_sale_dont_give_up/"
+    },
+    {
+      "builder_takeaway": "I'm a solo founder and student building a SaaS with around 1,500 users . Current stack: Frontend: HTML/CSS/JS Hosting: Vercel…",
+      "category": "Tools Worth Testing",
+      "id": "fd2df6ac-453f-4555-bf0b-1266d9f5adb0",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I'm a solo founder and student building a SaaS with around 1,500 users . Current stack: Frontend: HTML/CSS/JS Hosting: Vercel…"
+      ],
+      "title": "Solo founder with ~1,500 users. Should I stick with Supabase or migrate?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7sijx/solo_founder_with_1500_users_should_i_stick_with/"
+    },
+    {
+      "builder_takeaway": "Been building this on my own for a while and someone finally paid for it. It's called hivework. It builds the small internal…",
+      "category": "Tools Worth Testing",
+      "id": "809811a7-2ff6-4f52-9772-5b1ae56c917c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Been building this on my own for a while and someone finally paid for it. It's called hivework. It builds the small internal…"
+      ],
+      "title": "FIRST PAYING USERS !!",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7105h/first_paying_users/"
+    },
+    {
+      "builder_takeaway": "This is something I've been wondering for a while. If you're building a biz, is it because you're broke and need the money, or…",
+      "category": "Tools Worth Testing",
+      "id": "268dd445-edbc-4622-97e5-4afb0b83d5d8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "This is something I've been wondering for a while. If you're building a biz, is it because you're broke and need the money, or…"
+      ],
+      "title": "Are Most SaaS Founders Actually Broke?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7kd5l/are_most_saas_founders_actually_broke/"
+    },
+    {
+      "builder_takeaway": "Imagine you're starting a startup from scratch. * No marketing budget. * No money for ads. * No existing audience. * No investors.…",
+      "category": "Tools Worth Testing",
+      "id": "54a0b755-8bac-43a4-ada4-960f44ff5324",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Imagine you're starting a startup from scratch. * No marketing budget. * No money for ads. * No existing audience. * No investors.…"
+      ],
+      "title": "If you were a broke founder today, how would you get your first customers?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7go0w/if_you_were_a_broke_founder_today_how_would_you/"
+    },
+    {
+      "builder_takeaway": "Last 30 days have been great for my micro saas (social scheduling cli, mcp & api tool). Thanks in part to this community here as…",
+      "category": "Tools Worth Testing",
+      "id": "b340638c-3a66-4e01-b5a4-76070d0f374f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Last 30 days have been great for my micro saas (social scheduling cli, mcp & api tool). Thanks in part to this community here as…"
+      ],
+      "title": "$1,297 last 30 days. I started selling my SaaS's value differently",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7fqn2/1297_last_30_days_i_started_selling_my_saass/"
+    },
+    {
+      "builder_takeaway": "Have you ever built a SaaS that had little or no customer traction for months or even years but you still believed it could…",
+      "category": "Tools Worth Testing",
+      "id": "1e114ab0-cad2-41d2-bb4f-a98bcb28739b",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Have you ever built a SaaS that had little or no customer traction for months or even years but you still believed it could…"
+      ],
+      "title": "How did you stay motivated when your SaaS had no customers?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7rdp8/how_did_you_stay_motivated_when_your_saas_had_no/"
+    },
+    {
+      "builder_takeaway": "I've been spending weeks and weeks trying to find a right problem so I simply just looked within myself and found the perfect…",
+      "category": "Tools Worth Testing",
+      "id": "6e7e1f8c-3a93-4c71-9baf-e1fefd01eb73",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I've been spending weeks and weeks trying to find a right problem so I simply just looked within myself and found the perfect…"
+      ],
+      "title": "I think I have a good Idea that is validated by a lot of people. What are next steps?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7r1yq/i_think_i_have_a_good_idea_that_is_validated_by_a/"
+    },
+    {
+      "builder_takeaway": "I spent months building a SaaS product and today I saw the first real subscriptions come in. The hardest part wasn’t coding. It…",
+      "category": "Tools Worth Testing",
+      "id": "39c47a4a-28f3-47cf-9990-c7ab653aae7f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I spent months building a SaaS product and today I saw the first real subscriptions come in. The hardest part wasn’t coding. It…"
+      ],
+      "title": "After months of building, I finally got my first paying customers",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7k6nf/after_months_of_building_i_finally_got_my_first/"
+    },
+    {
+      "builder_takeaway": "Hey guys! My co-founder and I are in a weird spot. We launched orchardrun – a highly affordable Speech-to-Text (STT) API designed…",
+      "category": "Tools Worth Testing",
+      "id": "44b64af3-216f-4da3-bc23-ad70918cf336",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Hey guys! My co-founder and I are in a weird spot. We launched orchardrun – a highly affordable Speech-to-Text (STT) API designed…"
+      ],
+      "title": "We hit 10 paid clients and 1,600 free-tier users for our STT API. Now we’re completely stuck. How do we bridge the gap to 100?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7lgdk/we_hit_10_paid_clients_and_1600_freetier_users/"
+    },
+    {
+      "builder_takeaway": "https://preview.redd.it/buldwcv77pfh1.png?width=2216&format=png&auto=webp&s=3aa21cd0f396b88c17f6fb0bc91ce69fc6069c0d Finally got…",
+      "category": "Tools Worth Testing",
+      "id": "976604c5-4039-473e-bc28-448f2e193cc7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "https://preview.redd.it/buldwcv77pfh1.png?width=2216&format=png&auto=webp&s=3aa21cd0f396b88c17f6fb0bc91ce69fc6069c0d Finally got…"
+      ],
+      "title": "Got first subscription in 2 months after release",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7pujv/got_first_subscription_in_2_months_after_release/"
+    },
+    {
+      "builder_takeaway": "I keep hearing distribution beats product, and I'm living the painful version of that right now. I built a scheduling and…",
+      "category": "Tools Worth Testing",
+      "id": "e3c0dc57-00ea-4df3-a9f2-9765282bdd1b",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I keep hearing distribution beats product, and I'm living the painful version of that right now. I built a scheduling and…"
+      ],
+      "title": "Built a tool for a problem I had, now stuck on who to actually sell it to",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7tn4i/built_a_tool_for_a_problem_i_had_now_stuck_on_who/"
+    },
+    {
+      "builder_takeaway": "Hi! I’d really appreciate your opinion. Since last year, my developer colleague and I have been working on a platform that allows…",
+      "category": "Tools Worth Testing",
+      "id": "84bfe3b3-7713-4b7e-97ec-c4db98b3d0ea",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Hi! I’d really appreciate your opinion. Since last year, my developer colleague and I have been working on a platform that allows…"
+      ],
+      "title": "We built a platform for creators to monetize their knowledge, but users aren’t sticking around... what are we missing?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7tl3n/we_built_a_platform_for_creators_to_monetize/"
+    },
+    {
+      "builder_takeaway": "Full disclosure: I'm the founder of Fitvex. After more than a year or two of development, we launched our SaaS product in Hungary…",
+      "category": "Tools Worth Testing",
+      "id": "f6f19c34-fbaa-43dc-8a30-3b0dc56b4adf",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Full disclosure: I'm the founder of Fitvex. After more than a year or two of development, we launched our SaaS product in Hungary…"
+      ],
+      "title": "We spent a year building a niche SaaS in Hungary, lessons from our first months after launch",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7tka8/we_spent_a_year_building_a_niche_saas_in_hungary/"
+    },
+    {
+      "builder_takeaway": "Useful sales signal for small-business software work: trust and exit-risk can outweigh feature depth.",
+      "category": "Small Business Automation",
+      "id": "f719a2ca-3bc8-4fbc-bef8-2dc925834923",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A small dev shop says fixed-price delivery and cheap open-source hosting eased buyer fear more than the app itself."
+      ],
+      "title": "A garment factory was tracking 100 plus production processes in Excel. Replacing it taught me more about selling software than building it.",
+      "uncertainty": "Approved browse toolchain reached the Reddit URL but rendered no readable page text; summary is based on the fetched RSS excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7thgw/a_garment_factory_was_tracking_100_plus/"
+    },
+    {
+      "builder_takeaway": "Saw a thread saying: Traditional Automation softwares like ramp/bill acted like oZempic for manual entries, bookkeepers &…",
+      "category": "Tools Worth Testing",
+      "id": "29f950fe-aee0-42c5-8d78-551c49c6a223",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Saw a thread saying: Traditional Automation softwares like ramp/bill acted like oZempic for manual entries, bookkeepers &…"
+      ],
+      "title": "Automation software have already touched ceilings",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7tapc/automation_software_have_already_touched_ceilings/"
+    },
+    {
+      "builder_takeaway": "Yesterday, someone told me on X that I spend too much time making videos and not enough time actually working on my SaaS.…",
+      "category": "Tools Worth Testing",
+      "id": "3e5fa01d-133f-4718-850b-29df48c31826",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Yesterday, someone told me on X that I spend too much time making videos and not enough time actually working on my SaaS.…"
+      ],
+      "title": "Apparently, I’m not a good SaaS founder because I spend too much time making videos",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7sxn3/apparently_im_not_a_good_saas_founder_because_i/"
+    },
+    {
+      "builder_takeaway": "Im a software engineer and work in big tech I am building a saas that i am passionate about. Its simple but pretty cool. I would…",
+      "category": "Tools Worth Testing",
+      "id": "ca45e117-de4a-4b06-8f8d-b6eb376dfe46",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Im a software engineer and work in big tech I am building a saas that i am passionate about. Its simple but pretty cool. I would…"
+      ],
+      "title": "Im building my SaaS to get me a better job",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7snpf/im_building_my_saas_to_get_me_a_better_job/"
+    },
+    {
+      "builder_takeaway": "It is a concrete pricing design for variable AI costs in episodic products, not generic SaaS pricing talk.",
+      "category": "Small Business Automation",
+      "id": "2575e7a2-288d-4961-a127-5c96e917c112",
+      "importance": "supporting",
+      "labels": [
+        "early_signal",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "One founder found subscriptions failed for bursty AI usage and switched to metered credits plus an optional bring-your-own API key."
+      ],
+      "title": "The AI in my home inventory app costs me money every time someone taps it, and no subscription I modelled survived that. Here is what I shipped instead.",
+      "uncertainty": "Approved browse toolchain reached the Reddit URL but rendered no readable page text; summary is based on the fetched RSS excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7sl6y/the_ai_in_my_home_inventory_app_costs_me_money/"
+    },
+    {
+      "builder_takeaway": "I've been spending close to 3 hours a day manually checking one keyword across reddit, youtube, and google. half of it was tabs,…",
+      "category": "Tools Worth Testing",
+      "id": "af68271d-6be9-4f37-b738-06bfec6c86eb",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I've been spending close to 3 hours a day manually checking one keyword across reddit, youtube, and google. half of it was tabs,…"
+      ],
+      "title": "saved myself 3 hours a day with one sentence, not sure if it's a real problem or just my own weird fix",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7sbug/saved_myself_3_hours_a_day_with_one_sentence_not/"
+    },
+    {
+      "builder_takeaway": "Hey everyone, I wanted to share a realistic breakdown of building and launching Hashvix AI, an audio-generation project I've been…",
+      "category": "Tools Worth Testing",
+      "id": "46319d18-d3d0-44c3-8d1d-b41b574f023c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Hey everyone, I wanted to share a realistic breakdown of building and launching Hashvix AI, an audio-generation project I've been…"
+      ],
+      "title": "Built a web-based AI music generator to solve my own stock audio headaches. Here is what worked, what failed, and why I skipped the full DAW route.",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1v7rzb5/built_a_webbased_ai_music_generator_to_solve_my/"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "76ddcd3f-065b-4d48-8083-dbbcd90339cb",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "gracefulliberty.com",
+      "source_facts": [
+        "Comments"
+      ],
+      "title": "Teaching Kids Forth",
+      "uncertainty": "",
+      "url": "https://gracefulliberty.com/articles/teaching-kids-forth/"
+    },
+    {
+      "builder_takeaway": "This is a concrete operational footgun with a reproducer and a clear mitigation path.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "6e139a11-a97a-4cda-9930-5ba38b44bc18",
+      "importance": "supporting",
+      "labels": [
+        "reproducible",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "hynek.me",
+      "source_facts": [
+        "Hynek shows WAL mode can still lock short-lived read-only SQLite readers; busy timeout or DELETE mode removed the errors."
+      ],
+      "title": "SQLite WAL Mode Can Lock Short-Lived Readers",
+      "uncertainty": "",
+      "url": "https://hynek.me/til/sqlite-read-only-wal-locked/"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "09d4c07b-a516-440e-b74b-2bf553961cf6",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "orchidfiles.com",
+      "source_facts": [
+        "Comments"
+      ],
+      "title": "What does GitHub’s security team even do?",
+      "uncertainty": "",
+      "url": "https://orchidfiles.com/github-security-team/"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "5064fa65-a455-4257-8c55-1b0811b4e582",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "source": "antirez.com",
+      "source_facts": [
+        "Comments"
+      ],
+      "title": "Being Linux Torvalds",
+      "uncertainty": "",
+      "url": "https://antirez.com/news/171"
+    },
+    {
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "800b1047-e9dd-40ca-974a-36791dd10b47",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-07-27T00:00:00.000Z",
       "source": "youtube.com",
       "source_facts": [
-        "Tutorial video covering card dealing implementation in the J programming language."
+        "Comments"
       ],
-      "title": "Beginner J: Dealing Cards",
+      "title": "Xavier Leroy on programming, languages and formal verification",
       "uncertainty": "",
-      "url": "https://www.youtube.com/watch?v=eXGKK8BkCkg"
+      "url": "https://www.youtube.com/watch?v=9Cswiqrq6So"
     },
     {
-      "builder_takeaway": "Open-source hardware project for building a mechanical drum-style television. Hardware hobby, not relevant.",
+      "builder_takeaway": "Comments",
       "category": "Tools Worth Testing",
-      "id": "0f6de7c9-22fa-4624-aab3-fb567d9542da",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "Open-source project for building a drum-style mechanical television."
-      ],
-      "title": "Scanwheel: a drum style mechanical television you can build yourself",
-      "uncertainty": "",
-      "url": "https://github.com/AncientJames/Scanwheel/"
-    },
-    {
-      "builder_takeaway": "Generic beginner question on r/SaaS about getting started. No signal for an experienced builder.",
-      "category": "Small Business Automation",
-      "id": "128433dd-f809-48c5-b0aa-3c0d361bc5c6",
+      "id": "bc469daa-7676-42b9-9419-bd744e11e9b4",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -379,18 +664,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "softwarepreservation.computerhistory.org",
       "source_facts": [
-        "Reddit post asking for beginner SaaS guidance."
+        "Comments"
       ],
-      "title": "Where do I start with SaaS?",
+      "title": "History of John Backus's FP languages",
       "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1v7047f/where_do_i_start_with_saas/"
+      "url": "https://softwarepreservation.computerhistory.org/FP/"
     },
     {
-      "builder_takeaway": "Reddit post pitching an AI journaling app concept using Llama 3 and MBTI psychology. Idea-stage, no product or traction.",
-      "category": "Small Business Automation",
-      "id": "c4ce2287-95bc-4fa6-8173-f81d90a1f356",
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "c2502591-45f8-41e5-b895-60c60b03828b",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -398,18 +683,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "youtube.com",
       "source_facts": [
-        "Developer pitching concept for AI-powered MBTI journaling app using Llama 3."
+        "Comments"
       ],
-      "title": "I want to built SoulType: A daily journal that acts as an MBTI-based AI life coach (and actually remembers you).",
+      "title": "Dmitri Gaskin on jQuery (2008)",
       "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1v6zyeo/i_want_to_built_soultype_a_daily_journal_that/"
+      "url": "https://www.youtube.com/watch?v=8mwKq7_JlS8"
     },
     {
-      "builder_takeaway": "Reddit post asking for pricing advice on a clinic automation SaaS. Domain-specific question with no broader signal.",
-      "category": "Small Business Automation",
-      "id": "bf7761b5-7682-4543-acab-eee3d7441e4c",
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "cd56fe6e-31dc-48eb-b97d-574712633975",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -417,18 +702,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "grego.site",
       "source_facts": [
-        "Developer seeking pricing guidance for a clinic automation system."
+        "Comments"
       ],
-      "title": "How would you price a clinic automation system like this?",
+      "title": "Using ThinkPad T480 as a mobile phone",
       "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1v70npl/how_would_you_price_a_clinic_automation_system/"
+      "url": "https://grego.site/blog/thinkphone"
     },
     {
-      "builder_takeaway": "Reddit post about monetizing a student lounge POS system. Niche domain, no broader signal.",
-      "category": "Small Business Automation",
-      "id": "656300d4-560c-408e-bfbf-a250ac6f2912",
+      "builder_takeaway": "Comments",
+      "category": "Tools Worth Testing",
+      "id": "a0bb7e6b-23a5-4f9a-830a-a5d3fcbb685c",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -436,56 +721,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "quuxplusone.github.io",
       "source_facts": [
-        "Developer asking how to monetize an open-source POS/ERP system for student lounges."
+        "Comments"
       ],
-      "title": "How to monetize a POS/ERP system for student lounges?",
+      "title": "Interconverting std::function with copyable_function",
       "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1v6yosu/how_to_monetize_a_poserp_system_for_student/"
+      "url": "https://quuxplusone.github.io/blog/2026/07/26/function-explosion/"
     },
     {
-      "builder_takeaway": "University of Chicago Law School AI strategy statement. Not relevant to solo software development.",
+      "builder_takeaway": "Comments",
       "category": "Tools Worth Testing",
-      "id": "e518c724-549f-4e4a-87e6-d107d55bead3",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "law.uchicago.edu",
-      "source_facts": [
-        "UChicago Law School published an AI strategy statement on legal education."
-      ],
-      "title": "Rethinking Legal Education in the AI Era",
-      "uncertainty": "",
-      "url": "https://www.law.uchicago.edu/news/ai-strategy-statement"
-    },
-    {
-      "builder_takeaway": "Blended wing body aircraft company. Aerospace, not relevant to software development.",
-      "category": "Tools Worth Testing",
-      "id": "75be837c-ca29-454d-8251-0cfc7fef0881",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "jetzero.aero",
-      "source_facts": [
-        "JetZero is developing blended wing body aircraft designs."
-      ],
-      "title": "JetZero",
-      "uncertainty": "",
-      "url": "https://www.jetzero.aero"
-    },
-    {
-      "builder_takeaway": "Astronomy news about meteorite composition. Not relevant to software development.",
-      "category": "Tools Worth Testing",
-      "id": "d0a9df29-f47b-439a-9420-a92a3cd50b32",
+      "id": "89d4cfb1-9be1-4cbe-a3c8-3af0e84f3bab",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -493,37 +740,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "seti.org",
+      "source": "letoverlambda.com",
       "source_facts": [
-        "Scientists found unusual chemistry in a meteorite that struck a New Jersey home."
+        "Comments"
       ],
-      "title": "Alien World Chemistry Found Inside Meteorite That Struck New Jersey Home",
+      "title": "Forth Moving Lisp Moving Forth",
       "uncertainty": "",
-      "url": "https://www.seti.org/news/alien-world-chemistry-found-inside-meteorite/"
+      "url": "https://letoverlambda.com/textmode.cl/guest/chap8.html"
     },
     {
-      "builder_takeaway": "Demo of running a small LLM on an ESP32. Interesting proof of concept but not practically useful for production workloads.",
+      "builder_takeaway": "Comments",
       "category": "Tools Worth Testing",
-      "id": "fea9ee1b-3b4a-40ef-852a-86c129671963",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "Developer demonstrated running a 28.9M parameter LLM on an $8 ESP32 microcontroller."
-      ],
-      "title": "Running a 28.9M parameter LLM on an $8 microcontroller",
-      "uncertainty": "Quality and practical utility unknown.",
-      "url": "https://github.com/slvDev/esp32-ai"
-    },
-    {
-      "builder_takeaway": "Analysis of pharmaceutical clinical trial failure rates. Not relevant to software development.",
-      "category": "Tools Worth Testing",
-      "id": "6dd4e1c0-76f5-4cd1-8b9d-48ad8cb31e98",
+      "id": "ad7d266f-987a-47b8-a7e6-90c263c25fb8",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -531,246 +759,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "science.org",
+      "source": "op-co.de",
       "source_facts": [
-        "Clinical trial failure rates in pharma have been examined over decades."
+        "Comments"
       ],
-      "title": "Clinical failure rates over the decades: yikes",
+      "title": "Authoritative dnsmasq in a MikroTik container",
       "uncertainty": "",
-      "url": "https://www.science.org/content/blog-post/clinical-failure-rates-over-decades-yikes"
-    },
-    {
-      "builder_takeaway": "Tutorial on interactive git rebase. Well-trodden topic with no new insight.",
-      "category": "Tools Worth Testing",
-      "id": "f559dbbd-be49-4500-897c-6cfa2112602b",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "cachebag.sh",
-      "source_facts": [
-        "Interactive git rebase is easier than developers think."
-      ],
-      "title": "Git rebase -I is not that scary",
-      "uncertainty": "",
-      "url": "https://cachebag.sh/journal/interactive-rebasing/"
-    },
-    {
-      "builder_takeaway": "Blog post on system dynamics and delay effects. General systems thinking, not actionable.",
-      "category": "Tools Worth Testing",
-      "id": "4407d8c4-789c-4199-97be-7d7bc50c0ec8",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "martin.janiczek.cz",
-      "source_facts": [
-        "Blog post exploring how delays affect system behavior."
-      ],
-      "title": "Systems and Delays",
-      "uncertainty": "",
-      "url": "https://martin.janiczek.cz/2026/07/24/systems-and-delays.html"
-    },
-    {
-      "builder_takeaway": "Same Debian LLM vote as lobsters item 3ac098ff. Duplicate topic.",
-      "category": "Tools Worth Testing",
-      "id": "69afcdbe-e944-4bc3-9254-9ce48214bc0d",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "debian.org",
-      "source_facts": [
-        "Debian LLM usage General Resolution (duplicate coverage from hn-top)."
-      ],
-      "title": "LLM Usage in Debian: Three Proposals",
-      "uncertainty": "",
-      "url": "https://www.debian.org/vote/2026/vote_002"
-    },
-    {
-      "builder_takeaway": "Stanford policy brief on AI and labor markets. Interesting analysis but editorial, not actionable.",
-      "category": "Tools Worth Testing",
-      "id": "bcceaac4-2a6e-438b-932d-f0ecc060fab2",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "siepr.stanford.edu",
-      "source_facts": [
-        "Stanford paper argues current AI job impact is more nuanced than headlines suggest."
-      ],
-      "title": "What is happening to jobs? Separating AI hype from reality",
-      "uncertainty": "",
-      "url": "https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality"
-    },
-    {
-      "builder_takeaway": "Box2D blog post on SIMD optimizations for collision detection. Niche game physics.",
-      "category": "Tools Worth Testing",
-      "id": "70b8ffb5-e0f8-4578-8d7b-00b256052ce5",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "box2d.org",
-      "source_facts": [
-        "Box2D demonstrates SIMD optimizations for collision detection algorithms."
-      ],
-      "title": "SIMD for Collision",
-      "uncertainty": "",
-      "url": "https://box2d.org/posts/2026/07/simd-for-collision/"
-    },
-    {
-      "builder_takeaway": "GM investing in sodium-ion battery technology for grid storage. Energy/auto sector, not relevant.",
-      "category": "Tools Worth Testing",
-      "id": "8e6b2150-9f6e-4d9f-95d8-f86484a9cc57",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "spectrum.ieee.org",
-      "source_facts": [
-        "GM is backing sodium-ion battery technology for US grid storage applications."
-      ],
-      "title": "GM Backs Sodium Ion Batteries for U.S. Grid Storage",
-      "uncertainty": "",
-      "url": "https://spectrum.ieee.org/sodium-ion-battery-peak-energy"
-    },
-    {
-      "builder_takeaway": "Interactive semiconductor simulation with transistor animations. Educational hardware visualization.",
-      "category": "Tools Worth Testing",
-      "id": "43fad308-3574-41a4-b749-913ffbf8a091",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "brandonli.net",
-      "source_facts": [
-        "Developer created realistic transistor animations using semiconductor simulation software."
-      ],
-      "title": "Show HN: I made some transistor animations",
-      "uncertainty": "",
-      "url": "https://brandonli.net/semisim/animations"
-    },
-    {
-      "builder_takeaway": "Minimalist plain-text weather site as alternative to redesigned UK MET office. Interesting design philosophy but niche.",
-      "category": "Tools Worth Testing",
-      "id": "c61c5d17-7ac9-4923-97ba-e67686b4b3d8",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "brolly.sh",
-      "source_facts": [
-        "Developer built a minimalist plain-text weather forecast site."
-      ],
-      "title": "Show HN: Brolly, a plain-text weather forecast site",
-      "uncertainty": "",
-      "url": "https://brolly.sh/forecast/RWFP2qW8"
-    },
-    {
-      "builder_takeaway": "Renewable energy project producing ammonia from wind power. Green energy, not relevant to software.",
-      "category": "Tools Worth Testing",
-      "id": "a8b5d105-90d3-4086-8a2d-524c1ced0750",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "ammoniaenergy.org",
-      "source_facts": [
-        "A flexible renewable ammonia production demonstrator is operational in Morris, Minnesota."
-      ],
-      "title": "Producing ammonia and fertiliser using wind power in Morris, Minnesota",
-      "uncertainty": "",
-      "url": "https://ammoniaenergy.org/articles/flexible-renewable-ammonia-demonstrator-now-operational-in-minnesota/"
-    },
-    {
-      "builder_takeaway": "Opinion piece on the memory safety debate in systems programming. Culture-war-adjacent dev discourse.",
-      "category": "Tools Worth Testing",
-      "id": "7f241ac9-d67b-4687-9933-31025f2e2a29",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "itsallaboutthebit.com",
-      "source_facts": [
-        "Author argues against absolutist positions in the memory safety debate."
-      ],
-      "title": "Memory safety absolutists",
-      "uncertainty": "",
-      "url": "https://itsallaboutthebit.com/memory-safety-absolutists/"
-    },
-    {
-      "builder_takeaway": "Harvard research on ongoing human evolution and genetic selective pressures. Biology, not relevant.",
-      "category": "Tools Worth Testing",
-      "id": "065c8080-98b5-4c9d-b5e1-4271c4069a06",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "harvardmagazine.com",
-      "source_facts": [
-        "Harvard research shows human evolution continues with identifiable selective pressures."
-      ],
-      "title": "Humans haven't stopped evolving",
-      "uncertainty": "",
-      "url": "https://www.harvardmagazine.com/research/harvard-human-evolution-genes-selective-pressure"
-    },
-    {
-      "builder_takeaway": "Fly.io blog post. Title and content suggest company/infrastructure narrative.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "90474288-26e7-40f7-8b29-f5543d12bb5d",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-07-27T00:00:00.000Z",
-      "source": "fly.io",
-      "source_facts": [
-        "Fly.io published a blog post about company direction."
-      ],
-      "title": "Turn And Face The Strange",
-      "uncertainty": "Content not read. Could be relevant if about pricing or platform changes.",
-      "url": "https://fly.io/blog/kurt-scott-money-sprites/"
+      "url": "https://op-co.de/blog/posts/mikrotik_authoritative_dnsmasq/"
     }
   ],
   "mode": "primary",
-  "run_id": "1b78d217-cc76-4c8e-ab3d-84c12d18ba32",
+  "run_id": "1c318a75-bb77-440b-ae6a-78f4a4174180",
   "status": "completed",
-  "summary": "Synthesized Nightly Librarian run with 7 promoted item(s), 40 scored item(s), and 33 rejected item(s).",
+  "summary": "Synthesized Nightly Librarian run with 5 promoted item(s), 40 scored item(s), and 35 rejected item(s).",
   "title": "Nightly Librarian - 2026-07-27"
 }
