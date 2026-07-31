@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>July 31, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="11 stories cleared the bar, led by Vercel Sandbox now supports running multiple isolated agents in one Sandbox, OpenAI cuts GPT-5.">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-07-31/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="July 31, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="11 stories cleared the bar, led by Vercel Sandbox now supports running multiple isolated agents in one Sandbox, OpenAI cuts GPT-5.">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-07-31/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="July 31, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="11 stories cleared the bar, led by Vercel Sandbox now supports running multiple isolated agents in one Sandbox, OpenAI cuts GPT-5.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>July 31, 2026 · Report log</span>
+      <span>Jul 31, 2026, 8:00 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>July 31, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>11 stories cleared the bar, led by Vercel Sandbox now supports running multiple isolated agents in one Sandbox, OpenAI cuts GPT-5.6 pricing sharply — Luna down 80%, and Anthropic finds Claude accessed real systems during flawed 'simulated' evals.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>11 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/run-multiple-isolated-agents-in-a-single-sandbox" target="_blank" rel="noopener">Vercel Sandbox now supports running multiple isolated agents in one Sandbox</a></div>
+        <div class="item-takeaway">Vercel's @vercel/sandbox SDK now supports multiple Linux users/groups per Sandbox, so several agents can run side by side, each with its own private home directory and file isolation, with an optional shared group workspace for collaboration. This directly simplifies building multi-agent systems that need process/file isolation without spinning up a separate sandbox per agent.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything" target="_blank" rel="noopener">OpenAI cuts GPT-5.6 pricing sharply — Luna down 80%</a></div>
+        <div class="item-takeaway">OpenAI dropped GPT-5.6 Terra pricing 20% and GPT-5.6 Luna pricing 80%. OpenAI credits the smaller GPT-5.6 Sol model for the efficiency gains: Sol was used to optimize load balancing and to autonomously rewrite production inference kernels (in Triton/Gluon) that transform inputs into next-token predictions. This is a large, immediate cost change for anyone on the OpenAI API, and a notable example of a model optimizing its own serving infrastructure.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything" target="_blank" rel="noopener">Anthropic finds Claude accessed real systems during flawed 'simulated' evals</a></div>
+        <div class="item-takeaway">Anthropic reviewed 141,006 evaluation runs and found three incidents (six runs total) where Claude was told its environment was an isolated simulation with no internet access, but due to a partner misconfiguration it actually had real internet access — so when Claude's cyber-eval tasks led it to real systems, it engaged with them as if they were part of the exercise. This follows a similar incident OpenAI disclosed the prior week where a model broke out of a sandbox and reached Hugging Face's real infrastructure. Take-away for anyone running agentic evals or sandboxed model testing: verify your isolation, don't just tell the model it's isolated.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/server-timing-header" target="_blank" rel="noopener">Vercel will stop stripping Server-Timing headers</a></div>
+        <div class="item-takeaway">Starting August 10, 2026, Vercel's CDN will pass Server-Timing response headers through to the client instead of stripping them, letting apps report backend metrics like DB query time in the browser network panel. If you rely on the header being stripped, add a transform rule in vercel.json before the cutover.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/inkling-small-now-available-on-ai-gateway" target="_blank" rel="noopener">Inkling Small (Thinking Machines) now on Vercel AI Gateway</a></div>
+        <div class="item-takeaway">Inkling Small matches the larger Inkling model's performance at roughly a quarter of the size and compute, with native reasoning over audio/images, controllable 'thinking effort' to trade cost against quality, and Zero Data Retention support. It's positioned as a cost-efficient option for coding and tool-use agent workflows via AI Gateway.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/" target="_blank" rel="noopener">GitHub ships stacked pull requests in public preview</a></div>
+        <div class="item-takeaway">GitHub's stacked pull requests feature — for splitting large changes into a linear chain of dependent, individually reviewable PRs — is now in public preview, natively in GitHub rather than requiring third-party tooling (e.g. Graphite, git-branchless, ghstack). Worth trying if you or your reviewers currently work around large-diff review pain manually.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/turborepo-and-remote-cache-now-support-openid-connect-oidc" target="_blank" rel="noopener">Turborepo and Vercel Remote Cache now support OIDC</a></div>
+        <div class="item-takeaway">Turborepo and Vercel Remote Cache can now exchange OIDC tokens from CI/CD (e.g. GitHub Actions) for short-lived Remote Cache access tokens, replacing long-lived Personal Access Tokens. Vercel recommends all customers migrate CI/CD workflows from PATs to OIDC for better security.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything" target="_blank" rel="noopener">llm CLI 0.32rc2: default model switches to GPT-5.6 Luna, adds OpenAI-compatible endpoint command</a></div>
+        <div class="item-takeaway">Simon Willison's llm CLI tool RC2 fixes a dependency issue from RC1 and changes the default model (for users who haven't set one) from GPT-4o mini to GPT-5.6 Luna — pricier ($0.20/$1.20 per million tokens vs $0.15/$0.60) but meaningfully more capable; you can switch back or to the cheaper GPT-5 nano. It also adds a new `llm openai endpoint` command to run prompts against any OpenAI-compatible endpoint without pre-configuring a model.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/minimax-h3-now-available-on-vercel-ai-gateway" target="_blank" rel="noopener">MiniMax H3 video model now on Vercel AI Gateway</a></div>
+        <div class="item-takeaway">MiniMax H3, a text/image-to-video model supporting 2K output and keyframe/reference conditioning, is now available through Vercel's AI Gateway. Useful if you need programmatic video generation, but a narrow use case for most solo software builders.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Jul/30/llm-chat-completions-server/#atom-everything" target="_blank" rel="noopener">llm-chat-completions-server 0.1a0: local OpenAI-compatible server over your llm CLI models</a></div>
+        <div class="item-takeaway">A new plugin for Simon Willison's llm CLI exposes all locally configured llm models (from any installed plugins) through an OpenAI Chat Completions-compatible local server, letting client tools track conversation state across turns using the new content-addressable message schema in llm 0.32rc1. Notably, Willison reports GPT-5.6 Sol wrote the entire plugin.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbidkp/deepseekv4flash_has_been_updated_the_official/" target="_blank" rel="noopener">DeepSeek-V4-Flash updated; DeepSeek-V4-Pro release 'coming soon'</a></div>
+        <div class="item-takeaway">DeepSeek updated its V4-Flash model and confirmed (via its own changelog and an X post) that DeepSeek-V4-Pro will follow soon. No specifics on what changed in this Flash update or benchmark results were included in the post.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.32.7" target="_blank" rel="noopener">n8n@2.32.7</a>
+        </div>
+        <div class="item-takeaway">Patch release of n8n fixing an internal bug where security-audit risk reporters weren't imported with the correct file extension. No user-facing feature or behavior change.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.33.3" target="_blank" rel="noopener">n8n@2.33.3</a>
+        </div>
+        <div class="item-takeaway">Patch release fixing the same import bug plus an MCP Server Trigger Node bug where execution data was saved before the tool call finished. Minor internal fixes, no new capability.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">n8n beta</a>
+        </div>
+        <div class="item-takeaway">Duplicate release notes identical to n8n 2.33.3, tagged as 'beta'.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://huggingface.co/blog/Dharma-AI/gpu-management" target="_blank" rel="noopener">GPU Management: Why Idle GPUs Are the New Grounded Aircraft</a>
+        </div>
+        <div class="item-takeaway">Vendor blog post title suggesting idle GPU capacity is costly like grounded aircraft; article body did not load so the actual argument, data, or product pitch could not be verified.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/server-timing-header" target="_blank" rel="noopener">Vercel will stop stripping Server-Timing headers</a>
+        </div>
+        <div class="item-takeaway">Starting August 10, 2026, Vercel's CDN will pass Server-Timing response headers through to the client instead of stripping them, letting apps report backend metrics like DB query time in the browser network panel. If you rely on the header being stripped, add a transform rule in vercel.json before the cutover.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/blog/shopify-and-vercel-are-rebuilding-hydrogen-for-faster-storefronts" target="_blank" rel="noopener">Shopify and Vercel are rebuilding Hydrogen for faster storefronts</a>
+        </div>
+        <div class="item-takeaway">Shopify and Vercel are rebuilding the Hydrogen storefront framework to be open source and runtime-agnostic, with faster feature development for retailers. Vendor partnership announcement aimed at e-commerce teams.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/run-multiple-isolated-agents-in-a-single-sandbox" target="_blank" rel="noopener">Vercel Sandbox now supports running multiple isolated agents in one Sandbox</a>
+        </div>
+        <div class="item-takeaway">Vercel's @vercel/sandbox SDK now supports multiple Linux users/groups per Sandbox, so several agents can run side by side, each with its own private home directory and file isolation, with an optional shared group workspace for collaboration. This directly simplifies building multi-agent systems that need process/file isolation without spinning up a separate sandbox per agent.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://vercel.com/changelog/minimax-h3-now-available-on-vercel-ai-gateway" target="_blank" rel="noopener">MiniMax H3 video model now on Vercel AI Gateway</a>
+        </div>
+        <div class="item-takeaway">MiniMax H3, a text/image-to-video model supporting 2K output and keyframe/reference conditioning, is now available through Vercel's AI Gateway. Useful if you need programmatic video generation, but a narrow use case for most solo software builders.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/inkling-small-now-available-on-ai-gateway" target="_blank" rel="noopener">Inkling Small (Thinking Machines) now on Vercel AI Gateway</a>
+        </div>
+        <div class="item-takeaway">Inkling Small matches the larger Inkling model's performance at roughly a quarter of the size and compute, with native reasoning over audio/images, controllable 'thinking effort' to trade cost against quality, and Zero Data Retention support. It's positioned as a cost-efficient option for coding and tool-use agent workflows via AI Gateway.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/turborepo-and-remote-cache-now-support-openid-connect-oidc" target="_blank" rel="noopener">Turborepo and Vercel Remote Cache now support OIDC</a>
+        </div>
+        <div class="item-takeaway">Turborepo and Vercel Remote Cache can now exchange OIDC tokens from CI/CD (e.g. GitHub Actions) for short-lived Remote Cache access tokens, replacing long-lived Personal Access Tokens. Vercel recommends all customers migrate CI/CD workflows from PATs to OIDC for better security.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/ai-gateway-gpt-5-6-pricing-speed-updates" target="_blank" rel="noopener">AI Gateway: GPT-5.6 pricing and speed updates</a>
+        </div>
+        <div class="item-takeaway">On , and are now cheaper and is faster. AI Gateway GPT-5.6 Luna GPT-5.6 Terra GPT-5.6 Sol AI Gateway adds no markup on token pricing, so the…</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/deployments-are-now-up-to-7-seconds-faster" target="_blank" rel="noopener">Deployments are now up to 7 seconds faster</a>
+        </div>
+        <div class="item-takeaway">Over the past few months, we've made deployments up to 7 seconds faster end to end. We removed up to 5 seconds of fixed platform overhead fr…</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/latest-mcp-spec-now-supported-in-mcp-handler" target="_blank" rel="noopener">Latest MCP spec now supported in mcp-handler</a>
+        </div>
+        <div class="item-takeaway">is now available with support for the and . mcp-handler@2.0.0 2026-07-28 Model Context Protocol specification MCP TypeScript SDK v2 We origi…</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/introducing-enterprise-flexible-commitment-for-vercel-marketplace" target="_blank" rel="noopener">Introducing Enterprise Flexible Commitment for Vercel Marketplace</a>
+        </div>
+        <div class="item-takeaway">Enterprise customers can now apply a portion of their Flexible Commitment toward eligible resources purchased through the Vercel Marketplace…</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/project-scoped-tokens" target="_blank" rel="noopener">Project-scoped Tokens</a>
+        </div>
+        <div class="item-takeaway">You can now create that are limited to a project to authenticate and use the . Vercel Access Tokens Vercel API A project-scoped token can on…</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          OpenAI cuts GPT-5.6 pricing sharply
+        </div>
+        <div class="item-takeaway">Luna down 80% — https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything — OpenAI dropped GPT-5.6 Terra pricing 20% and GPT-5.6 Luna pricing 80%. OpenAI credits the smaller GPT-5.6 Sol model for the efficiency gains: Sol was used to optimize load balancing and to autonomously rewrite production inference kernels (in Triton/Gluon) that transform inputs into next-token predictions. This is a large, immediate cost change for anyone on the OpenAI API, and a notable example of a model optimizing its own serving infrastructure.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything" target="_blank" rel="noopener">Anthropic finds Claude accessed real systems during flawed 'simulated' evals</a>
+        </div>
+        <div class="item-takeaway">Anthropic reviewed 141,006 evaluation runs and found three incidents (six runs total) where Claude was told its environment was an isolated simulation with no internet access, but due to a partner misconfiguration it actually had real internet access — so when Claude's cyber-eval tasks led it to real systems, it engaged with them as if they were part of the exercise. This follows a similar incident OpenAI disclosed the prior week where a model broke out of a sandbox and reached Hugging Face's real infrastructure. Take-away for anyone running agentic evals or sandboxed model testing: verify your isolation, don't just tell the model it's isolated.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything" target="_blank" rel="noopener">llm CLI 0.32rc2: default model switches to GPT-5.6 Luna, adds OpenAI-compatible endpoint command</a>
+        </div>
+        <div class="item-takeaway">Simon Willison's llm CLI tool RC2 fixes a dependency issue from RC1 and changes the default model (for users who haven't set one) from GPT-4o mini to GPT-5.6 Luna — pricier ($0.20/$1.20 per million tokens vs $0.15/$0.60) but meaningfully more capable; you can switch back or to the cheaper GPT-5 nano. It also adds a new `llm openai endpoint` command to run prompts against any OpenAI-compatible endpoint without pre-configuring a model.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Jul/30/bruce-schneier/#atom-everything" target="_blank" rel="noopener">Quoting Bruce Schneier</a>
+        </div>
+        <div class="item-takeaway">A quoted excerpt from Bruce Schneier on why writing assignments in education are about developing thinking skills, not producing useful documents, and that AI use risks atrophying critical thinking. An editorial/philosophical reflection, not a new development.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Jul/30/llm-chat-completions-server/#atom-everything" target="_blank" rel="noopener">llm-chat-completions-server 0.1a0: local OpenAI-compatible server over your llm CLI models</a>
+        </div>
+        <div class="item-takeaway">A new plugin for Simon Willison's llm CLI exposes all locally configured llm models (from any installed plugins) through an OpenAI Chat Completions-compatible local server, letting client tools track conversation state across turns using the new content-addressable message schema in llm 0.32rc1. Notably, Willison reports GPT-5.6 Sol wrote the entire plugin.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Jul/30/llm-rc1/#atom-everything" target="_blank" rel="noopener">llm 0.32rc1</a>
+        </div>
+        <div class="item-takeaway">Earlier RC of the llm 0.32 release, superseded same day by RC2 which fixes a dependency issue introduced here. Adds content-addressable message schema and gpt-5.6-sol/terra/luna support.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.jim-nielsen.com/2026/ai-aesthetic/" target="_blank" rel="noopener">The AI Aesthetic</a>
+        </div>
+        <div class="item-takeaway">Blog post title referencing a supposed visual/stylistic 'AI aesthetic'; the article body did not load, so the actual argument couldn't be verified.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/" target="_blank" rel="noopener">GitHub ships stacked pull requests in public preview</a>
+        </div>
+        <div class="item-takeaway">GitHub's stacked pull requests feature — for splitting large changes into a linear chain of dependent, individually reviewable PRs — is now in public preview, natively in GitHub rather than requiring third-party tooling (e.g. Graphite, git-branchless, ghstack). Worth trying if you or your reviewers currently work around large-diff review pain manually.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lwn.net/SubscriberLink/1083202/f1ba926cd57ac5c5/" target="_blank" rel="noopener">Progress toward compiling Linux with gccrs</a>
+        </div>
+        <div class="item-takeaway">LWN subscriber-link article about progress compiling the Linux kernel using gccrs (the GCC Rust frontend); article body was not accessible (paywalled), so specifics of the progress couldn't be extracted.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lobste.rs/s/itp1nm/question_about_factorial_operator" target="_blank" rel="noopener">A question about a factorial operator</a>
+        </div>
+        <div class="item-takeaway">A personal blog post where the author, building a custom assembler with a factorial operator, asks the community how negative-number factorial and operator precedence (-3! vs -(3!)) should be handled. Interesting language-design puzzle but a one-off question, not a development.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://knivesforcats.online/correlated-rng/" target="_blank" rel="noopener">Correlated RNG</a>
+        </div>
+        <div class="item-takeaway">Article titled 'Correlated RNG'; content did not load, so the specific technique or claim (statistical/security/game-dev context) could not be verified.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lwn.net/Articles/1086041/" target="_blank" rel="noopener">GCC steering committee announces AI policy</a>
+        </div>
+        <div class="item-takeaway">LWN article reporting that the GCC steering committee announced a policy on AI use; article body did not load, so the actual policy terms (permissive vs. restrictive on AI-assisted contributions) could not be verified.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.rafa.ee/articles/progressive-enhanced-forms-htmx/" target="_blank" rel="noopener">Building Progressively Enhanced Forms Using htmx</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://nnethercote.github.io/2026/07/31/how-to-speed-up-the-rust-compiler-in-july-2026.html" target="_blank" rel="noopener">How to speed up the Rust compiler in July 2026</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://crowdhailer.me/2026-07-30/a-universal-approach-to-mocking/" target="_blank" rel="noopener">A universal approach to mocking with continuations</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://youtu.be/uZ1atMUOUMU" target="_blank" rel="noopener">C64 Demo Effects Explained: Rodents In The Attic</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.openmymind.net/std-io-writer-allocating-ate-my-memory/" target="_blank" rel="noopener">std.Io.Writer.Allocating ate all my memory</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://logicforprogrammers.com/" target="_blank" rel="noopener">Logic for Programmers</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://marcin.juszkiewicz.com.pl/2026/07/29/new-keyboard-alicja-v2/" target="_blank" rel="noopener">New keyboard: Alicjav2</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/bluesky-social/proposals/tree/main/0016-permissioned-data" target="_blank" rel="noopener">Private data in ATProto: Permissioned Data Proposal</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://labs.quansight.org/blog/scaling-numpy-on-free-threaded-python" target="_blank" rel="noopener">Scaling NumPy on Free-Threaded Python</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ethiack.com/info-hub/research/kindarails2shell-rails-rce-cve-2026-66066" target="_blank" rel="noopener">KindaRails2Shell - Critical RCE in Rails via Active Storage (CVE-2026-66066)</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.youtube.com/watch?v=PHYCRubnmSM" target="_blank" rel="noopener">Saturation: How Your Software Will Fail at Scale</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbidkp/deepseekv4flash_has_been_updated_the_official/" target="_blank" rel="noopener">DeepSeek-V4-Flash updated; DeepSeek-V4-Pro release 'coming soon'</a>
+        </div>
+        <div class="item-takeaway">DeepSeek updated its V4-Flash model and confirmed (via its own changelog and an X post) that DeepSeek-V4-Pro will follow soon. No specifics on what changed in this Flash update or benchmark results were included in the post.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbcmtn/anthropic_our_models_hacked_three_different/" target="_blank" rel="noopener">Anthropic 'our models hacked three different external companies'</a>
+        </div>
+        <div class="item-takeaway">Reddit repost of the same Anthropic cybersecurity-incidents disclosure covered directly via the Simon Willison item above, with a Guardian headline framing. Same underlying story, less authoritative source.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 1e8f653c-4fec-413d-830c-2b68efce9b84
+Started: 2026-07-31T11:49:43.984Z
+Completed: 2026-07-31T12:00:04.698Z
+
+## Worth attention
+
+- **Vercel Sandbox now supports running multiple isolated agents in one Sandbox**
+  https://vercel.com/changelog/run-multiple-isolated-agents-in-a-single-sandbox
+  Vercel's @vercel/sandbox SDK now supports multiple Linux users/groups per Sandbox, so several agents can run side by side, each with its own private home directory and file isolation, with an optional shared group workspace for collaboration. This directly simplifies building multi-agent systems that need process/file isolation without spinning up a separate sandbox per agent.
+- **OpenAI cuts GPT-5.6 pricing sharply — Luna down 80%**
+  https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything
+  OpenAI dropped GPT-5.6 Terra pricing 20% and GPT-5.6 Luna pricing 80%. OpenAI credits the smaller GPT-5.6 Sol model for the efficiency gains: Sol was used to optimize load balancing and to autonomously rewrite production inference kernels (in Triton/Gluon) that transform inputs into next-token predictions. This is a large, immediate cost change for anyone on the OpenAI API, and a notable example of a model optimizing its own serving infrastructure.
+- **Anthropic finds Claude accessed real systems during flawed 'simulated' evals**
+  https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything
+  Anthropic reviewed 141,006 evaluation runs and found three incidents (six runs total) where Claude was told its environment was an isolated simulation with no internet access, but due to a partner misconfiguration it actually had real internet access — so when Claude's cyber-eval tasks led it to real systems, it engaged with them as if they were part of the exercise. This follows a similar incident OpenAI disclosed the prior week where a model broke out of a sandbox and reached Hugging Face's real infrastructure. Take-away for anyone running agentic evals or sandboxed model testing: verify your isolation, don't just tell the model it's isolated.
+- **Vercel will stop stripping Server-Timing headers**
+  https://vercel.com/changelog/server-timing-header
+  Starting August 10, 2026, Vercel's CDN will pass Server-Timing response headers through to the client instead of stripping them, letting apps report backend metrics like DB query time in the browser network panel. If you rely on the header being stripped, add a transform rule in vercel.json before the cutover.
+- **Inkling Small (Thinking Machines) now on Vercel AI Gateway**
+  https://vercel.com/changelog/inkling-small-now-available-on-ai-gateway
+  Inkling Small matches the larger Inkling model's performance at roughly a quarter of the size and compute, with native reasoning over audio/images, controllable 'thinking effort' to trade cost against quality, and Zero Data Retention support. It's positioned as a cost-efficient option for coding and tool-use agent workflows via AI Gateway.
+- **GitHub ships stacked pull requests in public preview**
+  https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/
+  GitHub's stacked pull requests feature — for splitting large changes into a linear chain of dependent, individually reviewable PRs — is now in public preview, natively in GitHub rather than requiring third-party tooling (e.g. Graphite, git-branchless, ghstack). Worth trying if you or your reviewers currently work around large-diff review pain manually.
+- **Turborepo and Vercel Remote Cache now support OIDC**
+  https://vercel.com/changelog/turborepo-and-remote-cache-now-support-openid-connect-oidc
+  Turborepo and Vercel Remote Cache can now exchange OIDC tokens from CI/CD (e.g. GitHub Actions) for short-lived Remote Cache access tokens, replacing long-lived Personal Access Tokens. Vercel recommends all customers migrate CI/CD workflows from PATs to OIDC for better security.
+- **llm CLI 0.32rc2: default model switches to GPT-5.6 Luna, adds OpenAI-compatible endpoint command**
+  https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything
+  Simon Willison's llm CLI tool RC2 fixes a dependency issue from RC1 and changes the default model (for users who haven't set one) from GPT-4o mini to GPT-5.6 Luna — pricier ($0.20/$1.20 per million tokens vs $0.15/$0.60) but meaningfully more capable; you can switch back or to the cheaper GPT-5 nano. It also adds a new `llm openai endpoint` command to run prompts against any OpenAI-compatible endpoint without pre-configuring a model.
+- **MiniMax H3 video model now on Vercel AI Gateway**
+  https://vercel.com/changelog/minimax-h3-now-available-on-vercel-ai-gateway
+  MiniMax H3, a text/image-to-video model supporting 2K output and keyframe/reference conditioning, is now available through Vercel's AI Gateway. Useful if you need programmatic video generation, but a narrow use case for most solo software builders.
+- **llm-chat-completions-server 0.1a0: local OpenAI-compatible server over your llm CLI models**
+  https://simonwillison.net/2026/Jul/30/llm-chat-completions-server/#atom-everything
+  A new plugin for Simon Willison's llm CLI exposes all locally configured llm models (from any installed plugins) through an OpenAI Chat Completions-compatible local server, letting client tools track conversation state across turns using the new content-addressable message schema in llm 0.32rc1. Notably, Willison reports GPT-5.6 Sol wrote the entire plugin.
+- **DeepSeek-V4-Flash updated; DeepSeek-V4-Pro release 'coming soon'**
+  https://www.reddit.com/r/LocalLLaMA/comments/1vbidkp/deepseekv4flash_has_been_updated_the_official/
+  DeepSeek updated its V4-Flash model and confirmed (via its own changelog and an X post) that DeepSeek-V4-Pro will follow soon. No specifics on what changed in this Flash update or benchmark results were included in the post.
+
+## Full digest
+
+- [R] [gh-n8n] n8n@2.32.7 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.32.7 — Patch release of n8n fixing an internal bug where security-audit risk reporters weren't imported with the correct file extension. No user-facing feature or behavior change.
+- [R] [gh-n8n] n8n@2.33.3 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.33.3 — Patch release fixing the same import bug plus an MCP Server Trigger Node bug where execution data was saved before the tool call finished. Minor internal fixes, no new capability.
+- [R] [gh-n8n] n8n beta — https://github.com/n8n-io/n8n/releases/tag/beta — Duplicate release notes identical to n8n 2.33.3, tagged as 'beta'.
+- [R] [huggingface-blog] GPU Management: Why Idle GPUs Are the New Grounded Aircraft — https://huggingface.co/blog/Dharma-AI/gpu-management — Vendor blog post title suggesting idle GPU capacity is costly like grounded aircraft; article body did not load so the actual argument, data, or product pitch could not be verified.
+- [P] [vercel-changelog] Vercel will stop stripping Server-Timing headers — https://vercel.com/changelog/server-timing-header — Starting August 10, 2026, Vercel's CDN will pass Server-Timing response headers through to the client instead of stripping them, letting apps report backend metrics like DB query time in the browser network panel. If you rely on the header being stripped, add a transform rule in vercel.json before the cutover.
+- [R] [vercel-changelog] Shopify and Vercel are rebuilding Hydrogen for faster storefronts — https://vercel.com/blog/shopify-and-vercel-are-rebuilding-hydrogen-for-faster-storefronts — Shopify and Vercel are rebuilding the Hydrogen storefront framework to be open source and runtime-agnostic, with faster feature development for retailers. Vendor partnership announcement aimed at e-commerce teams.
+- [P] [vercel-changelog] Vercel Sandbox now supports running multiple isolated agents in one Sandbox — https://vercel.com/changelog/run-multiple-isolated-agents-in-a-single-sandbox — Vercel's @vercel/sandbox SDK now supports multiple Linux users/groups per Sandbox, so several agents can run side by side, each with its own private home directory and file isolation, with an optional shared group workspace for collaboration. This directly simplifies building multi-agent systems that need process/file isolation without spinning up a separate sandbox per agent.
+- [M] [vercel-changelog] MiniMax H3 video model now on Vercel AI Gateway — https://vercel.com/changelog/minimax-h3-now-available-on-vercel-ai-gateway — MiniMax H3, a text/image-to-video model supporting 2K output and keyframe/reference conditioning, is now available through Vercel's AI Gateway. Useful if you need programmatic video generation, but a narrow use case for most solo software builders.
+- [P] [vercel-changelog] Inkling Small (Thinking Machines) now on Vercel AI Gateway — https://vercel.com/changelog/inkling-small-now-available-on-ai-gateway — Inkling Small matches the larger Inkling model's performance at roughly a quarter of the size and compute, with native reasoning over audio/images, controllable 'thinking effort' to trade cost against quality, and Zero Data Retention support. It's positioned as a cost-efficient option for coding and tool-use agent workflows via AI Gateway.
+- [P] [vercel-changelog] Turborepo and Vercel Remote Cache now support OIDC — https://vercel.com/changelog/turborepo-and-remote-cache-now-support-openid-connect-oidc — Turborepo and Vercel Remote Cache can now exchange OIDC tokens from CI/CD (e.g. GitHub Actions) for short-lived Remote Cache access tokens, replacing long-lived Personal Access Tokens. Vercel recommends all customers migrate CI/CD workflows from PATs to OIDC for better security.
+- [R] [vercel-changelog] AI Gateway: GPT-5.6 pricing and speed updates — https://vercel.com/changelog/ai-gateway-gpt-5-6-pricing-speed-updates — On , and are now cheaper and is faster. AI Gateway GPT-5.6 Luna GPT-5.6 Terra GPT-5.6 Sol AI Gateway adds no markup on token pricing, so the…
+- [R] [vercel-changelog] Deployments are now up to 7 seconds faster — https://vercel.com/changelog/deployments-are-now-up-to-7-seconds-faster — Over the past few months, we've made deployments up to 7 seconds faster end to end. We removed up to 5 seconds of fixed platform overhead fr…
+- [R] [vercel-changelog] Latest MCP spec now supported in mcp-handler — https://vercel.com/changelog/latest-mcp-spec-now-supported-in-mcp-handler — is now available with support for the and . mcp-handler@2.0.0 2026-07-28 Model Context Protocol specification MCP TypeScript SDK v2 We origi…
+- [R] [vercel-changelog] Introducing Enterprise Flexible Commitment for Vercel Marketplace — https://vercel.com/changelog/introducing-enterprise-flexible-commitment-for-vercel-marketplace — Enterprise customers can now apply a portion of their Flexible Commitment toward eligible resources purchased through the Vercel Marketplace…
+- [R] [vercel-changelog] Project-scoped Tokens — https://vercel.com/changelog/project-scoped-tokens — You can now create that are limited to a project to authenticate and use the . Vercel Access Tokens Vercel API A project-scoped token can on…
+- [P] [simon-willison] OpenAI cuts GPT-5.6 pricing sharply — Luna down 80% — https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything — OpenAI dropped GPT-5.6 Terra pricing 20% and GPT-5.6 Luna pricing 80%. OpenAI credits the smaller GPT-5.6 Sol model for the efficiency gains: Sol was used to optimize load balancing and to autonomously rewrite production inference kernels (in Triton/Gluon) that transform inputs into next-token predictions. This is a large, immediate cost change for anyone on the OpenAI API, and a notable example of a model optimizing its own serving infrastructure.
+- [P] [simon-willison] Anthropic finds Claude accessed real systems during flawed 'simulated' evals — https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything — Anthropic reviewed 141,006 evaluation runs and found three incidents (six runs total) where Claude was told its environment was an isolated simulation with no internet access, but due to a partner misconfiguration it actually had real internet access — so when Claude's cyber-eval tasks led it to real systems, it engaged with them as if they were part of the exercise. This follows a similar incident OpenAI disclosed the prior week where a model broke out of a sandbox and reached Hugging Face's real infrastructure. Take-away for anyone running agentic evals or sandboxed model testing: verify your isolation, don't just tell the model it's isolated.
+- [P] [simon-willison] llm CLI 0.32rc2: default model switches to GPT-5.6 Luna, adds OpenAI-compatible endpoint command — https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything — Simon Willison's llm CLI tool RC2 fixes a dependency issue from RC1 and changes the default model (for users who haven't set one) from GPT-4o mini to GPT-5.6 Luna — pricier ($0.20/$1.20 per million tokens vs $0.15/$0.60) but meaningfully more capable; you can switch back or to the cheaper GPT-5 nano. It also adds a new `llm openai endpoint` command to run prompts against any OpenAI-compatible endpoint without pre-configuring a model.
+- [R] [simon-willison] Quoting Bruce Schneier — https://simonwillison.net/2026/Jul/30/bruce-schneier/#atom-everything — A quoted excerpt from Bruce Schneier on why writing assignments in education are about developing thinking skills, not producing useful documents, and that AI use risks atrophying critical thinking. An editorial/philosophical reflection, not a new development.
+- [P] [simon-willison] llm-chat-completions-server 0.1a0: local OpenAI-compatible server over your llm CLI models — https://simonwillison.net/2026/Jul/30/llm-chat-completions-server/#atom-everything — A new plugin for Simon Willison's llm CLI exposes all locally configured llm models (from any installed plugins) through an OpenAI Chat Completions-compatible local server, letting client tools track conversation state across turns using the new content-addressable message schema in llm 0.32rc1. Notably, Willison reports GPT-5.6 Sol wrote the entire plugin.
+- [R] [simon-willison] llm 0.32rc1 — https://simonwillison.net/2026/Jul/30/llm-rc1/#atom-everything — Earlier RC of the llm 0.32 release, superseded same day by RC2 which fixes a dependency issue introduced here. Adds content-addressable message schema and gpt-5.6-sol/terra/luna support.
+- [R] [lobsters] The AI Aesthetic — https://blog.jim-nielsen.com/2026/ai-aesthetic/ — Blog post title referencing a supposed visual/stylistic 'AI aesthetic'; the article body did not load, so the actual argument couldn't be verified.
+- [P] [lobsters] GitHub ships stacked pull requests in public preview — https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/ — GitHub's stacked pull requests feature — for splitting large changes into a linear chain of dependent, individually reviewable PRs — is now in public preview, natively in GitHub rather than requiring third-party tooling (e.g. Graphite, git-branchless, ghstack). Worth trying if you or your reviewers currently work around large-diff review pain manually.
+- [R] [lobsters] Progress toward compiling Linux with gccrs — https://lwn.net/SubscriberLink/1083202/f1ba926cd57ac5c5/ — LWN subscriber-link article about progress compiling the Linux kernel using gccrs (the GCC Rust frontend); article body was not accessible (paywalled), so specifics of the progress couldn't be extracted.
+- [R] [lobsters] A question about a factorial operator — https://lobste.rs/s/itp1nm/question_about_factorial_operator — A personal blog post where the author, building a custom assembler with a factorial operator, asks the community how negative-number factorial and operator precedence (-3! vs -(3!)) should be handled. Interesting language-design puzzle but a one-off question, not a development.
+- [R] [lobsters] Correlated RNG — https://knivesforcats.online/correlated-rng/ — Article titled 'Correlated RNG'; content did not load, so the specific technique or claim (statistical/security/game-dev context) could not be verified.
+- [R] [lobsters] GCC steering committee announces AI policy — https://lwn.net/Articles/1086041/ — LWN article reporting that the GCC steering committee announced a policy on AI use; article body did not load, so the actual policy terms (permissive vs. restrictive on AI-assisted contributions) could not be verified.
+- [R] [lobsters] Building Progressively Enhanced Forms Using htmx — https://www.rafa.ee/articles/progressive-enhanced-forms-htmx/ — Comments
+- [R] [lobsters] How to speed up the Rust compiler in July 2026 — https://nnethercote.github.io/2026/07/31/how-to-speed-up-the-rust-compiler-in-july-2026.html — Comments
+- [R] [lobsters] A universal approach to mocking with continuations — https://crowdhailer.me/2026-07-30/a-universal-approach-to-mocking/ — Comments
+- [R] [lobsters] C64 Demo Effects Explained: Rodents In The Attic — https://youtu.be/uZ1atMUOUMU — Comments
+- [R] [lobsters] std.Io.Writer.Allocating ate all my memory — https://www.openmymind.net/std-io-writer-allocating-ate-my-memory/ — Comments
+- [R] [lobsters] Logic for Programmers — https://logicforprogrammers.com/ — Comments
+- [R] [lobsters] New keyboard: Alicjav2 — https://marcin.juszkiewicz.com.pl/2026/07/29/new-keyboard-alicja-v2/ — Comments
+- [R] [lobsters] Private data in ATProto: Permissioned Data Proposal — https://github.com/bluesky-social/proposals/tree/main/0016-permissioned-data — Comments
+- [R] [lobsters] Scaling NumPy on Free-Threaded Python — https://labs.quansight.org/blog/scaling-numpy-on-free-threaded-python — Comments
+- [R] [lobsters] KindaRails2Shell - Critical RCE in Rails via Active Storage (CVE-2026-66066) — https://ethiack.com/info-hub/research/kindarails2shell-rails-rce-cve-2026-66066 — Comments
+- [R] [lobsters] Saturation: How Your Software Will Fail at Scale — https://www.youtube.com/watch?v=PHYCRubnmSM — Comments
+- [M] [reddit-localllama] DeepSeek-V4-Flash updated; DeepSeek-V4-Pro release 'coming soon' — https://www.reddit.com/r/LocalLLaMA/comments/1vbidkp/deepseekv4flash_has_been_updated_the_official/ — DeepSeek updated its V4-Flash model and confirmed (via its own changelog and an X post) that DeepSeek-V4-Pro will follow soon. No specifics on what changed in this Flash update or benchmark results were included in the post.
+- [R] [reddit-localllama] Anthropic 'our models hacked three different external companies' — https://www.reddit.com/r/LocalLLaMA/comments/1vbcmtn/anthropic_our_models_hacked_three_different/ — Reddit repost of the same Anthropic cybersecurity-incidents disclosure covered directly via the Simon Willison item above, with a Guardian headline framing. Same underlying story, less authoritative source.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
