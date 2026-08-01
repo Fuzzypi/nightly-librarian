@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>August 1, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="4 stories cleared the bar, led by DeepSeek-V4-Flash-0731: Responses API + Codex support, pricing unchanged, GitHub stacked pull requests hit public">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-08-01/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="August 1, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="4 stories cleared the bar, led by DeepSeek-V4-Flash-0731: Responses API + Codex support, pricing unchanged, GitHub stacked pull requests hit public">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-08-01/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="August 1, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="4 stories cleared the bar, led by DeepSeek-V4-Flash-0731: Responses API + Codex support, pricing unchanged, GitHub stacked pull requests hit public">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>August 1, 2026 · Report log</span>
+      <span>Aug 1, 2026, 2:14 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>August 1, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>4 stories cleared the bar, led by DeepSeek-V4-Flash-0731: Responses API + Codex support, pricing unchanged, GitHub stacked pull requests hit public preview, no waitlist, and The session you cannot take with you.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>4 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://api-docs.deepseek.com/updates/" target="_blank" rel="noopener">DeepSeek-V4-Flash-0731: Responses API + Codex support, pricing unchanged</a></div>
+        <div class="item-takeaway">DeepSeek shipped V4-Flash-0731, a sparse MoE model (13B active / 284B total) with native Responses API support and Codex compatibility, plus real agentic/coding gains. Pricing is unchanged at $0.14/$0.28 per 1M input/output tokens ($0.0028/1M cached). Independent benchmarks put it near GLM-5.2/GPT-5.6 territory for a fraction of frontier pricing. Worth a cost/quality check against whatever you're currently using for coding-agent backends.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/" target="_blank" rel="noopener">GitHub stacked pull requests hit public preview, no waitlist</a></div>
+        <div class="item-takeaway">GitHub's stacked pull requests are now in public preview for every repo — no waitlist, no enterprise plan required. Each PR in a stack targets the layer below it, gets reviewed and checked independently, and the whole stack merges in one click; existing branch protections still apply. It's explicitly wired for GitHub Copilot and other coding agents via a dedicated gh-stack skill, so agent-driven multi-step refactors get a native mechanism instead of manual branch juggling.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://earendil.com/posts/session-portability/" target="_blank" rel="noopener">The session you cannot take with you</a></div>
+        <div class="item-takeaway">Essay arguing that AI coding-session transcripts on your machine are only a partial view — the real operational state (context, tool state, provider-side history) belongs to the inference provider, not you. &quot;Portable sessions&quot; across models or providers is mostly illusory since models differ in capabilities, context windows, and tool-use behavior anyway. Useful framing if you're designing cross-provider session or memory continuity for agent tooling.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://geospatialml.com/posts/reviewing-ai-slop/" target="_blank" rel="noopener">Reviewer: 68% of ML conference submissions had fabricated citations or authors this summer</a></div>
+        <div class="item-takeaway">A conference reviewer flagged two ML papers with fabricated author names close enough to survive a skim; both were accepted as orals anyway, conditioned only on fixing the fake citations. Across 22 papers reviewed this summer (NeurIPS, WACV, an ECCV geospatial workshop), 68% had fabricated citations, invented authors, or were clearly LLM-generated. Signal that peer review isn't catching AI slop right now — worth discounting confidence in recent ML papers you haven't verified yourself.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbidxt/the_official_release_deepseek_v4_flash_is_live_on/" target="_blank" rel="noopener">The official release Deepseek V4 flash is live on the API</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/mineyevfan [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbdsmz/minimaxh3_video_model_released_open_weights/" target="_blank" rel="noopener">Minimax-H3 video model released, open weights coming in the next few days</a>
+        </div>
+        <div class="item-takeaway">https://x.com/MiniMax_AI/status/2083006198828417501?s=20 Quote from their article: Today, we're launching MiniMax H3, a general-purpose multimodal generation model. H3 understands unified context across text, images, video, and audio, gener…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbjdby/deepseekv4flash0731_is_going_to_cause_another/" target="_blank" rel="noopener">DeepSeek-V4-Flash-0731 is going to cause another market crash.</a>
+        </div>
+        <div class="item-takeaway">Beats GLM 5.2, and is the same cost as the previous one. &amp;#32; submitted by &amp;#32; /u/Potential_Top_4669 [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbft9q/my_second_inspur_agx2_with_another_x8_v100_arrived/" target="_blank" rel="noopener">My second Inspur AGX-2 with another x8 v100 arrived!</a>
+        </div>
+        <div class="item-takeaway">So now full 512gb of vram, I think I will need to get a third one soon seeing that llms keep getting absurdly huge! &amp;#32; submitted by &amp;#32; /u/UltraFOV [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vb8d2v/what_actually_happened_to_the_whole_openclaw/" target="_blank" rel="noopener">What actually happened to the whole Openclaw frenzy?</a>
+        </div>
+        <div class="item-takeaway">A while back you couldn't open reddit or youtube without sifting through tons of Openclaw content. And it wasn't just the internet that blew up, I remember seeing images from China where crowds would gather in the streets to get their insta…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbk5ob/new_deepseek_v4flash_achieves_50_on/" target="_blank" rel="noopener">New DeepSeek V4-Flash achieves 50 on ArtificalAnalysis Index, 1 point below GLM-5.2 and GPT-5.6 Luna</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/MagicZhang [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vb16gj/inklingsmall_by_thinkingmachines/" target="_blank" rel="noopener">Inkling-Small by thinkingmachines</a>
+        </div>
+        <div class="item-takeaway">276B total parameters, 12B active, 1M context window. Blog post: https://thinkingmachines.ai/news/inkling-small/ NVFP4: https://huggingface.co/thinkingmachines/Inkling-Small-NVFP4 GGUF's by Unsloth: https://huggingface.co/unsloth/Inkling-Sm…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbajj8/inklingsmall276b12b_effort_max_vs_qwen3627b/" target="_blank" rel="noopener">Inkling-Small-276B-12B, effort &quot;max&quot; VS Qwen3.6-27B</a>
+        </div>
+        <div class="item-takeaway">I saw u/danielhanchen 's 1-bit Kimi K3 post: https://huggingface.co/unsloth/Kimi-K3-GGUF/discussions/12#6a6a4a90ec74ef13d85d7cf6 and decided to test Inkling-Small and Qwen3.6-27B myself, based on the full shared prompt: https://huggingface.…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbimop/deepseek_v4_flash_has_a_nice_bump_in_capability/" target="_blank" rel="noopener">DeepSeek v4 Flash has a nice bump in Capability</a>
+        </div>
+        <div class="item-takeaway">DeepSeek V4 Flash: Preview → 2026-07-31 Benchmark Preview 0731 Δ Terminal Bench* 56.9 82.7 +25.8 Toolathlon 51.8 70.3 +18.5 NL2Repo — 54.2 new Cybergym — 76.7 new DeepSWE — 54.4 new Agent Last Exam — 25.2 new Automation Bench — 25.1 new DSB…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vapsbz/think_of_the_children_another_excuse_for_them_to/" target="_blank" rel="noopener">Think of the children, another excuse for them to go after open source AI</a>
+        </div>
+        <div class="item-takeaway">Source: https://web.archive.org/web/20260728093051/https://www.theverge.com/ai-artificial-intelligence/971723/hugging-face-nudify-deepfake-undress-women-children &amp;#32; submitted by &amp;#32; /u/MaruluVR [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbj6uf/huawei_opensouced_openpangu20pro_505ba18b/" target="_blank" rel="noopener">Huawei opensouced openPangu-2.0-Pro, 505B-A18B</a>
+        </div>
+        <div class="item-takeaway">openPangu-2.0-Pro is an MoE model trained on Ascend. The model has 505B total parameters and 18B activated parameters. Its context length is 512k. The total pretraining data contains 34T tokens. During Post-training, openPangu-2.0-Pro is tr…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbdpcz/is_it_just_me_or_are_current_llm_benchmarks/" target="_blank" rel="noopener">Is it just me, or are current LLM benchmarks failing to capture actual usability? (Gemma 4 vs. Gemini/Claude Opus)</a>
+        </div>
+        <div class="item-takeaway">Disclaimer, this was kinda written with AI (Gemma 4 again) but it also did really well here, it outputted what I wanted, and when I asked it to refine stuff or improve on certain areas it did that without compromising others or making thing…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vavh2h/software_engineers_do_you_honestly_get_anything/" target="_blank" rel="noopener">Software Engineers: Do you honestly get anything useful out of LLMs?</a>
+        </div>
+        <div class="item-takeaway">For 6 months now I've been trying to make agentic coding work for me, using Pi and a handful 30-120B models (Qwens, Nemotrons, Leguna...etc). I'm not greedy either, I stick to decent quants, never quantize kv cache, and keep my sessions up…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbf4bp/all_oneshots_from_kimik3_looks_better_than_opus48/" target="_blank" rel="noopener">All oneshots from Kimi-K3, looks better than opus4.8.</a>
+        </div>
+        <div class="item-takeaway">I've ran Kimi-k3 through 34 oneshot prompts and evaluated the generated htmls, screenshots and gifs using sonnet 4.6. It came out to be better than opus4.8 from the evals. Kimi K3: https://oneshotlm.com/model/moonshotai-kimi-k3/ Opus 4.8: h…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vazdxp/lg_ai_research_releases_kexaone_20_750b_a37b/" target="_blank" rel="noopener">LG AI Research releases K-EXAONE 2.0 750B A37B</a>
+        </div>
+        <div class="item-takeaway">It was developed under Phase 2 of Korea's Sovereign AI Foundation Model Project. ​Size: 750B parameters (3x larger than their 236B v1 model). ​- License: Apache 2.0 ​Languages: Expanded to 10 languages (Korean, English, French, Italian, Por…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbj3cn/i_predict_deepseek_v4_flash_0731s_artificial/" target="_blank" rel="noopener">I predict DeepSeek V4 Flash 0731's Artificial Analysis score to be 57 ± 1 point (Kimi K3 Level)</a>
+        </div>
+        <div class="item-takeaway">Deepseek's new model V4 Flash 0731 is much better, I (Claude lol) did a bit of linear regression with a leave one out style verification to predict its AA Score, and that puts it at Kimi K3 level, which is just absurd to me for its price! I…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbc3kw/want_to_see_all_oneshot_slops_in_one_place/" target="_blank" rel="noopener">Want to see all oneshot slops in one place?</a>
+        </div>
+        <div class="item-takeaway">I've been looking at oneshots posted here whenever a new model comes around and wondered if there is a single place to see all the &quot;oneslops&quot;. Behold https://oneshotlm.com/ , where I'm trying to gather all the models from openrouter and int…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          America Needs An Open-Source AI Strategy
+        </div>
+        <div class="item-takeaway">CNBC — https://www.reddit.com/r/LocalLLaMA/comments/1vb332c/america_needs_an_opensource_ai_strategy_cnbc/ — Pretty incredible to see open-weight become a mainstream discussion. &amp;#32; submitted by &amp;#32; /u/Recoil42 [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbf0nt/open_source_ternary_llm_engine_in_rustcuda_for/" target="_blank" rel="noopener">Open Source Ternary LLM Engine in Rust/CUDA for Quantization, Serving, and Training of models on consumer GPUs, called Tritium (Apache 2.0)</a>
+        </div>
+        <div class="item-takeaway">This post was not written by a clanker. Hey guys, I'm a comp sci major who wanted to introduce a cool project I built for quantizing models to ternary (1.58 bit) with as minimal of loss as possible, a process that can provide even more than…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vazgc0/the_real_flashantling_30_flash_vs_minimax_m27_vs/" target="_blank" rel="noopener">The real Flash？AntLing 3.0 flash VS. MiniMax M2.7 VS. Step 3.7 flash</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/niacolhealth [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbcec6/could_we_all_crowdsource_a_datasetmodelfinetune/" target="_blank" rel="noopener">Could we all crowdsource a dataset/model/finetune?</a>
+        </div>
+        <div class="item-takeaway">I know it’s been discussed to try to make our own model through crowdsourcing, but finetuning seems like it would be even easier. We could edit and proofread and write our own datasets at a large scale. If 1% of us - 8k people - curated 5 e…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vasnys/turbofieldfare_opensource_engine_running_gemma_4/" target="_blank" rel="noopener">Turbo-fieldfare: Open-source engine running Gemma 4 26B in 2 GB RAM on Apple Silicon</a>
+        </div>
+        <div class="item-takeaway">Its a custom Swift/Metal inference engine that runs Gemma 4 26B-A4B-IT on M-series Macs with very low RAM. It uses ~2GB instead of ~14 GB. The result is reportedly 5–6 tok/s on an 8 GB M2 MacBook Air and 31–35 tok/s on an M5 MacBook Pro. It…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vbchn4/kexaone_20_released/" target="_blank" rel="noopener">K-EXAONE 2.0 released</a>
+        </div>
+        <div class="item-takeaway">https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B-FP8 https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B-NVFP4 https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://earendil.com/posts/session-portability/" target="_blank" rel="noopener">The session you cannot take with you</a>
+        </div>
+        <div class="item-takeaway">Essay arguing that AI coding-session transcripts on your machine are only a partial view — the real operational state (context, tool state, provider-side history) belongs to the inference provider, not you. &quot;Portable sessions&quot; across models or providers is mostly illusory since models differ in capabilities, context windows, and tool-use behavior anyway. Useful framing if you're designing cross-provider session or memory continuity for agent tooling.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/openjdk/jdk/pull/31120" target="_blank" rel="noopener">JEP 401: Value Objects (Preview) merged to OpenJDK master</a>
+        </div>
+        <div class="item-takeaway">Real change but Java-specific language feature with no near-term relevance to this audience's stack.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://api-docs.deepseek.com/updates/" target="_blank" rel="noopener">DeepSeek-V4-Flash-0731: Responses API + Codex support, pricing unchanged</a>
+        </div>
+        <div class="item-takeaway">DeepSeek shipped V4-Flash-0731, a sparse MoE model (13B active / 284B total) with native Responses API support and Codex compatibility, plus real agentic/coding gains. Pricing is unchanged at $0.14/$0.28 per 1M input/output tokens ($0.0028/1M cached). Independent benchmarks put it near GLM-5.2/GPT-5.6 territory for a fraction of frontier pricing. Worth a cost/quality check against whatever you're currently using for coding-agent backends.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/" target="_blank" rel="noopener">GitHub stacked pull requests hit public preview, no waitlist</a>
+        </div>
+        <div class="item-takeaway">GitHub's stacked pull requests are now in public preview for every repo — no waitlist, no enterprise plan required. Each PR in a stack targets the layer below it, gets reviewed and checked independently, and the whole stack merges in one click; existing branch protections still apply. It's explicitly wired for GitHub Copilot and other coding agents via a dedicated gh-stack skill, so agent-driven multi-step refactors get a native mechanism instead of manual branch juggling.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://geospatialml.com/posts/reviewing-ai-slop/" target="_blank" rel="noopener">Reviewer: 68% of ML conference submissions had fabricated citations or authors this summer</a>
+        </div>
+        <div class="item-takeaway">A conference reviewer flagged two ML papers with fabricated author names close enough to survive a skim; both were accepted as orals anyway, conditioned only on fixing the fake citations. Across 22 papers reviewed this summer (NeurIPS, WACV, an ECCV geospatial workshop), 68% had fabricated citations, invented authors, or were clearly LLM-generated. Signal that peer review isn't catching AI slop right now — worth discounting confidence in recent ML papers you haven't verified yourself.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/" target="_blank" rel="noopener">Gemini Robotics 2 brings whole body intelligence to robots</a>
+        </div>
+        <div class="item-takeaway">Robotics/hardware announcement, out of scope for a solo software builder's near-term decisions.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://krebsonsecurity.com/2026/07/read-this-before-you-buy-that-tv-streaming-stick/" target="_blank" rel="noopener">Read this before you buy that TV streaming stick</a>
+        </div>
+        <div class="item-takeaway">Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://graybeard.ing/the-religion-of-speed/" target="_blank" rel="noopener">The Religion of Speed</a>
+        </div>
+        <div class="item-takeaway">Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.quantamagazine.org/physicists-solve-a-muon-mystery-now-old-results-dont-add-up-20260729/" target="_blank" rel="noopener">Physicists Solve a Muon Mystery. Now, Old Results Don't Add Up</a>
+        </div>
+        <div class="item-takeaway">Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.jim-nielsen.com/2026/ai-aesthetic/" target="_blank" rel="noopener">The AI Aesthetic</a>
+        </div>
+        <div class="item-takeaway">Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://martinfowler.com/articles/exploring-gen-ai/refactoring-economic-benefit.html" target="_blank" rel="noopener">The Economic Benefit of Refactoring</a>
+        </div>
+        <div class="item-takeaway">Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://chriscoyier.net/2026/07/30/codepen-2-0/" target="_blank" rel="noopener">CodePen 2.0</a>
+        </div>
+        <div class="item-takeaway">Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://rune.build/blog/rune-1-1-release" target="_blank" rel="noopener">Rune 1.1: adds Python, an Emacs editor, a symbol index and is now free</a>
+        </div>
+        <div class="item-takeaway">Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://jssfr.de/2026-07-27-bad-apple-but-traceroute.html" target="_blank" rel="noopener">Bad Apple but It's Traceroute</a>
+        </div>
+        <div class="item-takeaway">Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/MemoireMorte/Memo-1" target="_blank" rel="noopener">Memo-1: A 6502 computer built from scratch, using a Minitel as its terminal</a>
+        </div>
+        <div class="item-takeaway">Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lwn.net/Articles/1086041/" target="_blank" rel="noopener">GCC steering committee announces AI policy</a>
+        </div>
+        <div class="item-takeaway">Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.uefa.com/news-media/news/02a7-213a92896eb0-54dfbf454e3b-1000--statement-on-behalf-of-uefa-and-its-55-national-associations/" target="_blank" rel="noopener">UEFA and its national associations will not participate in FIFA competitions</a>
+        </div>
+        <div class="item-takeaway">Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: ce507c9f-750b-4959-9e59-1ff951864dda
+Started: 2026-08-01T06:09:47.646Z
+Completed: 2026-08-01T06:14:25.169Z
+
+## Worth attention
+
+- **DeepSeek-V4-Flash-0731: Responses API + Codex support, pricing unchanged**
+  https://api-docs.deepseek.com/updates/
+  DeepSeek shipped V4-Flash-0731, a sparse MoE model (13B active / 284B total) with native Responses API support and Codex compatibility, plus real agentic/coding gains. Pricing is unchanged at $0.14/$0.28 per 1M input/output tokens ($0.0028/1M cached). Independent benchmarks put it near GLM-5.2/GPT-5.6 territory for a fraction of frontier pricing. Worth a cost/quality check against whatever you're currently using for coding-agent backends.
+- **GitHub stacked pull requests hit public preview, no waitlist**
+  https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/
+  GitHub's stacked pull requests are now in public preview for every repo — no waitlist, no enterprise plan required. Each PR in a stack targets the layer below it, gets reviewed and checked independently, and the whole stack merges in one click; existing branch protections still apply. It's explicitly wired for GitHub Copilot and other coding agents via a dedicated gh-stack skill, so agent-driven multi-step refactors get a native mechanism instead of manual branch juggling.
+- **The session you cannot take with you**
+  https://earendil.com/posts/session-portability/
+  Essay arguing that AI coding-session transcripts on your machine are only a partial view — the real operational state (context, tool state, provider-side history) belongs to the inference provider, not you. &quot;Portable sessions&quot; across models or providers is mostly illusory since models differ in capabilities, context windows, and tool-use behavior anyway. Useful framing if you're designing cross-provider session or memory continuity for agent tooling.
+- **Reviewer: 68% of ML conference submissions had fabricated citations or authors this summer**
+  https://geospatialml.com/posts/reviewing-ai-slop/
+  A conference reviewer flagged two ML papers with fabricated author names close enough to survive a skim; both were accepted as orals anyway, conditioned only on fixing the fake citations. Across 22 papers reviewed this summer (NeurIPS, WACV, an ECCV geospatial workshop), 68% had fabricated citations, invented authors, or were clearly LLM-generated. Signal that peer review isn't catching AI slop right now — worth discounting confidence in recent ML papers you haven't verified yourself.
+
+## Full digest
+
+- [R] [reddit-localllama] The official release Deepseek V4 flash is live on the API — https://www.reddit.com/r/LocalLLaMA/comments/1vbidxt/the_official_release_deepseek_v4_flash_is_live_on/ — &amp;#32; submitted by &amp;#32; /u/mineyevfan [link] &amp;#32; [comments]
+- [R] [reddit-localllama] Minimax-H3 video model released, open weights coming in the next few days — https://www.reddit.com/r/LocalLLaMA/comments/1vbdsmz/minimaxh3_video_model_released_open_weights/ — https://x.com/MiniMax_AI/status/2083006198828417501?s=20 Quote from their article: Today, we're launching MiniMax H3, a general-purpose multimodal generation model. H3 understands unified context across text, images, video, and audio, gener…
+- [R] [reddit-localllama] DeepSeek-V4-Flash-0731 is going to cause another market crash. — https://www.reddit.com/r/LocalLLaMA/comments/1vbjdby/deepseekv4flash0731_is_going_to_cause_another/ — Beats GLM 5.2, and is the same cost as the previous one. &amp;#32; submitted by &amp;#32; /u/Potential_Top_4669 [link] &amp;#32; [comments]
+- [R] [reddit-localllama] My second Inspur AGX-2 with another x8 v100 arrived! — https://www.reddit.com/r/LocalLLaMA/comments/1vbft9q/my_second_inspur_agx2_with_another_x8_v100_arrived/ — So now full 512gb of vram, I think I will need to get a third one soon seeing that llms keep getting absurdly huge! &amp;#32; submitted by &amp;#32; /u/UltraFOV [link] &amp;#32; [comments]
+- [R] [reddit-localllama] What actually happened to the whole Openclaw frenzy? — https://www.reddit.com/r/LocalLLaMA/comments/1vb8d2v/what_actually_happened_to_the_whole_openclaw/ — A while back you couldn't open reddit or youtube without sifting through tons of Openclaw content. And it wasn't just the internet that blew up, I remember seeing images from China where crowds would gather in the streets to get their insta…
+- [R] [reddit-localllama] New DeepSeek V4-Flash achieves 50 on ArtificalAnalysis Index, 1 point below GLM-5.2 and GPT-5.6 Luna — https://www.reddit.com/r/LocalLLaMA/comments/1vbk5ob/new_deepseek_v4flash_achieves_50_on/ — &amp;#32; submitted by &amp;#32; /u/MagicZhang [link] &amp;#32; [comments]
+- [R] [reddit-localllama] Inkling-Small by thinkingmachines — https://www.reddit.com/r/LocalLLaMA/comments/1vb16gj/inklingsmall_by_thinkingmachines/ — 276B total parameters, 12B active, 1M context window. Blog post: https://thinkingmachines.ai/news/inkling-small/ NVFP4: https://huggingface.co/thinkingmachines/Inkling-Small-NVFP4 GGUF's by Unsloth: https://huggingface.co/unsloth/Inkling-Sm…
+- [R] [reddit-localllama] Inkling-Small-276B-12B, effort &quot;max&quot; VS Qwen3.6-27B — https://www.reddit.com/r/LocalLLaMA/comments/1vbajj8/inklingsmall276b12b_effort_max_vs_qwen3627b/ — I saw u/danielhanchen 's 1-bit Kimi K3 post: https://huggingface.co/unsloth/Kimi-K3-GGUF/discussions/12#6a6a4a90ec74ef13d85d7cf6 and decided to test Inkling-Small and Qwen3.6-27B myself, based on the full shared prompt: https://huggingface.…
+- [R] [reddit-localllama] DeepSeek v4 Flash has a nice bump in Capability — https://www.reddit.com/r/LocalLLaMA/comments/1vbimop/deepseek_v4_flash_has_a_nice_bump_in_capability/ — DeepSeek V4 Flash: Preview → 2026-07-31 Benchmark Preview 0731 Δ Terminal Bench* 56.9 82.7 +25.8 Toolathlon 51.8 70.3 +18.5 NL2Repo — 54.2 new Cybergym — 76.7 new DeepSWE — 54.4 new Agent Last Exam — 25.2 new Automation Bench — 25.1 new DSB…
+- [R] [reddit-localllama] Think of the children, another excuse for them to go after open source AI — https://www.reddit.com/r/LocalLLaMA/comments/1vapsbz/think_of_the_children_another_excuse_for_them_to/ — Source: https://web.archive.org/web/20260728093051/https://www.theverge.com/ai-artificial-intelligence/971723/hugging-face-nudify-deepfake-undress-women-children &amp;#32; submitted by &amp;#32; /u/MaruluVR [link] &amp;#32; [comments]
+- [R] [reddit-localllama] Huawei opensouced openPangu-2.0-Pro, 505B-A18B — https://www.reddit.com/r/LocalLLaMA/comments/1vbj6uf/huawei_opensouced_openpangu20pro_505ba18b/ — openPangu-2.0-Pro is an MoE model trained on Ascend. The model has 505B total parameters and 18B activated parameters. Its context length is 512k. The total pretraining data contains 34T tokens. During Post-training, openPangu-2.0-Pro is tr…
+- [R] [reddit-localllama] Is it just me, or are current LLM benchmarks failing to capture actual usability? (Gemma 4 vs. Gemini/Claude Opus) — https://www.reddit.com/r/LocalLLaMA/comments/1vbdpcz/is_it_just_me_or_are_current_llm_benchmarks/ — Disclaimer, this was kinda written with AI (Gemma 4 again) but it also did really well here, it outputted what I wanted, and when I asked it to refine stuff or improve on certain areas it did that without compromising others or making thing…
+- [R] [reddit-localllama] Software Engineers: Do you honestly get anything useful out of LLMs? — https://www.reddit.com/r/LocalLLaMA/comments/1vavh2h/software_engineers_do_you_honestly_get_anything/ — For 6 months now I've been trying to make agentic coding work for me, using Pi and a handful 30-120B models (Qwens, Nemotrons, Leguna...etc). I'm not greedy either, I stick to decent quants, never quantize kv cache, and keep my sessions up…
+- [R] [reddit-localllama] All oneshots from Kimi-K3, looks better than opus4.8. — https://www.reddit.com/r/LocalLLaMA/comments/1vbf4bp/all_oneshots_from_kimik3_looks_better_than_opus48/ — I've ran Kimi-k3 through 34 oneshot prompts and evaluated the generated htmls, screenshots and gifs using sonnet 4.6. It came out to be better than opus4.8 from the evals. Kimi K3: https://oneshotlm.com/model/moonshotai-kimi-k3/ Opus 4.8: h…
+- [R] [reddit-localllama] LG AI Research releases K-EXAONE 2.0 750B A37B — https://www.reddit.com/r/LocalLLaMA/comments/1vazdxp/lg_ai_research_releases_kexaone_20_750b_a37b/ — It was developed under Phase 2 of Korea's Sovereign AI Foundation Model Project. ​Size: 750B parameters (3x larger than their 236B v1 model). ​- License: Apache 2.0 ​Languages: Expanded to 10 languages (Korean, English, French, Italian, Por…
+- [R] [reddit-localllama] I predict DeepSeek V4 Flash 0731's Artificial Analysis score to be 57 ± 1 point (Kimi K3 Level) — https://www.reddit.com/r/LocalLLaMA/comments/1vbj3cn/i_predict_deepseek_v4_flash_0731s_artificial/ — Deepseek's new model V4 Flash 0731 is much better, I (Claude lol) did a bit of linear regression with a leave one out style verification to predict its AA Score, and that puts it at Kimi K3 level, which is just absurd to me for its price! I…
+- [R] [reddit-localllama] Want to see all oneshot slops in one place? — https://www.reddit.com/r/LocalLLaMA/comments/1vbc3kw/want_to_see_all_oneshot_slops_in_one_place/ — I've been looking at oneshots posted here whenever a new model comes around and wondered if there is a single place to see all the &quot;oneslops&quot;. Behold https://oneshotlm.com/ , where I'm trying to gather all the models from openrouter and int…
+- [R] [reddit-localllama] America Needs An Open-Source AI Strategy — CNBC — https://www.reddit.com/r/LocalLLaMA/comments/1vb332c/america_needs_an_opensource_ai_strategy_cnbc/ — Pretty incredible to see open-weight become a mainstream discussion. &amp;#32; submitted by &amp;#32; /u/Recoil42 [link] &amp;#32; [comments]
+- [R] [reddit-localllama] Open Source Ternary LLM Engine in Rust/CUDA for Quantization, Serving, and Training of models on consumer GPUs, called Tritium (Apache 2.0) — https://www.reddit.com/r/LocalLLaMA/comments/1vbf0nt/open_source_ternary_llm_engine_in_rustcuda_for/ — This post was not written by a clanker. Hey guys, I'm a comp sci major who wanted to introduce a cool project I built for quantizing models to ternary (1.58 bit) with as minimal of loss as possible, a process that can provide even more than…
+- [R] [reddit-localllama] The real Flash？AntLing 3.0 flash VS. MiniMax M2.7 VS. Step 3.7 flash — https://www.reddit.com/r/LocalLLaMA/comments/1vazgc0/the_real_flashantling_30_flash_vs_minimax_m27_vs/ — &amp;#32; submitted by &amp;#32; /u/niacolhealth [link] &amp;#32; [comments]
+- [R] [reddit-localllama] Could we all crowdsource a dataset/model/finetune? — https://www.reddit.com/r/LocalLLaMA/comments/1vbcec6/could_we_all_crowdsource_a_datasetmodelfinetune/ — I know it’s been discussed to try to make our own model through crowdsourcing, but finetuning seems like it would be even easier. We could edit and proofread and write our own datasets at a large scale. If 1% of us - 8k people - curated 5 e…
+- [R] [reddit-localllama] Turbo-fieldfare: Open-source engine running Gemma 4 26B in 2 GB RAM on Apple Silicon — https://www.reddit.com/r/LocalLLaMA/comments/1vasnys/turbofieldfare_opensource_engine_running_gemma_4/ — Its a custom Swift/Metal inference engine that runs Gemma 4 26B-A4B-IT on M-series Macs with very low RAM. It uses ~2GB instead of ~14 GB. The result is reportedly 5–6 tok/s on an 8 GB M2 MacBook Air and 31–35 tok/s on an M5 MacBook Pro. It…
+- [R] [reddit-localllama] K-EXAONE 2.0 released — https://www.reddit.com/r/LocalLLaMA/comments/1vbchn4/kexaone_20_released/ — https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B-FP8 https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B-NVFP4 https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37…
+- [P] [hn-top] The session you cannot take with you — https://earendil.com/posts/session-portability/ — Essay arguing that AI coding-session transcripts on your machine are only a partial view — the real operational state (context, tool state, provider-side history) belongs to the inference provider, not you. &quot;Portable sessions&quot; across models or providers is mostly illusory since models differ in capabilities, context windows, and tool-use behavior anyway. Useful framing if you're designing cross-provider session or memory continuity for agent tooling.
+- [R] [hn-top] JEP 401: Value Objects (Preview) merged to OpenJDK master — https://github.com/openjdk/jdk/pull/31120 — Real change but Java-specific language feature with no near-term relevance to this audience's stack.
+- [P] [hn-top] DeepSeek-V4-Flash-0731: Responses API + Codex support, pricing unchanged — https://api-docs.deepseek.com/updates/ — DeepSeek shipped V4-Flash-0731, a sparse MoE model (13B active / 284B total) with native Responses API support and Codex compatibility, plus real agentic/coding gains. Pricing is unchanged at $0.14/$0.28 per 1M input/output tokens ($0.0028/1M cached). Independent benchmarks put it near GLM-5.2/GPT-5.6 territory for a fraction of frontier pricing. Worth a cost/quality check against whatever you're currently using for coding-agent backends.
+- [P] [hn-top] GitHub stacked pull requests hit public preview, no waitlist — https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/ — GitHub's stacked pull requests are now in public preview for every repo — no waitlist, no enterprise plan required. Each PR in a stack targets the layer below it, gets reviewed and checked independently, and the whole stack merges in one click; existing branch protections still apply. It's explicitly wired for GitHub Copilot and other coding agents via a dedicated gh-stack skill, so agent-driven multi-step refactors get a native mechanism instead of manual branch juggling.
+- [P] [hn-top] Reviewer: 68% of ML conference submissions had fabricated citations or authors this summer — https://geospatialml.com/posts/reviewing-ai-slop/ — A conference reviewer flagged two ML papers with fabricated author names close enough to survive a skim; both were accepted as orals anyway, conditioned only on fixing the fake citations. Across 22 papers reviewed this summer (NeurIPS, WACV, an ECCV geospatial workshop), 68% had fabricated citations, invented authors, or were clearly LLM-generated. Signal that peer review isn't catching AI slop right now — worth discounting confidence in recent ML papers you haven't verified yourself.
+- [R] [hn-top] Gemini Robotics 2 brings whole body intelligence to robots — https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/ — Robotics/hardware announcement, out of scope for a solo software builder's near-term decisions.
+- [R] [hn-top] Read this before you buy that TV streaming stick — https://krebsonsecurity.com/2026/07/read-this-before-you-buy-that-tv-streaming-stick/ — Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.
+- [R] [hn-top] The Religion of Speed — https://graybeard.ing/the-religion-of-speed/ — Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.
+- [R] [hn-top] Physicists Solve a Muon Mystery. Now, Old Results Don't Add Up — https://www.quantamagazine.org/physicists-solve-a-muon-mystery-now-old-results-dont-add-up-20260729/ — Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.
+- [R] [hn-top] The AI Aesthetic — https://blog.jim-nielsen.com/2026/ai-aesthetic/ — Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.
+- [R] [hn-top] The Economic Benefit of Refactoring — https://martinfowler.com/articles/exploring-gen-ai/refactoring-economic-benefit.html — Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.
+- [R] [hn-top] CodePen 2.0 — https://chriscoyier.net/2026/07/30/codepen-2-0/ — Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.
+- [R] [hn-top] Rune 1.1: adds Python, an Emacs editor, a symbol index and is now free — https://rune.build/blog/rune-1-1-release — Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.
+- [R] [hn-top] Bad Apple but It's Traceroute — https://jssfr.de/2026-07-27-bad-apple-but-traceroute.html — Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.
+- [R] [hn-top] Memo-1: A 6502 computer built from scratch, using a Minitel as its terminal — https://github.com/MemoireMorte/Memo-1 — Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.
+- [R] [hn-top] GCC steering committee announces AI policy — https://lwn.net/Articles/1086041/ — Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.
+- [R] [hn-top] UEFA and its national associations will not participate in FIFA competitions — https://www.uefa.com/news-media/news/02a7-213a92896eb0-54dfbf454e3b-1000--statement-on-behalf-of-uefa-and-its-55-national-associations/ — Deferred by pre-triage volume cap this run; not evaluated. Will resurface in a future claim if still relevant.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
