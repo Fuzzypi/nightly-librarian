@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>August 4, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="8 stories cleared the bar, led by Your agent needs a computer, not a container — introducing @cloudflare/computer, Cloudflare Workers and Containers now">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-08-04/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="August 4, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="8 stories cleared the bar, led by Your agent needs a computer, not a container — introducing @cloudflare/computer, Cloudflare Workers and Containers now">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-08-04/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="August 4, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="8 stories cleared the bar, led by Your agent needs a computer, not a container — introducing @cloudflare/computer, Cloudflare Workers and Containers now">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>August 4, 2026 · Report log</span>
+      <span>Aug 4, 2026, 7:06 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>August 4, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>8 stories cleared the bar, led by Your agent needs a computer, not a container — introducing @cloudflare/computer, Cloudflare Workers and Containers now support inbound TCP connections and gRPC, and Introducing the Billable Usage API: programmatic cost visibility for Cloudflare.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>8 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/cloudflare-computer/" target="_blank" rel="noopener">Your agent needs a computer, not a container — introducing @cloudflare/computer</a></div>
+        <div class="item-takeaway">Cloudflare previewed @cloudflare/computer, a shared-workspace runtime that lets agents use isolates for cheap file/code work and containers only when needed.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/grpc-workers/" target="_blank" rel="noopener">Cloudflare Workers and Containers now support inbound TCP connections and gRPC</a></div>
+        <div class="item-takeaway">Cloudflare added inbound TCP handling for Workers plus gRPC support paths, including socket routing to Durable Objects and Containers, in private beta.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/billable-usage-api/" target="_blank" rel="noopener">Introducing the Billable Usage API: programmatic cost visibility for Cloudflare</a></div>
+        <div class="item-takeaway">Cloudflare launched a Billable Usage API for self-serve accounts, exposing per-product cost and usage rows via one endpoint with FOCUS-style field names.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/vercel/next.js/releases/tag/v16.3.0" target="_blank" rel="noopener">v16.3.0</a></div>
+        <div class="item-takeaway">Next.js 16.3.0 shipped with a lodash CVE fix, a large batch of Turbopack work, and improvements across route handling, caching, and tooling.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://neon.com/blog/neon-now-has-per-project-permissions" target="_blank" rel="noopener">Neon now has per-project permissions</a></div>
+        <div class="item-takeaway">Neon added org roles plus per-project permissions, which makes it easier to limit agent or collaborator access to only the databases they should touch.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/python-workers-rpc/" target="_blank" rel="noopener">Workers RPC now works across Python and JavaScript</a></div>
+        <div class="item-takeaway">Cloudflare Workers RPC now works across Python and JavaScript, letting services call each other across those runtimes without custom schemas or protobuf work.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/give-your-eve-agent-a-browser" target="_blank" rel="noopener">Give your eve agent a browser</a></div>
+        <div class="item-takeaway">Vercel added an official `@agent-browser/eve` extension so eve agents can browse, click, fill forms, inspect network activity, and screenshot pages inside the sandbox.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/vercel-waf-for-blob-is-now-generally-available" target="_blank" rel="noopener">Vercel WAF for Blob is now generally available</a></div>
+        <div class="item-takeaway">Vercel moved WAF for Blob to GA on all plans, letting Blob traffic be denied, challenged, or rate-limited at the edge before transfer costs accrue.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.3.2-beta.332" target="_blank" rel="noopener">CLI Beta @composio/cli@0.3.2-beta.332</a>
+        </div>
+        <div class="item-takeaway">## What's Changed * refactor(docs): parse untyped data with zod and forbid explicit any by @jkomyno in https://github.com/ComposioHQ/compo…</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.3.2-beta.331" target="_blank" rel="noopener">CLI Beta @composio/cli@0.3.2-beta.331</a>
+        </div>
+        <div class="item-takeaway">## What's Changed * docs: make toolkit-version requirement explicit in direct-execution samples by @soumya1971 in https://github.com/Compo…</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/leonickson1/Swiftlet" target="_blank" rel="noopener">Show HN: Run an 80B Qwen in 4.3 GB of RAM on a Mac, and a 35B on an iPhone</a>
+        </div>
+        <div class="item-takeaway">Show HN: Run an 80B Qwen in 4.3 GB of RAM on a Mac, and a 35B on an iPhone</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/garagehq/nightcrawler/" target="_blank" rel="noopener">Show HN: Nightcrawler – A local AI pentesting agent running on a smartphone</a>
+        </div>
+        <div class="item-takeaway">Show HN: Nightcrawler – A local AI pentesting agent running on a smartphone</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://arcbox.dev/blog/unifi-pppoe-half-bridge-acceleration" target="_blank" rel="noopener">Show HN: We Fixed UniFi's Slow PPPoE Performance with PPPoE Half-Bridge</a>
+        </div>
+        <div class="item-takeaway">Show HN: We Fixed UniFi's Slow PPPoE Performance with PPPoE Half-Bridge</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://neon.com/blog/neon-now-has-per-project-permissions" target="_blank" rel="noopener">Neon now has per-project permissions</a>
+        </div>
+        <div class="item-takeaway">Neon added org roles plus per-project permissions, which makes it easier to limit agent or collaborator access to only the databases they should touch.</div>
+        <div class="item-meta">
+          <span>neon-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf1u42/i_left_my_job_at_google_to_build_startups_its/" target="_blank" rel="noopener">I left my job at Google to build startups. It's been 2 years. And it has not been pretty.</a>
+        </div>
+        <div class="item-takeaway">When I was leaving my job at Google 2 years ago...I had thought that since I had a good pedigree, building startups would be EASIER. Boy w…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vezqio/lets_fucking_go_first_user/" target="_blank" rel="noopener">LETS FUCKING GO- first user</a>
+        </div>
+        <div class="item-takeaway">I&amp;#39;ve had free users poke around before, but this was the first person who actually put a card down before touching the product. When I…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf0278/how_long_did_it_take_you_to_take_your_saas_to_get/" target="_blank" rel="noopener">How long did it take you to take your SaaS to get the first customer?</a>
+        </div>
+        <div class="item-takeaway">And if there’s one thing that you’d do differently, what would it be? &amp;#32; submitted by &amp;#32; /u/Certain_Wing9262 [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf22o7/adding_new_feature/" target="_blank" rel="noopener">Adding new feature</a>
+        </div>
+        <div class="item-takeaway">Hey, this is my website, DSA visualizer, where you can learn DSA through animation and also paste your own code and see how it works, but …</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf31sm/while_serving_for_a_saas_client_we_have_changed/" target="_blank" rel="noopener">While serving for a Saas client, we have changed our strategy</a>
+        </div>
+        <div class="item-takeaway">People are actually amazed by knowing the fact that you don&amp;#39;t need to constantly posting blogs articles in your website in order to ge…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf2ezf/why_i_think_most_founders_define_the_wrong_thing/" target="_blank" rel="noopener">Why I think most founders define the wrong thing first</a>
+        </div>
+        <div class="item-takeaway">I&amp;#39;ve been thinking about this after watching a lot of AI startups emerge over the last couple of years. One pattern keeps showing up. …</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf02hc/my_interview_prep_website_hit_316_after_2_month/" target="_blank" rel="noopener">my interview prep website hit $316 after 2 month</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/BackgroundBreak6485 [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1veydst/building_an_ai_startup_however_i_cant_find_a/" target="_blank" rel="noopener">Building an AI startup however I can't find a logistics cofounder</a>
+        </div>
+        <div class="item-takeaway">I have connections HUGE connections. Through my family however only know the business &amp;amp; marketing end of the company. I need someone w…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf16pj/i_nearly_built_authentication_billing_and_a/" target="_blank" rel="noopener">I nearly built authentication, billing, and a dashboard before I had one returning user</a>
+        </div>
+        <div class="item-takeaway">I’ve been building Radar , a free website security scanner. My original plan looked like a typical SaaS checklist: Guest, free, and paid a…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf3e7b/seo_progress_grew_google_search_impressions_from/" target="_blank" rel="noopener">SEO Progress: Grew Google Search Impressions from 15.1K to 26.8K in Just One Month 📈</a>
+        </div>
+        <div class="item-takeaway">I wanted to share a recent milestone from one of the websites I&amp;#39;m managing and get some feedback from the community. Google Search Con…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf39nq/i_built_a_music_player_and_realtime_ai_usage/" target="_blank" rel="noopener">I built a music player and real-time ai usage tracker tools for vibe coding</a>
+        </div>
+        <div class="item-takeaway">It&amp;#39;s so cool to be able to pull Spotify and YouTube music playlists into a music recommendation algorithm that I can fully control 100…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf35mw/we_built_a_screentime_app_but_the_hardest_problem/" target="_blank" rel="noopener">We built a screen-time app, but the hardest problem was not blocking apps</a>
+        </div>
+        <div class="item-takeaway">When we started working on a screen-time product, we assumed people mainly needed stronger app blocking. But after speaking with users, we…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf0bnj/building_saas_in_healthcare_the_compliance_work/" target="_blank" rel="noopener">Building SaaS in healthcare: the compliance work started before we wrote any code, and I’d do it that way again</a>
+        </div>
+        <div class="item-takeaway">We’re building VYTL, a patient-facing tool that pulls medical records from every system holding a fragment of them into one place the pati…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vewv74/what_makes_you_stop_enjoying_building/" target="_blank" rel="noopener">What makes you stop enjoying building?</a>
+        </div>
+        <div class="item-takeaway">I&amp;#39;m curious if anyone else feels like this. Over the last year I&amp;#39;ve spent hundreds of hours building an AI product. The funny thin…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf2mxs/ecommerce_brands_splitting_one_ai_chatbot_into_5/" target="_blank" rel="noopener">Ecommerce brands splitting one AI chatbot into 5 role-specific agents is an admission the generalist bot doesn't work</a>
+        </div>
+        <div class="item-takeaway">I keep running into the same pattern on calls with founders: they shipped one chatbot that was supposed to do everything, acquisition, pro…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf2d4p/what_are_you_building/" target="_blank" rel="noopener">What are you building ?</a>
+        </div>
+        <div class="item-takeaway">Curious what you guys are building! In 2 sentences or less describe what you&amp;#39;re building . I&amp;#39;ll go first, I am building an app to …</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf2at6/do_you_guys_learn_design_when_building_saas/" target="_blank" rel="noopener">Do you guys learn design when building SaaS products?</a>
+        </div>
+        <div class="item-takeaway">Do you guys actually learn design when building SaaS? AI makes coding so much easier now, but I still feel like good product design is som…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf1xre/migrated_a_saas_off_its_nocode_platform_last/" target="_blank" rel="noopener">Migrated a SaaS off its no-code platform last month. The founder's real problem wasn't technical, it was that he didn't own his own business.</a>
+        </div>
+        <div class="item-takeaway">The product runs a school&amp;#39;s operations. Attendance, billing, parent messaging. Real revenue, 500 daily users, sensitive data. Built fa…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vehh9w/how_long_did_it_take_you_to_build_your_saas_from/" target="_blank" rel="noopener">How long did it take you to build your SaaS from start-to-finish?</a>
+        </div>
+        <div class="item-takeaway">I have been working on mine non-stop for 1.5 months. No end in sight. I expect this to be at least 6 months. It must be done right. That i…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vf1ojs/roast_my_app_i_built_another_app_to_help_users_in/" target="_blank" rel="noopener">Roast my app, I built an(other) app to help users in job applications</a>
+        </div>
+        <div class="item-takeaway">I know there are already many options for job applications and not all are great. Is mine the best? Not yet. But my goal is to make the so…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1veyt10/do_you_pays_ads_for_prelaunch_hype/" target="_blank" rel="noopener">Do you pays ads for pre-launch hype?</a>
+        </div>
+        <div class="item-takeaway">After months of working on it, my app is finally in beta testing. I’ve posted in a number of Facebook community groups while they’re good …</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vetqfn/what_do_you_do_for_getting_organic_traffic/" target="_blank" rel="noopener">What do you do for getting organic traffic?</a>
+        </div>
+        <div class="item-takeaway">What is your budget for getting traffics organically? What do you do for getting organic traffic? What is your strategy? &amp;#32; submitted b…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new" target="_blank" rel="noopener">[AINews] Qwen 3.8 Max(2.4T) and 27B, new open weights models for Coding and Cowork</a>
+        </div>
+        <div class="item-takeaway">Qwen is so back!</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          The Inference Engineering Masterclass
+        </div>
+        <div class="item-takeaway">Philip Kiely &amp; Ali Taha, Baseten — https://www.latent.space/p/inference-eng — Baseten just raised a $13B Series F and is now one of the leading kings of inference engineering. We go into everything you need to know f…</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          Your agent needs a computer, not a container
+        </div>
+        <div class="item-takeaway">introducing @cloudflare/computer — https://blog.cloudflare.com/cloudflare-computer/ — Cloudflare previewed @cloudflare/computer, a shared-workspace runtime that lets agents use isolates for cheap file/code work and containers only when needed.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/grpc-workers/" target="_blank" rel="noopener">Cloudflare Workers and Containers now support inbound TCP connections and gRPC</a>
+        </div>
+        <div class="item-takeaway">Cloudflare added inbound TCP handling for Workers plus gRPC support paths, including socket routing to Durable Objects and Containers, in private beta.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/billable-usage-api/" target="_blank" rel="noopener">Introducing the Billable Usage API: programmatic cost visibility for Cloudflare</a>
+        </div>
+        <div class="item-takeaway">Cloudflare launched a Billable Usage API for self-serve accounts, exposing per-product cost and usage rows via one endpoint with FOCUS-style field names.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.cloudflare.com/smaller-faster-safer-models/" target="_blank" rel="noopener">Smaller, faster, safer: running Kimi and GLM at scale</a>
+        </div>
+        <div class="item-takeaway">Serving frontier models like Kimi and GLM means fighting for GPU memory. Here's how we quantize KV caches, compress model weights, and add…</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/python-workers-rpc/" target="_blank" rel="noopener">Workers RPC now works across Python and JavaScript</a>
+        </div>
+        <div class="item-takeaway">Cloudflare Workers RPC now works across Python and JavaScript, letting services call each other across those runtimes without custom schemas or protobuf work.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.1-canary.0" target="_blank" rel="noopener">v16.3.1-canary.0</a>
+        </div>
+        <div class="item-takeaway">### Misc Changes - Fix catch-all index page being served for every other slug: #96553 ### Credits Huge thanks to @acdlite for helping!</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0" target="_blank" rel="noopener">v16.3.0</a>
+        </div>
+        <div class="item-takeaway">Next.js 16.3.0 shipped with a lodash CVE fix, a large batch of Turbopack work, and improvements across route handling, caching, and tooling.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.107" target="_blank" rel="noopener">v16.3.0-canary.107</a>
+        </div>
+        <div class="item-takeaway">### Misc Changes - Enable Turbopack build filesystem cache by default: #96493 ### Credits Huge thanks to @timneutkens for helping!</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/give-your-eve-agent-a-browser" target="_blank" rel="noopener">Give your eve agent a browser</a>
+        </div>
+        <div class="item-takeaway">Vercel added an official `@agent-browser/eve` extension so eve agents can browse, click, fill forms, inspect network activity, and screenshot pages inside the sandbox.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/vercel-waf-for-blob-is-now-generally-available" target="_blank" rel="noopener">Vercel WAF for Blob is now generally available</a>
+        </div>
+        <div class="item-takeaway">Vercel moved WAF for Blob to GA on all plans, letting Blob traffic be denied, challenged, or rate-limited at the edge before transfer costs accrue.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 890bfe95-ea00-48e3-b34c-b9ccee00da8a
+Started: 2026-08-04T11:02:15.578Z
+Completed: 2026-08-04T11:06:58.342Z
+
+## Worth attention
+
+- **Your agent needs a computer, not a container — introducing @cloudflare/computer**
+  https://blog.cloudflare.com/cloudflare-computer/
+  Cloudflare previewed @cloudflare/computer, a shared-workspace runtime that lets agents use isolates for cheap file/code work and containers only when needed.
+- **Cloudflare Workers and Containers now support inbound TCP connections and gRPC**
+  https://blog.cloudflare.com/grpc-workers/
+  Cloudflare added inbound TCP handling for Workers plus gRPC support paths, including socket routing to Durable Objects and Containers, in private beta.
+- **Introducing the Billable Usage API: programmatic cost visibility for Cloudflare**
+  https://blog.cloudflare.com/billable-usage-api/
+  Cloudflare launched a Billable Usage API for self-serve accounts, exposing per-product cost and usage rows via one endpoint with FOCUS-style field names.
+- **v16.3.0**
+  https://github.com/vercel/next.js/releases/tag/v16.3.0
+  Next.js 16.3.0 shipped with a lodash CVE fix, a large batch of Turbopack work, and improvements across route handling, caching, and tooling.
+- **Neon now has per-project permissions**
+  https://neon.com/blog/neon-now-has-per-project-permissions
+  Neon added org roles plus per-project permissions, which makes it easier to limit agent or collaborator access to only the databases they should touch.
+- **Workers RPC now works across Python and JavaScript**
+  https://blog.cloudflare.com/python-workers-rpc/
+  Cloudflare Workers RPC now works across Python and JavaScript, letting services call each other across those runtimes without custom schemas or protobuf work.
+- **Give your eve agent a browser**
+  https://vercel.com/changelog/give-your-eve-agent-a-browser
+  Vercel added an official `@agent-browser/eve` extension so eve agents can browse, click, fill forms, inspect network activity, and screenshot pages inside the sandbox.
+- **Vercel WAF for Blob is now generally available**
+  https://vercel.com/changelog/vercel-waf-for-blob-is-now-generally-available
+  Vercel moved WAF for Blob to GA on all plans, letting Blob traffic be denied, challenged, or rate-limited at the edge before transfer costs accrue.
+
+## Full digest
+
+- [R] [gh-composio] CLI Beta @composio/cli@0.3.2-beta.332 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.3.2-beta.332 — ## What's Changed * refactor(docs): parse untyped data with zod and forbid explicit any by @jkomyno in https://github.com/ComposioHQ/compo…
+- [R] [gh-composio] CLI Beta @composio/cli@0.3.2-beta.331 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.3.2-beta.331 — ## What's Changed * docs: make toolkit-version requirement explicit in direct-execution samples by @soumya1971 in https://github.com/Compo…
+- [R] [hn-show] Show HN: Run an 80B Qwen in 4.3 GB of RAM on a Mac, and a 35B on an iPhone — https://github.com/leonickson1/Swiftlet — Show HN: Run an 80B Qwen in 4.3 GB of RAM on a Mac, and a 35B on an iPhone
+- [R] [hn-show] Show HN: Nightcrawler – A local AI pentesting agent running on a smartphone — https://github.com/garagehq/nightcrawler/ — Show HN: Nightcrawler – A local AI pentesting agent running on a smartphone
+- [R] [hn-show] Show HN: We Fixed UniFi's Slow PPPoE Performance with PPPoE Half-Bridge — https://arcbox.dev/blog/unifi-pppoe-half-bridge-acceleration — Show HN: We Fixed UniFi's Slow PPPoE Performance with PPPoE Half-Bridge
+- [P] [neon-blog] Neon now has per-project permissions — https://neon.com/blog/neon-now-has-per-project-permissions — Neon added org roles plus per-project permissions, which makes it easier to limit agent or collaborator access to only the databases they should touch.
+- [R] [reddit-saas] I left my job at Google to build startups. It's been 2 years. And it has not been pretty. — https://www.reddit.com/r/SaaS/comments/1vf1u42/i_left_my_job_at_google_to_build_startups_its/ — When I was leaving my job at Google 2 years ago...I had thought that since I had a good pedigree, building startups would be EASIER. Boy w…
+- [R] [reddit-saas] LETS FUCKING GO- first user — https://www.reddit.com/r/SaaS/comments/1vezqio/lets_fucking_go_first_user/ — I&amp;#39;ve had free users poke around before, but this was the first person who actually put a card down before touching the product. When I…
+- [R] [reddit-saas] How long did it take you to take your SaaS to get the first customer? — https://www.reddit.com/r/SaaS/comments/1vf0278/how_long_did_it_take_you_to_take_your_saas_to_get/ — And if there’s one thing that you’d do differently, what would it be? &amp;#32; submitted by &amp;#32; /u/Certain_Wing9262 [link] &amp;#32; [comments]
+- [R] [reddit-saas] Adding new feature — https://www.reddit.com/r/SaaS/comments/1vf22o7/adding_new_feature/ — Hey, this is my website, DSA visualizer, where you can learn DSA through animation and also paste your own code and see how it works, but …
+- [R] [reddit-saas] While serving for a Saas client, we have changed our strategy — https://www.reddit.com/r/SaaS/comments/1vf31sm/while_serving_for_a_saas_client_we_have_changed/ — People are actually amazed by knowing the fact that you don&amp;#39;t need to constantly posting blogs articles in your website in order to ge…
+- [R] [reddit-saas] Why I think most founders define the wrong thing first — https://www.reddit.com/r/SaaS/comments/1vf2ezf/why_i_think_most_founders_define_the_wrong_thing/ — I&amp;#39;ve been thinking about this after watching a lot of AI startups emerge over the last couple of years. One pattern keeps showing up. …
+- [R] [reddit-saas] my interview prep website hit $316 after 2 month — https://www.reddit.com/r/SaaS/comments/1vf02hc/my_interview_prep_website_hit_316_after_2_month/ — &amp;#32; submitted by &amp;#32; /u/BackgroundBreak6485 [link] &amp;#32; [comments]
+- [R] [reddit-saas] Building an AI startup however I can't find a logistics cofounder — https://www.reddit.com/r/SaaS/comments/1veydst/building_an_ai_startup_however_i_cant_find_a/ — I have connections HUGE connections. Through my family however only know the business &amp;amp; marketing end of the company. I need someone w…
+- [R] [reddit-saas] I nearly built authentication, billing, and a dashboard before I had one returning user — https://www.reddit.com/r/SaaS/comments/1vf16pj/i_nearly_built_authentication_billing_and_a/ — I’ve been building Radar , a free website security scanner. My original plan looked like a typical SaaS checklist: Guest, free, and paid a…
+- [R] [reddit-saas] SEO Progress: Grew Google Search Impressions from 15.1K to 26.8K in Just One Month 📈 — https://www.reddit.com/r/SaaS/comments/1vf3e7b/seo_progress_grew_google_search_impressions_from/ — I wanted to share a recent milestone from one of the websites I&amp;#39;m managing and get some feedback from the community. Google Search Con…
+- [R] [reddit-saas] I built a music player and real-time ai usage tracker tools for vibe coding — https://www.reddit.com/r/SaaS/comments/1vf39nq/i_built_a_music_player_and_realtime_ai_usage/ — It&amp;#39;s so cool to be able to pull Spotify and YouTube music playlists into a music recommendation algorithm that I can fully control 100…
+- [R] [reddit-saas] We built a screen-time app, but the hardest problem was not blocking apps — https://www.reddit.com/r/SaaS/comments/1vf35mw/we_built_a_screentime_app_but_the_hardest_problem/ — When we started working on a screen-time product, we assumed people mainly needed stronger app blocking. But after speaking with users, we…
+- [R] [reddit-saas] Building SaaS in healthcare: the compliance work started before we wrote any code, and I’d do it that way again — https://www.reddit.com/r/SaaS/comments/1vf0bnj/building_saas_in_healthcare_the_compliance_work/ — We’re building VYTL, a patient-facing tool that pulls medical records from every system holding a fragment of them into one place the pati…
+- [R] [reddit-saas] What makes you stop enjoying building? — https://www.reddit.com/r/SaaS/comments/1vewv74/what_makes_you_stop_enjoying_building/ — I&amp;#39;m curious if anyone else feels like this. Over the last year I&amp;#39;ve spent hundreds of hours building an AI product. The funny thin…
+- [R] [reddit-saas] Ecommerce brands splitting one AI chatbot into 5 role-specific agents is an admission the generalist bot doesn't work — https://www.reddit.com/r/SaaS/comments/1vf2mxs/ecommerce_brands_splitting_one_ai_chatbot_into_5/ — I keep running into the same pattern on calls with founders: they shipped one chatbot that was supposed to do everything, acquisition, pro…
+- [R] [reddit-saas] What are you building ? — https://www.reddit.com/r/SaaS/comments/1vf2d4p/what_are_you_building/ — Curious what you guys are building! In 2 sentences or less describe what you&amp;#39;re building . I&amp;#39;ll go first, I am building an app to …
+- [R] [reddit-saas] Do you guys learn design when building SaaS products? — https://www.reddit.com/r/SaaS/comments/1vf2at6/do_you_guys_learn_design_when_building_saas/ — Do you guys actually learn design when building SaaS? AI makes coding so much easier now, but I still feel like good product design is som…
+- [R] [reddit-saas] Migrated a SaaS off its no-code platform last month. The founder's real problem wasn't technical, it was that he didn't own his own business. — https://www.reddit.com/r/SaaS/comments/1vf1xre/migrated_a_saas_off_its_nocode_platform_last/ — The product runs a school&amp;#39;s operations. Attendance, billing, parent messaging. Real revenue, 500 daily users, sensitive data. Built fa…
+- [R] [reddit-saas] How long did it take you to build your SaaS from start-to-finish? — https://www.reddit.com/r/SaaS/comments/1vehh9w/how_long_did_it_take_you_to_build_your_saas_from/ — I have been working on mine non-stop for 1.5 months. No end in sight. I expect this to be at least 6 months. It must be done right. That i…
+- [R] [reddit-saas] Roast my app, I built an(other) app to help users in job applications — https://www.reddit.com/r/SaaS/comments/1vf1ojs/roast_my_app_i_built_another_app_to_help_users_in/ — I know there are already many options for job applications and not all are great. Is mine the best? Not yet. But my goal is to make the so…
+- [R] [reddit-saas] Do you pays ads for pre-launch hype? — https://www.reddit.com/r/SaaS/comments/1veyt10/do_you_pays_ads_for_prelaunch_hype/ — After months of working on it, my app is finally in beta testing. I’ve posted in a number of Facebook community groups while they’re good …
+- [R] [reddit-saas] What do you do for getting organic traffic? — https://www.reddit.com/r/SaaS/comments/1vetqfn/what_do_you_do_for_getting_organic_traffic/ — What is your budget for getting traffics organically? What do you do for getting organic traffic? What is your strategy? &amp;#32; submitted b…
+- [R] [latent-space] [AINews] Qwen 3.8 Max(2.4T) and 27B, new open weights models for Coding and Cowork — https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new — Qwen is so back!
+- [R] [latent-space] The Inference Engineering Masterclass — Philip Kiely &amp; Ali Taha, Baseten — https://www.latent.space/p/inference-eng — Baseten just raised a $13B Series F and is now one of the leading kings of inference engineering. We go into everything you need to know f…
+- [P] [cloudflare-blog] Your agent needs a computer, not a container — introducing @cloudflare/computer — https://blog.cloudflare.com/cloudflare-computer/ — Cloudflare previewed @cloudflare/computer, a shared-workspace runtime that lets agents use isolates for cheap file/code work and containers only when needed.
+- [P] [cloudflare-blog] Cloudflare Workers and Containers now support inbound TCP connections and gRPC — https://blog.cloudflare.com/grpc-workers/ — Cloudflare added inbound TCP handling for Workers plus gRPC support paths, including socket routing to Durable Objects and Containers, in private beta.
+- [P] [cloudflare-blog] Introducing the Billable Usage API: programmatic cost visibility for Cloudflare — https://blog.cloudflare.com/billable-usage-api/ — Cloudflare launched a Billable Usage API for self-serve accounts, exposing per-product cost and usage rows via one endpoint with FOCUS-style field names.
+- [R] [cloudflare-blog] Smaller, faster, safer: running Kimi and GLM at scale — https://blog.cloudflare.com/smaller-faster-safer-models/ — Serving frontier models like Kimi and GLM means fighting for GPU memory. Here's how we quantize KV caches, compress model weights, and add…
+- [P] [cloudflare-blog] Workers RPC now works across Python and JavaScript — https://blog.cloudflare.com/python-workers-rpc/ — Cloudflare Workers RPC now works across Python and JavaScript, letting services call each other across those runtimes without custom schemas or protobuf work.
+- [R] [gh-nextjs] v16.3.1-canary.0 — https://github.com/vercel/next.js/releases/tag/v16.3.1-canary.0 — ### Misc Changes - Fix catch-all index page being served for every other slug: #96553 ### Credits Huge thanks to @acdlite for helping!
+- [P] [gh-nextjs] v16.3.0 — https://github.com/vercel/next.js/releases/tag/v16.3.0 — Next.js 16.3.0 shipped with a lodash CVE fix, a large batch of Turbopack work, and improvements across route handling, caching, and tooling.
+- [R] [gh-nextjs] v16.3.0-canary.107 — https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.107 — ### Misc Changes - Enable Turbopack build filesystem cache by default: #96493 ### Credits Huge thanks to @timneutkens for helping!
+- [P] [vercel-changelog] Give your eve agent a browser — https://vercel.com/changelog/give-your-eve-agent-a-browser — Vercel added an official `@agent-browser/eve` extension so eve agents can browse, click, fill forms, inspect network activity, and screenshot pages inside the sandbox.
+- [P] [vercel-changelog] Vercel WAF for Blob is now generally available — https://vercel.com/changelog/vercel-waf-for-blob-is-now-generally-available — Vercel moved WAF for Blob to GA on all plans, letting Blob traffic be denied, challenged, or rate-limited at the edge before transfer costs accrue.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
