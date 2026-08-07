@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>August 7, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="11 stories cleared the bar, led by WriteGuard: fine-grained controls for MCP Servers, Postgres Changes gets AND filters, new operators, and column">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-08-07/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="August 7, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="11 stories cleared the bar, led by WriteGuard: fine-grained controls for MCP Servers, Postgres Changes gets AND filters, new operators, and column">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-08-07/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="August 7, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="11 stories cleared the bar, led by WriteGuard: fine-grained controls for MCP Servers, Postgres Changes gets AND filters, new operators, and column">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>August 7, 2026 · Report log</span>
+      <span>Aug 7, 2026, 2:14 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>August 7, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>11 stories cleared the bar, led by WriteGuard: fine-grained controls for MCP Servers, Postgres Changes gets AND filters, new operators, and column selection, and Export AI Gateway traces with Vercel Drains.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>11 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/mcp-portal-writeguard-private-beta/" target="_blank" rel="noopener">WriteGuard: fine-grained controls for MCP Servers</a></div>
+        <div class="item-takeaway">Cloudflare built a policy layer that gates write operations on MCP servers rather than trusting every agent tool call, and is bringing it to Cloudflare MCP server portals in private beta. It was built internally before they expanded write access across their own MCP servers. The pattern — mediate writes at the portal instead of relying on per-agent configuration — is implementable without adopting the product.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://supabase.com/blog/postgres-changes-filters-and-column-selection" target="_blank" rel="noopener">Postgres Changes gets AND filters, new operators, and column selection</a></div>
+        <div class="item-takeaway">Supabase Realtime's Postgres Changes subscriptions can now combine multiple filters with AND, match on a wider set of operators, and return only selected columns in the payload. Previously the single-filter limit pushed filtering to the client and shipped full rows over the wire. This is a direct reduction in payload size and client-side filtering code for anyone subscribing to row changes.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/export-ai-gateway-traces-with-vercel-drains" target="_blank" rel="noopener">Export AI Gateway traces with Vercel Drains</a></div>
+        <div class="item-takeaway">Vercel AI Gateway now emits an OpenTelemetry trace for every request, and Pro/Enterprise teams can export them through Drains to any OTLP/HTTP endpoint, with native integrations for Braintrust, Dash0, Kubiks, Sentry, and Statsig. Prompt and completion content is excluded and sampling is configurable. Pricing is explicit at $0.05 per 1,000 traces per drain plus the standard $0.50/GB Drains transfer rate, which makes agent observability a configuration change rather than a build.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/cloudflare-os/" target="_blank" rel="noopener">Cloudflare OS: an open platform for agents, apps, and work</a></div>
+        <div class="item-takeaway">Cloudflare open-sourced Cloudflare OS, a platform for building internal apps, automating work, and giving agents mediated access to internal systems. It is shaped around organizational knowledge and built on their Compute and Zero Trust primitives. Because it is open source and backed by real production use, it is a usable reference implementation for agent-to-internal-system plumbing rather than a demo.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/chat-sdk-durable-approvals" target="_blank" rel="noopener">Pause workflows for approval with Chat SDK</a></div>
+        <div class="item-takeaway">Vercel added a chat/workflow subpath to the Chat SDK: a single requestApproval call posts an Approve/Deny card and suspends a Workflow SDK run until someone decides. The wait can last seconds or days and survives deploys and restarts, and Thread instances serialize across the workflow boundary. It removes the approvals table, action handler, and polling loop you would otherwise hand-build for human-in-the-loop agent gates.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.latent.space/p/ainews-jeff-sanjay-oriol-and-quoc" target="_blank" rel="noopener">Jeff, Sanjay, Oriol, and Quoc depart DeepMind; Demis to Chair, Koray to SVP</a></div>
+        <div class="item-takeaway">Four of Google's most senior research figures — Jeff Dean, Sanjay Ghemawat, Oriol Vinyals, and Quoc Le — are reported to be leaving DeepMind simultaneously, with Demis Hassabis moving to Chair and Koray Kavukcuoglu to SVP. No immediate action follows, but a leadership change of this magnitude is a genuine signal about Gemini roadmap stability. Relevant if you carry model-provider concentration risk on Google.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/the-agent-access-model/" target="_blank" rel="noopener">The Agent Access Model</a></div>
+        <div class="item-takeaway">Cloudflare published an architecture proposal for securing task-scoped agents using strict identity brokering, continuous mediation, and stateful trust. It is a position paper rather than shipping code, so it functions as design vocabulary for reasoning about how much authority to grant a long-running agent. Useful framing alongside WriteGuard, which is the concrete product expression of the same thinking.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/blog/introducing-the-new-v0-api" target="_blank" rel="noopener">Introducing the new v0 API</a></div>
+        <div class="item-takeaway">Vercel released programmatic headless access to v0's app-building agent, now generally available. A prompt generates an app, starts a dev server in a Vercel Sandbox, and returns an embeddable preview URL; each chat is an isolated persistent workspace where v0 reads, edits, and runs files and verifies its own output. Relevant as a building block if you want app scaffolding inside your own product surface, less so if you already drive coding agents directly.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.pragmaticengineer.com/the-pulse-bending-spoons-acquisition-strategy/" target="_blank" rel="noopener">The Pulse: Bending Spoons' Acquisition Strategy</a></div>
+        <div class="item-takeaway">Pragmatic Engineer covers Hopin's arc from zero to a $7.7B valuation and back to zero in five years, alongside Bending Spoons' model of acquiring and optimizing mature software products. Business analysis rather than technical news. Useful as a read on how software assets get valued, acquired, and unwound.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/identity-aware-ai-gateway/" target="_blank" rel="noopener">Catching rogue AI behavior with identity-aware analytics</a></div>
+        <div class="item-takeaway">Cloudflare's Identity-aware AI Gateway is now in open beta, with User Insights building a behavioral baseline for each person and agent and flagging insider risk as it appears. Open beta means the detection claims are unvalidated by third parties. Worth tracking rather than adopting: if it matures, it becomes a cheap insider-risk control for agent fleets.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/brian-armstrong/fec" target="_blank" rel="noopener">Show HN: SIMD Viterbi Decoder in Rust</a></div>
+        <div class="item-takeaway">A rewrite of the 2016 libcorrect C library into Rust, producing a generic templated Viterbi decoder for convolutional codes that dispatches at runtime based on available SIMD instruction sets. Small rates and orders decode entirely in registers; larger codes use acceleration structures. Also includes a tool for finding optimal max-d_free codes for a given rate and order. Worth filing for the std::simd runtime-dispatch technique, not the FEC domain.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vgswuz/the_problem_with_using_ai_to_build_outbound/" target="_blank" rel="noopener">The Problem With Using AI to Build Outbound Campaigns</a>
+        </div>
+        <div class="item-takeaway">Reddit post arguing that AI lets you launch the wrong outbound campaign faster, followed by a generic checklist of ICP-research questions. Standard sales advice wrapped in an AI framing.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vgp4zf/where_am_i_on_track_compared_to_other_saas/" target="_blank" rel="noopener">Where am I on track compared to other SaaS startups? How to scale? What are good year 1 targets?</a>
+        </div>
+        <div class="item-takeaway">Solo founder in the trades/construction niche reports $30k revenue over 7 months and $4.4k MRR from 5 clients, asking when to stop taking custom work. A benchmarking question rather than a finding.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vglv76/what_is_your_best_marketing_stories_strategies/" target="_blank" rel="noopener">What is your best marketing stories strategies?</a>
+        </div>
+        <div class="item-takeaway">Open-ended Reddit discussion prompt asking for one piece of marketing advice. No content in the post itself.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vgxqe1/build_a_platform_for_editors/" target="_blank" rel="noopener">Build a platform for editors</a>
+        </div>
+        <div class="item-takeaway">Idea-validation post asking whether a platform for video editors to publish unwatermarked unposted work would be used. No data or product.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vgxpy5/email_sequences_for_saas_cold_outreach/" target="_blank" rel="noopener">Email sequences for SaaS Cold Outreach</a>
+        </div>
+        <div class="item-takeaway">Request for recommended cold outreach email sequences. The post asks for advice and delivers none.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vgxnkh/for_people_who_have_deployed_their_own_apps_what/" target="_blank" rel="noopener">For people who have deployed their own apps, what was the hardest part?</a>
+        </div>
+        <div class="item-takeaway">Survey-style Reddit prompt listing possible deployment pain points (hosting, Docker, databases, env vars, SSL, CI/CD, scaling, prod debugging) and asking readers to pick. No findings in the post.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vgxn6f/i_have_an_offline_car_rental_agency_software_that/" target="_blank" rel="noopener">I have an offline car rental agency software that manage clients/reservations/stats etc and i wanna sell it in Acquire, I have 0 sales, 0$ dollars in revenue, and I dont know if its gonna be sold or not, any idea on how to sell the whole software fast ?</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/CoreSafe [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vgxdvp/if_you_were_going_to_use_a_fitness_app_would_you/" target="_blank" rel="noopener">If you were going to use a fitness app, would you prefer a web app or a mobile app?</a>
+        </div>
+        <div class="item-takeaway">I'm planning to build a fitness app and I'm trying to decide where to launch first. If you had to choose, would you rather use: A web app yo…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vgwwwy/looking_for_order_management_o2c_customer_service/" target="_blank" rel="noopener">Looking for Order Management / O2C / Customer Service roles - 4.7 years experience - Open to remote</a>
+        </div>
+        <div class="item-takeaway">Hey Peeps, I do believe any amount of leads or advice would Help me, I never post on Reddit. But I’m pushed to see if there’s any way to mak…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vgsmp3/what_usually_causes_more_rework_in_your_saas_bad/" target="_blank" rel="noopener">What usually causes more rework in your SaaS: bad UI or unresolved product decisions?</a>
+        </div>
+        <div class="item-takeaway">I have been reviewing a product flow where several screens had already been designed well. The problem was that important behaviour around t…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vgwslz/i_made_linkedin_7_faster_with_ai_reddit_x_coming/" target="_blank" rel="noopener">I made LinkedIn 7× faster with AI. (Reddit &amp; X coming soon.) (Open Source) Looking for Feedback</a>
+        </div>
+        <div class="item-takeaway">LinkedIn and X have incredible professional networks, but accessing them efficiently still requires a premium subscription and a lot of manu…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vgwrkn/an_evidencebacked_market_intelligence_platform/" target="_blank" rel="noopener">An evidence-backed market intelligence platform that finds recurring customer pain points across the internet</a>
+        </div>
+        <div class="item-takeaway">Hi everyone, For the last few weeks I've been building a project called MarketRadar . Live Demo link- market-rader.vercel.app The idea is si…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/brian-armstrong/fec" target="_blank" rel="noopener">Show HN: SIMD Viterbi Decoder in Rust</a>
+        </div>
+        <div class="item-takeaway">A rewrite of the 2016 libcorrect C library into Rust, producing a generic templated Viterbi decoder for convolutional codes that dispatches at runtime based on available SIMD instruction sets. Small rates and orders decode entirely in registers; larger codes use acceleration structures. Also includes a tool for finding optimal max-d_free codes for a given rate and order. Worth filing for the std::simd runtime-dispatch technique, not the FEC domain.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency" target="_blank" rel="noopener">How Castform + Neon Beats Frontier Models on Price and Efficiency</a>
+        </div>
+        <div class="item-takeaway">Vendor co-marketing post pairing a Neon customer quote with an unbenchmarked claim about beating frontier models on price and efficiency. No reproducible numbers.</div>
+        <div class="item-meta">
+          <span>neon-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.pragmaticengineer.com/the-pulse-bending-spoons-acquisition-strategy/" target="_blank" rel="noopener">The Pulse: Bending Spoons' Acquisition Strategy</a>
+        </div>
+        <div class="item-takeaway">Pragmatic Engineer covers Hopin's arc from zero to a $7.7B valuation and back to zero in five years, alongside Bending Spoons' model of acquiring and optimizing mature software products. Business analysis rather than technical news. Useful as a read on how software assets get valued, acquired, and unwound.</div>
+        <div class="item-meta">
+          <span>pragmatic-engineer</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.latent.space/p/ainews-jeff-sanjay-oriol-and-quoc" target="_blank" rel="noopener">Jeff, Sanjay, Oriol, and Quoc depart DeepMind; Demis to Chair, Koray to SVP</a>
+        </div>
+        <div class="item-takeaway">Four of Google's most senior research figures — Jeff Dean, Sanjay Ghemawat, Oriol Vinyals, and Quoc Le — are reported to be leaving DeepMind simultaneously, with Demis Hassabis moving to Chair and Koray Kavukcuoglu to SVP. No immediate action follows, but a leadership change of this magnitude is a genuine signal about Gemini roadmap stability. Relevant if you carry model-provider concentration risk on Google.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026/" target="_blank" rel="noopener">Cloudflare is the only vendor named a Visionary in 2026 SASE and SSE reports</a>
+        </div>
+        <div class="item-takeaway">Cloudflare announcing Gartner Magic Quadrant placement. Pure analyst-award marketing with no technical content.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/the-agent-access-model/" target="_blank" rel="noopener">The Agent Access Model</a>
+        </div>
+        <div class="item-takeaway">Cloudflare published an architecture proposal for securing task-scoped agents using strict identity brokering, continuous mediation, and stateful trust. It is a position paper rather than shipping code, so it functions as design vocabulary for reasoning about how much authority to grant a long-running agent. Useful framing alongside WriteGuard, which is the concrete product expression of the same thinking.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.cloudflare.com/how-we-use-ai-with-cloudflare-os/" target="_blank" rel="noopener">How we're rethinking work at Cloudflare with Cloudflare OS</a>
+        </div>
+        <div class="item-takeaway">Cloudflare's internal-journey framing of the same Cloudflare OS launch covered in the primary announcement post. Same underlying story with less technical substance.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/cloudflare-os/" target="_blank" rel="noopener">Cloudflare OS: an open platform for agents, apps, and work</a>
+        </div>
+        <div class="item-takeaway">Cloudflare open-sourced Cloudflare OS, a platform for building internal apps, automating work, and giving agents mediated access to internal systems. It is shaped around organizational knowledge and built on their Compute and Zero Trust primitives. Because it is open source and backed by real production use, it is a usable reference implementation for agent-to-internal-system plumbing rather than a demo.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/mcp-portal-writeguard-private-beta/" target="_blank" rel="noopener">WriteGuard: fine-grained controls for MCP Servers</a>
+        </div>
+        <div class="item-takeaway">Cloudflare built a policy layer that gates write operations on MCP servers rather than trusting every agent tool call, and is bringing it to Cloudflare MCP server portals in private beta. It was built internally before they expanded write access across their own MCP servers. The pattern — mediate writes at the portal instead of relying on per-agent configuration — is implementable without adopting the product.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://blog.cloudflare.com/identity-aware-ai-gateway/" target="_blank" rel="noopener">Catching rogue AI behavior with identity-aware analytics</a>
+        </div>
+        <div class="item-takeaway">Cloudflare's Identity-aware AI Gateway is now in open beta, with User Insights building a behavioral baseline for each person and agent and flagging insider risk as it appears. Open beta means the detection claims are unvalidated by third parties. Worth tracking rather than adopting: if it matures, it becomes a cheap insider-risk control for agent fleets.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.1-canary.4" target="_blank" rel="noopener">Next.js v16.3.1-canary.4</a>
+        </div>
+        <div class="item-takeaway">Canary release containing internal refactors, bench fixes, Turbopack module hoisting changes, a React version bump, and a pre-hydration back-navigation race fix. No user-facing features.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/stable" target="_blank" rel="noopener">n8n stable (2.33.5)</a>
+        </div>
+        <div class="item-takeaway">Patch release containing a single editor bug fix for Markdown input focus ordering.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.33.5" target="_blank" rel="noopener">n8n@2.33.5</a>
+        </div>
+        <div class="item-takeaway">Duplicate of the n8n 2.33.5 stable tag; same single editor focus-order bug fix.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.34.2" target="_blank" rel="noopener">n8n@2.34.2</a>
+        </div>
+        <div class="item-takeaway">Patch release with two minor editor bug fixes: Markdown input focus ordering and agent tool credential placement in the configuration panel.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">n8n beta (2.34.2)</a>
+        </div>
+        <div class="item-takeaway">Duplicate of the n8n 2.34.2 tag; same two minor editor bug fixes.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.val.town/docfooding" target="_blank" rel="noopener">Docfooding: Eating our own documentation</a>
+        </div>
+        <div class="item-takeaway">Val Town moved its documentation onto Val Town itself. Short, self-referential engineering-culture post with no transferable technique.</div>
+        <div class="item-meta">
+          <span>val-town-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://supabase.com/blog/postgres-changes-filters-and-column-selection" target="_blank" rel="noopener">Postgres Changes gets AND filters, new operators, and column selection</a>
+        </div>
+        <div class="item-takeaway">Supabase Realtime's Postgres Changes subscriptions can now combine multiple filters with AND, match on a wider set of operators, and return only selected columns in the payload. Previously the single-filter limit pushed filtering to the client and shipped full rows over the wire. This is a direct reduction in payload size and client-side filtering code for anyone subscribing to row changes.</div>
+        <div class="item-meta">
+          <span>supabase-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/chat-sdk-durable-approvals" target="_blank" rel="noopener">Pause workflows for approval with Chat SDK</a>
+        </div>
+        <div class="item-takeaway">Vercel added a chat/workflow subpath to the Chat SDK: a single requestApproval call posts an Approve/Deny card and suspends a Workflow SDK run until someone decides. The wait can last seconds or days and survives deploys and restarts, and Thread instances serialize across the workflow boundary. It removes the approvals table, action handler, and polling loop you would otherwise hand-build for human-in-the-loop agent gates.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/project-avatars" target="_blank" rel="noopener">Set your own project avatars</a>
+        </div>
+        <div class="item-takeaway">Vercel dashboard now lets you set a project avatar manually instead of deriving it from the production favicon. Cosmetic.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/new-setup-page-after-domain-checkout" target="_blank" rel="noopener">New setup page after domain checkout</a>
+        </div>
+        <div class="item-takeaway">Vercel added a post-purchase setup page that tracks domain registration live and offers direct paths to deploy, connect, proxy, or set up email. Minor onboarding UX improvement.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/export-ai-gateway-traces-with-vercel-drains" target="_blank" rel="noopener">Export AI Gateway traces with Vercel Drains</a>
+        </div>
+        <div class="item-takeaway">Vercel AI Gateway now emits an OpenTelemetry trace for every request, and Pro/Enterprise teams can export them through Drains to any OTLP/HTTP endpoint, with native integrations for Braintrust, Dash0, Kubiks, Sentry, and Statsig. Prompt and completion content is excluded and sampling is configurable. Pricing is explicit at $0.05 per 1,000 traces per drain plus the standard $0.50/GB Drains transfer rate, which makes agent observability a configuration change rather than a build.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/blog/introducing-the-new-v0-api" target="_blank" rel="noopener">Introducing the new v0 API</a>
+        </div>
+        <div class="item-takeaway">Vercel released programmatic headless access to v0's app-building agent, now generally available. A prompt generates an app, starts a dev server in a Vercel Sandbox, and returns an embeddable preview URL; each chat is an isolated persistent workspace where v0 reads, edits, and runs files and verifies its own output. Relevant as a building block if you want app scaffolding inside your own product surface, less so if you already drive coding agents directly.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/ai-gateway-is-now-available-on-aws-marketplace" target="_blank" rel="noopener">AI Gateway is now available on AWS Marketplace</a>
+        </div>
+        <div class="item-takeaway">Vercel AI Gateway can now be procured through AWS Marketplace as a private offer with annual contract terms plus usage-based pricing beyond the contract. Enterprise procurement plumbing, irrelevant to a solo builder.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/muse-spark-1-2-is-now-available-on-vercel-ai-gateway" target="_blank" rel="noopener">Muse Spark 1.2 is now available on Vercel AI Gateway</a>
+        </div>
+        <div class="item-takeaway">from Meta is now available on AI Gateway. It is a coding-focused update to the previous Muse Spark model. While keeping its general capabili…</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/vercel-sandbox-now-supports-10-000-concurrent-sandboxes-and-5-000-vcpus-per-minute" target="_blank" rel="noopener">Vercel Sandbox now supports 10,000 concurrent sandboxes and 5,000 vCPUs per minute</a>
+        </div>
+        <div class="item-takeaway">We've increased the default quotas for on Pro and Enterprise plans: Vercel Sandbox The higher vCPU allocation rate is possible thanks to a n…</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/search-and-buy-domains-in-the-dashboard" target="_blank" rel="noopener">Search and buy domains in the dashboard</a>
+        </div>
+        <div class="item-takeaway">You can now search for and purchase domains from the . Vercel dashboard Open the domain search panel from the Buy button in or the + button…</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/measure-time-between-steps-in-vercel-workflows" target="_blank" rel="noopener">Measure time between steps in Vercel Workflows</a>
+        </div>
+        <div class="item-takeaway">You can now measure the time between any two steps in the trace viewer for and the . Vercel Workflows Workflow SDK Select a step, hold on ma…</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/full-sandbox-egress-firewall-now-available-on-hobby-plan" target="_blank" rel="noopener">Full Sandbox egress firewall now available on Hobby plan</a>
+        </div>
+        <div class="item-takeaway">All firewall features are now available on the Hobby plan. Vercel Sandbox This brings the same network isolation that protects production wo…</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 688f6aaa-f03e-460c-bb81-c6bed24376a3
+Started: 2026-08-07T06:09:30.646Z
+Completed: 2026-08-07T06:14:58.737Z
+
+## Worth attention
+
+- **WriteGuard: fine-grained controls for MCP Servers**
+  https://blog.cloudflare.com/mcp-portal-writeguard-private-beta/
+  Cloudflare built a policy layer that gates write operations on MCP servers rather than trusting every agent tool call, and is bringing it to Cloudflare MCP server portals in private beta. It was built internally before they expanded write access across their own MCP servers. The pattern — mediate writes at the portal instead of relying on per-agent configuration — is implementable without adopting the product.
+- **Postgres Changes gets AND filters, new operators, and column selection**
+  https://supabase.com/blog/postgres-changes-filters-and-column-selection
+  Supabase Realtime's Postgres Changes subscriptions can now combine multiple filters with AND, match on a wider set of operators, and return only selected columns in the payload. Previously the single-filter limit pushed filtering to the client and shipped full rows over the wire. This is a direct reduction in payload size and client-side filtering code for anyone subscribing to row changes.
+- **Export AI Gateway traces with Vercel Drains**
+  https://vercel.com/changelog/export-ai-gateway-traces-with-vercel-drains
+  Vercel AI Gateway now emits an OpenTelemetry trace for every request, and Pro/Enterprise teams can export them through Drains to any OTLP/HTTP endpoint, with native integrations for Braintrust, Dash0, Kubiks, Sentry, and Statsig. Prompt and completion content is excluded and sampling is configurable. Pricing is explicit at $0.05 per 1,000 traces per drain plus the standard $0.50/GB Drains transfer rate, which makes agent observability a configuration change rather than a build.
+- **Cloudflare OS: an open platform for agents, apps, and work**
+  https://blog.cloudflare.com/cloudflare-os/
+  Cloudflare open-sourced Cloudflare OS, a platform for building internal apps, automating work, and giving agents mediated access to internal systems. It is shaped around organizational knowledge and built on their Compute and Zero Trust primitives. Because it is open source and backed by real production use, it is a usable reference implementation for agent-to-internal-system plumbing rather than a demo.
+- **Pause workflows for approval with Chat SDK**
+  https://vercel.com/changelog/chat-sdk-durable-approvals
+  Vercel added a chat/workflow subpath to the Chat SDK: a single requestApproval call posts an Approve/Deny card and suspends a Workflow SDK run until someone decides. The wait can last seconds or days and survives deploys and restarts, and Thread instances serialize across the workflow boundary. It removes the approvals table, action handler, and polling loop you would otherwise hand-build for human-in-the-loop agent gates.
+- **Jeff, Sanjay, Oriol, and Quoc depart DeepMind; Demis to Chair, Koray to SVP**
+  https://www.latent.space/p/ainews-jeff-sanjay-oriol-and-quoc
+  Four of Google's most senior research figures — Jeff Dean, Sanjay Ghemawat, Oriol Vinyals, and Quoc Le — are reported to be leaving DeepMind simultaneously, with Demis Hassabis moving to Chair and Koray Kavukcuoglu to SVP. No immediate action follows, but a leadership change of this magnitude is a genuine signal about Gemini roadmap stability. Relevant if you carry model-provider concentration risk on Google.
+- **The Agent Access Model**
+  https://blog.cloudflare.com/the-agent-access-model/
+  Cloudflare published an architecture proposal for securing task-scoped agents using strict identity brokering, continuous mediation, and stateful trust. It is a position paper rather than shipping code, so it functions as design vocabulary for reasoning about how much authority to grant a long-running agent. Useful framing alongside WriteGuard, which is the concrete product expression of the same thinking.
+- **Introducing the new v0 API**
+  https://vercel.com/blog/introducing-the-new-v0-api
+  Vercel released programmatic headless access to v0's app-building agent, now generally available. A prompt generates an app, starts a dev server in a Vercel Sandbox, and returns an embeddable preview URL; each chat is an isolated persistent workspace where v0 reads, edits, and runs files and verifies its own output. Relevant as a building block if you want app scaffolding inside your own product surface, less so if you already drive coding agents directly.
+- **The Pulse: Bending Spoons' Acquisition Strategy**
+  https://blog.pragmaticengineer.com/the-pulse-bending-spoons-acquisition-strategy/
+  Pragmatic Engineer covers Hopin's arc from zero to a $7.7B valuation and back to zero in five years, alongside Bending Spoons' model of acquiring and optimizing mature software products. Business analysis rather than technical news. Useful as a read on how software assets get valued, acquired, and unwound.
+- **Catching rogue AI behavior with identity-aware analytics**
+  https://blog.cloudflare.com/identity-aware-ai-gateway/
+  Cloudflare's Identity-aware AI Gateway is now in open beta, with User Insights building a behavioral baseline for each person and agent and flagging insider risk as it appears. Open beta means the detection claims are unvalidated by third parties. Worth tracking rather than adopting: if it matures, it becomes a cheap insider-risk control for agent fleets.
+- **Show HN: SIMD Viterbi Decoder in Rust**
+  https://github.com/brian-armstrong/fec
+  A rewrite of the 2016 libcorrect C library into Rust, producing a generic templated Viterbi decoder for convolutional codes that dispatches at runtime based on available SIMD instruction sets. Small rates and orders decode entirely in registers; larger codes use acceleration structures. Also includes a tool for finding optimal max-d_free codes for a given rate and order. Worth filing for the std::simd runtime-dispatch technique, not the FEC domain.
+
+## Full digest
+
+- [R] [reddit-saas] The Problem With Using AI to Build Outbound Campaigns — https://www.reddit.com/r/SaaS/comments/1vgswuz/the_problem_with_using_ai_to_build_outbound/ — Reddit post arguing that AI lets you launch the wrong outbound campaign faster, followed by a generic checklist of ICP-research questions. Standard sales advice wrapped in an AI framing.
+- [R] [reddit-saas] Where am I on track compared to other SaaS startups? How to scale? What are good year 1 targets? — https://www.reddit.com/r/SaaS/comments/1vgp4zf/where_am_i_on_track_compared_to_other_saas/ — Solo founder in the trades/construction niche reports $30k revenue over 7 months and $4.4k MRR from 5 clients, asking when to stop taking custom work. A benchmarking question rather than a finding.
+- [R] [reddit-saas] What is your best marketing stories strategies? — https://www.reddit.com/r/SaaS/comments/1vglv76/what_is_your_best_marketing_stories_strategies/ — Open-ended Reddit discussion prompt asking for one piece of marketing advice. No content in the post itself.
+- [R] [reddit-saas] Build a platform for editors — https://www.reddit.com/r/SaaS/comments/1vgxqe1/build_a_platform_for_editors/ — Idea-validation post asking whether a platform for video editors to publish unwatermarked unposted work would be used. No data or product.
+- [R] [reddit-saas] Email sequences for SaaS Cold Outreach — https://www.reddit.com/r/SaaS/comments/1vgxpy5/email_sequences_for_saas_cold_outreach/ — Request for recommended cold outreach email sequences. The post asks for advice and delivers none.
+- [R] [reddit-saas] For people who have deployed their own apps, what was the hardest part? — https://www.reddit.com/r/SaaS/comments/1vgxnkh/for_people_who_have_deployed_their_own_apps_what/ — Survey-style Reddit prompt listing possible deployment pain points (hosting, Docker, databases, env vars, SSL, CI/CD, scaling, prod debugging) and asking readers to pick. No findings in the post.
+- [R] [reddit-saas] I have an offline car rental agency software that manage clients/reservations/stats etc and i wanna sell it in Acquire, I have 0 sales, 0$ dollars in revenue, and I dont know if its gonna be sold or not, any idea on how to sell the whole software fast ? — https://www.reddit.com/r/SaaS/comments/1vgxn6f/i_have_an_offline_car_rental_agency_software_that/ — &amp;#32; submitted by &amp;#32; /u/CoreSafe [link] &amp;#32; [comments]
+- [R] [reddit-saas] If you were going to use a fitness app, would you prefer a web app or a mobile app? — https://www.reddit.com/r/SaaS/comments/1vgxdvp/if_you_were_going_to_use_a_fitness_app_would_you/ — I'm planning to build a fitness app and I'm trying to decide where to launch first. If you had to choose, would you rather use: A web app yo…
+- [R] [reddit-saas] Looking for Order Management / O2C / Customer Service roles - 4.7 years experience - Open to remote — https://www.reddit.com/r/SaaS/comments/1vgwwwy/looking_for_order_management_o2c_customer_service/ — Hey Peeps, I do believe any amount of leads or advice would Help me, I never post on Reddit. But I’m pushed to see if there’s any way to mak…
+- [R] [reddit-saas] What usually causes more rework in your SaaS: bad UI or unresolved product decisions? — https://www.reddit.com/r/SaaS/comments/1vgsmp3/what_usually_causes_more_rework_in_your_saas_bad/ — I have been reviewing a product flow where several screens had already been designed well. The problem was that important behaviour around t…
+- [R] [reddit-saas] I made LinkedIn 7× faster with AI. (Reddit &amp; X coming soon.) (Open Source) Looking for Feedback — https://www.reddit.com/r/SaaS/comments/1vgwslz/i_made_linkedin_7_faster_with_ai_reddit_x_coming/ — LinkedIn and X have incredible professional networks, but accessing them efficiently still requires a premium subscription and a lot of manu…
+- [R] [reddit-saas] An evidence-backed market intelligence platform that finds recurring customer pain points across the internet — https://www.reddit.com/r/SaaS/comments/1vgwrkn/an_evidencebacked_market_intelligence_platform/ — Hi everyone, For the last few weeks I've been building a project called MarketRadar . Live Demo link- market-rader.vercel.app The idea is si…
+- [P] [hn-show] Show HN: SIMD Viterbi Decoder in Rust — https://github.com/brian-armstrong/fec — A rewrite of the 2016 libcorrect C library into Rust, producing a generic templated Viterbi decoder for convolutional codes that dispatches at runtime based on available SIMD instruction sets. Small rates and orders decode entirely in registers; larger codes use acceleration structures. Also includes a tool for finding optimal max-d_free codes for a given rate and order. Worth filing for the std::simd runtime-dispatch technique, not the FEC domain.
+- [R] [neon-blog] How Castform + Neon Beats Frontier Models on Price and Efficiency — https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency — Vendor co-marketing post pairing a Neon customer quote with an unbenchmarked claim about beating frontier models on price and efficiency. No reproducible numbers.
+- [P] [pragmatic-engineer] The Pulse: Bending Spoons' Acquisition Strategy — https://blog.pragmaticengineer.com/the-pulse-bending-spoons-acquisition-strategy/ — Pragmatic Engineer covers Hopin's arc from zero to a $7.7B valuation and back to zero in five years, alongside Bending Spoons' model of acquiring and optimizing mature software products. Business analysis rather than technical news. Useful as a read on how software assets get valued, acquired, and unwound.
+- [P] [latent-space] Jeff, Sanjay, Oriol, and Quoc depart DeepMind; Demis to Chair, Koray to SVP — https://www.latent.space/p/ainews-jeff-sanjay-oriol-and-quoc — Four of Google's most senior research figures — Jeff Dean, Sanjay Ghemawat, Oriol Vinyals, and Quoc Le — are reported to be leaving DeepMind simultaneously, with Demis Hassabis moving to Chair and Koray Kavukcuoglu to SVP. No immediate action follows, but a leadership change of this magnitude is a genuine signal about Gemini roadmap stability. Relevant if you carry model-provider concentration risk on Google.
+- [R] [cloudflare-blog] Cloudflare is the only vendor named a Visionary in 2026 SASE and SSE reports — https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026/ — Cloudflare announcing Gartner Magic Quadrant placement. Pure analyst-award marketing with no technical content.
+- [P] [cloudflare-blog] The Agent Access Model — https://blog.cloudflare.com/the-agent-access-model/ — Cloudflare published an architecture proposal for securing task-scoped agents using strict identity brokering, continuous mediation, and stateful trust. It is a position paper rather than shipping code, so it functions as design vocabulary for reasoning about how much authority to grant a long-running agent. Useful framing alongside WriteGuard, which is the concrete product expression of the same thinking.
+- [R] [cloudflare-blog] How we're rethinking work at Cloudflare with Cloudflare OS — https://blog.cloudflare.com/how-we-use-ai-with-cloudflare-os/ — Cloudflare's internal-journey framing of the same Cloudflare OS launch covered in the primary announcement post. Same underlying story with less technical substance.
+- [P] [cloudflare-blog] Cloudflare OS: an open platform for agents, apps, and work — https://blog.cloudflare.com/cloudflare-os/ — Cloudflare open-sourced Cloudflare OS, a platform for building internal apps, automating work, and giving agents mediated access to internal systems. It is shaped around organizational knowledge and built on their Compute and Zero Trust primitives. Because it is open source and backed by real production use, it is a usable reference implementation for agent-to-internal-system plumbing rather than a demo.
+- [P] [cloudflare-blog] WriteGuard: fine-grained controls for MCP Servers — https://blog.cloudflare.com/mcp-portal-writeguard-private-beta/ — Cloudflare built a policy layer that gates write operations on MCP servers rather than trusting every agent tool call, and is bringing it to Cloudflare MCP server portals in private beta. It was built internally before they expanded write access across their own MCP servers. The pattern — mediate writes at the portal instead of relying on per-agent configuration — is implementable without adopting the product.
+- [M] [cloudflare-blog] Catching rogue AI behavior with identity-aware analytics — https://blog.cloudflare.com/identity-aware-ai-gateway/ — Cloudflare's Identity-aware AI Gateway is now in open beta, with User Insights building a behavioral baseline for each person and agent and flagging insider risk as it appears. Open beta means the detection claims are unvalidated by third parties. Worth tracking rather than adopting: if it matures, it becomes a cheap insider-risk control for agent fleets.
+- [R] [gh-nextjs] Next.js v16.3.1-canary.4 — https://github.com/vercel/next.js/releases/tag/v16.3.1-canary.4 — Canary release containing internal refactors, bench fixes, Turbopack module hoisting changes, a React version bump, and a pre-hydration back-navigation race fix. No user-facing features.
+- [R] [gh-n8n] n8n stable (2.33.5) — https://github.com/n8n-io/n8n/releases/tag/stable — Patch release containing a single editor bug fix for Markdown input focus ordering.
+- [R] [gh-n8n] n8n@2.33.5 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.33.5 — Duplicate of the n8n 2.33.5 stable tag; same single editor focus-order bug fix.
+- [R] [gh-n8n] n8n@2.34.2 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.34.2 — Patch release with two minor editor bug fixes: Markdown input focus ordering and agent tool credential placement in the configuration panel.
+- [R] [gh-n8n] n8n beta (2.34.2) — https://github.com/n8n-io/n8n/releases/tag/beta — Duplicate of the n8n 2.34.2 tag; same two minor editor bug fixes.
+- [R] [val-town-blog] Docfooding: Eating our own documentation — https://blog.val.town/docfooding — Val Town moved its documentation onto Val Town itself. Short, self-referential engineering-culture post with no transferable technique.
+- [P] [supabase-blog] Postgres Changes gets AND filters, new operators, and column selection — https://supabase.com/blog/postgres-changes-filters-and-column-selection — Supabase Realtime's Postgres Changes subscriptions can now combine multiple filters with AND, match on a wider set of operators, and return only selected columns in the payload. Previously the single-filter limit pushed filtering to the client and shipped full rows over the wire. This is a direct reduction in payload size and client-side filtering code for anyone subscribing to row changes.
+- [P] [vercel-changelog] Pause workflows for approval with Chat SDK — https://vercel.com/changelog/chat-sdk-durable-approvals — Vercel added a chat/workflow subpath to the Chat SDK: a single requestApproval call posts an Approve/Deny card and suspends a Workflow SDK run until someone decides. The wait can last seconds or days and survives deploys and restarts, and Thread instances serialize across the workflow boundary. It removes the approvals table, action handler, and polling loop you would otherwise hand-build for human-in-the-loop agent gates.
+- [R] [vercel-changelog] Set your own project avatars — https://vercel.com/changelog/project-avatars — Vercel dashboard now lets you set a project avatar manually instead of deriving it from the production favicon. Cosmetic.
+- [R] [vercel-changelog] New setup page after domain checkout — https://vercel.com/changelog/new-setup-page-after-domain-checkout — Vercel added a post-purchase setup page that tracks domain registration live and offers direct paths to deploy, connect, proxy, or set up email. Minor onboarding UX improvement.
+- [P] [vercel-changelog] Export AI Gateway traces with Vercel Drains — https://vercel.com/changelog/export-ai-gateway-traces-with-vercel-drains — Vercel AI Gateway now emits an OpenTelemetry trace for every request, and Pro/Enterprise teams can export them through Drains to any OTLP/HTTP endpoint, with native integrations for Braintrust, Dash0, Kubiks, Sentry, and Statsig. Prompt and completion content is excluded and sampling is configurable. Pricing is explicit at $0.05 per 1,000 traces per drain plus the standard $0.50/GB Drains transfer rate, which makes agent observability a configuration change rather than a build.
+- [P] [vercel-changelog] Introducing the new v0 API — https://vercel.com/blog/introducing-the-new-v0-api — Vercel released programmatic headless access to v0's app-building agent, now generally available. A prompt generates an app, starts a dev server in a Vercel Sandbox, and returns an embeddable preview URL; each chat is an isolated persistent workspace where v0 reads, edits, and runs files and verifies its own output. Relevant as a building block if you want app scaffolding inside your own product surface, less so if you already drive coding agents directly.
+- [R] [vercel-changelog] AI Gateway is now available on AWS Marketplace — https://vercel.com/changelog/ai-gateway-is-now-available-on-aws-marketplace — Vercel AI Gateway can now be procured through AWS Marketplace as a private offer with annual contract terms plus usage-based pricing beyond the contract. Enterprise procurement plumbing, irrelevant to a solo builder.
+- [R] [vercel-changelog] Muse Spark 1.2 is now available on Vercel AI Gateway — https://vercel.com/changelog/muse-spark-1-2-is-now-available-on-vercel-ai-gateway — from Meta is now available on AI Gateway. It is a coding-focused update to the previous Muse Spark model. While keeping its general capabili…
+- [R] [vercel-changelog] Vercel Sandbox now supports 10,000 concurrent sandboxes and 5,000 vCPUs per minute — https://vercel.com/changelog/vercel-sandbox-now-supports-10-000-concurrent-sandboxes-and-5-000-vcpus-per-minute — We've increased the default quotas for on Pro and Enterprise plans: Vercel Sandbox The higher vCPU allocation rate is possible thanks to a n…
+- [R] [vercel-changelog] Search and buy domains in the dashboard — https://vercel.com/changelog/search-and-buy-domains-in-the-dashboard — You can now search for and purchase domains from the . Vercel dashboard Open the domain search panel from the Buy button in or the + button…
+- [R] [vercel-changelog] Measure time between steps in Vercel Workflows — https://vercel.com/changelog/measure-time-between-steps-in-vercel-workflows — You can now measure the time between any two steps in the trace viewer for and the . Vercel Workflows Workflow SDK Select a step, hold on ma…
+- [R] [vercel-changelog] Full Sandbox egress firewall now available on Hobby plan — https://vercel.com/changelog/full-sandbox-egress-firewall-now-available-on-hobby-plan — All firewall features are now available on the Hobby plan. Vercel Sandbox This brings the same network isolation that protects production wo…</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
