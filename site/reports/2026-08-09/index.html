@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>August 9, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="6 stories cleared the bar, led by Shopify replaced Redis with MySQL for inventory reservations — and it scaled, Breakdown: how Postiz went from $0 to">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-08-09/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="August 9, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="6 stories cleared the bar, led by Shopify replaced Redis with MySQL for inventory reservations — and it scaled, Breakdown: how Postiz went from $0 to">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-08-09/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="August 9, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="6 stories cleared the bar, led by Shopify replaced Redis with MySQL for inventory reservations — and it scaled, Breakdown: how Postiz went from $0 to">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>August 9, 2026 · Report log</span>
+      <span>Aug 9, 2026, 6:25 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>August 9, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>6 stories cleared the bar, led by Shopify replaced Redis with MySQL for inventory reservations — and it scaled, Breakdown: how Postiz went from $0 to $173k MRR, and Grok Imagine Image 2.0 Preview now available on Vercel AI Gateway.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>6 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://shopify.engineering/scaling-inventory-reservations" target="_blank" rel="noopener">Shopify replaced Redis with MySQL for inventory reservations — and it scaled</a></div>
+        <div class="item-takeaway">Shopify Engineering reports it moved inventory reservation state off Redis and back onto MySQL, and the simpler single-datastore design held up at their scale. The takeaway for a one-person shop is the direction of travel: an extra cache tier is often bought before it is needed, and consolidating on the primary database removes a class of consistency bugs plus one more service to operate. If you are about to add Redis purely for reservation or locking semantics, check first whether Postgres/MySQL row locks already cover it.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vjisei/i_studied_how_a_saas_grew_from_0_to_173k_mrr/" target="_blank" rel="noopener">Breakdown: how Postiz went from $0 to $173k MRR</a></div>
+        <div class="item-takeaway">A secondhand but detailed reconstruction of Postiz's growth, assembled from the founder's own podcasts and interviews up to roughly $160k MRR. The load-bearing early move was open-sourcing the product and pushing traffic to GitHub rather than a landing page, then converting the self-host-averse to paid cloud. Worth reading as a distribution pattern if you have a tool that could plausibly be open-core; the later stages are more ordinary churn and pricing work.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/grok-imagine-image-2-0-preview-now-available-on-vercel-ai-gateway" target="_blank" rel="noopener">Grok Imagine Image 2.0 Preview now available on Vercel AI Gateway</a></div>
+        <div class="item-takeaway">xAI's Grok Imagine Image 2.0 Preview is now callable through Vercel AI Gateway via the AI SDK (model id xai/grok-imagine-image-2.0-preview, generateImage). Vercel claims it plans typography and layout together, so text-heavy visuals like posters and infographics keep small text legible, and it supports edit passes that hold subjects consistent across generations. If you generate marketing or social imagery programmatically, this is a one-line model swap to A/B against your current provider, with no new billing relationship needed.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/palamim/starboard" target="_blank" rel="noopener">Show HN: Starboard — a terminal glued to the macOS dock</a></div>
+        <div class="item-takeaway">A small open-source macOS utility that pins a terminal to the dock so project-opening rituals (cd path, then code .) stop requiring a full terminal window and manual window shuffling across desktops. Built by a developer scratching a six-year-old daily annoyance. Marginal but real time saving if you open several editor windows across multiple desktops each morning.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://seg6.space/posts/phone-server/" target="_blank" rel="noopener">My server is a phone now</a></div>
+        <div class="item-takeaway">A builder writeup on running a personal server workload off a phone instead of a VPS or single-board computer, the appeal being a device that already has a battery, a modem and an ARM SoC sitting in a drawer. Useful mainly as a cost and redundancy thought experiment: an old handset is a plausible standby for low-traffic services or an out-of-band watchdog for a rented box. No action tonight, file under cheap failover ideas.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vjgtr1/built_a_shared_business_phone_number_tool_for/" target="_blank" rel="noopener">Ringpost: shared business phone number tool built on Twilio (free beta)</a></div>
+        <div class="item-takeaway">A solo-built shared business phone product on top of Twilio: multiple numbers, IVR, call recording, AI call summaries and missed-call auto-text, priced pay-as-you-go rather than per seat, free during beta. Notable less as a tool to adopt than as a market signal that the &quot;Twilio plus AI summaries, no per-seat fee&quot; wedge is being worked by several builders at once. Worth tracking if you have anything in the voice or calling space.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/crewAIInc/crewAI/releases/tag/1.15.14" target="_blank" rel="noopener">crewAI 1.15.14</a>
+        </div>
+        <div class="item-takeaway">Incremental crewAI point release that splits runtime context from the coding agent and adds a project ID, plus changelog housekeeping. No user-facing capability change described.</div>
+        <div class="item-meta">
+          <span>gh-crewai</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          Show HN: Starboard
+        </div>
+        <div class="item-takeaway">a terminal glued to the macOS dock — https://github.com/palamim/starboard — A small open-source macOS utility that pins a terminal to the dock so project-opening rituals (cd path, then code .) stop requiring a full terminal window and manual window shuffling across desktops. Built by a developer scratching a six-year-old daily annoyance. Marginal but real time saving if you open several editor windows across multiple desktops each morning.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjd7d6/built_a_tool_that_literally_automates_seo/" target="_blank" rel="noopener">Built a tool that automates SEO (Wizible)</a>
+        </div>
+        <div class="item-takeaway">Self-promotional launch post for an SEO article-generation tool. No independent results and no reproducible workflow.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vj7kkz/i_created_an_ar_wifi_visualizer_that_rebuilds/" target="_blank" rel="noopener">AR Wi-Fi visualizer that rebuilds your home in 3D</a>
+        </div>
+        <div class="item-takeaway">Consumer AR side project mapping Wi-Fi coverage onto a 3D home scan. Neat demo, no bearing on a software shop decision.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjisei/i_studied_how_a_saas_grew_from_0_to_173k_mrr/" target="_blank" rel="noopener">Breakdown: how Postiz went from $0 to $173k MRR</a>
+        </div>
+        <div class="item-takeaway">A secondhand but detailed reconstruction of Postiz's growth, assembled from the founder's own podcasts and interviews up to roughly $160k MRR. The load-bearing early move was open-sourcing the product and pushing traffic to GitHub rather than a landing page, then converting the self-host-averse to paid cloud. Worth reading as a distribution pattern if you have a tool that could plausibly be open-core; the later stages are more ordinary churn and pricing work.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjgtr1/built_a_shared_business_phone_number_tool_for/" target="_blank" rel="noopener">Ringpost: shared business phone number tool built on Twilio (free beta)</a>
+        </div>
+        <div class="item-takeaway">A solo-built shared business phone product on top of Twilio: multiple numbers, IVR, call recording, AI call summaries and missed-call auto-text, priced pay-as-you-go rather than per seat, free during beta. Notable less as a tool to adopt than as a market signal that the &quot;Twilio plus AI summaries, no per-seat fee&quot; wedge is being worked by several builders at once. Worth tracking if you have anything in the voice or calling space.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjfln8/built_a_family_tree_web_application_for_my_family/" target="_blank" rel="noopener">Built a family tree web application</a>
+        </div>
+        <div class="item-takeaway">Personal side project digitizing a handwritten family tree. No transferable technique or market insight.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjjh32/i_spent_way_too_much_time_building_features/" target="_blank" rel="noopener">I spent too much time building features nobody asked for</a>
+        </div>
+        <div class="item-takeaway">Familiar founder reflection: shipping features felt productive while talking to users actually moved the business. True, but well-trodden advice with no new evidence attached.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vj20if/this_thread_makes_me_very_sad/" target="_blank" rel="noopener">This thread makes me very sad</a>
+        </div>
+        <div class="item-takeaway">It seems like all I see is everyone else succeeding and sharing their successes. Or, that's all that reach me. For someone who is working full time in a miserable job and trying to build something successful of their own, it just feels like…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjfhxc/what_tasks_are_you_still_doing_manually_that_you/" target="_blank" rel="noopener">What tasks are you still doing manually that you wish AI could handle?</a>
+        </div>
+        <div class="item-takeaway">Hey everyone, We’re exploring an idea around AI automation, and before we build too much, we want to understand whether this is actually a problem people are facing. The idea is simple: use AI to automate repetitive tasks that still require…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjhk87/better_llm_wrapper_for_my_app/" target="_blank" rel="noopener">Better LLM wrapper for my app</a>
+        </div>
+        <div class="item-takeaway">I built my app on top of Claude. It uses Opus 4.8. It's an agent for CPG companies. Question is, will ChatGPT be better at this? The app helps sales leads strategize and get into more doors faster. &amp;#32; submitted by &amp;#32; /u/Mundane-Fold-2…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vj56bs/my_niche_saas_app_is_profitable_1_month_after/" target="_blank" rel="noopener">My Niche SaaS App is Profitable, 1 Month After Launch</a>
+        </div>
+        <div class="item-takeaway">I'll get right to it... just over a month after I soft-launched my niche SaaS app, I am profitable. I started building the app at the beginning of 2026 just as an app to help me with a problem that I had. Several months later I got some ear…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjdssy/today_someone_paid_for_the_app_i_built/" target="_blank" rel="noopener">Today, someone paid for the app I built. 🥹</a>
+        </div>
+        <div class="item-takeaway">I honestly didn’t expect this moment to hit this hard. Today I got my first-ever paid user for an app I’ve been building called Smart Jyotish AI . NPR 299 (~$2.20). For some people, $2 might be nothing. But for me, this is huge. I’m not a p…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vj6vyu/how_do_you_deal_with_getting_bored_and_losing/" target="_blank" rel="noopener">How do you deal with getting &quot;bored&quot; and losing trust in your app right before launch?</a>
+        </div>
+        <div class="item-takeaway">Hey everyone, I keep running into the exact same problem with every app or SaaS I build: 1. Research &amp; Validation: I find a product people are already paying for. I plan to build a better version that fixes competitor flaws. 2. Deep Focus:…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjjckt/got_rejected_by_paddle_twice_with_the_exact_same/" target="_blank" rel="noopener">Got rejected by Paddle twice with the exact same email. Still not sure what I did wrong .</a>
+        </div>
+        <div class="item-takeaway">So I built a small AI writing tool. You paste in what you know about someone and it writes a few versions of a message you could send them. It doesn't send anything, there's no contact list, no scraping. It just writes text. Applied to Padd…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1viwlmo/founders_who_launched_on_product_hunt_microlaunch/" target="_blank" rel="noopener">Founders who launched on Product Hunt, MicroLaunch, Uneed, etc. Was it actually worth it?</a>
+        </div>
+        <div class="item-takeaway">I've been looking at all the different places founders launch their products Product Hunt, MicroLaunch, Uneed, PeerPush, BetaList and the dozens of smaller directories. Most of them advertise visibility, backlinks, SEO benefits, featured sp…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjf3ge/looking_for_some_clients_to_automate_their/" target="_blank" rel="noopener">Looking for some Clients to automate their Business</a>
+        </div>
+        <div class="item-takeaway">I'm an AI agent developer having knowledge of RAG, multi-agent systems, memory architecture, etc. I'm looking for some clients to whom I can help their business by building the Agents for them to automate their work. I have experience in bu…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjit63/i_boosted_my_client_revenue_by_3x/" target="_blank" rel="noopener">I boosted my client revenue by 3x</a>
+        </div>
+        <div class="item-takeaway">My client was struggling with revenue and wasn't getting enough customers despite having a solid product. We started working on their AEO and making sure their product was visible when people searched for solutions through ChatGPT, Claude,…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjie29/agentcn_installable_ai_agents/" target="_blank" rel="noopener">Agentcn | Installable AI Agents</a>
+        </div>
+        <div class="item-takeaway">Hey everyone 👋 I just launched AgentCN An open-source library of installable, customizable AI agents for modern applications. - One-command installation - Own the agent code - Fully customizable Would love for you to check it out and share…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vje5st/i_got_130k_views_asking_for_help_heres_what_i/" target="_blank" rel="noopener">I got 130k views asking for help. Here's what I actually did with the feedback.</a>
+        </div>
+        <div class="item-takeaway">A few weeks ago I posted here completely stuck. I had spent 10 months building ChatSorter, an AI memory layer for chatbots, and couldn't get many people to try the demo. 130k views later, the feedback was harsh but exactly what I needed. Th…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjdtx4/i_built_a_changelog_that_writes_itself_from_my/" target="_blank" rel="noopener">I built a changelog that writes itself from my GitHub merges</a>
+        </div>
+        <div class="item-takeaway">Like every dev here, I ship constantly and announce nothing. My changelog was 8 months stale because writing release notes feels like homework. So I built Bellnote. Connect your GitHub repo, and every merged PR gets turned into a changelog…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjhnsd/got_tired_of_useless_startups_made_an_app_that/" target="_blank" rel="noopener">Got tired of useless startups... made an app that helps people save money</a>
+        </div>
+        <div class="item-takeaway">Currently in university and I keep seeing friends spending like crazy on stupid things. It's very sad and I wasn't really sure how to help them out. One of the people I hang out with had heard of this idea called Prize Linked Savings from t…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vj5tpd/what_idea_sparked_you_saas_product/" target="_blank" rel="noopener">What idea sparked you SaaS product ?</a>
+        </div>
+        <div class="item-takeaway">I’ve launched a SaaS recently. I’ve built the app and now we’re doing research and collecting feedback from our target audience to help develop ours better. My question is did most of you guys build a tool that was really to help yourself t…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1viuhbg/100_usersday_but_nobody_will_pay/" target="_blank" rel="noopener">100+ users/day, but nobody will pay!</a>
+        </div>
+        <div class="item-takeaway">I launched CountdownShare around 8 months ago, and now 100+ countdowns are being created every day, mostly from organic traffic. The product is already monetized with a monthly Pro plan, and a lifetime plan. The problem is… almost nobody pa…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.3.1-canary.9" target="_blank" rel="noopener">Next.js v16.3.1-canary.9</a>
+        </div>
+        <div class="item-takeaway">Canary build with internal Turbopack fixes, a removed trace span and a docs example update. Pre-release channel, nothing actionable for a production app.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/grok-imagine-image-2-0-preview-now-available-on-vercel-ai-gateway" target="_blank" rel="noopener">Grok Imagine Image 2.0 Preview now available on Vercel AI Gateway</a>
+        </div>
+        <div class="item-takeaway">xAI's Grok Imagine Image 2.0 Preview is now callable through Vercel AI Gateway via the AI SDK (model id xai/grok-imagine-image-2.0-preview, generateImage). Vercel claims it plans typography and layout together, so text-heavy visuals like posters and infographics keep small text legible, and it supports edit passes that hold subjects consistent across generations. If you generate marketing or social imagery programmatically, this is a one-line model swap to A/B against your current provider, with no new billing relationship needed.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://seg6.space/posts/phone-server/" target="_blank" rel="noopener">My server is a phone now</a>
+        </div>
+        <div class="item-takeaway">A builder writeup on running a personal server workload off a phone instead of a VPS or single-board computer, the appeal being a device that already has a battery, a modem and an ARM SoC sitting in a drawer. Useful mainly as a cost and redundancy thought experiment: an old handset is a plausible standby for low-traffic services or an out-of-band watchdog for a rented box. No action tonight, file under cheap failover ideas.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://os8088.com/" target="_blank" rel="noopener">Os8088: a Mac-like OS for the IBM XT, 286 and 386</a>
+        </div>
+        <div class="item-takeaway">Impressive retrocomputing project building a graphical OS for 8088-era hardware. Hobbyist interest only.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621" target="_blank" rel="noopener">Melatonin impairs morning cognition in healthy young adults (2023)</a>
+        </div>
+        <div class="item-takeaway">Sleep-research conference abstract from 2023, outside the scope of a builder briefing.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="http://longbets.org/601/" target="_blank" rel="noopener">The original URL for this prediction will no longer be available in 11 years (2011)</a>
+        </div>
+        <div class="item-takeaway">A fifteen-year-old Long Bets entry about link rot, resurfaced for its irony. No action.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.redblobgames.com/pathfinding/heuristics/differential.html" target="_blank" rel="noopener">Improving heuristics for A* pathfinding</a>
+        </div>
+        <div class="item-takeaway">A well-made technical explainer on differential heuristics for A*. Excellent reference if you are writing pathfinding code, irrelevant otherwise.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          Shopify replaced Redis with MySQL for inventory reservations
+        </div>
+        <div class="item-takeaway">and it scaled — https://shopify.engineering/scaling-inventory-reservations — Shopify Engineering reports it moved inventory reservation state off Redis and back onto MySQL, and the simpler single-datastore design held up at their scale. The takeaway for a one-person shop is the direction of travel: an extra cache tier is often bought before it is needed, and consolidating on the primary database removes a class of consistency bugs plus one more service to operate. If you are about to add Redis purely for reservation or locking semantics, check first whether Postgres/MySQL row locks already cover it.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.fastmail.com/blog/fastmail-offers-eu-data-region/" target="_blank" rel="noopener">Fastmail offers EU data region</a>
+        </div>
+        <div class="item-takeaway">Fastmail offers EU data region</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.andrewt.net/dithered-qr-codes/wtf/" target="_blank" rel="noopener">Dithered QR Codes</a>
+        </div>
+        <div class="item-takeaway">Dithered QR Codes</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.nature.com/articles/s44184-025-00171-5" target="_blank" rel="noopener">Unexpected events and prosocial behavior: the Batman effect (2025)</a>
+        </div>
+        <div class="item-takeaway">Unexpected events and prosocial behavior: the Batman effect (2025)</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://specification.website/spec/foundations/for-sale-dns/" target="_blank" rel="noopener">_for-sale DNS records</a>
+        </div>
+        <div class="item-takeaway">_for-sale DNS records</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.experimental-history.com/p/incentives-are-for-losers" target="_blank" rel="noopener">Incentives are for losers</a>
+        </div>
+        <div class="item-takeaway">Incentives are for losers</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://eclipsefan.org/?v=2&amp;t=max&amp;layers=eclipse%2Cbesselian%2Cumbra-live%2Cshadow-3d%2Ccloud-projection%2Cosm&amp;lat=43.4623&amp;lon=-3.8099&amp;opacity=besselian%3A0.2%2Cumbra-live%3A0.2&amp;zoom=6&amp;palier=minute" target="_blank" rel="noopener">Open-source interactive map for the Aug 12 total solar eclipse</a>
+        </div>
+        <div class="item-takeaway">Open-source interactive map for the Aug 12 total solar eclipse</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="http://www.davetech.co.uk/difficultycurves" target="_blank" rel="noopener">Making difficulty curves in games</a>
+        </div>
+        <div class="item-takeaway">Making difficulty curves in games</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://daringfireball.net/2026/08/retraction_app_store_rejection_of_the_week" target="_blank" rel="noopener">Retraction: The App Store Rejection of the Week That Was a Correct Rejection</a>
+        </div>
+        <div class="item-takeaway">Thread for original post: https:&amp;#x2F;&amp;#x2F;news.ycombinator.com&amp;#x2F;item?id=49214863</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: a714d42a-b497-4df6-8691-49f7d33aabc4
+Started: 2026-08-09T10:21:26.624Z
+Completed: 2026-08-09T10:25:58.147Z
+
+## Worth attention
+
+- **Shopify replaced Redis with MySQL for inventory reservations — and it scaled**
+  https://shopify.engineering/scaling-inventory-reservations
+  Shopify Engineering reports it moved inventory reservation state off Redis and back onto MySQL, and the simpler single-datastore design held up at their scale. The takeaway for a one-person shop is the direction of travel: an extra cache tier is often bought before it is needed, and consolidating on the primary database removes a class of consistency bugs plus one more service to operate. If you are about to add Redis purely for reservation or locking semantics, check first whether Postgres/MySQL row locks already cover it.
+- **Breakdown: how Postiz went from $0 to $173k MRR**
+  https://www.reddit.com/r/SaaS/comments/1vjisei/i_studied_how_a_saas_grew_from_0_to_173k_mrr/
+  A secondhand but detailed reconstruction of Postiz's growth, assembled from the founder's own podcasts and interviews up to roughly $160k MRR. The load-bearing early move was open-sourcing the product and pushing traffic to GitHub rather than a landing page, then converting the self-host-averse to paid cloud. Worth reading as a distribution pattern if you have a tool that could plausibly be open-core; the later stages are more ordinary churn and pricing work.
+- **Grok Imagine Image 2.0 Preview now available on Vercel AI Gateway**
+  https://vercel.com/changelog/grok-imagine-image-2-0-preview-now-available-on-vercel-ai-gateway
+  xAI's Grok Imagine Image 2.0 Preview is now callable through Vercel AI Gateway via the AI SDK (model id xai/grok-imagine-image-2.0-preview, generateImage). Vercel claims it plans typography and layout together, so text-heavy visuals like posters and infographics keep small text legible, and it supports edit passes that hold subjects consistent across generations. If you generate marketing or social imagery programmatically, this is a one-line model swap to A/B against your current provider, with no new billing relationship needed.
+- **Show HN: Starboard — a terminal glued to the macOS dock**
+  https://github.com/palamim/starboard
+  A small open-source macOS utility that pins a terminal to the dock so project-opening rituals (cd path, then code .) stop requiring a full terminal window and manual window shuffling across desktops. Built by a developer scratching a six-year-old daily annoyance. Marginal but real time saving if you open several editor windows across multiple desktops each morning.
+- **My server is a phone now**
+  https://seg6.space/posts/phone-server/
+  A builder writeup on running a personal server workload off a phone instead of a VPS or single-board computer, the appeal being a device that already has a battery, a modem and an ARM SoC sitting in a drawer. Useful mainly as a cost and redundancy thought experiment: an old handset is a plausible standby for low-traffic services or an out-of-band watchdog for a rented box. No action tonight, file under cheap failover ideas.
+- **Ringpost: shared business phone number tool built on Twilio (free beta)**
+  https://www.reddit.com/r/SaaS/comments/1vjgtr1/built_a_shared_business_phone_number_tool_for/
+  A solo-built shared business phone product on top of Twilio: multiple numbers, IVR, call recording, AI call summaries and missed-call auto-text, priced pay-as-you-go rather than per seat, free during beta. Notable less as a tool to adopt than as a market signal that the &quot;Twilio plus AI summaries, no per-seat fee&quot; wedge is being worked by several builders at once. Worth tracking if you have anything in the voice or calling space.
+
+## Full digest
+
+- [R] [gh-crewai] crewAI 1.15.14 — https://github.com/crewAIInc/crewAI/releases/tag/1.15.14 — Incremental crewAI point release that splits runtime context from the coding agent and adds a project ID, plus changelog housekeeping. No user-facing capability change described.
+- [P] [hn-show] Show HN: Starboard — a terminal glued to the macOS dock — https://github.com/palamim/starboard — A small open-source macOS utility that pins a terminal to the dock so project-opening rituals (cd path, then code .) stop requiring a full terminal window and manual window shuffling across desktops. Built by a developer scratching a six-year-old daily annoyance. Marginal but real time saving if you open several editor windows across multiple desktops each morning.
+- [R] [reddit-saas] Built a tool that automates SEO (Wizible) — https://www.reddit.com/r/SaaS/comments/1vjd7d6/built_a_tool_that_literally_automates_seo/ — Self-promotional launch post for an SEO article-generation tool. No independent results and no reproducible workflow.
+- [R] [reddit-saas] AR Wi-Fi visualizer that rebuilds your home in 3D — https://www.reddit.com/r/SaaS/comments/1vj7kkz/i_created_an_ar_wifi_visualizer_that_rebuilds/ — Consumer AR side project mapping Wi-Fi coverage onto a 3D home scan. Neat demo, no bearing on a software shop decision.
+- [P] [reddit-saas] Breakdown: how Postiz went from $0 to $173k MRR — https://www.reddit.com/r/SaaS/comments/1vjisei/i_studied_how_a_saas_grew_from_0_to_173k_mrr/ — A secondhand but detailed reconstruction of Postiz's growth, assembled from the founder's own podcasts and interviews up to roughly $160k MRR. The load-bearing early move was open-sourcing the product and pushing traffic to GitHub rather than a landing page, then converting the self-host-averse to paid cloud. Worth reading as a distribution pattern if you have a tool that could plausibly be open-core; the later stages are more ordinary churn and pricing work.
+- [M] [reddit-saas] Ringpost: shared business phone number tool built on Twilio (free beta) — https://www.reddit.com/r/SaaS/comments/1vjgtr1/built_a_shared_business_phone_number_tool_for/ — A solo-built shared business phone product on top of Twilio: multiple numbers, IVR, call recording, AI call summaries and missed-call auto-text, priced pay-as-you-go rather than per seat, free during beta. Notable less as a tool to adopt than as a market signal that the &quot;Twilio plus AI summaries, no per-seat fee&quot; wedge is being worked by several builders at once. Worth tracking if you have anything in the voice or calling space.
+- [R] [reddit-saas] Built a family tree web application — https://www.reddit.com/r/SaaS/comments/1vjfln8/built_a_family_tree_web_application_for_my_family/ — Personal side project digitizing a handwritten family tree. No transferable technique or market insight.
+- [R] [reddit-saas] I spent too much time building features nobody asked for — https://www.reddit.com/r/SaaS/comments/1vjjh32/i_spent_way_too_much_time_building_features/ — Familiar founder reflection: shipping features felt productive while talking to users actually moved the business. True, but well-trodden advice with no new evidence attached.
+- [R] [reddit-saas] This thread makes me very sad — https://www.reddit.com/r/SaaS/comments/1vj20if/this_thread_makes_me_very_sad/ — It seems like all I see is everyone else succeeding and sharing their successes. Or, that's all that reach me. For someone who is working full time in a miserable job and trying to build something successful of their own, it just feels like…
+- [R] [reddit-saas] What tasks are you still doing manually that you wish AI could handle? — https://www.reddit.com/r/SaaS/comments/1vjfhxc/what_tasks_are_you_still_doing_manually_that_you/ — Hey everyone, We’re exploring an idea around AI automation, and before we build too much, we want to understand whether this is actually a problem people are facing. The idea is simple: use AI to automate repetitive tasks that still require…
+- [R] [reddit-saas] Better LLM wrapper for my app — https://www.reddit.com/r/SaaS/comments/1vjhk87/better_llm_wrapper_for_my_app/ — I built my app on top of Claude. It uses Opus 4.8. It's an agent for CPG companies. Question is, will ChatGPT be better at this? The app helps sales leads strategize and get into more doors faster. &amp;#32; submitted by &amp;#32; /u/Mundane-Fold-2…
+- [R] [reddit-saas] My Niche SaaS App is Profitable, 1 Month After Launch — https://www.reddit.com/r/SaaS/comments/1vj56bs/my_niche_saas_app_is_profitable_1_month_after/ — I'll get right to it... just over a month after I soft-launched my niche SaaS app, I am profitable. I started building the app at the beginning of 2026 just as an app to help me with a problem that I had. Several months later I got some ear…
+- [R] [reddit-saas] Today, someone paid for the app I built. 🥹 — https://www.reddit.com/r/SaaS/comments/1vjdssy/today_someone_paid_for_the_app_i_built/ — I honestly didn’t expect this moment to hit this hard. Today I got my first-ever paid user for an app I’ve been building called Smart Jyotish AI . NPR 299 (~$2.20). For some people, $2 might be nothing. But for me, this is huge. I’m not a p…
+- [R] [reddit-saas] How do you deal with getting &quot;bored&quot; and losing trust in your app right before launch? — https://www.reddit.com/r/SaaS/comments/1vj6vyu/how_do_you_deal_with_getting_bored_and_losing/ — Hey everyone, I keep running into the exact same problem with every app or SaaS I build: 1. Research &amp; Validation: I find a product people are already paying for. I plan to build a better version that fixes competitor flaws. 2. Deep Focus:…
+- [R] [reddit-saas] Got rejected by Paddle twice with the exact same email. Still not sure what I did wrong . — https://www.reddit.com/r/SaaS/comments/1vjjckt/got_rejected_by_paddle_twice_with_the_exact_same/ — So I built a small AI writing tool. You paste in what you know about someone and it writes a few versions of a message you could send them. It doesn't send anything, there's no contact list, no scraping. It just writes text. Applied to Padd…
+- [R] [reddit-saas] Founders who launched on Product Hunt, MicroLaunch, Uneed, etc. Was it actually worth it? — https://www.reddit.com/r/SaaS/comments/1viwlmo/founders_who_launched_on_product_hunt_microlaunch/ — I've been looking at all the different places founders launch their products Product Hunt, MicroLaunch, Uneed, PeerPush, BetaList and the dozens of smaller directories. Most of them advertise visibility, backlinks, SEO benefits, featured sp…
+- [R] [reddit-saas] Looking for some Clients to automate their Business — https://www.reddit.com/r/SaaS/comments/1vjf3ge/looking_for_some_clients_to_automate_their/ — I'm an AI agent developer having knowledge of RAG, multi-agent systems, memory architecture, etc. I'm looking for some clients to whom I can help their business by building the Agents for them to automate their work. I have experience in bu…
+- [R] [reddit-saas] I boosted my client revenue by 3x — https://www.reddit.com/r/SaaS/comments/1vjit63/i_boosted_my_client_revenue_by_3x/ — My client was struggling with revenue and wasn't getting enough customers despite having a solid product. We started working on their AEO and making sure their product was visible when people searched for solutions through ChatGPT, Claude,…
+- [R] [reddit-saas] Agentcn | Installable AI Agents — https://www.reddit.com/r/SaaS/comments/1vjie29/agentcn_installable_ai_agents/ — Hey everyone 👋 I just launched AgentCN An open-source library of installable, customizable AI agents for modern applications. - One-command installation - Own the agent code - Fully customizable Would love for you to check it out and share…
+- [R] [reddit-saas] I got 130k views asking for help. Here's what I actually did with the feedback. — https://www.reddit.com/r/SaaS/comments/1vje5st/i_got_130k_views_asking_for_help_heres_what_i/ — A few weeks ago I posted here completely stuck. I had spent 10 months building ChatSorter, an AI memory layer for chatbots, and couldn't get many people to try the demo. 130k views later, the feedback was harsh but exactly what I needed. Th…
+- [R] [reddit-saas] I built a changelog that writes itself from my GitHub merges — https://www.reddit.com/r/SaaS/comments/1vjdtx4/i_built_a_changelog_that_writes_itself_from_my/ — Like every dev here, I ship constantly and announce nothing. My changelog was 8 months stale because writing release notes feels like homework. So I built Bellnote. Connect your GitHub repo, and every merged PR gets turned into a changelog…
+- [R] [reddit-saas] Got tired of useless startups... made an app that helps people save money — https://www.reddit.com/r/SaaS/comments/1vjhnsd/got_tired_of_useless_startups_made_an_app_that/ — Currently in university and I keep seeing friends spending like crazy on stupid things. It's very sad and I wasn't really sure how to help them out. One of the people I hang out with had heard of this idea called Prize Linked Savings from t…
+- [R] [reddit-saas] What idea sparked you SaaS product ? — https://www.reddit.com/r/SaaS/comments/1vj5tpd/what_idea_sparked_you_saas_product/ — I’ve launched a SaaS recently. I’ve built the app and now we’re doing research and collecting feedback from our target audience to help develop ours better. My question is did most of you guys build a tool that was really to help yourself t…
+- [R] [reddit-saas] 100+ users/day, but nobody will pay! — https://www.reddit.com/r/SaaS/comments/1viuhbg/100_usersday_but_nobody_will_pay/ — I launched CountdownShare around 8 months ago, and now 100+ countdowns are being created every day, mostly from organic traffic. The product is already monetized with a monthly Pro plan, and a lifetime plan. The problem is… almost nobody pa…
+- [R] [gh-nextjs] Next.js v16.3.1-canary.9 — https://github.com/vercel/next.js/releases/tag/v16.3.1-canary.9 — Canary build with internal Turbopack fixes, a removed trace span and a docs example update. Pre-release channel, nothing actionable for a production app.
+- [P] [vercel-changelog] Grok Imagine Image 2.0 Preview now available on Vercel AI Gateway — https://vercel.com/changelog/grok-imagine-image-2-0-preview-now-available-on-vercel-ai-gateway — xAI's Grok Imagine Image 2.0 Preview is now callable through Vercel AI Gateway via the AI SDK (model id xai/grok-imagine-image-2.0-preview, generateImage). Vercel claims it plans typography and layout together, so text-heavy visuals like posters and infographics keep small text legible, and it supports edit passes that hold subjects consistent across generations. If you generate marketing or social imagery programmatically, this is a one-line model swap to A/B against your current provider, with no new billing relationship needed.
+- [P] [hn-top] My server is a phone now — https://seg6.space/posts/phone-server/ — A builder writeup on running a personal server workload off a phone instead of a VPS or single-board computer, the appeal being a device that already has a battery, a modem and an ARM SoC sitting in a drawer. Useful mainly as a cost and redundancy thought experiment: an old handset is a plausible standby for low-traffic services or an out-of-band watchdog for a rented box. No action tonight, file under cheap failover ideas.
+- [R] [hn-top] Os8088: a Mac-like OS for the IBM XT, 286 and 386 — https://os8088.com/ — Impressive retrocomputing project building a graphical OS for 8088-era hardware. Hobbyist interest only.
+- [R] [hn-top] Melatonin impairs morning cognition in healthy young adults (2023) — https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621 — Sleep-research conference abstract from 2023, outside the scope of a builder briefing.
+- [R] [hn-top] The original URL for this prediction will no longer be available in 11 years (2011) — http://longbets.org/601/ — A fifteen-year-old Long Bets entry about link rot, resurfaced for its irony. No action.
+- [R] [hn-top] Improving heuristics for A* pathfinding — https://www.redblobgames.com/pathfinding/heuristics/differential.html — A well-made technical explainer on differential heuristics for A*. Excellent reference if you are writing pathfinding code, irrelevant otherwise.
+- [P] [hn-top] Shopify replaced Redis with MySQL for inventory reservations — and it scaled — https://shopify.engineering/scaling-inventory-reservations — Shopify Engineering reports it moved inventory reservation state off Redis and back onto MySQL, and the simpler single-datastore design held up at their scale. The takeaway for a one-person shop is the direction of travel: an extra cache tier is often bought before it is needed, and consolidating on the primary database removes a class of consistency bugs plus one more service to operate. If you are about to add Redis purely for reservation or locking semantics, check first whether Postgres/MySQL row locks already cover it.
+- [R] [hn-top] Fastmail offers EU data region — https://www.fastmail.com/blog/fastmail-offers-eu-data-region/ — Fastmail offers EU data region
+- [R] [hn-top] Dithered QR Codes — https://www.andrewt.net/dithered-qr-codes/wtf/ — Dithered QR Codes
+- [R] [hn-top] Unexpected events and prosocial behavior: the Batman effect (2025) — https://www.nature.com/articles/s44184-025-00171-5 — Unexpected events and prosocial behavior: the Batman effect (2025)
+- [R] [hn-top] _for-sale DNS records — https://specification.website/spec/foundations/for-sale-dns/ — _for-sale DNS records
+- [R] [hn-top] Incentives are for losers — https://www.experimental-history.com/p/incentives-are-for-losers — Incentives are for losers
+- [R] [hn-top] Open-source interactive map for the Aug 12 total solar eclipse — https://eclipsefan.org/?v=2&amp;t=max&amp;layers=eclipse%2Cbesselian%2Cumbra-live%2Cshadow-3d%2Ccloud-projection%2Cosm&amp;lat=43.4623&amp;lon=-3.8099&amp;opacity=besselian%3A0.2%2Cumbra-live%3A0.2&amp;zoom=6&amp;palier=minute — Open-source interactive map for the Aug 12 total solar eclipse
+- [R] [hn-top] Making difficulty curves in games — http://www.davetech.co.uk/difficultycurves — Making difficulty curves in games
+- [R] [hn-top] Retraction: The App Store Rejection of the Week That Was a Correct Rejection — https://daringfireball.net/2026/08/retraction_app_store_rejection_of_the_week — Thread for original post: https:&amp;#x2F;&amp;#x2F;news.ycombinator.com&amp;#x2F;item?id=49214863</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
