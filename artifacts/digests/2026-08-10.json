@@ -1,0 +1,149 @@
+{
+  "date": "2026-08-10",
+  "generated_at": "2026-08-10T06:14:15.648Z",
+  "imported_from": {
+    "importer_version": "digest-import/v1",
+    "source_artifact": "artifacts/synthesized/2026-08-10.json",
+    "source_sha256": "7acbdbf3a969b8213f21ba0f76608dfd1f721374ff678da607cc3fac6b0d0128"
+  },
+  "items": [
+    {
+      "builder_takeaway": "Silent, unrecoverable data loss in a tool nearly every developer runs daily, with a concrete fix and a one-line mitigation.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "cf632024-1d79-478a-8354-1907bc4d4e76",
+      "importance": "lead",
+      "labels": [
+        "reproducible",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "michael.stapelberg.ch",
+      "source_facts": [
+        "A Zsh bug introduced in 2015 (Zsh 5.4) silently truncates ~/.zsh_history when HISTFILE/HISTSIZE are exported from another shell; fixed in Zsh 5.9.2 released 2026-07-12."
+      ],
+      "title": "Tracking down a Zsh history data loss bug",
+      "uncertainty": "Whether every affected setup needs the 5.9.2 upgrade or whether unexporting HISTFILE alone is sufficient mitigation is not fully spelled out.",
+      "url": "https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/"
+    },
+    {
+      "builder_takeaway": "Concrete failure mode for anyone running multi-agent coding pipelines, with a cheap structural mitigation.",
+      "category": "AI Operations / Agent Control",
+      "id": "a4893c37-3302-4e58-a07f-dd4d334056ab",
+      "importance": "supporting",
+      "labels": [
+        "builder_reported",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A two-agent planner/implementer pipeline produced and self-approved an invoice rounding bug that was only caught by a separate non-LLM diff review gate before merge."
+      ],
+      "title": "Multi agent coding almost shipped a billing bug for us",
+      "uncertainty": "Single anonymous team report with no measured error rate; unclear how often the review gate catches this class of bug versus how often it produces noise.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/"
+    },
+    {
+      "builder_takeaway": "Real production debugging narrative; useful methodology reference even though it changes no immediate decision.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "4d538d11-b320-410b-be25-6ada7bcf92df",
+      "importance": "supporting",
+      "labels": [
+        "production_proven",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "medium.com",
+      "source_facts": [
+        "Pinterest engineering diagnosed a production CPU bottleneck caused by accumulating zombie processes and documented the debugging methodology."
+      ],
+      "title": "Finding zombies in our systems: A real-world story of CPU bottlenecks",
+      "uncertainty": "Article body was not fetched; summary is derived from the title and source. Depth and transferability of the methodology unverified.",
+      "url": "https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb"
+    },
+    {
+      "builder_takeaway": "A native x64 port of Microsoft Word for Windows 1.1a, published on GitHub. Technically impressive retro-computing work but carries no practical leverage for a solo builder — nothing here changes a tool choice, a cost, or a risk.",
+      "category": "Tools Worth Testing",
+      "id": "d70565bc-1ae3-466d-b77d-93638ff64163",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "A developer published a native x64 port of Microsoft Word for Windows 1.1a on GitHub."
+      ],
+      "title": "Microsoft Word for Windows 1.1a, Native X64 Port",
+      "uncertainty": "Repository contents not inspected; scope and completeness of the port unverified.",
+      "url": "https://github.com/jmarshall23/msword"
+    },
+    {
+      "builder_takeaway": "A founder asking r/SaaS how to approach their first 10 ICP-matched prospects for a churn-prevention tool. No findings, no data, no result — a request for advice rather than a report of anything that happened.",
+      "category": "Small Business Automation",
+      "id": "45abc885-74f5-42f5-8008-cddffc4fc57a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A solo founder is asking for advice on how to approach their first 10 prospects for a churn-prevention SaaS."
+      ],
+      "title": "My product is finally ready. Now I'm nervous about reaching out to my first 10 companies",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vjm88v/my_product_is_finally_ready_now_im_nervous_about/"
+    },
+    {
+      "builder_takeaway": "A poll asking r/SaaS to pick between light and dark versions of the same interface. Pure engagement bait with no findings, data, or transferable lesson.",
+      "category": "Tools Worth Testing",
+      "id": "e417905f-2750-4a55-aa28-b851c517af4f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A builder posted light and dark variants of the same SaaS UI and asked readers which they would use."
+      ],
+      "title": "Built the same SaaS UI in light + dark mode, which one would you actually use?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vjm1rt/built_the_same_saas_ui_in_light_dark_mode_which/"
+    },
+    {
+      "builder_takeaway": "BBC Future consumer-health article on knuckle cracking. Entirely outside the brief for a solo developer deciding what deserves attention tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "56bda694-6054-4e99-91f4-965c232a924d",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "bbc.com",
+      "source_facts": [
+        "BBC Future published a consumer-health article examining whether knuckle cracking is harmful."
+      ],
+      "title": "Should you stop cracking your knuckles?",
+      "uncertainty": "",
+      "url": "https://www.bbc.com/future/article/20260807-should-i-stop-cracking-my-knuckles"
+    }
+  ],
+  "mode": "primary",
+  "run_id": "701d0458-98d6-40e0-98fd-9543c0623505",
+  "status": "completed",
+  "summary": "Synthesized Nightly Librarian run with 3 promoted item(s), 7 scored item(s), and 4 rejected item(s).",
+  "title": "Nightly Librarian - 2026-08-10"
+}

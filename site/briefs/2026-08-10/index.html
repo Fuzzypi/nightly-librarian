@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>August 10, 2026 — The Nightly Librarian</title>
+  <meta name="description" content="Tonight's brief tracks Data Infrastructure / Verification / Scraping and AI Operations / Agent Control.">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/briefs/2026-08-10/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="August 10, 2026 | The Nightly Librarian">
+  <meta property="og:description" content="Tonight's brief tracks Data Infrastructure / Verification / Scraping and AI Operations / Agent Control.">
+  <meta property="og:url" content="https://thenightlylibrarian.com/briefs/2026-08-10/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og/data-infrastructure-verification-scraping.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="August 10, 2026 | The Nightly Librarian">
+  <meta name="twitter:description" content="Tonight's brief tracks Data Infrastructure / Verification / Scraping and AI Operations / Agent Control.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og/data-infrastructure-verification-scraping.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Tracking down a Zsh history data loss bug","description":"Tonight's brief tracks Data Infrastructure / Verification / Scraping and AI Operations / Agent Control. Synthesized Nightly Librarian run with 3 promoted item(s), 7 scored item(s), and 4 rejected item(s). The lead source signal is Tracking down a Zsh history data loss bug: A Zsh bug introduced in 2015 (Zsh 5.4) silently truncates ~/.zsh_history when HISTFILE/HISTSIZE are exported from another shell; fixed in Zsh 5.9.2 released 2026-07-12. The operator read is Silent, unrecoverable data loss in a","url":"https://thenightlylibrarian.com/briefs/2026-08-10/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-08-10","dateModified":"2026-08-10"}</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/" class="nav-active">Archive</a><a href="/topics/">Topics</a><a href="/reports/">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>August 10, 2026</span>
+      <span style="font-style:italic;">What changed. Why it matters. What to do.</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/">All briefs</a>
+    <h1>August 10, 2026</h1>
+    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span></div>
+    <p class="lead-summary" style="margin-top:0.85rem;">Silent, unrecoverable data loss in a tool nearly every developer runs daily, with a concrete fix and a one-line mitigation.</p>
+    <h2>Worth mentioning</h2>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">1.</span>
+        <div>
+          <div class="item-title"><a href="https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/" target="_blank" rel="noopener">Tracking down a Zsh history data loss bug</a></div>
+          <div class="item-takeaway">Silent, unrecoverable data loss in a tool nearly every developer runs daily, with a concrete fix and a one-line mitigation.</div>
+          <div class="item-facts"><div>A Zsh bug introduced in 2015 (Zsh 5.4) silently truncates ~/.zsh_history when HISTFILE/HISTSIZE are exported from another shell; fixed in Zsh 5.9.2 released 2026-07-12.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Whether every affected setup needs the 5.9.2 upgrade or whether unexporting HISTFILE alone is sufficient mitigation is not fully spelled out.</div>
+          <div class="item-meta">
+            <span><a href="https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/" target="_blank" rel="noopener">michael.stapelberg.ch</a></span>
+            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
+            <span>2026-08-10</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">2.</span>
+        <div>
+          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/" target="_blank" rel="noopener">Multi agent coding almost shipped a billing bug for us</a></div>
+          <div class="item-takeaway">Concrete failure mode for anyone running multi-agent coding pipelines, with a cheap structural mitigation.</div>
+          <div class="item-facts"><div>A two-agent planner/implementer pipeline produced and self-approved an invoice rounding bug that was only caught by a separate non-LLM diff review gate before merge.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Single anonymous team report with no measured error rate; unclear how often the review gate catches this class of bug versus how often it produces noise.</div>
+          <div class="item-meta">
+            <span><a href="https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/" target="_blank" rel="noopener">reddit.com</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span>2026-08-10</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">3.</span>
+        <div>
+          <div class="item-title"><a href="https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb" target="_blank" rel="noopener">Finding zombies in our systems: A real-world story of CPU bottlenecks</a></div>
+          <div class="item-takeaway">Real production debugging narrative; useful methodology reference even though it changes no immediate decision.</div>
+          <div class="item-facts"><div>Pinterest engineering diagnosed a production CPU bottleneck caused by accumulating zombie processes and documented the debugging methodology.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Article body was not fetched; summary is derived from the title and source. Depth and transferability of the methodology unverified.</div>
+          <div class="item-meta">
+            <span><a href="https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb" target="_blank" rel="noopener">medium.com</a></span>
+            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
+            <span>2026-08-10</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <details>
+      <summary>7 researched links (full index)</summary>
+      <div class="link-index">
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/" target="_blank" rel="noopener">Tracking down a Zsh history data loss bug</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/" target="_blank" rel="noopener">Multi agent coding almost shipped a billing bug for us</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb" target="_blank" rel="noopener">Finding zombies in our systems: A real-world story of CPU bottlenecks</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/jmarshall23/msword" target="_blank" rel="noopener">Microsoft Word for Windows 1.1a, Native X64 Port</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vjm88v/my_product_is_finally_ready_now_im_nervous_about/" target="_blank" rel="noopener">My product is finally ready. Now I'm nervous about reaching out to my first 10 companies</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vjm1rt/built_the_same_saas_ui_in_light_dark_mode_which/" target="_blank" rel="noopener">Built the same SaaS UI in light + dark mode, which one would you actually use?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.bbc.com/future/article/20260807-should-i-stop-cracking-my-knuckles" target="_blank" rel="noopener">Should you stop cracking your knuckles?</a></div>
+      </div>
+    </details>
+    <div class="subscribe-strip">
+      <div class="subscribe-headline">Get this every morning</div>
+      <p class="subscribe-desc">Filtered from 40+ sources daily — what changed, why it matters, what to do. Free.</p>
+      <form class="subscribe-form" action="https://thenightlylibrarian.substack.com/subscribe" method="GET" target="_blank">
+        <input class="subscribe-input" type="email" name="email" placeholder="your@email.com" required>
+        <button class="subscribe-btn" type="submit">Subscribe →</button>
+      </form>
+      <p class="subscribe-note">Free. Unsubscribe any time.</p>
+    </div>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>

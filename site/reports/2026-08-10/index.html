@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>August 10, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="3 stories cleared the bar, led by Multi agent coding almost shipped a billing bug for us, Tracking down a Zsh history data loss bug, and Finding zombies">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-08-10/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="August 10, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="3 stories cleared the bar, led by Multi agent coding almost shipped a billing bug for us, Tracking down a Zsh history data loss bug, and Finding zombies">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-08-10/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="August 10, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="3 stories cleared the bar, led by Multi agent coding almost shipped a billing bug for us, Tracking down a Zsh history data loss bug, and Finding zombies">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>August 10, 2026 · Report log</span>
+      <span>Aug 10, 2026, 2:13 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>August 10, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>3 stories cleared the bar, led by Multi agent coding almost shipped a billing bug for us, Tracking down a Zsh history data loss bug, and Finding zombies in our systems: A real-world story of CPU bottlenecks.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>3 worth-attention items</span><span>7 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/" target="_blank" rel="noopener">Multi agent coding almost shipped a billing bug for us</a></div>
+        <div class="item-takeaway">A B2B SaaS team running a planner agent (Opus 5) plus an implementer (Composer 2.5) nearly shipped an invoice-rounding change that rounded per line item instead of on the total, overcharging customers by a cent per invoice. One agent wrote it, a second agent reviewed and approved it, and both were confidently wrong. Only a non-agent automated review gate on the diff caught it. Takeaway: agent-reviews-agent is correlated, not independent — keep a deterministic gate as the last step before merge.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/" target="_blank" rel="noopener">Tracking down a Zsh history data loss bug</a></div>
+        <div class="item-takeaway">Michael Stapelberg traced silent ~/.zsh_history truncation to a March 2015 commit (f1c702f, shipped in Zsh 5.4) in readhistfile(). It fires when an exported HISTFILE/HISTSIZE from another shell leaks into zsh; one reproduction cut 55,075 lines down to 12,962 with no error. Zsh 5.9.2 (2026-07-12) contains the fix. Upgrade, and unexport HISTFILE in ~/.zshrc if you shell-hop between bash and zsh.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb" target="_blank" rel="noopener">Finding zombies in our systems: A real-world story of CPU bottlenecks</a></div>
+        <div class="item-takeaway">Pinterest engineering writeup on tracking down a production CPU bottleneck caused by accumulating zombie processes. Valuable as transferable debugging methodology for long-running hosts rather than as news. Narrower payoff for a one-person shop — worth reading if you're currently chasing unexplained CPU on a VPS.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjm88v/my_product_is_finally_ready_now_im_nervous_about/" target="_blank" rel="noopener">My product is finally ready. Now I'm nervous about reaching out to my first 10 companies</a>
+        </div>
+        <div class="item-takeaway">A founder asking r/SaaS how to approach their first 10 ICP-matched prospects for a churn-prevention tool. No findings, no data, no result — a request for advice rather than a report of anything that happened.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/" target="_blank" rel="noopener">Multi agent coding almost shipped a billing bug for us</a>
+        </div>
+        <div class="item-takeaway">A B2B SaaS team running a planner agent (Opus 5) plus an implementer (Composer 2.5) nearly shipped an invoice-rounding change that rounded per line item instead of on the total, overcharging customers by a cent per invoice. One agent wrote it, a second agent reviewed and approved it, and both were confidently wrong. Only a non-agent automated review gate on the diff caught it. Takeaway: agent-reviews-agent is correlated, not independent — keep a deterministic gate as the last step before merge.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vjm1rt/built_the_same_saas_ui_in_light_dark_mode_which/" target="_blank" rel="noopener">Built the same SaaS UI in light + dark mode, which one would you actually use?</a>
+        </div>
+        <div class="item-takeaway">A poll asking r/SaaS to pick between light and dark versions of the same interface. Pure engagement bait with no findings, data, or transferable lesson.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/jmarshall23/msword" target="_blank" rel="noopener">Microsoft Word for Windows 1.1a, Native X64 Port</a>
+        </div>
+        <div class="item-takeaway">A native x64 port of Microsoft Word for Windows 1.1a, published on GitHub. Technically impressive retro-computing work but carries no practical leverage for a solo builder — nothing here changes a tool choice, a cost, or a risk.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.bbc.com/future/article/20260807-should-i-stop-cracking-my-knuckles" target="_blank" rel="noopener">Should you stop cracking your knuckles?</a>
+        </div>
+        <div class="item-takeaway">BBC Future consumer-health article on knuckle cracking. Entirely outside the brief for a solo developer deciding what deserves attention tomorrow morning.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb" target="_blank" rel="noopener">Finding zombies in our systems: A real-world story of CPU bottlenecks</a>
+        </div>
+        <div class="item-takeaway">Pinterest engineering writeup on tracking down a production CPU bottleneck caused by accumulating zombie processes. Valuable as transferable debugging methodology for long-running hosts rather than as news. Narrower payoff for a one-person shop — worth reading if you're currently chasing unexplained CPU on a VPS.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/" target="_blank" rel="noopener">Tracking down a Zsh history data loss bug</a>
+        </div>
+        <div class="item-takeaway">Michael Stapelberg traced silent ~/.zsh_history truncation to a March 2015 commit (f1c702f, shipped in Zsh 5.4) in readhistfile(). It fires when an exported HISTFILE/HISTSIZE from another shell leaks into zsh; one reproduction cut 55,075 lines down to 12,962 with no error. Zsh 5.9.2 (2026-07-12) contains the fix. Upgrade, and unexport HISTFILE in ~/.zshrc if you shell-hop between bash and zsh.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 701d0458-98d6-40e0-98fd-9543c0623505
+Started: 2026-08-10T06:10:39.436Z
+Completed: 2026-08-10T06:13:55.918Z
+
+## Worth attention
+
+- **Multi agent coding almost shipped a billing bug for us**
+  https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/
+  A B2B SaaS team running a planner agent (Opus 5) plus an implementer (Composer 2.5) nearly shipped an invoice-rounding change that rounded per line item instead of on the total, overcharging customers by a cent per invoice. One agent wrote it, a second agent reviewed and approved it, and both were confidently wrong. Only a non-agent automated review gate on the diff caught it. Takeaway: agent-reviews-agent is correlated, not independent — keep a deterministic gate as the last step before merge.
+- **Tracking down a Zsh history data loss bug**
+  https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/
+  Michael Stapelberg traced silent ~/.zsh_history truncation to a March 2015 commit (f1c702f, shipped in Zsh 5.4) in readhistfile(). It fires when an exported HISTFILE/HISTSIZE from another shell leaks into zsh; one reproduction cut 55,075 lines down to 12,962 with no error. Zsh 5.9.2 (2026-07-12) contains the fix. Upgrade, and unexport HISTFILE in ~/.zshrc if you shell-hop between bash and zsh.
+- **Finding zombies in our systems: A real-world story of CPU bottlenecks**
+  https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb
+  Pinterest engineering writeup on tracking down a production CPU bottleneck caused by accumulating zombie processes. Valuable as transferable debugging methodology for long-running hosts rather than as news. Narrower payoff for a one-person shop — worth reading if you're currently chasing unexplained CPU on a VPS.
+
+## Full digest
+
+- [R] [reddit-saas] My product is finally ready. Now I'm nervous about reaching out to my first 10 companies — https://www.reddit.com/r/SaaS/comments/1vjm88v/my_product_is_finally_ready_now_im_nervous_about/ — A founder asking r/SaaS how to approach their first 10 ICP-matched prospects for a churn-prevention tool. No findings, no data, no result — a request for advice rather than a report of anything that happened.
+- [P] [reddit-saas] Multi agent coding almost shipped a billing bug for us — https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/ — A B2B SaaS team running a planner agent (Opus 5) plus an implementer (Composer 2.5) nearly shipped an invoice-rounding change that rounded per line item instead of on the total, overcharging customers by a cent per invoice. One agent wrote it, a second agent reviewed and approved it, and both were confidently wrong. Only a non-agent automated review gate on the diff caught it. Takeaway: agent-reviews-agent is correlated, not independent — keep a deterministic gate as the last step before merge.
+- [R] [reddit-saas] Built the same SaaS UI in light + dark mode, which one would you actually use? — https://www.reddit.com/r/SaaS/comments/1vjm1rt/built_the_same_saas_ui_in_light_dark_mode_which/ — A poll asking r/SaaS to pick between light and dark versions of the same interface. Pure engagement bait with no findings, data, or transferable lesson.
+- [R] [hn-top] Microsoft Word for Windows 1.1a, Native X64 Port — https://github.com/jmarshall23/msword — A native x64 port of Microsoft Word for Windows 1.1a, published on GitHub. Technically impressive retro-computing work but carries no practical leverage for a solo builder — nothing here changes a tool choice, a cost, or a risk.
+- [R] [hn-top] Should you stop cracking your knuckles? — https://www.bbc.com/future/article/20260807-should-i-stop-cracking-my-knuckles — BBC Future consumer-health article on knuckle cracking. Entirely outside the brief for a solo developer deciding what deserves attention tomorrow morning.
+- [P] [hn-top] Finding zombies in our systems: A real-world story of CPU bottlenecks — https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb — Pinterest engineering writeup on tracking down a production CPU bottleneck caused by accumulating zombie processes. Valuable as transferable debugging methodology for long-running hosts rather than as news. Narrower payoff for a one-person shop — worth reading if you're currently chasing unexplained CPU on a VPS.
+- [P] [lobsters] Tracking down a Zsh history data loss bug — https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/ — Michael Stapelberg traced silent ~/.zsh_history truncation to a March 2015 commit (f1c702f, shipped in Zsh 5.4) in readhistfile(). It fires when an exported HISTFILE/HISTSIZE from another shell leaks into zsh; one reproduction cut 55,075 lines down to 12,962 with no error. Zsh 5.9.2 (2026-07-12) contains the fix. Upgrade, and unexport HISTFILE in ~/.zshrc if you shell-hop between bash and zsh.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
