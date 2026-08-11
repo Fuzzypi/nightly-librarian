@@ -5,23 +5,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>August 10, 2026 — The Nightly Librarian</title>
-  <meta name="description" content="Tonight's brief tracks Data Infrastructure / Verification / Scraping and AI Operations / Agent Control.">
+  <meta name="description" content="Tonight's brief tracks AI Operations / Agent Control, Model + API Changes, Tools Worth Testing, and Data Infrastructure / Verification / Scraping.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/briefs/2026-08-10/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="August 10, 2026 | The Nightly Librarian">
-  <meta property="og:description" content="Tonight's brief tracks Data Infrastructure / Verification / Scraping and AI Operations / Agent Control.">
+  <meta property="og:description" content="Tonight's brief tracks AI Operations / Agent Control, Model + API Changes, Tools Worth Testing, and Data Infrastructure / Verification / Scraping.">
   <meta property="og:url" content="https://thenightlylibrarian.com/briefs/2026-08-10/">
-  <meta property="og:image" content="https://thenightlylibrarian.com/og/data-infrastructure-verification-scraping.png">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="August 10, 2026 | The Nightly Librarian">
-  <meta name="twitter:description" content="Tonight's brief tracks Data Infrastructure / Verification / Scraping and AI Operations / Agent Control.">
-  <meta name="twitter:image" content="https://thenightlylibrarian.com/og/data-infrastructure-verification-scraping.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Tracking down a Zsh history data loss bug","description":"Tonight's brief tracks Data Infrastructure / Verification / Scraping and AI Operations / Agent Control. Synthesized Nightly Librarian run with 3 promoted item(s), 7 scored item(s), and 4 rejected item(s). The lead source signal is Tracking down a Zsh history data loss bug: A Zsh bug introduced in 2015 (Zsh 5.4) silently truncates ~/.zsh_history when HISTFILE/HISTSIZE are exported from another shell; fixed in Zsh 5.9.2 released 2026-07-12. The operator read is Silent, unrecoverable data loss in a","url":"https://thenightlylibrarian.com/briefs/2026-08-10/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-08-10","dateModified":"2026-08-10"}</script>
+  <meta name="twitter:description" content="Tonight's brief tracks AI Operations / Agent Control, Model + API Changes, Tools Worth Testing, and Data Infrastructure / Verification / Scraping.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Quoting OpenClaw","description":"Tonight's brief tracks AI Operations / Agent Control, Model + API Changes, Tools Worth Testing, and Data Infrastructure / Verification / Scraping. Synthesized Nightly Librarian run with 8 promoted item(s), 40 scored item(s), and 32 rejected item(s). The lead source signal is Quoting OpenClaw: Reported auth flaw let one user cancel another user's reservation in OpenClaw; useful as a fresh reminder that basic auth checks still fail in production. The operator read is Concrete security failure with","url":"https://thenightlylibrarian.com/briefs/2026-08-10/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-08-10","dateModified":"2026-08-10"}</script>
   <link rel="stylesheet" href="/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
 </head>
@@ -42,21 +42,21 @@
   <main>
     <a class="back-link" href="/">All briefs</a>
     <h1>August 10, 2026</h1>
-    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span></div>
-    <p class="lead-summary" style="margin-top:0.85rem;">Silent, unrecoverable data loss in a tool nearly every developer runs daily, with a concrete fix and a one-line mitigation.</p>
+    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span><span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span><span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span><span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span></div>
+    <p class="lead-summary" style="margin-top:0.85rem;">Concrete security failure with immediate design and review value for builders shipping reservation or queue systems.</p>
     <h2>Worth mentioning</h2>
 
     <div class="item">
       <div class="item-row">
         <span class="item-num">1.</span>
         <div>
-          <div class="item-title"><a href="https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/" target="_blank" rel="noopener">Tracking down a Zsh history data loss bug</a></div>
-          <div class="item-takeaway">Silent, unrecoverable data loss in a tool nearly every developer runs daily, with a concrete fix and a one-line mitigation.</div>
-          <div class="item-facts"><div>A Zsh bug introduced in 2015 (Zsh 5.4) silently truncates ~/.zsh_history when HISTFILE/HISTSIZE are exported from another shell; fixed in Zsh 5.9.2 released 2026-07-12.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Whether every affected setup needs the 5.9.2 upgrade or whether unexporting HISTFILE alone is sufficient mitigation is not fully spelled out.</div>
+          <div class="item-title"><a href="https://simonwillison.net/2026/Aug/10/openclaw/#atom-everything" target="_blank" rel="noopener">Quoting OpenClaw</a></div>
+          <div class="item-takeaway">Concrete security failure with immediate design and review value for builders shipping reservation or queue systems.</div>
+          <div class="item-facts"><div>Reported auth flaw let one user cancel another user's reservation in OpenClaw; useful as a fresh reminder that basic auth checks still fail in production.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Direct page read blocked: `~/.claude/skills/gstack/browse/dist/browse` could not bind a local port, so this is based on the claim snippet and linked post title.</div>
           <div class="item-meta">
-            <span><a href="https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/" target="_blank" rel="noopener">michael.stapelberg.ch</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
+            <span><a href="https://simonwillison.net/2026/Aug/10/openclaw/#atom-everything" target="_blank" rel="noopener">simonwillison.net</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
             <span>2026-08-10</span>
           </div>
         </div>
@@ -67,13 +67,13 @@
       <div class="item-row">
         <span class="item-num">2.</span>
         <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/" target="_blank" rel="noopener">Multi agent coding almost shipped a billing bug for us</a></div>
-          <div class="item-takeaway">Concrete failure mode for anyone running multi-agent coding pipelines, with a cheap structural mitigation.</div>
-          <div class="item-facts"><div>A two-agent planner/implementer pipeline produced and self-approved an invoice rounding bug that was only caught by a separate non-LLM diff review gate before merge.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Single anonymous team report with no measured error rate; unclear how often the review gate catches this class of bug versus how often it produces noise.</div>
+          <div class="item-title"><a href="https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything" target="_blank" rel="noopener">GitHub Models is now retired</a></div>
+          <div class="item-takeaway">Retired platform surfaces can silently break automation and eval workflows.</div>
+          <div class="item-facts"><div>GitHub Models appears retired, with brownout-style failures already surfacing in downstream workflows.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Direct page read blocked: browse server port binding failed, so assessment is based on the claim snippet and linked title.</div>
           <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span><a href="https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything" target="_blank" rel="noopener">simonwillison.net</a></span>
+            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
             <span>2026-08-10</span>
           </div>
         </div>
@@ -84,12 +84,64 @@
       <div class="item-row">
         <span class="item-num">3.</span>
         <div>
-          <div class="item-title"><a href="https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb" target="_blank" rel="noopener">Finding zombies in our systems: A real-world story of CPU bottlenecks</a></div>
-          <div class="item-takeaway">Real production debugging narrative; useful methodology reference even though it changes no immediate decision.</div>
-          <div class="item-facts"><div>Pinterest engineering diagnosed a production CPU bottleneck caused by accumulating zombie processes and documented the debugging methodology.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Article body was not fetched; summary is derived from the title and source. Depth and transferability of the methodology unverified.</div>
+          <div class="item-title"><a href="https://claude.com/blog/auto-mode-default-in-claude-code" target="_blank" rel="noopener">Auto mode is now the default in Claude Code</a></div>
+          <div class="item-takeaway">Default-agent behavior changes alter trust boundaries, review habits, and how fast users burn through tasks.</div>
+          <div class="item-facts"><div>Anthropic says Claude Code now defaults to auto mode, which changes the baseline interaction model for existing users.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Direct blog read was blocked by the approved browse tool failing to start; this is title-level plus claim context only.</div>
           <div class="item-meta">
-            <span><a href="https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb" target="_blank" rel="noopener">medium.com</a></span>
+            <span><a href="https://claude.com/blog/auto-mode-default-in-claude-code" target="_blank" rel="noopener">claude.com</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span>2026-08-10</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">4.</span>
+        <div>
+          <div class="item-title"><a href="https://huggingface.co/blog/muse-glimmer" target="_blank" rel="noopener">Meta is back with Muse Glimmer: local, agentic, multimodal, and open source</a></div>
+          <div class="item-takeaway">Potentially meaningful local multimodal model release with clear relevance to agent and edge experimentation.</div>
+          <div class="item-facts"><div>Meta's Muse Glimmer is being positioned as local, agentic, multimodal, and open source, which is the kind of stack shift worth tracking for on-device workflows.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Direct article read was blocked by the approved browse tool; assessment is based on title/source metadata only.</div>
+          <div class="item-meta">
+            <span><a href="https://huggingface.co/blog/muse-glimmer" target="_blank" rel="noopener">huggingface.co</a></span>
+            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
+            <span>2026-08-10</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Monitor</h2>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">5.</span>
+        <div>
+          <div class="item-title"><a href="https://www.docker.com/products/docker-sandboxes/" target="_blank" rel="noopener">Docker Sandboxes – Disposable, isolated sandboxes for AI agents</a></div>
+          <div class="item-takeaway">Relevant workflow surface, but still too launch-shaped to treat as a decision today.</div>
+          <div class="item-facts"><div>Docker is pitching disposable isolated sandboxes for AI agents, but this is still a vendor launch until independent usage reports show where it actually helps.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Direct product page read was blocked by the approved browse tool; assessment is based on title/source metadata only.</div>
+          <div class="item-meta">
+            <span><a href="https://www.docker.com/products/docker-sandboxes/" target="_blank" rel="noopener">docker.com</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span>2026-08-10</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">6.</span>
+        <div>
+          <div class="item-title"><a href="https://status.openai.com//incidents/01KZN8RYNZY8T4QQGB3JWMPYRW" target="_blank" rel="noopener">Increased errors for some ChatGPT users</a></div>
+          <div class="item-takeaway">Operationally relevant, but mainly as a transient watch item.</div>
+          <div class="item-facts"><div>OpenAI status reported increased ChatGPT errors, worth watching only if your own usage or customer support queue shows correlated failures today.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Direct status page read was blocked by the approved browse tool; assessment is based on the claim snippet.</div>
+          <div class="item-meta">
+            <span><a href="https://status.openai.com//incidents/01KZN8RYNZY8T4QQGB3JWMPYRW" target="_blank" rel="noopener">status.openai.com</a></span>
             <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
             <span>2026-08-10</span>
           </div>
@@ -97,16 +149,79 @@
       </div>
     </div>
 
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">7.</span>
+        <div>
+          <div class="item-title"><a href="https://github.com/ollama/ollama/releases/tag/v0.32.7" target="_blank" rel="noopener">v0.32.7</a></div>
+          <div class="item-takeaway">Useful implementation follow-through on the model release, but still early and platform-limited.</div>
+          <div class="item-facts"><div>Ollama v0.32.7 highlights initial Muse Glimmer support on Apple Silicon, which makes the Meta release more practical for local testing but not yet broad deployment.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Direct release read was blocked by the approved browse tool; assessment is based on the claim snippet.</div>
+          <div class="item-meta">
+            <span><a href="https://github.com/ollama/ollama/releases/tag/v0.32.7" target="_blank" rel="noopener">github.com</a></span>
+            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
+            <span>2026-08-10</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">8.</span>
+        <div>
+          <div class="item-title"><a href="https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation" target="_blank" rel="noopener">Making Knowledge Distillation Cheap Enough to Run at Scale</a></div>
+          <div class="item-takeaway">Possible future leverage for model serving costs, but not enough concrete evidence for a keep today.</div>
+          <div class="item-facts"><div>The Hugging Face post on cheaper knowledge distillation looks potentially useful, but it reads as research or vendor framing until there are harder cost numbers and field reports.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Direct article read was blocked by the approved browse tool; assessment is based on title/source metadata only.</div>
+          <div class="item-meta">
+            <span><a href="https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation" target="_blank" rel="noopener">huggingface.co</a></span>
+            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
+            <span>2026-08-10</span>
+          </div>
+        </div>
+      </div>
+    </div>
     <details>
-      <summary>7 researched links (full index)</summary>
+      <summary>37 researched links (full index)</summary>
       <div class="link-index">
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/" target="_blank" rel="noopener">Tracking down a Zsh history data loss bug</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/" target="_blank" rel="noopener">Multi agent coding almost shipped a billing bug for us</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb" target="_blank" rel="noopener">Finding zombies in our systems: A real-world story of CPU bottlenecks</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/jmarshall23/msword" target="_blank" rel="noopener">Microsoft Word for Windows 1.1a, Native X64 Port</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vjm88v/my_product_is_finally_ready_now_im_nervous_about/" target="_blank" rel="noopener">My product is finally ready. Now I'm nervous about reaching out to my first 10 companies</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vjm1rt/built_the_same_saas_ui_in_light_dark_mode_which/" target="_blank" rel="noopener">Built the same SaaS UI in light + dark mode, which one would you actually use?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.bbc.com/future/article/20260807-should-i-stop-cracking-my-knuckles" target="_blank" rel="noopener">Should you stop cracking your knuckles?</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://simonwillison.net/2026/Aug/10/openclaw/#atom-everything" target="_blank" rel="noopener">Quoting OpenClaw</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything" target="_blank" rel="noopener">GitHub Models is now retired</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://claude.com/blog/auto-mode-default-in-claude-code" target="_blank" rel="noopener">Auto mode is now the default in Claude Code</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://huggingface.co/blog/muse-glimmer" target="_blank" rel="noopener">Meta is back with Muse Glimmer: local, agentic, multimodal, and open source</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://nickvsnetworking.com/3g-at-last/" target="_blank" rel="noopener">3G at last</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://atproto.com/blog/pds-customization-and-metrics" target="_blank" rel="noopener">Make the PDS Your Own: Customization and Metrics</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/#atom-everything" target="_blank" rel="noopener">Quoting Claude Opus 5 system prompt</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/#atom-everything" target="_blank" rel="noopener">SQLite compressed text-history prototypes</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://simonwillison.net/2026/Aug/6/datasette-auth-tokens/#atom-everything" target="_blank" rel="noopener">datasette-auth-tokens 0.4a13</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.docker.com/products/docker-sandboxes/" target="_blank" rel="noopener">Docker Sandboxes – Disposable, isolated sandboxes for AI agents</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://blog.teknogeek.io/posts/what-happened-to-hackerone/" target="_blank" rel="noopener">What Happened to HackerOne?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/shinyquagsire23/Klepton" target="_blank" rel="noopener">Run Android ARM64 VR APKs on Apple Vision Pro</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.whodunnitai.com/" target="_blank" rel="noopener">Show HN: Voice driven murder mystery, Interview AI suspects with your voice</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/" target="_blank" rel="noopener">How I use LLMs to learn complex topics</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.snowflake.com/en/blog/engineering/postgres-to-snowflake-replication-mirroring/" target="_blank" rel="noopener">How We Pushed CDC into Postgres</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650" target="_blank" rel="noopener">Taxi drivers rarely die of Alzheimer's</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://atproto.com/articles/atproto-for-distsys-engineers" target="_blank" rel="noopener">ATProto for Distributed Systems Engineers</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://news.ycombinator.com/item?id=49233423" target="_blank" rel="noopener">Ask HN: What are you working on? (August 2026)</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.w3.org/Provider/Style/URI" target="_blank" rel="noopener">Cool URIs Don't Change (1998)</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition" target="_blank" rel="noopener">The tragedy of the commons, AI edition</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://propelmusic.co.nz/articles/the-sound-went-quiet-nz-music-media" target="_blank" rel="noopener">New Zealand lost its music media, and what we're building to replace it</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://tuxedono2.com" target="_blank" rel="noopener">Tuxedo No. 2 – Cocktail recipes</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://publicdomainreview.org/collection/marnameh/" target="_blank" rel="noopener">&quot;The Persian MâR-Nâmeh Or, the Book for Taking Omens from Snakes&quot; (1892)</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.theatlantic.com/technology/2026/05/ai-wearable-surveillance-countermeasures/687203/" target="_blank" rel="noopener">Everything you do is being recorded</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://openchamber.dev/" target="_blank" rel="noopener">OpenChamber: An Agentic Development Environment</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.notebookcheck.net/Windows-11-s-built-in-Weather-app-wastes-more-than-1-GB-of-RAM.1364205.0.html" target="_blank" rel="noopener">Windows 11's built-in Weather app wastes more than 1 GB of RAM</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.newyorker.com/magazine/2026/08/10/silence-kate-mcloughlin-book-review" target="_blank" rel="noopener">How Golden Is Silence, Actually?</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://status.openai.com//incidents/01KZN8RYNZY8T4QQGB3JWMPYRW" target="_blank" rel="noopener">Increased errors for some ChatGPT users</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://github.com/ollama/ollama/releases/tag/v0.32.7" target="_blank" rel="noopener">v0.32.7</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkfscq/i_stopped_asking_users_what_features_they_want/" target="_blank" rel="noopener">I stopped asking users what features they want</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkgcgp/today_we_got_our_first_inbound_signup_but/" target="_blank" rel="noopener">Today we got our first inbound signup! But...</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkgz2r/i_built_a_calorietracking_app_before_finding_a/" target="_blank" rel="noopener">I built a calorie-tracking app before finding a real problem. What would you do next?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkesmt/im_building_a_linkedin_outreach_tool_and_need/" target="_blank" rel="noopener">I’m building a LinkedIn outreach tool and need feedback from people who actually do outreach</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkgpqo/jai_15_ans_et_jai_lancé_un_buisness_tout_à_côté/" target="_blank" rel="noopener">J'ai 15 ans et j'ai lancé un buisness tout à côté de mes études.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkfskg/seeking_founders_or_teams_for_a_paid_ubc_research/" target="_blank" rel="noopener">Seeking founders or teams for a paid UBC research study</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkffwg/someone_actually_paid_for_the_app_i_built/" target="_blank" rel="noopener">Someone actually paid for the app I built</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation" target="_blank" rel="noopener">Making Knowledge Distillation Cheap Enough to Run at Scale</a></div>
       </div>
     </details>
     <div class="subscribe-strip">

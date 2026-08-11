@@ -1,92 +1,206 @@
 {
   "date": "2026-08-10",
-  "generated_at": "2026-08-10T06:14:15.648Z",
+  "generated_at": "2026-08-10T11:08:26.452Z",
   "imported_from": {
     "importer_version": "digest-import/v1",
     "source_artifact": "artifacts/synthesized/2026-08-10.json",
-    "source_sha256": "7acbdbf3a969b8213f21ba0f76608dfd1f721374ff678da607cc3fac6b0d0128"
+    "source_sha256": "a6c52199216e4e44f09491b1fdbdf421cc6c6e4dbdb49bb72605195601f44f7b"
   },
   "items": [
     {
-      "builder_takeaway": "Silent, unrecoverable data loss in a tool nearly every developer runs daily, with a concrete fix and a one-line mitigation.",
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "f4385a62-ef42-44c0-90dd-32974b6760ee",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "nickvsnetworking.com",
+      "source_facts": [
+        "Telecom history note, interesting but not relevant to a solo builder's next move."
+      ],
+      "title": "3G at last",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://nickvsnetworking.com/3g-at-last/"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
       "category": "Data Infrastructure / Verification / Scraping",
-      "id": "cf632024-1d79-478a-8354-1907bc4d4e76",
+      "id": "f7c14d14-21cd-4129-a4cc-7be7a421c95c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "atproto.com",
+      "source_facts": [
+        "ATProto PDS customization note, but not strong enough to force action today."
+      ],
+      "title": "Make the PDS Your Own: Customization and Metrics",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://atproto.com/blog/pds-customization-and-metrics"
+    },
+    {
+      "builder_takeaway": "Concrete security failure with immediate design and review value for builders shipping reservation or queue systems.",
+      "category": "AI Operations / Agent Control",
+      "id": "90915bd5-242d-42bb-a932-25287e2d8917",
       "importance": "lead",
       "labels": [
-        "reproducible",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-10T00:00:00.000Z",
-      "source": "michael.stapelberg.ch",
-      "source_facts": [
-        "A Zsh bug introduced in 2015 (Zsh 5.4) silently truncates ~/.zsh_history when HISTFILE/HISTSIZE are exported from another shell; fixed in Zsh 5.9.2 released 2026-07-12."
-      ],
-      "title": "Tracking down a Zsh history data loss bug",
-      "uncertainty": "Whether every affected setup needs the 5.9.2 upgrade or whether unexporting HISTFILE alone is sufficient mitigation is not fully spelled out.",
-      "url": "https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/"
-    },
-    {
-      "builder_takeaway": "Concrete failure mode for anyone running multi-agent coding pipelines, with a cheap structural mitigation.",
-      "category": "AI Operations / Agent Control",
-      "id": "a4893c37-3302-4e58-a07f-dd4d334056ab",
-      "importance": "supporting",
-      "labels": [
         "builder_reported",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-10T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A two-agent planner/implementer pipeline produced and self-approved an invoice rounding bug that was only caught by a separate non-LLM diff review gate before merge."
-      ],
-      "title": "Multi agent coding almost shipped a billing bug for us",
-      "uncertainty": "Single anonymous team report with no measured error rate; unclear how often the review gate catches this class of bug versus how often it produces noise.",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/"
-    },
-    {
-      "builder_takeaway": "Real production debugging narrative; useful methodology reference even though it changes no immediate decision.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "4d538d11-b320-410b-be25-6ada7bcf92df",
-      "importance": "supporting",
-      "labels": [
-        "production_proven",
         "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-08-10T00:00:00.000Z",
-      "source": "medium.com",
+      "source": "simonwillison.net",
       "source_facts": [
-        "Pinterest engineering diagnosed a production CPU bottleneck caused by accumulating zombie processes and documented the debugging methodology."
+        "Reported auth flaw let one user cancel another user's reservation in OpenClaw; useful as a fresh reminder that basic auth checks still fail in production."
       ],
-      "title": "Finding zombies in our systems: A real-world story of CPU bottlenecks",
-      "uncertainty": "Article body was not fetched; summary is derived from the title and source. Depth and transferability of the methodology unverified.",
-      "url": "https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb"
+      "title": "Quoting OpenClaw",
+      "uncertainty": "Direct page read blocked: `~/.claude/skills/gstack/browse/dist/browse` could not bind a local port, so this is based on the claim snippet and linked post title.",
+      "url": "https://simonwillison.net/2026/Aug/10/openclaw/#atom-everything"
     },
     {
-      "builder_takeaway": "A native x64 port of Microsoft Word for Windows 1.1a, published on GitHub. Technically impressive retro-computing work but carries no practical leverage for a solo builder — nothing here changes a tool choice, a cost, or a risk.",
-      "category": "Tools Worth Testing",
-      "id": "d70565bc-1ae3-466d-b77d-93638ff64163",
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Model + API Changes",
+      "id": "e7581491-e322-4ea3-9387-9cbead5ff842",
       "importance": "archive-only",
       "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "System-prompt archaeology is interesting, but this item does not present a clear action for today."
+      ],
+      "title": "Quoting Claude Opus 5 system prompt",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/#atom-everything"
+    },
+    {
+      "builder_takeaway": "Retired platform surfaces can silently break automation and eval workflows.",
+      "category": "Model + API Changes",
+      "id": "d814d540-7e24-405b-a0a5-111a78933e05",
+      "importance": "supporting",
+      "labels": [
         "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "GitHub Models appears retired, with brownout-style failures already surfacing in downstream workflows."
+      ],
+      "title": "GitHub Models is now retired",
+      "uncertainty": "Direct page read blocked: browse server port binding failed, so assessment is based on the claim snippet and linked title.",
+      "url": "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "2fe0107e-4911-442c-9a14-3e130d3277c6",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "Interesting storage experiment, but still an idea-level prototype rather than a morning memo keep."
+      ],
+      "title": "SQLite compressed text-history prototypes",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/#atom-everything"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "b1aee482-2c51-444e-b75c-01c145b7f092",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "Small Datasette plugin release, useful for niche users but not broad enough for the memo."
+      ],
+      "title": "datasette-auth-tokens 0.4a13",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://simonwillison.net/2026/Aug/6/datasette-auth-tokens/#atom-everything"
+    },
+    {
+      "builder_takeaway": "Relevant workflow surface, but still too launch-shaped to treat as a decision today.",
+      "category": "AI Operations / Agent Control",
+      "id": "69b5cc6f-2695-4f6b-bfd2-5c5ec94f6a2b",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "docker.com",
+      "source_facts": [
+        "Docker is pitching disposable isolated sandboxes for AI agents, but this is still a vendor launch until independent usage reports show where it actually helps."
+      ],
+      "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
+      "uncertainty": "Direct product page read was blocked by the approved browse tool; assessment is based on title/source metadata only.",
+      "url": "https://www.docker.com/products/docker-sandboxes/"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "AI Operations / Agent Control",
+      "id": "013730d3-1f25-4346-a62a-0cc0b0d38e5f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "blog.teknogeek.io",
+      "source_facts": [
+        "Potentially interesting postmortem angle, but too indirect from the title alone."
+      ],
+      "title": "What Happened to HackerOne?",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://blog.teknogeek.io/posts/what-happened-to-hackerone/"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "f2d7254d-8182-4052-a2d5-5b7b08664ada",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-08-10T00:00:00.000Z",
       "source": "github.com",
       "source_facts": [
-        "A developer published a native x64 port of Microsoft Word for Windows 1.1a on GitHub."
+        "Clever platform hack, but outside the main workflow and business focus."
       ],
-      "title": "Microsoft Word for Windows 1.1a, Native X64 Port",
-      "uncertainty": "Repository contents not inspected; scope and completeness of the port unverified.",
-      "url": "https://github.com/jmarshall23/msword"
+      "title": "Run Android ARM64 VR APKs on Apple Vision Pro",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://github.com/shinyquagsire23/Klepton"
     },
     {
-      "builder_takeaway": "A founder asking r/SaaS how to approach their first 10 ICP-matched prospects for a churn-prevention tool. No findings, no data, no result — a request for advice rather than a report of anything that happened.",
-      "category": "Small Business Automation",
-      "id": "45abc885-74f5-42f5-8008-cddffc4fc57a",
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Voice AI / Realtime Agents",
+      "id": "ba744e1a-a032-49dc-aded-91f23ad104cc",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -94,18 +208,37 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-10T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "whodunnitai.com",
       "source_facts": [
-        "A solo founder is asking for advice on how to approach their first 10 prospects for a churn-prevention SaaS."
+        "Fun demo, but still a Show HN novelty item rather than a decision-changing signal."
       ],
-      "title": "My product is finally ready. Now I'm nervous about reaching out to my first 10 companies",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vjm88v/my_product_is_finally_ready_now_im_nervous_about/"
+      "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.whodunnitai.com/"
     },
     {
-      "builder_takeaway": "A poll asking r/SaaS to pick between light and dark versions of the same interface. Pure engagement bait with no findings, data, or transferable lesson.",
-      "category": "Tools Worth Testing",
-      "id": "e417905f-2750-4a55-aa28-b851c517af4f",
+      "builder_takeaway": "Default-agent behavior changes alter trust boundaries, review habits, and how fast users burn through tasks.",
+      "category": "AI Operations / Agent Control",
+      "id": "02679964-1271-45a3-b7ca-754c413793f8",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "claude.com",
+      "source_facts": [
+        "Anthropic says Claude Code now defaults to auto mode, which changes the baseline interaction model for existing users."
+      ],
+      "title": "Auto mode is now the default in Claude Code",
+      "uncertainty": "Direct blog read was blocked by the approved browse tool failing to start; this is title-level plus claim context only.",
+      "url": "https://claude.com/blog/auto-mode-default-in-claude-code"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "AI Operations / Agent Control",
+      "id": "11388e5c-09de-4a5d-964c-064dd7999057",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -113,37 +246,531 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-10T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "laurentiugabriel.github.io",
       "source_facts": [
-        "A builder posted light and dark variants of the same SaaS UI and asked readers which they would use."
+        "Personal LLM study workflow, readable but not new enough to keep."
       ],
-      "title": "Built the same SaaS UI in light + dark mode, which one would you actually use?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vjm1rt/built_the_same_saas_ui_in_light_dark_mode_which/"
+      "title": "How I use LLMs to learn complex topics",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/"
     },
     {
-      "builder_takeaway": "BBC Future consumer-health article on knuckle cracking. Entirely outside the brief for a solo developer deciding what deserves attention tomorrow morning.",
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "5e349323-98e6-4fa6-9899-47d28b4ddd88",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "snowflake.com",
+      "source_facts": [
+        "Engineering writeup with possible value, but too vendor-specific and not urgent today."
+      ],
+      "title": "How We Pushed CDC into Postgres",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.snowflake.com/en/blog/engineering/postgres-to-snowflake-replication-mirroring/"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
       "category": "Tools Worth Testing",
-      "id": "56bda694-6054-4e99-91f4-965c232a924d",
+      "id": "f01a60f2-8ade-4a25-8305-2e06bb9d2b08",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "theconversation.com",
+      "source_facts": [
+        "Neuroscience feature, outside the memo's operating lane."
+      ],
+      "title": "Taxi drivers rarely die of Alzheimer's",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "a43446f8-7b76-4f86-aeb7-274a6a1bb41c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "atproto.com",
+      "source_facts": [
+        "Distributed-systems explainer, but not obviously decision-changing from the available signal."
+      ],
+      "title": "ATProto for Distributed Systems Engineers",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://atproto.com/articles/atproto-for-distsys-engineers"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "b520de74-4785-42cb-90ac-457ba7149b56",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "news.ycombinator.com",
+      "source_facts": [
+        "Open-ended work thread, useful socially but not a memo item."
+      ],
+      "title": "Ask HN: What are you working on? (August 2026)",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://news.ycombinator.com/item?id=49233423"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "28080196-335f-4457-8411-2637dfa2d3f6",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "w3.org",
+      "source_facts": [
+        "Classic web architecture essay resurfacing, not new information."
+      ],
+      "title": "Cool URIs Don't Change (1998)",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.w3.org/Provider/Style/URI"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "7f1cfda3-02cb-49cb-8ef2-5eb516693a72",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "economist.com",
+      "source_facts": [
+        "High-level AI commentary without a concrete move to make this morning."
+      ],
+      "title": "The tragedy of the commons, AI edition",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "49109992-599f-422b-9933-c59f7136eb89",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "propelmusic.co.nz",
+      "source_facts": [
+        "Local media rebuilding story, interesting but outside the memo's core operating surface."
+      ],
+      "title": "New Zealand lost its music media, and what we're building to replace it",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://propelmusic.co.nz/articles/the-sound-went-quiet-nz-music-media"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "062cf289-2b61-4142-9125-93276173ebae",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "tuxedono2.com",
+      "source_facts": [
+        "Cocktail recipe site, not relevant."
+      ],
+      "title": "Tuxedo No. 2 – Cocktail recipes",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://tuxedono2.com"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "e3075f9d-f9be-48f2-9c44-f5d11259071e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "publicdomainreview.org",
+      "source_facts": [
+        "Historical archive item, not relevant to the memo."
+      ],
+      "title": "\"The Persian MâR-Nâmeh Or, the Book for Taking Omens from Snakes\" (1892)",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://publicdomainreview.org/collection/marnameh/"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "dec4b41a-934e-498b-9216-0fcdf1665ab0",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "theatlantic.com",
+      "source_facts": [
+        "Surveillance essay, thought-provoking but not a practical builder decision item today."
+      ],
+      "title": "Everything you do is being recorded",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.theatlantic.com/technology/2026/05/ai-wearable-surveillance-countermeasures/687203/"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "753f15bf-a5d0-44a9-a8c6-ad63467cc93b",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "youtube.com",
+      "source_facts": [
+        "Great talk, but not new and not operationally relevant."
+      ],
+      "title": "Andrew Wiles on proving Fermat’s Last Theorem (1995) [video]",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.youtube.com/watch?v=GS7CxAtV5Ks"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "362016af-f7ab-4eaf-9dd6-577a9f9b512c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "mynoise.net",
+      "source_facts": [
+        "Personal health video, outside the memo lane."
+      ],
+      "title": "I made tinnitus my friend, then it disappeared [video]",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://mynoise.net/vlog.php?ep=20260803"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "AI Operations / Agent Control",
+      "id": "8dd7476f-066d-4f66-b46f-1bc3ca0e0211",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "openchamber.dev",
+      "source_facts": [
+        "Agentic dev environment launch signal is too thin from title alone."
+      ],
+      "title": "OpenChamber: An Agentic Development Environment",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://openchamber.dev/"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "c7db3f43-4692-4741-b8c5-fbe55961f161",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "notebookcheck.net",
+      "source_facts": [
+        "Windows app inefficiency complaint, not enough leverage for the target reader."
+      ],
+      "title": "Windows 11's built-in Weather app wastes more than 1 GB of RAM",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.notebookcheck.net/Windows-11-s-built-in-Weather-app-wastes-more-than-1-GB-of-RAM.1364205.0.html"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "025e85ab-5ff6-473a-bf1e-3180019e7bdf",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "newyorker.com",
+      "source_facts": [
+        "Book review, outside the memo lane."
+      ],
+      "title": "How Golden Is Silence, Actually?",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.newyorker.com/magazine/2026/08/10/silence-kate-mcloughlin-book-review"
+    },
+    {
+      "builder_takeaway": "Operationally relevant, but mainly as a transient watch item.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "bcc32a01-7abe-4ddf-95d2-c669fb67bcb2",
+      "importance": "archive-only",
+      "labels": [
+        "production_proven",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "status.openai.com",
+      "source_facts": [
+        "OpenAI status reported increased ChatGPT errors, worth watching only if your own usage or customer support queue shows correlated failures today."
+      ],
+      "title": "Increased errors for some ChatGPT users",
+      "uncertainty": "Direct status page read was blocked by the approved browse tool; assessment is based on the claim snippet.",
+      "url": "https://status.openai.com//incidents/01KZN8RYNZY8T4QQGB3JWMPYRW"
+    },
+    {
+      "builder_takeaway": "Useful implementation follow-through on the model release, but still early and platform-limited.",
+      "category": "Tools Worth Testing",
+      "id": "b361d7db-9840-4017-a0af-cdc02e3fcf4f",
       "importance": "archive-only",
       "labels": [
         "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Ollama v0.32.7 highlights initial Muse Glimmer support on Apple Silicon, which makes the Meta release more practical for local testing but not yet broad deployment."
+      ],
+      "title": "v0.32.7",
+      "uncertainty": "Direct release read was blocked by the approved browse tool; assessment is based on the claim snippet.",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.32.7"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "36d1ff91-c80e-4417-9b5c-03dd690e3ed9",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-08-10T00:00:00.000Z",
-      "source": "bbc.com",
+      "source": "reddit.com",
       "source_facts": [
-        "BBC Future published a consumer-health article examining whether knuckle cracking is harmful."
+        "Reasonable SaaS advice, but generic and not new."
       ],
-      "title": "Should you stop cracking your knuckles?",
-      "uncertainty": "",
-      "url": "https://www.bbc.com/future/article/20260807-should-i-stop-cracking-my-knuckles"
+      "title": "I stopped asking users what features they want",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vkfscq/i_stopped_asking_users_what_features_they_want/"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "11dc1af6-6314-4e75-9a08-da5677e4a2c3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Early signup anecdote, but not a strong standalone insight."
+      ],
+      "title": "Today we got our first inbound signup! But...",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vkgcgp/today_we_got_our_first_inbound_signup_but/"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "2eafb624-1b93-4480-aa7d-9680e164c6c8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Common MVP-validation lesson, already well understood."
+      ],
+      "title": "I built a calorie-tracking app before finding a real problem. What would you do next?",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vkgz2r/i_built_a_calorietracking_app_before_finding_a/"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "4aeea901-ae75-44d6-9799-31ac73c86281",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Feedback request for a niche tool, not a memo item."
+      ],
+      "title": "I’m building a LinkedIn outreach tool and need feedback from people who actually do outreach",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vkesmt/im_building_a_linkedin_outreach_tool_and_need/"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "41c283aa-7a34-474c-b6ca-721692e6fda0",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Co-founder request post, not editorial signal."
+      ],
+      "title": "[Co-Founder Wanted] Non-Technical Founder looking for Full-Stack Developer to build an AI-driven Gadget Recommendation Platform (Equity/Co-Founder)",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vkguth/cofounder_wanted_nontechnical_founder_looking_for/"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "fb438bbc-40b0-4f30-b53f-60854db0b4bd",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Personal launch story, encouraging but not decision-changing."
+      ],
+      "title": "J'ai 15 ans et j'ai lancé un buisness tout à côté de mes études.",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vkgpqo/jai_15_ans_et_jai_lancé_un_buisness_tout_à_côté/"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "4e282743-c4ea-42b3-bd43-45017bc61aa0",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Research-study recruitment post, not relevant to the memo."
+      ],
+      "title": "Seeking founders or teams for a paid UBC research study",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vkfskg/seeking_founders_or_teams_for_a_paid_ubc_research/"
+    },
+    {
+      "builder_takeaway": "Does not clearly change a practical decision for tomorrow morning.",
+      "category": "Tools Worth Testing",
+      "id": "b44038d9-9e6f-4d5d-b923-ab8d322e3e0d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Payment anecdote is nice validation, but too small-scale for the memo."
+      ],
+      "title": "Someone actually paid for the app I built",
+      "uncertainty": "Scored from title/snippet only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vkffwg/someone_actually_paid_for_the_app_i_built/"
+    },
+    {
+      "builder_takeaway": "Possible future leverage for model serving costs, but not enough concrete evidence for a keep today.",
+      "category": "Model + API Changes",
+      "id": "0eb33a5a-161d-411e-a3a7-5002b10cbaa2",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "huggingface.co",
+      "source_facts": [
+        "The Hugging Face post on cheaper knowledge distillation looks potentially useful, but it reads as research or vendor framing until there are harder cost numbers and field reports."
+      ],
+      "title": "Making Knowledge Distillation Cheap Enough to Run at Scale",
+      "uncertainty": "Direct article read was blocked by the approved browse tool; assessment is based on title/source metadata only.",
+      "url": "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation"
+    },
+    {
+      "builder_takeaway": "Potentially meaningful local multimodal model release with clear relevance to agent and edge experimentation.",
+      "category": "Tools Worth Testing",
+      "id": "4cb28a83-a91a-4173-8a93-6501f5cdcc8a",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "source": "huggingface.co",
+      "source_facts": [
+        "Meta's Muse Glimmer is being positioned as local, agentic, multimodal, and open source, which is the kind of stack shift worth tracking for on-device workflows."
+      ],
+      "title": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
+      "uncertainty": "Direct article read was blocked by the approved browse tool; assessment is based on title/source metadata only.",
+      "url": "https://huggingface.co/blog/muse-glimmer"
     }
   ],
   "mode": "primary",
-  "run_id": "701d0458-98d6-40e0-98fd-9543c0623505",
+  "run_id": "8d7238d0-b8c1-4b52-ad77-05283864c9c1",
   "status": "completed",
-  "summary": "Synthesized Nightly Librarian run with 3 promoted item(s), 7 scored item(s), and 4 rejected item(s).",
+  "summary": "Synthesized Nightly Librarian run with 8 promoted item(s), 40 scored item(s), and 32 rejected item(s).",
   "title": "Nightly Librarian - 2026-08-10"
 }

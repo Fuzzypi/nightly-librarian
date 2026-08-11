@@ -5,21 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>August 10, 2026 report log — The Nightly Librarian</title>
-  <meta name="description" content="3 stories cleared the bar, led by Multi agent coding almost shipped a billing bug for us, Tracking down a Zsh history data loss bug, and Finding zombies">
+  <meta name="description" content="8 stories cleared the bar, led by Quoting OpenClaw, GitHub Models is now retired, and Auto mode is now the default in Claude Code.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-08-10/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="August 10, 2026 report log | The Nightly Librarian">
-  <meta property="og:description" content="3 stories cleared the bar, led by Multi agent coding almost shipped a billing bug for us, Tracking down a Zsh history data loss bug, and Finding zombies">
+  <meta property="og:description" content="8 stories cleared the bar, led by Quoting OpenClaw, GitHub Models is now retired, and Auto mode is now the default in Claude Code.">
   <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-08-10/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="August 10, 2026 report log | The Nightly Librarian">
-  <meta name="twitter:description" content="3 stories cleared the bar, led by Multi agent coding almost shipped a billing bug for us, Tracking down a Zsh history data loss bug, and Finding zombies">
+  <meta name="twitter:description" content="8 stories cleared the bar, led by Quoting OpenClaw, GitHub Models is now retired, and Auto mode is now the default in Claude Code.">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
@@ -36,7 +36,7 @@
     </div>
     <div class="dateline">
       <span>August 10, 2026 · Report log</span>
-      <span>Aug 10, 2026, 2:13 AM</span>
+      <span>Aug 10, 2026, 7:07 AM</span>
     </div>
   </header>
   <main>
@@ -44,27 +44,52 @@
     <h1>August 10, 2026</h1>
     <div class="summary-card">
       <div class="eyebrow">Report summary</div>
-      <p>3 stories cleared the bar, led by Multi agent coding almost shipped a billing bug for us, Tracking down a Zsh history data loss bug, and Finding zombies in our systems: A real-world story of CPU bottlenecks.</p>
+      <p>8 stories cleared the bar, led by Quoting OpenClaw, GitHub Models is now retired, and Auto mode is now the default in Claude Code.</p>
       <div class="meta" style="margin-top:0.4rem;">
-        <span>3 worth-attention items</span><span>7 digest lines</span>
+        <span>8 worth-attention items</span><span>40 digest lines</span>
       </div>
     </div>
     <h2>Worth attention</h2>
     <div class="item-stack">
 
       <div class="item">
-        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/" target="_blank" rel="noopener">Multi agent coding almost shipped a billing bug for us</a></div>
-        <div class="item-takeaway">A B2B SaaS team running a planner agent (Opus 5) plus an implementer (Composer 2.5) nearly shipped an invoice-rounding change that rounded per line item instead of on the total, overcharging customers by a cent per invoice. One agent wrote it, a second agent reviewed and approved it, and both were confidently wrong. Only a non-agent automated review gate on the diff caught it. Takeaway: agent-reviews-agent is correlated, not independent — keep a deterministic gate as the last step before merge.</div>
+        <div class="item-title"><a href="https://simonwillison.net/2026/Aug/10/openclaw/#atom-everything" target="_blank" rel="noopener">Quoting OpenClaw</a></div>
+        <div class="item-takeaway">Reported auth flaw let one user cancel another user's reservation in OpenClaw; useful as a fresh reminder that basic auth checks still fail in production.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/" target="_blank" rel="noopener">Tracking down a Zsh history data loss bug</a></div>
-        <div class="item-takeaway">Michael Stapelberg traced silent ~/.zsh_history truncation to a March 2015 commit (f1c702f, shipped in Zsh 5.4) in readhistfile(). It fires when an exported HISTFILE/HISTSIZE from another shell leaks into zsh; one reproduction cut 55,075 lines down to 12,962 with no error. Zsh 5.9.2 (2026-07-12) contains the fix. Upgrade, and unexport HISTFILE in ~/.zshrc if you shell-hop between bash and zsh.</div>
+        <div class="item-title"><a href="https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything" target="_blank" rel="noopener">GitHub Models is now retired</a></div>
+        <div class="item-takeaway">GitHub Models appears retired, with brownout-style failures already surfacing in downstream workflows.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb" target="_blank" rel="noopener">Finding zombies in our systems: A real-world story of CPU bottlenecks</a></div>
-        <div class="item-takeaway">Pinterest engineering writeup on tracking down a production CPU bottleneck caused by accumulating zombie processes. Valuable as transferable debugging methodology for long-running hosts rather than as news. Narrower payoff for a one-person shop — worth reading if you're currently chasing unexplained CPU on a VPS.</div>
+        <div class="item-title"><a href="https://claude.com/blog/auto-mode-default-in-claude-code" target="_blank" rel="noopener">Auto mode is now the default in Claude Code</a></div>
+        <div class="item-takeaway">Anthropic says Claude Code now defaults to auto mode, which changes the baseline interaction model for existing users.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://huggingface.co/blog/muse-glimmer" target="_blank" rel="noopener">Meta is back with Muse Glimmer: local, agentic, multimodal, and open source</a></div>
+        <div class="item-takeaway">Meta's Muse Glimmer is being positioned as local, agentic, multimodal, and open source, which is the kind of stack shift worth tracking for on-device workflows.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.docker.com/products/docker-sandboxes/" target="_blank" rel="noopener">Docker Sandboxes – Disposable, isolated sandboxes for AI agents</a></div>
+        <div class="item-takeaway">Docker is pitching disposable isolated sandboxes for AI agents, but this is still a vendor launch until independent usage reports show where it actually helps.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://status.openai.com//incidents/01KZN8RYNZY8T4QQGB3JWMPYRW" target="_blank" rel="noopener">Increased errors for some ChatGPT users</a></div>
+        <div class="item-takeaway">OpenAI status reported increased ChatGPT errors, worth watching only if your own usage or customer support queue shows correlated failures today.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/ollama/ollama/releases/tag/v0.32.7" target="_blank" rel="noopener">v0.32.7</a></div>
+        <div class="item-takeaway">Ollama v0.32.7 highlights initial Muse Glimmer support on Apple Silicon, which makes the Meta release more practical for local testing but not yet broad deployment.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation" target="_blank" rel="noopener">Making Knowledge Distillation Cheap Enough to Run at Scale</a></div>
+        <div class="item-takeaway">The Hugging Face post on cheaper knowledge distillation looks potentially useful, but it reads as research or vendor framing until there are harder cost numbers and field reports.</div>
       </div>
     </div>
     <h2>Full digest</h2>
@@ -73,77 +98,440 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1vjm88v/my_product_is_finally_ready_now_im_nervous_about/" target="_blank" rel="noopener">My product is finally ready. Now I'm nervous about reaching out to my first 10 companies</a>
+          <a href="https://nickvsnetworking.com/3g-at-last/" target="_blank" rel="noopener">3G at last</a>
         </div>
-        <div class="item-takeaway">A founder asking r/SaaS how to approach their first 10 ICP-matched prospects for a churn-prevention tool. No findings, no data, no result — a request for advice rather than a report of anything that happened.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/" target="_blank" rel="noopener">Multi agent coding almost shipped a billing bug for us</a>
-        </div>
-        <div class="item-takeaway">A B2B SaaS team running a planner agent (Opus 5) plus an implementer (Composer 2.5) nearly shipped an invoice-rounding change that rounded per line item instead of on the total, overcharging customers by a cent per invoice. One agent wrote it, a second agent reviewed and approved it, and both were confidently wrong. Only a non-agent automated review gate on the diff caught it. Takeaway: agent-reviews-agent is correlated, not independent — keep a deterministic gate as the last step before merge.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1vjm1rt/built_the_same_saas_ui_in_light_dark_mode_which/" target="_blank" rel="noopener">Built the same SaaS UI in light + dark mode, which one would you actually use?</a>
-        </div>
-        <div class="item-takeaway">A poll asking r/SaaS to pick between light and dark versions of the same interface. Pure engagement bait with no findings, data, or transferable lesson.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/jmarshall23/msword" target="_blank" rel="noopener">Microsoft Word for Windows 1.1a, Native X64 Port</a>
-        </div>
-        <div class="item-takeaway">A native x64 port of Microsoft Word for Windows 1.1a, published on GitHub. Technically impressive retro-computing work but carries no practical leverage for a solo builder — nothing here changes a tool choice, a cost, or a risk.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.bbc.com/future/article/20260807-should-i-stop-cracking-my-knuckles" target="_blank" rel="noopener">Should you stop cracking your knuckles?</a>
-        </div>
-        <div class="item-takeaway">BBC Future consumer-health article on knuckle cracking. Entirely outside the brief for a solo developer deciding what deserves attention tomorrow morning.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb" target="_blank" rel="noopener">Finding zombies in our systems: A real-world story of CPU bottlenecks</a>
-        </div>
-        <div class="item-takeaway">Pinterest engineering writeup on tracking down a production CPU bottleneck caused by accumulating zombie processes. Valuable as transferable debugging methodology for long-running hosts rather than as news. Narrower payoff for a one-person shop — worth reading if you're currently chasing unexplained CPU on a VPS.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/" target="_blank" rel="noopener">Tracking down a Zsh history data loss bug</a>
-        </div>
-        <div class="item-takeaway">Michael Stapelberg traced silent ~/.zsh_history truncation to a March 2015 commit (f1c702f, shipped in Zsh 5.4) in readhistfile(). It fires when an exported HISTFILE/HISTSIZE from another shell leaks into zsh; one reproduction cut 55,075 lines down to 12,962 with no error. Zsh 5.9.2 (2026-07-12) contains the fix. Upgrade, and unexport HISTFILE in ~/.zshrc if you shell-hop between bash and zsh.</div>
+        <div class="item-takeaway">Telecom history note, interesting but not relevant to a solo builder's next move.</div>
         <div class="item-meta">
           <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://atproto.com/blog/pds-customization-and-metrics" target="_blank" rel="noopener">Make the PDS Your Own: Customization and Metrics</a>
+        </div>
+        <div class="item-takeaway">ATProto PDS customization note, but not strong enough to force action today.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Aug/10/openclaw/#atom-everything" target="_blank" rel="noopener">Quoting OpenClaw</a>
+        </div>
+        <div class="item-takeaway">Reported auth flaw let one user cancel another user's reservation in OpenClaw; useful as a fresh reminder that basic auth checks still fail in production.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/#atom-everything" target="_blank" rel="noopener">Quoting Claude Opus 5 system prompt</a>
+        </div>
+        <div class="item-takeaway">System-prompt archaeology is interesting, but this item does not present a clear action for today.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything" target="_blank" rel="noopener">GitHub Models is now retired</a>
+        </div>
+        <div class="item-takeaway">GitHub Models appears retired, with brownout-style failures already surfacing in downstream workflows.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/#atom-everything" target="_blank" rel="noopener">SQLite compressed text-history prototypes</a>
+        </div>
+        <div class="item-takeaway">Interesting storage experiment, but still an idea-level prototype rather than a morning memo keep.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Aug/6/datasette-auth-tokens/#atom-everything" target="_blank" rel="noopener">datasette-auth-tokens 0.4a13</a>
+        </div>
+        <div class="item-takeaway">Small Datasette plugin release, useful for niche users but not broad enough for the memo.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.docker.com/products/docker-sandboxes/" target="_blank" rel="noopener">Docker Sandboxes – Disposable, isolated sandboxes for AI agents</a>
+        </div>
+        <div class="item-takeaway">Docker is pitching disposable isolated sandboxes for AI agents, but this is still a vendor launch until independent usage reports show where it actually helps.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.teknogeek.io/posts/what-happened-to-hackerone/" target="_blank" rel="noopener">What Happened to HackerOne?</a>
+        </div>
+        <div class="item-takeaway">Potentially interesting postmortem angle, but too indirect from the title alone.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/shinyquagsire23/Klepton" target="_blank" rel="noopener">Run Android ARM64 VR APKs on Apple Vision Pro</a>
+        </div>
+        <div class="item-takeaway">Clever platform hack, but outside the main workflow and business focus.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.whodunnitai.com/" target="_blank" rel="noopener">Show HN: Voice driven murder mystery, Interview AI suspects with your voice</a>
+        </div>
+        <div class="item-takeaway">Fun demo, but still a Show HN novelty item rather than a decision-changing signal.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://claude.com/blog/auto-mode-default-in-claude-code" target="_blank" rel="noopener">Auto mode is now the default in Claude Code</a>
+        </div>
+        <div class="item-takeaway">Anthropic says Claude Code now defaults to auto mode, which changes the baseline interaction model for existing users.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/" target="_blank" rel="noopener">How I use LLMs to learn complex topics</a>
+        </div>
+        <div class="item-takeaway">Personal LLM study workflow, readable but not new enough to keep.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.snowflake.com/en/blog/engineering/postgres-to-snowflake-replication-mirroring/" target="_blank" rel="noopener">How We Pushed CDC into Postgres</a>
+        </div>
+        <div class="item-takeaway">Engineering writeup with possible value, but too vendor-specific and not urgent today.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650" target="_blank" rel="noopener">Taxi drivers rarely die of Alzheimer's</a>
+        </div>
+        <div class="item-takeaway">Neuroscience feature, outside the memo's operating lane.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://atproto.com/articles/atproto-for-distsys-engineers" target="_blank" rel="noopener">ATProto for Distributed Systems Engineers</a>
+        </div>
+        <div class="item-takeaway">Distributed-systems explainer, but not obviously decision-changing from the available signal.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://news.ycombinator.com/item?id=49233423" target="_blank" rel="noopener">Ask HN: What are you working on? (August 2026)</a>
+        </div>
+        <div class="item-takeaway">Open-ended work thread, useful socially but not a memo item.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.w3.org/Provider/Style/URI" target="_blank" rel="noopener">Cool URIs Don't Change (1998)</a>
+        </div>
+        <div class="item-takeaway">Classic web architecture essay resurfacing, not new information.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition" target="_blank" rel="noopener">The tragedy of the commons, AI edition</a>
+        </div>
+        <div class="item-takeaway">High-level AI commentary without a concrete move to make this morning.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://propelmusic.co.nz/articles/the-sound-went-quiet-nz-music-media" target="_blank" rel="noopener">New Zealand lost its music media, and what we're building to replace it</a>
+        </div>
+        <div class="item-takeaway">Local media rebuilding story, interesting but outside the memo's core operating surface.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://tuxedono2.com" target="_blank" rel="noopener">Tuxedo No. 2 – Cocktail recipes</a>
+        </div>
+        <div class="item-takeaway">Cocktail recipe site, not relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://publicdomainreview.org/collection/marnameh/" target="_blank" rel="noopener">&quot;The Persian MâR-Nâmeh Or, the Book for Taking Omens from Snakes&quot; (1892)</a>
+        </div>
+        <div class="item-takeaway">Historical archive item, not relevant to the memo.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.theatlantic.com/technology/2026/05/ai-wearable-surveillance-countermeasures/687203/" target="_blank" rel="noopener">Everything you do is being recorded</a>
+        </div>
+        <div class="item-takeaway">Surveillance essay, thought-provoking but not a practical builder decision item today.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.youtube.com/watch?v=GS7CxAtV5Ks" target="_blank" rel="noopener">Andrew Wiles on proving Fermat’s Last Theorem (1995) [video]</a>
+        </div>
+        <div class="item-takeaway">Great talk, but not new and not operationally relevant.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://mynoise.net/vlog.php?ep=20260803" target="_blank" rel="noopener">I made tinnitus my friend, then it disappeared [video]</a>
+        </div>
+        <div class="item-takeaway">Personal health video, outside the memo lane.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openchamber.dev/" target="_blank" rel="noopener">OpenChamber: An Agentic Development Environment</a>
+        </div>
+        <div class="item-takeaway">Agentic dev environment launch signal is too thin from title alone.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.notebookcheck.net/Windows-11-s-built-in-Weather-app-wastes-more-than-1-GB-of-RAM.1364205.0.html" target="_blank" rel="noopener">Windows 11's built-in Weather app wastes more than 1 GB of RAM</a>
+        </div>
+        <div class="item-takeaway">Windows app inefficiency complaint, not enough leverage for the target reader.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.newyorker.com/magazine/2026/08/10/silence-kate-mcloughlin-book-review" target="_blank" rel="noopener">How Golden Is Silence, Actually?</a>
+        </div>
+        <div class="item-takeaway">Book review, outside the memo lane.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://status.openai.com//incidents/01KZN8RYNZY8T4QQGB3JWMPYRW" target="_blank" rel="noopener">Increased errors for some ChatGPT users</a>
+        </div>
+        <div class="item-takeaway">OpenAI status reported increased ChatGPT errors, worth watching only if your own usage or customer support queue shows correlated failures today.</div>
+        <div class="item-meta">
+          <span>openai-status</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://github.com/ollama/ollama/releases/tag/v0.32.7" target="_blank" rel="noopener">v0.32.7</a>
+        </div>
+        <div class="item-takeaway">Ollama v0.32.7 highlights initial Muse Glimmer support on Apple Silicon, which makes the Meta release more practical for local testing but not yet broad deployment.</div>
+        <div class="item-meta">
+          <span>gh-ollama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vkfscq/i_stopped_asking_users_what_features_they_want/" target="_blank" rel="noopener">I stopped asking users what features they want</a>
+        </div>
+        <div class="item-takeaway">Reasonable SaaS advice, but generic and not new.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vkgcgp/today_we_got_our_first_inbound_signup_but/" target="_blank" rel="noopener">Today we got our first inbound signup! But...</a>
+        </div>
+        <div class="item-takeaway">Early signup anecdote, but not a strong standalone insight.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vkgz2r/i_built_a_calorietracking_app_before_finding_a/" target="_blank" rel="noopener">I built a calorie-tracking app before finding a real problem. What would you do next?</a>
+        </div>
+        <div class="item-takeaway">Common MVP-validation lesson, already well understood.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vkesmt/im_building_a_linkedin_outreach_tool_and_need/" target="_blank" rel="noopener">I’m building a LinkedIn outreach tool and need feedback from people who actually do outreach</a>
+        </div>
+        <div class="item-takeaway">Feedback request for a niche tool, not a memo item.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vkguth/cofounder_wanted_nontechnical_founder_looking_for/" target="_blank" rel="noopener">[Co-Founder Wanted] Non-Technical Founder looking for Full-Stack Developer to build an AI-driven Gadget Recommendation Platform (Equity/Co-Founder)</a>
+        </div>
+        <div class="item-takeaway">Co-founder request post, not editorial signal.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vkgpqo/jai_15_ans_et_jai_lancé_un_buisness_tout_à_côté/" target="_blank" rel="noopener">J'ai 15 ans et j'ai lancé un buisness tout à côté de mes études.</a>
+        </div>
+        <div class="item-takeaway">Personal launch story, encouraging but not decision-changing.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vkfskg/seeking_founders_or_teams_for_a_paid_ubc_research/" target="_blank" rel="noopener">Seeking founders or teams for a paid UBC research study</a>
+        </div>
+        <div class="item-takeaway">Research-study recruitment post, not relevant to the memo.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vkffwg/someone_actually_paid_for_the_app_i_built/" target="_blank" rel="noopener">Someone actually paid for the app I built</a>
+        </div>
+        <div class="item-takeaway">Payment anecdote is nice validation, but too small-scale for the memo.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation" target="_blank" rel="noopener">Making Knowledge Distillation Cheap Enough to Run at Scale</a>
+        </div>
+        <div class="item-takeaway">The Hugging Face post on cheaper knowledge distillation looks potentially useful, but it reads as research or vendor framing until there are harder cost numbers and field reports.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://huggingface.co/blog/muse-glimmer" target="_blank" rel="noopener">Meta is back with Muse Glimmer: local, agentic, multimodal, and open source</a>
+        </div>
+        <div class="item-takeaway">Meta's Muse Glimmer is being positioned as local, agentic, multimodal, and open source, which is the kind of stack shift worth tracking for on-device workflows.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
         </div>
       </div>
     </div>
@@ -151,31 +539,79 @@
       <summary>Original markdown</summary>
       <pre class="raw-report"># Nightly Librarian — Newsletter draft
 
-Run: 701d0458-98d6-40e0-98fd-9543c0623505
-Started: 2026-08-10T06:10:39.436Z
-Completed: 2026-08-10T06:13:55.918Z
+Run: 8d7238d0-b8c1-4b52-ad77-05283864c9c1
+Started: 2026-08-10T11:02:58.517Z
+Completed: 2026-08-10T11:07:28.241Z
 
 ## Worth attention
 
-- **Multi agent coding almost shipped a billing bug for us**
-  https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/
-  A B2B SaaS team running a planner agent (Opus 5) plus an implementer (Composer 2.5) nearly shipped an invoice-rounding change that rounded per line item instead of on the total, overcharging customers by a cent per invoice. One agent wrote it, a second agent reviewed and approved it, and both were confidently wrong. Only a non-agent automated review gate on the diff caught it. Takeaway: agent-reviews-agent is correlated, not independent — keep a deterministic gate as the last step before merge.
-- **Tracking down a Zsh history data loss bug**
-  https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/
-  Michael Stapelberg traced silent ~/.zsh_history truncation to a March 2015 commit (f1c702f, shipped in Zsh 5.4) in readhistfile(). It fires when an exported HISTFILE/HISTSIZE from another shell leaks into zsh; one reproduction cut 55,075 lines down to 12,962 with no error. Zsh 5.9.2 (2026-07-12) contains the fix. Upgrade, and unexport HISTFILE in ~/.zshrc if you shell-hop between bash and zsh.
-- **Finding zombies in our systems: A real-world story of CPU bottlenecks**
-  https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb
-  Pinterest engineering writeup on tracking down a production CPU bottleneck caused by accumulating zombie processes. Valuable as transferable debugging methodology for long-running hosts rather than as news. Narrower payoff for a one-person shop — worth reading if you're currently chasing unexplained CPU on a VPS.
+- **Quoting OpenClaw**
+  https://simonwillison.net/2026/Aug/10/openclaw/#atom-everything
+  Reported auth flaw let one user cancel another user's reservation in OpenClaw; useful as a fresh reminder that basic auth checks still fail in production.
+- **GitHub Models is now retired**
+  https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything
+  GitHub Models appears retired, with brownout-style failures already surfacing in downstream workflows.
+- **Auto mode is now the default in Claude Code**
+  https://claude.com/blog/auto-mode-default-in-claude-code
+  Anthropic says Claude Code now defaults to auto mode, which changes the baseline interaction model for existing users.
+- **Meta is back with Muse Glimmer: local, agentic, multimodal, and open source**
+  https://huggingface.co/blog/muse-glimmer
+  Meta's Muse Glimmer is being positioned as local, agentic, multimodal, and open source, which is the kind of stack shift worth tracking for on-device workflows.
+- **Docker Sandboxes – Disposable, isolated sandboxes for AI agents**
+  https://www.docker.com/products/docker-sandboxes/
+  Docker is pitching disposable isolated sandboxes for AI agents, but this is still a vendor launch until independent usage reports show where it actually helps.
+- **Increased errors for some ChatGPT users**
+  https://status.openai.com//incidents/01KZN8RYNZY8T4QQGB3JWMPYRW
+  OpenAI status reported increased ChatGPT errors, worth watching only if your own usage or customer support queue shows correlated failures today.
+- **v0.32.7**
+  https://github.com/ollama/ollama/releases/tag/v0.32.7
+  Ollama v0.32.7 highlights initial Muse Glimmer support on Apple Silicon, which makes the Meta release more practical for local testing but not yet broad deployment.
+- **Making Knowledge Distillation Cheap Enough to Run at Scale**
+  https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation
+  The Hugging Face post on cheaper knowledge distillation looks potentially useful, but it reads as research or vendor framing until there are harder cost numbers and field reports.
 
 ## Full digest
 
-- [R] [reddit-saas] My product is finally ready. Now I'm nervous about reaching out to my first 10 companies — https://www.reddit.com/r/SaaS/comments/1vjm88v/my_product_is_finally_ready_now_im_nervous_about/ — A founder asking r/SaaS how to approach their first 10 ICP-matched prospects for a churn-prevention tool. No findings, no data, no result — a request for advice rather than a report of anything that happened.
-- [P] [reddit-saas] Multi agent coding almost shipped a billing bug for us — https://www.reddit.com/r/SaaS/comments/1vjm66c/multi_agent_coding_almost_shipped_a_billing_bug/ — A B2B SaaS team running a planner agent (Opus 5) plus an implementer (Composer 2.5) nearly shipped an invoice-rounding change that rounded per line item instead of on the total, overcharging customers by a cent per invoice. One agent wrote it, a second agent reviewed and approved it, and both were confidently wrong. Only a non-agent automated review gate on the diff caught it. Takeaway: agent-reviews-agent is correlated, not independent — keep a deterministic gate as the last step before merge.
-- [R] [reddit-saas] Built the same SaaS UI in light + dark mode, which one would you actually use? — https://www.reddit.com/r/SaaS/comments/1vjm1rt/built_the_same_saas_ui_in_light_dark_mode_which/ — A poll asking r/SaaS to pick between light and dark versions of the same interface. Pure engagement bait with no findings, data, or transferable lesson.
-- [R] [hn-top] Microsoft Word for Windows 1.1a, Native X64 Port — https://github.com/jmarshall23/msword — A native x64 port of Microsoft Word for Windows 1.1a, published on GitHub. Technically impressive retro-computing work but carries no practical leverage for a solo builder — nothing here changes a tool choice, a cost, or a risk.
-- [R] [hn-top] Should you stop cracking your knuckles? — https://www.bbc.com/future/article/20260807-should-i-stop-cracking-my-knuckles — BBC Future consumer-health article on knuckle cracking. Entirely outside the brief for a solo developer deciding what deserves attention tomorrow morning.
-- [P] [hn-top] Finding zombies in our systems: A real-world story of CPU bottlenecks — https://medium.com/pinterest-engineering/finding-zombies-in-our-systems-a-real-world-story-of-cpu-bottlenecks-ea4722e552eb — Pinterest engineering writeup on tracking down a production CPU bottleneck caused by accumulating zombie processes. Valuable as transferable debugging methodology for long-running hosts rather than as news. Narrower payoff for a one-person shop — worth reading if you're currently chasing unexplained CPU on a VPS.
-- [P] [lobsters] Tracking down a Zsh history data loss bug — https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/ — Michael Stapelberg traced silent ~/.zsh_history truncation to a March 2015 commit (f1c702f, shipped in Zsh 5.4) in readhistfile(). It fires when an exported HISTFILE/HISTSIZE from another shell leaks into zsh; one reproduction cut 55,075 lines down to 12,962 with no error. Zsh 5.9.2 (2026-07-12) contains the fix. Upgrade, and unexport HISTFILE in ~/.zshrc if you shell-hop between bash and zsh.</pre>
+- [R] [lobsters] 3G at last — https://nickvsnetworking.com/3g-at-last/ — Telecom history note, interesting but not relevant to a solo builder's next move.
+- [R] [lobsters] Make the PDS Your Own: Customization and Metrics — https://atproto.com/blog/pds-customization-and-metrics — ATProto PDS customization note, but not strong enough to force action today.
+- [P] [simon-willison] Quoting OpenClaw — https://simonwillison.net/2026/Aug/10/openclaw/#atom-everything — Reported auth flaw let one user cancel another user's reservation in OpenClaw; useful as a fresh reminder that basic auth checks still fail in production.
+- [R] [simon-willison] Quoting Claude Opus 5 system prompt — https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/#atom-everything — System-prompt archaeology is interesting, but this item does not present a clear action for today.
+- [P] [simon-willison] GitHub Models is now retired — https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything — GitHub Models appears retired, with brownout-style failures already surfacing in downstream workflows.
+- [R] [simon-willison] SQLite compressed text-history prototypes — https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/#atom-everything — Interesting storage experiment, but still an idea-level prototype rather than a morning memo keep.
+- [R] [simon-willison] datasette-auth-tokens 0.4a13 — https://simonwillison.net/2026/Aug/6/datasette-auth-tokens/#atom-everything — Small Datasette plugin release, useful for niche users but not broad enough for the memo.
+- [M] [hn-top] Docker Sandboxes – Disposable, isolated sandboxes for AI agents — https://www.docker.com/products/docker-sandboxes/ — Docker is pitching disposable isolated sandboxes for AI agents, but this is still a vendor launch until independent usage reports show where it actually helps.
+- [R] [hn-top] What Happened to HackerOne? — https://blog.teknogeek.io/posts/what-happened-to-hackerone/ — Potentially interesting postmortem angle, but too indirect from the title alone.
+- [R] [hn-top] Run Android ARM64 VR APKs on Apple Vision Pro — https://github.com/shinyquagsire23/Klepton — Clever platform hack, but outside the main workflow and business focus.
+- [R] [hn-top] Show HN: Voice driven murder mystery, Interview AI suspects with your voice — https://www.whodunnitai.com/ — Fun demo, but still a Show HN novelty item rather than a decision-changing signal.
+- [P] [hn-top] Auto mode is now the default in Claude Code — https://claude.com/blog/auto-mode-default-in-claude-code — Anthropic says Claude Code now defaults to auto mode, which changes the baseline interaction model for existing users.
+- [R] [hn-top] How I use LLMs to learn complex topics — https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/ — Personal LLM study workflow, readable but not new enough to keep.
+- [R] [hn-top] How We Pushed CDC into Postgres — https://www.snowflake.com/en/blog/engineering/postgres-to-snowflake-replication-mirroring/ — Engineering writeup with possible value, but too vendor-specific and not urgent today.
+- [R] [hn-top] Taxi drivers rarely die of Alzheimer's — https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650 — Neuroscience feature, outside the memo's operating lane.
+- [R] [hn-top] ATProto for Distributed Systems Engineers — https://atproto.com/articles/atproto-for-distsys-engineers — Distributed-systems explainer, but not obviously decision-changing from the available signal.
+- [R] [hn-top] Ask HN: What are you working on? (August 2026) — https://news.ycombinator.com/item?id=49233423 — Open-ended work thread, useful socially but not a memo item.
+- [R] [hn-top] Cool URIs Don't Change (1998) — https://www.w3.org/Provider/Style/URI — Classic web architecture essay resurfacing, not new information.
+- [R] [hn-top] The tragedy of the commons, AI edition — https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition — High-level AI commentary without a concrete move to make this morning.
+- [R] [hn-top] New Zealand lost its music media, and what we're building to replace it — https://propelmusic.co.nz/articles/the-sound-went-quiet-nz-music-media — Local media rebuilding story, interesting but outside the memo's core operating surface.
+- [R] [hn-top] Tuxedo No. 2 – Cocktail recipes — https://tuxedono2.com — Cocktail recipe site, not relevant.
+- [R] [hn-top] &quot;The Persian MâR-Nâmeh Or, the Book for Taking Omens from Snakes&quot; (1892) — https://publicdomainreview.org/collection/marnameh/ — Historical archive item, not relevant to the memo.
+- [R] [hn-top] Everything you do is being recorded — https://www.theatlantic.com/technology/2026/05/ai-wearable-surveillance-countermeasures/687203/ — Surveillance essay, thought-provoking but not a practical builder decision item today.
+- [R] [hn-top] Andrew Wiles on proving Fermat’s Last Theorem (1995) [video] — https://www.youtube.com/watch?v=GS7CxAtV5Ks — Great talk, but not new and not operationally relevant.
+- [R] [hn-top] I made tinnitus my friend, then it disappeared [video] — https://mynoise.net/vlog.php?ep=20260803 — Personal health video, outside the memo lane.
+- [R] [hn-top] OpenChamber: An Agentic Development Environment — https://openchamber.dev/ — Agentic dev environment launch signal is too thin from title alone.
+- [R] [hn-top] Windows 11's built-in Weather app wastes more than 1 GB of RAM — https://www.notebookcheck.net/Windows-11-s-built-in-Weather-app-wastes-more-than-1-GB-of-RAM.1364205.0.html — Windows app inefficiency complaint, not enough leverage for the target reader.
+- [R] [hn-top] How Golden Is Silence, Actually? — https://www.newyorker.com/magazine/2026/08/10/silence-kate-mcloughlin-book-review — Book review, outside the memo lane.
+- [M] [openai-status] Increased errors for some ChatGPT users — https://status.openai.com//incidents/01KZN8RYNZY8T4QQGB3JWMPYRW — OpenAI status reported increased ChatGPT errors, worth watching only if your own usage or customer support queue shows correlated failures today.
+- [M] [gh-ollama] v0.32.7 — https://github.com/ollama/ollama/releases/tag/v0.32.7 — Ollama v0.32.7 highlights initial Muse Glimmer support on Apple Silicon, which makes the Meta release more practical for local testing but not yet broad deployment.
+- [R] [reddit-saas] I stopped asking users what features they want — https://www.reddit.com/r/SaaS/comments/1vkfscq/i_stopped_asking_users_what_features_they_want/ — Reasonable SaaS advice, but generic and not new.
+- [R] [reddit-saas] Today we got our first inbound signup! But... — https://www.reddit.com/r/SaaS/comments/1vkgcgp/today_we_got_our_first_inbound_signup_but/ — Early signup anecdote, but not a strong standalone insight.
+- [R] [reddit-saas] I built a calorie-tracking app before finding a real problem. What would you do next? — https://www.reddit.com/r/SaaS/comments/1vkgz2r/i_built_a_calorietracking_app_before_finding_a/ — Common MVP-validation lesson, already well understood.
+- [R] [reddit-saas] I’m building a LinkedIn outreach tool and need feedback from people who actually do outreach — https://www.reddit.com/r/SaaS/comments/1vkesmt/im_building_a_linkedin_outreach_tool_and_need/ — Feedback request for a niche tool, not a memo item.
+- [R] [reddit-saas] [Co-Founder Wanted] Non-Technical Founder looking for Full-Stack Developer to build an AI-driven Gadget Recommendation Platform (Equity/Co-Founder) — https://www.reddit.com/r/SaaS/comments/1vkguth/cofounder_wanted_nontechnical_founder_looking_for/ — Co-founder request post, not editorial signal.
+- [R] [reddit-saas] J'ai 15 ans et j'ai lancé un buisness tout à côté de mes études. — https://www.reddit.com/r/SaaS/comments/1vkgpqo/jai_15_ans_et_jai_lancé_un_buisness_tout_à_côté/ — Personal launch story, encouraging but not decision-changing.
+- [R] [reddit-saas] Seeking founders or teams for a paid UBC research study — https://www.reddit.com/r/SaaS/comments/1vkfskg/seeking_founders_or_teams_for_a_paid_ubc_research/ — Research-study recruitment post, not relevant to the memo.
+- [R] [reddit-saas] Someone actually paid for the app I built — https://www.reddit.com/r/SaaS/comments/1vkffwg/someone_actually_paid_for_the_app_i_built/ — Payment anecdote is nice validation, but too small-scale for the memo.
+- [M] [huggingface-blog] Making Knowledge Distillation Cheap Enough to Run at Scale — https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation — The Hugging Face post on cheaper knowledge distillation looks potentially useful, but it reads as research or vendor framing until there are harder cost numbers and field reports.
+- [P] [huggingface-blog] Meta is back with Muse Glimmer: local, agentic, multimodal, and open source — https://huggingface.co/blog/muse-glimmer — Meta's Muse Glimmer is being positioned as local, agentic, multimodal, and open source, which is the kind of stack shift worth tracking for on-device workflows.</pre>
     </details>
   </main>
   <footer>
