@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>August 12, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="7 stories cleared the bar, led by Liquid AI ships LFM2.5-2.">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-08-12/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="August 12, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="7 stories cleared the bar, led by Liquid AI ships LFM2.5-2.">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-08-12/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="August 12, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="7 stories cleared the bar, led by Liquid AI ships LFM2.5-2.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>August 12, 2026 · Report log</span>
+      <span>Aug 12, 2026, 2:18 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>August 12, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>7 stories cleared the bar, led by Liquid AI ships LFM2.5-2.6B — an on-device agentic model with 128K context and tool calling, Anthropic now watermarks Claude text and signs generated files with C2PA metadata, and Mcptoon — token-efficient MCP CLI client (97% less on tool discovery).</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>7 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://huggingface.co/LiquidAI/LFM2.5-2.6B" target="_blank" rel="noopener">Liquid AI ships LFM2.5-2.6B — an on-device agentic model with 128K context and tool calling</a></div>
+        <div class="item-takeaway">LFM2.5-2.6B is a 2.69B-parameter open-weights model post-trained for agentic use: tool calling, multi-step plans, 131K context, fitting in under 2.5 GB. It decodes at ~220 tok/s on an Apple M5 Max and ~30 tok/s on a phone, and Liquid claims parity with 4x-larger models on tool use and instruction following. Worth pulling locally as a candidate for the cheap always-on tier of an agent stack where a frontier model is overkill.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content" target="_blank" rel="noopener">Anthropic now watermarks Claude text and signs generated files with C2PA metadata</a></div>
+        <div class="item-takeaway">Claude attaches signed C2PA provenance metadata to supported generated files (.svg, .png, .jpg) and applies invisible watermarking to text. Models launched in the EU on or after 2 August 2026 support machine-readable marking at launch, and Anthropic says the rollout is global, not EU-only. Practical consequence: anything Claude generates that you ship downstream may carry a detectable provenance signal — and the metadata is stripped by format conversion, re-saves, and screenshots, so absence proves nothing.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/activeing123/mcptoon" target="_blank" rel="noopener">Mcptoon — token-efficient MCP CLI client (97% less on tool discovery)</a></div>
+        <div class="item-takeaway">A zero-dependency Python CLI that connects to any MCP server (stdio or HTTP) and returns TOON instead of JSON, cutting tool-discovery tokens by ~97% and result payloads by 40-60%. Servers are configured once in ~/.mcptoon/config.json and shared across every agent that can run a shell command (Claude Code, Codex, Cursor). If you run several MCP hosts against the same servers, tool-discovery tokens are being paid once per host per session — this is the cheapest available fix.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.35.0" target="_blank" rel="noopener">n8n 2.35.0 — agent-node fixes: prompt leakage, oversized tool results, Code-node redaction</a></div>
+        <div class="item-takeaway">This release stops pre-tool-call text leaking into AI Agent node responses, bounds oversized agent tool results, and applies the redaction policy to Code node console output. All three are the kind of defect that shows up as inexplicable agent output or a leaked secret in logs rather than a crash. Upgrade if you run agent workflows in n8n.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/claude-agent-sdk%400.11.0" target="_blank" rel="noopener">Composio Claude Agent SDK provider 0.11.0 — undeclared tool arguments no longer pass silently</a></div>
+        <div class="item-takeaway">The provider previously registered only a raw property shape, so root-level schema rules (additionalProperties, patternProperties) were dropped before the SDK saw them. Two consequences: free-form object arguments lost their content, and arguments the tool never declared were silently stripped while the tool ran anyway. Both are now fixed, which means a hallucinated argument that used to be quietly discarded will now surface as an error. If you have agents running against Composio tools, expect newly-visible failures that were previously invisible.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vlawlv/free_for_solo_founders/" target="_blank" rel="noopener">Timegeist — time tracking with a free tier that includes invoicing</a></div>
+        <div class="item-takeaway">A launch post for a time tracker aimed at solo founders and freelancers, notable mainly because the free plan is not a trial and includes the full timer-to-invoice path: projects, tags, kanban, reports, CSV/PDF export, and 3 branded invoices a month, no card required. The usual pattern is to gate invoicing behind the paid tier. Worth a look if you are still tracking billable time in a spreadsheet.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.mikeayles.com/blog/on-chip-llm-kv260/" target="_blank" rel="noopener">Show HN: a tiny LLM running at 21,000 tok/s on a $250 KV260 FPGA</a></div>
+        <div class="item-takeaway">A live-demo writeup of an on-chip LLM implementation on a $250 Xilinx KV260 board hitting 21,000 tokens/sec. The model is tiny, so this is a throughput and architecture demonstration rather than a usable inference target, but it is a concrete data point on what dedicated silicon does to token economics at the small-model end. Read as a signal about where cheap inference goes, not as something to deploy.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.mikeayles.com/blog/on-chip-llm-kv260/" target="_blank" rel="noopener">Show HN: a tiny LLM running at 21,000 tok/s on a $250 KV260 FPGA</a>
+        </div>
+        <div class="item-takeaway">A live-demo writeup of an on-chip LLM implementation on a $250 Xilinx KV260 board hitting 21,000 tokens/sec. The model is tiny, so this is a throughput and architecture demonstration rather than a usable inference target, but it is a concrete data point on what dedicated silicon does to token economics at the small-model end. Read as a signal about where cheap inference goes, not as something to deploy.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vlanf5/most_saas_onboarding_is_built_for_the_company_not/" target="_blank" rel="noopener">Most SaaS onboarding is built for the company, not the user</a>
+        </div>
+        <div class="item-takeaway">Opinion post arguing onboarding flows extract segmentation data before delivering user value.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vl9zms/my_experience_with_ads_app_promotion/" target="_blank" rel="noopener">My experience with ads and app promotion</a>
+        </div>
+        <div class="item-takeaway">Anecdotal account of a failed Play Store launch and ~5,000 INR of wasted ad spend.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vl9qe9/today_is_my_product_hunt_launch_day_and_i_need/" target="_blank" rel="noopener">Product Hunt launch day upvote request</a>
+        </div>
+        <div class="item-takeaway">Pure promotional upvote solicitation.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vl9nr4/help_me_find_ideas/" target="_blank" rel="noopener">Help me find ideas</a>
+        </div>
+        <div class="item-takeaway">Low-effort request for SaaS ideas.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vlazjf/built_an_mcp_to_make_cookie_consent_setup/" target="_blank" rel="noopener">Built an MCP to make cookie consent setup simple</a>
+        </div>
+        <div class="item-takeaway">Promotional post for a cookie-consent MCP server, paired with a Product Hunt upvote request.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          Timegeist
+        </div>
+        <div class="item-takeaway">time tracking with a free tier that includes invoicing — https://www.reddit.com/r/SaaS/comments/1vlawlv/free_for_solo_founders/ — A launch post for a time tracker aimed at solo founders and freelancers, notable mainly because the free plan is not a trial and includes the full timer-to-invoice path: projects, tags, kanban, reports, CSV/PDF export, and 3 branded invoices a month, no card required. The usual pattern is to gate invoicing behind the paid tier. Worth a look if you are still tracking billable time in a spreadsheet.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vlabec/i_need_feedback_on_my_landing_pagehow_do_i_make/" target="_blank" rel="noopener">I need feedback on my landing page.How do I make it better</a>
+        </div>
+        <div class="item-takeaway">I've been very focused on the product but now I can't really convert anyone and I am not really sure how to make a landing page. I made another post and I got a lot of really helpful feedback but they could only see above the fold since i o…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vla3oh/mobile_app_agencies_what_am_i_missing/" target="_blank" rel="noopener">Mobile app agencies, what am I missing?</a>
+        </div>
+        <div class="item-takeaway">i've been researching this for a couple weeks and feel like I'm at the point where I've read enough agency websites to qualify for a minor degree in bullsh*t lol. I've got a shortlist now. one agency is on it, mostly because they seem prett…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vla22w/every_slow_season_i_get_the_urge_to_slash_prices/" target="_blank" rel="noopener">Every slow season I get the urge to slash prices to fill the calendar. This year I built a cash rhythm instead, and it killed the panic.</a>
+        </div>
+        <div class="item-takeaway">I don't run a SaaS, I run a small service business, but I lurk here because the pricing fight is the same one I have every quarter and you lot are more honest about it than most. Every slow season the same voice shows up. Calendar's thin, s…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vl9ol7/webbon_to_capture_prompt_of_any_website_using_url/" target="_blank" rel="noopener">Webbon to capture prompt of any website using URL</a>
+        </div>
+        <div class="item-takeaway">I’ve been experimenting with recreating website layouts using AI coding tools like Cursor and Claude. One thing I noticed is that getting the initial structure right takes a surprising amount of time. You need to describe the layout, sectio…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vl9n3v/hi_im_sam_i_created_whats_the_move_an_app_that/" target="_blank" rel="noopener">Hi, I'm Sam. I created What's the Move, an app that shows you local real events going on near you.</a>
+        </div>
+        <div class="item-takeaway">What's the Move ( https://apps.apple.com/us/app/whats-the-move-wtm/id6760272642 ) is a local events discovery app designed to bring people to new events and places they would have not known about or been to before. The problem was that find…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          n8n 2.35.0
+        </div>
+        <div class="item-takeaway">agent-node fixes: prompt leakage, oversized tool results, Code-node redaction — https://github.com/n8n-io/n8n/releases/tag/n8n%402.35.0 — This release stops pre-tool-call text leaking into AI Agent node responses, bounds oversized agent tool results, and applies the redaction policy to Code node console output. All three are the kind of defect that shows up as inexplicable agent output or a leaked secret in logs rather than a crash. Upgrade if you run agent workflows in n8n.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">n8n beta tag (duplicate of 2.35.0)</a>
+        </div>
+        <div class="item-takeaway">The 'beta' release tag carries identical changelog content to n8n 2.35.0.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://thewalrus.ca/google-search-is-dying/" target="_blank" rel="noopener">As AI eats the web, the internet's collective memory is disappearing</a>
+        </div>
+        <div class="item-takeaway">Long-form editorial on search decay and link rot in the AI era.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          Liquid AI ships LFM2.5-2.6B
+        </div>
+        <div class="item-takeaway">an on-device agentic model with 128K context and tool calling — https://huggingface.co/LiquidAI/LFM2.5-2.6B — LFM2.5-2.6B is a 2.69B-parameter open-weights model post-trained for agentic use: tool calling, multi-step plans, 131K context, fitting in under 2.5 GB. It decodes at ~220 tok/s on an Apple M5 Max and ~30 tok/s on a phone, and Liquid claims parity with 4x-larger models on tool use and instruction following. Worth pulling locally as a candidate for the cheap always-on tier of an agent stack where a frontier model is overkill.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          Recycle
+        </div>
+        <div class="item-takeaway">Floppydisks — https://www.floppydisk.com/recycle — A floppy disk recycling page.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.effort.news/uk-lobby" target="_blank" rel="noopener">The UK's war on anonymity has come to America</a>
+        </div>
+        <div class="item-takeaway">Advocacy piece on age-verification and anonymity legislation.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content" target="_blank" rel="noopener">Anthropic now watermarks Claude text and signs generated files with C2PA metadata</a>
+        </div>
+        <div class="item-takeaway">Claude attaches signed C2PA provenance metadata to supported generated files (.svg, .png, .jpg) and applies invisible watermarking to text. Models launched in the EU on or after 2 August 2026 support machine-readable marking at launch, and Anthropic says the rollout is global, not EU-only. Practical consequence: anything Claude generates that you ship downstream may carry a detectable provenance signal — and the metadata is stripped by format conversion, re-saves, and screenshots, so absence proves nothing.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lwn.net/Articles/1034703/" target="_blank" rel="noopener">Tail-call optimization in C is relatively recent (2025)</a>
+        </div>
+        <div class="item-takeaway">LWN article on the history of tail-call optimization in C compilers.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.anthropic.com/research/riemann-zeta" target="_blank" rel="noopener">Learning more about Claude's mathematical capabilities</a>
+        </div>
+        <div class="item-takeaway">Deferred by pre-triage volume cap; not evaluated on merit this run.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/AntigmaLabs/ante" target="_blank" rel="noopener">Show HN: Ante, a coding agent in a single binary that runs offline</a>
+        </div>
+        <div class="item-takeaway">Deferred by pre-triage volume cap; not evaluated on merit this run.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://hypercritical.co/hyperspace/" target="_blank" rel="noopener">Hyperspace</a>
+        </div>
+        <div class="item-takeaway">Deferred by pre-triage volume cap; not evaluated on merit this run.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.bbc.com/news/articles/c1j1kjy7gewo" target="_blank" rel="noopener">Mars Bar from 1991 found – and it's 20g bigger than today's</a>
+        </div>
+        <div class="item-takeaway">Deferred by pre-triage volume cap; not evaluated on merit this run.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://9p.io/who/dmr/odd.html" target="_blank" rel="noopener">Odd Comments and Strange Doings in Unix</a>
+        </div>
+        <div class="item-takeaway">Dennis Ritchie's historical note on Unix source comments.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://midirus.com/blog/advent-of-fpga" target="_blank" rel="noopener">Solving Advent of Code on FPGAs with Haskell Clash</a>
+        </div>
+        <div class="item-takeaway">Hobby writeup on implementing Advent of Code puzzles in Clash on FPGA.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/slim%400.16.0" target="_blank" rel="noopener">@composio/slim@0.16.0</a>
+        </div>
+        <div class="item-takeaway">Dependency-only patch bump.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/json-schema-to-zod%400.3.0" target="_blank" rel="noopener">@composio/json-schema-to-zod@0.3.0</a>
+        </div>
+        <div class="item-takeaway">Sub-package schema fix for free-form object arguments, superseded by the core and Claude Agent SDK releases.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/google%400.10.2" target="_blank" rel="noopener">@composio/google@0.10.2</a>
+        </div>
+        <div class="item-takeaway">Patch adding missing object types to nested Gemini tool schemas.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/core%400.16.0" target="_blank" rel="noopener">@composio/core@0.16.0</a>
+        </div>
+        <div class="item-takeaway">Core schema-parsing release that preserves free-form object roots, patternProperties, and additionalProperties.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          Composio Claude Agent SDK provider 0.11.0
+        </div>
+        <div class="item-takeaway">undeclared tool arguments no longer pass silently — https://github.com/ComposioHQ/composio/releases/tag/%40composio/claude-agent-sdk%400.11.0 — The provider previously registered only a raw property shape, so root-level schema rules (additionalProperties, patternProperties) were dropped before the SDK saw them. Two consequences: free-form object arguments lost their content, and arguments the tool never declared were silently stripped while the tool ran anyway. Both are now fixed, which means a hallucinated argument that used to be quietly discarded will now surface as an error. If you have agents running against Composio tools, expect newly-visible failures that were previously invisible.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.3.3-beta.347" target="_blank" rel="noopener">@composio/cli@0.3.3-beta.347</a>
+        </div>
+        <div class="item-takeaway">Beta CLI build with catalog-baking and docs fixes.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          Mcptoon
+        </div>
+        <div class="item-takeaway">token-efficient MCP CLI client (97% less on tool discovery) — https://github.com/activeing123/mcptoon — A zero-dependency Python CLI that connects to any MCP server (stdio or HTTP) and returns TOON instead of JSON, cutting tool-discovery tokens by ~97% and result payloads by 40-60%. Servers are configured once in ~/.mcptoon/config.json and shared across every agent that can run a shell command (Claude Code, Codex, Cursor). If you run several MCP hosts against the same servers, tool-discovery tokens are being paid once per host per session — this is the cheapest available fix.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vlcjzw/almost_quit_my_saas_after_3_years_without_sales/" target="_blank" rel="noopener">Almost quit my SaaS after 3 years without sales, now we do 500 last week.</a>
+        </div>
+        <div class="item-takeaway">I remember when I got my first Stripe payment, it was 47 euros. I feels unreal. Then I didn't sell for months. Before that I've build for 3 years. Yeah it was before chatgpt. Got into depression after this one sales. I just sold to 1 compan…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vlbtzp/pre_launch_checklist_for_anything_you_vibe_coded/" target="_blank" rel="noopener">Pre launch checklist for anything you vibe coded, 11 things, takes about 20 minutes</a>
+        </div>
+        <div class="item-takeaway">Wrote this after looking at a lot of agent-built apps that were one bad afternoon away from a serious problem. None of it is hard, it is just that nobody tells you to check. Change an id in a url and see if you can read someone else's data.…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vldl6q/tips_on_reddit_marketing/" target="_blank" rel="noopener">Tips on reddit marketing?</a>
+        </div>
+        <div class="item-takeaway">I have been trying to crack reddit marketing for a few months now. I hate the reddit marketing tools online that send mass replies to so many random users without any goal or proper interaction. I even created a copywriting tool (a chrome e…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vldiw8/roast_this_startup_idea_before_i_waste_another_6/" target="_blank" rel="noopener">Roast this startup idea before I waste another 6 months on it</a>
+        </div>
+        <div class="item-takeaway">the idea: companies spend money getting people onto their website. most visitors don't convert. ClientX tries to turn those visitors into conversations automatically. that's it. no “10 AI agents”. no 47-step CRM. no replacing your entire sa…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vlcrs6/loom_saas_or_something_youd_rather_own/" target="_blank" rel="noopener">Loom: SaaS or something you’d rather own?</a>
+        </div>
+        <div class="item-takeaway">For teams using Loom or similar tools, has per user pricing, rising costs, vendor lock in or data control ever become a real pain? If you could have your own private video-sharing infrastructure, hosted on infrastructure you control, would…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vlce61/traffic_from_chatgpt_or_other_chatbot/" target="_blank" rel="noopener">Traffic from chatgpt or other chatbot</a>
+        </div>
+        <div class="item-takeaway">Hey guys, in the past few days i am seeing several coming from chatbot to my Saas . However it is just having from which chatbot like chatgpt for example . But i am interested to know which query they are entering from, do you guys know how…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vlcx9z/nearly_quit_my_saas_last_year_glad_i_didnt_since/" target="_blank" rel="noopener">Nearly quit my SaaS last year. Glad I didn't... Since Feb my ARR is £5,000+</a>
+        </div>
+        <div class="item-takeaway">Last year I sold to one customer, then they left me... Then I didn't sell for a couple of months. Spiralled for a while thinking is it worth it? Is staying up until midnight worth the stress for essentially nothing? But, now I have an ARR o…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: b59761af-8620-4e11-8d66-16aa4c508746
+Started: 2026-08-12T06:11:17.922Z
+Completed: 2026-08-12T06:18:44.631Z
+
+## Worth attention
+
+- **Liquid AI ships LFM2.5-2.6B — an on-device agentic model with 128K context and tool calling**
+  https://huggingface.co/LiquidAI/LFM2.5-2.6B
+  LFM2.5-2.6B is a 2.69B-parameter open-weights model post-trained for agentic use: tool calling, multi-step plans, 131K context, fitting in under 2.5 GB. It decodes at ~220 tok/s on an Apple M5 Max and ~30 tok/s on a phone, and Liquid claims parity with 4x-larger models on tool use and instruction following. Worth pulling locally as a candidate for the cheap always-on tier of an agent stack where a frontier model is overkill.
+- **Anthropic now watermarks Claude text and signs generated files with C2PA metadata**
+  https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content
+  Claude attaches signed C2PA provenance metadata to supported generated files (.svg, .png, .jpg) and applies invisible watermarking to text. Models launched in the EU on or after 2 August 2026 support machine-readable marking at launch, and Anthropic says the rollout is global, not EU-only. Practical consequence: anything Claude generates that you ship downstream may carry a detectable provenance signal — and the metadata is stripped by format conversion, re-saves, and screenshots, so absence proves nothing.
+- **Mcptoon — token-efficient MCP CLI client (97% less on tool discovery)**
+  https://github.com/activeing123/mcptoon
+  A zero-dependency Python CLI that connects to any MCP server (stdio or HTTP) and returns TOON instead of JSON, cutting tool-discovery tokens by ~97% and result payloads by 40-60%. Servers are configured once in ~/.mcptoon/config.json and shared across every agent that can run a shell command (Claude Code, Codex, Cursor). If you run several MCP hosts against the same servers, tool-discovery tokens are being paid once per host per session — this is the cheapest available fix.
+- **n8n 2.35.0 — agent-node fixes: prompt leakage, oversized tool results, Code-node redaction**
+  https://github.com/n8n-io/n8n/releases/tag/n8n%402.35.0
+  This release stops pre-tool-call text leaking into AI Agent node responses, bounds oversized agent tool results, and applies the redaction policy to Code node console output. All three are the kind of defect that shows up as inexplicable agent output or a leaked secret in logs rather than a crash. Upgrade if you run agent workflows in n8n.
+- **Composio Claude Agent SDK provider 0.11.0 — undeclared tool arguments no longer pass silently**
+  https://github.com/ComposioHQ/composio/releases/tag/%40composio/claude-agent-sdk%400.11.0
+  The provider previously registered only a raw property shape, so root-level schema rules (additionalProperties, patternProperties) were dropped before the SDK saw them. Two consequences: free-form object arguments lost their content, and arguments the tool never declared were silently stripped while the tool ran anyway. Both are now fixed, which means a hallucinated argument that used to be quietly discarded will now surface as an error. If you have agents running against Composio tools, expect newly-visible failures that were previously invisible.
+- **Timegeist — time tracking with a free tier that includes invoicing**
+  https://www.reddit.com/r/SaaS/comments/1vlawlv/free_for_solo_founders/
+  A launch post for a time tracker aimed at solo founders and freelancers, notable mainly because the free plan is not a trial and includes the full timer-to-invoice path: projects, tags, kanban, reports, CSV/PDF export, and 3 branded invoices a month, no card required. The usual pattern is to gate invoicing behind the paid tier. Worth a look if you are still tracking billable time in a spreadsheet.
+- **Show HN: a tiny LLM running at 21,000 tok/s on a $250 KV260 FPGA**
+  https://www.mikeayles.com/blog/on-chip-llm-kv260/
+  A live-demo writeup of an on-chip LLM implementation on a $250 Xilinx KV260 board hitting 21,000 tokens/sec. The model is tiny, so this is a throughput and architecture demonstration rather than a usable inference target, but it is a concrete data point on what dedicated silicon does to token economics at the small-model end. Read as a signal about where cheap inference goes, not as something to deploy.
+
+## Full digest
+
+- [P] [hn-show] Show HN: a tiny LLM running at 21,000 tok/s on a $250 KV260 FPGA — https://www.mikeayles.com/blog/on-chip-llm-kv260/ — A live-demo writeup of an on-chip LLM implementation on a $250 Xilinx KV260 board hitting 21,000 tokens/sec. The model is tiny, so this is a throughput and architecture demonstration rather than a usable inference target, but it is a concrete data point on what dedicated silicon does to token economics at the small-model end. Read as a signal about where cheap inference goes, not as something to deploy.
+- [R] [reddit-saas] Most SaaS onboarding is built for the company, not the user — https://www.reddit.com/r/SaaS/comments/1vlanf5/most_saas_onboarding_is_built_for_the_company_not/ — Opinion post arguing onboarding flows extract segmentation data before delivering user value.
+- [R] [reddit-saas] My experience with ads and app promotion — https://www.reddit.com/r/SaaS/comments/1vl9zms/my_experience_with_ads_app_promotion/ — Anecdotal account of a failed Play Store launch and ~5,000 INR of wasted ad spend.
+- [R] [reddit-saas] Product Hunt launch day upvote request — https://www.reddit.com/r/SaaS/comments/1vl9qe9/today_is_my_product_hunt_launch_day_and_i_need/ — Pure promotional upvote solicitation.
+- [R] [reddit-saas] Help me find ideas — https://www.reddit.com/r/SaaS/comments/1vl9nr4/help_me_find_ideas/ — Low-effort request for SaaS ideas.
+- [R] [reddit-saas] Built an MCP to make cookie consent setup simple — https://www.reddit.com/r/SaaS/comments/1vlazjf/built_an_mcp_to_make_cookie_consent_setup/ — Promotional post for a cookie-consent MCP server, paired with a Product Hunt upvote request.
+- [P] [reddit-saas] Timegeist — time tracking with a free tier that includes invoicing — https://www.reddit.com/r/SaaS/comments/1vlawlv/free_for_solo_founders/ — A launch post for a time tracker aimed at solo founders and freelancers, notable mainly because the free plan is not a trial and includes the full timer-to-invoice path: projects, tags, kanban, reports, CSV/PDF export, and 3 branded invoices a month, no card required. The usual pattern is to gate invoicing behind the paid tier. Worth a look if you are still tracking billable time in a spreadsheet.
+- [R] [reddit-saas] I need feedback on my landing page.How do I make it better — https://www.reddit.com/r/SaaS/comments/1vlabec/i_need_feedback_on_my_landing_pagehow_do_i_make/ — I've been very focused on the product but now I can't really convert anyone and I am not really sure how to make a landing page. I made another post and I got a lot of really helpful feedback but they could only see above the fold since i o…
+- [R] [reddit-saas] Mobile app agencies, what am I missing? — https://www.reddit.com/r/SaaS/comments/1vla3oh/mobile_app_agencies_what_am_i_missing/ — i've been researching this for a couple weeks and feel like I'm at the point where I've read enough agency websites to qualify for a minor degree in bullsh*t lol. I've got a shortlist now. one agency is on it, mostly because they seem prett…
+- [R] [reddit-saas] Every slow season I get the urge to slash prices to fill the calendar. This year I built a cash rhythm instead, and it killed the panic. — https://www.reddit.com/r/SaaS/comments/1vla22w/every_slow_season_i_get_the_urge_to_slash_prices/ — I don't run a SaaS, I run a small service business, but I lurk here because the pricing fight is the same one I have every quarter and you lot are more honest about it than most. Every slow season the same voice shows up. Calendar's thin, s…
+- [R] [reddit-saas] Webbon to capture prompt of any website using URL — https://www.reddit.com/r/SaaS/comments/1vl9ol7/webbon_to_capture_prompt_of_any_website_using_url/ — I’ve been experimenting with recreating website layouts using AI coding tools like Cursor and Claude. One thing I noticed is that getting the initial structure right takes a surprising amount of time. You need to describe the layout, sectio…
+- [R] [reddit-saas] Hi, I'm Sam. I created What's the Move, an app that shows you local real events going on near you. — https://www.reddit.com/r/SaaS/comments/1vl9n3v/hi_im_sam_i_created_whats_the_move_an_app_that/ — What's the Move ( https://apps.apple.com/us/app/whats-the-move-wtm/id6760272642 ) is a local events discovery app designed to bring people to new events and places they would have not known about or been to before. The problem was that find…
+- [P] [gh-n8n] n8n 2.35.0 — agent-node fixes: prompt leakage, oversized tool results, Code-node redaction — https://github.com/n8n-io/n8n/releases/tag/n8n%402.35.0 — This release stops pre-tool-call text leaking into AI Agent node responses, bounds oversized agent tool results, and applies the redaction policy to Code node console output. All three are the kind of defect that shows up as inexplicable agent output or a leaked secret in logs rather than a crash. Upgrade if you run agent workflows in n8n.
+- [R] [gh-n8n] n8n beta tag (duplicate of 2.35.0) — https://github.com/n8n-io/n8n/releases/tag/beta — The 'beta' release tag carries identical changelog content to n8n 2.35.0.
+- [R] [hn-top] As AI eats the web, the internet's collective memory is disappearing — https://thewalrus.ca/google-search-is-dying/ — Long-form editorial on search decay and link rot in the AI era.
+- [P] [hn-top] Liquid AI ships LFM2.5-2.6B — an on-device agentic model with 128K context and tool calling — https://huggingface.co/LiquidAI/LFM2.5-2.6B — LFM2.5-2.6B is a 2.69B-parameter open-weights model post-trained for agentic use: tool calling, multi-step plans, 131K context, fitting in under 2.5 GB. It decodes at ~220 tok/s on an Apple M5 Max and ~30 tok/s on a phone, and Liquid claims parity with 4x-larger models on tool use and instruction following. Worth pulling locally as a candidate for the cheap always-on tier of an agent stack where a frontier model is overkill.
+- [R] [hn-top] Recycle — Floppydisks — https://www.floppydisk.com/recycle — A floppy disk recycling page.
+- [R] [hn-top] The UK's war on anonymity has come to America — https://www.effort.news/uk-lobby — Advocacy piece on age-verification and anonymity legislation.
+- [P] [hn-top] Anthropic now watermarks Claude text and signs generated files with C2PA metadata — https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content — Claude attaches signed C2PA provenance metadata to supported generated files (.svg, .png, .jpg) and applies invisible watermarking to text. Models launched in the EU on or after 2 August 2026 support machine-readable marking at launch, and Anthropic says the rollout is global, not EU-only. Practical consequence: anything Claude generates that you ship downstream may carry a detectable provenance signal — and the metadata is stripped by format conversion, re-saves, and screenshots, so absence proves nothing.
+- [R] [hn-top] Tail-call optimization in C is relatively recent (2025) — https://lwn.net/Articles/1034703/ — LWN article on the history of tail-call optimization in C compilers.
+- [R] [hn-top] Learning more about Claude's mathematical capabilities — https://www.anthropic.com/research/riemann-zeta — Deferred by pre-triage volume cap; not evaluated on merit this run.
+- [R] [hn-top] Show HN: Ante, a coding agent in a single binary that runs offline — https://github.com/AntigmaLabs/ante — Deferred by pre-triage volume cap; not evaluated on merit this run.
+- [R] [hn-top] Hyperspace — https://hypercritical.co/hyperspace/ — Deferred by pre-triage volume cap; not evaluated on merit this run.
+- [R] [hn-top] Mars Bar from 1991 found – and it's 20g bigger than today's — https://www.bbc.com/news/articles/c1j1kjy7gewo — Deferred by pre-triage volume cap; not evaluated on merit this run.
+- [R] [lobsters] Odd Comments and Strange Doings in Unix — https://9p.io/who/dmr/odd.html — Dennis Ritchie's historical note on Unix source comments.
+- [R] [lobsters] Solving Advent of Code on FPGAs with Haskell Clash — https://midirus.com/blog/advent-of-fpga — Hobby writeup on implementing Advent of Code puzzles in Clash on FPGA.
+- [R] [gh-composio] @composio/slim@0.16.0 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/slim%400.16.0 — Dependency-only patch bump.
+- [R] [gh-composio] @composio/json-schema-to-zod@0.3.0 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/json-schema-to-zod%400.3.0 — Sub-package schema fix for free-form object arguments, superseded by the core and Claude Agent SDK releases.
+- [R] [gh-composio] @composio/google@0.10.2 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/google%400.10.2 — Patch adding missing object types to nested Gemini tool schemas.
+- [R] [gh-composio] @composio/core@0.16.0 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/core%400.16.0 — Core schema-parsing release that preserves free-form object roots, patternProperties, and additionalProperties.
+- [P] [gh-composio] Composio Claude Agent SDK provider 0.11.0 — undeclared tool arguments no longer pass silently — https://github.com/ComposioHQ/composio/releases/tag/%40composio/claude-agent-sdk%400.11.0 — The provider previously registered only a raw property shape, so root-level schema rules (additionalProperties, patternProperties) were dropped before the SDK saw them. Two consequences: free-form object arguments lost their content, and arguments the tool never declared were silently stripped while the tool ran anyway. Both are now fixed, which means a hallucinated argument that used to be quietly discarded will now surface as an error. If you have agents running against Composio tools, expect newly-visible failures that were previously invisible.
+- [R] [gh-composio] @composio/cli@0.3.3-beta.347 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.3.3-beta.347 — Beta CLI build with catalog-baking and docs fixes.
+- [P] [hn-show] Mcptoon — token-efficient MCP CLI client (97% less on tool discovery) — https://github.com/activeing123/mcptoon — A zero-dependency Python CLI that connects to any MCP server (stdio or HTTP) and returns TOON instead of JSON, cutting tool-discovery tokens by ~97% and result payloads by 40-60%. Servers are configured once in ~/.mcptoon/config.json and shared across every agent that can run a shell command (Claude Code, Codex, Cursor). If you run several MCP hosts against the same servers, tool-discovery tokens are being paid once per host per session — this is the cheapest available fix.
+- [R] [reddit-saas] Almost quit my SaaS after 3 years without sales, now we do 500 last week. — https://www.reddit.com/r/SaaS/comments/1vlcjzw/almost_quit_my_saas_after_3_years_without_sales/ — I remember when I got my first Stripe payment, it was 47 euros. I feels unreal. Then I didn't sell for months. Before that I've build for 3 years. Yeah it was before chatgpt. Got into depression after this one sales. I just sold to 1 compan…
+- [R] [reddit-saas] Pre launch checklist for anything you vibe coded, 11 things, takes about 20 minutes — https://www.reddit.com/r/SaaS/comments/1vlbtzp/pre_launch_checklist_for_anything_you_vibe_coded/ — Wrote this after looking at a lot of agent-built apps that were one bad afternoon away from a serious problem. None of it is hard, it is just that nobody tells you to check. Change an id in a url and see if you can read someone else's data.…
+- [R] [reddit-saas] Tips on reddit marketing? — https://www.reddit.com/r/SaaS/comments/1vldl6q/tips_on_reddit_marketing/ — I have been trying to crack reddit marketing for a few months now. I hate the reddit marketing tools online that send mass replies to so many random users without any goal or proper interaction. I even created a copywriting tool (a chrome e…
+- [R] [reddit-saas] Roast this startup idea before I waste another 6 months on it — https://www.reddit.com/r/SaaS/comments/1vldiw8/roast_this_startup_idea_before_i_waste_another_6/ — the idea: companies spend money getting people onto their website. most visitors don't convert. ClientX tries to turn those visitors into conversations automatically. that's it. no “10 AI agents”. no 47-step CRM. no replacing your entire sa…
+- [R] [reddit-saas] Loom: SaaS or something you’d rather own? — https://www.reddit.com/r/SaaS/comments/1vlcrs6/loom_saas_or_something_youd_rather_own/ — For teams using Loom or similar tools, has per user pricing, rising costs, vendor lock in or data control ever become a real pain? If you could have your own private video-sharing infrastructure, hosted on infrastructure you control, would…
+- [R] [reddit-saas] Traffic from chatgpt or other chatbot — https://www.reddit.com/r/SaaS/comments/1vlce61/traffic_from_chatgpt_or_other_chatbot/ — Hey guys, in the past few days i am seeing several coming from chatbot to my Saas . However it is just having from which chatbot like chatgpt for example . But i am interested to know which query they are entering from, do you guys know how…
+- [R] [reddit-saas] Nearly quit my SaaS last year. Glad I didn't... Since Feb my ARR is £5,000+ — https://www.reddit.com/r/SaaS/comments/1vlcx9z/nearly_quit_my_saas_last_year_glad_i_didnt_since/ — Last year I sold to one customer, then they left me... Then I didn't sell for a couple of months. Spiralled for a while thinking is it worth it? Is staying up until midnight worth the stress for essentially nothing? But, now I have an ARR o…</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>

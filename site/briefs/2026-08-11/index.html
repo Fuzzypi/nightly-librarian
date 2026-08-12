@@ -5,23 +5,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>August 11, 2026 — The Nightly Librarian</title>
-  <meta name="description" content="Tonight's brief tracks Model + API Changes, Tools Worth Testing, AI Operations / Agent Control, and Small Business Automation.">
+  <meta name="description" content="Tonight's brief tracks AI Operations / Agent Control, Data Infrastructure / Verification / Scraping, Model + API Changes, and Tools Worth Testing.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/briefs/2026-08-11/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="August 11, 2026 | The Nightly Librarian">
-  <meta property="og:description" content="Tonight's brief tracks Model + API Changes, Tools Worth Testing, AI Operations / Agent Control, and Small Business Automation.">
+  <meta property="og:description" content="Tonight's brief tracks AI Operations / Agent Control, Data Infrastructure / Verification / Scraping, Model + API Changes, and Tools Worth Testing.">
   <meta property="og:url" content="https://thenightlylibrarian.com/briefs/2026-08-11/">
-  <meta property="og:image" content="https://thenightlylibrarian.com/og/model-api-changes.png">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="August 11, 2026 | The Nightly Librarian">
-  <meta name="twitter:description" content="Tonight's brief tracks Model + API Changes, Tools Worth Testing, AI Operations / Agent Control, and Small Business Automation.">
-  <meta name="twitter:image" content="https://thenightlylibrarian.com/og/model-api-changes.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Meta releases Muse Glimmer: 30B open-weights agentic model under Apache 2.0, runs on one consumer GPU","description":"Tonight's brief tracks Model + API Changes, Tools Worth Testing, AI Operations / Agent Control, and Small Business Automation. Completed Nightly Librarian run with 4 promoted item(s), 40 scored item(s), and 36 rejected item(s). The lead source signal is Meta releases Muse Glimmer: 30B open-weights agentic model under Apache 2.0, runs on one consumer GPU: Meta released Muse Glimmer, a 30B open-weights (Apache 2.0) agentic model that runs locally on a single 24-32GB consumer GPU or Mac after 4-bit","url":"https://thenightlylibrarian.com/briefs/2026-08-11/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-08-11","dateModified":"2026-08-11"}</script>
+  <meta name="twitter:description" content="Tonight's brief tracks AI Operations / Agent Control, Data Infrastructure / Verification / Scraping, Model + API Changes, and Tools Worth Testing.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"A sandbox without a network boundary is only half a sandbox","description":"Tonight's brief tracks AI Operations / Agent Control, Data Infrastructure / Verification / Scraping, Model + API Changes, and Tools Worth Testing. Synthesized Nightly Librarian run with 7 promoted item(s), 40 scored item(s), and 33 rejected item(s). The lead source signal is A sandbox without a network boundary is only half a sandbox: Running untrusted code safely requires more than separating it from the host. You also have to control what that code can reach. This matters more as AI agents gai","url":"https://thenightlylibrarian.com/briefs/2026-08-11/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-08-11","dateModified":"2026-08-11"}</script>
   <link rel="stylesheet" href="/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
 </head>
@@ -42,22 +42,22 @@
   <main>
     <a class="back-link" href="/">All briefs</a>
     <h1>August 11, 2026</h1>
-    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span><span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span><span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span></div>
-    <p class="lead-summary" style="margin-top:0.85rem;">Apache 2.0 agentic model that fits a local Mac and is already wired into Ollama — directly actionable for local agent workflows.</p>
+    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span><span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span><span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span><span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span></div>
+    <p class="lead-summary" style="margin-top:0.85rem;">Practical security framing for anyone evaluating agent sandboxing or code-execution products.</p>
     <h2>Worth mentioning</h2>
 
     <div class="item">
       <div class="item-row">
         <span class="item-num">1.</span>
         <div>
-          <div class="item-title"><a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model" target="_blank" rel="noopener">Meta releases Muse Glimmer: 30B open-weights agentic model under Apache 2.0, runs on one consumer GPU</a></div>
-          <div class="item-takeaway">Apache 2.0 agentic model that fits a local Mac and is already wired into Ollama — directly actionable for local agent workflows.</div>
-          <div class="item-facts"><div>Meta released Muse Glimmer, a 30B open-weights (Apache 2.0) agentic model that runs locally on a single 24-32GB consumer GPU or Mac after 4-bit quantization, with day-one support in Ollama, llama.cpp, MLX and vLLM.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: All speed and quality figures are Meta's own; no independent agentic benchmark results are available a day after release, and 4-bit quality degradation on long tool-calling chains is unmeasured.</div>
+          <div class="item-title"><a href="https://vercel.com/blog/a-sandbox-without-a-network-boundary-is-only-half-a-sandbox" target="_blank" rel="noopener">A sandbox without a network boundary is only half a sandbox</a></div>
+          <div class="item-takeaway">Practical security framing for anyone evaluating agent sandboxing or code-execution products.</div>
+          <div class="item-facts"><div>Running untrusted code safely requires more than separating it from the host. You also have to control what that code can reach. This matters more as AI agents gain the ability to read files, execute commands, install packages, and generate programs of their own. A microVM can pr</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Attempted to open with the approved browse tool, but the local browse server failed to bind a port; scored from fetched article content.</div>
           <div class="item-meta">
-            <span><a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model" target="_blank" rel="noopener">hn-top</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-08-10</span>
+            <span><a href="https://vercel.com/blog/a-sandbox-without-a-network-boundary-is-only-half-a-sandbox" target="_blank" rel="noopener">vercel.com</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span>2026-08-11</span>
           </div>
         </div>
       </div>
@@ -67,14 +67,14 @@
       <div class="item-row">
         <span class="item-num">2.</span>
         <div>
-          <div class="item-title"><a href="https://github.com/ollama/ollama/releases/tag/v0.32.8" target="_blank" rel="noopener">Ollama v0.32.8 adds Muse Glimmer support for NVIDIA, AMD and additional platforms</a></div>
-          <div class="item-takeaway">Direct upgrade action for an existing local Ollama setup.</div>
-          <div class="item-facts"><div>Ollama v0.32.8 adds support for Meta's Muse Glimmer model across NVIDIA, AMD and additional platforms.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Release notes do not state which quantizations are packaged or the minimum VRAM Ollama will accept for the model.</div>
+          <div class="item-title"><a href="https://vercel.com/changelog/vercel-sandbox-managed-images" target="_blank" rel="noopener">Vercel Sandbox now runs on Vercel Managed Images</a></div>
+          <div class="item-takeaway">Could change sandbox base-image assumptions, compatibility, and update policy for agent tooling.</div>
+          <div class="item-facts"><div>Today we are introducing Vercel Managed Images (VMI), a set of versioned, open-source base images you can use as-is or extend. The source for every image lives in the public repository. vercel/sandbox Managed images replace Sandbox runtimes, which are now deprecated. Starting wit</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Attempted to open with the approved browse tool, but the local browse server failed to bind a port; scored from fetched article content.</div>
           <div class="item-meta">
-            <span><a href="https://github.com/ollama/ollama/releases/tag/v0.32.8" target="_blank" rel="noopener">gh-ollama</a></span>
-            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
-            <span>2026-08-10</span>
+            <span><a href="https://vercel.com/changelog/vercel-sandbox-managed-images" target="_blank" rel="noopener">vercel.com</a></span>
+            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
+            <span>2026-08-11</span>
           </div>
         </div>
       </div>
@@ -84,149 +84,13 @@
       <div class="item-row">
         <span class="item-num">3.</span>
         <div>
-          <div class="item-title"><a href="https://cactuscompute.com/needle" target="_blank" rel="noopener">Show HN: Needle2, a 14MB agentic LLM for phones, wearables and microcontrollers</a></div>
-          <div class="item-takeaway">Concrete numbers on the low end of the local-agent spectrum, useful for any edge or embedded tool-calling work.</div>
-          <div class="item-facts"><div>Cactus's Needle 2 is a 45M-parameter, 2-bit agentic model in a 14MB binary that runs a full session in 28MB of RAM at 500 tokens/sec on a Raspberry Pi 5.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: No independent accuracy benchmarks on tool-calling correctness; a 45M model at 2-bit will fail in ways a 30B model does not, and the post leads with throughput rather than task success rate.</div>
+          <div class="item-title"><a href="https://vercel.com/changelog/bun-serve-entrypoint-for-vercel-functions" target="_blank" rel="noopener">Bun runtime for Vercel Functions now accepts Bun.serve as an entrypoint</a></div>
+          <div class="item-takeaway">Useful if you are choosing a low-friction realtime/Bun deployment path.</div>
+          <div class="item-facts"><div>The for Vercel Functions now supports as a function entrypoint, including WebSocket handlers. The server you run locally with Bun deploys as-is, without being wrapped in a framework. Bun runtime Bun.serve() Enable the runtime by setting in . &quot;bunVersion&quot;: &quot;1.x&quot; vercel.json Create</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Attempted to open with the approved browse tool, but the local browse server failed to bind a port; scored from fetched article content.</div>
           <div class="item-meta">
-            <span><a href="https://cactuscompute.com/needle" target="_blank" rel="noopener">hn-show</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-08-10</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">4.</span>
-        <div>
-          <div class="item-title"><a href="https://render.com/blog/upcoming-changes-to-workflows-pricing" target="_blank" rel="noopener">Render Workflows moves to active-compute pricing on September 1, adds paid task state storage</a></div>
-          <div class="item-takeaway">Dated platform pricing change with a hard deadline; the kind of item that quietly changes a monthly bill.</div>
-          <div class="item-facts"><div>Render Workflows moves to active-compute pricing with expanded concurrency and paid task state storage effective 1 September 2026.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: The announcement summary does not give per-unit rates, so whether this is a net increase or decrease depends on workload shape and cannot be determined from the post alone.</div>
-          <div class="item-meta">
-            <span><a href="https://render.com/blog/upcoming-changes-to-workflows-pricing" target="_blank" rel="noopener">render-blog</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
-            <span>2026-08-10</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">5.</span>
-        <div>
-          <div class="item-title"><a href="https://www.whodunnitai.com/" target="_blank" rel="noopener">Show HN: Voice-driven murder mystery using OpenAI gpt-realtime-2.1 over WebRTC</a></div>
-          <div class="item-takeaway">Direct cost-control datapoint for realtime voice agent work, which overlaps CalenCall.</div>
-          <div class="item-facts"><div>OpenAI's gpt-realtime-2.1 speech-to-speech over WebRTC is expensive enough that a demo app requires authentication gating and a 30-minute session cap to control cost.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: No actual cost-per-minute figures given, so the size of the cost problem is inferred from the mitigations rather than measured.</div>
-          <div class="item-meta">
-            <span><a href="https://www.whodunnitai.com/" target="_blank" rel="noopener">hn-show</a></span>
-            <span><a href="/topics/voice-ai-realtime-agents/" style="color:inherit;">Voice AI / Realtime Agents</a></span>
-            <span>2026-08-10</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">6.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vk5sre/how_are_others_dealing_with_the_well_build_it/" target="_blank" rel="noopener">Handling the &quot;we'll just build it with Claude&quot; objection in B2B sales</a></div>
-          <div class="item-takeaway">Positioning signal relevant to selling any developer-adjacent product.</div>
-          <div class="item-facts"><div>B2B software vendors are increasingly encountering a build-in-house-with-AI objection from prospects, and at least one vendor reports no prospect has yet successfully self-built a satisfactory replacement.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Single vendor's anecdotal read of their own pipeline, with obvious incentive to report that in-house builds fail.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/SaaS/comments/1vk5sre/how_are_others_dealing_with_the_well_build_it/" target="_blank" rel="noopener">reddit-saas</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
-            <span>2026-08-10</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">7.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vkbow9/the_25_a_month_problem/" target="_blank" rel="noopener">The $25/month problem: SaaS tool cost stacking and self-hosting as a response</a></div>
-          <div class="item-takeaway">Cost-structure reasoning that maps onto an existing Hetzner-VPS-consolidation posture.</div>
-          <div class="item-facts"><div>Stacking default managed SaaS services at ~$20-25/month each imposes a meaningful fixed cost on pre-revenue solo projects that self-hosting on a ~$12/month VPS can substantially reduce.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: The post ignores the operational time cost of self-hosting, which often exceeds the dollar savings for a one-person shop.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/SaaS/comments/1vkbow9/the_25_a_month_problem/" target="_blank" rel="noopener">reddit-saas</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
-            <span>2026-08-10</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">8.</span>
-        <div>
-          <div class="item-title"><a href="https://stratechery.com/2026/apple-earnings-more-on-amazons-earnings/" target="_blank" rel="noopener">Stratechery: Apple earnings constrained by chip shortages, not memory</a></div>
-          <div class="item-takeaway">Background on hardware supply constraints that eventually reach device and cloud pricing.</div>
-          <div class="item-facts"><div>Stratechery assesses that Apple's earnings are constrained by chip shortages rather than memory supply.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Only the summary blurb was available; the supporting argument sits behind the paywall and could not be assessed.</div>
-          <div class="item-meta">
-            <span><a href="https://stratechery.com/2026/apple-earnings-more-on-amazons-earnings/" target="_blank" rel="noopener">stratechery</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
-            <span>2026-08-10</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">9.</span>
-        <div>
-          <div class="item-title"><a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.4.3" target="_blank" rel="noopener">langchain-openai 1.4.3 filters invalid tool calls from content</a></div>
-          <div class="item-takeaway">Patch bump with an actual agent-loop correctness fix rather than dependency churn.</div>
-          <div class="item-facts"><div>langchain-openai 1.4.3 fixes a bug where invalid tool calls were not filtered out of message content.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: The release notes do not describe the failure mode's severity or which provider configurations triggered it.</div>
-          <div class="item-meta">
-            <span><a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.4.3" target="_blank" rel="noopener">gh-langchain</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-08-10</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">10.</span>
-        <div>
-          <div class="item-title"><a href="https://github.com/AntigmaLabs/ante" target="_blank" rel="noopener">Show HN: Ante, a coding agent in a single binary that runs offline</a></div>
-          <div class="item-takeaway">Completes a fully local coding-agent stack alongside the other local-model releases this run.</div>
-          <div class="item-facts"><div>Ante is a coding agent distributed as a single binary that operates offline without a hosted service.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: No content was extracted, so which models it supports, how mature it is, and whether it handles multi-file edits are all unverified.</div>
-          <div class="item-meta">
-            <span><a href="https://github.com/AntigmaLabs/ante" target="_blank" rel="noopener">hn-show</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-08-10</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">11.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vl8yxa/how_do_you_handle_database_hosting_for_client/" target="_blank" rel="noopener">Recurring infra cost on one-time-fee client apps: outgrowing the Supabase free tier</a></div>
-          <div class="item-takeaway">Clean statement of a pricing-model failure that shows up in any project-fee delivery business.</div>
-          <div class="item-facts"><div>A developer selling client apps on one-time fees is accumulating unfunded recurring database hosting costs as projects outgrow the Supabase free tier.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: No cost figures given, and the liability question of hosting client production data as a sole proprietor is raised but not resolved in the post.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/SaaS/comments/1vl8yxa/how_do_you_handle_database_hosting_for_client/" target="_blank" rel="noopener">reddit-saas</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
+            <span><a href="https://vercel.com/changelog/bun-serve-entrypoint-for-vercel-functions" target="_blank" rel="noopener">vercel.com</a></span>
+            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
             <span>2026-08-11</span>
           </div>
         </div>
@@ -236,16 +100,16 @@
 
     <div class="item">
       <div class="item-row">
-        <span class="item-num">12.</span>
+        <span class="item-num">4.</span>
         <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vkczil/shipped_my_mvp_on_a_no_code_website_builder_in_a/" target="_blank" rel="noopener">Solo builder ships no-code MVP in a weekend, gets first 5 signups by selling the promise first</a></div>
-          <div class="item-takeaway">Reinforces distribution-before-build sequencing, but on very thin evidence.</div>
-          <div class="item-facts"><div>A solo builder validated demand with a weekend no-code landing page plus payment link, obtaining 5 signups before building the actual product.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Five signups is far too small a sample to distinguish real demand from novelty, and no revenue is reported.</div>
+          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vl5ffp/legal_killed_our_inapp_feedback_for_a_month/" target="_blank" rel="noopener">Legal killed our in-app feedback for a month before we changed how we collect it</a></div>
+          <div class="item-takeaway">A concrete product/compliance tradeoff pattern that could save time if you need lightweight feedback loops.</div>
+          <div class="item-facts"><div>we wanted in-app surveys in our B2B product. simple ask. the moment i mentioned it to legal, someone flagged PII collection and the whole thing stalled for weeks. DPA review, consent banner questions, data residency, the usual. by the time it cleared, the momentum was gone. the t</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Attempted to open with the approved browse tool, but the local browse server failed to bind a port; scored from fetched Reddit content.</div>
           <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/SaaS/comments/1vkczil/shipped_my_mvp_on_a_no_code_website_builder_in_a/" target="_blank" rel="noopener">reddit-saas</a></span>
+            <span><a href="https://www.reddit.com/r/SaaS/comments/1vl5ffp/legal_killed_our_inapp_feedback_for_a_month/" target="_blank" rel="noopener">reddit.com</a></span>
             <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
-            <span>2026-08-10</span>
+            <span>2026-08-11</span>
           </div>
         </div>
       </div>
@@ -253,16 +117,33 @@
 
     <div class="item">
       <div class="item-row">
-        <span class="item-num">13.</span>
+        <span class="item-num">5.</span>
         <div>
-          <div class="item-title"><a href="https://blog.mozilla.org/en/firefox/firefox-containers-preview/" target="_blank" rel="noopener">Firefox Containers Preview</a></div>
-          <div class="item-takeaway">Minor workflow relevance for multi-tenant browser work.</div>
-          <div class="item-facts"><div>Mozilla published a preview of a Firefox Containers feature for isolating browsing contexts.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Without the article body it is unclear how this differs from the existing Multi-Account Containers extension.</div>
+          <div class="item-title"><a href="https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents" target="_blank" rel="noopener">Build Low-Latency Multilingual Voice Agents: Open Weights &amp; Full Deployment Control with NVIDIA Magpie TTS</a></div>
+          <div class="item-takeaway">Potentially relevant to voice-agent stacks, but the evidence is thin from this run.</div>
+          <div class="item-facts"><div>Build Low-Latency Multilingual Voice Agents: Open Weights &amp; Full Deployment Control with NVIDIA Magpie TTS</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Approved browse tool failed to start and the fetched item body was empty, so this is title-level evidence only.</div>
           <div class="item-meta">
-            <span><a href="https://blog.mozilla.org/en/firefox/firefox-containers-preview/" target="_blank" rel="noopener">lobsters</a></span>
+            <span><a href="https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents" target="_blank" rel="noopener">huggingface.co</a></span>
+            <span><a href="/topics/voice-ai-realtime-agents/" style="color:inherit;">Voice AI / Realtime Agents</a></span>
+            <span>2026-08-11</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">6.</span>
+        <div>
+          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vl8bpt/qwen_3827b_coming_this_week/" target="_blank" rel="noopener">Qwen 3.8-27b coming this week</a></div>
+          <div class="item-takeaway">Worth watching because a mid-size Qwen refresh could matter for local coding setups.</div>
+          <div class="item-facts"><div>Confirmed by the official Qwen account. submitted by /u/Bestlife73 [link] [comments]</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Approved browse tool failed to start and the fetched content is only a short Reddit claim.</div>
+          <div class="item-meta">
+            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vl8bpt/qwen_3827b_coming_this_week/" target="_blank" rel="noopener">reddit.com</a></span>
             <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-08-10</span>
+            <span>2026-08-11</span>
           </div>
         </div>
       </div>
@@ -270,103 +151,62 @@
 
     <div class="item">
       <div class="item-row">
-        <span class="item-num">14.</span>
+        <span class="item-num">7.</span>
         <div>
-          <div class="item-title"><a href="https://bxt.rs/blog/easy-sandboxing-on-linux-with-bubblewrap/" target="_blank" rel="noopener">Easy Sandboxing on Linux with Bubblewrap</a></div>
-          <div class="item-takeaway">Sandboxing agent-executed code is an open problem in the current setup; worth revisiting when content is available.</div>
-          <div class="item-facts"><div>Bubblewrap can be used for lightweight sandboxing of processes on Linux without a full container runtime.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: No article body was extracted, so the depth and correctness of the sandboxing approach is unverified.</div>
+          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkydi5/i_trained_a_1bparameter_llm_from_scratch_on_20b/" target="_blank" rel="noopener">I trained a 1B-parameter LLM from scratch on 20B tokens for about $200</a></div>
+          <div class="item-takeaway">Interesting cost datapoint for hobby-scale training economics.</div>
+          <div class="item-facts"><div>A few months ago, I had the idea of making a LLM from scratch as a personal project (for learning and partly for improving my resume). Since I learned a lot from other posts on here over the past year, I wanted to share the results. TLDR: I trained a 1.1B param model on 20B token</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Attempted to open with the approved browse tool, but the local browse server failed to bind a port; scored from fetched Reddit content.</div>
           <div class="item-meta">
-            <span><a href="https://bxt.rs/blog/easy-sandboxing-on-linux-with-bubblewrap/" target="_blank" rel="noopener">lobsters</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-08-10</span>
+            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkydi5/i_trained_a_1bparameter_llm_from_scratch_on_20b/" target="_blank" rel="noopener">reddit.com</a></span>
+            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
+            <span>2026-08-11</span>
           </div>
         </div>
       </div>
     </div>
     <details>
-      <summary>80 researched links (full index)</summary>
+      <summary>39 researched links (full index)</summary>
       <div class="link-index">
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model" target="_blank" rel="noopener">Meta releases Muse Glimmer: 30B open-weights agentic model under Apache 2.0, runs on one consumer GPU</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/ollama/ollama/releases/tag/v0.32.8" target="_blank" rel="noopener">Ollama v0.32.8 adds Muse Glimmer support for NVIDIA, AMD and additional platforms</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://cactuscompute.com/needle" target="_blank" rel="noopener">Show HN: Needle2, a 14MB agentic LLM for phones, wearables and microcontrollers</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://render.com/blog/upcoming-changes-to-workflows-pricing" target="_blank" rel="noopener">Render Workflows moves to active-compute pricing on September 1, adds paid task state storage</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.whodunnitai.com/" target="_blank" rel="noopener">Show HN: Voice-driven murder mystery using OpenAI gpt-realtime-2.1 over WebRTC</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/rochus-keller/OberonSystem/tree/op2-rv32" target="_blank" rel="noopener">Show HN: Project Oberon system ported to RISC-V</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vjqssx/does_this_hold_in_the_ai_era/" target="_blank" rel="noopener">Does this hold in the AI era? (image post)</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/SaaS/comments/1vk5sre/how_are_others_dealing_with_the_well_build_it/" target="_blank" rel="noopener">Handling the &quot;we'll just build it with Claude&quot; objection in B2B sales</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vk7wl4/i_just_got_my_app_live_should_i_celebrate_or/" target="_blank" rel="noopener">Personal post: just shipped my first app, how should I feel</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vjpcsb/im_stuck_with_stripe/" target="_blank" rel="noopener">Stripe account closed pre-launch, founder outside US seeking alternatives</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkbow9/the_25_a_month_problem/" target="_blank" rel="noopener">The $25/month problem: SaaS tool cost stacking and self-hosting as a response</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkczil/shipped_my_mvp_on_a_no_code_website_builder_in_a/" target="_blank" rel="noopener">Solo builder ships no-code MVP in a weekend, gets first 5 signups by selling the promise first</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkdvy3/be_honest_is_your_product_actually_live_or_is_it/" target="_blank" rel="noopener">Be honest: is your product actually live, or is it still “almost ready”? 👀</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkdokx/today_my_little_saas_became_a_ga4gsc_powered/" target="_blank" rel="noopener">Today my little SaaS became a GA4/GSC powered, multilingual platform. Aw, they grow up so fast. 🥹🌍🚀</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkdkck/i_built_a_whatsapp_automation_platform_for/" target="_blank" rel="noopener">I built a WhatsApp automation platform for businesses</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkdj78/fight_the_churn/" target="_blank" rel="noopener">Fight the churn</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkdfrl/which_merchant_of_record_are_you_using_for_your/" target="_blank" rel="noopener">Which Merchant of Record are you using for your payments?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkcwq2/keep_a_design_backlog/" target="_blank" rel="noopener">Keep a design backlog</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vjs3ks/doubled_my_saas_pricing_and_i_was_scared_it_would/" target="_blank" rel="noopener">Doubled my SaaS pricing, and I was scared it would be received negatively. People are defending me instead.</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vk9wlx/i_got_tired_of_losing_my_place_while_learning/" target="_blank" rel="noopener">I got tired of losing my place while learning with Claude, so I built SubChat.</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkegqj/eu_subscription_withdrawal/" target="_blank" rel="noopener">EU subscription withdrawal</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkedqo/would_you_hire_the_ambitious_person_who_might/" target="_blank" rel="noopener">Would you hire the ambitious person who might leave, or the safer person who might stay?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vk9ph7/how_messy_is_your_data_actually/" target="_blank" rel="noopener">how messy is your data actually?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vk4d6l/a_saas_launch_playbook_weve_actually_started/" target="_blank" rel="noopener">A SaaS launch playbook we’ve actually started using, which makes a lot of sense for small teams</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkcunk/you_have_an_idea_what_now/" target="_blank" rel="noopener">You have an idea. What now?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkcpd0/failed_saas_attempts/" target="_blank" rel="noopener">Failed SaaS attempt(s)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkcfb6/i_spent_six_months_building_and_zero_days_on/" target="_blank" rel="noopener">I spent six months building and zero days on distribution. 21 users, none paying</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkcave/spending_money_trying_to_reach_developers_and/" target="_blank" rel="noopener">spending money trying to reach developers and getting nothing back. where do devs actually pay attention</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/vercel/next.js/releases/tag/v16.3.1-canary.10" target="_blank" rel="noopener">Next.js v16.3.1-canary.10</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://kristoff.it/blog/source-code-availability/" target="_blank" rel="noopener">Who Should Pay For Source Code Availability?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.ilmarilauhakangas.fi/irc_technology_news_from_the_first_half_of_2026/" target="_blank" rel="noopener">IRC technology news from the first half of 2026</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html" target="_blank" rel="noopener">Mea Culpa - Dark Hours: vibecoded site plagiarizes existing free software</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://fzakaria.com/2026/08/09/nixpkgs-multiverse-every-version-that-ever-existed" target="_blank" rel="noopener">nixpkgs-multiverse: every version that ever existed</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://antonz.org/relying-on-go/" target="_blank" rel="noopener">Relying on Go</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.seangoedecke.com/i-got-an-email-about-resistance/" target="_blank" rel="noopener">I got an email about resistance</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://lobste.rs/s/he9j7y/i_think_vibecoding_tag_has_gotten_out_hand" target="_blank" rel="noopener">I think the vibecoding tag has gotten out of hand</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://lemire.me/blog/2026/08/09/profile-guided-optimization-in-go/" target="_blank" rel="noopener">Profile-guided optimization in Go</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://osadmins.com/en/ibm-i-os-400-the-database-operating-system/" target="_blank" rel="noopener">IBM i (OS/400) The Database Operating System</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://blog.regehr.org/archives/1292" target="_blank" rel="noopener">SQLite with a Fine-Toothed Comb (2016)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://dev.to/isaachagoel/you-dont-know-undoredo-4hol" target="_blank" rel="noopener">Undo/redo systems and collaborative editing (2024)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://blog.waleedkhan.name/commit-message-test-plans/" target="_blank" rel="noopener">Commit message test plans</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://sebsite.pw/w/20260810-c89ambiguity.html" target="_blank" rel="noopener">an ambiguity in c89 which will never be fixed</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://danluu.com/pl-tokens/" target="_blank" rel="noopener">How do programming languages impact token efficiency and correctness?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://vale.rocks/micros/20260810-0330" target="_blank" rel="noopener">Light/Dark/System Theme Setting Design</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://stratechery.com/2026/apple-earnings-more-on-amazons-earnings/" target="_blank" rel="noopener">Stratechery: Apple earnings constrained by chip shortages, not memory</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.dsprelated.com/showarticle/40.php" target="_blank" rel="noopener">An Interesting Fourier Transform - 1/F Noise</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://foldingglobes.com/" target="_blank" rel="noopener">Turn satellite imagery into a paper globe you fold yourself</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://gitlab.com/Kazade/picophysics" target="_blank" rel="noopener">Picophysics: single-file physics for retro game consoles</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://ignorethecode.net/blog/2026/08/09/toggles_considered_harmful/" target="_blank" rel="noopener">Toggles Considered Harmful</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://blog.mozilla.org/en/firefox/firefox-containers-preview/" target="_blank" rel="noopener">Firefox Containers Preview</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://bxt.rs/blog/easy-sandboxing-on-linux-with-bubblewrap/" target="_blank" rel="noopener">Easy Sandboxing on Linux with Bubblewrap</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.spurint.org/journal/2026/07/llms-and-xfwl4" target="_blank" rel="noopener">LLMs and xfwl4</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.3.3-beta.346" target="_blank" rel="noopener">Composio CLI 0.3.3-beta.346</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.3.3-beta.345" target="_blank" rel="noopener">Composio CLI 0.3.3-beta.345</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.3.3-beta.344" target="_blank" rel="noopener">Composio CLI 0.3.3-beta.344</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.3.3-beta.343" target="_blank" rel="noopener">Composio CLI 0.3.3-beta.343</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.3.3-beta.342" target="_blank" rel="noopener">Composio CLI 0.3.3-beta.342</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.4.3" target="_blank" rel="noopener">langchain-openai 1.4.3 filters invalid tool calls from content</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/" target="_blank" rel="noopener">Google adds AI and agentic features across Google Ads and Analytics</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://everycube.alen.is/" target="_blank" rel="noopener">Show HN: Scroll through all 43 quintillion Rubik's Cube states</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/AntigmaLabs/ante" target="_blank" rel="noopener">Show HN: Ante, a coding agent in a single binary that runs offline</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vl3zam/dropped_out_of_college_to_build_a_saas_and/" target="_blank" rel="noopener">Dropped out of college to build a SaaS and underestimated the difficulty</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vki7iz/after_2months_i_reached_50000_impressions_on_my/" target="_blank" rel="noopener">50,000 landing page impressions in two months without advertising</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vl953z/which_landing_page_is_better/" target="_blank" rel="noopener">Which landing page is better? (feedback request)</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/SaaS/comments/1vl8yxa/how_do_you_handle_database_hosting_for_client/" target="_blank" rel="noopener">Recurring infra cost on one-time-fee client apps: outgrowing the Supabase free tier</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkto9n/distribution_is_kicking_my_ass/" target="_blank" rel="noopener">Distribution is kicking my ass</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkym6p/how_to_distribute_what_do_you_call_launch/" target="_blank" rel="noopener">How to &quot;distribute&quot;? What do you call &quot;launch&quot;?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vl31si/what_is_the_best_saas_launchproduct_video_you/" target="_blank" rel="noopener">What is the best SaaS launch/product video you have seen?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkln4k/day_115_of_getting_to_150000_doing_it_again_almost/" target="_blank" rel="noopener">Day 1/15 of Getting to $150,000 - Doing it again (almost)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vl4z4f/i_just_made_the_first_money_ive_ever_made_online/" target="_blank" rel="noopener">I just made the first money I've ever made online with my SaaS and I might be the most excited person in the world right now.</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkkfmn/ive_been_told_this_isnt_a_big_deal_im_still_happy/" target="_blank" rel="noopener">I’ve been told this isn’t a big deal I’m still happy!</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vl5ftt/how_do_you_validate_your_ideas_befor_building/" target="_blank" rel="noopener">How do you validate your ideas befor building?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vl8tdt/just_built_my_first_website_fileforge/" target="_blank" rel="noopener">Just built my first website- FileForge!</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vl8pt3/what_failure_mode_is_the_most_difficult_to_think/" target="_blank" rel="noopener">what failure mode is the most difficult to think of?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkyr8w/whats_the_hardest_part_of_getting_your_first_10/" target="_blank" rel="noopener">What's the hardest part of getting your first 10 B2B customers?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vl808q/how_do_you_currently_measure_the_health_of_a/" target="_blank" rel="noopener">How do you currently measure the health of a large GitHub repository?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vl2qbi/best_platform_for_managing_customer_insights/" target="_blank" rel="noopener">best platform for managing customer insights scattered across calls, tickets and slack?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkwl7i/i_built_instalaz_and_im_looking_for_some_honest/" target="_blank" rel="noopener">I built Instalaz and I’m looking for some honest feedback</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vl6ef7/what_do_you_guys_think_about_this_approach_to_job/" target="_blank" rel="noopener">What do you guys think about this approach to job applications...?</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vl1e1g/i_got_my_first_customer_and_refunded_the_second/" target="_blank" rel="noopener">I got my first customer and refunded the second one by mistake...</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/blog/a-sandbox-without-a-network-boundary-is-only-half-a-sandbox" target="_blank" rel="noopener">A sandbox without a network boundary is only half a sandbox</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.reddit.com/r/SaaS/comments/1vl5ffp/legal_killed_our_inapp_feedback_for_a_month/" target="_blank" rel="noopener">Legal killed our in-app feedback for a month before we changed how we collect it</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/changelog/vercel-sandbox-managed-images" target="_blank" rel="noopener">Vercel Sandbox now runs on Vercel Managed Images</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/changelog/bun-serve-entrypoint-for-vercel-functions" target="_blank" rel="noopener">Bun runtime for Vercel Functions now accepts Bun.serve as an entrypoint</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vl69go/i_had_a_good_engagement_on_my_instagram_with/" target="_blank" rel="noopener">I had a good engagement on my Instagram with nearly 30k views last week.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vkn6qn/built_shop_management_software_for_auto_repair/" target="_blank" rel="noopener">Built shop management software for auto repair shops. What am I getting wrong about the market?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vl0q1u/the_rsaas_directory_just_got_its_biggest_update/" target="_blank" rel="noopener">The r/SaaS directory just got its biggest update yet!! v2.0 patch notes</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents" target="_blank" rel="noopener">Build Low-Latency Multilingual Voice Agents: Open Weights &amp; Full Deployment Control with NVIDIA Magpie TTS</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://blog.cloudflare.com/agents-week-review-august-2026/" target="_blank" rel="noopener">Everything we launched during Agents Week</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://blog.cloudflare.com/fedramp-class-d-certification/" target="_blank" rel="noopener">Serving the most critical missions: Cloudflare for Government achieves FedRAMP Class D (High) Certified status</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/vercel/next.js/releases/tag/v16.3.1-canary.11" target="_blank" rel="noopener">v16.3.1-canary.11</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://vercel.com/changelog/simplified-onboarding-for-deepsec" target="_blank" rel="noopener">Simplified onboarding for deepsec</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkmhyl/best_local_llms_august_2026/" target="_blank" rel="noopener">Best Local LLMs - August 2026</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vl8bpt/qwen_3827b_coming_this_week/" target="_blank" rel="noopener">Qwen 3.8-27b coming this week</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkk6vy/mark_zuckerberg_on_releases/" target="_blank" rel="noopener">Mark Zuckerberg on releases</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkxpnd/muse_glimmer_benchmark/" target="_blank" rel="noopener">Muse glimmer benchmark</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vl64et/1_day_in_and_i_feel_okay_saying_museglimmer30b/" target="_blank" rel="noopener">1 Day in and I feel okay saying Muse-Glimmer-30B finally beats 3.6-27B for the size in some use-cases</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkydi5/i_trained_a_1bparameter_llm_from_scratch_on_20b/" target="_blank" rel="noopener">I trained a 1B-parameter LLM from scratch on 20B tokens for about $200</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkgsum/introducing_muse_glimmer_an_openweight_model/" target="_blank" rel="noopener">Introducing Muse Glimmer: an open-weight model optimized for always-on local agent workflows</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vl6ior/i_gave_deepseek_v4_flash_basic_vision_by_training/" target="_blank" rel="noopener">I gave DeepSeek V4 Flash basic vision by training a 40M connector on 100K examples</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkqwso/inclusionailing30tiny_8b_a13b_moe_hugging_face/" target="_blank" rel="noopener">inclusionAI/Ling-3.0-tiny · 8B A1.3B MoE· Hugging Face</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkm42m/muse_glimmer_actually_fits_on_a_single_rtx_3090/" target="_blank" rel="noopener">Muse Glimmer ACTUALLY fits on a single RTX 3090</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkpm5p/deepseek_v4_flash_0731_is_the_killer_app_that_is/" target="_blank" rel="noopener">DeepSeek V4 Flash 0731 is the ‘killer app’ that is going to sell A LOT of DGX Sparks</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkw0f7/muse_spark_12_open_source_before_llama_4_behemoth/" target="_blank" rel="noopener">Muse Spark 1.2 Open Source before Llama 4 Behemoth!!?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vl2iio/observations_on_museglimmer_reasoning_traces/" target="_blank" rel="noopener">Observations on Muse-Glimmer reasoning traces being noticeably different from qwen / gemma models and questions for you guys</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkhbuc/unslothmuseglimmer30bgguf_hugging_face/" target="_blank" rel="noopener">unsloth/Muse-Glimmer-30B-GGUF · Hugging Face</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkn16q/early_signs_that_museglimmer30b_might_quantize/" target="_blank" rel="noopener">Early signs that Muse-Glimmer-30B might quantize *very* well? Share your experiences.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vku03t/please_share_your_experience_about_muse_glimmer/" target="_blank" rel="noopener">Please Share Your Experience About Muse Glimmer</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vktpl2/best_opensource_harness_like_claude_code/" target="_blank" rel="noopener">Best open-source harness like Claude Code?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vl88t0/nvidia_reportedly_testing_lower_memory_configs_of/" target="_blank" rel="noopener">Nvidia reportedly testing lower memory configs of Rubin Ultra as memory shortage bites back — designs tested include as little as 192 GB and step back to HBM4</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkvdg0/i_made_a_webdesign_benchmark_for_local_models/" target="_blank" rel="noopener">I made a web-design benchmark for local models (Muse Glimmer 30B vs Qwen 3.6 27b vs Deepseek V4 Flash 0731)</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vl2sv6/museglimmer_30b_hits_280_ts_in_real_production/" target="_blank" rel="noopener">Muse-Glimmer 30B Hits ~280 t/s in Real Production Coding</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vksqju/i_compared_gguf_quants_of_qwen36_27b_to_nvfp4_awq/" target="_blank" rel="noopener">I compared GGUF quants of Qwen3.6 27B to NVFP4, AWQ, AutoRound, and FP8</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkqqjx/diffusiongemma_technical_report/" target="_blank" rel="noopener">DiffusionGemma Technical Report</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkkw6n/glimmer_seems_pretty_censored/" target="_blank" rel="noopener">Glimmer seems pretty censored?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vkqy66/needle_2_14mb_agentic_llm_for_phones_wearables/" target="_blank" rel="noopener">Needle 2: 14MB agentic LLM for phones, wearables, smart home and robots.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vl8zt9/muse_glimmer_30b_dflash_speculative_decoding_on/" target="_blank" rel="noopener">Muse Glimmer 30B + DFlash speculative decoding on vLLM: 6 patches needed, 25 → 57 tok/s. Dockerfile and numbers inside.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/antirez/h3.c" target="_blank" rel="noopener">H3-metal – Native MiniMax-H3 inference for Apple Silicon</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://code.call-cc.org/releases/6.0.0/NEWS" target="_blank" rel="noopener">Chicken Scheme 6.0</a></div>
       </div>
     </details>
     <div class="subscribe-strip">
