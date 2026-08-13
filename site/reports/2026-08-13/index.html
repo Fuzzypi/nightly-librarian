@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>August 13, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="8 stories cleared the bar, led by Anthropic’s Watermarking, How It (Probably) Works, Worse Than It Seems, llama.cpp launches llama.">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-08-13/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="August 13, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="8 stories cleared the bar, led by Anthropic’s Watermarking, How It (Probably) Works, Worse Than It Seems, llama.cpp launches llama.">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-08-13/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="August 13, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="8 stories cleared the bar, led by Anthropic’s Watermarking, How It (Probably) Works, Worse Than It Seems, llama.cpp launches llama.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>August 13, 2026 · Report log</span>
+      <span>Aug 13, 2026, 2:15 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>August 13, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>8 stories cleared the bar, led by Anthropic’s Watermarking, How It (Probably) Works, Worse Than It Seems, llama.cpp launches llama.app as its official home, and Signal introduces Automatic Key Verification.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>8 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://stratechery.com/2026/anthropics-watermarking-how-it-probably-works-worse-than-it-seems/" target="_blank" rel="noopener">Anthropic’s Watermarking, How It (Probably) Works, Worse Than It Seems</a></div>
+        <div class="item-takeaway">A real platform change that already applies to output this shop produces, plus the strongest available critique of it.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://llama.app" target="_blank" rel="noopener">llama.cpp launches llama.app as its official home</a></div>
+        <div class="item-takeaway">llama.cpp now has an official site and desktop app at llama.app, aimed at making local model hosting work without config wrangling. The flow is llama serve plus a plugin that auto-discovers local models — no API keys, requests never leave the machine. If you already run Ollama locally this is worth a direct comparison before the next local-inference decision, since it is the upstream project packaging itself rather than a wrapper.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://signal.org/blog/automatic-key-verification/" target="_blank" rel="noopener">Signal introduces Automatic Key Verification</a></div>
+        <div class="item-takeaway">Signal shipped Automatic Key Verification, which confirms you are talking to the intended recipient without the in-person safety-number ritual. It works off a tamper-evident key transparency log signed by three independent auditors — Signal, Cloudflare, and Trail of Bits — and the client only shows a green check when all three have recent valid signatures. Nothing to do but update; the useful part for builders is the pattern, which is a clean reference design for multi-auditor transparency logs.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.5.6" target="_blank" rel="noopener">langchain-anthropic==1.5.6</a></div>
+        <div class="item-takeaway">langchain-anthropic 1.5.6 normalizes tool_search_tool_result blocks and corrects model profile data for Fable 5, Sonnet 5, and Opus 4.1. If you are on LangChain with the Anthropic provider and doing tool calling, the block-normalization fix removes a real source of parsing inconsistency, and the profile correction means token/context limits are finally right for current models.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://brentfitzgerald.com/posts/the-human-is-the-loop/" target="_blank" rel="noopener">The Human Is the Loop</a></div>
+        <div class="item-takeaway">An argument that the framing of &quot;human in the loop&quot; is backwards: the human should own the loop and tag an agent in deliberately, rather than being trapped inside an agent-driven cycle. It is a craft essay, not a technique, but it is a sharper articulation of agent-workflow design than most writing in this genre. Worth ten minutes if you are actively designing multi-agent handoffs.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace" target="_blank" rel="noopener">[AINews] How to steal a Reasoning Trace</a></div>
+        <div class="item-takeaway">Latent Space covers techniques for extracting or reconstructing model reasoning traces, framed around speculative decoding as a distillation vector. The crawled item contained only the subtitle, so the substance is unverified here. Flagged to track: if reasoning traces are practically extractable, that affects both the moat assumptions of closed reasoning models and what you can distill locally.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.35.1" target="_blank" rel="noopener">n8n@2.35.1</a></div>
+        <div class="item-takeaway">n8n 2.35.1 lands two core fixes: TLS options are now applied per hop when requests traverse a proxy, and the &quot;Always allow&quot; scope is accepted on data-tables resume. Narrow, but if you self-host n8n behind a corporate or egress proxy the TLS fix is the difference between working and silently failing calls. Patch-level upgrade, no migration.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://refp.se/articles/your-shell-and-the-lazy-exclamation-mark" target="_blank" rel="noopener">A shell exclamation mark is not for yelling. Be lazy</a></div>
+        <div class="item-takeaway">A short write-up on shell history expansion — using !! and !$ style shortcuts instead of retyping or arrow-keying through previous commands. Nothing new to shell veterans, but it is a concrete habit change that compounds across a day at the terminal. Read once, adopt or discard in two minutes.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vm750i/i_spent_months_building_my_saas_now_i_have_no/" target="_blank" rel="noopener">I spent months building my SaaS. Now I have no idea how to get anyone to use it</a>
+        </div>
+        <div class="item-takeaway">Familiar built-it-but-no-users lament; no new distribution tactic or evidence.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vm635d/ive_lost_my_saas_2_times_within_a_span_of_2_years/" target="_blank" rel="noopener">I've lost my SaaS 2 times, within a span of 2 years.</a>
+        </div>
+        <div class="item-takeaway">Personal failure narrative about co-founder disputes; no generalizable lesson or evidence.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vm7gu9/what_do_you_actually_want_from_a_founder_dashboard/" target="_blank" rel="noopener">What do you actually want from a founder dashboard?</a>
+        </div>
+        <div class="item-takeaway">Open-ended &quot;what would you want&quot; idea-validation question with no findings or data.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vm78om/apple_ads_are_they_really_useful_for_aso/" target="_blank" rel="noopener">apple ads are they really useful for ASO?</a>
+        </div>
+        <div class="item-takeaway">One-line question with no answers, data, or content.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vm6tu5/i_analyzed_4_viral_rsaas_posts_the_one_with_189k/" target="_blank" rel="noopener">I analyzed 4 viral r/SaaS posts. The one with 189k views broke almost every &quot;write valuable content&quot; rule.</a>
+        </div>
+        <div class="item-takeaway">Meta-analysis of what makes Reddit posts go viral — engagement-bait navel-gazing, not a builder decision.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vm6myo/would_you_reply_if_a_cold_email_arrived_with_the/" target="_blank" rel="noopener">Would you reply if a cold email arrived with the work already half done?</a>
+        </div>
+        <div class="item-takeaway">Two-sentence cold-email musing with no results or method.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vm7aq8/i_kept_noticing_the_same_problem_in_saas_founder/" target="_blank" rel="noopener">I kept noticing the same problem in SaaS founder posts</a>
+        </div>
+        <div class="item-takeaway">I spending a lot of time reading founder posts lately. And I started noticing something. A lot of people seem to have figured out how to bui…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vm74c7/free_vs_paid_cli/" target="_blank" rel="noopener">Free vs. paid CLI</a>
+        </div>
+        <div class="item-takeaway">Over the last few days, I’ve been looking for CLI agents that offer good performance without costing a fortune. I came across Freebuff and h…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vm6vot/agentic_is_doing_a_lot_of_marketing_work_saas/" target="_blank" rel="noopener">&quot;Agentic&quot; is doing a lot of marketing work SaaS products haven't earned yet</a>
+        </div>
+        <div class="item-takeaway">Noticed a pattern this year, almost every SaaS product with an AI feature now calls it &quot;agentic,&quot; but most of what ships is still a fixed wo…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace" target="_blank" rel="noopener">[AINews] How to steal a Reasoning Trace</a>
+        </div>
+        <div class="item-takeaway">Latent Space covers techniques for extracting or reconstructing model reasoning traces, framed around speculative decoding as a distillation vector. The crawled item contained only the subtitle, so the substance is unverified here. Flagged to track: if reasoning traces are practically extractable, that affects both the moat assumptions of closed reasoning models and what you can distill locally.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.35.1" target="_blank" rel="noopener">n8n@2.35.1</a>
+        </div>
+        <div class="item-takeaway">n8n 2.35.1 lands two core fixes: TLS options are now applied per hop when requests traverse a proxy, and the &quot;Always allow&quot; scope is accepted on data-tables resume. Narrow, but if you self-host n8n behind a corporate or egress proxy the TLS fix is the difference between working and silently failing calls. Patch-level upgrade, no migration.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">beta</a>
+        </div>
+        <div class="item-takeaway">Duplicate: &quot;beta&quot; tag pointing at the same 2.35.1 changelog already covered.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://signal.org/blog/automatic-key-verification/" target="_blank" rel="noopener">Signal introduces Automatic Key Verification</a>
+        </div>
+        <div class="item-takeaway">Signal shipped Automatic Key Verification, which confirms you are talking to the intended recipient without the in-person safety-number ritual. It works off a tamper-evident key transparency log signed by three independent auditors — Signal, Cloudflare, and Trail of Bits — and the client only shows a green check when all three have recent valid signatures. Nothing to do but update; the useful part for builders is the pattern, which is a clean reference design for multi-auditor transparency logs.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.sandordargo.com/blog/2026/08/12/cpp26-indirect" target="_blank" rel="noopener">C++26: std::indirect</a>
+        </div>
+        <div class="item-takeaway">C++ language feature; no overlap with this stack or any near-term work.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://dustri.org/b/unpacking-ioncube.html" target="_blank" rel="noopener">Unpacking ionCube</a>
+        </div>
+        <div class="item-takeaway">PHP bytecode reverse-engineering write-up; interesting but no applicable surface here.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lordgoati.us/blog/tail-call/" target="_blank" rel="noopener">Tail-Call Interpreters in Rust</a>
+        </div>
+        <div class="item-takeaway">Rust interpreter-internals deep dive; no decision impact for this stack.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://llama.app" target="_blank" rel="noopener">llama.cpp launches llama.app as its official home</a>
+        </div>
+        <div class="item-takeaway">llama.cpp now has an official site and desktop app at llama.app, aimed at making local model hosting work without config wrangling. The flow is llama serve plus a plugin that auto-discovers local models — no API keys, requests never leave the machine. If you already run Ollama locally this is worth a direct comparison before the next local-inference decision, since it is the upstream project packaging itself rather than a wrapper.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://brentfitzgerald.com/posts/the-human-is-the-loop/" target="_blank" rel="noopener">The Human Is the Loop</a>
+        </div>
+        <div class="item-takeaway">An argument that the framing of &quot;human in the loop&quot; is backwards: the human should own the loop and tag an agent in deliberately, rather than being trapped inside an agent-driven cycle. It is a craft essay, not a technique, but it is a sharper articulation of agent-workflow design than most writing in this genre. Worth ten minutes if you are actively designing multi-agent handoffs.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vm8502/grew_my_product_to_around_400_mrr_and_then_growth/" target="_blank" rel="noopener">Grew my product to around $400 MRR and then growth slowed down. Not sure what I'm doing wrong</a>
+        </div>
+        <div class="item-takeaway">I soft launched Openlynk around April. It's a deep linking platform I built mainly as an alternative to Firebase Dynamic Links. Initially th…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vm9ijx/a_year_ago_i_thought_id_be_at_5k_mrr_by_now/" target="_blank" rel="noopener">A year ago I thought I’d be at $5k MRR by now. Reality: $100 MRR.</a>
+        </div>
+        <div class="item-takeaway">About a year ago, after 9+ failed SaaS attempts, I launched Feedvote. Within the first hour, someone bought a $150 lifetime deal. That compl…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vmak5y/what_1100_founders_using_my_fundraising_tool/" target="_blank" rel="noopener">What 1100+ founders using my fundraising tool taught me about how badly we all suck at this</a>
+        </div>
+        <div class="item-takeaway">It's been about 7 days since I made my fundraising tool public. 1100+ users in a week, way more than I expected for something I built purely…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vmaaaq/i_had_to_scrap_5_products_in_order_to_find/" target="_blank" rel="noopener">I had to scrap 5 products in order to find something that would actually sell</a>
+        </div>
+        <div class="item-takeaway">Hey everyone, I am Jannik, 26 from Berlin. I just wanted to share my experience building products for my own company over the past few month…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vm8erh/how_to_deal_with_onpremise_customer/" target="_blank" rel="noopener">How to deal with on-premise customer</a>
+        </div>
+        <div class="item-takeaway">Hi, I've got a saas application and my company sell a on-premise project We need to change our fiel storage (Azure blob storage) to sFTP ser…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vmaj5r/kept_noticing_the_same_problem_in_saas_founder/" target="_blank" rel="noopener">kept noticing the same problem in SaaS founder posts</a>
+        </div>
+        <div class="item-takeaway">I have been spending a lot of time reading saas founder discussions lately . And one things keeps coming up . Someone has built the product…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vmae3p/i_built_an_opensource_tool_because_i_couldnt_see/" target="_blank" rel="noopener">I built an open-source tool because I couldn't see where my AI API usage was going</a>
+        </div>
+        <div class="item-takeaway">I've been building SaaS products for a while, and recently started using more AI APIs. Pretty quickly, I ran into a problem: I couldn't easi…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vma8lt/anyone_else_finding_that_agent_said_it_succeeded/" target="_blank" rel="noopener">Anyone else finding that “agent said it succeeded” ≠ “it actually did the right thing”?</a>
+        </div>
+        <div class="item-takeaway">Saas teams deploy AI agents for things like refunds, purchase orders, CRM updates, and support resolutions. The agents often report “done” a…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vma7x6/i_made_an_app_but_im_not_able_to_market_it_over_a/" target="_blank" rel="noopener">I made an app but I'm not able to market it over a silly reason.</a>
+        </div>
+        <div class="item-takeaway">The reason is I'm not in a relationship. I spent 9 months building this couples app launched in April it crossed 1000+ users even the revenu…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.34.5" target="_blank" rel="noopener">n8n@2.34.5</a>
+        </div>
+        <div class="item-takeaway">Duplicate subset of the 2.35.1 changelog (same TLS-per-hop fix on the 2.34 line).</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.70" target="_blank" rel="noopener">n8n@1.123.70</a>
+        </div>
+        <div class="item-takeaway">Pure dependency bumps on the 1.x line with no user-facing change.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/stable" target="_blank" rel="noopener">stable</a>
+        </div>
+        <div class="item-takeaway">Duplicate: &quot;stable&quot; tag pointing at the same 2.34.5 changelog.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://stratechery.com/2026/anthropics-watermarking-how-it-probably-works-worse-than-it-seems/" target="_blank" rel="noopener">Anthropic’s Watermarking, How It (Probably) Works, Worse Than It Seems</a>
+        </div>
+        <div class="item-takeaway">A real platform change that already applies to output this shop produces, plus the strongest available critique of it.</div>
+        <div class="item-meta">
+          <span>stratechery</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://abhinavsarkar.net/notes/2026-lobsters-submissions/" target="_blank" rel="noopener">Analyzing My Lobsters Submissions</a>
+        </div>
+        <div class="item-takeaway">Personal stats about one author’s link submissions; no transferable signal.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.cringebot3000.com/" target="_blank" rel="noopener">LinkedIn CringeBot 3000</a>
+        </div>
+        <div class="item-takeaway">Novelty joke site.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.abc.net.au/news/2026-08-06/ragebait-how-facebook-is-paying-controversial-creators/106940696" target="_blank" rel="noopener">Facebook is paying controversial creators to produce rage-bait content</a>
+        </div>
+        <div class="item-takeaway">Platform-outrage media story; no builder action follows from it.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://worm.net/" target="_blank" rel="noopener">Worms: The Future of Yesterday's Worms Today</a>
+        </div>
+        <div class="item-takeaway">Novelty/retro site with no technical substance.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://refp.se/articles/your-shell-and-the-lazy-exclamation-mark" target="_blank" rel="noopener">A shell exclamation mark is not for yelling. Be lazy</a>
+        </div>
+        <div class="item-takeaway">A short write-up on shell history expansion — using !! and !$ style shortcuts instead of retyping or arrow-keying through previous commands. Nothing new to shell veterans, but it is a concrete habit change that compounds across a day at the terminal. Read once, adopt or discard in two minutes.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://hazyresearch.stanford.edu/blog/2026-08-05-retire-the-abstractions" target="_blank" rel="noopener">Retire the Abstractions</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.oxfordmartin.ox.ac.uk/news/beef-and-dairy-drive-41-of-biodiversity-damage-linked-to-global-farmland" target="_blank" rel="noopener">Beef and dairy drive 41% of biodiversity damage linked to global farmland</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.5.6" target="_blank" rel="noopener">langchain-anthropic==1.5.6</a>
+        </div>
+        <div class="item-takeaway">langchain-anthropic 1.5.6 normalizes tool_search_tool_result blocks and corrects model profile data for Fable 5, Sonnet 5, and Opus 4.1. If you are on LangChain with the Anthropic provider and doing tool calling, the block-normalization fix removes a real source of parsing inconsistency, and the profile correction means token/context limits are finally right for current models.</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.3.4-beta.350" target="_blank" rel="noopener">CLI Beta @composio/cli@0.3.4-beta.350</a>
+        </div>
+        <div class="item-takeaway">Beta CLI patch dominated by docs restructuring; no user-facing capability change worth acting on.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: a5e18c8e-8632-4dd4-a94e-104fc4649678
+Started: 2026-08-13T06:11:14.010Z
+Completed: 2026-08-13T06:15:27.464Z
+
+## Worth attention
+
+- **Anthropic’s Watermarking, How It (Probably) Works, Worse Than It Seems**
+  https://stratechery.com/2026/anthropics-watermarking-how-it-probably-works-worse-than-it-seems/
+  A real platform change that already applies to output this shop produces, plus the strongest available critique of it.
+- **llama.cpp launches llama.app as its official home**
+  https://llama.app
+  llama.cpp now has an official site and desktop app at llama.app, aimed at making local model hosting work without config wrangling. The flow is llama serve plus a plugin that auto-discovers local models — no API keys, requests never leave the machine. If you already run Ollama locally this is worth a direct comparison before the next local-inference decision, since it is the upstream project packaging itself rather than a wrapper.
+- **Signal introduces Automatic Key Verification**
+  https://signal.org/blog/automatic-key-verification/
+  Signal shipped Automatic Key Verification, which confirms you are talking to the intended recipient without the in-person safety-number ritual. It works off a tamper-evident key transparency log signed by three independent auditors — Signal, Cloudflare, and Trail of Bits — and the client only shows a green check when all three have recent valid signatures. Nothing to do but update; the useful part for builders is the pattern, which is a clean reference design for multi-auditor transparency logs.
+- **langchain-anthropic==1.5.6**
+  https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.5.6
+  langchain-anthropic 1.5.6 normalizes tool_search_tool_result blocks and corrects model profile data for Fable 5, Sonnet 5, and Opus 4.1. If you are on LangChain with the Anthropic provider and doing tool calling, the block-normalization fix removes a real source of parsing inconsistency, and the profile correction means token/context limits are finally right for current models.
+- **The Human Is the Loop**
+  https://brentfitzgerald.com/posts/the-human-is-the-loop/
+  An argument that the framing of &quot;human in the loop&quot; is backwards: the human should own the loop and tag an agent in deliberately, rather than being trapped inside an agent-driven cycle. It is a craft essay, not a technique, but it is a sharper articulation of agent-workflow design than most writing in this genre. Worth ten minutes if you are actively designing multi-agent handoffs.
+- **[AINews] How to steal a Reasoning Trace**
+  https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace
+  Latent Space covers techniques for extracting or reconstructing model reasoning traces, framed around speculative decoding as a distillation vector. The crawled item contained only the subtitle, so the substance is unverified here. Flagged to track: if reasoning traces are practically extractable, that affects both the moat assumptions of closed reasoning models and what you can distill locally.
+- **n8n@2.35.1**
+  https://github.com/n8n-io/n8n/releases/tag/n8n%402.35.1
+  n8n 2.35.1 lands two core fixes: TLS options are now applied per hop when requests traverse a proxy, and the &quot;Always allow&quot; scope is accepted on data-tables resume. Narrow, but if you self-host n8n behind a corporate or egress proxy the TLS fix is the difference between working and silently failing calls. Patch-level upgrade, no migration.
+- **A shell exclamation mark is not for yelling. Be lazy**
+  https://refp.se/articles/your-shell-and-the-lazy-exclamation-mark
+  A short write-up on shell history expansion — using !! and !$ style shortcuts instead of retyping or arrow-keying through previous commands. Nothing new to shell veterans, but it is a concrete habit change that compounds across a day at the terminal. Read once, adopt or discard in two minutes.
+
+## Full digest
+
+- [R] [reddit-saas] I spent months building my SaaS. Now I have no idea how to get anyone to use it — https://www.reddit.com/r/SaaS/comments/1vm750i/i_spent_months_building_my_saas_now_i_have_no/ — Familiar built-it-but-no-users lament; no new distribution tactic or evidence.
+- [R] [reddit-saas] I've lost my SaaS 2 times, within a span of 2 years. — https://www.reddit.com/r/SaaS/comments/1vm635d/ive_lost_my_saas_2_times_within_a_span_of_2_years/ — Personal failure narrative about co-founder disputes; no generalizable lesson or evidence.
+- [R] [reddit-saas] What do you actually want from a founder dashboard? — https://www.reddit.com/r/SaaS/comments/1vm7gu9/what_do_you_actually_want_from_a_founder_dashboard/ — Open-ended &quot;what would you want&quot; idea-validation question with no findings or data.
+- [R] [reddit-saas] apple ads are they really useful for ASO? — https://www.reddit.com/r/SaaS/comments/1vm78om/apple_ads_are_they_really_useful_for_aso/ — One-line question with no answers, data, or content.
+- [R] [reddit-saas] I analyzed 4 viral r/SaaS posts. The one with 189k views broke almost every &quot;write valuable content&quot; rule. — https://www.reddit.com/r/SaaS/comments/1vm6tu5/i_analyzed_4_viral_rsaas_posts_the_one_with_189k/ — Meta-analysis of what makes Reddit posts go viral — engagement-bait navel-gazing, not a builder decision.
+- [R] [reddit-saas] Would you reply if a cold email arrived with the work already half done? — https://www.reddit.com/r/SaaS/comments/1vm6myo/would_you_reply_if_a_cold_email_arrived_with_the/ — Two-sentence cold-email musing with no results or method.
+- [R] [reddit-saas] I kept noticing the same problem in SaaS founder posts — https://www.reddit.com/r/SaaS/comments/1vm7aq8/i_kept_noticing_the_same_problem_in_saas_founder/ — I spending a lot of time reading founder posts lately. And I started noticing something. A lot of people seem to have figured out how to bui…
+- [R] [reddit-saas] Free vs. paid CLI — https://www.reddit.com/r/SaaS/comments/1vm74c7/free_vs_paid_cli/ — Over the last few days, I’ve been looking for CLI agents that offer good performance without costing a fortune. I came across Freebuff and h…
+- [R] [reddit-saas] &quot;Agentic&quot; is doing a lot of marketing work SaaS products haven't earned yet — https://www.reddit.com/r/SaaS/comments/1vm6vot/agentic_is_doing_a_lot_of_marketing_work_saas/ — Noticed a pattern this year, almost every SaaS product with an AI feature now calls it &quot;agentic,&quot; but most of what ships is still a fixed wo…
+- [M] [latent-space] [AINews] How to steal a Reasoning Trace — https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace — Latent Space covers techniques for extracting or reconstructing model reasoning traces, framed around speculative decoding as a distillation vector. The crawled item contained only the subtitle, so the substance is unverified here. Flagged to track: if reasoning traces are practically extractable, that affects both the moat assumptions of closed reasoning models and what you can distill locally.
+- [P] [gh-n8n] n8n@2.35.1 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.35.1 — n8n 2.35.1 lands two core fixes: TLS options are now applied per hop when requests traverse a proxy, and the &quot;Always allow&quot; scope is accepted on data-tables resume. Narrow, but if you self-host n8n behind a corporate or egress proxy the TLS fix is the difference between working and silently failing calls. Patch-level upgrade, no migration.
+- [R] [gh-n8n] beta — https://github.com/n8n-io/n8n/releases/tag/beta — Duplicate: &quot;beta&quot; tag pointing at the same 2.35.1 changelog already covered.
+- [P] [lobsters] Signal introduces Automatic Key Verification — https://signal.org/blog/automatic-key-verification/ — Signal shipped Automatic Key Verification, which confirms you are talking to the intended recipient without the in-person safety-number ritual. It works off a tamper-evident key transparency log signed by three independent auditors — Signal, Cloudflare, and Trail of Bits — and the client only shows a green check when all three have recent valid signatures. Nothing to do but update; the useful part for builders is the pattern, which is a clean reference design for multi-auditor transparency logs.
+- [R] [lobsters] C++26: std::indirect — https://www.sandordargo.com/blog/2026/08/12/cpp26-indirect — C++ language feature; no overlap with this stack or any near-term work.
+- [R] [lobsters] Unpacking ionCube — https://dustri.org/b/unpacking-ioncube.html — PHP bytecode reverse-engineering write-up; interesting but no applicable surface here.
+- [R] [lobsters] Tail-Call Interpreters in Rust — https://lordgoati.us/blog/tail-call/ — Rust interpreter-internals deep dive; no decision impact for this stack.
+- [P] [hn-top] llama.cpp launches llama.app as its official home — https://llama.app — llama.cpp now has an official site and desktop app at llama.app, aimed at making local model hosting work without config wrangling. The flow is llama serve plus a plugin that auto-discovers local models — no API keys, requests never leave the machine. If you already run Ollama locally this is worth a direct comparison before the next local-inference decision, since it is the upstream project packaging itself rather than a wrapper.
+- [P] [hn-top] The Human Is the Loop — https://brentfitzgerald.com/posts/the-human-is-the-loop/ — An argument that the framing of &quot;human in the loop&quot; is backwards: the human should own the loop and tag an agent in deliberately, rather than being trapped inside an agent-driven cycle. It is a craft essay, not a technique, but it is a sharper articulation of agent-workflow design than most writing in this genre. Worth ten minutes if you are actively designing multi-agent handoffs.
+- [R] [reddit-saas] Grew my product to around $400 MRR and then growth slowed down. Not sure what I'm doing wrong — https://www.reddit.com/r/SaaS/comments/1vm8502/grew_my_product_to_around_400_mrr_and_then_growth/ — I soft launched Openlynk around April. It's a deep linking platform I built mainly as an alternative to Firebase Dynamic Links. Initially th…
+- [R] [reddit-saas] A year ago I thought I’d be at $5k MRR by now. Reality: $100 MRR. — https://www.reddit.com/r/SaaS/comments/1vm9ijx/a_year_ago_i_thought_id_be_at_5k_mrr_by_now/ — About a year ago, after 9+ failed SaaS attempts, I launched Feedvote. Within the first hour, someone bought a $150 lifetime deal. That compl…
+- [R] [reddit-saas] What 1100+ founders using my fundraising tool taught me about how badly we all suck at this — https://www.reddit.com/r/SaaS/comments/1vmak5y/what_1100_founders_using_my_fundraising_tool/ — It's been about 7 days since I made my fundraising tool public. 1100+ users in a week, way more than I expected for something I built purely…
+- [R] [reddit-saas] I had to scrap 5 products in order to find something that would actually sell — https://www.reddit.com/r/SaaS/comments/1vmaaaq/i_had_to_scrap_5_products_in_order_to_find/ — Hey everyone, I am Jannik, 26 from Berlin. I just wanted to share my experience building products for my own company over the past few month…
+- [R] [reddit-saas] How to deal with on-premise customer — https://www.reddit.com/r/SaaS/comments/1vm8erh/how_to_deal_with_onpremise_customer/ — Hi, I've got a saas application and my company sell a on-premise project We need to change our fiel storage (Azure blob storage) to sFTP ser…
+- [R] [reddit-saas] kept noticing the same problem in SaaS founder posts — https://www.reddit.com/r/SaaS/comments/1vmaj5r/kept_noticing_the_same_problem_in_saas_founder/ — I have been spending a lot of time reading saas founder discussions lately . And one things keeps coming up . Someone has built the product…
+- [R] [reddit-saas] I built an open-source tool because I couldn't see where my AI API usage was going — https://www.reddit.com/r/SaaS/comments/1vmae3p/i_built_an_opensource_tool_because_i_couldnt_see/ — I've been building SaaS products for a while, and recently started using more AI APIs. Pretty quickly, I ran into a problem: I couldn't easi…
+- [R] [reddit-saas] Anyone else finding that “agent said it succeeded” ≠ “it actually did the right thing”? — https://www.reddit.com/r/SaaS/comments/1vma8lt/anyone_else_finding_that_agent_said_it_succeeded/ — Saas teams deploy AI agents for things like refunds, purchase orders, CRM updates, and support resolutions. The agents often report “done” a…
+- [R] [reddit-saas] I made an app but I'm not able to market it over a silly reason. — https://www.reddit.com/r/SaaS/comments/1vma7x6/i_made_an_app_but_im_not_able_to_market_it_over_a/ — The reason is I'm not in a relationship. I spent 9 months building this couples app launched in April it crossed 1000+ users even the revenu…
+- [R] [gh-n8n] n8n@2.34.5 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.34.5 — Duplicate subset of the 2.35.1 changelog (same TLS-per-hop fix on the 2.34 line).
+- [R] [gh-n8n] n8n@1.123.70 — https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.70 — Pure dependency bumps on the 1.x line with no user-facing change.
+- [R] [gh-n8n] stable — https://github.com/n8n-io/n8n/releases/tag/stable — Duplicate: &quot;stable&quot; tag pointing at the same 2.34.5 changelog.
+- [P] [stratechery] Anthropic’s Watermarking, How It (Probably) Works, Worse Than It Seems — https://stratechery.com/2026/anthropics-watermarking-how-it-probably-works-worse-than-it-seems/ — A real platform change that already applies to output this shop produces, plus the strongest available critique of it.
+- [R] [lobsters] Analyzing My Lobsters Submissions — https://abhinavsarkar.net/notes/2026-lobsters-submissions/ — Personal stats about one author’s link submissions; no transferable signal.
+- [R] [hn-top] LinkedIn CringeBot 3000 — https://www.cringebot3000.com/ — Novelty joke site.
+- [R] [hn-top] Facebook is paying controversial creators to produce rage-bait content — https://www.abc.net.au/news/2026-08-06/ragebait-how-facebook-is-paying-controversial-creators/106940696 — Platform-outrage media story; no builder action follows from it.
+- [R] [hn-top] Worms: The Future of Yesterday's Worms Today — https://worm.net/ — Novelty/retro site with no technical substance.
+- [P] [hn-top] A shell exclamation mark is not for yelling. Be lazy — https://refp.se/articles/your-shell-and-the-lazy-exclamation-mark — A short write-up on shell history expansion — using !! and !$ style shortcuts instead of retyping or arrow-keying through previous commands. Nothing new to shell veterans, but it is a concrete habit change that compounds across a day at the terminal. Read once, adopt or discard in two minutes.
+- [R] [hn-top] Retire the Abstractions — https://hazyresearch.stanford.edu/blog/2026-08-05-retire-the-abstractions — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Beef and dairy drive 41% of biodiversity damage linked to global farmland — https://www.oxfordmartin.ox.ac.uk/news/beef-and-dairy-drive-41-of-biodiversity-damage-linked-to-global-farmland — Scheduled agent omitted this claimed item from the completion payload.
+- [P] [gh-langchain] langchain-anthropic==1.5.6 — https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.5.6 — langchain-anthropic 1.5.6 normalizes tool_search_tool_result blocks and corrects model profile data for Fable 5, Sonnet 5, and Opus 4.1. If you are on LangChain with the Anthropic provider and doing tool calling, the block-normalization fix removes a real source of parsing inconsistency, and the profile correction means token/context limits are finally right for current models.
+- [R] [gh-composio] CLI Beta @composio/cli@0.3.4-beta.350 — https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.3.4-beta.350 — Beta CLI patch dominated by docs restructuring; no user-facing capability change worth acting on.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
