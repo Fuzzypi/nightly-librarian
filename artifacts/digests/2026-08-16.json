@@ -1,605 +1,358 @@
 {
   "date": "2026-08-16",
-  "generated_at": "2026-08-16T06:16:08.011Z",
+  "generated_at": "2026-08-16T11:09:14.579Z",
   "imported_from": {
     "importer_version": "digest-import/v1",
     "source_artifact": "artifacts/synthesized/2026-08-16.json",
-    "source_sha256": "ea6427905a3e09d3b38bf0cb54bb55c79c1bf2d474285542a088cf92a671a1e0"
+    "source_sha256": "3cbfbfefe28dfd3ecde2f9b39050f7b0e601647ea58521b82503ef4df804f6be"
   },
   "items": [
     {
-      "builder_takeaway": "Directly overlaps the hybrid retrieval + reranking work already on the second-brain roadmap.",
-      "category": "Model + API Changes",
-      "id": "9be0d9ec-4105-4c31-ab6e-fcfef8c58c5c",
-      "importance": "lead",
-      "labels": [
-        "vendor_claim",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "mixedbread.com",
-      "source_facts": [
-        "Mixedbread released Toast 1, an agentic search model it claims matches frontier-model retrieval quality at roughly 10x lower cost and 3.5x fewer tokens."
-      ],
-      "title": "Introducing Toast 1",
-      "uncertainty": "All benchmarks are vendor-published; no independent reproduction available yet.",
-      "url": "https://www.mixedbread.com/blog/toast-1"
-    },
-    {
-      "builder_takeaway": "Cuts recurring token spend on the primary daily tool with no code changes required.",
-      "category": "AI Operations / Agent Control",
-      "id": "b78b559b-abaf-40b7-ac10-02acd0633987",
-      "importance": "supporting",
-      "labels": [
-        "vendor_claim",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "claude.com",
-      "source_facts": [
-        "Anthropic published token-efficiency practices for Claude Code sessions, including preserving the prompt cache and auditing loaded context with /context."
-      ],
-      "title": "Maximizing the value of your Claude Code sessions",
-      "uncertainty": "",
-      "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions"
-    },
-    {
-      "builder_takeaway": "Applies directly to second-brain tagging with the embedding stack already in place.",
-      "category": "AI Operations / Agent Control",
-      "id": "aec7f0cc-939a-4518-bef5-607f518e45d0",
-      "importance": "supporting",
-      "labels": [
-        "builder_reported",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "Generating a hypothetical label and embedding-matching it to an existing taxonomy outperforms feeding the full vocabulary to an LLM for classification."
-      ],
-      "title": "Don't classify. Hallucinate!",
-      "uncertainty": "Reported on one product-catalogue corpus; effectiveness on a technical/personal-knowledge taxonomy is untested.",
-      "url": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/"
-    },
-    {
-      "builder_takeaway": "Permissively licensed local model in the size class that fits a single machine.",
-      "category": "Model + API Changes",
-      "id": "5eef73cf-dfff-4e95-9c7a-fffb2feca9d7",
-      "importance": "supporting",
-      "labels": [
-        "vendor_claim",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "huggingface.co",
-      "source_facts": [
-        "Qwen released Qwen3.8-27B open weights under Apache 2.0 with an official FP8 quantisation requiring roughly 28GB VRAM."
-      ],
-      "title": "Qwen 3.8 27B (FP8 open weights)",
-      "uncertainty": "Quoted memory figures are for discrete GPUs; Apple Silicon footprint is unverified.",
-      "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8"
-    },
-    {
-      "builder_takeaway": "Shifts the long-term feasibility of processing client data without seeing it.",
+      "builder_takeaway": "Below the bar for this morning memo.",
       "category": "Tools Worth Testing",
-      "id": "6fbb2d68-571e-4a2c-bfb0-8faeb6fe3708",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "blog.google",
-      "source_facts": [
-        "Google open-sourced HEIR, a compiler that converts pre-trained models to perform inference on homomorphically encrypted data."
-      ],
-      "title": "Google is making private AI practical with homomorphic encryption",
-      "uncertainty": "Demo latencies are for small models; no published figures for transformer-scale inference.",
-      "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/"
-    },
-    {
-      "builder_takeaway": "Frames a threat-model shift relevant to anything storing customer PII on endpoints.",
-      "category": "AI Operations / Agent Control",
-      "id": "39f8500d-c3ce-4a3d-b5e2-151dfc0a8c67",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "blog.cryptographyengineering.com",
-      "source_facts": [
-        "Matthew Green argues the encryption policy fight has shifted from backdoor mandates to routine law-enforcement device hacking."
-      ],
-      "title": "Going Dark, and the era of law enforcement hacking",
-      "uncertainty": "Article body was not retrievable; summary rests on the title and the author’s known position.",
-      "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/"
-    },
-    {
-      "builder_takeaway": "Prior-art reference for CalenCall calendar UI decisions.",
-      "category": "Tools Worth Testing",
-      "id": "b07cfa0c-77c4-4cb9-a37b-3989c6f39371",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "blog.thunderbird.net",
-      "source_facts": [
-        "Thunderbird published a writeup of the design process behind its desktop calendar visual redesign."
-      ],
-      "title": "Thunderbird’s Desktop Calendar Visual Redesign",
-      "uncertainty": "Article body was not retrievable this run; relevance inferred from title and source.",
-      "url": "https://blog.thunderbird.net/2026/08/desktop-calendar-a-design-journey/"
-    },
-    {
-      "builder_takeaway": "Practical privacy-audit tooling from a reliable security source.",
-      "category": "AI Operations / Agent Control",
-      "id": "bf6aa268-68c9-4486-a150-7fb457842cf5",
+      "id": "3e4c8629-110b-4e14-ba36-8b0a25a83bb8",
       "importance": "archive-only",
       "labels": [
         "builder_reported",
-        "publish_private"
+        "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "krebsonsecurity.com",
+      "source": "serokell.io",
       "source_facts": [
-        "KrebsOnSecurity covers DecryptAds, a new service for discovering which advertising brokers are tracking a given individual."
+        "Serokell’s Work on GHC: Dependent Types, Part 5"
       ],
-      "title": "Find out who’s tracking you with DecryptAds",
-      "uncertainty": "Article body not retrieved; the service’s own data practices are unassessed.",
-      "url": "https://krebsonsecurity.com/2026/08/whos-tracking-you-use-this-new-service-to-find-out/"
+      "title": "Serokell’s Work on GHC: Dependent Types, Part 5",
+      "uncertainty": "",
+      "url": "https://serokell.io/blog/serokell-s-work-on-ghc-dependent-types-part-5"
     },
     {
-      "builder_takeaway": "Removes the main technical blocker to self-hosting remote desktop on Linux.",
+      "builder_takeaway": "Below the bar for this morning memo.",
       "category": "Tools Worth Testing",
-      "id": "12092047-b5c6-4cc5-bda9-35e4517fb88a",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "rustdesk.com",
-      "source_facts": [
-        "RustDesk announced support for true unattended remote access under Wayland."
-      ],
-      "title": "RustDesk now supports true unattended remote access on Wayland",
-      "uncertainty": "Vendor announcement; no independent confirmation that it works across compositors.",
-      "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/"
-    },
-    {
-      "builder_takeaway": "Prior art for the nightly-librarian research and triage loop.",
-      "category": "AI Operations / Agent Control",
-      "id": "3598b5b8-63bf-4743-92a8-7f531ce746d6",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "Mole is an open-source deep research agent that runs in the terminal."
-      ],
-      "title": "Show HN: Mole — Deep research agent for your terminal",
-      "uncertainty": "No usage data or evaluation; maturity unknown.",
-      "url": "https://github.com/lajosdeme/mole"
-    },
-    {
-      "builder_takeaway": "Affects browser choice for scraping and web-testing workflows.",
-      "category": "Small Business Automation",
-      "id": "d966f4b3-0e5f-4360-9ddb-7e845edd2bd4",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "pcworld.com",
-      "source_facts": [
-        "Firefox is the last major browser still supporting the full version of uBlock Origin following the Manifest V3 transition."
-      ],
-      "title": "Firefox is now the last major browser that still supports uBlock Origin",
-      "uncertainty": "Body not read; the precise state of Chromium forks varies.",
-      "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html"
-    },
-    {
-      "builder_takeaway": "Measured performance analysis from the project maintainer.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "8117a010-8860-4ad1-8ac5-cc0b978fdb00",
+      "id": "6a08f0a9-7cfd-43c8-abbd-d4e9599fe7fa",
       "importance": "archive-only",
       "labels": [
         "builder_reported",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "daniel.haxx.se",
-      "source_facts": [
-        "curl maintainer Daniel Stenberg published an analysis of curl performance characteristics."
-      ],
-      "title": "Curl Performance",
-      "uncertainty": "Article body not retrieved this run.",
-      "url": "https://daniel.haxx.se/blog/2026/08/14/curl-performance-2/"
-    },
-    {
-      "builder_takeaway": "Distribution-strategy framing for federated or open-protocol publishing.",
-      "category": "Small Business Automation",
-      "id": "b343b5b8-a2d8-4c40-b40a-a6fbe5b76649",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "o.ee",
-      "source_facts": [
-        "ActivityPub succeeded as a federation protocol because it was conservative and unremarkable rather than technically novel."
-      ],
-      "title": "ActivityPub Won by Being Boring",
-      "uncertainty": "Body not retrieved; the argument is asserted, not measured.",
-      "url": "https://o.ee/blog/activitypub-won-by-being-boring/"
-    },
-    {
-      "builder_takeaway": "Removes a hosted dependency from static-site publishing.",
-      "category": "Small Business Automation",
-      "id": "8b89cebb-f615-4e4d-bd55-7445d59c5b66",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "jva.lol",
-      "source_facts": [
-        "Blog comments can be rendered as static HTML at build time instead of using a hosted comment service."
-      ],
-      "title": "My comment section is static HTML",
-      "uncertainty": "Body not retrieved; the moderation workflow is the part that usually decides whether this is practical.",
-      "url": "https://jva.lol/weblog/my-comment-section-is-static-html/"
-    },
-    {
-      "builder_takeaway": "Underlying primitive for call-graph impact analysis in GitNexus.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "f0eafaf9-a419-4d7e-b462-5dc6df403f17",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "neugierig.org",
-      "source_facts": [
-        "An explanation of algorithms for computing dominators in directed graphs."
-      ],
-      "title": "Computing graph dominators",
-      "uncertainty": "Body not retrieved; depth and correctness unassessed.",
-      "url": "https://neugierig.org/software/blog/2026/08/dominators.html"
-    },
-    {
-      "builder_takeaway": "Credible technical critique of an ISA increasingly present in cheap hardware.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "f6f3d36d-cd31-4d2b-9ace-702a7915a413",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "dmitry.gr",
-      "source_facts": [
-        "Dmitry Grinberg argues RISC-V made avoidable ISA design mistakes."
-      ],
-      "title": "RISC-V: They Should Have Known Better",
-      "uncertainty": "Body not retrieved; the specific technical claims are unassessed.",
-      "url": "https://dmitry.gr/?r=06.%20Thoughts&proj=12.%20RV"
-    },
-    {
-      "builder_takeaway": "Overlaps the scheduled-automation window; prompts a check for silent failures.",
-      "category": "Model + API Changes",
-      "id": "da739651-1193-442e-b8b1-b4b558e94fda",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
-        "monitor"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "status.claude.com",
-      "source_facts": [
-        "Anthropic reported and resolved elevated errors affecting Claude Fable 5 and claude.ai between 20:00 Aug 14 and 00:11 Aug 15 UTC."
-      ],
-      "title": "Elevated errors for Claude Fable 5",
-      "uncertainty": "Unknown whether any local scheduled runs were affected during the window.",
-      "url": "https://status.claude.com/incidents/hdynq1pc0fn8"
-    },
-    {
-      "builder_takeaway": "Alternative delivery surface for an existing daily digest pipeline.",
-      "category": "Small Business Automation",
-      "id": "1b5c12f3-3df7-480f-a5d5-efbe62059046",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "monitor"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "heyjonny.dev",
-      "source_facts": [
-        "An RSS-to-e-ink pipeline can render feed subscriptions as a daily printed-style newspaper."
-      ],
-      "title": "I turned my RSS feeds into an e-ink newspaper to stop reading on my phone",
-      "uncertainty": "Body not retrieved; hardware cost and refresh workflow unknown.",
-      "url": "https://heyjonny.dev/posts/rss-to-eink-newspaper/"
-    },
-    {
-      "builder_takeaway": "Rejected in triage: Breaking news with no bearing on software work.",
-      "category": "Tools Worth Testing",
-      "id": "3367b3b2-9887-4462-8edc-9f8e3e40a6dc",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "earthquake.usgs.gov",
+      "source": "gotw.ca",
       "source_facts": [
-        "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia"
+        "The Free Lunch Is Over: A Fundamental Turn Toward Concurrency in Software (2005)"
       ],
-      "title": "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia",
+      "title": "The Free Lunch Is Over: A Fundamental Turn Toward Concurrency in Software (2005)",
       "uncertainty": "",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2/executive"
+      "url": "http://www.gotw.ca/publications/concurrency-ddj.htm"
     },
     {
-      "builder_takeaway": "Rejected in triage: Interactive toy; entertainment, no decision impact.",
+      "builder_takeaway": "Below the bar for this morning memo.",
       "category": "Tools Worth Testing",
-      "id": "7a64e568-e45a-4c25-8510-5b4658f7190b",
+      "id": "a1cd4ad8-2c43-4e62-9222-2f0368651d62",
       "importance": "archive-only",
       "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "eigendrum.com",
-      "source_facts": [
-        "eigendrum"
-      ],
-      "title": "eigendrum",
-      "uncertainty": "",
-      "url": "https://eigendrum.com/#p=circle"
-    },
-    {
-      "builder_takeaway": "Rejected in triage: Credible security research but zero applicability to a solo software shop; aviation-security news, not a threat to your stack.",
-      "category": "Tools Worth Testing",
-      "id": "781b90e9-cb47-4410-9faa-6d19782ba723",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "wired.com",
-      "source_facts": [
-        "Coin-sized device can hack a Boeing 737"
-      ],
-      "title": "Coin-sized device can hack a Boeing 737",
-      "uncertainty": "",
-      "url": "https://www.wired.com/story/this-coin-sized-device-can-hack-a-boeing-737/"
-    },
-    {
-      "builder_takeaway": "Rejected in triage: Almost certainly parody — there is no IPv8 Internet-Draft in this form; treating as unverifiable.",
-      "category": "Tools Worth Testing",
-      "id": "b5014e73-8b77-40f0-9411-3538b7016200",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "goonhost.rocks",
-      "source_facts": [
-        "We implemented the IPv8 Internet-Draft in the Linux Kernel, Musl Libc, and BGP"
-      ],
-      "title": "We implemented the IPv8 Internet-Draft in the Linux Kernel, Musl Libc, and BGP",
-      "uncertainty": "",
-      "url": "https://goonhost.rocks/blog/implementing-ipv8-internet-draft"
-    },
-    {
-      "builder_takeaway": "Rejected in triage: Personal wildlife photography post; no technical content.",
-      "category": "Tools Worth Testing",
-      "id": "4c026a66-766e-4813-9822-565fd8dd40c4",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "Northern Gannet"
-      ],
-      "title": "Northern Gannet",
-      "uncertainty": "",
-      "url": "https://simonwillison.net/2026/Aug/15/sighting-391300422/"
-    },
-    {
-      "builder_takeaway": "Rejected in triage: Consumer hardware launch; no decision impact.",
-      "category": "Tools Worth Testing",
-      "id": "46a5dd18-1365-4c6b-aa51-e3697ab6dc42",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "blog.ploopy.co",
-      "source_facts": [
-        "The Ploopy A+ Trackball Is Here"
-      ],
-      "title": "The Ploopy A+ Trackball Is Here",
-      "uncertainty": "",
-      "url": "https://blog.ploopy.co/the-aplus-is-finally-here-499"
-    },
-    {
-      "builder_takeaway": "Rejected in triage: Eight-year-old maths pedagogy paper; off-topic.",
-      "category": "Tools Worth Testing",
-      "id": "ceb5c119-0fe7-4d67-bfcd-ca1ff2d8104e",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "arxiv.org",
-      "source_facts": [
-        "Simplifying and Refactoring Introductory Calculus (2018)"
-      ],
-      "title": "Simplifying and Refactoring Introductory Calculus (2018)",
-      "uncertainty": "",
-      "url": "https://arxiv.org/abs/1811.03459"
-    },
-    {
-      "builder_takeaway": "Rejected in triage: Educational explainer content; no new information or decision impact.",
-      "category": "Tools Worth Testing",
-      "id": "d066d7bf-aa4e-4875-aa44-d704aff89a3f",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "byhand.ai",
-      "source_facts": [
-        "AI by Hand"
-      ],
-      "title": "AI by Hand",
-      "uncertainty": "",
-      "url": "https://www.byhand.ai/"
-    },
-    {
-      "builder_takeaway": "Rejected in triage: Retro-gaming curiosity; entertainment.",
-      "category": "Tools Worth Testing",
-      "id": "9f286118-ac6f-4337-b345-2ccb3b7e4400",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "32bits.substack.com",
-      "source_facts": [
-        "Unearthing a 31 year old Easter egg in Ecco the Dolphin"
-      ],
-      "title": "Unearthing a 31 year old Easter egg in Ecco the Dolphin",
-      "uncertainty": "",
-      "url": "https://32bits.substack.com/p/under-the-microscope-ecco-the-dolphin-98c"
-    },
-    {
-      "builder_takeaway": "Rejected in triage: Nix novelty post; not in your stack, no leverage.",
-      "category": "Tools Worth Testing",
-      "id": "43c6ae6a-4e22-473d-afb0-2563882cd881",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
+        "builder_reported",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-08-16T00:00:00.000Z",
       "source": "fzakaria.com",
       "source_facts": [
-        "Super Mario Derivations"
+        "nixpkgs-multiverse: fast mode"
       ],
-      "title": "Super Mario Derivations",
+      "title": "nixpkgs-multiverse: fast mode",
       "uncertainty": "",
-      "url": "https://fzakaria.com/2026/08/05/super-mario-derivations"
+      "url": "https://fzakaria.com/2026/08/14/nixpkgs-multiverse-fast-mode"
     },
     {
-      "builder_takeaway": "Rejected in triage: Routine point release for a language not in use here.",
+      "builder_takeaway": "Below the bar for this morning memo.",
       "category": "Tools Worth Testing",
-      "id": "4a5f372f-5c9d-4702-97ae-3309d97a91d6",
+      "id": "f12a54d6-7e55-43b9-8500-51ef3485f566",
       "importance": "archive-only",
       "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "blog.racket-lang.org",
-      "source_facts": [
-        "Racket v9.3"
-      ],
-      "title": "Racket v9.3",
-      "uncertainty": "",
-      "url": "https://blog.racket-lang.org/2026/08/racket-v9-3.html"
-    },
-    {
-      "builder_takeaway": "Rejected in triage: Retrocomputing history; no practical relevance.",
-      "category": "Tools Worth Testing",
-      "id": "850cb707-8144-46e6-beb8-aea624d5a117",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "pascal.hansotten.com",
-      "source_facts": [
-        "Turbo Pascal on CP/M, MSX-DOS and MS-DOS"
-      ],
-      "title": "Turbo Pascal on CP/M, MSX-DOS and MS-DOS",
-      "uncertainty": "",
-      "url": "http://pascal.hansotten.com/delphi/turbo-pascal-on-cpm-msx-dos-and-ms-dos/"
-    },
-    {
-      "builder_takeaway": "Rejected in triage: Thin single-purpose utility; low leverage.",
-      "category": "Tools Worth Testing",
-      "id": "0d78c0c1-62eb-4754-af9e-43d472b4af11",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
+        "builder_reported",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-08-16T00:00:00.000Z",
       "source": "github.com",
       "source_facts": [
-        "Show HN: Ember – Redshift safe color palettes"
+        "Kernel that only runs an NES emulator"
       ],
-      "title": "Show HN: Ember – Redshift safe color palettes",
+      "title": "Kernel that only runs an NES emulator",
       "uncertainty": "",
-      "url": "https://github.com/carpdiem/ember"
+      "url": "https://github.com/vmartinv/nek"
     },
     {
-      "builder_takeaway": "Rejected in triage: Photography project; off-topic.",
+      "builder_takeaway": "Concrete security fixes can change upgrade priority for self-hosted agent stacks.",
+      "category": "AI Operations / Agent Control",
+      "id": "bb5d75ce-7659-4631-81be-4e50e610c221",
+      "importance": "lead",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Open WebUI v0.9.5 release notes list SSRF protections, CSP controls, and multiple permission-enforcement fixes."
+      ],
+      "title": "v0.9.5",
+      "uncertainty": "Approved browse CLI failed locally, so this is based on release-note content captured in the fetch payload rather than a fresh live page read.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.9.5"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
       "category": "Tools Worth Testing",
-      "id": "57f35485-c66e-485a-b735-f608765a4a75",
+      "id": "06667930-06d3-4626-afbd-04115628f34a",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v0.9.4"
+      ],
+      "title": "v0.9.4",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.9.4"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "ad62e29f-2357-4c9a-b629-1f8e657771db",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v0.9.3"
+      ],
+      "title": "v0.9.3",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.9.3"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "e0c3d5e6-19f6-416f-9445-aa612d40818d",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v0.9.2"
+      ],
+      "title": "v0.9.2",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.9.2"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "f1b843e6-d06b-4c34-8d59-28ff414714e8",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v0.9.1"
+      ],
+      "title": "v0.9.1",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.9.1"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "83c3b6b0-aa28-4688-b1f4-022fc75a9b5f",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v0.14.22"
+      ],
+      "title": "v0.14.22",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/run-llama/llama_index/releases/tag/v0.14.22"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "8a46f2ce-7832-406f-8e50-7ffac9f7a44d",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v0.14.21"
+      ],
+      "title": "v0.14.21",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/run-llama/llama_index/releases/tag/v0.14.21"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "d5f00221-c849-4c6a-b7e5-56cf148ad1ad",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v0.14.20"
+      ],
+      "title": "v0.14.20",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/run-llama/llama_index/releases/tag/v0.14.20"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "bad9f8ae-6f43-4979-9209-cfa82697215c",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v0.14.19"
+      ],
+      "title": "v0.14.19",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/run-llama/llama_index/releases/tag/v0.14.19"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "965e1a36-5a9a-4472-b92b-1ab3c3a66889",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v0.14.18"
+      ],
+      "title": "v0.14.18",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/run-llama/llama_index/releases/tag/v0.14.18"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "3e65f01f-2364-4c13-85fc-49f8eb6f9dd6",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v0.14.16"
+      ],
+      "title": "v0.14.16",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/run-llama/llama_index/releases/tag/v0.14.16"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "b06b0263-8b7a-46f4-96da-ae7c91838301",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v0.14.15"
+      ],
+      "title": "v0.14.15",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/run-llama/llama_index/releases/tag/v0.14.15"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "a7c4e03f-1eae-49e7-8797-557855ae027d",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v0.14.14"
+      ],
+      "title": "v0.14.14",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/run-llama/llama_index/releases/tag/v0.14.14"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "09978d14-b394-4962-9ee6-0fc01a835799",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v0.14.13"
+      ],
+      "title": "v0.14.13",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/run-llama/llama_index/releases/tag/v0.14.13"
+    },
+    {
+      "builder_takeaway": "Insufficient detail to decide whether there is any actual operator impact.",
+      "category": "Model + API Changes",
+      "id": "c594e4f7-2649-4a84-b701-c99cd853dd8c",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -607,18 +360,94 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "uvbirds.com",
+      "source": "stripe.com",
       "source_facts": [
-        "Ultraviolet Bird Photography"
+        "Stripe changelog entry at /dahlia exists, but no readable body text was captured in the item payload."
       ],
-      "title": "Ultraviolet Bird Photography",
-      "uncertainty": "",
-      "url": "https://uvbirds.com/"
+      "title": "Changelog",
+      "uncertainty": "Approved browse CLI failed to start locally, and the fetched item contained no extractable content.",
+      "url": "https://stripe.com/changelog/dahlia"
     },
     {
-      "builder_takeaway": "Rejected in triage: Opinion essay restating a well-known argument; no new evidence.",
+      "builder_takeaway": "Minor but relevant if you depend on image inputs or Qwen chat formatting in local stacks.",
       "category": "Tools Worth Testing",
-      "id": "60fc4fc9-df25-4624-ac08-4db99114cdaf",
+      "id": "06186fb3-5db4-4868-a18a-9546d42f5457",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Ollama released v0.32.14-rc0 with WebP image handling and Qwen message-format tolerance fixes."
+      ],
+      "title": "v0.32.14",
+      "uncertainty": "Based on release-note text from the feed payload; no live page read because the approved browse CLI failed to start.",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.32.14-rc0"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "99c68ed3-46ec-4110-8b6e-86b2bd57a244",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "python-1.42.0"
+      ],
+      "title": "python-1.42.0",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/microsoft/semantic-kernel/releases/tag/python-1.42.0"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "ae798093-5179-426b-89ae-aaf623731142",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "dotnet-1.76.0"
+      ],
+      "title": "dotnet-1.76.0",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/microsoft/semantic-kernel/releases/tag/dotnet-1.76.0"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "b68e0a3f-93fb-4428-a766-039882abacc6",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "dotnet-1.75.0"
+      ],
+      "title": "dotnet-1.75.0",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://github.com/microsoft/semantic-kernel/releases/tag/dotnet-1.75.0"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "6ebb4186-6179-4584-9edb-8df0b20555b3",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -626,18 +455,94 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "cekrem.github.io",
+      "source": "micdrop.gg",
       "source_facts": [
-        "There Is Still No Silver Bullet"
+        "Show HN: Mic Drop, a real-time multiplayer karaoke game"
       ],
-      "title": "There Is Still No Silver Bullet",
+      "title": "Show HN: Mic Drop, a real-time multiplayer karaoke game",
       "uncertainty": "",
-      "url": "https://cekrem.github.io/posts/there-is-still-no-silver-bullet/"
+      "url": "https://www.micdrop.gg/"
     },
     {
-      "builder_takeaway": "Rejected in triage: Gamedev niche outside your work and likely future work.",
+      "builder_takeaway": "Potentially interesting interface direction for agent tooling, but far too early for a recommendation.",
+      "category": "AI Operations / Agent Control",
+      "id": "143a5afd-9dd6-4a36-a58c-cbbbd61d4ca0",
+      "importance": "supporting",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "chenxiachan.github.io",
+      "source_facts": [
+        "Show HN launched ThoughtDAG, an editable context graph for LLM conversations."
+      ],
+      "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
+      "uncertainty": "The approved browse CLI failed to start, so this is title-level evidence only.",
+      "url": "https://chenxiachan.github.io/thoughtdag/"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
       "category": "Tools Worth Testing",
-      "id": "668ad27f-d17a-473d-a89f-97725c57408f",
+      "id": "44182924-714e-4b6f-a4c8-b4671e0fe6e6",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "baselashraf81.github.io",
+      "source_facts": [
+        "Show HN: Eigendrum - Draw any shape and hear what it sounds like as a drum"
+      ],
+      "title": "Show HN: Eigendrum - Draw any shape and hear what it sounds like as a drum",
+      "uncertainty": "",
+      "url": "https://baselashraf81.github.io/eigendrum/"
+    },
+    {
+      "builder_takeaway": "The build-and-iterate story is real, but it is peripheral to the repo owner's likely decisions.",
+      "category": "Small Business Automation",
+      "id": "636bb708-649c-43c6-9a2e-0c941fd5bc20",
+      "importance": "supporting",
+      "labels": [
+        "builder_reported",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "silentshark.app",
+      "source_facts": [
+        "A solo developer launched Silent Shark on Steam after iterating hard on onboarding and UI from prior HN feedback."
+      ],
+      "title": "Show HN: Silent Shark – tactical map-based WWII submarine sim",
+      "uncertainty": "Summary comes from the HN post text rather than a live page read.",
+      "url": "https://silentshark.app/"
+    },
+    {
+      "builder_takeaway": "Testing automation can matter, but there is not enough evidence here yet.",
+      "category": "AI Operations / Agent Control",
+      "id": "dee6a2c8-b116-4e36-9d31-6ab1a90a02d5",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "app.deltix.ai",
+      "source_facts": [
+        "Show HN launched Deltix, pitched as AI-driven testing."
+      ],
+      "title": "Show HN: Deltix – AI Driven Testing",
+      "uncertainty": "Title-only evidence because the approved browse CLI failed to start and the fetched item had no body text.",
+      "url": "https://app.deltix.ai"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "a6855027-e73b-457b-99ed-dba10b54580e",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -645,18 +550,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "eliasfarhan.ch",
+      "source": "mitchellh.com",
       "source_facts": [
-        "What You Gain by Building Your Own Game Engine"
+        "Ghostty Is Leaving GitHub"
       ],
-      "title": "What You Gain by Building Your Own Game Engine",
-      "uncertainty": "",
-      "url": "https://eliasfarhan.ch/gamedev/cpp/2026/08/14/srnative-01-why-a-custom-engine.html"
+      "title": "Ghostty Is Leaving GitHub",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://mitchellh.com/writing/ghostty-leaving-github"
     },
     {
-      "builder_takeaway": "Rejected in triage: AI-discourse editorial; no reproducible finding.",
+      "builder_takeaway": "Below the bar for this morning memo.",
       "category": "Tools Worth Testing",
-      "id": "562171b8-44ad-4592-b156-8ebce3e060ab",
+      "id": "762f4670-1f42-450b-993a-378d8f3ccdc2",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -664,18 +569,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "markusde.ca",
+      "source": "mitchellh.com",
       "source_facts": [
-        "An Anecdote Against Slop Artifacts"
+        "Simdutf Can Now Be Used Without libc++ or libc++abi"
       ],
-      "title": "An Anecdote Against Slop Artifacts",
-      "uncertainty": "",
-      "url": "https://www.markusde.ca/pages/noslop.html"
+      "title": "Simdutf Can Now Be Used Without libc++ or libc++abi",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://mitchellh.com/writing/simdutf-no-libcxx"
     },
     {
-      "builder_takeaway": "Rejected in triage: Overlaps the RISC-V critique already carried; narrower and less substantiated.",
+      "builder_takeaway": "Below the bar for this morning memo.",
       "category": "Tools Worth Testing",
-      "id": "1c311431-3c0b-4da6-96cd-14f101f15f32",
+      "id": "c8ca84bc-b38b-46bb-8317-1900c1aa2829",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -683,18 +588,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "gist.github.com",
+      "source": "mitchellh.com",
       "source_facts": [
-        "RVA23 vs ARMv9 a Small Experiment"
+        "The Building Block Economy"
       ],
-      "title": "RVA23 vs ARMv9 a Small Experiment",
-      "uncertainty": "",
-      "url": "https://gist.github.com/camel-cdr/3a7aed17e017e8cab675ad696c7d14af"
+      "title": "The Building Block Economy",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://mitchellh.com/writing/building-block-economy"
     },
     {
-      "builder_takeaway": "Rejected in triage: Language-specific curiosity outside your stack.",
+      "builder_takeaway": "Below the bar for this morning memo.",
       "category": "Tools Worth Testing",
-      "id": "1527f2a4-ad6f-4db5-bcce-d1a5410d2188",
+      "id": "54c8930f-bacd-4022-90f5-3c37b074491c",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -702,18 +607,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "simondobson.org",
+      "source": "mitchellh.com",
       "source_facts": [
-        "Unexpected (to me) behaviour in Lisp sub-typing"
+        "My AI Adoption Journey"
       ],
-      "title": "Unexpected (to me) behaviour in Lisp sub-typing",
-      "uncertainty": "",
-      "url": "https://simondobson.org/2026/08/07/strange-behaviour-in-lisp-sub-typing/"
+      "title": "My AI Adoption Journey",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://mitchellh.com/writing/my-ai-adoption-journey"
     },
     {
-      "builder_takeaway": "Rejected in triage: Reflective essay; no actionable content.",
+      "builder_takeaway": "Below the bar for this morning memo.",
       "category": "Tools Worth Testing",
-      "id": "e37feea6-238b-416d-b7e6-be86496c21d8",
+      "id": "0a4b83ab-b577-4d56-bc61-af2a9969f9f9",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -721,18 +626,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "markuseliasson.se",
+      "source": "mitchellh.com",
       "source_facts": [
-        "Guilt-Driven Development"
+        "Don't Trip[wire] Yourself: Testing Error Recovery in Zig"
       ],
-      "title": "Guilt-Driven Development",
-      "uncertainty": "",
-      "url": "https://markuseliasson.se/article/guilt-driven-development"
+      "title": "Don't Trip[wire] Yourself: Testing Error Recovery in Zig",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://mitchellh.com/writing/tripwire"
     },
     {
-      "builder_takeaway": "Rejected in triage: Type-theory musing; no decision impact.",
+      "builder_takeaway": "Below the bar for this morning memo.",
       "category": "Tools Worth Testing",
-      "id": "eacfdc9e-1b50-4b65-a7f9-a8134e37dc08",
+      "id": "5539fa3f-1374-446e-a9d9-b24129f41d4f",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -740,18 +645,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "sifter.org",
+      "source": "mitchellh.com",
       "source_facts": [
-        "Demystifying Type (and some Un-Paradoxing)"
+        "Finding and Fixing Ghostty's Largest Memory Leak"
       ],
-      "title": "Demystifying Type (and some Un-Paradoxing)",
-      "uncertainty": "",
-      "url": "https://sifter.org/~simon/journal/20260814.html"
+      "title": "Finding and Fixing Ghostty's Largest Memory Leak",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://mitchellh.com/writing/ghostty-memory-leak-fix"
     },
     {
-      "builder_takeaway": "Rejected in triage: Duplicate of d966f4b3 (same URL from a second source); keeping the hn-top copy.",
+      "builder_takeaway": "Below the bar for this morning memo.",
       "category": "Tools Worth Testing",
-      "id": "a0fee657-aff1-4f45-a1ce-d47dbb0d42a7",
+      "id": "9473f330-3bc2-45a6-8638-e0c11eae5e4a",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -759,18 +664,113 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-16T00:00:00.000Z",
-      "source": "pcworld.com",
+      "source": "mitchellh.com",
       "source_facts": [
-        "Firefox is now the last major browser that still supports uBlock Origin"
+        "Ghostty Is Now Non-Profit"
       ],
-      "title": "Firefox is now the last major browser that still supports uBlock Origin",
-      "uncertainty": "",
-      "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html"
+      "title": "Ghostty Is Now Non-Profit",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://mitchellh.com/writing/ghostty-non-profit"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "b8fe1acd-d4ac-4d57-b03c-387f6fc1087d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "mitchellh.com",
+      "source_facts": [
+        "Vibing a Non-Trivial Ghostty Feature"
+      ],
+      "title": "Vibing a Non-Trivial Ghostty Feature",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://mitchellh.com/writing/non-trivial-vibing"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "9f247e36-441d-4655-8f6d-3b476dd084cf",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "mitchellh.com",
+      "source_facts": [
+        "Zig Builds Are Getting Faster"
+      ],
+      "title": "Zig Builds Are Getting Faster",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://mitchellh.com/writing/zig-builds-getting-faster"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "26503266-e8b1-4c33-8072-17dad100ee81",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "mitchellh.com",
+      "source_facts": [
+        "Libghostty Is Coming"
+      ],
+      "title": "Libghostty Is Coming",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://mitchellh.com/writing/libghostty-is-coming"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "7fb76c6d-800b-41b4-b4bf-6bcbeca7598e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "mitchellh.com",
+      "source_facts": [
+        "You Have to Feel It"
+      ],
+      "title": "You Have to Feel It",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://mitchellh.com/writing/feel-it"
+    },
+    {
+      "builder_takeaway": "Below the bar for this morning memo.",
+      "category": "Tools Worth Testing",
+      "id": "c0804a4c-4b7e-4aa7-81dc-6a0bb8e69055",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "source": "mitchellh.com",
+      "source_facts": [
+        "Advice for Tech Non-Profits"
+      ],
+      "title": "Advice for Tech Non-Profits",
+      "uncertainty": "Published well before 2026-08-16 and likely surfaced from feed backlog.",
+      "url": "https://mitchellh.com/writing/advice-for-tech-nonprofits"
     }
   ],
   "mode": "primary",
-  "run_id": "79a6ce56-83a5-4a09-8078-5b075b74cbd9",
+  "run_id": "724c7a24-7de9-4481-970d-bd0ba0c65cf4",
   "status": "completed",
-  "summary": "Synthesized Nightly Librarian run with 18 promoted item(s), 40 scored item(s), and 22 rejected item(s).",
+  "summary": "Synthesized Nightly Librarian run with 5 promoted item(s), 40 scored item(s), and 35 rejected item(s).",
   "title": "Nightly Librarian - 2026-08-16"
 }
