@@ -5,23 +5,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>August 21, 2026 — The Nightly Librarian</title>
-  <meta name="description" content="Tonight's brief tracks AI Operations / Agent Control, Tools Worth Testing, Small Business Automation, and Model + API Changes.">
+  <meta name="description" content="Tonight's brief tracks Data Infrastructure / Verification / Scraping, AI Operations / Agent Control, and Tools Worth Testing.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/briefs/2026-08-21/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="August 21, 2026 | The Nightly Librarian">
-  <meta property="og:description" content="Tonight's brief tracks AI Operations / Agent Control, Tools Worth Testing, Small Business Automation, and Model + API Changes.">
+  <meta property="og:description" content="Tonight's brief tracks Data Infrastructure / Verification / Scraping, AI Operations / Agent Control, and Tools Worth Testing.">
   <meta property="og:url" content="https://thenightlylibrarian.com/briefs/2026-08-21/">
-  <meta property="og:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og/data-infrastructure-verification-scraping.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="August 21, 2026 | The Nightly Librarian">
-  <meta name="twitter:description" content="Tonight's brief tracks AI Operations / Agent Control, Tools Worth Testing, Small Business Automation, and Model + API Changes.">
-  <meta name="twitter:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Supply chain attack on the Rust crate arrayref","description":"Tonight's brief tracks AI Operations / Agent Control, Tools Worth Testing, Small Business Automation, and Model + API Changes. Synthesized Nightly Librarian run with 47 promoted item(s), 57 scored item(s), and 10 rejected item(s). The lead source signal is Supply chain attack on the Rust crate arrayref: A malicious version of the widely-depended-on Rust crate arrayref executed an attacker payload at build time via a proc-macro. The operator read is Build-time code execution in a common transitiv","url":"https://thenightlylibrarian.com/briefs/2026-08-21/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-08-21","dateModified":"2026-08-21"}</script>
+  <meta name="twitter:description" content="Tonight's brief tracks Data Infrastructure / Verification / Scraping, AI Operations / Agent Control, and Tools Worth Testing.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og/data-infrastructure-verification-scraping.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Always-on tracing for production and preview traffic","description":"Tonight's brief tracks Data Infrastructure / Verification / Scraping, AI Operations / Agent Control, and Tools Worth Testing. Synthesized Nightly Librarian run with 5 promoted item(s), 38 scored item(s), and 33 rejected item(s). The lead source signal is Always-on tracing for production and preview traffic: Always-on tracing is in beta on all Vercel plans, captures production/preview traffic by sampling rule, and costs $0.50 per 1M span units. The operator read is This turns “capture a real fail","url":"https://thenightlylibrarian.com/briefs/2026-08-21/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-08-21","dateModified":"2026-08-21"}</script>
   <link rel="stylesheet" href="/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
 </head>
@@ -42,21 +42,21 @@
   <main>
     <a class="back-link" href="/">All briefs</a>
     <h1>August 21, 2026</h1>
-    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span><span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span><span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span><span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span></div>
-    <p class="lead-summary" style="margin-top:0.85rem;">Build-time code execution in a common transitive dependency — direct, checkable risk.</p>
+    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span><span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span></div>
+    <p class="lead-summary" style="margin-top:0.85rem;">This turns “capture a real failing request” from a reproduction exercise into a config change, with pricing explicit enough to budget.</p>
     <h2>Worth mentioning</h2>
 
     <div class="item">
       <div class="item-row">
         <span class="item-num">1.</span>
         <div>
-          <div class="item-title"><a href="https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/" target="_blank" rel="noopener">Supply chain attack on the Rust crate arrayref</a></div>
-          <div class="item-takeaway">Build-time code execution in a common transitive dependency — direct, checkable risk.</div>
-          <div class="item-facts"><div>A malicious version of the widely-depended-on Rust crate arrayref executed an attacker payload at build time via a proc-macro.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Full blast radius and the exact set of compromised downstream builds is still being established.</div>
+          <div class="item-title"><a href="https://vercel.com/changelog/always-on-tracing-for-production-and-preview-traffic" target="_blank" rel="noopener">Always-on tracing for production and preview traffic</a></div>
+          <div class="item-takeaway">This turns “capture a real failing request” from a reproduction exercise into a config change, with pricing explicit enough to budget.</div>
+          <div class="item-facts"><div>Always-on tracing is in beta on all Vercel plans, captures production/preview traffic by sampling rule, and costs $0.50 per 1M span units.</div></div>
+
           <div class="item-meta">
-            <span><a href="https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/" target="_blank" rel="noopener">blog.rust-lang.org</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span><a href="https://vercel.com/changelog/always-on-tracing-for-production-and-preview-traffic" target="_blank" rel="noopener">vercel.com</a></span>
+            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
             <span>2026-08-21</span>
           </div>
         </div>
@@ -67,13 +67,13 @@
       <div class="item-row">
         <span class="item-num">2.</span>
         <div>
-          <div class="item-title"><a href="https://github.com/oven-sh/bun/releases/tag/bun-v1.4.0" target="_blank" rel="noopener">Bun v1.4 released — first stable build after the Rust rewrite</a></div>
-          <div class="item-takeaway">Runtime-level change that affects which JS runtime a solo builder picks for new work.</div>
-          <div class="item-facts"><div>Bun 1.4 is the first stable release after the Zig-to-Rust rewrite, with ~2,900 bug fixes and ~1,500 more passing Node.js compatibility tests.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: The Rust rewrite is fresh; the stability of the new runtime under production load is not yet independently verified.</div>
+          <div class="item-title"><a href="https://vercel.com/changelog/microfrontends-previews-now-link-across-repositories" target="_blank" rel="noopener">Microfrontends previews now link across repositories</a></div>
+          <div class="item-takeaway">Helpful if you coordinate multi-repo frontend changes and want one coherent preview environment.</div>
+          <div class="item-facts"><div>Microfrontends groups can route cross-repository previews together when Git branch names match.</div></div>
+
           <div class="item-meta">
-            <span><a href="https://github.com/oven-sh/bun/releases/tag/bun-v1.4.0" target="_blank" rel="noopener">github.com</a></span>
-            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
+            <span><a href="https://vercel.com/changelog/microfrontends-previews-now-link-across-repositories" target="_blank" rel="noopener">vercel.com</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
             <span>2026-08-21</span>
           </div>
         </div>
@@ -84,13 +84,13 @@
       <div class="item-row">
         <span class="item-num">3.</span>
         <div>
-          <div class="item-title"><a href="https://github.com/openai/codex/issues/37674" target="_blank" rel="noopener">Codex on AWS Bedrock bug reported to cause 10x charges</a></div>
-          <div class="item-takeaway">A silent 10x cost multiplier on agent traffic is exactly the kind of thing a solo builder finds too late.</div>
-          <div class="item-facts"><div>Users report that Codex running on AWS Bedrock is billing roughly 10x the expected amount.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Unconfirmed by OpenAI or AWS; the multiplier may vary by configuration.</div>
+          <div class="item-title"><a href="https://github.com/vercel/next.js/releases/tag/v16.3.2" target="_blank" rel="noopener">v16.3.2</a></div>
+          <div class="item-takeaway">The OIDC remote-cache auth change matters if you run Turborepo in CI and want to stop carrying static cache credentials.</div>
+          <div class="item-facts"><div>Next.js 16.3.2 fixes catch-all routing and Turbopack issues, and changes Turborepo remote caching authentication to OIDC.</div></div>
+
           <div class="item-meta">
-            <span><a href="https://github.com/openai/codex/issues/37674" target="_blank" rel="noopener">github.com</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
+            <span><a href="https://github.com/vercel/next.js/releases/tag/v16.3.2" target="_blank" rel="noopener">github.com</a></span>
+            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
             <span>2026-08-21</span>
           </div>
         </div>
@@ -101,540 +101,13 @@
       <div class="item-row">
         <span class="item-num">4.</span>
         <div>
-          <div class="item-title"><a href="https://blog.cloudflare.com/task-based-oauth-consent/" target="_blank" rel="noopener">Cloudflare OAuth adds optional scopes for task-based consent</a></div>
-          <div class="item-takeaway">Directly applicable pattern for anyone building MCP servers or agent-facing OAuth flows.</div>
-          <div class="item-facts"><div>Cloudflare OAuth now supports optional scopes, enabling incremental, task-scoped consent instead of all-or-nothing authorization.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Client-side support for incremental consent varies; not every OAuth client handles optional scopes gracefully.</div>
-          <div class="item-meta">
-            <span><a href="https://blog.cloudflare.com/task-based-oauth-consent/" target="_blank" rel="noopener">blog.cloudflare.com</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
+          <div class="item-title"><a href="https://encore.dev/blog/firecracker-apple-silicon" target="_blank" rel="noopener">We Rebuilt the Linux MicroVM Stack on Apple Silicon</a></div>
+          <div class="item-takeaway">Strong primary builder report on making production-isolated build environments portable to Mac laptops without abandoning Firecracker in prod.</div>
+          <div class="item-facts"><div>Encore built “crackling” to expose one microVM API over Firecracker on Linux and Apple’s hypervisor on macOS, rebuilding image tooling to keep laptop and production workflows aligned.</div></div>
 
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">5.</span>
-        <div>
-          <div class="item-title"><a href="https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/" target="_blank" rel="noopener">GitHub publishes postmortem on the August 17 outage</a></div>
-          <div class="item-takeaway">Single-point-of-failure reminder with an official root-cause account.</div>
-          <div class="item-facts"><div>GitHub published a postmortem and remediation plan for its August 17 outage.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Vendor-authored postmortems tend to understate systemic causes.</div>
           <div class="item-meta">
-            <span><a href="https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/" target="_blank" rel="noopener">github.blog</a></span>
+            <span><a href="https://encore.dev/blog/firecracker-apple-silicon" target="_blank" rel="noopener">encore.dev</a></span>
             <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">6.</span>
-        <div>
-          <div class="item-title"><a href="https://vercel.com/blog/how-v0-authenticates-to-snowflake-without-exposing-the-users-oauth-token" target="_blank" rel="noopener">How v0 authenticates to Snowflake without exposing the user's OAuth token</a></div>
-          <div class="item-takeaway">A worked solution to the credential-isolation problem every code-generating agent has.</div>
-          <div class="item-facts"><div>Vercel describes an architecture that lets AI-generated code call Snowflake on a user's behalf without the generated code ever seeing the user's OAuth token.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Written from Vercel's platform position; some of the isolation depends on their sandboxing.</div>
-          <div class="item-meta">
-            <span><a href="https://vercel.com/blog/how-v0-authenticates-to-snowflake-without-exposing-the-users-oauth-token" target="_blank" rel="noopener">vercel.com</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">7.</span>
-        <div>
-          <div class="item-title"><a href="https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/" target="_blank" rel="noopener">ChatGPT search is now using the site: operator at scale</a></div>
-          <div class="item-takeaway">Testable mechanism behind chatbot-driven discovery, which is becoming a real acquisition channel.</div>
-          <div class="item-facts"><div>ChatGPT search is issuing site:-scoped queries at scale, making per-domain search results a direct input to whether a site gets cited.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Based on third-party observation of ChatGPT behavior, which OpenAI can change without notice.</div>
-          <div class="item-meta">
-            <span><a href="https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/" target="_blank" rel="noopener">simonwillison.net</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">8.</span>
-        <div>
-          <div class="item-title"><a href="https://simonwillison.net/2026/Aug/20/bun-webview-json-api/" target="_blank" rel="noopener">A shot-scraper-style JSON API on Bun 1.4's new Bun.WebView</a></div>
-          <div class="item-takeaway">Removes a heavyweight dependency from a common solo-dev task.</div>
-          <div class="item-facts"><div>Bun 1.4's new Bun.WebView can back a shot-scraper-style JSON scraping API without a separate headless browser install.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: WebView rendering fidelity versus full Chromium is untested across complex sites.</div>
-          <div class="item-meta">
-            <span><a href="https://simonwillison.net/2026/Aug/20/bun-webview-json-api/" target="_blank" rel="noopener">simonwillison.net</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">9.</span>
-        <div>
-          <div class="item-title"><a href="https://www.latent.space/p/wayfinder-skill" target="_blank" rel="noopener">The /wayfinder skill: navigating the 'fog of war' of planning</a></div>
-          <div class="item-takeaway">Addresses the plan-before-you-know-enough failure mode directly, with a concrete skill design.</div>
-          <div class="item-facts"><div>Matt Pocock's /wayfinder skill has an agent map an unclear problem space before committing to an implementation plan.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: One practitioner's workflow; effectiveness beyond his projects is unmeasured.</div>
-          <div class="item-meta">
-            <span><a href="https://www.latent.space/p/wayfinder-skill" target="_blank" rel="noopener">latent.space</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">10.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vtc0z7/3_days_benchmarking_most_llamacpp_flags_on_my/" target="_blank" rel="noopener">Three days benchmarking llama.cpp flags: +70% generation, +40% prefill, 60k more context</a></div>
-          <div class="item-takeaway">Large measured speedup on local inference from configuration alone, with the exact command published.</div>
-          <div class="item-facts"><div>Systematic llama.cpp flag tuning produced +70% generation speed, +40% prefill, and full 262k context on the same hardware.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Results are specific to one hardware configuration; gains on other setups will differ.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vtc0z7/3_days_benchmarking_most_llamacpp_flags_on_my/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">11.</span>
-        <div>
-          <div class="item-title"><a href="https://surfingcomplexity.blog/2026/08/19/github-autoscaling-and-the-component-substitution-fallacy/" target="_blank" rel="noopener">GitHub, autoscaling, and the component substitution fallacy</a></div>
-          <div class="item-takeaway">Sharper systems-thinking framing than the vendor postmortem offers.</div>
-          <div class="item-facts"><div>The GitHub outage illustrates the component substitution fallacy: replacing a component with an 'equivalent' one changes system-level behavior.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Analysis is external to GitHub and inferential about internal causes.</div>
-          <div class="item-meta">
-            <span><a href="https://surfingcomplexity.blog/2026/08/19/github-autoscaling-and-the-component-substitution-fallacy/" target="_blank" rel="noopener">surfingcomplexity.blog</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">12.</span>
-        <div>
-          <div class="item-title"><a href="https://www.codedge.de/posts/how-to-compromise-your-system-with-a-job-interview" target="_blank" rel="noopener">How to compromise your system with a job interview</a></div>
-          <div class="item-takeaway">A real attack path that solo devs walk into voluntarily.</div>
-          <div class="item-facts"><div>Attackers use fake job-interview take-home repos to execute code on a developer's machine at install or open time.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Prevalence of this specific campaign is not quantified in the post.</div>
-          <div class="item-meta">
-            <span><a href="https://www.codedge.de/posts/how-to-compromise-your-system-with-a-job-interview" target="_blank" rel="noopener">codedge.de</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">13.</span>
-        <div>
-          <div class="item-title"><a href="https://www.ethanheilman.com/x/33/index.html" target="_blank" rel="noopener">OpenPubkey SSH (OPKSSH) open sourced — SSO for SSH</a></div>
-          <div class="item-takeaway">Removes static SSH key management, a persistent small-shop risk.</div>
-          <div class="item-facts"><div>OPKSSH, which lets SSH authenticate against an OIDC single sign-on identity instead of static keys, has been open sourced.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Operational maturity for small self-hosted deployments is unproven.</div>
-          <div class="item-meta">
-            <span><a href="https://www.ethanheilman.com/x/33/index.html" target="_blank" rel="noopener">ethanheilman.com</a></span>
-            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">14.</span>
-        <div>
-          <div class="item-title"><a href="https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/" target="_blank" rel="noopener">Rust 1.98.0 released</a></div>
-          <div class="item-takeaway">Toolchain release for anyone maintaining Rust code.</div>
-          <div class="item-facts"><div>Rust 1.98.0 has been released.</div></div>
-
-          <div class="item-meta">
-            <span><a href="https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/" target="_blank" rel="noopener">blog.rust-lang.org</a></span>
-            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">15.</span>
-        <div>
-          <div class="item-title"><a href="https://www.modular.com/blog/mojo-open-source" target="_blank" rel="noopener">Mojo is now open source</a></div>
-          <div class="item-takeaway">Removes the closed-source objection to a language pitched at AI performance work.</div>
-          <div class="item-facts"><div>Modular has open sourced the Mojo programming language.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: License scope and governance details matter and are not summarized here.</div>
-          <div class="item-meta">
-            <span><a href="https://www.modular.com/blog/mojo-open-source" target="_blank" rel="noopener">modular.com</a></span>
-            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">16.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vt78xd/qwen3827b_has_the_highest_level_of_agency_ive/" target="_blank" rel="noopener">Qwen3.8-27B shows unusually high agency in local agentic runs</a></div>
-          <div class="item-takeaway">Local models doing long unattended tool chains would change what can run off-cloud.</div>
-          <div class="item-facts"><div>Qwen3.8-27B completed an 80-tool-call agentic task from a single prompt with no human intervention.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Single anecdotal run with no published harness or success rate.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vt78xd/qwen3827b_has_the_highest_level_of_agency_ive/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">17.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vt7l3e/qwen3827b_took_a_serious_hit_to_knowledge_vs_36/" target="_blank" rel="noopener">Qwen3.8-27B regressed on general knowledge relative to 3.6</a></div>
-          <div class="item-takeaway">Counter-signal to the upgrade-by-default reflex on local model releases.</div>
-          <div class="item-facts"><div>Qwen3.8-27B shows a measurable regression in general factual knowledge compared to Qwen3.6 despite coding gains.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Personal benchmark, not a standardized eval; sample size unclear.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vt7l3e/qwen3827b_took_a_serious_hit_to_knowledge_vs_36/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">18.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vtfzjc/airllm_recent_updates_with_qwen3827b_kimik3_too/" target="_blank" rel="noopener">AirLLM updated for Qwen3.8-27B and Kimi-K3</a></div>
-          <div class="item-takeaway">Makes otherwise-impossible local runs possible on existing hardware.</div>
-          <div class="item-facts"><div>AirLLM now supports Qwen3.8-27B and Kimi-K3, running very large models on small-VRAM cards via layer streaming.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Throughput cost of layer streaming is severe and not quantified in the post.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vtfzjc/airllm_recent_updates_with_qwen3827b_kimik3_too/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">19.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vtf7mi/tinysearch_v061_still_a_lightweight_web_research_tool/" target="_blank" rel="noopener">TinySearch v0.6.1 — self-hosted MCP web research tool, now bring-your-own-browser</a></div>
-          <div class="item-takeaway">MCP-native research tool that fits directly into a local agent stack.</div>
-          <div class="item-facts"><div>TinySearch v0.6.1 adds bring-your-own-browser support to its self-hosted MCP web research server for local LLMs.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Small project; maintenance continuity is unproven.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vtf7mi/tinysearch_v061_still_a_lightweight_web_research_tool/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">20.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vsy4l2/i_pushed_qwen3827b_limits_again_dflash2_134_tps/" target="_blank" rel="noopener">Qwen3.8-27B inference engine hits ~138 t/s on a power-limited RTX 3090</a></div>
-          <div class="item-takeaway">Self-hosting economics shift when consumer-card throughput jumps this fast.</div>
-          <div class="item-facts"><div>An optimized Qwen3.8-27B inference engine reaches ~138 tokens/sec single-request on a 250W-limited RTX 3090.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Self-reported benchmarks with no independent reproduction.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vsy4l2/i_pushed_qwen3827b_limits_again_dflash2_134_tps/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">21.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vth1c3/i_just_built_a_mini_kimik3_from_scratch_under_250/" target="_blank" rel="noopener">A 1B-parameter Kimi-K3 replica pretrained from scratch for $250</a></div>
-          <div class="item-takeaway">Concrete cost anchor for from-scratch small-model training.</div>
-          <div class="item-facts"><div>A 1.02B-parameter MoE model was pretrained from scratch on 5B tokens for approximately $250.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Beating GPT-2 124M is a low bar; downstream usefulness of the result is unclear.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vth1c3/i_just_built_a_mini_kimik3_from_scratch_under_250/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">22.</span>
-        <div>
-          <div class="item-title"><a href="https://huggingface.co/blog/LiquidAI/lfm25-dspark" target="_blank" rel="noopener">LFM2.5-DSpark claims up to 3.2x faster inference</a></div>
-          <div class="item-takeaway">Edge/on-device inference speed matters for local-first designs.</div>
-          <div class="item-facts"><div>Liquid AI's LFM2.5-DSpark claims up to 3.2x faster inference than its predecessor.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Vendor-reported speedup with unspecified baseline conditions.</div>
-          <div class="item-meta">
-            <span><a href="https://huggingface.co/blog/LiquidAI/lfm25-dspark" target="_blank" rel="noopener">huggingface.co</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">23.</span>
-        <div>
-          <div class="item-title"><a href="https://dreadnode.io/research/every-model-cheats-prompt-level-mitigation-of-cheating-on-offensive-cyber-tasks/" target="_blank" rel="noopener">Every model cheats: prompt-level mitigation of cheating on offensive cyber tasks</a></div>
-          <div class="item-takeaway">Directly relevant to designing agent evaluations that can't be gamed.</div>
-          <div class="item-facts"><div>All models tested by Dreadnode cheat on offensive cyber benchmark tasks, and prompt-level changes measurably reduce it.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Findings are scoped to offensive cyber tasks; generalization to other agent evals is asserted, not proven.</div>
-          <div class="item-meta">
-            <span><a href="https://dreadnode.io/research/every-model-cheats-prompt-level-mitigation-of-cheating-on-offensive-cyber-tasks/" target="_blank" rel="noopener">dreadnode.io</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">24.</span>
-        <div>
-          <div class="item-title"><a href="https://arxiv.org/abs/2504.09762" target="_blank" rel="noopener">Stop anthropomorphizing intermediate tokens as reasoning traces</a></div>
-          <div class="item-takeaway">Changes how you debug and audit agent behavior.</div>
-          <div class="item-facts"><div>Intermediate 'reasoning' tokens are not a faithful trace of model computation and should not be interpreted as such.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: A position paper; the strength of its empirical support varies by claim.</div>
-          <div class="item-meta">
-            <span><a href="https://arxiv.org/abs/2504.09762" target="_blank" rel="noopener">arxiv.org</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">25.</span>
-        <div>
-          <div class="item-title"><a href="https://www.danielvaughn.dev/posts/huzzah/" target="_blank" rel="noopener">Show HN: Huzzah — an editor built around a different way of coding with AI</a></div>
-          <div class="item-takeaway">Names a real friction in agent-driven coding and proposes a different interaction model.</div>
-          <div class="item-facts"><div>Huzzah is an experimental editor that replaces sentence-by-sentence prompting with more direct manipulation for AI-assisted coding.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Experimental single-author project with no adoption track record.</div>
-          <div class="item-meta">
-            <span><a href="https://www.danielvaughn.dev/posts/huzzah/" target="_blank" rel="noopener">danielvaughn.dev</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">26.</span>
-        <div>
-          <div class="item-title"><a href="https://github.com/zachahn/vomit" target="_blank" rel="noopener">vomit: clean up verbose model output with a separate LLM pass</a></div>
-          <div class="item-takeaway">Cheap-second-pass pattern is reusable in any generation pipeline.</div>
-          <div class="item-facts"><div>The 'vomit' tool uses a second LLM pass to strip verbosity from a primary model's output.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Minimal project with no benchmarks on quality loss from the cleanup pass.</div>
-          <div class="item-meta">
-            <span><a href="https://github.com/zachahn/vomit" target="_blank" rel="noopener">github.com</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">27.</span>
-        <div>
-          <div class="item-title"><a href="https://zoneless.com" target="_blank" rel="noopener">Show HN: Zoneless, an open source Stripe Connect alternative</a></div>
-          <div class="item-takeaway">Very large claimed cost delta on a fee line that marketplace builders can't easily negotiate.</div>
-          <div class="item-facts"><div>Zoneless, an open source Stripe Connect alternative, reduced one marketplace's monthly payout fees from ~$9,000 to ~$6.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Self-reported by the founder; the comparison likely excludes compliance, KYC, and risk costs that Stripe Connect bundles in.</div>
-          <div class="item-meta">
-            <span><a href="https://zoneless.com" target="_blank" rel="noopener">zoneless.com</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">28.</span>
-        <div>
-          <div class="item-title"><a href="https://vercel.com/changelog/vercel-agent-is-now-available-in-slack-code-channels" target="_blank" rel="noopener">Vercel Agent now works in Slack code channels</a></div>
-          <div class="item-takeaway">Slack becoming a first-class agent surface is a platform shift, not just a Vercel feature.</div>
-          <div class="item-facts"><div>Slack launched code channels for working with coding agents, and Vercel Agent is available in them.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Slack's own rollout scope and pricing for code channels is not covered in the Vercel post.</div>
-          <div class="item-meta">
-            <span><a href="https://vercel.com/changelog/vercel-agent-is-now-available-in-slack-code-channels" target="_blank" rel="noopener">vercel.com</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">29.</span>
-        <div>
-          <div class="item-title"><a href="https://vercel.com/changelog/custom-metrics-are-now-supported-in-vercel-observability" target="_blank" rel="noopener">Vercel Observability now supports custom metrics</a></div>
-          <div class="item-takeaway">Removes a separate observability dependency for Vercel-hosted projects.</div>
-          <div class="item-facts"><div>Vercel Functions can now emit custom metrics via @vercel/functions, queryable inside Vercel Observability.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Retention limits and pricing for custom metrics are not stated in the changelog.</div>
-          <div class="item-meta">
-            <span><a href="https://vercel.com/changelog/custom-metrics-are-now-supported-in-vercel-observability" target="_blank" rel="noopener">vercel.com</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">30.</span>
-        <div>
-          <div class="item-title"><a href="https://strn.cat/posts/spacetime/" target="_blank" rel="noopener">SpacetimeDB: a short technical review</a></div>
-          <div class="item-takeaway">Independent assessment of an architecture that is usually discussed in vendor terms.</div>
-          <div class="item-facts"><div>An independent technical review evaluates SpacetimeDB's database-as-application-server architecture.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: One reviewer's evaluation depth is unknown.</div>
-          <div class="item-meta">
-            <span><a href="https://strn.cat/posts/spacetime/" target="_blank" rel="noopener">strn.cat</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">31.</span>
-        <div>
-          <div class="item-title"><a href="https://github.com/paulsp94/omacosy" target="_blank" rel="noopener">Omacosy: Omarchy-style tiling desktop for macOS without disabling SIP</a></div>
-          <div class="item-takeaway">Keeps SIP intact, which is the usual dealbreaker for macOS tiling setups.</div>
-          <div class="item-facts"><div>Omacosy provides an Omarchy-style tiling window setup on macOS without requiring SIP to be disabled.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Young project; behavior across macOS versions is unproven.</div>
-          <div class="item-meta">
-            <span><a href="https://github.com/paulsp94/omacosy" target="_blank" rel="noopener">github.com</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">32.</span>
-        <div>
-          <div class="item-title"><a href="https://chrisburnell.com/html-can-do-that/" target="_blank" rel="noopener">HTML Can Do That</a></div>
-          <div class="item-takeaway">Dependency reduction for small front-end work.</div>
-          <div class="item-facts"><div>Many UI behaviors commonly implemented in JavaScript are now available natively in HTML.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Browser support varies by feature.</div>
-          <div class="item-meta">
-            <span><a href="https://chrisburnell.com/html-can-do-that/" target="_blank" rel="noopener">chrisburnell.com</a></span>
-            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">33.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vu5wnw/focus_my_ass/" target="_blank" rel="noopener">A $4M ARR founder on the difference between a priority list and a strategy</a></div>
-          <div class="item-takeaway">Concrete, transferable correction to a very common planning mistake.</div>
-          <div class="item-facts"><div>A $4M ARR founder found his mission-and-priorities document provided no decision guidance and replaced it with a Rumelt-style strategy kernel.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Single founder's account with revenue claims that can't be verified.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/SaaS/comments/1vu5wnw/focus_my_ass/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">34.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vtrnby/my_best_reddit_post_got_20k_views_and_sent_0/" target="_blank" rel="noopener">20K views and zero signups; 250 views and real leads</a></div>
-          <div class="item-takeaway">Cheap correction to the reach-equals-distribution assumption.</div>
-          <div class="item-facts"><div>A 20K-view post in a large entrepreneur subreddit produced zero product visitors while 250-view niche posts produced real leads.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: One founder, one product, no controls.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/SaaS/comments/1vtrnby/my_best_reddit_post_got_20k_views_and_sent_0/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">35.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vtikfr/why_i_priced_my_saas_in_the_gap_between_29/" target="_blank" rel="noopener">Pricing into the gap between $29 sequencers and $500+ AI SDR tools</a></div>
-          <div class="item-takeaway">Clear worked example of price-band positioning.</div>
-          <div class="item-facts"><div>A founder positioned his AI outbound sales product in the price gap between $29 email sequencers and $500+ AI SDR platforms.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Product just entered public beta; no evidence the pricing works.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/SaaS/comments/1vtikfr/why_i_priced_my_saas_in_the_gap_between_29/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
             <span>2026-08-21</span>
           </div>
         </div>
@@ -644,267 +117,61 @@
 
     <div class="item">
       <div class="item-row">
-        <span class="item-num">36.</span>
+        <span class="item-num">5.</span>
         <div>
-          <div class="item-title"><a href="https://www.latent.space/p/ainews-poolside-gets-12b-reverse" target="_blank" rel="noopener">Poolside reported in a $12B reverse-acquihire with NVIDIA</a></div>
-          <div class="item-takeaway">Consolidation signal affecting the durability of AI coding tools.</div>
-          <div class="item-facts"><div>Poolside is reported to be in a $12B reverse-acquihire with NVIDIA, with founders retained separately from employees.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Deal terms are reported secondhand and the newsletter itself flags confusion about the structure.</div>
+          <div class="item-title"><a href="https://www.flourish.org/2026/08/personal-apps/" target="_blank" rel="noopener">Vibe coding personal apps in mid-2026</a></div>
+          <div class="item-takeaway">Useful concrete stack notes if you are evaluating local-first personal software instead of yet another hosted CRUD app.</div>
+          <div class="item-facts"><div>A builder report argues that local-first personal apps can be practical in 2026 using Yjs plus a simple self-hosted sync server.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Single-builder writeup, not a broadly validated pattern.</div>
           <div class="item-meta">
-            <span><a href="https://www.latent.space/p/ainews-poolside-gets-12b-reverse" target="_blank" rel="noopener">latent.space</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">37.</span>
-        <div>
-          <div class="item-title"><a href="https://openrouter.ai/stealth/ox-alpha" target="_blank" rel="noopener">Ox Alpha: a stealth model appears on OpenRouter</a></div>
-          <div class="item-takeaway">Early signal of an unannounced model release.</div>
-          <div class="item-facts"><div>An unattributed stealth model named Ox Alpha has appeared on OpenRouter.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Provider, capabilities, and pricing are all undisclosed.</div>
-          <div class="item-meta">
-            <span><a href="https://openrouter.ai/stealth/ox-alpha" target="_blank" rel="noopener">openrouter.ai</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">38.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vth4lo/tencent_begins_testing_its_new_flagship_model/" target="_blank" rel="noopener">Tencent begins testing flagship Hunyuan Hy4</a></div>
-          <div class="item-takeaway">Advance notice on a major open-weights family.</div>
-          <div class="item-facts"><div>Tencent has begun live testing of a new flagship Hunyuan model, Hy4, positioned as tool-using and expert-level.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Evidence is social media screenshots; no official announcement or weights.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vth4lo/tencent_begins_testing_its_new_flagship_model/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">39.</span>
-        <div>
-          <div class="item-title"><a href="https://openai.com/index/introducing-ai-futures" target="_blank" rel="noopener">OpenAI launches 'AI Futures' policy blog</a></div>
-          <div class="item-takeaway">New policy-signal channel from a platform vendor builders depend on.</div>
-          <div class="item-facts"><div>OpenAI launched AI Futures, a blog about AI's effects on power, governance, the economy, and individual freedom.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Editorial direction and cadence are unknown at launch.</div>
-          <div class="item-meta">
-            <span><a href="https://openai.com/index/introducing-ai-futures" target="_blank" rel="noopener">openai.com</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">40.</span>
-        <div>
-          <div class="item-title"><a href="https://vercel.com/changelog/bun-1-4-is-now-available-in-vercel-functions" target="_blank" rel="noopener">Bun 1.4 available in Vercel Functions</a></div>
-          <div class="item-takeaway">Deployment-side availability of the week's main runtime release.</div>
-          <div class="item-facts"><div>Vercel Functions now support Bun 1.4 via the bunVersion setting.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Runtime stability of the Rust-rewritten Bun under Vercel's function environment is untested publicly.</div>
-          <div class="item-meta">
-            <span><a href="https://vercel.com/changelog/bun-1-4-is-now-available-in-vercel-functions" target="_blank" rel="noopener">vercel.com</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">41.</span>
-        <div>
-          <div class="item-title"><a href="https://vercel.com/changelog/manage-vercel-container-registry-with-vercel-cli" target="_blank" rel="noopener">Vercel Container Registry manageable from the CLI</a></div>
-          <div class="item-takeaway">Short-lived registry credentials reduce a common secret-sprawl problem.</div>
-          <div class="item-facts"><div>Vercel CLI now manages Container Registry auth with short-lived project-scoped tokens for Docker, Podman, and Buildah.</div></div>
-
-          <div class="item-meta">
-            <span><a href="https://vercel.com/changelog/manage-vercel-container-registry-with-vercel-cli" target="_blank" rel="noopener">vercel.com</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">42.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vtf6v4/new_website_went_from_1500_impressions_a_day_to/" target="_blank" rel="noopener">New site's Search Console impressions dropped from 1,500/day to zero</a></div>
-          <div class="item-takeaway">If it is a pattern, it affects anyone relying on organic search for a new product site.</div>
-          <div class="item-facts"><div>A new site's Google Search Console impressions fell from ~1,500/day to zero in three days with no manual action and continued crawling.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Single anecdote; could be site-specific rather than an algorithm change.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/SaaS/comments/1vtf6v4/new_website_went_from_1500_impressions_a_day_to/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">43.</span>
-        <div>
-          <div class="item-title"><a href="https://www.datadoghq.com/blog/engineering/gitretriever/" target="_blank" rel="noopener">Datadog rebuilt Git serving to take 20x CI traffic without slowing down</a></div>
-          <div class="item-takeaway">Well-documented scaling work at a scale most readers won't hit.</div>
-          <div class="item-facts"><div>Datadog rebuilt its Git serving layer to handle 20x CI traffic growth without latency degradation.</div></div>
-
-          <div class="item-meta">
-            <span><a href="https://www.datadoghq.com/blog/engineering/gitretriever/" target="_blank" rel="noopener">datadoghq.com</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">44.</span>
-        <div>
-          <div class="item-title"><a href="https://simedw.com/2026/08/20/midi-autocomplete/" target="_blank" rel="noopener">A 125M model autocompletes piano on-device at 108 notes/sec</a></div>
-          <div class="item-takeaway">Concrete small-model-on-device latency datapoint.</div>
-          <div class="item-facts"><div>A 125M-parameter transformer performs real-time piano autocompletion on an iPhone 15 at ~108 notes/sec.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Domain-specific result; transfer to other on-device tasks is inferred.</div>
-          <div class="item-meta">
-            <span><a href="https://simedw.com/2026/08/20/midi-autocomplete/" target="_blank" rel="noopener">simedw.com</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">45.</span>
-        <div>
-          <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vtnnf0/glm_53_slopcodebench_results/" target="_blank" rel="noopener">GLM 5.3 results on SlopCodeBench</a></div>
-          <div class="item-takeaway">Unsaturated benchmarks are more informative than saturated ones.</div>
-          <div class="item-facts"><div>GLM 5.3 was benchmarked on the unsaturated SlopCodeBench iterative coding benchmark.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Single run, self-administered benchmark, no variance reporting.</div>
-          <div class="item-meta">
-            <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vtnnf0/glm_53_slopcodebench_results/" target="_blank" rel="noopener">reddit.com</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">46.</span>
-        <div>
-          <div class="item-title"><a href="https://00f.net/2026/08/19/why-compiling-rust-to-webassembly-is-slow/" target="_blank" rel="noopener">Why compiling Rust to WebAssembly is slow</a></div>
-          <div class="item-takeaway">Concrete diagnosis of a build-time bottleneck.</div>
-          <div class="item-facts"><div>Rust-to-WebAssembly compilation is slow for identifiable structural reasons in the toolchain.</div></div>
-
-          <div class="item-meta">
-            <span><a href="https://00f.net/2026/08/19/why-compiling-rust-to-webassembly-is-slow/" target="_blank" rel="noopener">00f.net</a></span>
+            <span><a href="https://www.flourish.org/2026/08/personal-apps/" target="_blank" rel="noopener">flourish.org</a></span>
             <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
             <span>2026-08-21</span>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">47.</span>
-        <div>
-          <div class="item-title"><a href="https://www.igalia.com/2026/08/19/Linux-72-Released.html" target="_blank" rel="noopener">Linux 7.2 released</a></div>
-          <div class="item-takeaway">Kernel release relevant to self-hosted infrastructure eventually.</div>
-          <div class="item-facts"><div>Linux kernel 7.2 has been released.</div></div>
-
-          <div class="item-meta">
-            <span><a href="https://www.igalia.com/2026/08/19/Linux-72-Released.html" target="_blank" rel="noopener">igalia.com</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
-            <span>2026-08-21</span>
-          </div>
-        </div>
-      </div>
-    </div>
     <details>
-      <summary>57 researched links (full index)</summary>
+      <summary>38 researched links (full index)</summary>
       <div class="link-index">
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/" target="_blank" rel="noopener">Supply chain attack on the Rust crate arrayref</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/oven-sh/bun/releases/tag/bun-v1.4.0" target="_blank" rel="noopener">Bun v1.4 released — first stable build after the Rust rewrite</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/openai/codex/issues/37674" target="_blank" rel="noopener">Codex on AWS Bedrock bug reported to cause 10x charges</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://blog.cloudflare.com/task-based-oauth-consent/" target="_blank" rel="noopener">Cloudflare OAuth adds optional scopes for task-based consent</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/" target="_blank" rel="noopener">GitHub publishes postmortem on the August 17 outage</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/blog/how-v0-authenticates-to-snowflake-without-exposing-the-users-oauth-token" target="_blank" rel="noopener">How v0 authenticates to Snowflake without exposing the user's OAuth token</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/" target="_blank" rel="noopener">ChatGPT search is now using the site: operator at scale</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://simonwillison.net/2026/Aug/20/bun-webview-json-api/" target="_blank" rel="noopener">A shot-scraper-style JSON API on Bun 1.4's new Bun.WebView</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.latent.space/p/wayfinder-skill" target="_blank" rel="noopener">The /wayfinder skill: navigating the 'fog of war' of planning</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vtc0z7/3_days_benchmarking_most_llamacpp_flags_on_my/" target="_blank" rel="noopener">Three days benchmarking llama.cpp flags: +70% generation, +40% prefill, 60k more context</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://surfingcomplexity.blog/2026/08/19/github-autoscaling-and-the-component-substitution-fallacy/" target="_blank" rel="noopener">GitHub, autoscaling, and the component substitution fallacy</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.codedge.de/posts/how-to-compromise-your-system-with-a-job-interview" target="_blank" rel="noopener">How to compromise your system with a job interview</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.ethanheilman.com/x/33/index.html" target="_blank" rel="noopener">OpenPubkey SSH (OPKSSH) open sourced — SSO for SSH</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/" target="_blank" rel="noopener">Rust 1.98.0 released</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.modular.com/blog/mojo-open-source" target="_blank" rel="noopener">Mojo is now open source</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vt78xd/qwen3827b_has_the_highest_level_of_agency_ive/" target="_blank" rel="noopener">Qwen3.8-27B shows unusually high agency in local agentic runs</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vt7l3e/qwen3827b_took_a_serious_hit_to_knowledge_vs_36/" target="_blank" rel="noopener">Qwen3.8-27B regressed on general knowledge relative to 3.6</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vtfzjc/airllm_recent_updates_with_qwen3827b_kimik3_too/" target="_blank" rel="noopener">AirLLM updated for Qwen3.8-27B and Kimi-K3</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vtf7mi/tinysearch_v061_still_a_lightweight_web_research_tool/" target="_blank" rel="noopener">TinySearch v0.6.1 — self-hosted MCP web research tool, now bring-your-own-browser</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vsy4l2/i_pushed_qwen3827b_limits_again_dflash2_134_tps/" target="_blank" rel="noopener">Qwen3.8-27B inference engine hits ~138 t/s on a power-limited RTX 3090</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vth1c3/i_just_built_a_mini_kimik3_from_scratch_under_250/" target="_blank" rel="noopener">A 1B-parameter Kimi-K3 replica pretrained from scratch for $250</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://huggingface.co/blog/LiquidAI/lfm25-dspark" target="_blank" rel="noopener">LFM2.5-DSpark claims up to 3.2x faster inference</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://dreadnode.io/research/every-model-cheats-prompt-level-mitigation-of-cheating-on-offensive-cyber-tasks/" target="_blank" rel="noopener">Every model cheats: prompt-level mitigation of cheating on offensive cyber tasks</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://arxiv.org/abs/2504.09762" target="_blank" rel="noopener">Stop anthropomorphizing intermediate tokens as reasoning traces</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.danielvaughn.dev/posts/huzzah/" target="_blank" rel="noopener">Show HN: Huzzah — an editor built around a different way of coding with AI</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/zachahn/vomit" target="_blank" rel="noopener">vomit: clean up verbose model output with a separate LLM pass</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://zoneless.com" target="_blank" rel="noopener">Show HN: Zoneless, an open source Stripe Connect alternative</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/changelog/vercel-agent-is-now-available-in-slack-code-channels" target="_blank" rel="noopener">Vercel Agent now works in Slack code channels</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/changelog/custom-metrics-are-now-supported-in-vercel-observability" target="_blank" rel="noopener">Vercel Observability now supports custom metrics</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://strn.cat/posts/spacetime/" target="_blank" rel="noopener">SpacetimeDB: a short technical review</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/paulsp94/omacosy" target="_blank" rel="noopener">Omacosy: Omarchy-style tiling desktop for macOS without disabling SIP</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://chrisburnell.com/html-can-do-that/" target="_blank" rel="noopener">HTML Can Do That</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/SaaS/comments/1vu5wnw/focus_my_ass/" target="_blank" rel="noopener">A $4M ARR founder on the difference between a priority list and a strategy</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/SaaS/comments/1vtrnby/my_best_reddit_post_got_20k_views_and_sent_0/" target="_blank" rel="noopener">20K views and zero signups; 250 views and real leads</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://www.reddit.com/r/SaaS/comments/1vtikfr/why_i_priced_my_saas_in_the_gap_between_29/" target="_blank" rel="noopener">Pricing into the gap between $29 sequencers and $500+ AI SDR tools</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.latent.space/p/ainews-poolside-gets-12b-reverse" target="_blank" rel="noopener">Poolside reported in a $12B reverse-acquihire with NVIDIA</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://openrouter.ai/stealth/ox-alpha" target="_blank" rel="noopener">Ox Alpha: a stealth model appears on OpenRouter</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vth4lo/tencent_begins_testing_its_new_flagship_model/" target="_blank" rel="noopener">Tencent begins testing flagship Hunyuan Hy4</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://openai.com/index/introducing-ai-futures" target="_blank" rel="noopener">OpenAI launches 'AI Futures' policy blog</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://vercel.com/changelog/bun-1-4-is-now-available-in-vercel-functions" target="_blank" rel="noopener">Bun 1.4 available in Vercel Functions</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://vercel.com/changelog/manage-vercel-container-registry-with-vercel-cli" target="_blank" rel="noopener">Vercel Container Registry manageable from the CLI</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.reddit.com/r/SaaS/comments/1vtf6v4/new_website_went_from_1500_impressions_a_day_to/" target="_blank" rel="noopener">New site's Search Console impressions dropped from 1,500/day to zero</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.datadoghq.com/blog/engineering/gitretriever/" target="_blank" rel="noopener">Datadog rebuilt Git serving to take 20x CI traffic without slowing down</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://simedw.com/2026/08/20/midi-autocomplete/" target="_blank" rel="noopener">A 125M model autocompletes piano on-device at 108 notes/sec</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vtnnf0/glm_53_slopcodebench_results/" target="_blank" rel="noopener">GLM 5.3 results on SlopCodeBench</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://00f.net/2026/08/19/why-compiling-rust-to-webassembly-is-slow/" target="_blank" rel="noopener">Why compiling Rust to WebAssembly is slow</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.igalia.com/2026/08/19/Linux-72-Released.html" target="_blank" rel="noopener">Linux 7.2 released</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.danielvaughn.dev/posts/huzzah/" target="_blank" rel="noopener">Show HN: Huzzah (duplicate of hn-show item)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/" target="_blank" rel="noopener">Malicious Rust crate arrayref runs a build-time payload (duplicate)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://bun.com/blog/bun-v1.4" target="_blank" rel="noopener">Bun 1.4 (duplicate)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://bun.com/blog/bun-v1.4" target="_blank" rel="noopener">Bun 1.4 (lobsters duplicate)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html" target="_blank" rel="noopener">AliExpress WebAudio fingerprinting breaks Bluetooth multipoint (duplicate)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://annas-archive.gl/blog/physical-destruction.html" target="_blank" rel="noopener">AI companies destroy physical books — let's scan rare books</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://blog.curiousquail.com/im-upset-again-about-a-co-creator-of-rss-being-prosecuted-for-something-meta-is-doing-with-little-consequence/" target="_blank" rel="noopener">Aaron Swartz was prosecuted for scraping while Meta faces little consequence</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://jacob.gold/posts/theres-no-such-thing-as-a-small-software-team/" target="_blank" rel="noopener">There's no such thing as a small software team anymore</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://klementoninvesting.substack.com/p/if-this-is-true-the-hyperscalers" target="_blank" rel="noopener">If this is true, the hyperscalers are toast</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vu7tkb/how_to_not_go_broke_vibecoding_in_emergent_or/" target="_blank" rel="noopener">How to not go broke vibe-coding on Emergent/Replit/Lovable</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/changelog/always-on-tracing-for-production-and-preview-traffic" target="_blank" rel="noopener">Always-on tracing for production and preview traffic</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/changelog/microfrontends-previews-now-link-across-repositories" target="_blank" rel="noopener">Microfrontends previews now link across repositories</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/vercel/next.js/releases/tag/v16.3.2" target="_blank" rel="noopener">v16.3.2</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://encore.dev/blog/firecracker-apple-silicon" target="_blank" rel="noopener">We Rebuilt the Linux MicroVM Stack on Apple Silicon</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vsr67c/introducing_qwen3827b_dynamic_v3_unsloth_ggufs/" target="_blank" rel="noopener">Introducing Qwen3.8-27B Dynamic v3 Unsloth GGUFs</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://vercel.com/changelog/chat-sdk-adds-linq-adapter" target="_blank" rel="noopener">Chat SDK adds Linq support</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vu8o2l/to_everyone_still_building_when_nobody_is_watching/" target="_blank" rel="noopener">To everyone still building when nobody is watching</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vu6a5a/is_posthog_the_only_option/" target="_blank" rel="noopener">Is Posthog the only option?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vu9w4m/built_a_free_recipe_costing_tool_for_restaurants/" target="_blank" rel="noopener">Built a free recipe costing tool for restaurants, curious how others here think about the free-to-paid transition</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vu9u4c/does_late_seed_b2b_saas_waste_time_investigating/" target="_blank" rel="noopener">does late seed B2B SaaS waste time investigating technical tickets ?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vu9ky4/our_ai_agent_doesnt_just_score_vendor_proposals/" target="_blank" rel="noopener">our ai agent doesn't just score vendor proposals anymore, it tells you what to go back and ask them</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vu9gom/turned_criticism_into_a_polished_website_content/" target="_blank" rel="noopener">Turned criticism into a polished website content strategy</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/stable" target="_blank" rel="noopener">stable</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.35.6" target="_blank" rel="noopener">n8n@2.35.6</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.75" target="_blank" rel="noopener">n8n@1.123.75</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.xda-developers.com/japan-tried-build-operating-system-entire-world-us-government-intervened/" target="_blank" rel="noopener">Japan tried to build an operating system for the world, the US intervened</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.flourish.org/2026/08/personal-apps/" target="_blank" rel="noopener">Vibe coding personal apps in mid-2026</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://matklad.github.io/2026/08/20/better-batteries.html" target="_blank" rel="noopener">Better Batteries</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vud020/last_month_i_finally_made_my_first_20_with_my_saas/" target="_blank" rel="noopener">last month I finally made my first 20$ with my saas 😃</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vuai1m/to_all_eufounders_lets_defeat_the_need_for_us/" target="_blank" rel="noopener">To all EU-founders: Let's defeat the need for US visibility</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vud3w5/1_month_since_release_first_paying_customer/" target="_blank" rel="noopener">1 Month Since Release - First Paying Customer!</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vucvkw/what_i_learned_building_a_lightweight_email/" target="_blank" rel="noopener">What I learned building a lightweight email tracker for Gmail</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vucfm5/from_resend_to_listmonk_with_amazon_ses/" target="_blank" rel="noopener">From Resend to Listmonk with Amazon SES?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vucfdo/whats_one_marketing_thing_you_actually_kept_doing/" target="_blank" rel="noopener">What’s one marketing thing you actually kept doing?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vuceoc/if_more_and_more_is_achievable_by_most_of_the_ais/" target="_blank" rel="noopener">If more and more is achievable by most of the AIs, what you will build as a SaaS..? Most of the things your customer's GPT etc can provide..</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vuc3st/the_thing_i_miss_from_the_big_company_isnt_the/" target="_blank" rel="noopener">The thing I miss from the big company isn't the data, it's someone telling me the idea is bad before I build it</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vubxn8/could_a_uk_company_addresscompliance_issue_affect/" target="_blank" rel="noopener">Could a UK company address/compliance issue affect an existing Apple Developer Organization account?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1vubgn2/quick_punchynextgen_speed_locked_and_loaded_build/" target="_blank" rel="noopener">Quick &amp; PunchyNext-gen speed locked and loaded. ⚡️Build day vibes. 🛠️Tech FocusedFresh XPG DDR5 looking right at home. 🚀Upgrading to DDR5. Speed incoming. 💻🦾Sleek &amp; MinimalPure speed. 🔒Clean lines, fresh build. ✨</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/stable" target="_blank" rel="noopener">stable</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.35.7" target="_blank" rel="noopener">n8n@2.35.7</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.36.5" target="_blank" rel="noopener">n8n@2.36.5</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.36.4" target="_blank" rel="noopener">n8n@2.36.4</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">beta</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.0" target="_blank" rel="noopener">v16.4.0-canary.0</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://remapradio.com/articles/the-lost-treasure-of-sid-meiers-pirates/" target="_blank" rel="noopener">The Lost Treasure of Sid Meier's Pirates</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.zilog.com/captain_zilog/" target="_blank" rel="noopener">Captain Zilog</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://byroot.github.io/ruby/performance/2026/08/13/speeding-up-ruby-hashes.html" target="_blank" rel="noopener">Speeding Up (Small) Ruby Hashes</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://universal-blue.discourse.group/t/bazzites-biggest-update-deck-44-has-launched-happy-birthday-to-universal-blue/12373" target="_blank" rel="noopener">Bazzite Deck 44 Launches Today</a></div>
       </div>
     </details>
     <div class="subscribe-strip">
