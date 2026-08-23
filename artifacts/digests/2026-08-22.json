@@ -1,282 +1,567 @@
 {
   "date": "2026-08-22",
-  "generated_at": "2026-08-22T06:15:47.296Z",
+  "generated_at": "2026-08-22T11:09:12.727Z",
   "imported_from": {
     "importer_version": "digest-import/v1",
     "source_artifact": "artifacts/synthesized/2026-08-22.json",
-    "source_sha256": "c8bf302fd384a54082eb450cb8266b95e975aac9c8f70750562fc89ea8143b7f"
+    "source_sha256": "96ef959d675c4680dc5b0d62c17838e5bd3238703d1cdc58c7edb65347794df5"
   },
   "items": [
     {
-      "builder_takeaway": "A dated discount window plus a permanent list-price cut is an immediately actionable cost lever.",
-      "category": "Small Business Automation",
-      "id": "a65ab5dd-ce3f-485e-a2e0-1d912ec7ca23",
-      "importance": "lead",
+      "builder_takeaway": "Potentially meaningful for Python shops already on Vercel, but low current relevance here.",
+      "category": "Model + API Changes",
+      "id": "fc8cec18-43d5-4be2-850a-4dcef562c4cf",
+      "importance": "supporting",
       "labels": [
         "vendor_claim",
-        "publish_public"
+        "monitor"
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
       "source": "vercel.com",
       "source_facts": [
-        "OpenAI lowered GPT-5.6 Sol list pricing (input -20%, output -33%) and Vercel's 50% AI Gateway discount applies to the new price through September 18, 2026."
+        "Vercel says Celery background tasks now run natively as Vercel Functions for Python workloads."
       ],
-      "title": "GPT-5.6 Sol list price cut, and Vercel's 50% AI Gateway discount now applies to the lower price",
-      "uncertainty": "The changelog text is partially truncated in the feed; exact per-million-token figures should be confirmed on the pricing page.",
-      "url": "https://vercel.com/changelog/gpt-5-6-sol-is-now-50-percent-off-a-lower-price"
+      "title": "Run background tasks with Celery on Vercel",
+      "uncertainty": "Page did not render cleanly in the approved browse tool; details are title/snippet-based only.",
+      "url": "https://vercel.com/changelog/run-background-tasks-with-celery-on-vercel"
     },
     {
-      "builder_takeaway": "Changes a real configuration decision for anyone serving content behind Cloudflare.",
-      "category": "Model + API Changes",
-      "id": "41e25687-2051-4bef-9880-07da180709f2",
-      "importance": "supporting",
-      "labels": [
-        "vendor_claim",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "blog.cloudflare.com",
-      "source_facts": [
-        "Cloudflare released Bot Preference Sync, which automatically keeps robots.txt aligned with a zone's configured AI bot policies for Search, Agent, and Training."
-      ],
-      "title": "Cloudflare launches Bot Preference Sync to auto-align robots.txt with AI bot policy",
-      "uncertainty": "Unclear whether the sync overwrites an existing hand-written robots.txt or merges with it.",
-      "url": "https://blog.cloudflare.com/bot-preference-sync/"
-    },
-    {
-      "builder_takeaway": "Direct leverage for local-model work and desktop agent wiring.",
+      "builder_takeaway": "Performance essay arguing modern software should not be slow; opinionated but not decision-changing for current work.",
       "category": "Tools Worth Testing",
-      "id": "45d202b5-6b47-45b8-988a-fc5e679e05ff",
-      "importance": "supporting",
-      "labels": [
-        "vendor_claim",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "Ollama v0.33.0 adds a Claude Desktop app integration, updates MLX, and fixes MLX assumptions that broke on Linux and Windows."
-      ],
-      "title": "Ollama v0.33.0 ships MLX cross-platform fixes and a Claude Desktop app integration",
-      "uncertainty": "Item was fetched from an -rc2 tag URL, so the exact final v0.33.0 changelog may differ slightly.",
-      "url": "https://github.com/ollama/ollama/releases/tag/v0.33.0-rc2"
-    },
-    {
-      "builder_takeaway": "Removes a recurring manual step for anyone running local models on constrained hardware.",
-      "category": "Tools Worth Testing",
-      "id": "3c37e9b1-408c-47e3-b538-3f76c981908a",
-      "importance": "supporting",
-      "labels": [
-        "builder_reported",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "notactuallytreyanastasio.github.io",
-      "source_facts": [
-        "Shoehorn is a new open-source cross-platform tool with a GUI that quantizes arbitrary models to run on local hardware."
-      ],
-      "title": "Show HN: Shoehorn quantizes arbitrary models to fit the machine you actually have",
-      "uncertainty": "Single-author Show HN with no third-party benchmarks; quality loss across quantization targets is unverified.",
-      "url": "https://notactuallytreyanastasio.github.io/shoehorn/"
-    },
-    {
-      "builder_takeaway": "Anyone deserializing untrusted pipeline configs needs to know the default flipped.",
-      "category": "AI Operations / Agent Control",
-      "id": "06ec5564-c6f8-400a-85fd-91def44894f9",
+      "id": "b28a2fed-9544-4413-b56c-a38a09324423",
       "importance": "archive-only",
       "labels": [
-        "vendor_claim",
-        "publish_private"
+        "early_signal",
+        "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "github.com",
+      "source": "danluu.com",
       "source_facts": [
-        "Haystack 3.1.0-rc3 requires an explicit unsafe=True flag or HAYSTACK_UNSAFE_DESERIALIZATION env var to deserialize pipeline components containing Jinja custom_filters."
+        "There's no reason for software to be slow anymore"
       ],
-      "title": "Haystack 3.1.0-rc3 makes Jinja custom_filters deserialization opt-in via unsafe flag",
-      "uncertainty": "Release candidate; final 3.1.0 behavior could change.",
-      "url": "https://github.com/deepset-ai/haystack/releases/tag/v3.1.0-rc3"
+      "title": "There's no reason for software to be slow anymore",
+      "uncertainty": "Essay, not a new fact pattern.",
+      "url": "https://danluu.com/perf-opt/"
     },
     {
-      "builder_takeaway": "Changes the rollback plan for anyone shipping to Vercel production.",
+      "builder_takeaway": "GrapheneOS partnership note about Motorola device focus; company direction signal, not actionable for software work.",
+      "category": "Tools Worth Testing",
+      "id": "0fed7170-e8e2-457c-b4bd-9cfb84f90f35",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "grapheneos.social",
+      "source_facts": [
+        "Initial focus for our partnership with Motorola is a regular non-folding device"
+      ],
+      "title": "Initial focus for our partnership with Motorola is a regular non-folding device",
+      "uncertainty": "Thin announcement with no downstream decision.",
+      "url": "https://grapheneos.social/@GrapheneOS/117136278553665985"
+    },
+    {
+      "builder_takeaway": "Felony Bench appears to be a novelty AI-crime benchmark/project, but there is no clear practical use case here.",
+      "category": "Tools Worth Testing",
+      "id": "7e504daa-52d2-4f46-9b32-0aee05d75f20",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "felonybench.com",
+      "source_facts": [
+        "Felony Bench"
+      ],
+      "title": "Felony Bench",
+      "uncertainty": "No substantive technical detail read.",
+      "url": "https://www.felonybench.com/"
+    },
+    {
+      "builder_takeaway": "Rust Glancer claims a large RAM reduction for Rust LSP workflows, but the direct page was not fully verified and the Lobsters duplicate is enough to keep it in monitor-only territory elsewhere.",
+      "category": "Tools Worth Testing",
+      "id": "46db1c47-06a5-4f10-b331-1c4b2bb0d090",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "rust-glancer.github.io",
+      "source_facts": [
+        "Rust Glancer: Rust LSP using 100x less RAM"
+      ],
+      "title": "Rust Glancer: Rust LSP using 100x less RAM",
+      "uncertainty": "Direct source not fully verified.",
+      "url": "https://rust-glancer.github.io/blog/hello-world/"
+    },
+    {
+      "builder_takeaway": "Hack project enabling apps on Kobo devices; clever but outside the repo's lane and the audience's likely decisions.",
+      "category": "Tools Worth Testing",
+      "id": "c5272f65-deb8-4853-848d-aefe78181d8e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "bandarlabs.github.io",
+      "source_facts": [
+        "Kobo can run apps now"
+      ],
+      "title": "Kobo can run apps now",
+      "uncertainty": "No practical relevance here.",
+      "url": "https://bandarlabs.github.io/Cobalt/"
+    },
+    {
+      "builder_takeaway": "Border-phone-data felony story is politically charged and not directly tied to software, infrastructure or business decisions here.",
+      "category": "Tools Worth Testing",
+      "id": "bfa05b59-566a-4be6-bd80-9215335ff8f1",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "nytimes.com",
+      "source_facts": [
+        "Felony charges for citizen deleting phone data at US Border"
+      ],
+      "title": "Felony charges for citizen deleting phone data at US Border",
+      "uncertainty": "General-news item.",
+      "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html"
+    },
+    {
+      "builder_takeaway": "Personal maturation essay; reflective writing, not a concrete builder or platform signal.",
+      "category": "Tools Worth Testing",
+      "id": "ca3dc424-6892-4a8b-be13-1806e883786d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "thomasdullien.github.io",
+      "source_facts": [
+        "Three important steps in my maturation process"
+      ],
+      "title": "Three important steps in my maturation process",
+      "uncertainty": "Essay, not an operational finding.",
+      "url": "https://thomasdullien.github.io/posts/2026-08-21-three-important-steps-in-my-maturation-process/"
+    },
+    {
+      "builder_takeaway": "Kagi added an option to hide paywalled links from results. Nice product polish, but too small to change decisions here.",
+      "category": "Model + API Changes",
+      "id": "a8bf00b7-172c-46bd-a836-8c750e047b8d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "kagi.com",
+      "source_facts": [
+        "Kagi added a setting for removing paywalled links from search results"
+      ],
+      "title": "Kagi added a setting for removing paywalled links from search results",
+      "uncertainty": "Small UX-level change.",
+      "url": "https://kagi.com/changelog#11296"
+    },
+    {
+      "builder_takeaway": "Largest 2D universe map release is interesting science, but not relevant to developer workflow or infrastructure decisions.",
+      "category": "Tools Worth Testing",
+      "id": "70619405-928e-47f7-be42-462b64297d66",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "newscenter.lbl.gov",
+      "source_facts": [
+        "Scientists release biggest 2D map of the universe"
+      ],
+      "title": "Scientists release biggest 2D map of the universe",
+      "uncertainty": "Science news, not lane-relevant.",
+      "url": "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/"
+    },
+    {
+      "builder_takeaway": "This changes how to evaluate OTel adoption: by SDK health and maintainer depth, not by the brand alone.",
       "category": "Data Infrastructure / Verification / Scraping",
-      "id": "1e389f45-fcf9-4b98-9ef1-f591561d7e12",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "vercel.com",
-      "source_facts": [
-        "Vercel introduced Deployment Storage, retaining per-deployment files so previous deployments can be inspected and rolled back to instantly."
-      ],
-      "title": "Vercel Deployment Storage keeps prior deployment files inspectable and rollback-ready",
-      "uncertainty": "Retention window and any storage cost implications are not stated in the changelog excerpt.",
-      "url": "https://vercel.com/changelog/deployment-storage-keeps-your-deployments-rollback-ready"
-    },
-    {
-      "builder_takeaway": "Removes a hand-rolled API wrapper for anyone automating Vercel infrastructure.",
-      "category": "Small Business Automation",
-      "id": "66e8b44c-4be5-4d4c-ab12-a2020d70eeea",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "vercel.com",
-      "source_facts": [
-        "Vercel CLI gained dedicated DNS record, domain, and project management commands intended for interactive, scripted, and agent use."
-      ],
-      "title": "Vercel CLI adds first-class DNS, domain, and project commands",
-      "uncertainty": "",
-      "url": "https://vercel.com/changelog/vercel-cli-expands-support-for-dns-domains-and-project-commands"
-    },
-    {
-      "builder_takeaway": "Directly overlaps with hand-built MCP/connector plumbing.",
-      "category": "AI Operations / Agent Control",
-      "id": "bc08bbc5-3100-4220-a713-53ee73da4efa",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "vercel.com",
-      "source_facts": [
-        "Vercel Connect enables v0-built apps and agents to securely connect to 100+ third-party services including Slack, Google, Notion, GitHub, and Salesforce."
-      ],
-      "title": "Vercel Connect lets v0 apps and agents authenticate into 100+ third-party services",
-      "uncertainty": "Unclear whether Connect is usable outside v0-authored apps.",
-      "url": "https://vercel.com/changelog/connect-v0-apps-to-slack-google-and-100-other-services"
-    },
-    {
-      "builder_takeaway": "Potential low-cost path for screenshot and chart extraction workloads.",
-      "category": "Model + API Changes",
-      "id": "678e626f-ee64-4fc3-ba5b-5a3ba0a327bb",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "vercel.com",
-      "source_facts": [
-        "DeepSeek V4 Flash with vision (experimental) is now available through Vercel AI Gateway and accepts images alongside text in a single request."
-      ],
-      "title": "DeepSeek V4 Flash with vision lands on Vercel AI Gateway (experimental)",
-      "uncertainty": "No published accuracy or latency numbers; 'experimental' implies no stability guarantee.",
-      "url": "https://vercel.com/changelog/deepseek-v4-flash-with-vision-now-available-on-ai-gateway"
-    },
-    {
-      "builder_takeaway": "Concrete example of making CLI output machine-actionable inside agent loops.",
-      "category": "AI Operations / Agent Control",
-      "id": "6ebe5dd6-edf6-4729-9e4b-56ac08d46712",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "vercel.com",
-      "source_facts": [
-        "Vercel Sandbox CLI 4.0.1 changed its output and error messages to always state the next action, making the CLI easier for agents to drive."
-      ],
-      "title": "Vercel Sandbox CLI 4.0.1 rewrites its output and errors for agent consumption",
-      "uncertainty": "",
-      "url": "https://vercel.com/changelog/the-vercel-sandbox-cli-is-now-more-agent-friendly"
-    },
-    {
-      "builder_takeaway": "Rare side-by-side comparison of agent harnesses under one runtime.",
-      "category": "Tools Worth Testing",
-      "id": "05d94aa4-18cc-4746-a09e-f3cb9483c8de",
-      "importance": "archive-only",
+      "id": "df292c72-f50d-4c5b-ace2-8c85790d08ca",
+      "importance": "supporting",
       "labels": [
         "builder_reported",
         "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "vercel.com",
+      "source": "matduggan.com",
       "source_facts": [
-        "Ora benchmarks every major AI agent harness side by side on live sites using a single Vercel-hosted platform for front end, back end, and agent runtime."
+        "A builder compared OpenTelemetry repo health and argues the real drag is thin maintainer benches plus hard stability guarantees, not just bikeshedding."
       ],
-      "title": "Ora's writeup on benchmarking every major AI agent harness on one platform",
-      "uncertainty": "No raw benchmark numbers in the excerpt; the vendor hosts the platform being praised.",
-      "url": "https://vercel.com/blog/how-ora-benchmarks-every-major-ai-agent-on-vercel"
+      "title": "OTel isn't going well (and I made a spreadsheet about it)",
+      "uncertainty": "Single-author analysis with custom metrics rather than an official project report.",
+      "url": "https://matduggan.com/otel-isnt-going-well-and-i-made-a-spreadsheet-about-it/"
     },
     {
-      "builder_takeaway": "Directly challenges leaderboard-driven ASR model selection.",
-      "category": "Voice AI / Realtime Agents",
-      "id": "2f2d4adb-cb26-4543-a357-90e727d70659",
-      "importance": "archive-only",
+      "builder_takeaway": "Concrete neglected-infrastructure failure with obvious security implications for telephony and routing systems.",
+      "category": "AI Operations / Agent Control",
+      "id": "fb5c8d20-ba75-488f-9168-7a94fb8bad8e",
+      "importance": "lead",
       "labels": [
         "reproducible",
         "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "huggingface.co",
+      "source": "lina.sh",
       "source_facts": [
-        "Hugging Face published an analysis measuring how much speech recognition benchmark results reflect optimization to the benchmark rather than general performance."
+        "A researcher bought an expired nameserver domain and gained control over multiple e164.arpa territories, later finding roughly 400,000 ENUM queries tied mostly to military-base calls."
       ],
-      "title": "Hugging Face measures benchmark optimization in speech recognition",
-      "uncertainty": "Feed content was empty; assessment is based on the title and Hugging Face's blog conventions, so the specific findings are unverified.",
-      "url": "https://huggingface.co/blog/asr-benchmark-optimization"
+      "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
+      "uncertainty": "Account is first-person, though the DNS mechanics are concrete and the reported remediation path is specific.",
+      "url": "https://lina.sh/blog/hijacking-e164-arpa"
     },
     {
-      "builder_takeaway": "Adjacent design point for anyone building an agent-facing memory layer.",
-      "category": "AI Operations / Agent Control",
-      "id": "72913c0f-2a19-486d-828e-6e754ff74eeb",
+      "builder_takeaway": "Study summary on AI homework vs exam performance is education-policy signal, not a direct software or business decision input here.",
+      "category": "Tools Worth Testing",
+      "id": "8419a116-a050-4720-a1ef-937b7f8c9630",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "economist.com",
+      "source_facts": [
+        "AI boosted homework scores, then exam scores dropped: study"
+      ],
+      "title": "AI boosted homework scores, then exam scores dropped: study",
+      "uncertainty": "Second-hand summary of research relevance outside the lane.",
+      "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning"
+    },
+    {
+      "builder_takeaway": "Profile of Russ Cox; biographical, not a new tool, policy or platform change.",
+      "category": "Tools Worth Testing",
+      "id": "f0b1b967-69a7-4bb0-ab5d-7621f96ab73f",
       "importance": "archive-only",
       "labels": [
         "early_signal",
-        "publish_private"
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "acm.org",
+      "source_facts": [
+        "People of ACM – Russ Cox"
+      ],
+      "title": "People of ACM – Russ Cox",
+      "uncertainty": "Human-interest profile.",
+      "url": "https://www.acm.org/articles/people-of-acm/2026/russ-cox"
+    },
+    {
+      "builder_takeaway": "Show HN for a shared-brain product. Ambitious positioning, but mostly product rhetoric without enough hard detail to recommend.",
+      "category": "AI Operations / Agent Control",
+      "id": "fa48e12f-0aac-4ce2-9507-68f145de43cd",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
       "source": "ozbrain.com",
       "source_facts": [
-        "OzBrain launched as a shared knowledge store designed for AI agents rather than humans to be the primary consumers of stored research and analysis."
+        "Show HN: OzBrain, a shared brain for knowledge between agents and your team"
       ],
-      "title": "Show HN: OzBrain, a shared knowledge layer for agents and teammates",
-      "uncertainty": "No evidence of production usage, retrieval quality, or durability; pure launch post.",
+      "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
+      "uncertainty": "Headline and teaser only.",
       "url": "https://ozbrain.com"
     },
     {
-      "builder_takeaway": "Concrete counterexample to the assumption that BYOK removes a purchase objection.",
-      "category": "Small Business Automation",
-      "id": "3a76f666-c63b-4eb2-8fdb-2d130478880c",
+      "builder_takeaway": "Mouse-brain stress study; not relevant to the audience's immediate software choices.",
+      "category": "Tools Worth Testing",
+      "id": "911d8b1c-c9eb-4a0c-af3b-c9ddab23f602",
       "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "medicine.washu.edu",
+      "source_facts": [
+        "Early-life stress leaves a 'scar' inside brain cells in mice"
+      ],
+      "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
+      "uncertainty": "Science item outside lane.",
+      "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/"
+    },
+    {
+      "builder_takeaway": "Tiny repo for changing Claude's writing style. Funny, but not a serious workflow or infrastructure step.",
+      "category": "Tools Worth Testing",
+      "id": "b1bce0ce-771b-49c7-b221-b73a960b4c64",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Claudette: Make Claude stop talking like a BuzzFeed article"
+      ],
+      "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
+      "uncertainty": "Small utility, low leverage.",
+      "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md"
+    },
+    {
+      "builder_takeaway": "Useful if low-latency voice becomes relevant, especially for inference-system design rather than model choice.",
+      "category": "Voice AI / Realtime Agents",
+      "id": "42666932-0731-49e4-8eb7-edecf791ab67",
+      "importance": "supporting",
       "labels": [
         "builder_reported",
         "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "nari-labs.com",
       "source_facts": [
-        "A solo builder reports that a BYOK transcription product with clearly superior unit economics loses users at the API key setup step rather than on price."
+        "Nari Labs says its tuned Qwen3-TTS serving stack can hit sub-50ms p95 time-to-first-audio at 10 RPS on one H100 and about $2 per 1M characters."
       ],
-      "title": "Builder report: BYOK pricing wins on paper and loses at the API-key setup step",
-      "uncertainty": "Single product, no conversion numbers given; may not generalize beyond technical-key setup flows.",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vuzeva/byok_sounded_fair_the_api_key_setup_is_where/"
+      "title": "How we made a text-to-speech model respond in sub-50 ms",
+      "uncertainty": "Benchmark is vendor-authored and compares against tuned competitors chosen by the same team.",
+      "url": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/"
     },
     {
-      "builder_takeaway": "Early signal on simulation-based agent evaluation from a credible source.",
+      "builder_takeaway": "Argument against TUIs. Opinion piece, not a platform or tooling event.",
+      "category": "Tools Worth Testing",
+      "id": "358002e0-f1fa-4451-9b7a-005ba84979df",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "sockpuppet.org",
+      "source_facts": [
+        "Stop Making TUIs"
+      ],
+      "title": "Stop Making TUIs",
+      "uncertainty": "Essay only.",
+      "url": "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/"
+    },
+    {
+      "builder_takeaway": "Culture essay comparing the present to Ballard or Gibson. Not relevant to engineering decisions.",
+      "category": "Tools Worth Testing",
+      "id": "711e4d20-9be1-4a72-9933-b610bf901f43",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "precastreinforced.co.uk",
+      "source_facts": [
+        "New Worlds: We are living in the future of J.G. Ballard or William Gibson"
+      ],
+      "title": "New Worlds: We are living in the future of J.G. Ballard or William Gibson",
+      "uncertainty": "Essay outside lane.",
+      "url": "https://precastreinforced.co.uk/2026/08/16/new-worlds/"
+    },
+    {
+      "builder_takeaway": "Assembly-type-system essay from Odin context. Interesting language-design thinking, but not a decision trigger here.",
+      "category": "Tools Worth Testing",
+      "id": "6ad82014-fe67-43d0-91cc-55f5ed36c686",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "gingerbill.org",
+      "source_facts": [
+        "Everyone says assembly is untyped—everyone is wrong"
+      ],
+      "title": "Everyone says assembly is untyped—everyone is wrong",
+      "uncertainty": "Technical essay, not news.",
+      "url": "https://www.gingerbill.org/article/2026/08/20/designing-odins-inline-asm/"
+    },
+    {
+      "builder_takeaway": "Personal essay about becoming numb to AI-generated content. Familiar complaint, no new operational takeaway.",
+      "category": "Tools Worth Testing",
+      "id": "a96be89c-9d83-4ef3-a4bc-6166b8b306fb",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "cymerys.com",
+      "source_facts": [
+        "I'm becoming AI-blind"
+      ],
+      "title": "I'm becoming AI-blind",
+      "uncertainty": "Essay only.",
+      "url": "https://cymerys.com/w/im-becoming-ai-blind"
+    },
+    {
+      "builder_takeaway": "Waymo compute-stack explainer from Waymo itself. Potentially interesting systems content, but still self-authored and off-axis for current work.",
+      "category": "Tools Worth Testing",
+      "id": "14fc527f-5193-4127-8628-1a3991cbf08c",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "waymo.com",
+      "source_facts": [
+        "A look under our trunk: what's in our compute"
+      ],
+      "title": "A look under our trunk: what's in our compute",
+      "uncertainty": "Vendor-authored explainer.",
+      "url": "https://waymo.com/blog/2026/08/look-under-our-trunk/"
+    },
+    {
+      "builder_takeaway": "Defcon anti-surveillance talk video. Could be worthwhile separately, but too broad and indirect for this memo run.",
       "category": "AI Operations / Agent Control",
-      "id": "c5081aaa-e22d-4640-aee2-f90c710f05ab",
+      "id": "9001815b-9bfe-47d9-9f80-9aa614afab4a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "youtube.com",
+      "source_facts": [
+        "The coolest anti-surveillance tools at Defcon [video]"
+      ],
+      "title": "The coolest anti-surveillance tools at Defcon [video]",
+      "uncertainty": "Video talk without scoped takeaway.",
+      "url": "https://www.youtube.com/watch?v=-2uAsJ5EPAw"
+    },
+    {
+      "builder_takeaway": "Rust is enabling a next-generation trait solver on nightly, but the approved browse attempt failed and the headline alone is not enough to elevate it.",
+      "category": "Tools Worth Testing",
+      "id": "a132a363-e385-4fbb-8496-aeccbeda87d4",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "blog.rust-lang.org",
+      "source_facts": [
+        "Enabling the next-generation trait solver on nightly"
+      ],
+      "title": "Enabling the next-generation trait solver on nightly",
+      "uncertainty": "Page did not render cleanly in browse.",
+      "url": "https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/"
+    },
+    {
+      "builder_takeaway": "Lobsters discussion link for the same e164.arpa takeover story already captured from the primary source.",
+      "category": "AI Operations / Agent Control",
+      "id": "6ea8df22-94a2-43f3-bf2f-bcfa9da321e1",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "lina.sh",
+      "source_facts": [
+        "Lobsters discussion link for the same e164.arpa story already claimed directly."
+      ],
+      "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
+      "uncertainty": "",
+      "url": "https://lina.sh/blog/hijacking-e164-arpa"
+    },
+    {
+      "builder_takeaway": "Historical piece on Japan's TRON operating-system ambitions and U.S. intervention. Interesting history, not a current decision input.",
+      "category": "Tools Worth Testing",
+      "id": "bff448ef-3cea-4679-8f47-8ff29a81caac",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "xda-developers.com",
+      "source_facts": [
+        "Japan tried to build an operating system for the entire world, then the US government intervened"
+      ],
+      "title": "Japan tried to build an operating system for the entire world, then the US government intervened",
+      "uncertainty": "History article.",
+      "url": "https://www.xda-developers.com/japan-tried-build-operating-system-entire-world-us-government-intervened/"
+    },
+    {
+      "builder_takeaway": "Discussion-link duplicate of Felony Bench, which is already low-signal on its own.",
+      "category": "Tools Worth Testing",
+      "id": "77e76f0a-bbd8-4c9f-9931-500bdbf2cef3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "felonybench.com",
+      "source_facts": [
+        "Lobsters discussion link for Felony Bench."
+      ],
+      "title": "Felony Bench: Be AI, Do Crime",
+      "uncertainty": "",
+      "url": "https://www.felonybench.com/"
+    },
+    {
+      "builder_takeaway": "Music-theory-for-programmers article. Educational, but not why this memo exists.",
+      "category": "Tools Worth Testing",
+      "id": "36250042-131d-46c6-974a-1ee86c20166d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "runjs.app",
+      "source_facts": [
+        "Music theory for programmers"
+      ],
+      "title": "Music theory for programmers",
+      "uncertainty": "Tutorial-like article outside scope.",
+      "url": "https://runjs.app/blog/music-theory-for-programmers"
+    },
+    {
+      "builder_takeaway": "Could matter for Rust-heavy workflows, but the evidence is still too thin to recommend action.",
+      "category": "Tools Worth Testing",
+      "id": "abf76b42-307f-461c-ac2f-f696f95bb059",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -284,37 +569,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "latent.space",
+      "source": "rust-glancer.github.io",
       "source_facts": [
-        "Simile CEO Joon Sung Park argues simulation is the next scaling law and is building population-scale digital twins from the Generative Agents research line."
+        "A new Rust LSP alternative claims dramatically lower memory use than the current default tooling."
       ],
-      "title": "Latent Space: Simile's Joon Sung Park on simulation as the next scaling law",
-      "uncertainty": "No published results, benchmarks, or availability; entirely a forward-looking claim.",
-      "url": "https://www.latent.space/p/simile"
+      "title": "rust-glancer: An alternative LSP for Rust with focus on low memory usage",
+      "uncertainty": "Linked page was unreadable in the approved browse flow, so there is no direct verification beyond the title.",
+      "url": "https://rust-glancer.github.io/blog/hello-world/"
     },
     {
-      "builder_takeaway": "EU platform regulation shifts eventually affect app distribution economics.",
-      "category": "Small Business Automation",
-      "id": "cb135447-827b-4d2c-aff3-024e1df7f136",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "monitor"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "stratechery.com",
-      "source_facts": [
-        "Stratechery's weekly roundup for August 17, 2026 covers Apple making regulatory compromises in the EU among other topics."
-      ],
-      "title": "Stratechery weekly roundup 2026.34: Apple's EU compromises",
-      "uncertainty": "Content is a summary of paywalled analysis; specifics of the Apple EU concessions are not in the excerpt.",
-      "url": "https://stratechery.com/2026/app-snore/"
-    },
-    {
-      "builder_takeaway": "Duplicate of the v3.1.0-rc3 release notes covering the same upgrade and feature entries; rc3 retained instead.",
+      "builder_takeaway": "Homebrew 68K machine with PCI bus is fun hardware hacking, not a software or business signal for tomorrow morning.",
       "category": "Tools Worth Testing",
-      "id": "1ad4779b-86f0-4b7e-b2cb-3ee16173261c",
+      "id": "c1d8b451-a95d-45bd-9b6d-df80ac446923",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -322,18 +588,37 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "github.com",
+      "source": "hackaday.com",
       "source_facts": [
-        "Haystack v3.1.0-rc2"
+        "Homebrew 68K Machine Has A PCI Bus"
       ],
-      "title": "Haystack v3.1.0-rc2",
-      "uncertainty": "",
-      "url": "https://github.com/deepset-ai/haystack/releases/tag/v3.1.0-rc2"
+      "title": "Homebrew 68K Machine Has A PCI Bus",
+      "uncertainty": "Novelty hardware post.",
+      "url": "https://hackaday.com/2026/08/20/homebrew-68k-machine-has-a-pci-bus/"
     },
     {
-      "builder_takeaway": "Patch release consisting of dependency bumps, lockfile refreshes, and small internal fixes with no user-facing change.",
+      "builder_takeaway": "Weekend thread prompt on Lobsters. Pure discussion starter.",
+      "category": "Small Business Automation",
+      "id": "4883810d-af14-453a-8162-1611e80cf7de",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-22T00:00:00.000Z",
+      "source": "lobste.rs",
+      "source_facts": [
+        "What are you doing this weekend?"
+      ],
+      "title": "What are you doing this weekend?",
+      "uncertainty": "Prompt, not a finding.",
+      "url": "https://lobste.rs/s/ittn74/what_are_you_doing_this_weekend"
+    },
+    {
+      "builder_takeaway": "Collection of small native-web tricks. Potentially useful reading, but not a new event or decision-changing signal.",
       "category": "Tools Worth Testing",
-      "id": "206c5f79-c121-4833-a7f9-ddf03df8e720",
+      "id": "5d52c525-f542-415b-9923-a942219cd403",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -341,18 +626,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "github.com",
+      "source": "htmlcat.net",
       "source_facts": [
-        "langchain-perplexity 1.4.1"
+        "Small, native web tricks worth remembering"
       ],
-      "title": "langchain-perplexity 1.4.1",
-      "uncertainty": "",
-      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-perplexity%3D%3D1.4.1"
+      "title": "Small, native web tricks worth remembering",
+      "uncertainty": "Reference material, not news.",
+      "url": "https://htmlcat.net"
     },
     {
-      "builder_takeaway": "Canary build listing docs typo fixes and internal Turbopack refactors; no user-facing change and not a stable release.",
+      "builder_takeaway": "Go memory-visibility explainer. Solid educational topic, but not a fresh trigger for action unless you were already debugging this exact class of bug.",
       "category": "Tools Worth Testing",
-      "id": "0a419d93-97cd-4462-925c-f0f68f3c83fe",
+      "id": "becacbad-2a0b-4683-baff-d263d1bf4740",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -360,18 +645,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "github.com",
+      "source": "func25.dev",
       "source_facts": [
-        "Next.js v16.4.0-canary.1"
+        "Data races and the memory model in Go"
       ],
-      "title": "Next.js v16.4.0-canary.1",
-      "uncertainty": "",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.1"
+      "title": "Data races and the memory model in Go",
+      "uncertainty": "Technical explainer.",
+      "url": "https://func25.dev/posts/go-memory-visibility/"
     },
     {
-      "builder_takeaway": "Low-effort tool-recommendation request with no findings or reusable information.",
-      "category": "Small Business Automation",
-      "id": "82f72c92-22d7-406d-90c0-ce7eae3dbd38",
+      "builder_takeaway": "Cassandra 6 transactions write-up. Relevant only to a narrow database audience and not tied to immediate work here.",
+      "category": "Tools Worth Testing",
+      "id": "941b3d30-3344-4a1b-93af-d1a74d45d52e",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -379,18 +664,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "theconsensus.dev",
       "source_facts": [
-        "Which tool should I use for my product launch video"
+        "The road to ACID transactions in Cassandra 6"
       ],
-      "title": "Which tool should I use for my product launch video",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vv1pdd/which_tool_should_i_use_for_my_product_launch/"
+      "title": "The road to ACID transactions in Cassandra 6",
+      "uncertainty": "Niche database article.",
+      "url": "https://theconsensus.dev/p/2026/08/16/transactions-in-cassandra.html"
     },
     {
-      "builder_takeaway": "Generic marketing-help thread; the poster is asking for advice rather than reporting a result.",
-      "category": "Small Business Automation",
-      "id": "82224989-4fe9-4cdf-9dd4-81e38f07a2c6",
+      "builder_takeaway": "Roomy general-availability announcement for a decentralized Discord alternative. Product launch, but far from current work.",
+      "category": "Tools Worth Testing",
+      "id": "15aa9a4f-b437-42d0-bec5-53185b77cdb4",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -398,18 +683,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "blog.roomy.space",
       "source_facts": [
-        "How do you advertise your projects?"
+        "Roomy is generally available"
       ],
-      "title": "How do you advertise your projects?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vv2jyy/how_do_you_advertise_your_projects_and_here_what/"
+      "title": "Roomy is generally available",
+      "uncertainty": "Launch post outside lane.",
+      "url": "https://blog.roomy.space/3mplw6vvw4s23"
     },
     {
-      "builder_takeaway": "Product self-promotion outside the audience's domain, with no transferable technical or business detail.",
-      "category": "Small Business Automation",
-      "id": "ccd63de7-b14d-4c93-959e-087ee920eba0",
+      "builder_takeaway": "Formal-semantics and memory-safety article. Educational but not decision-changing.",
+      "category": "Tools Worth Testing",
+      "id": "65b9d13c-d808-4f60-a876-95df355fb5f5",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -417,18 +702,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "burakemir.ch",
       "source_facts": [
-        "I wanted to see my rentals like my stock portfolio, so we built it"
+        "Programming Language Semantics and Memory Safety"
       ],
-      "title": "I wanted to see my rentals like my stock portfolio, so we built it",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vux3n0/i_wanted_to_see_my_rentals_like_my_stock/"
+      "title": "Programming Language Semantics and Memory Safety",
+      "uncertainty": "Theory piece.",
+      "url": "https://burakemir.ch/post/formal-semantics/"
     },
     {
-      "builder_takeaway": "Recruitment post with no informational content.",
-      "category": "Small Business Automation",
-      "id": "716e015a-5562-427d-b19b-770f63b13ed0",
+      "builder_takeaway": "Motivational essay about eventually doing the hard thing. No new information content.",
+      "category": "Tools Worth Testing",
+      "id": "969bf89c-27b9-459c-9c82-3e94e233fe0c",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -436,18 +721,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "griffinberlste.in",
       "source_facts": [
-        "I need volunteer to test my app"
+        "Unfortunately you sometimes need to do the thing"
       ],
-      "title": "I need volunteer to test my app",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vv3vie/i_need_volunteer_to_test_my_app/"
+      "title": "Unfortunately you sometimes need to do the thing",
+      "uncertainty": "Essay only.",
+      "url": "https://griffinberlste.in/blog/do-the-thing/"
     },
     {
-      "builder_takeaway": "Open-ended discussion prompt; no claim, finding, or decision-relevant content.",
-      "category": "Small Business Automation",
-      "id": "2858ac57-8b64-43db-aecb-9a0a970ebd36",
+      "builder_takeaway": "Exim 4.100 release notice. Without a clearly material security or compatibility change, this is just routine release noise.",
+      "category": "Tools Worth Testing",
+      "id": "92f11259-82bb-4c63-9465-de95a010c972",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -455,18 +740,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "lists.exim.org",
       "source_facts": [
-        "Explain your market and challenges (I'll start)"
+        "Exim 4.100 released"
       ],
-      "title": "Explain your market and challenges (I'll start)",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vuylgp/explain_your_market_and_challenges_ill_start/"
+      "title": "Exim 4.100 released",
+      "uncertainty": "Routine release notice.",
+      "url": "https://lists.exim.org/lurker/message/20260820.154633.91995f73.en.html"
     },
     {
-      "builder_takeaway": "Generic discussion question with no data or reported outcome.",
-      "category": "Small Business Automation",
-      "id": "630536d3-1265-453a-bde0-321c50882170",
+      "builder_takeaway": "Academic paper on zero-knowledge proof of wasta. Novel and amusing, but outside practical builder decisions here.",
+      "category": "Tools Worth Testing",
+      "id": "69aec026-ec79-4f24-a11c-4846556a2980",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -474,303 +759,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "eprint.gacr.info",
       "source_facts": [
-        "How often do you actually ask customers for feedback?"
+        "Zero-Knowledge Proof of Wasta with Applications in Lebanon"
       ],
-      "title": "How often do you actually ask customers for feedback?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vv0srd/how_often_do_you_actually_ask_customers_for/"
-    },
-    {
-      "builder_takeaway": "Speculative discussion prompt about multi-model maintenance burden with no measurements or conclusions.",
-      "category": "Small Business Automation",
-      "id": "7c7bfde6-4505-4321-b6c8-375746925344",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "At what point is supporting AI models actually too much?"
-      ],
-      "title": "At what point is supporting AI models actually too much?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vuulno/at_what_point_is_supporting_ai_models_actually/"
-    },
-    {
-      "builder_takeaway": "Vague open-ended question with no substance.",
-      "category": "Small Business Automation",
-      "id": "fc260c0a-6f83-416e-98f3-a9a58900a76a",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "What are some actual tech companies of 2026"
-      ],
-      "title": "What are some actual tech companies of 2026",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vuqu1k/what_are_some_actual_tech_companies_of_2026/"
-    },
-    {
-      "builder_takeaway": "Mobile attribution tool shopping request; niche and outside the audience's decision space.",
-      "category": "Small Business Automation",
-      "id": "39f8786a-c45f-4761-9e49-6456fbe9c0f9",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "Any free MMPs that aren't a pain to set up?"
-      ],
-      "title": "Any free MMPs that aren't a pain to set up?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vuznlb/any_free_mmps_that_arent_a_pain_to_set_up/"
-    },
-    {
-      "builder_takeaway": "Image-based engagement bait with no informational content.",
-      "category": "Small Business Automation",
-      "id": "cfd68611-235e-4655-9e72-94ad1246640f",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "This actually happened.."
-      ],
-      "title": "This actually happened..",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vudj3q/this_actually_happened/"
-    },
-    {
-      "builder_takeaway": "Request for informal code review of a personal project; no reusable content.",
-      "category": "Small Business Automation",
-      "id": "7be7e138-d92c-4065-a45a-8064c027ebdc",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "Revision de codigo?"
-      ],
-      "title": "Revision de codigo?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vv0l2g/revision_de_codigo/"
-    },
-    {
-      "builder_takeaway": "Request for feedback on a draft blog post; no claim or finding.",
-      "category": "Small Business Automation",
-      "id": "c85128fa-3456-421b-87cf-a14dca3868e1",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "Want an advice on a Blog"
-      ],
-      "title": "Want an advice on a Blog",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vv05t4/want_an_advice_on_a_blog/"
-    },
-    {
-      "builder_takeaway": "Idea-solicitation post with no findings.",
-      "category": "Small Business Automation",
-      "id": "331770af-e6b9-449e-a7cc-a83fd9b9a1a2",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "Looking for annoying daily tasks or workflows you wish were automated"
-      ],
-      "title": "Looking for annoying daily tasks or workflows you wish were automated",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vv2q41/looking_for_annoying_daily_tasks_or_workflows_you/"
-    },
-    {
-      "builder_takeaway": "Promotional launch post for an AI-referral attribution tool, framed as a discovery; no independent evidence.",
-      "category": "Small Business Automation",
-      "id": "18e566db-823e-4d23-a527-377d4f490627",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "Now know why AI sent your visitors"
-      ],
-      "title": "Now know why AI sent your visitors",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vuzy01/now_know_why_ai_sent_your_visitors/"
-    },
-    {
-      "builder_takeaway": "Beginner validation-advice request; well-covered ground with no new information.",
-      "category": "Small Business Automation",
-      "id": "6247fbd8-f62b-46e4-9fb1-507e67b6dc66",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "How do you properly validate a B2C SaaS idea before building it?"
-      ],
-      "title": "How do you properly validate a B2C SaaS idea before building it?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vusjki/how_do_you_properly_validate_a_b2c_saas_idea/"
-    },
-    {
-      "builder_takeaway": "Hype-cycle commentary and speculation with no substance or evidence.",
-      "category": "Small Business Automation",
-      "id": "49b4f912-69a7-47c2-b116-612d157bdb7e",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "What is your take on raise of outbid sites?"
-      ],
-      "title": "What is your take on raise of outbid sites?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vv1ipv/what_is_your_take_on_raise_of_outbid_sites/"
-    },
-    {
-      "builder_takeaway": "Bare feedback solicitation with no content.",
-      "category": "Small Business Automation",
-      "id": "6debbc8f-7e24-46c4-9f35-54eb6ae08427",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "I want some real user feedback"
-      ],
-      "title": "I want some real user feedback",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vuwj4y/i_want_some_real_user_feedback/"
-    },
-    {
-      "builder_takeaway": "Self-promotional launch post for a pay-to-rank novelty site; no transferable insight.",
-      "category": "Small Business Automation",
-      "id": "6cc693ee-afa1-401e-8ecb-368ea18cd86c",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "Turned \"attention is winner-take-all\" into a $1 product"
-      ],
-      "title": "Turned \"attention is winner-take-all\" into a $1 product",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vv4dup/turned_attention_is_winnertakeall_into_a_1/"
-    },
-    {
-      "builder_takeaway": "Duplicate promotion of the same $1 leaderboard product posted under a second title.",
-      "category": "Small Business Automation",
-      "id": "6518c5f6-809d-427f-9544-b40964c44d99",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "The internet's front page always belongs to whoever paid the most"
-      ],
-      "title": "The internet's front page always belongs to whoever paid the most",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vv48k1/the_internets_front_page_always_belongs_to/"
-    },
-    {
-      "builder_takeaway": "Basic analytics tool request answerable in one line; no signal.",
-      "category": "Small Business Automation",
-      "id": "4fa15f34-7bf0-474c-a7c3-e6d38a5adc40",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "Where can I track my webapp?"
-      ],
-      "title": "Where can I track my webapp?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vuqslh/where_can_i_track_my_webapp/"
-    },
-    {
-      "builder_takeaway": "Generic first-customer distribution question with no reported outcome or data.",
-      "category": "Small Business Automation",
-      "id": "3dd4a262-b41f-4d52-8c86-82adf1447d84",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-08-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "Struggling to get my first customers for my SaaS"
-      ],
-      "title": "Struggling to get my first customers for my SaaS",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1vufods/struggling_to_get_my_first_customers_for_my_saas/"
+      "title": "Zero-Knowledge Proof of Wasta with Applications in Lebanon",
+      "uncertainty": "Research novelty outside lane.",
+      "url": "https://eprint.gacr.info/2025/003.pdf"
     }
   ],
   "mode": "primary",
-  "run_id": "a56dc8f1-e8df-4ec7-be61-459328c7bc8c",
+  "run_id": "73474a8c-7112-4388-897f-3a0ac3aa3605",
   "status": "completed",
-  "summary": "Synthesized Nightly Librarian run with 16 promoted item(s), 40 scored item(s), and 24 rejected item(s).",
+  "summary": "Synthesized Nightly Librarian run with 5 promoted item(s), 40 scored item(s), and 35 rejected item(s).",
   "title": "Nightly Librarian - 2026-08-22"
 }
