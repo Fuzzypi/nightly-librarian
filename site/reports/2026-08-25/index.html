@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>August 25, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="8 stories cleared the bar, led by Drew Breunig: Fable and the end of the free lunch, Fabien Sanglard: my agent.">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-08-25/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="August 25, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="8 stories cleared the bar, led by Drew Breunig: Fable and the end of the free lunch, Fabien Sanglard: my agent.">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-08-25/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="August 25, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="8 stories cleared the bar, led by Drew Breunig: Fable and the end of the free lunch, Fabien Sanglard: my agent.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>August 25, 2026 · Report log</span>
+      <span>Aug 25, 2026, 2:16 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>August 25, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>8 stories cleared the bar, led by Drew Breunig: Fable and the end of the free lunch, Fabien Sanglard: my agent.md for improving LLM-assisted code quality, and FT: Anthropic revenue climbs while cheaper tools take share.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>8 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Aug/23/drew-breunig/" target="_blank" rel="noopener">Drew Breunig: Fable and the end of the free lunch</a></div>
+        <div class="item-takeaway">Breunig argues the era of &quot;just wait for the next model&quot; is over. Previously each new model arrived at the same or lower price and papered over weak harnesses and context strategies, so tuning them was wasted effort. Fable broke that pattern: it is materially better but expensive enough that Opus, GPT-5.6, K3 and GLM remain good enough for most code. The practical move is to stop treating model choice as global and start routing work by tier, sending only the tasks that genuinely need frontier reasoning to the expensive model.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://fabiensanglard.net/agent.md/index.html" target="_blank" rel="noopener">Fabien Sanglard: my agent.md for improving LLM-assisted code quality</a></div>
+        <div class="item-takeaway">Sanglard publishes the agent instruction file he uses to constrain LLM coding assistants and raise output quality. It is the same class of artifact as CLAUDE.md or AGENTS.md: a checked-in set of standing rules the model reads before touching code. Worth diffing against your own agent instructions to see which constraints you are missing.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/" target="_blank" rel="noopener">FT: Anthropic revenue climbs while cheaper tools take share</a></div>
+        <div class="item-takeaway">Simon Willison pulls the numbers out of an FT report sourced to people familiar with the matter: Anthropic annualised revenue reached about $65bn in July, up from $47bn in May, with roughly 6,000 customers spending $100k or more per year and Q3 expected to be profitable. OpenAI annualised revenue is above $40bn, up 35% in the quarter following the July launch of GPT-5.6. The framing that matters for a solo builder is the same one Breunig makes: the frontier model is not automatically the one users choose, and cheaper tools are absorbing real volume.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://status.claude.com/incidents/vgz5psbjmt1h" target="_blank" rel="noopener">Claude API: elevated errors across multiple models (Aug 24)</a></div>
+        <div class="item-takeaway">Anthropic logged elevated error rates on requests to Claude Mythos 5, Fable 5, Opus 5 and other models, first reported 05:06 UTC on Aug 24 and identified at 05:27. By 07:47 errors had stabilised on Opus 5 and Fable 5, with work continuing to restore success rates on the remaining models. If your agent runs threw unexplained failures yesterday morning, this is almost certainly why — check retry and fallback behaviour rather than hunting for a bug in your own code.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://surfingcomplexity.blog/2026/08/22/wild-ai-related-reliability-incidents-are-coming/" target="_blank" rel="noopener">Wild AI-related reliability incidents are coming</a></div>
+        <div class="item-takeaway">A resilience-engineering argument that pushing LLM agents into production paths will produce novel and hard-to-diagnose failure modes. Forward-looking rather than evidenced, but it comes from a serious incident-analysis writer and is a useful prompt to check what your agents can actually do when they misfire.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://pantel.is/projects/ai-gaming-companion/" target="_blank" rel="noopener">A low-latency AI companion that plays Skyrim alongside you</a></div>
+        <div class="item-takeaway">A builder writeup of a real-time voice AI companion wired into Skyrim, with low latency as the explicit design constraint. The game framing is incidental; the transferable part is the speech-in to speech-out pipeline and the latency budget decisions, which are the same problems any voice agent product faces.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/" target="_blank" rel="noopener">Google Workspace classified my domain as an email provider (2025)</a></div>
+        <div class="item-takeaway">A writeup of Google Workspace misclassifying a personal domain as an email provider, with the downstream delivery and account consequences that follow. Useful as a failure mode to recognise early if you run mail on a custom domain, because the symptoms are easy to misattribute to your own DNS or SPF setup.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1vwyhwq/from_0_to_800_users_what_i_learned_from_building/" target="_blank" rel="noopener">From 0 to 800 users with a freemium Chrome extension</a></div>
+        <div class="item-takeaway">A price-tracking Chrome extension reached roughly 800 active users and close to 3,000 installs on a freemium model, generating some revenue but not yet a business. The author reports that building the core feature was the easy part, with distribution and conversion the actual constraint. Honest small numbers, which makes it more useful than the usual growth retrospective.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://joeyh.name/blog/entry/offgrid_electric_car/" target="_blank" rel="noopener">Offgrid electric car (2025)</a>
+        </div>
+        <div class="item-takeaway">Personal writeup about running an electric car off-grid. No software or business relevance.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.scd31.com/posts/defcon-choker" target="_blank" rel="noopener">My DIY DEF CON choker has a screen on it</a>
+        </div>
+        <div class="item-takeaway">A hardware badge-craft project built for DEF CON. Entertaining but carries no transferable engineering or business decision.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://codeberg.org/SirWumpus/eh" target="_blank" rel="noopener">eh: a minimalist vi-like editor</a>
+        </div>
+        <div class="item-takeaway">A small vi-like editor in C with UTF-8, regex search and replace, shell filters and multi-level undo, descended from an IOCCC 2024 entry. Well made but offers no leverage over existing editors.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://tmpout.sh/5/" target="_blank" rel="noopener">tmp.0ut volume 5</a>
+        </div>
+        <div class="item-takeaway">New issue of a low-level binary and ELF hacking zine. Specialist reverse-engineering material with no actionable content for a solo application developer.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.tymscar.com/posts/howtoreportabug/" target="_blank" rel="noopener">How to report a bug so it actually gets fixed</a>
+        </div>
+        <div class="item-takeaway">General guidance on writing effective bug reports. Sound advice but well-trodden ground for an experienced developer.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://surfingcomplexity.blog/2026/08/22/wild-ai-related-reliability-incidents-are-coming/" target="_blank" rel="noopener">Wild AI-related reliability incidents are coming</a>
+        </div>
+        <div class="item-takeaway">A resilience-engineering argument that pushing LLM agents into production paths will produce novel and hard-to-diagnose failure modes. Forward-looking rather than evidenced, but it comes from a serious incident-analysis writer and is a useful prompt to check what your agents can actually do when they misfire.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://gcc.gnu.org/onlinedocs/jit/intro/tutorial04.html" target="_blank" rel="noopener">Adding JIT-compilation to a toy interpreter with libgccjit</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://hugodaniel.com/posts/declarative-webgpu-with-s-expressions/" target="_blank" rel="noopener">Declarative WebGPU with S-expressions</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/daniel5151/clicky" target="_blank" rel="noopener">clicky: A clickwheel iPod emulator</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.colino.net/wordpress/archives/2026/08/23/kodak-dc50-now-usable-on-the-apple-ii/" target="_blank" rel="noopener">Kodak DC50 now usable on the Apple II</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/" target="_blank" rel="noopener">FT: Anthropic revenue climbs while cheaper tools take share</a>
+        </div>
+        <div class="item-takeaway">Simon Willison pulls the numbers out of an FT report sourced to people familiar with the matter: Anthropic annualised revenue reached about $65bn in July, up from $47bn in May, with roughly 6,000 customers spending $100k or more per year and Q3 expected to be profitable. OpenAI annualised revenue is above $40bn, up 35% in the quarter following the July launch of GPT-5.6. The framing that matters for a solo builder is the same one Breunig makes: the frontier model is not automatically the one users choose, and cheaper tools are absorbing real volume.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Aug/23/drew-breunig/" target="_blank" rel="noopener">Drew Breunig: Fable and the end of the free lunch</a>
+        </div>
+        <div class="item-takeaway">Breunig argues the era of &quot;just wait for the next model&quot; is over. Previously each new model arrived at the same or lower price and papered over weak harnesses and context strategies, so tuning them was wasted effort. Fable broke that pattern: it is materially better but expensive enough that Opus, GPT-5.6, K3 and GLM remain good enough for most code. The practical move is to stop treating model choice as global and start routing work by tier, sending only the tasks that genuinely need frontier reasoning to the expensive model.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://schlarp.com/posts/everything-i-own-owned/" target="_blank" rel="noopener">Everything I own, owned</a>
+        </div>
+        <div class="item-takeaway">Post reached the front page but the origin site was unavailable and only an archive link was captured, leaving the claim unverifiable this run.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245" target="_blank" rel="noopener">Anthropic's best AI model struggles to attract users as cheaper tools thrive</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lalitm.com/post/find-problems-staff-engineer/" target="_blank" rel="noopener">How I find problems to solve as a staff engineer</a>
+        </div>
+        <div class="item-takeaway">Career guidance on sourcing high-impact work inside a large engineering organisation. The organisational-politics framing does not map onto a one-person shop.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://pantel.is/projects/ai-gaming-companion/" target="_blank" rel="noopener">A low-latency AI companion that plays Skyrim alongside you</a>
+        </div>
+        <div class="item-takeaway">A builder writeup of a real-time voice AI companion wired into Skyrim, with low latency as the explicit design constraint. The game framing is incidental; the transferable part is the speech-in to speech-out pipeline and the latency budget decisions, which are the same problems any voice agent product faces.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.rte.ie/news/business/2026/0824/1588931-repair-rules/" target="_blank" rel="noopener">New EU-wide product repair rules come into force</a>
+        </div>
+        <div class="item-takeaway">EU right-to-repair obligations take effect for manufacturers of physical goods. Real regulatory news but outside the scope of a software practice.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://fabiensanglard.net/agent.md/index.html" target="_blank" rel="noopener">Fabien Sanglard: my agent.md for improving LLM-assisted code quality</a>
+        </div>
+        <div class="item-takeaway">Sanglard publishes the agent instruction file he uses to constrain LLM coding assistants and raise output quality. It is the same class of artifact as CLAUDE.md or AGENTS.md: a checked-in set of standing rules the model reads before touching code. Worth diffing against your own agent instructions to see which constraints you are missing.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/" target="_blank" rel="noopener">Google Workspace classified my domain as an email provider (2025)</a>
+        </div>
+        <div class="item-takeaway">A writeup of Google Workspace misclassifying a personal domain as an email provider, with the downstream delivery and account consequences that follow. Useful as a failure mode to recognise early if you run mail on a custom domain, because the symptoms are easy to misattribute to your own DNS or SPF setup.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://earendil.com/posts/what-is-a-harness/" target="_blank" rel="noopener">What Is a Harness?</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://how.complexsystems.fail/" target="_blank" rel="noopener">How Complex Systems Fail (1998)</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.jepeake.com/ai-chip-architectures" target="_blank" rel="noopener">AI Chip Architectures</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://securelist.com/android-head-unit-malware/121106/" target="_blank" rel="noopener">Malware infects Android-based automotive head unit firmware</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.dbreunig.com/2026/08/23/fable-the-end-of-moore-s-law.html" target="_blank" rel="noopener">Fable and the end of the free lunch</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://bookdna.com/best-books/nonfiction-about-cults-scams-and-schemes" target="_blank" rel="noopener">My favorite nonfiction books about cults, scams, and schemes</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://punyamishra.com/2026/04/16/why-sal-khant-on-learning-by-making-but-teaching-by-telling/" target="_blank" rel="noopener">Why Sal Khan't: On Learning by Making but Teaching by Telling</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/AlpinDale/gpt2.cmake" target="_blank" rel="noopener">Implementation of GPT-2 in pure CMake</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://timharford.com/2026/08/explain-it-to-me-like-im-ten/" target="_blank" rel="noopener">Explain it to me like I'm ten</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://debloat.dev/" target="_blank" rel="noopener">A website for debloated open source alternatives</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://status.claude.com/incidents/vgz5psbjmt1h" target="_blank" rel="noopener">Claude API: elevated errors across multiple models (Aug 24)</a>
+        </div>
+        <div class="item-takeaway">Anthropic logged elevated error rates on requests to Claude Mythos 5, Fable 5, Opus 5 and other models, first reported 05:06 UTC on Aug 24 and identified at 05:27. By 07:47 errors had stabilised on Opus 5 and Fable 5, with work continuing to restore success rates on the remaining models. If your agent runs threw unexplained failures yesterday morning, this is almost certainly why — check retry and fallback behaviour rather than hunting for a bug in your own code.</div>
+        <div class="item-meta">
+          <span>claude-status</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vwyeb8/an_indie_founder_obviously/" target="_blank" rel="noopener">An indie founder, obviously</a>
+        </div>
+        <div class="item-takeaway">An image meme post with no substantive content.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vwyhwq/from_0_to_800_users_what_i_learned_from_building/" target="_blank" rel="noopener">From 0 to 800 users with a freemium Chrome extension</a>
+        </div>
+        <div class="item-takeaway">A price-tracking Chrome extension reached roughly 800 active users and close to 3,000 installs on a freemium model, generating some revenue but not yet a business. The author reports that building the core feature was the easy part, with distribution and conversion the actual constraint. Honest small numbers, which makes it more useful than the usual growth retrospective.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vwyho4/base44s_80m_solo_exit_is_wild_heres_the_actual/" target="_blank" rel="noopener">Base44 $80m solo exit takeaways</a>
+        </div>
+        <div class="item-takeaway">A retelling of the Base44 acquisition by Wix with generic conclusions about shipping speed and automation. The underlying event is old news and the takeaways add nothing testable.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vwy6xz/whats_the_biggest_gap_in_your_outbound_strategy/" target="_blank" rel="noopener">What is the biggest gap in your outbound strategy?</a>
+        </div>
+        <div class="item-takeaway">An open discussion prompt about outbound sales with no findings or data of its own.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vwzekl/whats_the_best_marketing_strategy_right_now/" target="_blank" rel="noopener">What is the best marketing strategy right now</a>
+        </div>
+        <div class="item-takeaway">A founder reports wasted spend on Google and Reddit ads and asks for direction. A question rather than a finding.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vwz0ez/how_do_you_get_feedback_and_convert_users_to/" target="_blank" rel="noopener">How do you get feedback and convert users to paying customers?</a>
+        </div>
+        <div class="item-takeaway">A macOS app with 36 users after 18 months, failed $300 of Google Ads, and strong CTR on very low impressions. The detail is real but the post asks for advice rather than offering any.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vwyxxz/japanese_university_students_made_app_for_gym_bro/" target="_blank" rel="noopener">Japanese University Students made app for gym bro</a>
+        </div>
+        <div class="item-takeaway">I am actually struggling in marketing and make user to use in their community I would like to know how to improve the amount of user and fan…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vwxnb3/is_making_a_saas_with_bubble_recommended/" target="_blank" rel="noopener">Is making a saas with bubble recommended?</a>
+        </div>
+        <div class="item-takeaway">I’ve been thinking of building something with bubble. Do you think it’s useful from the start of an MVP? Any advantages or disadvantages? Fr…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vwxlo1/this_is_what_your_customers_see_when_they_ask_ai/" target="_blank" rel="noopener">This is what your customers see when they ask AI for a recommendation. One answer, 2-3 names. You're in it or you don't exist.</a>
+        </div>
+        <div class="item-takeaway">We built WhoCanFindMe to measure this properly. It asks ChatGPT, Gemini, Perplexity and Claude the questions real buyers type, then records…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1vwxlnf/how_do_i_find_sponsors_for_launching_my/" target="_blank" rel="noopener">How do I find sponsors for launching my entertainment app?</a>
+        </div>
+        <div class="item-takeaway">Hey everyone! I'm about to launch an entertainment app and I'm looking to bring on a sponsor to help support the launch. This is my first ti…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 4102f739-a945-4270-a51d-6d041a6e9880
+Started: 2026-08-25T06:11:45.557Z
+Completed: 2026-08-25T06:16:10.612Z
+
+## Worth attention
+
+- **Drew Breunig: Fable and the end of the free lunch**
+  https://simonwillison.net/2026/Aug/23/drew-breunig/
+  Breunig argues the era of &quot;just wait for the next model&quot; is over. Previously each new model arrived at the same or lower price and papered over weak harnesses and context strategies, so tuning them was wasted effort. Fable broke that pattern: it is materially better but expensive enough that Opus, GPT-5.6, K3 and GLM remain good enough for most code. The practical move is to stop treating model choice as global and start routing work by tier, sending only the tasks that genuinely need frontier reasoning to the expensive model.
+- **Fabien Sanglard: my agent.md for improving LLM-assisted code quality**
+  https://fabiensanglard.net/agent.md/index.html
+  Sanglard publishes the agent instruction file he uses to constrain LLM coding assistants and raise output quality. It is the same class of artifact as CLAUDE.md or AGENTS.md: a checked-in set of standing rules the model reads before touching code. Worth diffing against your own agent instructions to see which constraints you are missing.
+- **FT: Anthropic revenue climbs while cheaper tools take share**
+  https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/
+  Simon Willison pulls the numbers out of an FT report sourced to people familiar with the matter: Anthropic annualised revenue reached about $65bn in July, up from $47bn in May, with roughly 6,000 customers spending $100k or more per year and Q3 expected to be profitable. OpenAI annualised revenue is above $40bn, up 35% in the quarter following the July launch of GPT-5.6. The framing that matters for a solo builder is the same one Breunig makes: the frontier model is not automatically the one users choose, and cheaper tools are absorbing real volume.
+- **Claude API: elevated errors across multiple models (Aug 24)**
+  https://status.claude.com/incidents/vgz5psbjmt1h
+  Anthropic logged elevated error rates on requests to Claude Mythos 5, Fable 5, Opus 5 and other models, first reported 05:06 UTC on Aug 24 and identified at 05:27. By 07:47 errors had stabilised on Opus 5 and Fable 5, with work continuing to restore success rates on the remaining models. If your agent runs threw unexplained failures yesterday morning, this is almost certainly why — check retry and fallback behaviour rather than hunting for a bug in your own code.
+- **Wild AI-related reliability incidents are coming**
+  https://surfingcomplexity.blog/2026/08/22/wild-ai-related-reliability-incidents-are-coming/
+  A resilience-engineering argument that pushing LLM agents into production paths will produce novel and hard-to-diagnose failure modes. Forward-looking rather than evidenced, but it comes from a serious incident-analysis writer and is a useful prompt to check what your agents can actually do when they misfire.
+- **A low-latency AI companion that plays Skyrim alongside you**
+  https://pantel.is/projects/ai-gaming-companion/
+  A builder writeup of a real-time voice AI companion wired into Skyrim, with low latency as the explicit design constraint. The game framing is incidental; the transferable part is the speech-in to speech-out pipeline and the latency budget decisions, which are the same problems any voice agent product faces.
+- **Google Workspace classified my domain as an email provider (2025)**
+  https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/
+  A writeup of Google Workspace misclassifying a personal domain as an email provider, with the downstream delivery and account consequences that follow. Useful as a failure mode to recognise early if you run mail on a custom domain, because the symptoms are easy to misattribute to your own DNS or SPF setup.
+- **From 0 to 800 users with a freemium Chrome extension**
+  https://www.reddit.com/r/SaaS/comments/1vwyhwq/from_0_to_800_users_what_i_learned_from_building/
+  A price-tracking Chrome extension reached roughly 800 active users and close to 3,000 installs on a freemium model, generating some revenue but not yet a business. The author reports that building the core feature was the easy part, with distribution and conversion the actual constraint. Honest small numbers, which makes it more useful than the usual growth retrospective.
+
+## Full digest
+
+- [R] [lobsters] Offgrid electric car (2025) — https://joeyh.name/blog/entry/offgrid_electric_car/ — Personal writeup about running an electric car off-grid. No software or business relevance.
+- [R] [lobsters] My DIY DEF CON choker has a screen on it — https://www.scd31.com/posts/defcon-choker — A hardware badge-craft project built for DEF CON. Entertaining but carries no transferable engineering or business decision.
+- [R] [lobsters] eh: a minimalist vi-like editor — https://codeberg.org/SirWumpus/eh — A small vi-like editor in C with UTF-8, regex search and replace, shell filters and multi-level undo, descended from an IOCCC 2024 entry. Well made but offers no leverage over existing editors.
+- [R] [lobsters] tmp.0ut volume 5 — https://tmpout.sh/5/ — New issue of a low-level binary and ELF hacking zine. Specialist reverse-engineering material with no actionable content for a solo application developer.
+- [R] [lobsters] How to report a bug so it actually gets fixed — https://blog.tymscar.com/posts/howtoreportabug/ — General guidance on writing effective bug reports. Sound advice but well-trodden ground for an experienced developer.
+- [M] [lobsters] Wild AI-related reliability incidents are coming — https://surfingcomplexity.blog/2026/08/22/wild-ai-related-reliability-incidents-are-coming/ — A resilience-engineering argument that pushing LLM agents into production paths will produce novel and hard-to-diagnose failure modes. Forward-looking rather than evidenced, but it comes from a serious incident-analysis writer and is a useful prompt to check what your agents can actually do when they misfire.
+- [R] [lobsters] Adding JIT-compilation to a toy interpreter with libgccjit — https://gcc.gnu.org/onlinedocs/jit/intro/tutorial04.html — Comments
+- [R] [lobsters] Declarative WebGPU with S-expressions — https://hugodaniel.com/posts/declarative-webgpu-with-s-expressions/ — Comments
+- [R] [lobsters] clicky: A clickwheel iPod emulator — https://github.com/daniel5151/clicky — Comments
+- [R] [lobsters] Kodak DC50 now usable on the Apple II — https://www.colino.net/wordpress/archives/2026/08/23/kodak-dc50-now-usable-on-the-apple-ii/ — Comments
+- [P] [simon-willison] FT: Anthropic revenue climbs while cheaper tools take share — https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/ — Simon Willison pulls the numbers out of an FT report sourced to people familiar with the matter: Anthropic annualised revenue reached about $65bn in July, up from $47bn in May, with roughly 6,000 customers spending $100k or more per year and Q3 expected to be profitable. OpenAI annualised revenue is above $40bn, up 35% in the quarter following the July launch of GPT-5.6. The framing that matters for a solo builder is the same one Breunig makes: the frontier model is not automatically the one users choose, and cheaper tools are absorbing real volume.
+- [P] [simon-willison] Drew Breunig: Fable and the end of the free lunch — https://simonwillison.net/2026/Aug/23/drew-breunig/ — Breunig argues the era of &quot;just wait for the next model&quot; is over. Previously each new model arrived at the same or lower price and papered over weak harnesses and context strategies, so tuning them was wasted effort. Fable broke that pattern: it is materially better but expensive enough that Opus, GPT-5.6, K3 and GLM remain good enough for most code. The practical move is to stop treating model choice as global and start routing work by tier, sending only the tasks that genuinely need frontier reasoning to the expensive model.
+- [R] [hn-top] Everything I own, owned — https://schlarp.com/posts/everything-i-own-owned/ — Post reached the front page but the origin site was unavailable and only an archive link was captured, leaving the claim unverifiable this run.
+- [R] [hn-top] Anthropic's best AI model struggles to attract users as cheaper tools thrive — https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245 — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] How I find problems to solve as a staff engineer — https://lalitm.com/post/find-problems-staff-engineer/ — Career guidance on sourcing high-impact work inside a large engineering organisation. The organisational-politics framing does not map onto a one-person shop.
+- [P] [hn-top] A low-latency AI companion that plays Skyrim alongside you — https://pantel.is/projects/ai-gaming-companion/ — A builder writeup of a real-time voice AI companion wired into Skyrim, with low latency as the explicit design constraint. The game framing is incidental; the transferable part is the speech-in to speech-out pipeline and the latency budget decisions, which are the same problems any voice agent product faces.
+- [R] [hn-top] New EU-wide product repair rules come into force — https://www.rte.ie/news/business/2026/0824/1588931-repair-rules/ — EU right-to-repair obligations take effect for manufacturers of physical goods. Real regulatory news but outside the scope of a software practice.
+- [P] [hn-top] Fabien Sanglard: my agent.md for improving LLM-assisted code quality — https://fabiensanglard.net/agent.md/index.html — Sanglard publishes the agent instruction file he uses to constrain LLM coding assistants and raise output quality. It is the same class of artifact as CLAUDE.md or AGENTS.md: a checked-in set of standing rules the model reads before touching code. Worth diffing against your own agent instructions to see which constraints you are missing.
+- [P] [hn-top] Google Workspace classified my domain as an email provider (2025) — https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/ — A writeup of Google Workspace misclassifying a personal domain as an email provider, with the downstream delivery and account consequences that follow. Useful as a failure mode to recognise early if you run mail on a custom domain, because the symptoms are easy to misattribute to your own DNS or SPF setup.
+- [R] [hn-top] What Is a Harness? — https://earendil.com/posts/what-is-a-harness/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] How Complex Systems Fail (1998) — https://how.complexsystems.fail/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] AI Chip Architectures — https://www.jepeake.com/ai-chip-architectures — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Malware infects Android-based automotive head unit firmware — https://securelist.com/android-head-unit-malware/121106/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Fable and the end of the free lunch — https://www.dbreunig.com/2026/08/23/fable-the-end-of-moore-s-law.html — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] My favorite nonfiction books about cults, scams, and schemes — https://bookdna.com/best-books/nonfiction-about-cults-scams-and-schemes — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Why Sal Khan't: On Learning by Making but Teaching by Telling — https://punyamishra.com/2026/04/16/why-sal-khant-on-learning-by-making-but-teaching-by-telling/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Implementation of GPT-2 in pure CMake — https://github.com/AlpinDale/gpt2.cmake — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Explain it to me like I'm ten — https://timharford.com/2026/08/explain-it-to-me-like-im-ten/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] A website for debloated open source alternatives — https://debloat.dev/ — Scheduled agent omitted this claimed item from the completion payload.
+- [P] [claude-status] Claude API: elevated errors across multiple models (Aug 24) — https://status.claude.com/incidents/vgz5psbjmt1h — Anthropic logged elevated error rates on requests to Claude Mythos 5, Fable 5, Opus 5 and other models, first reported 05:06 UTC on Aug 24 and identified at 05:27. By 07:47 errors had stabilised on Opus 5 and Fable 5, with work continuing to restore success rates on the remaining models. If your agent runs threw unexplained failures yesterday morning, this is almost certainly why — check retry and fallback behaviour rather than hunting for a bug in your own code.
+- [R] [reddit-saas] An indie founder, obviously — https://www.reddit.com/r/SaaS/comments/1vwyeb8/an_indie_founder_obviously/ — An image meme post with no substantive content.
+- [P] [reddit-saas] From 0 to 800 users with a freemium Chrome extension — https://www.reddit.com/r/SaaS/comments/1vwyhwq/from_0_to_800_users_what_i_learned_from_building/ — A price-tracking Chrome extension reached roughly 800 active users and close to 3,000 installs on a freemium model, generating some revenue but not yet a business. The author reports that building the core feature was the easy part, with distribution and conversion the actual constraint. Honest small numbers, which makes it more useful than the usual growth retrospective.
+- [R] [reddit-saas] Base44 $80m solo exit takeaways — https://www.reddit.com/r/SaaS/comments/1vwyho4/base44s_80m_solo_exit_is_wild_heres_the_actual/ — A retelling of the Base44 acquisition by Wix with generic conclusions about shipping speed and automation. The underlying event is old news and the takeaways add nothing testable.
+- [R] [reddit-saas] What is the biggest gap in your outbound strategy? — https://www.reddit.com/r/SaaS/comments/1vwy6xz/whats_the_biggest_gap_in_your_outbound_strategy/ — An open discussion prompt about outbound sales with no findings or data of its own.
+- [R] [reddit-saas] What is the best marketing strategy right now — https://www.reddit.com/r/SaaS/comments/1vwzekl/whats_the_best_marketing_strategy_right_now/ — A founder reports wasted spend on Google and Reddit ads and asks for direction. A question rather than a finding.
+- [R] [reddit-saas] How do you get feedback and convert users to paying customers? — https://www.reddit.com/r/SaaS/comments/1vwz0ez/how_do_you_get_feedback_and_convert_users_to/ — A macOS app with 36 users after 18 months, failed $300 of Google Ads, and strong CTR on very low impressions. The detail is real but the post asks for advice rather than offering any.
+- [R] [reddit-saas] Japanese University Students made app for gym bro — https://www.reddit.com/r/SaaS/comments/1vwyxxz/japanese_university_students_made_app_for_gym_bro/ — I am actually struggling in marketing and make user to use in their community I would like to know how to improve the amount of user and fan…
+- [R] [reddit-saas] Is making a saas with bubble recommended? — https://www.reddit.com/r/SaaS/comments/1vwxnb3/is_making_a_saas_with_bubble_recommended/ — I’ve been thinking of building something with bubble. Do you think it’s useful from the start of an MVP? Any advantages or disadvantages? Fr…
+- [R] [reddit-saas] This is what your customers see when they ask AI for a recommendation. One answer, 2-3 names. You're in it or you don't exist. — https://www.reddit.com/r/SaaS/comments/1vwxlo1/this_is_what_your_customers_see_when_they_ask_ai/ — We built WhoCanFindMe to measure this properly. It asks ChatGPT, Gemini, Perplexity and Claude the questions real buyers type, then records…
+- [R] [reddit-saas] How do I find sponsors for launching my entertainment app? — https://www.reddit.com/r/SaaS/comments/1vwxlnf/how_do_i_find_sponsors_for_launching_my/ — Hey everyone! I'm about to launch an entertainment app and I'm looking to bring on a sponsor to help support the launch. This is my first ti…</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
