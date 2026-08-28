@@ -1,0 +1,776 @@
+{
+  "date": "2026-08-28",
+  "generated_at": "2026-08-28T06:17:14.436Z",
+  "imported_from": {
+    "importer_version": "digest-import/v1",
+    "source_artifact": "artifacts/synthesized/2026-08-28.json",
+    "source_sha256": "24497314cb560e83bb26a63c01ff3ecede39f752b078f4461c9f4a68f5594064"
+  },
+  "items": [
+    {
+      "builder_takeaway": "A code forge encoding LLM policy into its terms is a platform-level change that can affect where a solo developer hosts code.",
+      "category": "Model + API Changes",
+      "id": "13aa72b9-6792-40fd-ad5e-e49c65b2967e",
+      "importance": "lead",
+      "labels": [
+        "vendor_claim",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "sourcehut.org",
+      "source_facts": [
+        "SourceHut has changed its terms of service to add explicit rules governing LLM-generated content and LLM crawlers on the platform."
+      ],
+      "title": "Changes to SourceHut's terms of service regarding LLMs",
+      "uncertainty": "Summary is based on the announcement title and SourceHut's prior public positions; the specific clauses were not read in full.",
+      "url": "https://sourcehut.org/blog/2026-08-27-tos-changes-and-llms/"
+    },
+    {
+      "builder_takeaway": "Open source release from a credible vendor that could simplify machine-to-machine transport for a solo operator running a VPS.",
+      "category": "Tools Worth Testing",
+      "id": "8f33788d-fb62-4ecb-8d86-3eb6258def13",
+      "importance": "supporting",
+      "labels": [
+        "early_signal",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Tailscale published tailcat, a netcat-like tool that uses Tailscale's data plane without requiring its control plane."
+      ],
+      "title": "tailcat: like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+      "uncertainty": "Maturity, platform support and production-readiness are unknown; the repository was not evaluated in depth.",
+      "url": "https://github.com/tailscale/tailcat"
+    },
+    {
+      "builder_takeaway": "Direct API surface change in a dependency commonly used for agent work, including skills and thinking-mode handling.",
+      "category": "Model + API Changes",
+      "id": "6e5cffc6-3568-40ff-a578-9d04641cb34f",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "langchain-anthropic 1.7.0 adds support for the Anthropic 1.0 SDK, a top-level container parameter for skills, and an updates thinking display mode."
+      ],
+      "title": "langchain-anthropic 1.7.0 adds Anthropic 1.0 SDK support and a skills container parameter",
+      "uncertainty": "Whether the Anthropic 1.0 SDK bump introduces breaking behaviour changes was not verified against the diff.",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.0"
+    },
+    {
+      "builder_takeaway": "Practical, first-hand distribution advice from a credible source for anyone doing outbound media outreach.",
+      "category": "Small Business Automation",
+      "id": "417c2c02-3d4d-41fe-ac9b-4a761894a505",
+      "importance": "supporting",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "blog.pragmaticengineer.com",
+      "source_facts": [
+        "A widely-read engineering writer says the large majority of podcast pitches from PR agencies and company marketing teams go unanswered because of how they are written."
+      ],
+      "title": "Why you're not getting a response to your podcast pitch from me (or others)",
+      "uncertainty": "One person's inbox; generalizes to other podcasters only loosely.",
+      "url": "https://blog.pragmaticengineer.com/why-youre-not-getting-a-response-to-your-podcast-pitch-from-me-or-others/"
+    },
+    {
+      "builder_takeaway": "A yanked release is worth knowing about before pinning a version.",
+      "category": "Tools Worth Testing",
+      "id": "b2fa9028-0d2e-459d-a5ea-0bf1b28b929d",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "langchain-core 1.6.1 includes a revert of the 1.6.2 release plus fixes to streaming content indexing and StructuredTool JSON serialization."
+      ],
+      "title": "langchain-core 1.6.1 reverts the 1.6.2 release",
+      "uncertainty": "The reason for the 1.6.2 revert is not stated in the release notes.",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.1"
+    },
+    {
+      "builder_takeaway": "Redaction correctness touches data handling, so it is worth flagging even as a patch.",
+      "category": "Tools Worth Testing",
+      "id": "6fd1c956-32fa-4c7a-8136-a1d6088862ee",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "langchain 1.3.18 fixes PIIMiddleware redaction so that it preserves content-block shape."
+      ],
+      "title": "langchain 1.3.18 fixes PIIMiddleware redaction",
+      "uncertainty": "Whether the prior behaviour caused redaction to fail open or merely malform output is not stated.",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.18"
+    },
+    {
+      "builder_takeaway": "Early signal on MCP handling improvements in a widely used agent framework.",
+      "category": "AI Operations / Agent Control",
+      "id": "182736f9-9978-48a3-906f-86f062762158",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "langchain 1.4.0a1 is an alpha release that fixes handling of an MCP content type the conversion layer could not process."
+      ],
+      "title": "langchain 1.4.0a1 alpha with MCP content-type fix",
+      "uncertainty": "Alpha scope and eventual 1.4 release contents are unsettled.",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a1"
+    },
+    {
+      "builder_takeaway": "Possible model availability signal, and a concrete pipeline defect worth fixing.",
+      "category": "Model + API Changes",
+      "id": "60ad3f38-03b6-4bd5-a52e-ef5c78ac496c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "aistudio.google.com",
+      "source_facts": [
+        "A Google AI Studio link surfaced by the changelog scraper references a model identifier gemini-3.7-flash, but no changelog content was captured."
+      ],
+      "title": "Google AI Studio changelog item referencing gemini-3.7-flash (broken localized scrape)",
+      "uncertainty": "The item is a broken scrape with no body; the model reference may be a stale or speculative URL parameter rather than an availability signal.",
+      "url": "https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash&hl=bn"
+    },
+    {
+      "builder_takeaway": "Signal on how major open source projects are funding maintenance, relevant to dependency health over time.",
+      "category": "Tools Worth Testing",
+      "id": "6bf68454-8c95-4b2c-b8e2-fe6f847468c8",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "blog.rust-lang.org",
+      "source_facts": [
+        "The Rust project has announced its first Maintainers in Residence, a funded programme for paid maintainer work."
+      ],
+      "title": "Rust announces its first Maintainers in Residence",
+      "uncertainty": "Scope, funding size and duration of the programme were not read in detail.",
+      "url": "https://blog.rust-lang.org/2026/08/26/announcing-our-first-maintainers-in-residence/"
+    },
+    {
+      "builder_takeaway": "Open dataset releases at this scale periodically shift what small teams can build, though not applicable today.",
+      "category": "Tools Worth Testing",
+      "id": "3d6379da-a03a-4f86-8ca5-f61fc07f50a9",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "projects.laion.ai",
+      "source_facts": [
+        "LAION has released a large open video dataset called the Big Video Dataset."
+      ],
+      "title": "LAION Big Video Dataset",
+      "uncertainty": "No body content was captured; size, licence terms and provenance are unknown.",
+      "url": "https://projects.laion.ai/bvd/"
+    },
+    {
+      "builder_takeaway": "Patch release for the Fireworks provider package, dropping reasoning history blocks and refreshing model profile data. No user-facing change unless you use Fireworks through langchain.",
+      "category": "Tools Worth Testing",
+      "id": "4d260a8f-e5c4-4efd-aec9-a382b8666762",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "langchain-fireworks 1.6.1 is a patch release that drops reasoning history blocks and refreshes model profile data."
+      ],
+      "title": "langchain-fireworks==1.6.1",
+      "uncertainty": "",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.6.1"
+    },
+    {
+      "builder_takeaway": "Patch release whose only listed change is copying glibc into the distroless runners image as a matched pair. Build-plumbing fix with no user-facing behaviour change.",
+      "category": "Tools Worth Testing",
+      "id": "4fd8dd00-b8b0-4dd7-988a-a3821c7ad2a1",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n 2.37.3 is a patch release that copies glibc into the distroless runners image as a matched pair."
+      ],
+      "title": "n8n@2.37.3",
+      "uncertainty": "",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.37.3"
+    },
+    {
+      "builder_takeaway": "A moving beta tag carrying the identical 2.37.3 changelog. Duplicate of the 2.37.3 release item.",
+      "category": "Tools Worth Testing",
+      "id": "16e54599-3b86-4dc0-b168-66713d6c4a62",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "The n8n beta release tag carries the same changelog as the n8n 2.37.3 patch release."
+      ],
+      "title": "n8n beta tag",
+      "uncertainty": "",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/beta"
+    },
+    {
+      "builder_takeaway": "A YC company launch post for an insurance brokerage serving robotics, drone, autonomous systems and satellite companies. Promotional launch content with no relevance to a solo software shop.",
+      "category": "Small Business Automation",
+      "id": "c79651e4-0dcd-4389-b80d-5271ed6835ab",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "risklytics.ai",
+      "source_facts": [
+        "Risklytics, a YC S26 company, launched an insurance brokerage aimed at robotics, drone, autonomous systems and satellite companies."
+      ],
+      "title": "Launch HN: Risklytics (YC S26) – Insurance brokerage for frontier tech companies",
+      "uncertainty": "",
+      "url": "https://www.risklytics.ai/"
+    },
+    {
+      "builder_takeaway": "Obituary for the actor Tim Curry. Entertainment news, entirely out of scope for this digest.",
+      "category": "Small Business Automation",
+      "id": "38a626e8-5c95-4755-89e0-054591d1c071",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "theguardian.com",
+      "source_facts": [
+        "The actor Tim Curry has died."
+      ],
+      "title": "Tim Curry has died",
+      "uncertainty": "",
+      "url": "https://www.theguardian.com/film/2026/aug/26/tim-curry-dies-rocky-horror-show-stephen-king-it-legend-film"
+    },
+    {
+      "builder_takeaway": "An opinion post about using Obsidian with AI and the difficulty of following through on AI-suggested ideas. No body content was captured and there is no reproducible method or data behind it.",
+      "category": "AI Operations / Agent Control",
+      "id": "8bbcbf7f-6873-42bc-aed7-5c34972a4c72",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "ssp.sh",
+      "source_facts": [
+        "A writer argues it is harder to finish work on ideas suggested by AI than on ideas that originated with the author."
+      ],
+      "title": "It's so hard to finish an idea that is not yours and is just suggested by AI",
+      "uncertainty": "",
+      "url": "https://www.ssp.sh/brain/using-obsidian-with-ai/"
+    },
+    {
+      "builder_takeaway": "A 2002 essay on open source usability, resurfaced from the Internet Archive. Historically interesting but changes no decision today.",
+      "category": "Tools Worth Testing",
+      "id": "e86a5c7d-1d13-4c5b-90a6-655e917cd6c1",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "web.archive.org",
+      "source_facts": [
+        "A 2002 essay argues that free software usability suffers due to structural features of how open source projects are built."
+      ],
+      "title": "Why Free Software usability tends to suck (2002)",
+      "uncertainty": "",
+      "url": "https://web.archive.org/web/20030201183139/http://mpt.phrasewise.com/discuss/msgReader$173"
+    },
+    {
+      "builder_takeaway": "A video about how the Dolphin emulator handles a specific game's anti-piracy checks. Emulator trivia with no bearing on a solo software business.",
+      "category": "Tools Worth Testing",
+      "id": "997a1126-359b-48a6-9e52-7fdf64002ff3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "youtube.com",
+      "source_facts": [
+        "A video explains how the Dolphin emulator works around anti-piracy protection in the game The Smurfs Dance Party."
+      ],
+      "title": "How Dolphin deals with the anti-piracy of \"The Smurfs Dance Party\"",
+      "uncertainty": "",
+      "url": "https://www.youtube.com/watch?v=wN2WdO4c_jM"
+    },
+    {
+      "builder_takeaway": "Corporate announcement about OpenAI expanding market presence and developer engagement in Brazil. No product, pricing or API change.",
+      "category": "Small Business Automation",
+      "id": "073d4ba6-7dbf-41fb-b4e6-79732e14467f",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "openai.com",
+      "source_facts": [
+        "OpenAI announced an expansion of its presence in Brazil to deepen engagement with developers and businesses there."
+      ],
+      "title": "Expanding OpenAI's presence in Brazil",
+      "uncertainty": "",
+      "url": "https://openai.com/index/expanding-our-presence-in-brazil"
+    },
+    {
+      "builder_takeaway": "A founder building an HR SaaS asking for generic marketing help. No information content.",
+      "category": "Small Business Automation",
+      "id": "5f89f0bb-c58b-4dc9-bbfc-ed1a5e8e6b0a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A Reddit poster building an HR SaaS is asking for marketing help."
+      ],
+      "title": "Can any one help?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzmtth/can_any_one_help/"
+    },
+    {
+      "builder_takeaway": "Open-ended request for startup advice after a previous product failed. No findings or data.",
+      "category": "Small Business Automation",
+      "id": "cf588d13-7a95-4dbe-95bd-1e94981ce0f1",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A Reddit poster whose previous SaaS failed is asking for general advice on building a new one."
+      ],
+      "title": "Building new Saas, any advice",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzmo5u/building_new_saas_any_advice/"
+    },
+    {
+      "builder_takeaway": "A discussion prompt about tooling for contact forms on small projects. No conclusion, benchmark or recommendation captured.",
+      "category": "Small Business Automation",
+      "id": "4f7aa747-3cef-406a-86bf-109a9a9edfd2",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A Reddit poster asks how others handle contact form submissions on small projects without building a custom backend endpoint."
+      ],
+      "title": "How do you handle contact forms on small projects?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzmb6f/how_do_you_handle_contact_forms_on_small_projects/"
+    },
+    {
+      "builder_takeaway": "Self-promotion for a technology-lookup lead generation tool aimed at web design outreach. Promotional.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "ec43c884-7671-4b47-a110-bf9e58e7ee58",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A Reddit poster promotes a tool that finds companies by the web technologies their sites run."
+      ],
+      "title": "I built a thing that'll let you find companies by their technologies",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzn1nx/i_built_a_thing_thatll_let_you_find_companies_by/"
+    },
+    {
+      "builder_takeaway": "Idea validation request for a team management product. No findings.",
+      "category": "Small Business Automation",
+      "id": "c8eb7219-ef27-4812-b0ce-d0670b919a62",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A Reddit poster asks which features would be useful in a team management SaaS they are considering building."
+      ],
+      "title": "Building a team management SaaS, what features would you actually find useful?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzn01y/building_a_team_management_saas_what_features/"
+    },
+    {
+      "builder_takeaway": "Open-ended discussion prompt about pre-build research processes. No conclusions captured.",
+      "category": "Small Business Automation",
+      "id": "f090e4e5-b77f-4448-9e06-34efe31535d9",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A Reddit poster asks other founders to describe their research process before building a SaaS product."
+      ],
+      "title": "what does your saas research process look like before you build?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzmo27/what_does_your_saas_research_process_look_like/"
+    },
+    {
+      "builder_takeaway": "Deferred by pre-triage over the per-run item cap and not individually reviewed. Recorded as rejected for this run.",
+      "category": "Small Business Automation",
+      "id": "48baa7a0-c615-4d17-a7d1-1439ba7dbeed",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Are chargebacks a data problem as much as a payments problem?"
+      ],
+      "title": "Are chargebacks a data problem as much as a payments problem?",
+      "uncertainty": "Not reviewed; deferred over the pre-triage cap.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzmbs5/are_chargebacks_a_data_problem_as_much_as_a/"
+    },
+    {
+      "builder_takeaway": "Deferred by pre-triage over the per-run item cap and not individually reviewed. Recorded as rejected for this run.",
+      "category": "Small Business Automation",
+      "id": "55c63995-7063-4657-83a7-754b4d3c7f78",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Most SaaS founders waste months building something nobody wants."
+      ],
+      "title": "Most SaaS founders waste months building something nobody wants.",
+      "uncertainty": "Not reviewed; deferred over the pre-triage cap.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzm782/most_saas_founders_waste_months_building/"
+    },
+    {
+      "builder_takeaway": "Deferred by pre-triage over the per-run item cap and not individually reviewed. Recorded as rejected for this run.",
+      "category": "Tools Worth Testing",
+      "id": "b647bf3c-fd9a-481e-b461-6489d730235c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Slate is a shadcn-inspired Blade UI kit for Laravel and Livewire built with Tailwind and Alpine.js."
+      ],
+      "title": "Slate - shadcn-inspired blade ui kit for laravel and livewire built using tailwind + alpine.js",
+      "uncertainty": "Not reviewed; deferred over the pre-triage cap.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzm765/slate_shadcninspired_blade_ui_kit_for_laravel_and/"
+    },
+    {
+      "builder_takeaway": "Deferred by pre-triage over the per-run item cap and not individually reviewed. Recorded as rejected for this run.",
+      "category": "Small Business Automation",
+      "id": "f27e40e4-82c3-46c2-a48a-fc07fcfff9ad",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A founder whose SaaS failed built a validation tool to avoid repeating the mistake."
+      ],
+      "title": "My last SaaS failed. So I built a tool to stop myself from making the same mistake again.",
+      "uncertainty": "Not reviewed; deferred over the pre-triage cap.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzm6y6/my_last_saas_failed_so_i_built_a_tool_to_stop/"
+    },
+    {
+      "builder_takeaway": "Deferred by pre-triage over the per-run item cap and not individually reviewed. Recorded as rejected for this run.",
+      "category": "Tools Worth Testing",
+      "id": "12a2b372-116b-45a5-9e44-d1ebd0954063",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A user reports degraded UI behaviour in Perplexity and asks whether others see the same."
+      ],
+      "title": "Not able to comprehend.. what is wrong with perplexity...? Is it happening with everyone or just me..",
+      "uncertainty": "Not reviewed; deferred over the pre-triage cap.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzm29y/not_able_to_comprehend_what_is_wrong_with/"
+    },
+    {
+      "builder_takeaway": "Deferred by pre-triage over the per-run item cap and not individually reviewed. Recorded as rejected for this run.",
+      "category": "Small Business Automation",
+      "id": "a24600a5-b937-44a7-a416-c7b6e01c5ad1",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "The author of the open source PaaS peon.sh reports landing their first paying customer."
+      ],
+      "title": "First customer on my PaaS Startup Peon.sh",
+      "uncertainty": "Not reviewed; deferred over the pre-triage cap.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzo7vf/first_customer_on_my_paas_startup_peonsh/"
+    },
+    {
+      "builder_takeaway": "Deferred by pre-triage over the per-run item cap and not individually reviewed. Recorded as rejected for this run.",
+      "category": "Small Business Automation",
+      "id": "b3d110ec-66cb-4787-abc9-fee571922fdb",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A community member complains that founder forums are filling with recognizably AI-generated posts."
+      ],
+      "title": "More original content, fewer AI posts",
+      "uncertainty": "Not reviewed; deferred over the pre-triage cap.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzo2bl/more_original_content_fewer_ai_posts/"
+    },
+    {
+      "builder_takeaway": "Deferred by pre-triage over the per-run item cap and not individually reviewed. Recorded as rejected for this run.",
+      "category": "AI Operations / Agent Control",
+      "id": "c77c0868-6eb3-4703-892a-152c73b2a6b2",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A builder made a portfolio tracker called Portico that exposes an MCP server so LLM clients can use portfolio data as context."
+      ],
+      "title": "Built a portfolio tracker with an MCP server so Claude and Cursor can use portfolios as context",
+      "uncertainty": "Not reviewed; deferred over the pre-triage cap.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzpay5/wanted_to_replace_yahoo_finance_as_my_portfolio/"
+    },
+    {
+      "builder_takeaway": "Deferred by pre-triage over the per-run item cap and not individually reviewed. Recorded as rejected for this run.",
+      "category": "Small Business Automation",
+      "id": "da1c8070-d3e3-47e5-978f-ce5170be44d4",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A founder shares an informal playbook for why some SaaS products get mentioned by AI assistants and others do not."
+      ],
+      "title": "My SaaS-GEO playbook",
+      "uncertainty": "Not reviewed; deferred over the pre-triage cap.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzp61l/my_saasgeo_playbook/"
+    },
+    {
+      "builder_takeaway": "Deferred by pre-triage over the per-run item cap and not individually reviewed. Recorded as rejected for this run.",
+      "category": "Small Business Automation",
+      "id": "9d758f3e-698e-4eba-a448-4da457b3c994",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A builder made a resume feedback tool and is asking for growth advice."
+      ],
+      "title": "I built a resume feedback tool and need advice on growth",
+      "uncertainty": "Not reviewed; deferred over the pre-triage cap.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzop05/i_built_a_resume_feedback_tool_and_need_advice_on/"
+    },
+    {
+      "builder_takeaway": "Deferred by pre-triage over the per-run item cap and not individually reviewed. Recorded as rejected for this run.",
+      "category": "Small Business Automation",
+      "id": "e5c5fcf3-5918-402c-b7eb-b70096924271",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A developer is proposing to form a group of expert solo developers to take on larger projects together."
+      ],
+      "title": "Thinking to build expert Developers/Solopreneurs group",
+      "uncertainty": "Not reviewed; deferred over the pre-triage cap.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzohm5/thinking_to_build_expert_developerssolopreneurs/"
+    },
+    {
+      "builder_takeaway": "Deferred by pre-triage over the per-run item cap and not individually reviewed. Recorded as rejected for this run.",
+      "category": "Small Business Automation",
+      "id": "30fb2cfd-fef0-411a-aa7a-14e63bf8cd1f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A founder asks whether paying services to raise Domain Rating or Domain Authority is worthwhile for SEO."
+      ],
+      "title": "Is paying to increase DR/DA actually worth it?",
+      "uncertainty": "Not reviewed; deferred over the pre-triage cap.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzo4iw/is_paying_to_increase_drda_actually_worth_it/"
+    },
+    {
+      "builder_takeaway": "Deferred by pre-triage over the per-run item cap and not individually reviewed. Recorded as rejected for this run.",
+      "category": "Small Business Automation",
+      "id": "2c5cde0f-6b5a-4d96-bc3e-8be1780ed871",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A founder argues that most products fail because marketing never starts consistently, not because the product is bad."
+      ],
+      "title": "Getting started is the hardest part in the marketing. Once you are there you have to swim you like it or not.",
+      "uncertainty": "Not reviewed; deferred over the pre-triage cap.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzqish/getting_started_is_the_hardest_part_in_the/"
+    },
+    {
+      "builder_takeaway": "Deferred by pre-triage over the per-run item cap and not individually reviewed. Recorded as rejected for this run.",
+      "category": "Small Business Automation",
+      "id": "187501da-4fa3-4f74-99cd-b615c209f289",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A poster argues that a product succeeds when it triggers conversation among its customers."
+      ],
+      "title": "Conversation as the key to product market fit",
+      "uncertainty": "Not reviewed; deferred over the pre-triage cap.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzqg4p/conversation_as_the_key_to_product_market_fit/"
+    },
+    {
+      "builder_takeaway": "Deferred by pre-triage over the per-run item cap and not individually reviewed. Recorded as rejected for this run.",
+      "category": "Small Business Automation",
+      "id": "14b9d3da-221f-44f8-a176-d9605df16380",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-08-28T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "A founder asks how long to keep selling a B2B SaaS before concluding there is no product-market fit."
+      ],
+      "title": "How long do you need to sell B2B SaaS before you can conclude there is no product-market fit?",
+      "uncertainty": "Not reviewed; deferred over the pre-triage cap.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1vzqg0n/how_long_do_you_need_to_sell_b2b_saas_before_you/"
+    }
+  ],
+  "mode": "primary",
+  "run_id": "45fdd1d9-ba54-4e3d-b355-975a200d6e27",
+  "status": "completed",
+  "summary": "Synthesized Nightly Librarian run with 10 promoted item(s), 40 scored item(s), and 30 rejected item(s).",
+  "title": "Nightly Librarian - 2026-08-28"
+}
