@@ -1,0 +1,2246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>August 30, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="12 stories cleared the bar, led by Breaking Claude Code Opus 5 Auto Mode, OpenAI winds down its Cursor model contract after the SpaceX acquisition, and">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-08-30/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="August 30, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="12 stories cleared the bar, led by Breaking Claude Code Opus 5 Auto Mode, OpenAI winds down its Cursor model contract after the SpaceX acquisition, and">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-08-30/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="August 30, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="12 stories cleared the bar, led by Breaking Claude Code Opus 5 Auto Mode, OpenAI winds down its Cursor model contract after the SpaceX acquisition, and">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>August 30, 2026 · Report log</span>
+      <span>Aug 30, 2026, 2:19 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>August 30, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>12 stories cleared the bar, led by Breaking Claude Code Opus 5 Auto Mode, OpenAI winds down its Cursor model contract after the SpaceX acquisition, and GLM-5.3 is now open-weight.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>12 worth-attention items</span><span>171 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/" target="_blank" rel="noopener">Breaking Claude Code Opus 5 Auto Mode</a></div>
+        <div class="item-takeaway">Johann Rehberger found a prompt-injection attack against Claude Code's Auto Mode that he reports works about 80% of the time, by getting the agent to download and unpack a zip and then execute planted code via a local struct.py imported as a side effect of importing base64. In several runs Auto Mode blocked Claude's own attempt to kill the malware process after it detected the compromise, so the safety classifier became part of the failure. Anthropic has made Auto Mode the default and leans on it heavily for injection defense. If you run coding agents anywhere near untrusted input, sandbox them — Auto Mode is not the control you think it is.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex" target="_blank" rel="noopener">OpenAI winds down its Cursor model contract after the SpaceX acquisition</a></div>
+        <div class="item-takeaway">OpenAI announced it is winding down the contract that supplies its models to Cursor, following Cursor's acquisition by SpaceX. This is a commercial decision rather than a technical one, but it removes a model path that a lot of developers depend on without thinking about it. If any part of your workflow routes OpenAI models through Cursor, verify what your fallback is before the cutoff rather than on the day.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://huggingface.co/zai-org/GLM-5.3" target="_blank" rel="noopener">GLM-5.3 is now open-weight</a></div>
+        <div class="item-takeaway">Z.ai released GLM-5.3 with open weights, built on the same base model as GLM-5.2 with all gains coming from post-training. They claim a 50% improvement on their internal code bench, open-source SOTA on Terminal Bench 3.0 and Agents' Last Exam, and state of the art on CyberGym for vulnerability discovery with more than double GLM-5.2's exploitation-benchmark scores. Terminal Bench 4.0 separately places it level with Fable 5 within margin of error. GGUF conversions are already available, so this is runnable locally today.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/" target="_blank" rel="noopener">Just a rumour of a bug is enough to find a security exploit these days</a></div>
+        <div class="item-takeaway">OCaml maintainer and Cambridge professor Anil Madhavapeddy reports automated probes arriving roughly ten minutes after a security patch was shared publicly for discussion, and demonstrated with his own agents that a hint of a bug is enough for a coding agent to derive the exploit. rclone's maintainer confirms the same pattern in the HN thread. The practical consequence is that open source embargo and coordinated-disclosure practice no longer buys the window it assumes. Fix and ship before discussing publicly, and don't leave an open issue describing a vulnerability while you write the patch.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.pragmaticengineer.com/the-pulse-we-need-to-talk-about-migrations-with-ai/" target="_blank" rel="noopener">The Pulse: We need to talk about migrations with AI</a></div>
+        <div class="item-takeaway">Asana migrated off the Enzyme testing framework in two weeks, work that would almost certainly have been deferred indefinitely without AI assistance, and Airbnb and Uber report similar results. Migrations are the canonical class of deferred work: mechanical, unrewarding, and large. That profile is exactly what coding agents handle well. If you have a migration you've been putting off on cost grounds, the cost estimate you're carrying is probably stale.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1w11ob5/i_audited_443_gguf_quants_across_25_repos_64_of/" target="_blank" rel="noopener">Audit of 443 GGUF quants: 64 are not the quant their filename claims</a></div>
+        <div class="item-takeaway">K-quants and i-quants require the first tensor dimension to be divisible by 256; when it isn't, llama-quantize silently substitutes a compatible ~4.5 bpw type such as IQ4_NL or Q4_0 while the file keeps its low-bit name. The author audited 443 quants across 25 repos and found 64 affected, including one model where all four IQ2 rungs are the same 4.58 bpw file under different names. The behaviour is intentional and warned about, but only in the quantize log that downloaders never see. The audit tool and full census are published, so you can check anything you've sized a VRAM budget around.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/cursor-ai-sdk-harness-adapter" target="_blank" rel="noopener">Cursor is now available in the AI SDK harness layer</a></div>
+        <div class="item-takeaway">Vercel's AI SDK harness layer added an official Cursor adapter, connecting through the Agent Client Protocol. Supported harnesses now include Claude Code, Cline, Codex, Deep Agents, Grok Build, OpenCode and Pi behind a single interface, so you can swap coding agents without changing application code. If you're building anything that shells out to a coding agent, this is the abstraction that keeps you from hard-wiring one vendor — which matters more this week than most, given the OpenAI/Cursor contract news.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/blog/the-best-workflow-engine-is-a-programming-language" target="_blank" rel="noopener">Vercel: the best workflow engine is a programming language</a></div>
+        <div class="item-takeaway">Vercel published the reasoning behind its new workflow framework: a workflow is a DAG, and so is a program's AST, so you shouldn't have to draw the graph by hand the way Airflow makes you. The framework takes Temporal's approach — write what looks like ordinary sequential code and the runtime makes it durable underneath — but built serverless-native rather than requiring you to run the infrastructure. Worth reading if you're hand-rolling retry, resume, or checkpoint logic in an agent or ingest pipeline.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/experientiallabs/experiential" target="_blank" rel="noopener">Show HN: open source model gateway with zero markup</a></div>
+        <div class="item-takeaway">An open source Rust model gateway that unifies self-hosted, open, and frontier models behind one interface, adding under 1ms for BYOK requests and under 2ms when it supplies the provider key. It covers every major inference provider with 1000+ models refreshed daily, takes no token markup, and can be self-hosted. The optional traffic-based model training is the part to read carefully before enabling, since it means your request data trains a model.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1w0u24k/qwen38flash_on_rtx3090_64gb_ram_but_you_only_need/" target="_blank" rel="noopener">Qwen3.8-Flash-Next running on an RTX 3090 with 12–16GB VRAM in play</a></div>
+        <div class="item-takeaway">A detailed working configuration for Qwen3.8-Flash-Next on 2020-era hardware: RTX 3090, Ryzen 9 3950X, PCIe 3.0, 64GB DDR4, with IQ4_XS weights, vision on GPU, experts in host RAM and n-grams on disk, reaching 160 tok/s prefill and 16 tok/s decode. The author documents how to fit 16GB by dropping the KV quant and moving the vision tower to CPU, and 12GB by halving ub at the cost of half the prefill. MTP slowed decode even at 80% draft acceptance. Not interactive speed, but a real recipe for batch work on hardware you already own.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/zedeus/nitter" target="_blank" rel="noopener">Nitter and XCancel shut down over a cease-and-desist</a></div>
+        <div class="item-takeaway">Nitter, the alternative front-end for X, and the XCancel redirect service have shut down following a cease-and-desist. Any ingest pipeline, monitoring script, or feed reader that reaches X content through a Nitter instance is now broken. Worth auditing your own source list for dead front-ends rather than discovering it as a silent zero-item fetch.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1w1f6eb/do_your_automation_workflows_fail_silently_how_do/" target="_blank" rel="noopener">Do your automation workflows fail silently?</a></div>
+        <div class="item-takeaway">A founder validating a monitoring product describes the failure mode precisely: a workflow that succeeds technically but produces a wrong result, an AI step that degrades, a third-party API that changes shape, a 3am failure nobody notices. The thread is more valuable as a description of an under-tooled problem than as a product pitch — if you run scheduled agent pipelines, the questions it asks about how you'd detect a silent wrong output are worth answering for your own setup.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w0bu85/us_company_gdpr_and_data_residency/" target="_blank" rel="noopener">U.S. company, GDPR, and data residency</a>
+        </div>
+        <div class="item-takeaway">I'm storing my data in us-west-2 and not discerning whether or not my customers are covered by GDPR. This looks like a minefield of legalese…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w0gjvk/how_much_time_do_you_spend_writing_proposals_for/" target="_blank" rel="noopener">How much time do you spend writing proposals for new clients?</a>
+        </div>
+        <div class="item-takeaway">Curious how other freelancers here handle this do you have your own templates, copy-paste from old ones, use a tool, or write each one from…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/cursor-ai-sdk-harness-adapter" target="_blank" rel="noopener">Cursor is now available in the AI SDK harness layer</a>
+        </div>
+        <div class="item-takeaway">Vercel's AI SDK harness layer added an official Cursor adapter, connecting through the Agent Client Protocol. Supported harnesses now include Claude Code, Cline, Codex, Deep Agents, Grok Build, OpenCode and Pi behind a single interface, so you can swap coding agents without changing application code. If you're building anything that shells out to a coding agent, this is the abstraction that keeps you from hard-wiring one vendor — which matters more this week than most, given the OpenAI/Cursor contract news.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/find-deployments-faster-with-redesigned-filters" target="_blank" rel="noopener">Find deployments faster with redesigned filters</a>
+        </div>
+        <div class="item-takeaway">The Deployments page now has redesigned filters that make it faster to find a specific deployment. You can: Open any project's to try the ne…</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/blog/the-best-workflow-engine-is-a-programming-language" target="_blank" rel="noopener">Vercel: the best workflow engine is a programming language</a>
+        </div>
+        <div class="item-takeaway">Vercel published the reasoning behind its new workflow framework: a workflow is a DAG, and so is a program's AST, so you shouldn't have to draw the graph by hand the way Airflow makes you. The framework takes Temporal's approach — write what looks like ordinary sequential code and the runtime makes it durable underneath — but built serverless-native rather than requiring you to run the infrastructure. Worth reading if you're hand-rolling retry, resume, or checkpoint logic in an agent or ingest pipeline.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.pragmaticengineer.com/the-pulse-we-need-to-talk-about-migrations-with-ai/" target="_blank" rel="noopener">The Pulse: We need to talk about migrations with AI</a>
+        </div>
+        <div class="item-takeaway">Asana migrated off the Enzyme testing framework in two weeks, work that would almost certainly have been deferred indefinitely without AI assistance, and Airbnb and Uber report similar results. Migrations are the canonical class of deferred work: mechanical, unrewarding, and large. That profile is exactly what coding agents handle well. If you have a migration you've been putting off on cost grounds, the cost estimate you're carrying is probably stale.</div>
+        <div class="item-meta">
+          <span>pragmatic-engineer</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/dns-cache-memory-optimization-1111/" target="_blank" rel="noopener">How Cloudflare saved 100TB of memory optimizing 1.1.1.1's DNS cache</a>
+        </div>
+        <div class="item-takeaway">Five Rust-level memory optimizations to the DNS cache layout in Cloudflare's Big Pineapple resolver cut per-entry memory by 56%, freeing roughly 100TB across their fleet. It's an engineering write-up rather than anything actionable, but a good reference on cache data-structure design if you're memory-bound anywhere.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.10" target="_blank" rel="noopener">v16.4.0-canary.10</a>
+        </div>
+        <div class="item-takeaway">### Misc Changes - Upgrade Turbopack to hashbrown 0.15: #97808 - ci: skip framework tests for agent evals and skills: #97998 - Expand Turbop…</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://neilalexander.dev/2026/06/30/flooding-contributions.html" target="_blank" rel="noopener">Please stop flooding our projects with AI slop to furnish your CV</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/thaliaarchi/unix-v4-demo/blob/main/README.md" target="_blank" rel="noopener">UNIX V4 workshop at Low Resource Computing</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.mempko.com/a-million-kakapos/" target="_blank" rel="noopener">A Million Kakapos</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ardour.org/whatsnew.html" target="_blank" rel="noopener">Ardour 9.8 released</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://cavallette.noblogs.org/2026/08/10083/2" target="_blank" rel="noopener">The Server Called Paranoia: Defend Autistici/Inventati Before September 25</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://modal.cx/blog/announcing-flatpak-sta/" target="_blank" rel="noopener">Announcing Sovereign Tech Agency Investment in Flatpak</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/zedeus/nitter" target="_blank" rel="noopener">Nitter and XCancel shut down over a cease-and-desist</a>
+        </div>
+        <div class="item-takeaway">Nitter, the alternative front-end for X, and the XCancel redirect service have shut down following a cease-and-desist. Any ingest pipeline, monitoring script, or feed reader that reaches X content through a Nitter instance is now broken. Worth auditing your own source list for dead front-ends rather than discovering it as a silent zero-item fetch.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.doubleword.ai/what-happens-when-a-gpu-reads-memory" target="_blank" rel="noopener">What happens when a GPU reads memory</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.youtube.com/watch?v=xcB_LF3cdqw" target="_blank" rel="noopener">Simon Peyton Jones on Functional Programming, Thinking in Types, Useless Languages</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.hanselman.com/blog/debugging-my-new-network-when-10-gigabit-ethernet-runs-at-300-megabits" target="_blank" rel="noopener">Debugging my new network, when 10 Gigabit Ethernet Runs at 300 Megabits</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://idlip.in/posts/show-me-source/" target="_blank" rel="noopener">Talk is Cheap. Code is Cheap. Show me the Source</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.joshwcomeau.com/react/usememo-and-usecallback/" target="_blank" rel="noopener">Understanding useMemo and useCallback</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.cloudflare.com/dns-cache-memory-optimization-1111/" target="_blank" rel="noopener">Saving 100 terabytes of memory by optimizing 1.1.1.1's DNS cache (HN)</a>
+        </div>
+        <div class="item-takeaway">Hacker News submission of the Cloudflare engineering post already covered from the first-party blog. Rejected as a duplicate.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://calv.info/small-models-have-arrived" target="_blank" rel="noopener">Small Models Have Arrived</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/elyosh/OpenTIE/" target="_blank" rel="noopener">Show HN: OpenTIE and OpenXWA, Modern Ports of Tie Fighter and X-Wing Alliance</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://507movements.com/" target="_blank" rel="noopener">507 Mechanical Movements</a>
+        </div>
+        <div class="item-takeaway">Book (1868): https:&amp;#x2F;&amp;#x2F;archive.org&amp;#x2F;details&amp;#x2F;fivehundredseven00browiala</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://neilalexander.dev/2026/06/30/flooding-contributions" target="_blank" rel="noopener">Please stop flooding our projects with AI slop to furnish your CV</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.terminal-bench-science.ai/announcement" target="_blank" rel="noopener">Terminal-Bench-Science: Evaluating AI agents on scientific research workflows</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/" target="_blank" rel="noopener">Gemini-3.5-Transcribe</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://pollen-robotics.com/microduck/" target="_blank" rel="noopener">Microduck</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html" target="_blank" rel="noopener">Judge rules the Trump administration's blacklisting of Anthropic was illegal</a>
+        </div>
+        <div class="item-takeaway">A federal judge ruled the administration's blacklisting of Anthropic unlawful. No immediate technical consequence, but it's part of a pattern worth tracking: model vendor availability is increasingly subject to political and regulatory action, which is an argument for keeping a working fallback across providers rather than a single hard dependency.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/experientiallabs/experiential" target="_blank" rel="noopener">Show HN: open source model gateway with zero markup</a>
+        </div>
+        <div class="item-takeaway">An open source Rust model gateway that unifies self-hosted, open, and frontier models behind one interface, adding under 1ms for BYOK requests and under 2ms when it supplies the provider key. It covers every major inference provider with 1000+ models refreshed daily, takes no token markup, and can be self-hosted. The optional traffic-based model training is the part to read carefully before enabling, since it means your request data trains a model.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/calmrocks/ai-engineer-notebooks" target="_blank" rel="noopener">AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.bloomberg.com/news/articles/2026-08-28/advent-stripe-consortium-is-said-to-drop-pursuit-of-paypal" target="_blank" rel="noopener">Stripe said to abandon $50B pursuit of PayPal</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://louisabraham.github.io/load-bearing/" target="_blank" rel="noopener">Show HN: The load-bearing vocabulary of Claude</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://code.ffmpeg.org/FFmpeg/FFmpeg/issues/24290" target="_blank" rel="noopener">We found a division by zero bug in FFmpeg with a vibecoded fuzzer</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://pfrazee.leaflet.pub/3mu3p2smmis22" target="_blank" rel="noopener">Select * from Internet.blogposts</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://cbsaustin.com/news/local/usda-recalls-30000-pounds-of-argentine-beef-sold-in-texas-and-florida" target="_blank" rel="noopener">USDA recalls 30k pounds of Argentine beef sold in Texas and Florida</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://rahuljuliato.com/posts/markdown-ts-mode-emacs-31" target="_blank" rel="noopener">Emacs 31: An unofficial guide to Markdown-ts-mode</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.chrislewis.au/decompiling-a-nintendo-64-game-in-84-days/" target="_blank" rel="noopener">Decompiling a Nintendo 64 game in 84 days</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.anthropic.com/news/model-hardware-standard-research-preview" target="_blank" rel="noopener">Previewing the Model Hardware Standard</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.tokyodev.com/articles/the-story-of-suica" target="_blank" rel="noopener">Suica, Japan's First IC Transit Card</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://shop.m5stack.com/blogs/news/m5stack-launches-papermono-a-compact-e-ink-development-terminal-for-connected-projects" target="_blank" rel="noopener">M5Stack Launches PaperMono</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/" target="_blank" rel="noopener">Gemini Omni 1.1 Flash</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://acs.digitellinc.com/live/37/session/586399" target="_blank" rel="noopener">Engineered yeast for converting plastic and biomass compounds to food additives</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://voronoigo.com/" target="_blank" rel="noopener">Show HN: Voronoi Go</a>
+        </div>
+        <div class="item-takeaway">I posted once before but wanted to share again because a lot has changed. There&amp;#x27;s now a fairly strong bot to play against (contributed…</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/" target="_blank" rel="noopener">Breaking Claude Code Opus 5 Auto Mode</a>
+        </div>
+        <div class="item-takeaway">Johann Rehberger found a prompt-injection attack against Claude Code's Auto Mode that he reports works about 80% of the time, by getting the agent to download and unpack a zip and then execute planted code via a local struct.py imported as a side effect of importing base64. In several runs Auto Mode blocked Claude's own attempt to kill the malware process after it detected the compromise, so the safety classifier became part of the failure. Anthropic has made Auto Mode the default and leans on it heavily for injection defense. If you run coding agents anywhere near untrusted input, sandbox them — Auto Mode is not the control you think it is.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://status.openai.com//incidents/01M1263309PD7VYV8EF95W2M2P" target="_blank" rel="noopener">OpenAI Workspace Agents and ChatGPT Work: elevated error rates (resolved)</a>
+        </div>
+        <div class="item-takeaway">OpenAI reported increased error rates affecting Workspace Agents and ChatGPT Work on web and mobile; all impacted services have fully recovered. No action needed, logged as a reliability data point alongside the same-window Anthropic incident.</div>
+        <div class="item-meta">
+          <span>openai-status</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training" target="_blank" rel="noopener">Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training</a>
+        </div>
+        <div class="item-takeaway">A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world uni…</div>
+        <div class="item-meta">
+          <span>openai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://alyssarosenzweig.ca/blog/hilariously-fast-volume-computation-with-the-divergence-theorem.html" target="_blank" rel="noopener">Hilariously Fast Volume Computation with the Divergence Theorem (2018)</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://zdoom.org/w/index.php?title=UZDoom_version_history/5.x#5.0" target="_blank" rel="noopener">UZDoom 5.0</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/" target="_blank" rel="noopener">Our decision on Cursor following its acquisition by SpaceX (HN)</a>
+        </div>
+        <div class="item-takeaway">Hacker News submission of the OpenAI announcement already covered from the first-party source. Rejected as a duplicate.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/Lakr233/vphone-cli" target="_blank" rel="noopener">Boot a Virtual iPhone via Apple's Virtualization.framework</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ckardaris.com/blog/2026/08/28/keyboard-driven-guis.html" target="_blank" rel="noopener">GUIs should be fully keyboard-driven</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/kingroryg/turbokv" target="_blank" rel="noopener">TurboKV: Insanely fast Rust key-value store</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released" target="_blank" rel="noopener">Htmx 4.0</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://azmirror.com/2026/08/28/9th-circuit-sides-with-states-in-kalshi-gambling-fight-potentially-reviving-arizonas-prosecution/" target="_blank" rel="noopener">9th Circuit sides with states in Kalshi gambling fight</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.inventati.org/" target="_blank" rel="noopener">U.S. sanctions against the A/I Collective (Autistici/Inventati)</a>
+        </div>
+        <div class="item-takeaway">The U.S. government designated the host of noblogs.org, the Italian provider Autistici/Inventati, under sanctions. The relevant lesson for builders is jurisdictional hosting risk: sanctions against a hosting provider can remove your infrastructure without any action on your part. If you host anything on a small independent provider, know what your migration path looks like.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/stemdeckapp/stemdeck" target="_blank" rel="noopener">StemDeck, a free, open-source and local AI stem separator</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://pwning.systems/posts/llm-memory-program-analysis/" target="_blank" rel="noopener">I accidentally turned LLM memory into program analysis</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.vectorian.be/articles/2026-06-07/sumerian-king-list-paleoclimate-alignment-explorer/" target="_blank" rel="noopener">Does the Sumerian King List Align with Paleoclimate Events?</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://anil.recoil.org/notes/rumour-is-the-exploit" target="_blank" rel="noopener">Just the rumour of a bug is enough to find an exploit these days</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.orbify.eu/demo/" target="_blank" rel="noopener">Inception-style curved map for turn-by-turn directions</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://12factor.net/" target="_blank" rel="noopener">The Twelve-Factor App (2025)</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://huggingface.co/zai-org/GLM-5.3" target="_blank" rel="noopener">GLM-5.3 is now open-weight</a>
+        </div>
+        <div class="item-takeaway">Z.ai released GLM-5.3 with open weights, built on the same base model as GLM-5.2 with all gains coming from post-training. They claim a 50% improvement on their internal code bench, open-source SOTA on Terminal Bench 3.0 and Agents' Last Exam, and state of the art on CyberGym for vulnerability discovery with more than double GLM-5.2's exploitation-benchmark scores. Terminal Bench 4.0 separately places it level with Fable 5 within margin of error. GGUF conversions are already available, so this is runnable locally today.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.osnews.com/story/145883/easyeffects-should-be-part-of-every-linux-distribution-and-desktop-environment-to-massively-improve-laptop-speaker-sound-quality/" target="_blank" rel="noopener">EasyEffects can improve laptop speaker sound quality</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://arxiv.org/abs/2608.23691" target="_blank" rel="noopener">Autonomous Mathematical Discovery in an Open-World Multi-Agent Environment</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://geekyschmidt.com/post/2026-08-25-verschlimmbesserung/" target="_blank" rel="noopener">Verschlimmbesserung: The Word Your Software Updates Need</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/openai/openai-python/blob/main/httpx2.md" target="_blank" rel="noopener">Migrating to HTTPX2</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://terminalbytes.com/run-qwen-3-8-27b-locally/" target="_blank" rel="noopener">Run Qwen3.8 27B locally: real numbers from my Mac Studio</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/" target="_blank" rel="noopener">Just a rumour of a bug is enough to find a security exploit these days</a>
+        </div>
+        <div class="item-takeaway">OCaml maintainer and Cambridge professor Anil Madhavapeddy reports automated probes arriving roughly ten minutes after a security patch was shared publicly for discussion, and demonstrated with his own agents that a hint of a bug is enough for a coding agent to derive the exploit. rclone's maintainer confirms the same pattern in the HN thread. The practical consequence is that open source embargo and coordinated-disclosure practice no longer buys the window it assumes. Fix and ship before discussing publicly, and don't leave an open issue describing a vulnerability while you write the patch.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://status.claude.com/incidents/vr9tpk8w7zr8" target="_blank" rel="noopener">Claude Code and Claude Cowork: elevated errors (resolved)</a>
+        </div>
+        <div class="item-takeaway">An upstream cloud provider issue caused sessions to fail to start or disconnect mid-task for Claude Cowork and Claude Code on the web between roughly 17:22 and 20:21 UTC on 28 August. Mitigation was applied and the incident is resolved; affected sessions could be retried. Noted for the record — if a scheduled agent run failed in that window, this is why.</div>
+        <div class="item-meta">
+          <span>claude-status</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex" target="_blank" rel="noopener">OpenAI winds down its Cursor model contract after the SpaceX acquisition</a>
+        </div>
+        <div class="item-takeaway">OpenAI announced it is winding down the contract that supplies its models to Cursor, following Cursor's acquisition by SpaceX. This is a commercial decision rather than a technical one, but it removes a model path that a lot of developers depend on without thinking about it. If any part of your workflow routes OpenAI models through Cursor, verify what your fallback is before the cutoff rather than on the day.</div>
+        <div class="item-meta">
+          <span>openai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1epa4/are_there_really_success_startup_build_with/" target="_blank" rel="noopener">Are there really success startup build with reddit audience</a>
+        </div>
+        <div class="item-takeaway">I see the pattern most of founder on reddit barely make enough MRR on their startup. And some of them just faking number. So I wonder any st…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1fx3j/it_is_not_good_but_it_is_not_bad_either_is_it/" target="_blank" rel="noopener">It is not good, but it is not bad either. is it ??</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/Klein_The-Fool [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1fvgl/i_ran_5_products_on_5_domains_for_a_while_i/" target="_blank" rel="noopener">I ran 5 products on 5 domains. For a while I answered all the support from my personal Gmail without noticing.</a>
+        </div>
+        <div class="item-takeaway">Each product has its own domain and its own support@ address. One of them has a feedback form inside the app. Someone fills it in, my app em…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1fr37/what_are_you_doing_this_weekend_instead_of_sales/" target="_blank" rel="noopener">What are you doing this weekend instead of sales ?</a>
+        </div>
+        <div class="item-takeaway">Hi guys. Am I the only one in this subreddit who hates sales and prefers to do whatever other tasks there are in your business, but not brin…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1fqky/founders_its_your_time_to_shine_what_are_you/" target="_blank" rel="noopener">🗣️ founders: it’s your time to shine what are you building</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/alielknight [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1fbdn/next_saas_multibagger/" target="_blank" rel="noopener">Next SaaS Multibagger?</a>
+        </div>
+        <div class="item-takeaway">Which stocks do you think have the highest potential to be a ten-bagger? Klaviyo Figma Reddit Upwork Duolingo Toast Teqnion (similar to Cons…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1f6eb/do_your_automation_workflows_fail_silently_how_do/" target="_blank" rel="noopener">Do your automation workflows fail silently?</a>
+        </div>
+        <div class="item-takeaway">A founder validating a monitoring product describes the failure mode precisely: a workflow that succeeds technically but produces a wrong result, an AI step that degrades, a third-party API that changes shape, a 3am failure nobody notices. The thread is more valuable as a description of an under-tooled problem than as a product pitch — if you run scheduled agent pipelines, the questions it asks about how you'd detect a silent wrong output are worth answering for your own setup.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://arbustoemchamas.substack.com/p/i-naively-tried-vibe-coding-a-memory" target="_blank" rel="noopener">I naively tried vibe-coding a memory tool for agents and stared into the abyss of unsolved problems in philosophy</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://akselmo.dev/posts/union-qtwidgets/" target="_blank" rel="noopener">Initial Release of Union QtWidgets</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1ifvz/how_to_make_ideal_landing_page_and_make_sure_that/" target="_blank" rel="noopener">How to make ideal landing page and make sure that the issue with conversion is not in the landing page?</a>
+        </div>
+        <div class="item-takeaway">Pls share your stories and thoughts on landing pages you build, it is the first thing what the user sees is it that important or shall I jus…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1hav5/im_building_an_offlinefirst_ai_dictation/" target="_blank" rel="noopener">I’m building an offline-first AI dictation &amp; diagramming tool. Sanity check requested on pricing and rollout.</a>
+        </div>
+        <div class="item-takeaway">After 12 years in UX and product leadership, I'm taking a sabbatical to build solo. I'm validating a privacy-first macOS/iOS app. It uses lo…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1hyn8/started_a_fun_little_project_that_can_generate/" target="_blank" rel="noopener">Started a fun little project that can generate motion graphics videos using AI</a>
+        </div>
+        <div class="item-takeaway">A couple months ago I started a project that can generate motion graphics videos using AI. I wanted to use these videos to promote my other…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1j23i/anyone_else_seeing_ai_traffic_land_on_the_wrong/" target="_blank" rel="noopener">anyone else seeing AI traffic land on the wrong pages</a>
+        </div>
+        <div class="item-takeaway">we’ve had people come in from AI tools but they’re landing on old blog posts instead of core product pages which makes no sense, checked it…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1ivaq/aso_tools_wasted_more_of_my_time_than_they_saved/" target="_blank" rel="noopener">ASO tools wasted more of my time than they saved</a>
+        </div>
+        <div class="item-takeaway">I recently built an iOS app and assumed building the app itself would be the hardest part. For me, it wasn’t. Once the app was ready, I star…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1icw0/looking_to_work_with_startups_launching_soon/" target="_blank" rel="noopener">Looking to work with startups launching soon</a>
+        </div>
+        <div class="item-takeaway">I'm a designer and I’ve worked with a bunch of startups over the past year, and one of the products I worked on ended up raising a round. I’…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1hpua/experience_advertising_on_chat_gpt_perplexity/" target="_blank" rel="noopener">Experience advertising on Chat GPT &amp; perplexity</a>
+        </div>
+        <div class="item-takeaway">I've been looking into the type of businesses that advertise with Chat GPT or Perplexity and if it could be relevant for myself and thought…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1hh2s/terminology_localization/" target="_blank" rel="noopener">Terminology localization</a>
+        </div>
+        <div class="item-takeaway">Hey folks, suppose I had app that was primarily in English - but decided to add more languages. Running directly trough translation engine o…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1j909/how_do_you_run_a_successful_pilot_for_b2b_saas/" target="_blank" rel="noopener">How do you run a successful pilot for B2B SaaS product?</a>
+        </div>
+        <div class="item-takeaway">We are thinking about ways to attract our first users to our B2B SaaS product. Based on my understanding, running a pilot with potential use…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1j8zd/looking_to_automate_your_business_lets_build_it/" target="_blank" rel="noopener">Looking to Automate Your Business? Let’s Build It</a>
+        </div>
+        <div class="item-takeaway">🚀 Need to Automate Your Business? If you're running a business and want to save time, reduce manual work, or improve your operations, I can…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1ixyq/if_people_understand_your_saas_but_still_dont/" target="_blank" rel="noopener">If people understand your SaaS but still don't sign up, one of these three things is probably missing.</a>
+        </div>
+        <div class="item-takeaway">If visitors understand the product but still do not sign up, the page is usually missing one of three things: a specific outcome, a believab…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          We’re the Team Behind Apodex 1.1
+        </div>
+        <div class="item-takeaway">Ask Us Anything! — https://www.reddit.com/r/LocalLLaMA/comments/1vzxdui/were_the_team_behind_apodex_11_ask_us_anything/ — Hi r/LocalLLaMA ! We’re Apodex , the team behind Apodex 1.1 , our new model family built to scale agentic intelligence for complex work. We’…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1vzdfw9/ama_announcement_apodex_thursday_8am11am_pst/" target="_blank" rel="noopener">AMA Announcement: Apodex (Thursday, 8AM-11AM PST)</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/XMasterrrr [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w1fpxi/terminal_bench_40_just_dropped_glm53_is_at_the/" target="_blank" rel="noopener">Terminal Bench 4.0 released; GLM-5.3 level with Fable 5</a>
+        </div>
+        <div class="item-takeaway">Terminal Bench 4.0 launched with an explicit focus on iterating fast enough to stay ahead of benchmark saturation as new models ship. On the new leaderboard GLM-5.3 lands level with Fable 5 within margin of error. The thread also raises a real problem for solo builders: a full run costs 5–10B tokens, so there's no affordable way to measure whether your own harness or skill changes actually improve success rate.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w1gec7/i_always_wonder_how_much_more_speed_andor_context/" target="_blank" rel="noopener">I always wonder how much more speed and/or context they'd be getting..</a>
+        </div>
+        <div class="item-takeaway">Nothing personal. I just have too much time on my hands. Probably because I spend none of it inspecting the code my agent writes, just the f…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w1cbb0/saved_my_fiances_phone_with_qwen_38_27b/" target="_blank" rel="noopener">Saved my fiances phone with qwen 3.8 27b</a>
+        </div>
+        <div class="item-takeaway">this model is really something incredible, saved us like 600 dollars. my fiance is always breaking her electronics and then getting me to fi…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w18b1k/qwen_38_flash_next_ngram_look_up_table_offloaded/" target="_blank" rel="noopener">Qwen 3.8 Flash Next ngram look up table offloaded to SSD and streamed in SGLang</a>
+        </div>
+        <div class="item-takeaway">Have anyone tried this yet? Looks promising, seems too good to be true with no performance loss. &amp;#32; submitted by &amp;#32; /u/Easy_Werewolf79…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w1gm8y/different_qwen_thinking_levels/" target="_blank" rel="noopener">Different Qwen thinking levels</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/Tall_Abrocoma_3533 [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w1486l/today_i_hit_181_tokss_aggregate_on/" target="_blank" rel="noopener">181 tok/s aggregate on Qwen3.8-Flash-Next across 2x DGX Spark</a>
+        </div>
+        <div class="item-takeaway">A detailed serving write-up: two DGX Sparks linked by a direct ConnectX-7 cable with NCCL over RDMA, tensor-parallel across both boxes, running an NVFP4 quant at 512K context, reaching 181 tok/s aggregate across about nine concurrent agent sessions with 30–50 tok/s single-stream. The most transferable detail is the warning that the NCCL TCP fallback is silent and costs half your throughput — verify the log says it's using IB. Relevant if you're building a multi-agent fleet on local hardware.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w0tgzl/zaiorgglm53_hugging_face/" target="_blank" rel="noopener">zai-org/GLM-5.3 on Hugging Face</a>
+        </div>
+        <div class="item-takeaway">Reddit crosspost of the GLM-5.3 Hugging Face release with the same vendor claims covered by the primary item. Rejected as a duplicate; the release is published under the Hugging Face source.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w0lz7e/claude_mods_didnt_like_that_somehow/" target="_blank" rel="noopener">claude mods didn't like that, somehow 🤷‍♀️</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/peculiar-ragdoll [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w0yfmn/rocm_100_a_decade_of_open_compute_built_for_the/" target="_blank" rel="noopener">AMD releases ROCm 10.0</a>
+        </div>
+        <div class="item-takeaway">AMD shipped ROCm 10.0 roughly a month after 7.14, positioned around agentic AI workloads, with an updated GPU compatibility matrix worth checking if you have older AMD cards. The llama.cpp PR adding support is open but not yet merged, so local inference users should wait for that before upgrading.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w1je5d/if_your_ts_is_low_enough_you_can_see_speculative/" target="_blank" rel="noopener">If your t/s is low enough, you can see speculative decoding with your own eyes</a>
+        </div>
+        <div class="item-takeaway">The other day I was trying out a distillation of DS4 Pro, and it came with MTP. It was slow as hell on my hardware, barely 2-3 t/s, BUT the…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w13vse/release_sota_ggufs_for_qwen3827b_gsqrco_at_25_to/" target="_blank" rel="noopener">SOTA GGUFs for Qwen3.8-27B: GSQ-RCO at 2.5 to 3.0 bpw</a>
+        </div>
+        <div class="item-takeaway">A release of Qwen3.8-27B quants using two new methods: GSQ, which jointly learns grid assignments and scales to close most of the scalar-versus-vector gap at 2–3 bits, and RCO, which assigns a quantization type per tensor under a strict size budget by gradient descent on task loss. Three GGUFs at 2.50, 2.75 and 3.00 bpw (8.4–10.1GB) plus the vision projector, running unmodified in llama.cpp, Ollama and LM Studio. Better quality at the same file size is a straight win if you're VRAM-bound.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w18pu9/tenstorrent_quietbox_2_arrived/" target="_blank" rel="noopener">Tenstorrent Quietbox 2 Arrived!</a>
+        </div>
+        <div class="item-takeaway">Super excited to start dev on this. I've already deployed a number of galaxy systems and want to really figure out the ideal models on this…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w1002h/breezetts2_initial_impressions_genuinely_frontier/" target="_blank" rel="noopener">Breeze-TTS-2 initial impressions</a>
+        </div>
+        <div class="item-takeaway">Breeze-TTS-2 is a roughly 7GB open text-to-speech model that early testers describe as genuinely frontier-quality, with a hosted playground available alongside local weights on Hugging Face. Small enough to run alongside other work on a single machine. Worth an evaluation if you have any voice output in a product roadmap.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w17zbg/atomicchatqwen38flashnextgguf_is_really_good/" target="_blank" rel="noopener">AtomicChat/Qwen3.8-Flash-Next-GGUF is Really Good</a>
+        </div>
+        <div class="item-takeaway">specs hardware: M4 Max 128GB Studio inference engine: llama.cpp (qwen4exp branch) judge: claude-opus-4-6 AtomicChat/Qwen3.8-Flash-Next-GGUF…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w1inuk/qwen38next_streaming_150tps_prefill_36_tps_decode/" target="_blank" rel="noopener">Qwen3.8-Next streaming - 150tps prefill, 3.6 tps decode on M5 Air</a>
+        </div>
+        <div class="item-takeaway">Out of curiosity, I thought I'd see if I could adapt my DSv4 streaming stack from a few weeks ago to take Qwen3.8-Next. It worked, better th…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w16kts/is_it_worth_running_qwen_38_flash_next_on_4x3090/" target="_blank" rel="noopener">Is it worth running Qwen 3.8 Flash Next on 4x3090 vs 27B?</a>
+        </div>
+        <div class="item-takeaway">Can someone please tell me if it's worth running Qwen 3.8 Flash Next on 4x3090 yet over 27B? 27B is good but damn it is indecisive. I am get…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w18v86/use_llms_to_auto_annotation_your_dataset_locally/" target="_blank" rel="noopener">use llms to auto annotation your dataset locally</a>
+        </div>
+        <div class="item-takeaway">hi i make tool for this called llmog it's purpose to make llms free to - auto annotation datasets - reclassification existing yolo datasets…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w1e1uq/qwen3827b_vs_qwen38flashnext_smaller_quant/" target="_blank" rel="noopener">Qwen3.8-27B vs Qwen3.8-Flash-Next smaller quant?</a>
+        </div>
+        <div class="item-takeaway">If you only had 128gb ram which one would be more &quot;intelligent&quot;, Qwen3.8-27B (or even 3.6) or a smaller quant of Qwen3.8-Flash-Next (Q4/Q5)…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w1d3zl/qwen38flashnext_mtp_on_strix_halo_vulkan_runtime/" target="_blank" rel="noopener">Qwen3.8-Flash-Next + MTP on Strix Halo: Vulkan Runtime Notes</a>
+        </div>
+        <div class="item-takeaway">Below are the benchmark results for running Qwen3.8-Flash-Next on Strix Halo using the Vulkan backend of llama.cpp, combined with MTP model.…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w1996t/50_tg_increase_with_offloading_hot_experts_to_vram/" target="_blank" rel="noopener">50% token generation increase by offloading only &quot;hot&quot; experts to VRAM</a>
+        </div>
+        <div class="item-takeaway">Instead of offloading whole layers to the GPU, this llama.cpp fork offloads only the experts that stay hot across a workload, taking Qwen3.8-Flash-Next from 20 to 30 tok/s when the model doesn't fit entirely in VRAM. The author found certain expert groups stay stable across coding, refactoring and code-review workloads. Tested only on coding workloads, and the author says he doesn't expect it to be upstreamed. Useful if you're running MoE models that overflow your card.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w1d2hm/linux_ubuntu_2604_lts_26041_upgrade_how_much/" target="_blank" rel="noopener">Linux Ubuntu 26.04 LTS &amp; 26.04.1 upgrade - How much Improvements?</a>
+        </div>
+        <div class="item-takeaway">People who moved from older version to this new one, how much improvements do you see on inference? Ex: llama.cpp performance? This new vers…</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w11ob5/i_audited_443_gguf_quants_across_25_repos_64_of/" target="_blank" rel="noopener">Audit of 443 GGUF quants: 64 are not the quant their filename claims</a>
+        </div>
+        <div class="item-takeaway">K-quants and i-quants require the first tensor dimension to be divisible by 256; when it isn't, llama-quantize silently substitutes a compatible ~4.5 bpw type such as IQ4_NL or Q4_0 while the file keeps its low-bit name. The author audited 443 quants across 25 repos and found 64 affected, including one model where all four IQ2 rungs are the same 4.58 bpw file under different names. The behaviour is intentional and warned about, but only in the quantize log that downloaders never see. The audit tool and full census are published, so you can check anything you've sized a VRAM budget around.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/LocalLLaMA/comments/1w0u24k/qwen38flash_on_rtx3090_64gb_ram_but_you_only_need/" target="_blank" rel="noopener">Qwen3.8-Flash-Next running on an RTX 3090 with 12–16GB VRAM in play</a>
+        </div>
+        <div class="item-takeaway">A detailed working configuration for Qwen3.8-Flash-Next on 2020-era hardware: RTX 3090, Ryzen 9 3950X, PCIe 3.0, 64GB DDR4, with IQ4_XS weights, vision on GPU, experts in host RAM and n-grams on disk, reaching 160 tok/s prefill and 16 tok/s decode. The author documents how to fit 16GB by dropping the KV quant and moving the vision tower to CPU, and 12GB by halving ub at the cost of half the prefill. MTP slowed decode even at 80% draft acceptance. Not interactive speed, but a real recipe for batch work on hardware you already own.</div>
+        <div class="item-meta">
+          <span>reddit-localllama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.jacky.wtf/essays/2026/kicked-out/" target="_blank" rel="noopener">Being kicked out of the tech industry</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lobste.rs/s/vji9aj/any_true_alternatives_electron" target="_blank" rel="noopener">Any true alternatives to electron JavaScript?</a>
+        </div>
+        <div class="item-takeaway">I see companies having codebase in Tauri going back to electron - is this a common thing?</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.phoronix.com/news/Debian-Votes-Responsible-AI-Use" target="_blank" rel="noopener">Debian Votes To Allow &quot;Responsible Use Of Generative AI&quot;</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.dampfkraft.com/posuto.html" target="_blank" rel="noopener">Parsing the Infamous Japanese Postal CSV</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing" target="_blank" rel="noopener">Samsung's Processing-in-Memory (PIM)</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.kumander.org/" target="_blank" rel="noopener">Kumander Linux – A Linux Distro with a Windows 7 Desktop</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://2026.stateofthemap.org/" target="_blank" rel="noopener">State of the Map 2026</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          We crossed €150K ARR
+        </div>
+        <div class="item-takeaway">the mistakes that cost five years — https://www.reddit.com/r/SaaS/comments/1w1w0r9/we_crossed_150k_arr_here_are_the_mistakes_that/ — The substantive lesson: they spotted an emerging problem in AI search in November 2025, shipped a rough engine in two weeks, hit roughly €400 MRR quickly, then treated it as a side project because another product had their attention — and returned to find the category crowded. The failure wasn't picking the wrong product, it was not investigating unexpected traction immediately. The rest of the post is standard founder retrospective, but that specific pattern is worth internalising.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w22580/building_the_saas_was_easier_than_figuring_out/" target="_blank" rel="noopener">Building the SaaS was easier than figuring out how to sell it without becoming a spammer</a>
+        </div>
+        <div class="item-takeaway">I recently launched a pretty niche AI SaaS for traders. The product works. Payments work. SEO is set up. Demo is done. All the stuff I thoug…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1kgbb/finally_got_my_first_4_users/" target="_blank" rel="noopener">Finally got my first 4 users</a>
+        </div>
+        <div class="item-takeaway">It’s been a while I built my fitness app, I’ve been using it for just myself as I’ve been on a fitness journey. Lately I started posting it…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1z8xt/vibe_coders_how_do_you_fix_bugs_that_claude_code/" target="_blank" rel="noopener">Vibe coders how do you fix bugs that Claude code cannot fix?</a>
+        </div>
+        <div class="item-takeaway">I often face bugs that Claude cannot solve when the project is already big enough in late stages of development and every fix in the code cr…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w28rpq/saas_platform_without_ai_still_relevant/" target="_blank" rel="noopener">SaaS platform without AI. Still relevant?</a>
+        </div>
+        <div class="item-takeaway">TL;DR: Spent a year building a platform. No native AI integration. Is anything without AI in it going to be ignored even if it makes no sens…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w28cvs/i_built_a_free_library_for_building_software_with/" target="_blank" rel="noopener">I built a free library for building software with AI, one task at a time</a>
+        </div>
+        <div class="item-takeaway">I’ve found that AI coding agents work much better when I break a large feature into smaller, focused tasks instead of asking for everything…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1vuo4/the_free_directory_submission_manager_with/" target="_blank" rel="noopener">The free directory submission manager with built-in MCP: submitlist.io</a>
+        </div>
+        <div class="item-takeaway">Hi everyone Here is yet another directory submission management website, but this one has a Kanban board, is free, and includes MCP support…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w27unu/anyone_experienced_customers_cloud_on_premise/" target="_blank" rel="noopener">anyone experienced customer's cloud (on premise) saas deployment?</a>
+        </div>
+        <div class="item-takeaway">so we've built an internal tool for ourself (marketing operation agency) and its been working great and we've got a lot of demand from outsi…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w24qmy/saas_founders_and_companies_that_sell_into/" target="_blank" rel="noopener">Saas founders and companies that sell into enterpise, how do decision making in the B2B deals happen with you?</a>
+        </div>
+        <div class="item-takeaway">I used to work in commercialsiation and many times, a customer asked for a payment term we had not offered before. Took a day to sort out, n…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w21ocp/how_to_validate_this_saas_idea/" target="_blank" rel="noopener">How to validate this SaaS idea</a>
+        </div>
+        <div class="item-takeaway">Hi everyone! First off, I'm hand typing all of this. No AI slop at all, I promise. I've built an MVP for a new SaaS idea: Learning Spanish t…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1rfwx/guys_please_dont/" target="_blank" rel="noopener">Guys Please Don't</a>
+        </div>
+        <div class="item-takeaway">Guys, please stop posting “I got X users” and “I made X amount of money” posts. Man, you guys are making me feel like I need to wake up at 2…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1xc9b/how_do_i_get_my_first_customer/" target="_blank" rel="noopener">How do I get my first customer??</a>
+        </div>
+        <div class="item-takeaway">I have a b2b saas product. For the sake of this question.. let's assume it's a really good product..compared to the existing products. How d…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w29bvh/i_am_cto_at_swedish_startup_but_i_am_looking_for/" target="_blank" rel="noopener">I am CTO at Swedish startup, but I am looking for part time role as fractional CTO or product manager or tech lead, I have more than 8 years of experience in development and leadership, and I am open for discussion, Thank you</a>
+        </div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/Mean_Ambassador_9210 [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w293wg/saas_websites_the_marketing_side/" target="_blank" rel="noopener">SaaS Websites (The marketing side)</a>
+        </div>
+        <div class="item-takeaway">My SaaS application is due to be finished and ready for a v1 release. I am looking at SaaS based marketing, specifically websites. Is there…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w28pls/building_with_ai/" target="_blank" rel="noopener">Building with AI</a>
+        </div>
+        <div class="item-takeaway">https://preview.redd.it/ghlkwm247gmh1.png?width=673&amp;format=png&amp;auto=webp&amp;s=020057d043aeee0e2f5b7f5b04e8f3c1366763cd Hi, how is it going with…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1rlxo/3000_visits_in_24h_featured_in_producthunt_5/" target="_blank" rel="noopener">3000+ visits in 24h, featured in producthunt! 5 person paid 50 usd to put MEMES</a>
+        </div>
+        <div class="item-takeaway">weirdest project i created. check: publicdesktop.lol &amp;#32; submitted by &amp;#32; /u/ineedsomedrg [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w28ewi/i_am_a_physiotherapist_and_i_realized_that_most/" target="_blank" rel="noopener">I am a physiotherapist, and I realized that most people don’t consider postural deformities a health problem</a>
+        </div>
+        <div class="item-takeaway">I am a physiotherapist, and 6 months ago, I was taking lectures and treating patients. While I was treating patients, I noticed an anomaly.…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w28b5p/i_am_a_physiotherapist_and_i_realized_that_most/" target="_blank" rel="noopener">I am a physiotherapist, and I realized that most people don’t consider postural deformities a health problem</a>
+        </div>
+        <div class="item-takeaway">I am a physiotherapist, and 6 months ago, I was taking lectures and treating patients. While I was treating patients, I noticed that most pe…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w23gz8/looking_to_target_inside_sales_in_the_trades/" target="_blank" rel="noopener">Looking to target inside sales in the trades</a>
+        </div>
+        <div class="item-takeaway">Built a tool that helps inside salespeople in the trades. Think HVAC, plumbing, electrical, etc. I’ve exhausted my few contacts in the indus…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w2361v/built_a_serverless_p2p_tool_because_i_got_tired/" target="_blank" rel="noopener">Built a serverless P2P tool because I got tired of cloud storage limits and privacy overhead. What's your take on zero-server architecture?</a>
+        </div>
+        <div class="item-takeaway">Hey everyone, I wanted to build something that completely cuts out the middleman for file sharing and real-time chat. No cloud servers stori…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1veh8/first_revenue_for_my_saas/" target="_blank" rel="noopener">First revenue for my saas</a>
+        </div>
+        <div class="item-takeaway">Hey, first time posting here, but I thought I would share my success story. It started as a hackathon project to help users schedule social…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1s1q5/first_saas_got_acquired_second_one_failed_hard/" target="_blank" rel="noopener">first saas got acquired. second one failed hard. what i learned about disappointment</a>
+        </div>
+        <div class="item-takeaway">wanted to share something that might hit home for some of you. my first saas actually worked. it got traction, made money, and eventually go…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w1rdk4/how_are_people_handling_maintenance_for_aibuilt/" target="_blank" rel="noopener">How are people handling maintenance for AI-built client apps?</a>
+        </div>
+        <div class="item-takeaway">A discussion thread asking freelancers and agencies shipping client apps with Lovable, Cursor, Claude Code and Bolt what happens after launch — retainers, uptime, security patching, dependency updates, and tracking several client apps at once. The observation driving it is that building got roughly ten times easier while maintenance didn't. If you do any client work with these tools, the pricing implication is worth thinking about before your first post-launch incident.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.12" target="_blank" rel="noopener">Next.js v16.4.0-canary.12</a>
+        </div>
+        <div class="item-takeaway">A canary release bump with no user-facing changes. Rejected per the standing filter on dependency and patch-only release notes.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://people.kernel.org/monsieuricon/creepy-crawlies" target="_blank" rel="noopener">Creepy crawlies</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://joeyh.name/blog/entry/Debian_and_the_sirens/" target="_blank" rel="noopener">Debian and the sirens</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://martinalderson.com/posts/glm-5-3-flash-chinese-hardware/" target="_blank" rel="noopener">What GLM-5.3 Flash running on Chinese hardware actually means</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://reactos.org/project-news/reactos-0416-released/" target="_blank" rel="noopener">Introducing ReactOS 0.4.16</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://deadsimpletech.com/blog/no-such-thing-as-just-a-tool" target="_blank" rel="noopener">There's no such thing as Just a Tool</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://yogthos.net/posts/2026-08-29-glimmer-ui.html" target="_blank" rel="noopener">Wrapping GTK4 in 800 lines of Clojure with Jolt</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://dl.acm.org/doi/epdf/10.1145/3830438.3830958" target="_blank" rel="noopener">Functional State Machines in Rust: Typestate and Newtype Patterns</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.quantamagazine.org/does-computer-science-need-computers-20260828/" target="_blank" rel="noopener">Does Computer Science Need Computers?</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://danluu.com/bug-blind/" target="_blank" rel="noopener">Bug blindness</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/" target="_blank" rel="noopener">Prompt Injection in Claude Code Opus 5 Auto Mode (Lobsters)</a>
+        </div>
+        <div class="item-takeaway">Lobsters submission pointing at the same Embrace The Red research covered via Simon Willison's writeup. The stored body is only the comments-link wrapper, so there is nothing additional here. Rejected as a duplicate.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://shkspr.mobi/blog/2013/11/civic-hygiene/" target="_blank" rel="noopener">Civic Hygiene (2013)</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://danluu.com/bug-blind/" target="_blank" rel="noopener">Bug Blindness</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/" target="_blank" rel="noopener">Hy4 preview</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://freecore.org/" target="_blank" rel="noopener">FreeCORE TrueNAS Core – Continued</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://science.nasa.gov/mission/roman-space-telescope/" target="_blank" rel="noopener">Nancy Grace Roman Space Telescope</a>
+        </div>
+        <div class="item-takeaway">https:&amp;#x2F;&amp;#x2F;nextspaceflight.com&amp;#x2F;launches&amp;#x2F;details&amp;#x2F;6983&amp;#x2F; https:&amp;#x2F;&amp;#x2F;www.npr.org&amp;#x2F;2026&amp;#x2F;08&amp;#x2F;28&amp;#x2…</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.texastribune.org/2026/08/28/texas-flock-cameras-auto-insurance-fee-mvcpa-grants/" target="_blank" rel="noopener">Lawmakers added $1 to car insurance policies. That money paid for Flock cameras</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.tomshardware.com/software/linux/california-lawmakers-unanimously-pass-linux-exemption-from-age-verification-law-software-distributed-under-the-gpl-mit-bsd-and-apache-licenses-are-exempt" target="_blank" rel="noopener">California lawmakers unanimously pass Linux exemption from age-verification law</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.morganlewis.com/pubs/2026/08/algorithmic-rent-pricing-litigation-expands-under-new-state-and-local-laws" target="_blank" rel="noopener">Algorithmic rent-pricing litigation expands under new state and local laws</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://dl.acm.org/doi/10.1145/3830438.3830958" target="_blank" rel="noopener">Functional State Machines in Rust: Typestate and Newtype Patterns</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://tucker.wales/writing/bias-towards-action/" target="_blank" rel="noopener">Calibrate Before You Accelerate: Bias Toward Action in a New Role</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://coldtake.dev/blog/domain-driven-agents" target="_blank" rel="noopener">Domain-Driven Agents</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity" target="_blank" rel="noopener">Good Culture Is the Biggest Productivity Hack, Not AI</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.theguardian.com/us-news/2026/aug/29/trump-dhs-1509-summons-records-journalists-nonprofits" target="_blank" rel="noopener">DHS is using obscure law to snoop on journalists, non-profits, unions</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Aug/29/hy4/" target="_blank" rel="noopener">Tencent Hy4 Preview: 770B parameters, 1M context, open weights</a>
+        </div>
+        <div class="item-takeaway">Tencent released Hy4 Preview, a text-only open-weight model with 770B total and 49B active parameters, a 1M token context window, and a 1.56TB footprint on Hugging Face. That's a large jump from Hy3 in July at 295B total, 21B active and 256K context. The chat template exposes a reasoning_effort control defaulting to high. Not locally runnable for most people, but a meaningful marker of where open weights are heading.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: d315eb7b-a23f-4417-8331-9e62790b8bf0
+Started: 2026-08-30T06:12:03.979Z
+Completed: 2026-08-30T06:19:13.075Z
+
+## Worth attention
+
+- **Breaking Claude Code Opus 5 Auto Mode**
+  https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/
+  Johann Rehberger found a prompt-injection attack against Claude Code's Auto Mode that he reports works about 80% of the time, by getting the agent to download and unpack a zip and then execute planted code via a local struct.py imported as a side effect of importing base64. In several runs Auto Mode blocked Claude's own attempt to kill the malware process after it detected the compromise, so the safety classifier became part of the failure. Anthropic has made Auto Mode the default and leans on it heavily for injection defense. If you run coding agents anywhere near untrusted input, sandbox them — Auto Mode is not the control you think it is.
+- **OpenAI winds down its Cursor model contract after the SpaceX acquisition**
+  https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex
+  OpenAI announced it is winding down the contract that supplies its models to Cursor, following Cursor's acquisition by SpaceX. This is a commercial decision rather than a technical one, but it removes a model path that a lot of developers depend on without thinking about it. If any part of your workflow routes OpenAI models through Cursor, verify what your fallback is before the cutoff rather than on the day.
+- **GLM-5.3 is now open-weight**
+  https://huggingface.co/zai-org/GLM-5.3
+  Z.ai released GLM-5.3 with open weights, built on the same base model as GLM-5.2 with all gains coming from post-training. They claim a 50% improvement on their internal code bench, open-source SOTA on Terminal Bench 3.0 and Agents' Last Exam, and state of the art on CyberGym for vulnerability discovery with more than double GLM-5.2's exploitation-benchmark scores. Terminal Bench 4.0 separately places it level with Fable 5 within margin of error. GGUF conversions are already available, so this is runnable locally today.
+- **Just a rumour of a bug is enough to find a security exploit these days**
+  https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/
+  OCaml maintainer and Cambridge professor Anil Madhavapeddy reports automated probes arriving roughly ten minutes after a security patch was shared publicly for discussion, and demonstrated with his own agents that a hint of a bug is enough for a coding agent to derive the exploit. rclone's maintainer confirms the same pattern in the HN thread. The practical consequence is that open source embargo and coordinated-disclosure practice no longer buys the window it assumes. Fix and ship before discussing publicly, and don't leave an open issue describing a vulnerability while you write the patch.
+- **The Pulse: We need to talk about migrations with AI**
+  https://blog.pragmaticengineer.com/the-pulse-we-need-to-talk-about-migrations-with-ai/
+  Asana migrated off the Enzyme testing framework in two weeks, work that would almost certainly have been deferred indefinitely without AI assistance, and Airbnb and Uber report similar results. Migrations are the canonical class of deferred work: mechanical, unrewarding, and large. That profile is exactly what coding agents handle well. If you have a migration you've been putting off on cost grounds, the cost estimate you're carrying is probably stale.
+- **Audit of 443 GGUF quants: 64 are not the quant their filename claims**
+  https://www.reddit.com/r/LocalLLaMA/comments/1w11ob5/i_audited_443_gguf_quants_across_25_repos_64_of/
+  K-quants and i-quants require the first tensor dimension to be divisible by 256; when it isn't, llama-quantize silently substitutes a compatible ~4.5 bpw type such as IQ4_NL or Q4_0 while the file keeps its low-bit name. The author audited 443 quants across 25 repos and found 64 affected, including one model where all four IQ2 rungs are the same 4.58 bpw file under different names. The behaviour is intentional and warned about, but only in the quantize log that downloaders never see. The audit tool and full census are published, so you can check anything you've sized a VRAM budget around.
+- **Cursor is now available in the AI SDK harness layer**
+  https://vercel.com/changelog/cursor-ai-sdk-harness-adapter
+  Vercel's AI SDK harness layer added an official Cursor adapter, connecting through the Agent Client Protocol. Supported harnesses now include Claude Code, Cline, Codex, Deep Agents, Grok Build, OpenCode and Pi behind a single interface, so you can swap coding agents without changing application code. If you're building anything that shells out to a coding agent, this is the abstraction that keeps you from hard-wiring one vendor — which matters more this week than most, given the OpenAI/Cursor contract news.
+- **Vercel: the best workflow engine is a programming language**
+  https://vercel.com/blog/the-best-workflow-engine-is-a-programming-language
+  Vercel published the reasoning behind its new workflow framework: a workflow is a DAG, and so is a program's AST, so you shouldn't have to draw the graph by hand the way Airflow makes you. The framework takes Temporal's approach — write what looks like ordinary sequential code and the runtime makes it durable underneath — but built serverless-native rather than requiring you to run the infrastructure. Worth reading if you're hand-rolling retry, resume, or checkpoint logic in an agent or ingest pipeline.
+- **Show HN: open source model gateway with zero markup**
+  https://github.com/experientiallabs/experiential
+  An open source Rust model gateway that unifies self-hosted, open, and frontier models behind one interface, adding under 1ms for BYOK requests and under 2ms when it supplies the provider key. It covers every major inference provider with 1000+ models refreshed daily, takes no token markup, and can be self-hosted. The optional traffic-based model training is the part to read carefully before enabling, since it means your request data trains a model.
+- **Qwen3.8-Flash-Next running on an RTX 3090 with 12–16GB VRAM in play**
+  https://www.reddit.com/r/LocalLLaMA/comments/1w0u24k/qwen38flash_on_rtx3090_64gb_ram_but_you_only_need/
+  A detailed working configuration for Qwen3.8-Flash-Next on 2020-era hardware: RTX 3090, Ryzen 9 3950X, PCIe 3.0, 64GB DDR4, with IQ4_XS weights, vision on GPU, experts in host RAM and n-grams on disk, reaching 160 tok/s prefill and 16 tok/s decode. The author documents how to fit 16GB by dropping the KV quant and moving the vision tower to CPU, and 12GB by halving ub at the cost of half the prefill. MTP slowed decode even at 80% draft acceptance. Not interactive speed, but a real recipe for batch work on hardware you already own.
+- **Nitter and XCancel shut down over a cease-and-desist**
+  https://github.com/zedeus/nitter
+  Nitter, the alternative front-end for X, and the XCancel redirect service have shut down following a cease-and-desist. Any ingest pipeline, monitoring script, or feed reader that reaches X content through a Nitter instance is now broken. Worth auditing your own source list for dead front-ends rather than discovering it as a silent zero-item fetch.
+- **Do your automation workflows fail silently?**
+  https://www.reddit.com/r/SaaS/comments/1w1f6eb/do_your_automation_workflows_fail_silently_how_do/
+  A founder validating a monitoring product describes the failure mode precisely: a workflow that succeeds technically but produces a wrong result, an AI step that degrades, a third-party API that changes shape, a 3am failure nobody notices. The thread is more valuable as a description of an under-tooled problem than as a product pitch — if you run scheduled agent pipelines, the questions it asks about how you'd detect a silent wrong output are worth answering for your own setup.
+
+## Full digest
+
+- [R] [reddit-saas] U.S. company, GDPR, and data residency — https://www.reddit.com/r/SaaS/comments/1w0bu85/us_company_gdpr_and_data_residency/ — I'm storing my data in us-west-2 and not discerning whether or not my customers are covered by GDPR. This looks like a minefield of legalese…
+- [R] [reddit-saas] How much time do you spend writing proposals for new clients? — https://www.reddit.com/r/SaaS/comments/1w0gjvk/how_much_time_do_you_spend_writing_proposals_for/ — Curious how other freelancers here handle this do you have your own templates, copy-paste from old ones, use a tool, or write each one from…
+- [P] [vercel-changelog] Cursor is now available in the AI SDK harness layer — https://vercel.com/changelog/cursor-ai-sdk-harness-adapter — Vercel's AI SDK harness layer added an official Cursor adapter, connecting through the Agent Client Protocol. Supported harnesses now include Claude Code, Cline, Codex, Deep Agents, Grok Build, OpenCode and Pi behind a single interface, so you can swap coding agents without changing application code. If you're building anything that shells out to a coding agent, this is the abstraction that keeps you from hard-wiring one vendor — which matters more this week than most, given the OpenAI/Cursor contract news.
+- [R] [vercel-changelog] Find deployments faster with redesigned filters — https://vercel.com/changelog/find-deployments-faster-with-redesigned-filters — The Deployments page now has redesigned filters that make it faster to find a specific deployment. You can: Open any project's to try the ne…
+- [P] [vercel-changelog] Vercel: the best workflow engine is a programming language — https://vercel.com/blog/the-best-workflow-engine-is-a-programming-language — Vercel published the reasoning behind its new workflow framework: a workflow is a DAG, and so is a program's AST, so you shouldn't have to draw the graph by hand the way Airflow makes you. The framework takes Temporal's approach — write what looks like ordinary sequential code and the runtime makes it durable underneath — but built serverless-native rather than requiring you to run the infrastructure. Worth reading if you're hand-rolling retry, resume, or checkpoint logic in an agent or ingest pipeline.
+- [P] [pragmatic-engineer] The Pulse: We need to talk about migrations with AI — https://blog.pragmaticengineer.com/the-pulse-we-need-to-talk-about-migrations-with-ai/ — Asana migrated off the Enzyme testing framework in two weeks, work that would almost certainly have been deferred indefinitely without AI assistance, and Airbnb and Uber report similar results. Migrations are the canonical class of deferred work: mechanical, unrewarding, and large. That profile is exactly what coding agents handle well. If you have a migration you've been putting off on cost grounds, the cost estimate you're carrying is probably stale.
+- [P] [cloudflare-blog] How Cloudflare saved 100TB of memory optimizing 1.1.1.1's DNS cache — https://blog.cloudflare.com/dns-cache-memory-optimization-1111/ — Five Rust-level memory optimizations to the DNS cache layout in Cloudflare's Big Pineapple resolver cut per-entry memory by 56%, freeing roughly 100TB across their fleet. It's an engineering write-up rather than anything actionable, but a good reference on cache data-structure design if you're memory-bound anywhere.
+- [R] [gh-nextjs] v16.4.0-canary.10 — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.10 — ### Misc Changes - Upgrade Turbopack to hashbrown 0.15: #97808 - ci: skip framework tests for agent evals and skills: #97998 - Expand Turbop…
+- [R] [lobsters] Please stop flooding our projects with AI slop to furnish your CV — https://neilalexander.dev/2026/06/30/flooding-contributions.html — Comments
+- [R] [lobsters] UNIX V4 workshop at Low Resource Computing — https://github.com/thaliaarchi/unix-v4-demo/blob/main/README.md — Comments
+- [R] [lobsters] A Million Kakapos — https://blog.mempko.com/a-million-kakapos/ — Comments
+- [R] [lobsters] Ardour 9.8 released — https://ardour.org/whatsnew.html — Comments
+- [R] [lobsters] The Server Called Paranoia: Defend Autistici/Inventati Before September 25 — https://cavallette.noblogs.org/2026/08/10083/2 — Comments
+- [R] [lobsters] Announcing Sovereign Tech Agency Investment in Flatpak — https://modal.cx/blog/announcing-flatpak-sta/ — Comments
+- [P] [lobsters] Nitter and XCancel shut down over a cease-and-desist — https://github.com/zedeus/nitter — Nitter, the alternative front-end for X, and the XCancel redirect service have shut down following a cease-and-desist. Any ingest pipeline, monitoring script, or feed reader that reaches X content through a Nitter instance is now broken. Worth auditing your own source list for dead front-ends rather than discovering it as a silent zero-item fetch.
+- [R] [lobsters] What happens when a GPU reads memory — https://blog.doubleword.ai/what-happens-when-a-gpu-reads-memory — Comments
+- [R] [lobsters] Simon Peyton Jones on Functional Programming, Thinking in Types, Useless Languages — https://www.youtube.com/watch?v=xcB_LF3cdqw — Comments
+- [R] [lobsters] Debugging my new network, when 10 Gigabit Ethernet Runs at 300 Megabits — https://www.hanselman.com/blog/debugging-my-new-network-when-10-gigabit-ethernet-runs-at-300-megabits — Comments
+- [R] [lobsters] Talk is Cheap. Code is Cheap. Show me the Source — https://idlip.in/posts/show-me-source/ — Comments
+- [R] [lobsters] Understanding useMemo and useCallback — https://www.joshwcomeau.com/react/usememo-and-usecallback/ — Comments
+- [R] [hn-top] Saving 100 terabytes of memory by optimizing 1.1.1.1's DNS cache (HN) — https://blog.cloudflare.com/dns-cache-memory-optimization-1111/ — Hacker News submission of the Cloudflare engineering post already covered from the first-party blog. Rejected as a duplicate.
+- [R] [hn-top] Small Models Have Arrived — https://calv.info/small-models-have-arrived — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Show HN: OpenTIE and OpenXWA, Modern Ports of Tie Fighter and X-Wing Alliance — https://github.com/elyosh/OpenTIE/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] 507 Mechanical Movements — https://507movements.com/ — Book (1868): https:&amp;#x2F;&amp;#x2F;archive.org&amp;#x2F;details&amp;#x2F;fivehundredseven00browiala
+- [R] [hn-top] Please stop flooding our projects with AI slop to furnish your CV — https://neilalexander.dev/2026/06/30/flooding-contributions — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Terminal-Bench-Science: Evaluating AI agents on scientific research workflows — https://www.terminal-bench-science.ai/announcement — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Gemini-3.5-Transcribe — https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Microduck — https://pollen-robotics.com/microduck/ — Scheduled agent omitted this claimed item from the completion payload.
+- [M] [hn-top] Judge rules the Trump administration's blacklisting of Anthropic was illegal — https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html — A federal judge ruled the administration's blacklisting of Anthropic unlawful. No immediate technical consequence, but it's part of a pattern worth tracking: model vendor availability is increasingly subject to political and regulatory action, which is an argument for keeping a working fallback across providers rather than a single hard dependency.
+- [P] [hn-top] Show HN: open source model gateway with zero markup — https://github.com/experientiallabs/experiential — An open source Rust model gateway that unifies self-hosted, open, and frontier models behind one interface, adding under 1ms for BYOK requests and under 2ms when it supplies the provider key. It covers every major inference provider with 1000+ models refreshed daily, takes no token markup, and can be self-hosted. The optional traffic-based model training is the part to read carefully before enabling, since it means your request data trains a model.
+- [R] [hn-top] AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab — https://github.com/calmrocks/ai-engineer-notebooks — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Stripe said to abandon $50B pursuit of PayPal — https://www.bloomberg.com/news/articles/2026-08-28/advent-stripe-consortium-is-said-to-drop-pursuit-of-paypal — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Show HN: The load-bearing vocabulary of Claude — https://louisabraham.github.io/load-bearing/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] We found a division by zero bug in FFmpeg with a vibecoded fuzzer — https://code.ffmpeg.org/FFmpeg/FFmpeg/issues/24290 — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Select * from Internet.blogposts — https://pfrazee.leaflet.pub/3mu3p2smmis22 — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] USDA recalls 30k pounds of Argentine beef sold in Texas and Florida — https://cbsaustin.com/news/local/usda-recalls-30000-pounds-of-argentine-beef-sold-in-texas-and-florida — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Emacs 31: An unofficial guide to Markdown-ts-mode — https://rahuljuliato.com/posts/markdown-ts-mode-emacs-31 — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Decompiling a Nintendo 64 game in 84 days — https://blog.chrislewis.au/decompiling-a-nintendo-64-game-in-84-days/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Previewing the Model Hardware Standard — https://www.anthropic.com/news/model-hardware-standard-research-preview — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Suica, Japan's First IC Transit Card — https://www.tokyodev.com/articles/the-story-of-suica — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] M5Stack Launches PaperMono — https://shop.m5stack.com/blogs/news/m5stack-launches-papermono-a-compact-e-ink-development-terminal-for-connected-projects — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Gemini Omni 1.1 Flash — https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Engineered yeast for converting plastic and biomass compounds to food additives — https://acs.digitellinc.com/live/37/session/586399 — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Show HN: Voronoi Go — https://voronoigo.com/ — I posted once before but wanted to share again because a lot has changed. There&amp;#x27;s now a fairly strong bot to play against (contributed…
+- [P] [simon-willison] Breaking Claude Code Opus 5 Auto Mode — https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/ — Johann Rehberger found a prompt-injection attack against Claude Code's Auto Mode that he reports works about 80% of the time, by getting the agent to download and unpack a zip and then execute planted code via a local struct.py imported as a side effect of importing base64. In several runs Auto Mode blocked Claude's own attempt to kill the malware process after it detected the compromise, so the safety classifier became part of the failure. Anthropic has made Auto Mode the default and leans on it heavily for injection defense. If you run coding agents anywhere near untrusted input, sandbox them — Auto Mode is not the control you think it is.
+- [M] [openai-status] OpenAI Workspace Agents and ChatGPT Work: elevated error rates (resolved) — https://status.openai.com//incidents/01M1263309PD7VYV8EF95W2M2P — OpenAI reported increased error rates affecting Workspace Agents and ChatGPT Work on web and mobile; all impacted services have fully recovered. No action needed, logged as a reliability data point alongside the same-window Anthropic incident.
+- [R] [openai-blog] Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training — https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training — A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world uni…
+- [R] [lobsters] Hilariously Fast Volume Computation with the Divergence Theorem (2018) — https://alyssarosenzweig.ca/blog/hilariously-fast-volume-computation-with-the-divergence-theorem.html — Comments
+- [R] [lobsters] UZDoom 5.0 — https://zdoom.org/w/index.php?title=UZDoom_version_history/5.x#5.0 — Comments
+- [R] [hn-top] Our decision on Cursor following its acquisition by SpaceX (HN) — https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/ — Hacker News submission of the OpenAI announcement already covered from the first-party source. Rejected as a duplicate.
+- [R] [hn-top] Boot a Virtual iPhone via Apple's Virtualization.framework — https://github.com/Lakr233/vphone-cli — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] GUIs should be fully keyboard-driven — https://ckardaris.com/blog/2026/08/28/keyboard-driven-guis.html — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] TurboKV: Insanely fast Rust key-value store — https://github.com/kingroryg/turbokv — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Htmx 4.0 — https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] 9th Circuit sides with states in Kalshi gambling fight — https://azmirror.com/2026/08/28/9th-circuit-sides-with-states-in-kalshi-gambling-fight-potentially-reviving-arizonas-prosecution/ — Scheduled agent omitted this claimed item from the completion payload.
+- [M] [hn-top] U.S. sanctions against the A/I Collective (Autistici/Inventati) — https://www.inventati.org/ — The U.S. government designated the host of noblogs.org, the Italian provider Autistici/Inventati, under sanctions. The relevant lesson for builders is jurisdictional hosting risk: sanctions against a hosting provider can remove your infrastructure without any action on your part. If you host anything on a small independent provider, know what your migration path looks like.
+- [R] [hn-top] StemDeck, a free, open-source and local AI stem separator — https://github.com/stemdeckapp/stemdeck — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] I accidentally turned LLM memory into program analysis — https://pwning.systems/posts/llm-memory-program-analysis/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Does the Sumerian King List Align with Paleoclimate Events? — https://www.vectorian.be/articles/2026-06-07/sumerian-king-list-paleoclimate-alignment-explorer/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Just the rumour of a bug is enough to find an exploit these days — https://anil.recoil.org/notes/rumour-is-the-exploit — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Inception-style curved map for turn-by-turn directions — https://www.orbify.eu/demo/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] The Twelve-Factor App (2025) — https://12factor.net/ — Scheduled agent omitted this claimed item from the completion payload.
+- [P] [hn-top] GLM-5.3 is now open-weight — https://huggingface.co/zai-org/GLM-5.3 — Z.ai released GLM-5.3 with open weights, built on the same base model as GLM-5.2 with all gains coming from post-training. They claim a 50% improvement on their internal code bench, open-source SOTA on Terminal Bench 3.0 and Agents' Last Exam, and state of the art on CyberGym for vulnerability discovery with more than double GLM-5.2's exploitation-benchmark scores. Terminal Bench 4.0 separately places it level with Fable 5 within margin of error. GGUF conversions are already available, so this is runnable locally today.
+- [R] [hn-top] EasyEffects can improve laptop speaker sound quality — https://www.osnews.com/story/145883/easyeffects-should-be-part-of-every-linux-distribution-and-desktop-environment-to-massively-improve-laptop-speaker-sound-quality/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Autonomous Mathematical Discovery in an Open-World Multi-Agent Environment — https://arxiv.org/abs/2608.23691 — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Verschlimmbesserung: The Word Your Software Updates Need — https://geekyschmidt.com/post/2026-08-25-verschlimmbesserung/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Migrating to HTTPX2 — https://github.com/openai/openai-python/blob/main/httpx2.md — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Run Qwen3.8 27B locally: real numbers from my Mac Studio — https://terminalbytes.com/run-qwen-3-8-27b-locally/ — Scheduled agent omitted this claimed item from the completion payload.
+- [P] [simon-willison] Just a rumour of a bug is enough to find a security exploit these days — https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/ — OCaml maintainer and Cambridge professor Anil Madhavapeddy reports automated probes arriving roughly ten minutes after a security patch was shared publicly for discussion, and demonstrated with his own agents that a hint of a bug is enough for a coding agent to derive the exploit. rclone's maintainer confirms the same pattern in the HN thread. The practical consequence is that open source embargo and coordinated-disclosure practice no longer buys the window it assumes. Fix and ship before discussing publicly, and don't leave an open issue describing a vulnerability while you write the patch.
+- [M] [claude-status] Claude Code and Claude Cowork: elevated errors (resolved) — https://status.claude.com/incidents/vr9tpk8w7zr8 — An upstream cloud provider issue caused sessions to fail to start or disconnect mid-task for Claude Cowork and Claude Code on the web between roughly 17:22 and 20:21 UTC on 28 August. Mitigation was applied and the incident is resolved; affected sessions could be retried. Noted for the record — if a scheduled agent run failed in that window, this is why.
+- [P] [openai-blog] OpenAI winds down its Cursor model contract after the SpaceX acquisition — https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex — OpenAI announced it is winding down the contract that supplies its models to Cursor, following Cursor's acquisition by SpaceX. This is a commercial decision rather than a technical one, but it removes a model path that a lot of developers depend on without thinking about it. If any part of your workflow routes OpenAI models through Cursor, verify what your fallback is before the cutoff rather than on the day.
+- [R] [reddit-saas] Are there really success startup build with reddit audience — https://www.reddit.com/r/SaaS/comments/1w1epa4/are_there_really_success_startup_build_with/ — I see the pattern most of founder on reddit barely make enough MRR on their startup. And some of them just faking number. So I wonder any st…
+- [R] [reddit-saas] It is not good, but it is not bad either. is it ?? — https://www.reddit.com/r/SaaS/comments/1w1fx3j/it_is_not_good_but_it_is_not_bad_either_is_it/ — &amp;#32; submitted by &amp;#32; /u/Klein_The-Fool [link] &amp;#32; [comments]
+- [R] [reddit-saas] I ran 5 products on 5 domains. For a while I answered all the support from my personal Gmail without noticing. — https://www.reddit.com/r/SaaS/comments/1w1fvgl/i_ran_5_products_on_5_domains_for_a_while_i/ — Each product has its own domain and its own support@ address. One of them has a feedback form inside the app. Someone fills it in, my app em…
+- [R] [reddit-saas] What are you doing this weekend instead of sales ? — https://www.reddit.com/r/SaaS/comments/1w1fr37/what_are_you_doing_this_weekend_instead_of_sales/ — Hi guys. Am I the only one in this subreddit who hates sales and prefers to do whatever other tasks there are in your business, but not brin…
+- [R] [reddit-saas] 🗣️ founders: it’s your time to shine what are you building — https://www.reddit.com/r/SaaS/comments/1w1fqky/founders_its_your_time_to_shine_what_are_you/ — &amp;#32; submitted by &amp;#32; /u/alielknight [link] &amp;#32; [comments]
+- [R] [reddit-saas] Next SaaS Multibagger? — https://www.reddit.com/r/SaaS/comments/1w1fbdn/next_saas_multibagger/ — Which stocks do you think have the highest potential to be a ten-bagger? Klaviyo Figma Reddit Upwork Duolingo Toast Teqnion (similar to Cons…
+- [P] [reddit-saas] Do your automation workflows fail silently? — https://www.reddit.com/r/SaaS/comments/1w1f6eb/do_your_automation_workflows_fail_silently_how_do/ — A founder validating a monitoring product describes the failure mode precisely: a workflow that succeeds technically but produces a wrong result, an AI step that degrades, a third-party API that changes shape, a 3am failure nobody notices. The thread is more valuable as a description of an under-tooled problem than as a product pitch — if you run scheduled agent pipelines, the questions it asks about how you'd detect a silent wrong output are worth answering for your own setup.
+- [R] [lobsters] I naively tried vibe-coding a memory tool for agents and stared into the abyss of unsolved problems in philosophy — https://arbustoemchamas.substack.com/p/i-naively-tried-vibe-coding-a-memory — Comments
+- [R] [lobsters] Initial Release of Union QtWidgets — https://akselmo.dev/posts/union-qtwidgets/ — Comments
+- [R] [reddit-saas] How to make ideal landing page and make sure that the issue with conversion is not in the landing page? — https://www.reddit.com/r/SaaS/comments/1w1ifvz/how_to_make_ideal_landing_page_and_make_sure_that/ — Pls share your stories and thoughts on landing pages you build, it is the first thing what the user sees is it that important or shall I jus…
+- [R] [reddit-saas] I’m building an offline-first AI dictation &amp; diagramming tool. Sanity check requested on pricing and rollout. — https://www.reddit.com/r/SaaS/comments/1w1hav5/im_building_an_offlinefirst_ai_dictation/ — After 12 years in UX and product leadership, I'm taking a sabbatical to build solo. I'm validating a privacy-first macOS/iOS app. It uses lo…
+- [R] [reddit-saas] Started a fun little project that can generate motion graphics videos using AI — https://www.reddit.com/r/SaaS/comments/1w1hyn8/started_a_fun_little_project_that_can_generate/ — A couple months ago I started a project that can generate motion graphics videos using AI. I wanted to use these videos to promote my other…
+- [R] [reddit-saas] anyone else seeing AI traffic land on the wrong pages — https://www.reddit.com/r/SaaS/comments/1w1j23i/anyone_else_seeing_ai_traffic_land_on_the_wrong/ — we’ve had people come in from AI tools but they’re landing on old blog posts instead of core product pages which makes no sense, checked it…
+- [R] [reddit-saas] ASO tools wasted more of my time than they saved — https://www.reddit.com/r/SaaS/comments/1w1ivaq/aso_tools_wasted_more_of_my_time_than_they_saved/ — I recently built an iOS app and assumed building the app itself would be the hardest part. For me, it wasn’t. Once the app was ready, I star…
+- [R] [reddit-saas] Looking to work with startups launching soon — https://www.reddit.com/r/SaaS/comments/1w1icw0/looking_to_work_with_startups_launching_soon/ — I'm a designer and I’ve worked with a bunch of startups over the past year, and one of the products I worked on ended up raising a round. I’…
+- [R] [reddit-saas] Experience advertising on Chat GPT &amp; perplexity — https://www.reddit.com/r/SaaS/comments/1w1hpua/experience_advertising_on_chat_gpt_perplexity/ — I've been looking into the type of businesses that advertise with Chat GPT or Perplexity and if it could be relevant for myself and thought…
+- [R] [reddit-saas] Terminology localization — https://www.reddit.com/r/SaaS/comments/1w1hh2s/terminology_localization/ — Hey folks, suppose I had app that was primarily in English - but decided to add more languages. Running directly trough translation engine o…
+- [R] [reddit-saas] How do you run a successful pilot for B2B SaaS product? — https://www.reddit.com/r/SaaS/comments/1w1j909/how_do_you_run_a_successful_pilot_for_b2b_saas/ — We are thinking about ways to attract our first users to our B2B SaaS product. Based on my understanding, running a pilot with potential use…
+- [R] [reddit-saas] Looking to Automate Your Business? Let’s Build It — https://www.reddit.com/r/SaaS/comments/1w1j8zd/looking_to_automate_your_business_lets_build_it/ — 🚀 Need to Automate Your Business? If you're running a business and want to save time, reduce manual work, or improve your operations, I can…
+- [R] [reddit-saas] If people understand your SaaS but still don't sign up, one of these three things is probably missing. — https://www.reddit.com/r/SaaS/comments/1w1ixyq/if_people_understand_your_saas_but_still_dont/ — If visitors understand the product but still do not sign up, the page is usually missing one of three things: a specific outcome, a believab…
+- [R] [reddit-localllama] We’re the Team Behind Apodex 1.1 — Ask Us Anything! — https://www.reddit.com/r/LocalLLaMA/comments/1vzxdui/were_the_team_behind_apodex_11_ask_us_anything/ — Hi r/LocalLLaMA ! We’re Apodex , the team behind Apodex 1.1 , our new model family built to scale agentic intelligence for complex work. We’…
+- [R] [reddit-localllama] AMA Announcement: Apodex (Thursday, 8AM-11AM PST) — https://www.reddit.com/r/LocalLLaMA/comments/1vzdfw9/ama_announcement_apodex_thursday_8am11am_pst/ — &amp;#32; submitted by &amp;#32; /u/XMasterrrr [link] &amp;#32; [comments]
+- [P] [reddit-localllama] Terminal Bench 4.0 released; GLM-5.3 level with Fable 5 — https://www.reddit.com/r/LocalLLaMA/comments/1w1fpxi/terminal_bench_40_just_dropped_glm53_is_at_the/ — Terminal Bench 4.0 launched with an explicit focus on iterating fast enough to stay ahead of benchmark saturation as new models ship. On the new leaderboard GLM-5.3 lands level with Fable 5 within margin of error. The thread also raises a real problem for solo builders: a full run costs 5–10B tokens, so there's no affordable way to measure whether your own harness or skill changes actually improve success rate.
+- [R] [reddit-localllama] I always wonder how much more speed and/or context they'd be getting.. — https://www.reddit.com/r/LocalLLaMA/comments/1w1gec7/i_always_wonder_how_much_more_speed_andor_context/ — Nothing personal. I just have too much time on my hands. Probably because I spend none of it inspecting the code my agent writes, just the f…
+- [R] [reddit-localllama] Saved my fiances phone with qwen 3.8 27b — https://www.reddit.com/r/LocalLLaMA/comments/1w1cbb0/saved_my_fiances_phone_with_qwen_38_27b/ — this model is really something incredible, saved us like 600 dollars. my fiance is always breaking her electronics and then getting me to fi…
+- [R] [reddit-localllama] Qwen 3.8 Flash Next ngram look up table offloaded to SSD and streamed in SGLang — https://www.reddit.com/r/LocalLLaMA/comments/1w18b1k/qwen_38_flash_next_ngram_look_up_table_offloaded/ — Have anyone tried this yet? Looks promising, seems too good to be true with no performance loss. &amp;#32; submitted by &amp;#32; /u/Easy_Werewolf79…
+- [R] [reddit-localllama] Different Qwen thinking levels — https://www.reddit.com/r/LocalLLaMA/comments/1w1gm8y/different_qwen_thinking_levels/ — &amp;#32; submitted by &amp;#32; /u/Tall_Abrocoma_3533 [link] &amp;#32; [comments]
+- [P] [reddit-localllama] 181 tok/s aggregate on Qwen3.8-Flash-Next across 2x DGX Spark — https://www.reddit.com/r/LocalLLaMA/comments/1w1486l/today_i_hit_181_tokss_aggregate_on/ — A detailed serving write-up: two DGX Sparks linked by a direct ConnectX-7 cable with NCCL over RDMA, tensor-parallel across both boxes, running an NVFP4 quant at 512K context, reaching 181 tok/s aggregate across about nine concurrent agent sessions with 30–50 tok/s single-stream. The most transferable detail is the warning that the NCCL TCP fallback is silent and costs half your throughput — verify the log says it's using IB. Relevant if you're building a multi-agent fleet on local hardware.
+- [R] [reddit-localllama] zai-org/GLM-5.3 on Hugging Face — https://www.reddit.com/r/LocalLLaMA/comments/1w0tgzl/zaiorgglm53_hugging_face/ — Reddit crosspost of the GLM-5.3 Hugging Face release with the same vendor claims covered by the primary item. Rejected as a duplicate; the release is published under the Hugging Face source.
+- [R] [reddit-localllama] claude mods didn't like that, somehow 🤷‍♀️ — https://www.reddit.com/r/LocalLLaMA/comments/1w0lz7e/claude_mods_didnt_like_that_somehow/ — &amp;#32; submitted by &amp;#32; /u/peculiar-ragdoll [link] &amp;#32; [comments]
+- [P] [reddit-localllama] AMD releases ROCm 10.0 — https://www.reddit.com/r/LocalLLaMA/comments/1w0yfmn/rocm_100_a_decade_of_open_compute_built_for_the/ — AMD shipped ROCm 10.0 roughly a month after 7.14, positioned around agentic AI workloads, with an updated GPU compatibility matrix worth checking if you have older AMD cards. The llama.cpp PR adding support is open but not yet merged, so local inference users should wait for that before upgrading.
+- [R] [reddit-localllama] If your t/s is low enough, you can see speculative decoding with your own eyes — https://www.reddit.com/r/LocalLLaMA/comments/1w1je5d/if_your_ts_is_low_enough_you_can_see_speculative/ — The other day I was trying out a distillation of DS4 Pro, and it came with MTP. It was slow as hell on my hardware, barely 2-3 t/s, BUT the…
+- [P] [reddit-localllama] SOTA GGUFs for Qwen3.8-27B: GSQ-RCO at 2.5 to 3.0 bpw — https://www.reddit.com/r/LocalLLaMA/comments/1w13vse/release_sota_ggufs_for_qwen3827b_gsqrco_at_25_to/ — A release of Qwen3.8-27B quants using two new methods: GSQ, which jointly learns grid assignments and scales to close most of the scalar-versus-vector gap at 2–3 bits, and RCO, which assigns a quantization type per tensor under a strict size budget by gradient descent on task loss. Three GGUFs at 2.50, 2.75 and 3.00 bpw (8.4–10.1GB) plus the vision projector, running unmodified in llama.cpp, Ollama and LM Studio. Better quality at the same file size is a straight win if you're VRAM-bound.
+- [R] [reddit-localllama] Tenstorrent Quietbox 2 Arrived! — https://www.reddit.com/r/LocalLLaMA/comments/1w18pu9/tenstorrent_quietbox_2_arrived/ — Super excited to start dev on this. I've already deployed a number of galaxy systems and want to really figure out the ideal models on this…
+- [P] [reddit-localllama] Breeze-TTS-2 initial impressions — https://www.reddit.com/r/LocalLLaMA/comments/1w1002h/breezetts2_initial_impressions_genuinely_frontier/ — Breeze-TTS-2 is a roughly 7GB open text-to-speech model that early testers describe as genuinely frontier-quality, with a hosted playground available alongside local weights on Hugging Face. Small enough to run alongside other work on a single machine. Worth an evaluation if you have any voice output in a product roadmap.
+- [R] [reddit-localllama] AtomicChat/Qwen3.8-Flash-Next-GGUF is Really Good — https://www.reddit.com/r/LocalLLaMA/comments/1w17zbg/atomicchatqwen38flashnextgguf_is_really_good/ — specs hardware: M4 Max 128GB Studio inference engine: llama.cpp (qwen4exp branch) judge: claude-opus-4-6 AtomicChat/Qwen3.8-Flash-Next-GGUF…
+- [R] [reddit-localllama] Qwen3.8-Next streaming - 150tps prefill, 3.6 tps decode on M5 Air — https://www.reddit.com/r/LocalLLaMA/comments/1w1inuk/qwen38next_streaming_150tps_prefill_36_tps_decode/ — Out of curiosity, I thought I'd see if I could adapt my DSv4 streaming stack from a few weeks ago to take Qwen3.8-Next. It worked, better th…
+- [R] [reddit-localllama] Is it worth running Qwen 3.8 Flash Next on 4x3090 vs 27B? — https://www.reddit.com/r/LocalLLaMA/comments/1w16kts/is_it_worth_running_qwen_38_flash_next_on_4x3090/ — Can someone please tell me if it's worth running Qwen 3.8 Flash Next on 4x3090 yet over 27B? 27B is good but damn it is indecisive. I am get…
+- [R] [reddit-localllama] use llms to auto annotation your dataset locally — https://www.reddit.com/r/LocalLLaMA/comments/1w18v86/use_llms_to_auto_annotation_your_dataset_locally/ — hi i make tool for this called llmog it's purpose to make llms free to - auto annotation datasets - reclassification existing yolo datasets…
+- [R] [reddit-localllama] Qwen3.8-27B vs Qwen3.8-Flash-Next smaller quant? — https://www.reddit.com/r/LocalLLaMA/comments/1w1e1uq/qwen3827b_vs_qwen38flashnext_smaller_quant/ — If you only had 128gb ram which one would be more &quot;intelligent&quot;, Qwen3.8-27B (or even 3.6) or a smaller quant of Qwen3.8-Flash-Next (Q4/Q5)…
+- [R] [reddit-localllama] Qwen3.8-Flash-Next + MTP on Strix Halo: Vulkan Runtime Notes — https://www.reddit.com/r/LocalLLaMA/comments/1w1d3zl/qwen38flashnext_mtp_on_strix_halo_vulkan_runtime/ — Below are the benchmark results for running Qwen3.8-Flash-Next on Strix Halo using the Vulkan backend of llama.cpp, combined with MTP model.…
+- [P] [reddit-localllama] 50% token generation increase by offloading only &quot;hot&quot; experts to VRAM — https://www.reddit.com/r/LocalLLaMA/comments/1w1996t/50_tg_increase_with_offloading_hot_experts_to_vram/ — Instead of offloading whole layers to the GPU, this llama.cpp fork offloads only the experts that stay hot across a workload, taking Qwen3.8-Flash-Next from 20 to 30 tok/s when the model doesn't fit entirely in VRAM. The author found certain expert groups stay stable across coding, refactoring and code-review workloads. Tested only on coding workloads, and the author says he doesn't expect it to be upstreamed. Useful if you're running MoE models that overflow your card.
+- [R] [reddit-localllama] Linux Ubuntu 26.04 LTS &amp; 26.04.1 upgrade - How much Improvements? — https://www.reddit.com/r/LocalLLaMA/comments/1w1d2hm/linux_ubuntu_2604_lts_26041_upgrade_how_much/ — People who moved from older version to this new one, how much improvements do you see on inference? Ex: llama.cpp performance? This new vers…
+- [P] [reddit-localllama] Audit of 443 GGUF quants: 64 are not the quant their filename claims — https://www.reddit.com/r/LocalLLaMA/comments/1w11ob5/i_audited_443_gguf_quants_across_25_repos_64_of/ — K-quants and i-quants require the first tensor dimension to be divisible by 256; when it isn't, llama-quantize silently substitutes a compatible ~4.5 bpw type such as IQ4_NL or Q4_0 while the file keeps its low-bit name. The author audited 443 quants across 25 repos and found 64 affected, including one model where all four IQ2 rungs are the same 4.58 bpw file under different names. The behaviour is intentional and warned about, but only in the quantize log that downloaders never see. The audit tool and full census are published, so you can check anything you've sized a VRAM budget around.
+- [P] [reddit-localllama] Qwen3.8-Flash-Next running on an RTX 3090 with 12–16GB VRAM in play — https://www.reddit.com/r/LocalLLaMA/comments/1w0u24k/qwen38flash_on_rtx3090_64gb_ram_but_you_only_need/ — A detailed working configuration for Qwen3.8-Flash-Next on 2020-era hardware: RTX 3090, Ryzen 9 3950X, PCIe 3.0, 64GB DDR4, with IQ4_XS weights, vision on GPU, experts in host RAM and n-grams on disk, reaching 160 tok/s prefill and 16 tok/s decode. The author documents how to fit 16GB by dropping the KV quant and moving the vision tower to CPU, and 12GB by halving ub at the cost of half the prefill. MTP slowed decode even at 80% draft acceptance. Not interactive speed, but a real recipe for batch work on hardware you already own.
+- [R] [lobsters] Being kicked out of the tech industry — https://www.jacky.wtf/essays/2026/kicked-out/ — Comments
+- [R] [lobsters] Any true alternatives to electron JavaScript? — https://lobste.rs/s/vji9aj/any_true_alternatives_electron — I see companies having codebase in Tauri going back to electron - is this a common thing?
+- [R] [lobsters] Debian Votes To Allow &quot;Responsible Use Of Generative AI&quot; — https://www.phoronix.com/news/Debian-Votes-Responsible-AI-Use — Comments
+- [R] [lobsters] Parsing the Infamous Japanese Postal CSV — https://www.dampfkraft.com/posuto.html — Comments
+- [R] [hn-top] Samsung's Processing-in-Memory (PIM) — https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Kumander Linux – A Linux Distro with a Windows 7 Desktop — https://www.kumander.org/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] State of the Map 2026 — https://2026.stateofthemap.org/ — Scheduled agent omitted this claimed item from the completion payload.
+- [P] [reddit-saas] We crossed €150K ARR — the mistakes that cost five years — https://www.reddit.com/r/SaaS/comments/1w1w0r9/we_crossed_150k_arr_here_are_the_mistakes_that/ — The substantive lesson: they spotted an emerging problem in AI search in November 2025, shipped a rough engine in two weeks, hit roughly €400 MRR quickly, then treated it as a side project because another product had their attention — and returned to find the category crowded. The failure wasn't picking the wrong product, it was not investigating unexpected traction immediately. The rest of the post is standard founder retrospective, but that specific pattern is worth internalising.
+- [R] [reddit-saas] Building the SaaS was easier than figuring out how to sell it without becoming a spammer — https://www.reddit.com/r/SaaS/comments/1w22580/building_the_saas_was_easier_than_figuring_out/ — I recently launched a pretty niche AI SaaS for traders. The product works. Payments work. SEO is set up. Demo is done. All the stuff I thoug…
+- [R] [reddit-saas] Finally got my first 4 users — https://www.reddit.com/r/SaaS/comments/1w1kgbb/finally_got_my_first_4_users/ — It’s been a while I built my fitness app, I’ve been using it for just myself as I’ve been on a fitness journey. Lately I started posting it…
+- [R] [reddit-saas] Vibe coders how do you fix bugs that Claude code cannot fix? — https://www.reddit.com/r/SaaS/comments/1w1z8xt/vibe_coders_how_do_you_fix_bugs_that_claude_code/ — I often face bugs that Claude cannot solve when the project is already big enough in late stages of development and every fix in the code cr…
+- [R] [reddit-saas] SaaS platform without AI. Still relevant? — https://www.reddit.com/r/SaaS/comments/1w28rpq/saas_platform_without_ai_still_relevant/ — TL;DR: Spent a year building a platform. No native AI integration. Is anything without AI in it going to be ignored even if it makes no sens…
+- [R] [reddit-saas] I built a free library for building software with AI, one task at a time — https://www.reddit.com/r/SaaS/comments/1w28cvs/i_built_a_free_library_for_building_software_with/ — I’ve found that AI coding agents work much better when I break a large feature into smaller, focused tasks instead of asking for everything…
+- [R] [reddit-saas] The free directory submission manager with built-in MCP: submitlist.io — https://www.reddit.com/r/SaaS/comments/1w1vuo4/the_free_directory_submission_manager_with/ — Hi everyone Here is yet another directory submission management website, but this one has a Kanban board, is free, and includes MCP support…
+- [R] [reddit-saas] anyone experienced customer's cloud (on premise) saas deployment? — https://www.reddit.com/r/SaaS/comments/1w27unu/anyone_experienced_customers_cloud_on_premise/ — so we've built an internal tool for ourself (marketing operation agency) and its been working great and we've got a lot of demand from outsi…
+- [R] [reddit-saas] Saas founders and companies that sell into enterpise, how do decision making in the B2B deals happen with you? — https://www.reddit.com/r/SaaS/comments/1w24qmy/saas_founders_and_companies_that_sell_into/ — I used to work in commercialsiation and many times, a customer asked for a payment term we had not offered before. Took a day to sort out, n…
+- [R] [reddit-saas] How to validate this SaaS idea — https://www.reddit.com/r/SaaS/comments/1w21ocp/how_to_validate_this_saas_idea/ — Hi everyone! First off, I'm hand typing all of this. No AI slop at all, I promise. I've built an MVP for a new SaaS idea: Learning Spanish t…
+- [R] [reddit-saas] Guys Please Don't — https://www.reddit.com/r/SaaS/comments/1w1rfwx/guys_please_dont/ — Guys, please stop posting “I got X users” and “I made X amount of money” posts. Man, you guys are making me feel like I need to wake up at 2…
+- [R] [reddit-saas] How do I get my first customer?? — https://www.reddit.com/r/SaaS/comments/1w1xc9b/how_do_i_get_my_first_customer/ — I have a b2b saas product. For the sake of this question.. let's assume it's a really good product..compared to the existing products. How d…
+- [R] [reddit-saas] I am CTO at Swedish startup, but I am looking for part time role as fractional CTO or product manager or tech lead, I have more than 8 years of experience in development and leadership, and I am open for discussion, Thank you — https://www.reddit.com/r/SaaS/comments/1w29bvh/i_am_cto_at_swedish_startup_but_i_am_looking_for/ — &amp;#32; submitted by &amp;#32; /u/Mean_Ambassador_9210 [link] &amp;#32; [comments]
+- [R] [reddit-saas] SaaS Websites (The marketing side) — https://www.reddit.com/r/SaaS/comments/1w293wg/saas_websites_the_marketing_side/ — My SaaS application is due to be finished and ready for a v1 release. I am looking at SaaS based marketing, specifically websites. Is there…
+- [R] [reddit-saas] Building with AI — https://www.reddit.com/r/SaaS/comments/1w28pls/building_with_ai/ — https://preview.redd.it/ghlkwm247gmh1.png?width=673&amp;format=png&amp;auto=webp&amp;s=020057d043aeee0e2f5b7f5b04e8f3c1366763cd Hi, how is it going with…
+- [R] [reddit-saas] 3000+ visits in 24h, featured in producthunt! 5 person paid 50 usd to put MEMES — https://www.reddit.com/r/SaaS/comments/1w1rlxo/3000_visits_in_24h_featured_in_producthunt_5/ — weirdest project i created. check: publicdesktop.lol &amp;#32; submitted by &amp;#32; /u/ineedsomedrg [link] &amp;#32; [comments]
+- [R] [reddit-saas] I am a physiotherapist, and I realized that most people don’t consider postural deformities a health problem — https://www.reddit.com/r/SaaS/comments/1w28ewi/i_am_a_physiotherapist_and_i_realized_that_most/ — I am a physiotherapist, and 6 months ago, I was taking lectures and treating patients. While I was treating patients, I noticed an anomaly.…
+- [R] [reddit-saas] I am a physiotherapist, and I realized that most people don’t consider postural deformities a health problem — https://www.reddit.com/r/SaaS/comments/1w28b5p/i_am_a_physiotherapist_and_i_realized_that_most/ — I am a physiotherapist, and 6 months ago, I was taking lectures and treating patients. While I was treating patients, I noticed that most pe…
+- [R] [reddit-saas] Looking to target inside sales in the trades — https://www.reddit.com/r/SaaS/comments/1w23gz8/looking_to_target_inside_sales_in_the_trades/ — Built a tool that helps inside salespeople in the trades. Think HVAC, plumbing, electrical, etc. I’ve exhausted my few contacts in the indus…
+- [R] [reddit-saas] Built a serverless P2P tool because I got tired of cloud storage limits and privacy overhead. What's your take on zero-server architecture? — https://www.reddit.com/r/SaaS/comments/1w2361v/built_a_serverless_p2p_tool_because_i_got_tired/ — Hey everyone, I wanted to build something that completely cuts out the middleman for file sharing and real-time chat. No cloud servers stori…
+- [R] [reddit-saas] First revenue for my saas — https://www.reddit.com/r/SaaS/comments/1w1veh8/first_revenue_for_my_saas/ — Hey, first time posting here, but I thought I would share my success story. It started as a hackathon project to help users schedule social…
+- [R] [reddit-saas] first saas got acquired. second one failed hard. what i learned about disappointment — https://www.reddit.com/r/SaaS/comments/1w1s1q5/first_saas_got_acquired_second_one_failed_hard/ — wanted to share something that might hit home for some of you. my first saas actually worked. it got traction, made money, and eventually go…
+- [P] [reddit-saas] How are people handling maintenance for AI-built client apps? — https://www.reddit.com/r/SaaS/comments/1w1rdk4/how_are_people_handling_maintenance_for_aibuilt/ — A discussion thread asking freelancers and agencies shipping client apps with Lovable, Cursor, Claude Code and Bolt what happens after launch — retainers, uptime, security patching, dependency updates, and tracking several client apps at once. The observation driving it is that building got roughly ten times easier while maintenance didn't. If you do any client work with these tools, the pricing implication is worth thinking about before your first post-launch incident.
+- [R] [gh-nextjs] Next.js v16.4.0-canary.12 — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.12 — A canary release bump with no user-facing changes. Rejected per the standing filter on dependency and patch-only release notes.
+- [R] [lobsters] Creepy crawlies — https://people.kernel.org/monsieuricon/creepy-crawlies — Comments
+- [R] [lobsters] Debian and the sirens — https://joeyh.name/blog/entry/Debian_and_the_sirens/ — Comments
+- [R] [lobsters] What GLM-5.3 Flash running on Chinese hardware actually means — https://martinalderson.com/posts/glm-5-3-flash-chinese-hardware/ — Comments
+- [R] [lobsters] Introducing ReactOS 0.4.16 — https://reactos.org/project-news/reactos-0416-released/ — Comments
+- [R] [lobsters] There's no such thing as Just a Tool — https://deadsimpletech.com/blog/no-such-thing-as-just-a-tool — Comments
+- [R] [lobsters] Wrapping GTK4 in 800 lines of Clojure with Jolt — https://yogthos.net/posts/2026-08-29-glimmer-ui.html — Comments
+- [R] [lobsters] Functional State Machines in Rust: Typestate and Newtype Patterns — https://dl.acm.org/doi/epdf/10.1145/3830438.3830958 — Comments
+- [R] [lobsters] Does Computer Science Need Computers? — https://www.quantamagazine.org/does-computer-science-need-computers-20260828/ — Comments
+- [R] [lobsters] Bug blindness — https://danluu.com/bug-blind/ — Comments
+- [R] [lobsters] Prompt Injection in Claude Code Opus 5 Auto Mode (Lobsters) — https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/ — Lobsters submission pointing at the same Embrace The Red research covered via Simon Willison's writeup. The stored body is only the comments-link wrapper, so there is nothing additional here. Rejected as a duplicate.
+- [R] [lobsters] Civic Hygiene (2013) — https://shkspr.mobi/blog/2013/11/civic-hygiene/ — Comments
+- [R] [hn-top] Bug Blindness — https://danluu.com/bug-blind/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Hy4 preview — https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] FreeCORE TrueNAS Core – Continued — https://freecore.org/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Nancy Grace Roman Space Telescope — https://science.nasa.gov/mission/roman-space-telescope/ — https:&amp;#x2F;&amp;#x2F;nextspaceflight.com&amp;#x2F;launches&amp;#x2F;details&amp;#x2F;6983&amp;#x2F; https:&amp;#x2F;&amp;#x2F;www.npr.org&amp;#x2F;2026&amp;#x2F;08&amp;#x2F;28&amp;#x2…
+- [R] [hn-top] Lawmakers added $1 to car insurance policies. That money paid for Flock cameras — https://www.texastribune.org/2026/08/28/texas-flock-cameras-auto-insurance-fee-mvcpa-grants/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] California lawmakers unanimously pass Linux exemption from age-verification law — https://www.tomshardware.com/software/linux/california-lawmakers-unanimously-pass-linux-exemption-from-age-verification-law-software-distributed-under-the-gpl-mit-bsd-and-apache-licenses-are-exempt — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Algorithmic rent-pricing litigation expands under new state and local laws — https://www.morganlewis.com/pubs/2026/08/algorithmic-rent-pricing-litigation-expands-under-new-state-and-local-laws — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Functional State Machines in Rust: Typestate and Newtype Patterns — https://dl.acm.org/doi/10.1145/3830438.3830958 — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Calibrate Before You Accelerate: Bias Toward Action in a New Role — https://tucker.wales/writing/bias-towards-action/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Domain-Driven Agents — https://coldtake.dev/blog/domain-driven-agents — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Good Culture Is the Biggest Productivity Hack, Not AI — https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] DHS is using obscure law to snoop on journalists, non-profits, unions — https://www.theguardian.com/us-news/2026/aug/29/trump-dhs-1509-summons-records-journalists-nonprofits — Scheduled agent omitted this claimed item from the completion payload.
+- [P] [simon-willison] Tencent Hy4 Preview: 770B parameters, 1M context, open weights — https://simonwillison.net/2026/Aug/29/hy4/ — Tencent released Hy4 Preview, a text-only open-weight model with 770B total and 49B active parameters, a 1M token context window, and a 1.56TB footprint on Hugging Face. That's a large jump from Hy3 in July at 295B total, 21B active and 256K context. The chat template exposes a reasoning_effort control defaulting to high. Not locally runnable for most people, but a meaningful marker of where open weights are heading.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
