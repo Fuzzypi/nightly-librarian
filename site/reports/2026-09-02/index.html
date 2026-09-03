@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>September 2, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="9 stories cleared the bar, led by langchain==1.4.0a3 — new langchain.mcp namespace, Show HN: Running a 125B-parameter model on a 48GB Mac, and Ollama v0.">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-09-02/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="September 2, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="9 stories cleared the bar, led by langchain==1.4.0a3 — new langchain.mcp namespace, Show HN: Running a 125B-parameter model on a 48GB Mac, and Ollama v0.">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-09-02/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="September 2, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="9 stories cleared the bar, led by langchain==1.4.0a3 — new langchain.mcp namespace, Show HN: Running a 125B-parameter model on a 48GB Mac, and Ollama v0.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>September 2, 2026 · Report log</span>
+      <span>Sep 2, 2026, 9:09 PM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>September 2, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>9 stories cleared the bar, led by langchain==1.4.0a3 — new langchain.mcp namespace, Show HN: Running a 125B-parameter model on a 48GB Mac, and Ollama v0.33.3-rc0.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>9 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a3" target="_blank" rel="noopener">langchain==1.4.0a3 — new langchain.mcp namespace</a></div>
+        <div class="item-takeaway">LangChain 1.4's third alpha introduces a dedicated langchain.mcp namespace: an MCPAdapter that wraps any fastmcp.Client (URL, script, in-process server, multi-server config, or ClientGroup) into LangChain tools, with client-side tool-list caching. This is LangChain formalizing first-class MCP support rather than leaving it to third-party glue.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/carloslfu/slotstream" target="_blank" rel="noopener">Show HN: Running a 125B-parameter model on a 48GB Mac</a></div>
+        <div class="item-takeaway">slotstream lets you run Qwen3.8-Flash-Next (a 125B-parameter MoE model that normally needs 100GB+ RAM) on Macs starting at 16GB, via expert-offloading/SSD-streaming, natively in Swift/MLX, reaching ~12 tok/s on a 48GB machine. Ships with an auto-mode that trades off memory vs. speed, with speculative decoding (MTP) planned next.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/ollama/ollama/releases/tag/v0.33.3-rc0" target="_blank" rel="noopener">Ollama v0.33.3-rc0</a></div>
+        <div class="item-takeaway">Release candidate for Ollama 0.33.3: now honors GGUF-defined default sampling parameters, plus MLX/llama.cpp updates. Minor behavior change for anyone running local models with model-embedded defaults.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.google/products-and-platforms/products/workspace/google-pics/" target="_blank" rel="noopener">Google Pics — image creation/editing in Workspace</a></div>
+        <div class="item-takeaway">Google launched Google Pics, an image creation and editing tool built on its Nano Banana model, now available inside Google Workspace. It's a consumer/productivity feature rather than a developer API.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1w4wjnl/we_published_our_pricing_on_day_one_including_a/" target="_blank" rel="noopener">Publishing pricing on day one (incl. $100 charity tier)</a></div>
+        <div class="item-takeaway">A B2B SaaS founder describes publishing pricing publicly from launch ($200/$500/$100 tiers, two-month free trial, no card required) against the common advice to hide pricing behind a sales call. A concrete, specific pricing-strategy decision from a real (if early) launch.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://huggingface.co/blog/webgpu-kernels" target="_blank" rel="noopener">@huggingface/kernels: 200+ WebGPU Kernels for Local AI</a></div>
+        <div class="item-takeaway">Title indicates Hugging Face released a library of 200+ WebGPU compute kernels for running AI locally (in-browser or on-device), but the fetched content body was empty so specifics (which models, performance, license) can't be confirmed here.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://neon.com/blog/introducing-neon-labs" target="_blank" rel="noopener">Introducing Neon Labs</a></div>
+        <div class="item-takeaway">Neon launched 'Neon Labs,' described as a home for experimental tools built around its Lakebase Postgres product - positioned as a community playground. No specific tools listed yet in what was fetched.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://masteranza.github.io/weedout/" target="_blank" rel="noopener">Show HN: Weedout - hides YouTube AI-labeled videos</a></div>
+        <div class="item-takeaway">A solo developer built and shipped a $1.99 Safari extension that hides YouTube videos labeled 'Made with AI,' using YouTube's own label rather than AI detection, running locally. Source is open on GitHub.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/cache-transcoding/" target="_blank" rel="noopener">Cloudflare: saving petabytes of cache storage with Zstandard + Pingora</a></div>
+        <div class="item-takeaway">Cloudflare describes prototyping in-cache compression (Zstandard) inside their Pingora-based cache layer to fit more cached content on the same hardware, potentially saving petabytes of storage at their scale.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://github.com/ollama/ollama/releases/tag/v0.33.3-rc0" target="_blank" rel="noopener">Ollama v0.33.3-rc0</a>
+        </div>
+        <div class="item-takeaway">Release candidate for Ollama 0.33.3: now honors GGUF-defined default sampling parameters, plus MLX/llama.cpp updates. Minor behavior change for anyone running local models with model-embedded defaults.</div>
+        <div class="item-meta">
+          <span>gh-ollama</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a4" target="_blank" rel="noopener">langchain==1.4.0a4</a>
+        </div>
+        <div class="item-takeaway">Fourth alpha of LangChain 1.4, iterating on the same MCP adapter work as 1.4.0a3 (session-based elicitation routing, protocol-era gating). No new capability beyond the a3 release.</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          langchain==1.4.0a3
+        </div>
+        <div class="item-takeaway">new langchain.mcp namespace — https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a3 — LangChain 1.4's third alpha introduces a dedicated langchain.mcp namespace: an MCPAdapter that wraps any fastmcp.Client (URL, script, in-process server, multi-server config, or ClientGroup) into LangChain tools, with client-side tool-list caching. This is LangChain formalizing first-class MCP support rather than leaving it to third-party glue.</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          Google AI
+        </div>
+        <div class="item-takeaway">August 2026 recap — https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/ — A roundup post linking to Google's various AI announcements from August 2026, with no specific new information itself.</div>
+        <div class="item-meta">
+          <span>google-ai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          Google Pics
+        </div>
+        <div class="item-takeaway">image creation/editing in Workspace — https://blog.google/products-and-platforms/products/workspace/google-pics/ — Google launched Google Pics, an image creation and editing tool built on its Nano Banana model, now available inside Google Workspace. It's a consumer/productivity feature rather than a developer API.</div>
+        <div class="item-meta">
+          <span>google-ai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w4a6th/vibecoder_at_3_am_with_claude_code/" target="_blank" rel="noopener">Vibecoder at 3am meme</a>
+        </div>
+        <div class="item-takeaway">A meme/video post about coding late at night with Claude Code. No informational content.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w4hp89/why_saas_bros_repeatedly_fail_at_building_a/" target="_blank" rel="noopener">Why SaaS founders fail (founder exited for $6M)</a>
+        </div>
+        <div class="item-takeaway">Personal essay from a founder claiming a $6M exit, listing generic reasons SaaS founders fail (identify need, build, sell). No verifiable specifics or novel insight beyond common startup advice.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w5256p/if_i_have_to_track_how_many_times_i_blink_in_a/" target="_blank" rel="noopener">&quot;Track how many times I blink&quot; post</a>
+        </div>
+        <div class="item-takeaway">Hyperbolic riff on measuring everything in a startup; no concrete method or result reported.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w4qxei/my_project_earned_5000_in_first_month_and_i_quit/" target="_blank" rel="noopener">&quot;My project earned $5,000 in first month and I quit my job&quot;</a>
+        </div>
+        <div class="item-takeaway">Personal success-story post from a former mobile developer describing quitting their job after their side project hit $5k/month. No specifics yet on the product, channel, or what actually drove the revenue.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w4wjnl/we_published_our_pricing_on_day_one_including_a/" target="_blank" rel="noopener">Publishing pricing on day one (incl. $100 charity tier)</a>
+        </div>
+        <div class="item-takeaway">A B2B SaaS founder describes publishing pricing publicly from launch ($200/$500/$100 tiers, two-month free trial, no card required) against the common advice to hide pricing behind a sales call. A concrete, specific pricing-strategy decision from a real (if early) launch.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w4wodu/how_would_you_market_a_low_cost_b2b_saas_without/" target="_blank" rel="noopener">&quot;How would you market a low-cost B2B SaaS without spending money?&quot;</a>
+        </div>
+        <div class="item-takeaway">A founder asks for free-marketing advice for a $1.50/month feature-request board product. It's a question post, not a reported result or claim.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w4xbf7/ui/" target="_blank" rel="noopener">UI</a>
+        </div>
+        <div class="item-takeaway">Hi, I am an amateur in vibecoding. How does one get the beautiful pages of forms, pill shaped fields etc? My AI gives me standard looking fo…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w4dw9s/the_most_profitable_saas_products_all_solve_1_of/" target="_blank" rel="noopener">The most profitable SaaS products all solve 1 of these 2 problems</a>
+        </div>
+        <div class="item-takeaway">No marketing here, just good advice for the humans who still check this sub. This is clearly just my opinion, so take it with whatever mount…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w52jeh/anybody_is_feeling_the_same_feel_about_agents/" target="_blank" rel="noopener">anybody is feeling the same feel about Agents?</a>
+        </div>
+        <div class="item-takeaway">I well prepared the prompt, implementation plan files for the development and run the sessions in claude code with loaded skills and plugins…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w52j5i/launch_platforms/" target="_blank" rel="noopener">Launch platforms</a>
+        </div>
+        <div class="item-takeaway">Launching a SaaS today feels like speaking into the void, there's so many platforms out there such as Product Hunt, BetaList, There's an AI…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w4rz0a/how_do_you_convince_icp_to_be_your_beta_users/" target="_blank" rel="noopener">How do you convince ICP to be your beta users?</a>
+        </div>
+        <div class="item-takeaway">Hey guys! I was trying to get 10 beta users for my SaaS. I reached out 250 ICP through LinkedIn, getting 50 answers and 15 users interested…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w49k1n/i_just_topped_60_paid_users/" target="_blank" rel="noopener">I just topped 60 paid users!</a>
+        </div>
+        <div class="item-takeaway">My web app just hit 61 paid users! I am feeling somewhat validated. Upsprint.io is a place to focus and execute. It features virtual coworki…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w4ybbb/product_tours_get_12_seconds_of_attention_total/" target="_blank" rel="noopener">Product tours get ~12 seconds of attention total. Has anyone actually measured what users retain?</a>
+        </div>
+        <div class="item-takeaway">I run a company in the digital adoption space, so treat everything below as coming from someone with a horse in the race. I'm posting becaus…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w4qua6/got_my_first_2_sales_today/" target="_blank" rel="noopener">Got my first 2 sales today</a>
+        </div>
+        <div class="item-takeaway">Hey guys hope you're doing good got a small win today 2 sales . I know it's not some crazy amount of money, but honestly I'm really happy ab…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w52v5y/i_built_a_79month_brand_monitoring_tool_because/" target="_blank" rel="noopener">I built a $79/month brand monitoring tool because the alternatives are priced for enterprises</a>
+        </div>
+        <div class="item-takeaway">I've spent the last few months building BrandPulse, and we just launched on Product Hunt today. Wanted to share what it is and get honest fe…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w52nqu/how_do_you_know_when_more_analysis_is_no_longer/" target="_blank" rel="noopener">How do you know when more analysis is no longer improving a product decision?</a>
+        </div>
+        <div class="item-takeaway">Curious how other SaaS founders handle this. “We need more data” can be completely valid, but it can also become a clean way to avoid a hard…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w52g9f/do_you_use_social_media_to_promote_your_saas_and/" target="_blank" rel="noopener">Do you use social media to promote your saas and why?</a>
+        </div>
+        <div class="item-takeaway">Content can be really great if you're willing to be serious and pick 1-3 platforms to really focus on and get good at. I'm wondering if anyo…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w4uiuu/feedback_on_my_launch_plan/" target="_blank" rel="noopener">Feedback on my launch plan</a>
+        </div>
+        <div class="item-takeaway">As a solo founder who spends time building a SaaS solution for local businesses, I never focused on going to market (the solution exists els…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w4zer2/how_do_you_repurpose_written_content_into_visuals/" target="_blank" rel="noopener">How do you repurpose written content into visuals without making it look like generic AI?</a>
+        </div>
+        <div class="item-takeaway">Creating the content for a post is usually easy. Turning that content into a visual people actually want to stop and look at is harder. Afte…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w51x3t/if_youve_already_built_a_saas_how_did_you/" target="_blank" rel="noopener">If you've already built a SaaS, how did you validate it and get your first customers?</a>
+        </div>
+        <div class="item-takeaway">I'm building my first SaaS and I'm at the point where I want to start putting it in front of real users instead of just building. My target…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w4gpyg/got_my_1st_paying_user_for_my_micro_saas_after/" target="_blank" rel="noopener">Got my 1st paying user for my micro saas after 12hr of launching paid plan , yup its soo less but i was happy some one paid to user my web</a>
+        </div>
+        <div class="item-takeaway">yeah i run a web called jeeplanner , indian based entrance exam planning web, today i launched paid plan , and i got 1 paying user thats a l…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1w51289/tired_of_getting_banned_on_whatsapp_overpriced/" target="_blank" rel="noopener">Tired of getting banned on WhatsApp &amp; overpriced BSP tools, so I built my own Cloud API dashboard</a>
+        </div>
+        <div class="item-takeaway">A few months ago, our business hit a major bottleneck: we needed to send regular broadcast updates to customers, but traditional communicati…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://neon.com/blog/neon-is-now-available-in-grok-bot" target="_blank" rel="noopener">Neon available in Grok Bot</a>
+        </div>
+        <div class="item-takeaway">Neon Postgres is now connectable as a plugin inside Grok Bot, letting users ask the bot to provision/build on Neon. Thin vendor integration announcement.</div>
+        <div class="item-meta">
+          <span>neon-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://neon.com/blog/introducing-neon-labs" target="_blank" rel="noopener">Introducing Neon Labs</a>
+        </div>
+        <div class="item-takeaway">Neon launched 'Neon Labs,' described as a home for experimental tools built around its Lakebase Postgres product - positioned as a community playground. No specific tools listed yet in what was fetched.</div>
+        <div class="item-meta">
+          <span>neon-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://masteranza.github.io/weedout/" target="_blank" rel="noopener">Show HN: Weedout - hides YouTube AI-labeled videos</a>
+        </div>
+        <div class="item-takeaway">A solo developer built and shipped a $1.99 Safari extension that hides YouTube videos labeled 'Made with AI,' using YouTube's own label rather than AI detection, running locally. Source is open on GitHub.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://hnmatchmaker.com/" target="_blank" rel="noopener">Show HN: HN Match Maker</a>
+        </div>
+        <div class="item-takeaway">A builder used an LLM (via abacus.ai) to extract structured data from HN's 'Who's Hiring' and 'Who Wants to Be Hired' threads and match candidates to postings on salary, domain, and remote/onsite fit.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/carloslfu/slotstream" target="_blank" rel="noopener">Show HN: Running a 125B-parameter model on a 48GB Mac</a>
+        </div>
+        <div class="item-takeaway">slotstream lets you run Qwen3.8-Flash-Next (a 125B-parameter MoE model that normally needs 100GB+ RAM) on Macs starting at 16GB, via expert-offloading/SSD-streaming, natively in Swift/MLX, reaching ~12 tok/s on a 48GB machine. Ships with an auto-mode that trades off memory vs. speed, with speculative decoding (MTP) planned next.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://huggingface.co/blog/allenai/benchmirt" target="_blank" rel="noopener">BenchMIRT: What are LLM benchmarks actually measuring?</a>
+        </div>
+        <div class="item-takeaway">Title suggests a critique of LLM benchmark methodology, but the fetched content body was empty - no way to assess the actual argument or findings from this feed.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://huggingface.co/blog/webgpu-kernels" target="_blank" rel="noopener">@huggingface/kernels: 200+ WebGPU Kernels for Local AI</a>
+        </div>
+        <div class="item-takeaway">Title indicates Hugging Face released a library of 200+ WebGPU compute kernels for running AI locally (in-browser or on-device), but the fetched content body was empty so specifics (which models, performance, license) can't be confirmed here.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.val.town/aeo" target="_blank" rel="noopener">&quot;A docs page is a very long and complex search query&quot; (AEO)</a>
+        </div>
+        <div class="item-takeaway">Title suggests an essay on 'Answer Engine Optimization' - writing docs so AI agents route interested users to your product - but the fetched content was essentially empty ('On AEO'), so the actual argument can't be assessed.</div>
+        <div class="item-meta">
+          <span>val-town-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.pragmaticengineer.com/how-software-engineering-is-changing-an-essay-challenge/" target="_blank" rel="noopener">&quot;How software engineering is changing&quot; - essay challenge</a>
+        </div>
+        <div class="item-takeaway">Pragmatic Engineer is soliciting essay submissions on how AI is changing software engineering. It's a call for submissions, not itself a substantive claim or finding.</div>
+        <div class="item-meta">
+          <span>pragmatic-engineer</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/cache-transcoding/" target="_blank" rel="noopener">Cloudflare: saving petabytes of cache storage with Zstandard + Pingora</a>
+        </div>
+        <div class="item-takeaway">Cloudflare describes prototyping in-cache compression (Zstandard) inside their Pingora-based cache layer to fit more cached content on the same hardware, potentially saving petabytes of storage at their scale.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.76" target="_blank" rel="noopener">n8n 1.123.76 - browserslist CVE bump</a>
+        </div>
+        <div class="item-takeaway">Routine n8n patch release bumping the browserslist build-time dependency to clear CVE-2026-73088/73089. No user-facing feature or runtime behavior change.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.38.2" target="_blank" rel="noopener">n8n 2.38.2</a>
+        </div>
+        <div class="item-takeaway">Routine n8n point release; changelog details were not present in the fetched content beyond boilerplate.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">n8n beta tag (duplicate of 2.38.2)</a>
+        </div>
+        <div class="item-takeaway">The 'beta' tag points to the same 2.38.2 release content as the item above - a duplicate tag, not a distinct release.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: d38eccb3-ad6b-41c7-97b6-c09f33949ca2
+Started: 2026-09-03T01:02:20.677Z
+Completed: 2026-09-03T01:09:09.544Z
+
+## Worth attention
+
+- **langchain==1.4.0a3 — new langchain.mcp namespace**
+  https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a3
+  LangChain 1.4's third alpha introduces a dedicated langchain.mcp namespace: an MCPAdapter that wraps any fastmcp.Client (URL, script, in-process server, multi-server config, or ClientGroup) into LangChain tools, with client-side tool-list caching. This is LangChain formalizing first-class MCP support rather than leaving it to third-party glue.
+- **Show HN: Running a 125B-parameter model on a 48GB Mac**
+  https://github.com/carloslfu/slotstream
+  slotstream lets you run Qwen3.8-Flash-Next (a 125B-parameter MoE model that normally needs 100GB+ RAM) on Macs starting at 16GB, via expert-offloading/SSD-streaming, natively in Swift/MLX, reaching ~12 tok/s on a 48GB machine. Ships with an auto-mode that trades off memory vs. speed, with speculative decoding (MTP) planned next.
+- **Ollama v0.33.3-rc0**
+  https://github.com/ollama/ollama/releases/tag/v0.33.3-rc0
+  Release candidate for Ollama 0.33.3: now honors GGUF-defined default sampling parameters, plus MLX/llama.cpp updates. Minor behavior change for anyone running local models with model-embedded defaults.
+- **Google Pics — image creation/editing in Workspace**
+  https://blog.google/products-and-platforms/products/workspace/google-pics/
+  Google launched Google Pics, an image creation and editing tool built on its Nano Banana model, now available inside Google Workspace. It's a consumer/productivity feature rather than a developer API.
+- **Publishing pricing on day one (incl. $100 charity tier)**
+  https://www.reddit.com/r/SaaS/comments/1w4wjnl/we_published_our_pricing_on_day_one_including_a/
+  A B2B SaaS founder describes publishing pricing publicly from launch ($200/$500/$100 tiers, two-month free trial, no card required) against the common advice to hide pricing behind a sales call. A concrete, specific pricing-strategy decision from a real (if early) launch.
+- **@huggingface/kernels: 200+ WebGPU Kernels for Local AI**
+  https://huggingface.co/blog/webgpu-kernels
+  Title indicates Hugging Face released a library of 200+ WebGPU compute kernels for running AI locally (in-browser or on-device), but the fetched content body was empty so specifics (which models, performance, license) can't be confirmed here.
+- **Introducing Neon Labs**
+  https://neon.com/blog/introducing-neon-labs
+  Neon launched 'Neon Labs,' described as a home for experimental tools built around its Lakebase Postgres product - positioned as a community playground. No specific tools listed yet in what was fetched.
+- **Show HN: Weedout - hides YouTube AI-labeled videos**
+  https://masteranza.github.io/weedout/
+  A solo developer built and shipped a $1.99 Safari extension that hides YouTube videos labeled 'Made with AI,' using YouTube's own label rather than AI detection, running locally. Source is open on GitHub.
+- **Cloudflare: saving petabytes of cache storage with Zstandard + Pingora**
+  https://blog.cloudflare.com/cache-transcoding/
+  Cloudflare describes prototyping in-cache compression (Zstandard) inside their Pingora-based cache layer to fit more cached content on the same hardware, potentially saving petabytes of storage at their scale.
+
+## Full digest
+
+- [M] [gh-ollama] Ollama v0.33.3-rc0 — https://github.com/ollama/ollama/releases/tag/v0.33.3-rc0 — Release candidate for Ollama 0.33.3: now honors GGUF-defined default sampling parameters, plus MLX/llama.cpp updates. Minor behavior change for anyone running local models with model-embedded defaults.
+- [R] [gh-langchain] langchain==1.4.0a4 — https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a4 — Fourth alpha of LangChain 1.4, iterating on the same MCP adapter work as 1.4.0a3 (session-based elicitation routing, protocol-era gating). No new capability beyond the a3 release.
+- [P] [gh-langchain] langchain==1.4.0a3 — new langchain.mcp namespace — https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a3 — LangChain 1.4's third alpha introduces a dedicated langchain.mcp namespace: an MCPAdapter that wraps any fastmcp.Client (URL, script, in-process server, multi-server config, or ClientGroup) into LangChain tools, with client-side tool-list caching. This is LangChain formalizing first-class MCP support rather than leaving it to third-party glue.
+- [R] [google-ai-blog] Google AI — August 2026 recap — https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/ — A roundup post linking to Google's various AI announcements from August 2026, with no specific new information itself.
+- [P] [google-ai-blog] Google Pics — image creation/editing in Workspace — https://blog.google/products-and-platforms/products/workspace/google-pics/ — Google launched Google Pics, an image creation and editing tool built on its Nano Banana model, now available inside Google Workspace. It's a consumer/productivity feature rather than a developer API.
+- [R] [reddit-saas] Vibecoder at 3am meme — https://www.reddit.com/r/SaaS/comments/1w4a6th/vibecoder_at_3_am_with_claude_code/ — A meme/video post about coding late at night with Claude Code. No informational content.
+- [R] [reddit-saas] Why SaaS founders fail (founder exited for $6M) — https://www.reddit.com/r/SaaS/comments/1w4hp89/why_saas_bros_repeatedly_fail_at_building_a/ — Personal essay from a founder claiming a $6M exit, listing generic reasons SaaS founders fail (identify need, build, sell). No verifiable specifics or novel insight beyond common startup advice.
+- [R] [reddit-saas] &quot;Track how many times I blink&quot; post — https://www.reddit.com/r/SaaS/comments/1w5256p/if_i_have_to_track_how_many_times_i_blink_in_a/ — Hyperbolic riff on measuring everything in a startup; no concrete method or result reported.
+- [R] [reddit-saas] &quot;My project earned $5,000 in first month and I quit my job&quot; — https://www.reddit.com/r/SaaS/comments/1w4qxei/my_project_earned_5000_in_first_month_and_i_quit/ — Personal success-story post from a former mobile developer describing quitting their job after their side project hit $5k/month. No specifics yet on the product, channel, or what actually drove the revenue.
+- [P] [reddit-saas] Publishing pricing on day one (incl. $100 charity tier) — https://www.reddit.com/r/SaaS/comments/1w4wjnl/we_published_our_pricing_on_day_one_including_a/ — A B2B SaaS founder describes publishing pricing publicly from launch ($200/$500/$100 tiers, two-month free trial, no card required) against the common advice to hide pricing behind a sales call. A concrete, specific pricing-strategy decision from a real (if early) launch.
+- [R] [reddit-saas] &quot;How would you market a low-cost B2B SaaS without spending money?&quot; — https://www.reddit.com/r/SaaS/comments/1w4wodu/how_would_you_market_a_low_cost_b2b_saas_without/ — A founder asks for free-marketing advice for a $1.50/month feature-request board product. It's a question post, not a reported result or claim.
+- [R] [reddit-saas] UI — https://www.reddit.com/r/SaaS/comments/1w4xbf7/ui/ — Hi, I am an amateur in vibecoding. How does one get the beautiful pages of forms, pill shaped fields etc? My AI gives me standard looking fo…
+- [R] [reddit-saas] The most profitable SaaS products all solve 1 of these 2 problems — https://www.reddit.com/r/SaaS/comments/1w4dw9s/the_most_profitable_saas_products_all_solve_1_of/ — No marketing here, just good advice for the humans who still check this sub. This is clearly just my opinion, so take it with whatever mount…
+- [R] [reddit-saas] anybody is feeling the same feel about Agents? — https://www.reddit.com/r/SaaS/comments/1w52jeh/anybody_is_feeling_the_same_feel_about_agents/ — I well prepared the prompt, implementation plan files for the development and run the sessions in claude code with loaded skills and plugins…
+- [R] [reddit-saas] Launch platforms — https://www.reddit.com/r/SaaS/comments/1w52j5i/launch_platforms/ — Launching a SaaS today feels like speaking into the void, there's so many platforms out there such as Product Hunt, BetaList, There's an AI…
+- [R] [reddit-saas] How do you convince ICP to be your beta users? — https://www.reddit.com/r/SaaS/comments/1w4rz0a/how_do_you_convince_icp_to_be_your_beta_users/ — Hey guys! I was trying to get 10 beta users for my SaaS. I reached out 250 ICP through LinkedIn, getting 50 answers and 15 users interested…
+- [R] [reddit-saas] I just topped 60 paid users! — https://www.reddit.com/r/SaaS/comments/1w49k1n/i_just_topped_60_paid_users/ — My web app just hit 61 paid users! I am feeling somewhat validated. Upsprint.io is a place to focus and execute. It features virtual coworki…
+- [R] [reddit-saas] Product tours get ~12 seconds of attention total. Has anyone actually measured what users retain? — https://www.reddit.com/r/SaaS/comments/1w4ybbb/product_tours_get_12_seconds_of_attention_total/ — I run a company in the digital adoption space, so treat everything below as coming from someone with a horse in the race. I'm posting becaus…
+- [R] [reddit-saas] Got my first 2 sales today — https://www.reddit.com/r/SaaS/comments/1w4qua6/got_my_first_2_sales_today/ — Hey guys hope you're doing good got a small win today 2 sales . I know it's not some crazy amount of money, but honestly I'm really happy ab…
+- [R] [reddit-saas] I built a $79/month brand monitoring tool because the alternatives are priced for enterprises — https://www.reddit.com/r/SaaS/comments/1w52v5y/i_built_a_79month_brand_monitoring_tool_because/ — I've spent the last few months building BrandPulse, and we just launched on Product Hunt today. Wanted to share what it is and get honest fe…
+- [R] [reddit-saas] How do you know when more analysis is no longer improving a product decision? — https://www.reddit.com/r/SaaS/comments/1w52nqu/how_do_you_know_when_more_analysis_is_no_longer/ — Curious how other SaaS founders handle this. “We need more data” can be completely valid, but it can also become a clean way to avoid a hard…
+- [R] [reddit-saas] Do you use social media to promote your saas and why? — https://www.reddit.com/r/SaaS/comments/1w52g9f/do_you_use_social_media_to_promote_your_saas_and/ — Content can be really great if you're willing to be serious and pick 1-3 platforms to really focus on and get good at. I'm wondering if anyo…
+- [R] [reddit-saas] Feedback on my launch plan — https://www.reddit.com/r/SaaS/comments/1w4uiuu/feedback_on_my_launch_plan/ — As a solo founder who spends time building a SaaS solution for local businesses, I never focused on going to market (the solution exists els…
+- [R] [reddit-saas] How do you repurpose written content into visuals without making it look like generic AI? — https://www.reddit.com/r/SaaS/comments/1w4zer2/how_do_you_repurpose_written_content_into_visuals/ — Creating the content for a post is usually easy. Turning that content into a visual people actually want to stop and look at is harder. Afte…
+- [R] [reddit-saas] If you've already built a SaaS, how did you validate it and get your first customers? — https://www.reddit.com/r/SaaS/comments/1w51x3t/if_youve_already_built_a_saas_how_did_you/ — I'm building my first SaaS and I'm at the point where I want to start putting it in front of real users instead of just building. My target…
+- [R] [reddit-saas] Got my 1st paying user for my micro saas after 12hr of launching paid plan , yup its soo less but i was happy some one paid to user my web — https://www.reddit.com/r/SaaS/comments/1w4gpyg/got_my_1st_paying_user_for_my_micro_saas_after/ — yeah i run a web called jeeplanner , indian based entrance exam planning web, today i launched paid plan , and i got 1 paying user thats a l…
+- [R] [reddit-saas] Tired of getting banned on WhatsApp &amp; overpriced BSP tools, so I built my own Cloud API dashboard — https://www.reddit.com/r/SaaS/comments/1w51289/tired_of_getting_banned_on_whatsapp_overpriced/ — A few months ago, our business hit a major bottleneck: we needed to send regular broadcast updates to customers, but traditional communicati…
+- [R] [neon-blog] Neon available in Grok Bot — https://neon.com/blog/neon-is-now-available-in-grok-bot — Neon Postgres is now connectable as a plugin inside Grok Bot, letting users ask the bot to provision/build on Neon. Thin vendor integration announcement.
+- [M] [neon-blog] Introducing Neon Labs — https://neon.com/blog/introducing-neon-labs — Neon launched 'Neon Labs,' described as a home for experimental tools built around its Lakebase Postgres product - positioned as a community playground. No specific tools listed yet in what was fetched.
+- [P] [hn-show] Show HN: Weedout - hides YouTube AI-labeled videos — https://masteranza.github.io/weedout/ — A solo developer built and shipped a $1.99 Safari extension that hides YouTube videos labeled 'Made with AI,' using YouTube's own label rather than AI detection, running locally. Source is open on GitHub.
+- [R] [hn-show] Show HN: HN Match Maker — https://hnmatchmaker.com/ — A builder used an LLM (via abacus.ai) to extract structured data from HN's 'Who's Hiring' and 'Who Wants to Be Hired' threads and match candidates to postings on salary, domain, and remote/onsite fit.
+- [P] [hn-show] Show HN: Running a 125B-parameter model on a 48GB Mac — https://github.com/carloslfu/slotstream — slotstream lets you run Qwen3.8-Flash-Next (a 125B-parameter MoE model that normally needs 100GB+ RAM) on Macs starting at 16GB, via expert-offloading/SSD-streaming, natively in Swift/MLX, reaching ~12 tok/s on a 48GB machine. Ships with an auto-mode that trades off memory vs. speed, with speculative decoding (MTP) planned next.
+- [R] [huggingface-blog] BenchMIRT: What are LLM benchmarks actually measuring? — https://huggingface.co/blog/allenai/benchmirt — Title suggests a critique of LLM benchmark methodology, but the fetched content body was empty - no way to assess the actual argument or findings from this feed.
+- [M] [huggingface-blog] @huggingface/kernels: 200+ WebGPU Kernels for Local AI — https://huggingface.co/blog/webgpu-kernels — Title indicates Hugging Face released a library of 200+ WebGPU compute kernels for running AI locally (in-browser or on-device), but the fetched content body was empty so specifics (which models, performance, license) can't be confirmed here.
+- [R] [val-town-blog] &quot;A docs page is a very long and complex search query&quot; (AEO) — https://blog.val.town/aeo — Title suggests an essay on 'Answer Engine Optimization' - writing docs so AI agents route interested users to your product - but the fetched content was essentially empty ('On AEO'), so the actual argument can't be assessed.
+- [R] [pragmatic-engineer] &quot;How software engineering is changing&quot; - essay challenge — https://blog.pragmaticengineer.com/how-software-engineering-is-changing-an-essay-challenge/ — Pragmatic Engineer is soliciting essay submissions on how AI is changing software engineering. It's a call for submissions, not itself a substantive claim or finding.
+- [P] [cloudflare-blog] Cloudflare: saving petabytes of cache storage with Zstandard + Pingora — https://blog.cloudflare.com/cache-transcoding/ — Cloudflare describes prototyping in-cache compression (Zstandard) inside their Pingora-based cache layer to fit more cached content on the same hardware, potentially saving petabytes of storage at their scale.
+- [R] [gh-n8n] n8n 1.123.76 - browserslist CVE bump — https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.76 — Routine n8n patch release bumping the browserslist build-time dependency to clear CVE-2026-73088/73089. No user-facing feature or runtime behavior change.
+- [R] [gh-n8n] n8n 2.38.2 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.38.2 — Routine n8n point release; changelog details were not present in the fetched content beyond boilerplate.
+- [R] [gh-n8n] n8n beta tag (duplicate of 2.38.2) — https://github.com/n8n-io/n8n/releases/tag/beta — The 'beta' tag points to the same 2.38.2 release content as the item above - a duplicate tag, not a distinct release.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
