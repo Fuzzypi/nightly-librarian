@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>September 3, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="6 stories cleared the bar, led by Claude Fable 5.1 and Claude Mythos 5.1 released, datasette-mcp 0.">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-09-03/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="September 3, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="6 stories cleared the bar, led by Claude Fable 5.1 and Claude Mythos 5.1 released, datasette-mcp 0.">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-09-03/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="September 3, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="6 stories cleared the bar, led by Claude Fable 5.1 and Claude Mythos 5.1 released, datasette-mcp 0.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>September 3, 2026 · Report log</span>
+      <span>Sep 3, 2026, 2:15 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>September 3, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>6 stories cleared the bar, led by Claude Fable 5.1 and Claude Mythos 5.1 released, datasette-mcp 0.2: execute_sql now returns rows as objects, not arrays, and PRs Not Welcome: how top AI open source projects manage thousands of contributors.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>6 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1" target="_blank" rel="noopener">Claude Fable 5.1 and Claude Mythos 5.1 released</a></div>
+        <div class="item-takeaway">Anthropic officially released Claude Fable 5.1 and Claude Mythos 5.1, positioned as improvements to long, multi-stage agentic coding, knowledge work, and research tasks, alongside a published system card. Coverage elsewhere reports a 75% cache price cut and 70% more output tokens versus the prior generation. Directly relevant if you build on Claude models for agent work — worth checking pricing and the system card before your next cost/capability review.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Sep/1/datasette-mcp/" target="_blank" rel="noopener">datasette-mcp 0.2: execute_sql now returns rows as objects, not arrays</a></div>
+        <div class="item-takeaway">First non-alpha release of Simon Willison's datasette-mcp plugin changes execute_sql's row format from arrays to arrays-of-objects, specifically to stop weaker models from losing track of which column maps to which value. A concrete, reusable MCP design lesson: return structured objects, not positional arrays, when the consumer is an LLM.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.latent.space/p/pr-not-welcome" target="_blank" rel="noopener">PRs Not Welcome: how top AI open source projects manage thousands of contributors</a></div>
+        <div class="item-takeaway">Vercel's AI SDK, Astro, and tldraw are replacing drive-by community PRs with agent-run 'software factories' — teams of coding agents apply fixes and features instead of accepting external patches directly. Relevant if you maintain or contribute to OSS and are deciding how to structure agentic contribution workflows.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://lws.io/blog/my-local-model-setup/" target="_blank" rel="noopener">My local model setup on an M4 Pro Mac Mini</a></div>
+        <div class="item-takeaway">Builder report on running local LLMs on an M4 Pro Mac Mini — hardware, model choices, and setup notes. Directly applicable for anyone running local models on Apple Silicon.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/qwen-3-8-max-0902-now-available-on-ai-gateway" target="_blank" rel="noopener">Qwen 3.8 Max 0902 now available on Vercel AI Gateway</a></div>
+        <div class="item-takeaway">Alibaba's Qwen 3.8 Max gets a refreshed snapshot on Vercel's AI Gateway, with gains concentrated in coding on larger projects and long-horizon agentic work. Worth tracking if you're evaluating coding models via AI Gateway, but not an immediate must-switch.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://danluu.com/zitron/" target="_blank" rel="noopener">How accurate have Ed Zitron's AI skeptic predictions been?</a></div>
+        <div class="item-takeaway">Dan Luu evaluates the track record of AI-skeptic commentator Ed Zitron's predictions. Useful as a hype-calibration read, but it's analysis/opinion rather than an actionable item.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.38.1" target="_blank" rel="noopener">n8n@2.38.1</a>
+        </div>
+        <div class="item-takeaway">Routine n8n patch release: a parameter-binding bug fix for MongoDB sort/projection. No user-facing feature or behavior change worth flagging.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/ainews-claude-fablemythos-51-new" target="_blank" rel="noopener">AINews recap: Claude Fable/Mythos 5.1 launch</a>
+        </div>
+        <div class="item-takeaway">Latent Space's AINews newsletter recap of the Claude Fable 5.1 / Mythos 5.1 launch, noting a 75% cache price cut and 70% more output tokens. Same underlying story as Anthropic's official announcement, covered there instead.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.latent.space/p/pr-not-welcome" target="_blank" rel="noopener">PRs Not Welcome: how top AI open source projects manage thousands of contributors</a>
+        </div>
+        <div class="item-takeaway">Vercel's AI SDK, Astro, and tldraw are replacing drive-by community PRs with agent-run 'software factories' — teams of coding agents apply fixes and features instead of accepting external patches directly. Relevant if you maintain or contribute to OSS and are deciding how to structure agentic contribution workflows.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://stratechery.com/2026/nvidia-earnings-dollars-per-gigawatt-open-and-hugging-face/" target="_blank" rel="noopener">Nvidia Earnings, Dollars Per Gigawatt, Open and Hugging Face</a>
+        </div>
+        <div class="item-takeaway">Stratechery's editorial take on Nvidia's earnings and compute economics. Macro/strategic commentary, not a concrete, actionable data point.</div>
+        <div class="item-meta">
+          <span>stratechery</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/blog/fluid-compute-takes-any-shape" target="_blank" rel="noopener">Compute that takes any shape (Vercel Fluid)</a>
+        </div>
+        <div class="item-takeaway">Vercel narrative post explaining its existing Fluid compute architecture (builds, sandboxes, functions unified) with scale stats. Framing/marketing piece about an already-shipped system, not a new capability.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://vercel.com/changelog/qwen-3-8-max-0902-now-available-on-ai-gateway" target="_blank" rel="noopener">Qwen 3.8 Max 0902 now available on Vercel AI Gateway</a>
+        </div>
+        <div class="item-takeaway">Alibaba's Qwen 3.8 Max gets a refreshed snapshot on Vercel's AI Gateway, with gains concentrated in coding on larger projects and long-horizon agentic work. Worth tracking if you're evaluating coding models via AI Gateway, but not an immediate must-switch.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/claude-fable-5-1-now-available-on-ai-gateway" target="_blank" rel="noopener">Claude Fable 5.1 now available on Vercel AI Gateway</a>
+        </div>
+        <div class="item-takeaway">Claude Fable 5.1 is now listed on Vercel's AI Gateway. Same underlying model release as the main Anthropic announcement, just a distribution-channel note.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/aws-privatelink-is-now-available-on-pro-and-enterprise" target="_blank" rel="noopener">AWS PrivateLink now available on Vercel Pro and Enterprise</a>
+        </div>
+        <div class="item-takeaway">Vercel Functions and builds can now reach AWS-hosted services over PrivateLink instead of the public internet, for Pro/Enterprise Advanced Networking customers.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.14" target="_blank" rel="noopener">Next.js v16.4.0-canary.14</a>
+        </div>
+        <div class="item-takeaway">Pre-release canary build with misc internal fixes (memory reporting, edge-runtime cleanup, CI tweaks). No user-facing feature.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.anthropic.com/claude-fable-and-mythos-5-1" target="_blank" rel="noopener">Claude Fable 5.1 and Claude Mythos 5.1 released</a>
+        </div>
+        <div class="item-takeaway">Anthropic officially released Claude Fable 5.1 and Claude Mythos 5.1, positioned as improvements to long, multi-stage agentic coding, knowledge work, and research tasks, alongside a published system card. Coverage elsewhere reports a 75% cache price cut and 70% more output tokens versus the prior generation. Directly relevant if you build on Claude models for agent work — worth checking pricing and the system card before your next cost/capability review.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://arxiv.org/abs/2608.29530" target="_blank" rel="noopener">The Emergent Symbolic Structure of Artificial Neural Networks</a>
+        </div>
+        <div class="item-takeaway">ArXiv paper on interpretability/symbolic structure in neural networks. Academic research with no stated reproducible workflow impact.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://danluu.com/zitron/" target="_blank" rel="noopener">How accurate have Ed Zitron's AI skeptic predictions been?</a>
+        </div>
+        <div class="item-takeaway">Dan Luu evaluates the track record of AI-skeptic commentator Ed Zitron's predictions. Useful as a hype-calibration read, but it's analysis/opinion rather than an actionable item.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://webfpga.io/" target="_blank" rel="noopener">WebFPGA</a>
+        </div>
+        <div class="item-takeaway">A browser-based FPGA programming tool/service. Niche hardware-hacking relevance, no clear tie to solo software/agent building.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://dbushell.com/2026/09/01/text-editor/" target="_blank" rel="noopener">Fine, I'll build my own text editor</a>
+        </div>
+        <div class="item-takeaway">Personal builder-report blog post about writing a custom text editor. Thin on generalizable leverage for other builders.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://lws.io/blog/my-local-model-setup/" target="_blank" rel="noopener">My local model setup on an M4 Pro Mac Mini</a>
+        </div>
+        <div class="item-takeaway">Builder report on running local LLMs on an M4 Pro Mac Mini — hardware, model choices, and setup notes. Directly applicable for anyone running local models on Apple Silicon.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/" target="_blank" rel="noopener">FBI Probes Service Selling 153M+ Drivers Licenses</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.mozilla.org/en/firefox/ad-blocker-on-ios/" target="_blank" rel="noopener">Introducing Ad Blocker for Firefox on iOS</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://masteranza.github.io/weedout/" target="_blank" rel="noopener">Show HN: Weedout – Safari extension that hides YouTube AI-labeled videos</a>
+        </div>
+        <div class="item-takeaway">I&amp;#x27;m the developer. I built this because AI-generated conspiracy videos were getting out of control in my own YouTube feed. Weedout is a $1.99 Safari extension for macOS that removes videos YouTube labels “Made with AI” from feed, searc…</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://sonic-pi.net/" target="_blank" rel="noopener">Sonic Pi</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/" target="_blank" rel="noopener">The efficient frontier of LLM inference</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.lisep.org/tru" target="_blank" rel="noopener">True Rate of Unemployment</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.norirobotics.com/" target="_blank" rel="noopener">Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development</a>
+        </div>
+        <div class="item-takeaway">Hey HN, I’m Antonio from Nori Robotics ( https:&amp;#x2F;&amp;#x2F;norirobotics.com ). We build a $1,688 bimanual mobile robot in San Francisco for robotics developers and researchers. I started working on Nori while doing robotics research at Colu…</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Sep/1/codex-libreoffice/" target="_blank" rel="noopener">The ChatGPT/Codex app bundles a full copy of LibreOffice</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://moviescenemap.com/" target="_blank" rel="noopener">Movie Scene Map – 13,312 films, series, games, anime and manga</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ambientcss.vercel.app/" target="_blank" rel="noopener">Ambient CSS v3 – Blender meets CSS</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openai.com/index/path-to-astra/" target="_blank" rel="noopener">Path to Astra: critical capabilities and frontier safeguards</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ersc.io/blog/martin-joins-ersc" target="_blank" rel="noopener">The creator of Jujutsu has joined ERSC</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://tomverbeure.github.io/2026/08/23/Tektronix-TDS7104-Refurbishing.html" target="_blank" rel="noopener">Refurbishing a Tektronix TDS7104 Oscilloscope</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://hnmatchmaker.com/" target="_blank" rel="noopener">Show HN: HN Match Maker – Matching &quot;Who Wants to Be Hired?&quot; With &quot;Who's Hiring?&quot;</a>
+        </div>
+        <div class="item-takeaway">Hi! Every month the &quot;Who Wants to Be Hired?&quot; and &quot;Who&amp;#x27;s Hiring?&quot; Threads come through I would think to myself, &quot;there should be a match maker for these two threads&quot;. So I had abacus.ai whip one up. The methodology is pretty simple, dat…</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.dougbarnesauthor.com/2018/06/how-bicycle-coaster-brakes-work.html" target="_blank" rel="noopener">How bicycle coaster brakes work (2018)</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://news.ycombinator.com/item?id=49522897" target="_blank" rel="noopener">Ask HN: Who is hiring? (September 2026)</a>
+        </div>
+        <div class="item-takeaway">Please state the location and include REMOTE for remote work, REMOTE (US) or similar if the country is restricted, and ONSITE when remote work is not an option. Please only post if you personally are part of the hiring company—no recruiting…</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/carloslfu/slotstream" target="_blank" rel="noopener">Show HN: Running 104GB Qwen3.8-Flash-Next on 48GB Mac with at ~12 tok/s</a>
+        </div>
+        <div class="item-takeaway">I built slotstream, a way to run Qwen3.8-Flash-Next 4-bit on a low-memory mac starting from 16GB, a 125B parameter model that would need 100GB+ memory&amp;#x2F;RAM, thanks to expert-offloading&amp;#x2F;ssd-streaming. Easy to install&amp;#x2F;update, an…</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.worldlabs.ai/blog/atlas" target="_blank" rel="noopener">Atlas: A World Model for Spatial Intelligence</a>
+        </div>
+
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Sep/2/rick-brewster/" target="_blank" rel="noopener">Quoting Rick Brewster (Paint.NET on WINE)</a>
+        </div>
+        <div class="item-takeaway">Paint.NET's creator explains why Direct2D blocks WINE compatibility and describes building a custom internal replacement. Niche desktop-app compatibility story.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Sep/1/claude-fable-5-1/" target="_blank" rel="noopener">Claude Fable 5.1 made me a really nice animated pelican</a>
+        </div>
+        <div class="item-takeaway">Simon Willison's informal pelican-SVG capability check on the new Claude Fable 5.1 release. Same underlying story as the main model launch, folded in there as corroborating evidence.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Sep/1/codex-libreoffice/" target="_blank" rel="noopener">Codex bundles a full copy of LibreOffice</a>
+        </div>
+        <div class="item-takeaway">Simon Willison found the OpenAI Codex/ChatGPT desktop app bundles a 1.7GB LibreOffice install for document handling. Interesting trivia, not actionable.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Sep/1/geojson/" target="_blank" rel="noopener">GeoJSON Map Viewer</a>
+        </div>
+        <div class="item-takeaway">Simon Willison built a small tool to display GeoJSON files on a map while helping with local community-council boundary data. Personal utility, narrow applicability.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Sep/1/tarn-adams/" target="_blank" rel="noopener">Quoting Tarn Adams</a>
+        </div>
+        <div class="item-takeaway">A snarky quote from Dwarf Fortress co-creator Tarn Adams about AI vs. 'dwarf behavior.' Entertainment/culture commentary, no actionable content.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Sep/1/datasette-mcp/" target="_blank" rel="noopener">datasette-mcp 0.2: execute_sql now returns rows as objects, not arrays</a>
+        </div>
+        <div class="item-takeaway">First non-alpha release of Simon Willison's datasette-mcp plugin changes execute_sql's row format from arrays to arrays-of-objects, specifically to stop weaker models from losing track of which column maps to which value. A concrete, reusable MCP design lesson: return structured objects, not positional arrays, when the consumer is an LLM.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://simonwillison.net/2026/Sep/1/python-315-rc-2/" target="_blank" rel="noopener">Python 3.15.0 candidate 2 is here!</a>
+        </div>
+        <div class="item-takeaway">Python 3.15.0 candidate 2 is here! Hugo van Kemenade (release manager for Python 3.14 and 3.15) announces the final release candidate for Python 3.15, scheduled for release in October: Entering the release candidate phase, only reviewed cod…</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: ebdd0007-53ba-49d0-8c64-a5e345b8e1c2
+Started: 2026-09-03T06:09:51.383Z
+Completed: 2026-09-03T06:15:28.612Z
+
+## Worth attention
+
+- **Claude Fable 5.1 and Claude Mythos 5.1 released**
+  https://www.anthropic.com/claude-fable-and-mythos-5-1
+  Anthropic officially released Claude Fable 5.1 and Claude Mythos 5.1, positioned as improvements to long, multi-stage agentic coding, knowledge work, and research tasks, alongside a published system card. Coverage elsewhere reports a 75% cache price cut and 70% more output tokens versus the prior generation. Directly relevant if you build on Claude models for agent work — worth checking pricing and the system card before your next cost/capability review.
+- **datasette-mcp 0.2: execute_sql now returns rows as objects, not arrays**
+  https://simonwillison.net/2026/Sep/1/datasette-mcp/
+  First non-alpha release of Simon Willison's datasette-mcp plugin changes execute_sql's row format from arrays to arrays-of-objects, specifically to stop weaker models from losing track of which column maps to which value. A concrete, reusable MCP design lesson: return structured objects, not positional arrays, when the consumer is an LLM.
+- **PRs Not Welcome: how top AI open source projects manage thousands of contributors**
+  https://www.latent.space/p/pr-not-welcome
+  Vercel's AI SDK, Astro, and tldraw are replacing drive-by community PRs with agent-run 'software factories' — teams of coding agents apply fixes and features instead of accepting external patches directly. Relevant if you maintain or contribute to OSS and are deciding how to structure agentic contribution workflows.
+- **My local model setup on an M4 Pro Mac Mini**
+  https://lws.io/blog/my-local-model-setup/
+  Builder report on running local LLMs on an M4 Pro Mac Mini — hardware, model choices, and setup notes. Directly applicable for anyone running local models on Apple Silicon.
+- **Qwen 3.8 Max 0902 now available on Vercel AI Gateway**
+  https://vercel.com/changelog/qwen-3-8-max-0902-now-available-on-ai-gateway
+  Alibaba's Qwen 3.8 Max gets a refreshed snapshot on Vercel's AI Gateway, with gains concentrated in coding on larger projects and long-horizon agentic work. Worth tracking if you're evaluating coding models via AI Gateway, but not an immediate must-switch.
+- **How accurate have Ed Zitron's AI skeptic predictions been?**
+  https://danluu.com/zitron/
+  Dan Luu evaluates the track record of AI-skeptic commentator Ed Zitron's predictions. Useful as a hype-calibration read, but it's analysis/opinion rather than an actionable item.
+
+## Full digest
+
+- [R] [gh-n8n] n8n@2.38.1 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.38.1 — Routine n8n patch release: a parameter-binding bug fix for MongoDB sort/projection. No user-facing feature or behavior change worth flagging.
+- [R] [latent-space] AINews recap: Claude Fable/Mythos 5.1 launch — https://www.latent.space/p/ainews-claude-fablemythos-51-new — Latent Space's AINews newsletter recap of the Claude Fable 5.1 / Mythos 5.1 launch, noting a 75% cache price cut and 70% more output tokens. Same underlying story as Anthropic's official announcement, covered there instead.
+- [P] [latent-space] PRs Not Welcome: how top AI open source projects manage thousands of contributors — https://www.latent.space/p/pr-not-welcome — Vercel's AI SDK, Astro, and tldraw are replacing drive-by community PRs with agent-run 'software factories' — teams of coding agents apply fixes and features instead of accepting external patches directly. Relevant if you maintain or contribute to OSS and are deciding how to structure agentic contribution workflows.
+- [R] [stratechery] Nvidia Earnings, Dollars Per Gigawatt, Open and Hugging Face — https://stratechery.com/2026/nvidia-earnings-dollars-per-gigawatt-open-and-hugging-face/ — Stratechery's editorial take on Nvidia's earnings and compute economics. Macro/strategic commentary, not a concrete, actionable data point.
+- [R] [vercel-changelog] Compute that takes any shape (Vercel Fluid) — https://vercel.com/blog/fluid-compute-takes-any-shape — Vercel narrative post explaining its existing Fluid compute architecture (builds, sandboxes, functions unified) with scale stats. Framing/marketing piece about an already-shipped system, not a new capability.
+- [M] [vercel-changelog] Qwen 3.8 Max 0902 now available on Vercel AI Gateway — https://vercel.com/changelog/qwen-3-8-max-0902-now-available-on-ai-gateway — Alibaba's Qwen 3.8 Max gets a refreshed snapshot on Vercel's AI Gateway, with gains concentrated in coding on larger projects and long-horizon agentic work. Worth tracking if you're evaluating coding models via AI Gateway, but not an immediate must-switch.
+- [R] [vercel-changelog] Claude Fable 5.1 now available on Vercel AI Gateway — https://vercel.com/changelog/claude-fable-5-1-now-available-on-ai-gateway — Claude Fable 5.1 is now listed on Vercel's AI Gateway. Same underlying model release as the main Anthropic announcement, just a distribution-channel note.
+- [R] [vercel-changelog] AWS PrivateLink now available on Vercel Pro and Enterprise — https://vercel.com/changelog/aws-privatelink-is-now-available-on-pro-and-enterprise — Vercel Functions and builds can now reach AWS-hosted services over PrivateLink instead of the public internet, for Pro/Enterprise Advanced Networking customers.
+- [R] [gh-nextjs] Next.js v16.4.0-canary.14 — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.14 — Pre-release canary build with misc internal fixes (memory reporting, edge-runtime cleanup, CI tweaks). No user-facing feature.
+- [P] [hn-top] Claude Fable 5.1 and Claude Mythos 5.1 released — https://www.anthropic.com/claude-fable-and-mythos-5-1 — Anthropic officially released Claude Fable 5.1 and Claude Mythos 5.1, positioned as improvements to long, multi-stage agentic coding, knowledge work, and research tasks, alongside a published system card. Coverage elsewhere reports a 75% cache price cut and 70% more output tokens versus the prior generation. Directly relevant if you build on Claude models for agent work — worth checking pricing and the system card before your next cost/capability review.
+- [R] [hn-top] The Emergent Symbolic Structure of Artificial Neural Networks — https://arxiv.org/abs/2608.29530 — ArXiv paper on interpretability/symbolic structure in neural networks. Academic research with no stated reproducible workflow impact.
+- [M] [hn-top] How accurate have Ed Zitron's AI skeptic predictions been? — https://danluu.com/zitron/ — Dan Luu evaluates the track record of AI-skeptic commentator Ed Zitron's predictions. Useful as a hype-calibration read, but it's analysis/opinion rather than an actionable item.
+- [R] [hn-top] WebFPGA — https://webfpga.io/ — A browser-based FPGA programming tool/service. Niche hardware-hacking relevance, no clear tie to solo software/agent building.
+- [R] [hn-top] Fine, I'll build my own text editor — https://dbushell.com/2026/09/01/text-editor/ — Personal builder-report blog post about writing a custom text editor. Thin on generalizable leverage for other builders.
+- [P] [hn-top] My local model setup on an M4 Pro Mac Mini — https://lws.io/blog/my-local-model-setup/ — Builder report on running local LLMs on an M4 Pro Mac Mini — hardware, model choices, and setup notes. Directly applicable for anyone running local models on Apple Silicon.
+- [R] [hn-top] FBI Probes Service Selling 153M+ Drivers Licenses — https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/
+- [R] [hn-top] Introducing Ad Blocker for Firefox on iOS — https://blog.mozilla.org/en/firefox/ad-blocker-on-ios/
+- [R] [hn-top] Show HN: Weedout – Safari extension that hides YouTube AI-labeled videos — https://masteranza.github.io/weedout/ — I&amp;#x27;m the developer. I built this because AI-generated conspiracy videos were getting out of control in my own YouTube feed. Weedout is a $1.99 Safari extension for macOS that removes videos YouTube labels “Made with AI” from feed, searc…
+- [R] [hn-top] Sonic Pi — https://sonic-pi.net/
+- [R] [hn-top] The efficient frontier of LLM inference — https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/
+- [R] [hn-top] True Rate of Unemployment — https://www.lisep.org/tru
+- [R] [hn-top] Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development — https://www.norirobotics.com/ — Hey HN, I’m Antonio from Nori Robotics ( https:&amp;#x2F;&amp;#x2F;norirobotics.com ). We build a $1,688 bimanual mobile robot in San Francisco for robotics developers and researchers. I started working on Nori while doing robotics research at Colu…
+- [R] [hn-top] The ChatGPT/Codex app bundles a full copy of LibreOffice — https://simonwillison.net/2026/Sep/1/codex-libreoffice/
+- [R] [hn-top] Movie Scene Map – 13,312 films, series, games, anime and manga — https://moviescenemap.com/
+- [R] [hn-top] Ambient CSS v3 – Blender meets CSS — https://ambientcss.vercel.app/
+- [R] [hn-top] Path to Astra: critical capabilities and frontier safeguards — https://openai.com/index/path-to-astra/
+- [R] [hn-top] The creator of Jujutsu has joined ERSC — https://ersc.io/blog/martin-joins-ersc
+- [R] [hn-top] Refurbishing a Tektronix TDS7104 Oscilloscope — https://tomverbeure.github.io/2026/08/23/Tektronix-TDS7104-Refurbishing.html
+- [R] [hn-top] Show HN: HN Match Maker – Matching &quot;Who Wants to Be Hired?&quot; With &quot;Who's Hiring?&quot; — https://hnmatchmaker.com/ — Hi! Every month the &quot;Who Wants to Be Hired?&quot; and &quot;Who&amp;#x27;s Hiring?&quot; Threads come through I would think to myself, &quot;there should be a match maker for these two threads&quot;. So I had abacus.ai whip one up. The methodology is pretty simple, dat…
+- [R] [hn-top] How bicycle coaster brakes work (2018) — https://www.dougbarnesauthor.com/2018/06/how-bicycle-coaster-brakes-work.html
+- [R] [hn-top] Ask HN: Who is hiring? (September 2026) — https://news.ycombinator.com/item?id=49522897 — Please state the location and include REMOTE for remote work, REMOTE (US) or similar if the country is restricted, and ONSITE when remote work is not an option. Please only post if you personally are part of the hiring company—no recruiting…
+- [R] [hn-top] Show HN: Running 104GB Qwen3.8-Flash-Next on 48GB Mac with at ~12 tok/s — https://github.com/carloslfu/slotstream — I built slotstream, a way to run Qwen3.8-Flash-Next 4-bit on a low-memory mac starting from 16GB, a 125B parameter model that would need 100GB+ memory&amp;#x2F;RAM, thanks to expert-offloading&amp;#x2F;ssd-streaming. Easy to install&amp;#x2F;update, an…
+- [R] [hn-top] Atlas: A World Model for Spatial Intelligence — https://www.worldlabs.ai/blog/atlas
+- [R] [simon-willison] Quoting Rick Brewster (Paint.NET on WINE) — https://simonwillison.net/2026/Sep/2/rick-brewster/ — Paint.NET's creator explains why Direct2D blocks WINE compatibility and describes building a custom internal replacement. Niche desktop-app compatibility story.
+- [R] [simon-willison] Claude Fable 5.1 made me a really nice animated pelican — https://simonwillison.net/2026/Sep/1/claude-fable-5-1/ — Simon Willison's informal pelican-SVG capability check on the new Claude Fable 5.1 release. Same underlying story as the main model launch, folded in there as corroborating evidence.
+- [R] [simon-willison] Codex bundles a full copy of LibreOffice — https://simonwillison.net/2026/Sep/1/codex-libreoffice/ — Simon Willison found the OpenAI Codex/ChatGPT desktop app bundles a 1.7GB LibreOffice install for document handling. Interesting trivia, not actionable.
+- [R] [simon-willison] GeoJSON Map Viewer — https://simonwillison.net/2026/Sep/1/geojson/ — Simon Willison built a small tool to display GeoJSON files on a map while helping with local community-council boundary data. Personal utility, narrow applicability.
+- [R] [simon-willison] Quoting Tarn Adams — https://simonwillison.net/2026/Sep/1/tarn-adams/ — A snarky quote from Dwarf Fortress co-creator Tarn Adams about AI vs. 'dwarf behavior.' Entertainment/culture commentary, no actionable content.
+- [P] [simon-willison] datasette-mcp 0.2: execute_sql now returns rows as objects, not arrays — https://simonwillison.net/2026/Sep/1/datasette-mcp/ — First non-alpha release of Simon Willison's datasette-mcp plugin changes execute_sql's row format from arrays to arrays-of-objects, specifically to stop weaker models from losing track of which column maps to which value. A concrete, reusable MCP design lesson: return structured objects, not positional arrays, when the consumer is an LLM.
+- [R] [simon-willison] Python 3.15.0 candidate 2 is here! — https://simonwillison.net/2026/Sep/1/python-315-rc-2/ — Python 3.15.0 candidate 2 is here! Hugo van Kemenade (release manager for Python 3.14 and 3.15) announces the final release candidate for Python 3.15, scheduled for release in October: Entering the release candidate phase, only reviewed cod…</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
