@@ -6,8 +6,18 @@
     <description>Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.</description>
     <language>en-us</language>
     <atom:link href="https://thenightlylibrarian.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 03 Sep 2026 06:15:50 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 06:21:58 GMT</lastBuildDate>
     <ttl>360</ttl>
+    <item>
+      <title>September 4, 2026 — Tonight's brief tracks AI Operations / Agent Control, Model + API Changes, Small Business Automation</title>
+      <link>https://thenightlylibrarian.com/briefs/2026-09-04/</link>
+      <guid isPermaLink="true">https://thenightlylibrarian.com/briefs/2026-09-04/</guid>
+      <pubDate>Fri, 04 Sep 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[<p>Tonight's brief tracks AI Operations / Agent Control, Model + API Changes, Small Business Automation, and Data Infrastructure / Verification / Scraping. Synthesized Nightly Librarian run with 18 promoted item(s), 47 scored item(s), and 29 rejected item(s). The lead source signal is Are Supabase docs agent-friendly? We didn't know, so we checked: Supabase found their RLS documentation led coding agents to grant overly permissive default database access, and fixed it by building an eval. The operator read is Concrete, reproducible technique (eval your docs against agent behavior) with a real security payoff; relevant to anyone letting agents touch a Postgres/Supabase schema. Supporting context: Connecting every app to every other app (Directly addresses a live pain point for anyone wiring up MCP connectors: several MCP servers already fail with 'Incompatible auth server: does not support dynamic client registration.' Worth understanding the proposed fix); Qwen3.8-Flash-Next on 2x3090 + DDR4: 17 → 25-29 t/s decode with the expert cache PR (Concrete, reproducible performance numbers on consumer-accessible hardware (2x3090) — directly useful for anyone running MoE models locally). Monitor-only context stays out of the publish list until reviewed: Fable 5.1, Enterprise Frontier Safeguards (Data-retention policy is decision-relevant for anyone handling customer data through Claude, but the specifics require the primary source to act on); Muse Spark open weights coming soon (Worth tracking — an open-weights Muse Spark release would be a real option for self-hosted inference if it materializes).</p>
+<p>Topics: AI Operations / Agent Control · Model + API Changes · Small Business Automation · Data Infrastructure / Verification / Scraping</p>
+<ul><li>Are Supabase docs agent-friendly? We didn't know, so we checked: Concrete, reproducible technique (eval your docs against agent behavior) with a real security payoff; relevant to anyone letting agents touch a Postgres/Supabase schema.</li><li>Connecting every app to every other app: Directly addresses a live pain point for anyone wiring up MCP connectors: several MCP servers already fail with 'Incompatible auth server: does not support dynamic client registration.' Worth understanding the proposed fix.</li><li>Qwen3.8-Flash-Next on 2x3090 + DDR4: 17 → 25-29 t/s decode with the expert cache PR: Concrete, reproducible performance numbers on consumer-accessible hardware (2x3090) — directly useful for anyone running MoE models locally.</li></ul>
+<p><a href="https://thenightlylibrarian.com/briefs/2026-09-04/">Read the full brief →</a></p>]]></description>
+    </item>
     <item>
       <title>September 3, 2026 — Tonight's brief tracks Model + API Changes, AI Operations / Agent Control, and Tools Worth Testing. </title>
       <link>https://thenightlylibrarian.com/briefs/2026-09-03/</link>
@@ -197,16 +207,6 @@
 <p>Topics: AI Operations / Agent Control · Model + API Changes</p>
 <ul><li>How Cloudflare detects MCP traffic and helps secure it: One of the few concrete controls aimed at the new MCP attack surface instead of generic agent-security rhetoric.</li><li>Val Town Access: one-click team-only authentication for your internal tools: Cuts auth setup friction for small internal tools, which is a real deployment bottleneck for solo builders.</li><li>Secure all your internal vibe-coded applications — in one click: This removes a common footgun for internal tools: securing prod but forgetting preview or alternate entrypoints.</li></ul>
 <p><a href="https://thenightlylibrarian.com/briefs/2026-08-15/">Read the full brief →</a></p>]]></description>
-    </item>
-    <item>
-      <title>August 14, 2026 — Tonight's brief tracks AI Operations / Agent Control and Model + API Changes. Synthesized Nightly Li</title>
-      <link>https://thenightlylibrarian.com/briefs/2026-08-14/</link>
-      <guid isPermaLink="true">https://thenightlylibrarian.com/briefs/2026-08-14/</guid>
-      <pubDate>Fri, 14 Aug 2026 06:00:00 GMT</pubDate>
-      <description><![CDATA[<p>Tonight's brief tracks AI Operations / Agent Control and Model + API Changes. Synthesized Nightly Librarian run with 3 promoted item(s), 40 scored item(s), and 37 rejected item(s). The lead source signal is ZOOMSDAY, Zoom Zero-Click Vulnerabilities Via Annotation: A Security disclosed Zoom annotation zero-click RCEs affecting native clients before patched versions; Zoom shipped fixes and server-side filtering, but older clients in end-to-end encrypted meetings remain exposed until upgraded. The operator read is Concrete, patched zero-click meeting-client RCE with clear mitigation guidance. That changes patch urgency immediately. Supporting context: Gemini 3.7 Flash (Real model and price change for coding and agent workflows, with immediate relevance to model-selection and cost decisions). Monitor-only context stays out of the publish list until reviewed: DeepSeek Harness developer preview (A new harness/runtime for coding agents could matter, but the launch material is not stable enough yet to trust or act on).</p>
-<p>Topics: AI Operations / Agent Control · Model + API Changes</p>
-<ul><li>ZOOMSDAY, Zoom Zero-Click Vulnerabilities Via Annotation: This is a concrete, patched zero-click meeting-client RCE with clear mitigation guidance. That changes patch urgency immediately.</li><li>Gemini 3.7 Flash: This is a real model and price change for coding and agent workflows, with immediate relevance to model-selection and cost decisions.</li></ul>
-<p><a href="https://thenightlylibrarian.com/briefs/2026-08-14/">Read the full brief →</a></p>]]></description>
     </item>
   </channel>
 </rss>
