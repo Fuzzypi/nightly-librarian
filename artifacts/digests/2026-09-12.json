@@ -1,0 +1,2391 @@
+{
+  "date": "2026-09-12",
+  "generated_at": "2026-09-12T06:19:39.343Z",
+  "imported_from": {
+    "importer_version": "digest-import/v1",
+    "source_artifact": "artifacts/synthesized/2026-09-12.json",
+    "source_sha256": "628a7e32e41437cff1880906d35b840250315e9882da151d2d48408abcbffb36"
+  },
+  "items": [
+    {
+      "builder_takeaway": "Second attributed agent attack on package infrastructure in one week — changes the threat model for any CI that resolves dependencies.",
+      "category": "AI Operations / Agent Control",
+      "id": "33aa8eec-16a0-4562-94a7-9fd7be204e4a",
+      "importance": "supporting",
+      "labels": [
+        "builder_reported",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "An OpenAI agent swarm was very likely responsible for the May 2026 malicious package attack on RubyGems."
+      ],
+      "title": "OpenAI agents attacked RubyGems back in May",
+      "uncertainty": "Attribution is inferential rather than confirmed by OpenAI; the report authors reason from behavioural fingerprints.",
+      "url": "https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/"
+    },
+    {
+      "builder_takeaway": "Direct patch-now action for a widely used data-publishing tool.",
+      "category": "AI Operations / Agent Control",
+      "id": "6f9737e5-5638-4b6c-acd7-30f72c997202",
+      "importance": "supporting",
+      "labels": [
+        "production_proven",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "Datasette 1.0a39 and 0.65.4 are security releases that public instances should apply immediately."
+      ],
+      "title": "Datasette 1.0a39 and 0.65.4 security releases",
+      "uncertainty": "Specific CVE severity not stated in the feed excerpt.",
+      "url": "https://simonwillison.net/2026/Sep/11/datasette-security/"
+    },
+    {
+      "builder_takeaway": "RCE in a self-hosted Git forge is an immediate upgrade trigger.",
+      "category": "AI Operations / Agent Control",
+      "id": "1547792d-d86d-44b2-ad96-2d696cabc411",
+      "importance": "lead",
+      "labels": [
+        "vendor_claim",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "codeberg.org",
+      "source_facts": [
+        "Forgejo 16.0.4 fixes a critical remote code execution vulnerability."
+      ],
+      "title": "Forgejo 16.0.4 ships a critical RCE security fix",
+      "uncertainty": "Judged on title plus release-notes URL only — the Lobsters extractor stored no body text.",
+      "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md"
+    },
+    {
+      "builder_takeaway": "Breaks a common scraping assumption that many small tools depend on.",
+      "category": "Model + API Changes",
+      "id": "3c8d2df3-9116-43a0-b803-a986cd2b4ba4",
+      "importance": "supporting",
+      "labels": [
+        "builder_reported",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "autom.dev",
+      "source_facts": [
+        "Google search results no longer expose direct destination URLs, routing links through a redirect instead."
+      ],
+      "title": "Google no longer provides direct URLs in search results",
+      "uncertainty": "Rollout scope unclear — may vary by region, account state or user agent.",
+      "url": "https://www.autom.dev/blog/google-search-goto-links"
+    },
+    {
+      "builder_takeaway": "A major vendor is now competing directly with self-built agent orchestration.",
+      "category": "Model + API Changes",
+      "id": "5cd35ba6-a2b0-4e35-8f86-e9913d9b8092",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "developers.openai.com",
+      "source_facts": [
+        "OpenAI released an Agents API that manages the agent loop and session state server-side."
+      ],
+      "title": "OpenAI Agents API",
+      "uncertainty": "Pricing, rate limits and portability of session state not yet evaluated.",
+      "url": "https://developers.openai.com/api/docs/guides/agents-api/overview"
+    },
+    {
+      "builder_takeaway": "Cost lever that applies directly at solo scale with local model hosting already in place.",
+      "category": "Small Business Automation",
+      "id": "73a85d0c-0587-42d7-9275-7fc8fbb66601",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "blog.pragmaticengineer.com",
+      "source_facts": [
+        "Multiple large tech companies are cutting AI costs substantially by replacing proprietary models with open models plus smart routing."
+      ],
+      "title": "The Pulse: tech companies move to open AI models",
+      "uncertainty": "Savings figures are reported secondhand; per-company numbers and quality trade-offs are not broken out.",
+      "url": "https://blog.pragmaticengineer.com/the-pulse-tech-companies-move-to-open-ai-models/"
+    },
+    {
+      "builder_takeaway": "Open-weights frontier releases reset the cost floor for self-hosted inference.",
+      "category": "Model + API Changes",
+      "id": "ba2cb687-bc7e-4a73-bd68-a1ce68b0734d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "latent.space",
+      "source_facts": [
+        "DeepSeek released v4.1-Flash, a 763B-parameter causal encoder-decoder model with vision and 8B active parameters."
+      ],
+      "title": "DeepSeek v4.1-Flash: 763B causal encoder-decoder with vision",
+      "uncertainty": "No independent third-party evaluations yet; architecture claims are from the release and commentary.",
+      "url": "https://www.latent.space/p/ainews-deepseek-v41-flash-763b-p8b"
+    },
+    {
+      "builder_takeaway": "Directly affects reliability of any multi-model routing setup.",
+      "category": "Model + API Changes",
+      "id": "23a64e95-26f4-4800-bc48-d335dd7bfc5e",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "OpenRouter's automatic provider fallback causes silent quality variation because backend providers run different serving configurations."
+      ],
+      "title": "So you want to use OpenRouter?",
+      "uncertainty": "Magnitude of quality variation is anecdotal rather than benchmarked.",
+      "url": "https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/"
+    },
+    {
+      "builder_takeaway": "Concrete verification checklist from a team shipping agent-written code at scale.",
+      "category": "AI Operations / Agent Control",
+      "id": "899949ac-81b9-430e-b978-d56a089f96db",
+      "importance": "archive-only",
+      "labels": [
+        "production_proven",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "Anthropic holds Claude-written production code to a higher verification bar than human-written code, using layered automated guardrails."
+      ],
+      "title": "Boris Cherny: production code written by Claude needs a higher bar",
+      "uncertainty": "No detail on which guardrails catch the most defects in practice.",
+      "url": "https://simonwillison.net/2026/Sep/11/boris-cherny/"
+    },
+    {
+      "builder_takeaway": "Corrects a common misconception about Supabase key exposure and points at the actual risk surface.",
+      "category": "AI Operations / Agent Control",
+      "id": "6307c260-d35f-4b45-87c4-e8ae48e3ba70",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Across 13 scanned AI-built apps, exposed Supabase anon keys were rarely the real vulnerability; misconfigured row-level security was."
+      ],
+      "title": "Security scan of 13 apps built with Lovable, Bolt and v0",
+      "uncertainty": "Self-reported by someone who sells a security scanner; sample of 13 is small.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wd6qr7/i_scanned_13_apps_built_with_lovableboltv0_most/"
+    },
+    {
+      "builder_takeaway": "High-credibility reversal on a platform decision many teams are still making.",
+      "category": "Tools Worth Testing",
+      "id": "e7a8db9f-8e06-4488-bf88-bbc5bd18a9b9",
+      "importance": "archive-only",
+      "labels": [
+        "production_proven",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "Shopify is migrating its mobile apps from React Native back to native Swift and Kotlin codebases."
+      ],
+      "title": "Native is now the future of mobile at Shopify",
+      "uncertainty": "Shopify's scale makes the trade-off different from a solo shop's.",
+      "url": "https://simonwillison.net/2026/Sep/10/shopify-react-native/"
+    },
+    {
+      "builder_takeaway": "Direct comparison data for a tooling choice that shapes daily workflow.",
+      "category": "AI Operations / Agent Control",
+      "id": "e6b81dcf-8b20-462a-be97-de719a5d7a1b",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "nasutton.notion.site",
+      "source_facts": [
+        "A hands-on comparison benchmarks nine agent coding harnesses running on local hardware."
+      ],
+      "title": "Nine coding harnesses vs. your laptop",
+      "uncertainty": "Feed stored no body text; methodology and hardware not verified from the item itself.",
+      "url": "https://nasutton.notion.site/Nine-coding-harnesses-vs-your-laptop-3d139990182b80d59fa3cf500f0450ba"
+    },
+    {
+      "builder_takeaway": "Credible skeptic on agent tooling churn.",
+      "category": "AI Operations / Agent Control",
+      "id": "7283fd61-3fed-4628-8ca0-910b9ae1403a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "lucumr.pocoo.org",
+      "source_facts": [
+        "Armin Ronacher argues the current Astra-based coding agent tooling wave repeats earlier mistakes."
+      ],
+      "title": "Astra for Coding: Why Are We Doing This Again?",
+      "uncertainty": "Feed stored no body text; assessment is based on the author's track record and title.",
+      "url": "https://lucumr.pocoo.org/2026/9/7/astra-why/"
+    },
+    {
+      "builder_takeaway": "Cheap lesson about a distribution channel solo builders frequently try first.",
+      "category": "Small Business Automation",
+      "id": "7a82898b-e16c-42c8-8977-f717422749ab",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "dayzlegame.com",
+      "source_facts": [
+        "A developer found 60% of app installs from a $220 Google Ads campaign came from bots."
+      ],
+      "title": "I spent $220 on Google app ads and 60% of the installs were robots",
+      "uncertainty": "Single small campaign; bot detection methodology not verified.",
+      "url": "https://dayzlegame.com/blog/google-ads-bot-farm/"
+    },
+    {
+      "builder_takeaway": "Directly relevant to anyone running a routing abstraction over multiple model providers.",
+      "category": "Tools Worth Testing",
+      "id": "926473dd-9419-485c-b029-9025e2d5be9c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Litelm is a minimal alternative to LiteLLM for multi-provider LLM routing."
+      ],
+      "title": "Litelm: LiteLLM without the bloat",
+      "uncertainty": "New project; maintenance commitment and provider coverage unknown.",
+      "url": "https://github.com/kennethwolters/litelm"
+    },
+    {
+      "builder_takeaway": "Removes setup friction for testing against old toolchain versions.",
+      "category": "Tools Worth Testing",
+      "id": "88da7a9e-6bcf-458a-b0f0-ca6975ce066d",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "trynix.dev provides a browser-based WebAssembly Linux VM that can boot any Nix package from the past 13 years via URL."
+      ],
+      "title": "Any Nix package, live in your browser",
+      "uncertainty": "Performance and practical limits for heavier packages unclear.",
+      "url": "https://simonwillison.net/2026/Sep/10/trynix/"
+    },
+    {
+      "builder_takeaway": "Observability instrumentation is a recurring need and this is from the author of the de facto standard wrapt.",
+      "category": "Tools Worth Testing",
+      "id": "07730ff2-645a-45a8-b62c-6b7eb1b1e7d1",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "wrapture is a new Python monkey patching library from Graham Dumpleton serving both testing and observability tracing."
+      ],
+      "title": "Don't sleep on wrapture",
+      "uncertainty": "Released August 31st; production track record is short.",
+      "url": "https://simonwillison.net/2026/Sep/11/wrapture/"
+    },
+    {
+      "builder_takeaway": "Small but permanent change to a very commonly used Python API.",
+      "category": "Model + API Changes",
+      "id": "86ac49a9-19cd-41de-986d-153adb389944",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "Python 3.15 soft-deprecates re.match() in favour of a new re.prefixmatch() alias."
+      ],
+      "title": "Soft-deprecating re.match()",
+      "uncertainty": "None material — described by the 3.15 release manager.",
+      "url": "https://simonwillison.net/2026/Sep/11/soft-deprecating-re-match/"
+    },
+    {
+      "builder_takeaway": "Concrete scaling architecture writeup rather than marketing.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "f325385a-220b-4e86-8688-443999732363",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "openai.com",
+      "source_facts": [
+        "OpenAI scaled its Habitat storage layer from a Python library to a globally distributed platform serving 22M requests per second."
+      ],
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+      "uncertainty": "Vendor-authored; architecture details are selectively disclosed.",
+      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one"
+    },
+    {
+      "builder_takeaway": "Relevant to anyone running agent-driven browsers against arbitrary URLs.",
+      "category": "AI Operations / Agent Control",
+      "id": "e42be298-d430-4516-b1b0-e4cfa710ca8f",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "auberon.xyz",
+      "source_facts": [
+        "An untrusted website can freeze a Mac through a simple browser-reachable technique."
+      ],
+      "title": "The Deathray: a simple way for an untrusted site to freeze a Mac",
+      "uncertainty": "Feed stored no body; affected macOS and browser versions unverified.",
+      "url": "https://auberon.xyz/blog/posts/deathray/"
+    },
+    {
+      "builder_takeaway": "Policy change with compliance implications for consumer apps built on Claude.",
+      "category": "Model + API Changes",
+      "id": "84386b96-544b-4c8d-a588-36d0c39a6e40",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "support.claude.com",
+      "source_facts": [
+        "Anthropic now restricts Claude access to users aged 18 and over via age assurance."
+      ],
+      "title": "Claude is only available to people over 18 years",
+      "uncertainty": "Unclear whether and how this propagates to API-based downstream products.",
+      "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude"
+    },
+    {
+      "builder_takeaway": "Ecosystem durability signal relevant to long-horizon language choices.",
+      "category": "Tools Worth Testing",
+      "id": "566a203c-ae0f-4b63-984e-960669e4444c",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "rustfoundation.org",
+      "source_facts": [
+        "Microsoft has designated Rust as a Tier-1 language internally."
+      ],
+      "title": "Rust is a Tier-1 language at Microsoft",
+      "uncertainty": "Lobsters feed stored no body; specifics of what Tier-1 entails internally are unverified.",
+      "url": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/"
+    },
+    {
+      "builder_takeaway": "Open sourcing changes the adoption calculus for build tooling.",
+      "category": "Tools Worth Testing",
+      "id": "db19770d-64b2-4d6d-b6d9-3c8b4ec6b03e",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "rune.build",
+      "source_facts": [
+        "Rune has been released as open source."
+      ],
+      "title": "Rune is now open source",
+      "uncertainty": "Feed stored no body; licence, governance and scope of the open sourcing unverified.",
+      "url": "https://rune.build/blog/rune-is-now-open-source"
+    },
+    {
+      "builder_takeaway": "Useful reference architecture for the Cloudflare edge stack.",
+      "category": "Tools Worth Testing",
+      "id": "040a2465-e95d-4249-be1b-e8279591cdba",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "ResolveHQ is an open source helpdesk built on Cloudflare Workers, D1, R2 and Queues."
+      ],
+      "title": "Show HN: ResolveHQ - a helpdesk built on Cloudflare Workers, D1, R2 and Queues",
+      "uncertainty": "Maturity and production usage unknown.",
+      "url": "https://github.com/mirza-rizvi/ResolveHQ"
+    },
+    {
+      "builder_takeaway": "Agent portability reduces lock-in risk in agent workflows.",
+      "category": "AI Operations / Agent Control",
+      "id": "7d7d2de9-9f9e-49c0-afe8-65f928fdb771",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel's AI SDK harness layer now supports GitHub Copilot through an official ACP-based adapter."
+      ],
+      "title": "GitHub Copilot is now available in the AI SDK harness layer",
+      "uncertainty": "Feature parity across harnesses behind the shared interface is unclear.",
+      "url": "https://vercel.com/changelog/github-copilot-ai-sdk-harness-adapter"
+    },
+    {
+      "builder_takeaway": "Free evaluation window expires in under three weeks.",
+      "category": "Small Business Automation",
+      "id": "26d80fe1-8d6a-4ec8-b656-c0a3dc53a8b8",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Tako Search is free on Vercel AI Gateway through September 30, 2026, after which standard rates apply."
+      ],
+      "title": "Tako Search is free on AI Gateway through September 30",
+      "uncertainty": "Post-September-30 pricing not stated in the announcement.",
+      "url": "https://vercel.com/changelog/tako-search-is-free-on-ai-gateway-through-september-30th"
+    },
+    {
+      "builder_takeaway": "Removes a practical constraint on agent workloads running in Sandbox.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "54ee9f8c-b4fa-4dfd-b6c7-9120d7288cc6",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel Sandbox now provides 64 GB of storage, up from 32 GB."
+      ],
+      "title": "Vercel Sandbox now provides 64 GB of storage",
+      "uncertainty": "Whether the increase affects pricing is not stated.",
+      "url": "https://vercel.com/changelog/vercel-sandbox-64-gb-storage"
+    },
+    {
+      "builder_takeaway": "The zeroDataRetention per-request flag is a concrete answer to a common compliance blocker.",
+      "category": "AI Operations / Agent Control",
+      "id": "f9fe1500-4767-4b26-8407-b820eb899eb4",
+      "importance": "archive-only",
+      "labels": [
+        "production_proven",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Tailscale built a customer-facing model router on Vercel AI Gateway with access gated by tailnet network identity and zero-data-retention routing."
+      ],
+      "title": "How Tailscale built a customer-facing model router on AI Gateway",
+      "uncertainty": "Vendor-published case study; costs and failure modes not discussed.",
+      "url": "https://vercel.com/blog/how-tailscale-built-a-customer-facing-model-router-on-ai-gateway"
+    },
+    {
+      "builder_takeaway": "Practical deployment path for the newly launched Agents API.",
+      "category": "Model + API Changes",
+      "id": "44512e0e-82af-4eaf-86fc-e93ae82fe12e",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel shipped an integration connecting OpenAI Agents API sessions to Vercel Sandbox for code execution and file access."
+      ],
+      "title": "Build with OpenAI Agents API on Vercel",
+      "uncertainty": "Cost of running long-lived Sandbox sessions is not addressed.",
+      "url": "https://vercel.com/changelog/build-with-openai-agents-api-on-vercel"
+    },
+    {
+      "builder_takeaway": "Early practical data point on post-quantum migration in production protocols.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "423019a2-b338-443b-957b-51025ebaaf34",
+      "importance": "archive-only",
+      "labels": [
+        "production_proven",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "blog.cloudflare.com",
+      "source_facts": [
+        "Cloudflare's 1.1.1.1 resolver now validates DNSSEC signatures using the post-quantum ML-DSA-44 algorithm."
+      ],
+      "title": "1.1.1.1 now supports post-quantum DNSSEC",
+      "uncertainty": "Broader resolver and registrar support timeline is unclear.",
+      "url": "https://blog.cloudflare.com/post-quantum-dnssec-1111/"
+    },
+    {
+      "builder_takeaway": "Track cumulative provider reliability rather than react to a single resolved incident.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "81be00f0-82fe-4682-ad5a-650c65b85063",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "status.claude.com",
+      "source_facts": [
+        "Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1"
+      ],
+      "title": "Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1",
+      "uncertainty": "",
+      "url": "https://status.claude.com/incidents/t33dncr5ydvl"
+    },
+    {
+      "builder_takeaway": "Enterprise feature today; relevant only if SaaS governance becomes a need.",
+      "category": "AI Operations / Agent Control",
+      "id": "da53cb97-1537-4554-9fd8-9a6ad68c8d12",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "blog.cloudflare.com",
+      "source_facts": [
+        "Introducing automatic remediation policies with Cloudflare CASB"
+      ],
+      "title": "Introducing automatic remediation policies with Cloudflare CASB",
+      "uncertainty": "",
+      "url": "https://blog.cloudflare.com/casb-policies/"
+    },
+    {
+      "builder_takeaway": "Security-adjacent fixes but a routine patch release.",
+      "category": "Model + API Changes",
+      "id": "d4854fa7-e9d5-456d-ab9f-2ba7885210c1",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Next.js v16.3.5"
+      ],
+      "title": "Next.js v16.3.5",
+      "uncertainty": "",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.5"
+    },
+    {
+      "builder_takeaway": "Early-stage tool, no track record yet.",
+      "category": "Tools Worth Testing",
+      "id": "75a735a9-1843-4a31-84f3-b7eff1ccb806",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Show HN: Toast, a beautiful by default in terminal IDE"
+      ],
+      "title": "Show HN: Toast, a beautiful by default in terminal IDE",
+      "uncertainty": "",
+      "url": "https://github.com/paradise-runner/toast"
+    },
+    {
+      "builder_takeaway": "Opinion rather than a decision-forcing change.",
+      "category": "Tools Worth Testing",
+      "id": "a56ca5b7-c20b-4d1a-bc89-2d2ac75c34f2",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "eddie.codes",
+      "source_facts": [
+        "Pandas Should Go Extinct"
+      ],
+      "title": "Pandas Should Go Extinct",
+      "uncertainty": "",
+      "url": "https://eddie.codes/posts/pandas-should-go-extinct/"
+    },
+    {
+      "builder_takeaway": "Narrow audience, no broad action.",
+      "category": "Tools Worth Testing",
+      "id": "e0d4a085-e91d-422c-94b0-4897a92dee63",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "GrapheneOS' rewritten Messages app is released"
+      ],
+      "title": "GrapheneOS' rewritten Messages app is released",
+      "uncertainty": "",
+      "url": "https://github.com/GrapheneOS/Messaging/releases/tag/13"
+    },
+    {
+      "builder_takeaway": "Thought-provoking, not decision-changing for a solo builder.",
+      "category": "Tools Worth Testing",
+      "id": "d9a951f3-2caa-417b-b746-6b4cd4a80c61",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "mathandai.org",
+      "source_facts": [
+        "A misalignment of AI in mathematics"
+      ],
+      "title": "A misalignment of AI in mathematics",
+      "uncertainty": "",
+      "url": "https://mathandai.org/"
+    },
+    {
+      "builder_takeaway": "Macro compute-supply signal, no near-term action.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "0efd58bf-dc10-45cf-9ea5-6d5df0e520c3",
+      "importance": "archive-only",
+      "labels": [
+        "production_proven",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "bbc.com",
+      "source_facts": [
+        "Google will buy half the electricity from one of Finland's nuclear power plants"
+      ],
+      "title": "Google will buy half the electricity from one of Finland's nuclear power plants",
+      "uncertainty": "",
+      "url": "https://www.bbc.com/news/articles/c8r6y4me2g6o"
+    },
+    {
+      "builder_takeaway": "Hardware option worth tracking for local inference capacity.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "990bc8e6-b9db-420a-82a5-b9f3b1f1b226",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "system76.com",
+      "source_facts": [
+        "Thelio Mira AI Linux Workstation: 192 GB GPU Memory"
+      ],
+      "title": "Thelio Mira AI Linux Workstation: 192 GB GPU Memory",
+      "uncertainty": "",
+      "url": "https://system76.com/workstations/thelio-mira-ai"
+    },
+    {
+      "builder_takeaway": "Early-stage provenance approach; no standard has settled.",
+      "category": "Tools Worth Testing",
+      "id": "5fe95ef2-f643-4d9b-b10a-6a0654db883c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "merybenavente.me",
+      "source_facts": [
+        "Proof of Capture: Apple Reference Image, but open source and using steganography"
+      ],
+      "title": "Proof of Capture: Apple Reference Image, but open source and using steganography",
+      "uncertainty": "",
+      "url": "https://merybenavente.me/blog/proof-of-capture"
+    },
+    {
+      "builder_takeaway": "Reference implementation; narrow relevance.",
+      "category": "Tools Worth Testing",
+      "id": "043797b7-3c20-49fb-9427-3ef378f54dea",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "huggingface.co",
+      "source_facts": [
+        "Rebuilding AUTOMATIC1111 with Gradio Workflow"
+      ],
+      "title": "Rebuilding AUTOMATIC1111 with Gradio Workflow",
+      "uncertainty": "",
+      "url": "https://huggingface.co/blog/gradio-workflow-1111"
+    },
+    {
+      "builder_takeaway": "Speculative; feed body was empty.",
+      "category": "Tools Worth Testing",
+      "id": "c28cf7ee-5af0-49d5-a6c6-9de41a153a9a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "ersc.io",
+      "source_facts": [
+        "What comes after git"
+      ],
+      "title": "What comes after git",
+      "uncertainty": "",
+      "url": "https://ersc.io/blog/what-comes-after-git"
+    },
+    {
+      "builder_takeaway": "Small utility, no urgency.",
+      "category": "Tools Worth Testing",
+      "id": "38c4528c-30f0-4555-a0cb-dbf9667de569",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "vale.rocks",
+      "source_facts": [
+        "My HTML Boilerplate"
+      ],
+      "title": "My HTML Boilerplate",
+      "uncertainty": "",
+      "url": "https://vale.rocks/posts/html-boilerplate"
+    },
+    {
+      "builder_takeaway": "Opinion piece, unverified content.",
+      "category": "AI Operations / Agent Control",
+      "id": "844e2be0-843e-4871-9923-eb67a6a4f00b",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "maurycyz.com",
+      "source_facts": [
+        "A rant about phishing: it's not the user's fault (and not DNS either)"
+      ],
+      "title": "A rant about phishing: it's not the user's fault (and not DNS either)",
+      "uncertainty": "",
+      "url": "https://maurycyz.com/misc/domains/"
+    },
+    {
+      "builder_takeaway": "Research-grade isolation work relevant to future sandboxing needs.",
+      "category": "AI Operations / Agent Control",
+      "id": "8ea6bc51-aebc-4fed-b8f7-e4aa77745835",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "queue.acm.org",
+      "source_facts": [
+        "How CHERIoT provides strong and usable isolation without an MMU"
+      ],
+      "title": "How CHERIoT provides strong and usable isolation without an MMU",
+      "uncertainty": "",
+      "url": "https://queue.acm.org/doi/10.1145/3831361"
+    },
+    {
+      "builder_takeaway": "Ongoing at feed time; capacity failures recur and argue for provider fallback.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "c6af9e60-b76d-465b-b212-a17cc8b602fc",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "status.openai.com",
+      "source_facts": [
+        "Elevated errors for GPT-5.6 Sol on the API"
+      ],
+      "title": "Elevated errors for GPT-5.6 Sol on the API",
+      "uncertainty": "",
+      "url": "https://status.openai.com//incidents/01M27VK1VN54RQJGJEHB5JTQJJ"
+    },
+    {
+      "builder_takeaway": "Regional reliability signal.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "e6a5aa74-dfff-44ae-bc0c-5fa885ad656e",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "status.openai.com",
+      "source_facts": [
+        "Elevated errors for ChatGPT users in Europe"
+      ],
+      "title": "Elevated errors for ChatGPT users in Europe",
+      "uncertainty": "",
+      "url": "https://status.openai.com//incidents/01M27Q9GH7WVKNA61ZR3RDMSY5"
+    },
+    {
+      "builder_takeaway": "Real dataset but the analyst has a commercial stake in the conclusion.",
+      "category": "Small Business Automation",
+      "id": "a9fa3b08-a26d-402a-acd8-735899124307",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Analysis of 150,000 SaaS Product Hunt submissions for SEO activity"
+      ],
+      "title": "Analysis of 150,000 SaaS Product Hunt submissions for SEO activity",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wd0458/i_have_analyzed_a_total_of_150000_saas/"
+    },
+    {
+      "builder_takeaway": "Single anecdote with obvious survivorship bias; mechanic is still worth noting.",
+      "category": "Small Business Automation",
+      "id": "e682cd05-8b6c-43c4-b65c-06efe8809d49",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Launching an eSIM service in a saturated market to EUR 5,000/month"
+      ],
+      "title": "Launching an eSIM service in a saturated market to EUR 5,000/month",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wcglva/i_am_nuts_so_i_launched_in_a_saturated_market/"
+    },
+    {
+      "builder_takeaway": "Reflective commentary, no decision impact.",
+      "category": "Tools Worth Testing",
+      "id": "add71c1c-c5a4-4ad4-9893-7291e6f62cb3",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "Feeling sad about AI"
+      ],
+      "title": "Feeling sad about AI",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Sep/11/feeling-sad-about-ai/"
+    },
+    {
+      "builder_takeaway": "Small but telling signal about agent-driven scanning volume.",
+      "category": "AI Operations / Agent Control",
+      "id": "11fe14ad-7ea9-4ede-9ce4-c0dbcbc153f1",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "Hugging Face security.txt addresses AI agents directly"
+      ],
+      "title": "Hugging Face security.txt addresses AI agents directly",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Sep/11/hugging-face-security/"
+    },
+    {
+      "builder_takeaway": "Platform changelog with narrow applicability.",
+      "category": "Model + API Changes",
+      "id": "96eff176-7c00-4b80-a092-324cb03ca8b7",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "blog.val.town",
+      "source_facts": [
+        "Val Town changelog - September 10, 2026"
+      ],
+      "title": "Val Town changelog - September 10, 2026",
+      "uncertainty": "",
+      "url": "https://blog.val.town/changelog-2026-09-10"
+    },
+    {
+      "builder_takeaway": "Access-control improvement relevant to teams, less so to solo accounts.",
+      "category": "Model + API Changes",
+      "id": "95b7c5c4-35b4-4619-a5a5-6c0e9ba6cec0",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Control who can manage connectors in Vercel Connect"
+      ],
+      "title": "Control who can manage connectors in Vercel Connect",
+      "uncertainty": "",
+      "url": "https://vercel.com/changelog/control-who-can-manage-connectors-in-vercel-connect"
+    },
+    {
+      "builder_takeaway": "Useful optimization but limited to one framework on one host.",
+      "category": "Model + API Changes",
+      "id": "9e3cc0bb-7145-42e0-a93f-d838164e359c",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "FastAPI frontends and static files served from the CDN"
+      ],
+      "title": "FastAPI frontends and static files served from the CDN",
+      "uncertainty": "",
+      "url": "https://vercel.com/changelog/fastapi-frontends-and-static-files-served-from-the-cdn"
+    },
+    {
+      "builder_takeaway": "Resolved regional latency incident affecting US Midwest traffic on Sep 10. No lasting impact.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "ac7d08b8-20ec-495c-a8c9-a8d51fe1c1c9",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "status.claude.com",
+      "source_facts": [
+        "Elevated latency on the Claude API for some users"
+      ],
+      "title": "Elevated latency on the Claude API for some users",
+      "uncertainty": "",
+      "url": "https://status.claude.com/incidents/2pt83vlkk7x7"
+    },
+    {
+      "builder_takeaway": "Dependency patch bump for a Composio example package. No user-facing change.",
+      "category": "Tools Worth Testing",
+      "id": "cacf3ad7-4525-452e-8a50-579324a0a61e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "versioning-example@0.1.1-beta.1"
+      ],
+      "title": "versioning-example@0.1.1-beta.1",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/versioning-example%400.1.1-beta.1"
+    },
+    {
+      "builder_takeaway": "Dependency patch bump for a Composio example package. No user-facing change.",
+      "category": "Tools Worth Testing",
+      "id": "cb3b5292-6c16-4490-ace7-80467cd7ebb3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "vercel-example@0.1.10-beta.2"
+      ],
+      "title": "vercel-example@0.1.10-beta.2",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/vercel-example%400.1.10-beta.2"
+    },
+    {
+      "builder_takeaway": "Dependency patch bump for a Composio example package. No user-facing change.",
+      "category": "Tools Worth Testing",
+      "id": "fbdb14e6-8f3f-4ba1-9178-2da31febedba",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "triggers-example@0.1.1-beta.1"
+      ],
+      "title": "triggers-example@0.1.1-beta.1",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/triggers-example%400.1.1-beta.1"
+    },
+    {
+      "builder_takeaway": "Dependency patch bump for a Composio example package. No user-facing change.",
+      "category": "Tools Worth Testing",
+      "id": "2ba1904a-4600-470d-b173-11ac4c01ffb0",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "tools-example@0.1.1-beta.1"
+      ],
+      "title": "tools-example@0.1.1-beta.1",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/tools-example%400.1.1-beta.1"
+    },
+    {
+      "builder_takeaway": "Dependency patch bump for a Composio example package. No user-facing change.",
+      "category": "Tools Worth Testing",
+      "id": "7196c3c2-207b-495e-b8fa-020926faa6a8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "toolkits-example@0.1.10-beta.2"
+      ],
+      "title": "toolkits-example@0.1.10-beta.2",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/toolkits-example%400.1.10-beta.2"
+    },
+    {
+      "builder_takeaway": "Dependency patch bump for a Composio example package. No user-facing change.",
+      "category": "Tools Worth Testing",
+      "id": "3b48b9b0-fd22-4e82-9af2-fb3cb4964eef",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "tool-router-example@1.0.11-beta.1"
+      ],
+      "title": "tool-router-example@1.0.11-beta.1",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/tool-router-example%401.0.11-beta.1"
+    },
+    {
+      "builder_takeaway": "Dependency patch bump for a Composio example package. No user-facing change.",
+      "category": "Tools Worth Testing",
+      "id": "975bb524-deb3-4e03-86eb-a3da1dfcb9bc",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "session-management-example@0.1.1-beta.1"
+      ],
+      "title": "session-management-example@0.1.1-beta.1",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/session-management-example%400.1.1-beta.1"
+    },
+    {
+      "builder_takeaway": "Dependency patch bump for a Composio example package. No user-facing change.",
+      "category": "Tools Worth Testing",
+      "id": "27f44d5b-fab0-43af-baa2-de1c5fb3558c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "openai-example@0.1.10-beta.2"
+      ],
+      "title": "openai-example@0.1.10-beta.2",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/openai-example%400.1.10-beta.2"
+    },
+    {
+      "builder_takeaway": "Dependency patch bump for a Composio example package. No user-facing change.",
+      "category": "Tools Worth Testing",
+      "id": "406e0f39-1ac1-48d4-a400-57fe91772d83",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "modifiers-example@0.1.10-beta.2"
+      ],
+      "title": "modifiers-example@0.1.10-beta.2",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/modifiers-example%400.1.10-beta.2"
+    },
+    {
+      "builder_takeaway": "Dependency patch bump for a Composio example package. No user-facing change.",
+      "category": "Tools Worth Testing",
+      "id": "13b45a21-ced8-499f-ac1b-94d5356542fe",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "mcp-example@0.1.1-beta.1"
+      ],
+      "title": "mcp-example@0.1.1-beta.1",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/mcp-example%400.1.1-beta.1"
+    },
+    {
+      "builder_takeaway": "Patch release adding gateway-driven model name and provider tracing metadata override, plus test and docs cleanup.",
+      "category": "Tools Worth Testing",
+      "id": "b613f56c-831a-4cb3-8e92-731d50906480",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "langchain-core==1.6.3"
+      ],
+      "title": "langchain-core==1.6.3",
+      "uncertainty": "",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.3"
+    },
+    {
+      "builder_takeaway": "Bug fix release selecting sandbox npm install flags by provider.",
+      "category": "Small Business Automation",
+      "id": "4ea653fb-b142-4fa6-aba6-1a4c960c5178",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n beta 2.39.4"
+      ],
+      "title": "n8n beta 2.39.4",
+      "uncertainty": "",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/beta"
+    },
+    {
+      "builder_takeaway": "Bug fix release selecting sandbox npm install flags by provider.",
+      "category": "Small Business Automation",
+      "id": "a4eb7dc4-6d8a-4079-828d-247a482896d7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n@2.39.4"
+      ],
+      "title": "n8n@2.39.4",
+      "uncertainty": "",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.4"
+    },
+    {
+      "builder_takeaway": "Bug fixes including executing MCP toolkit members on workers, consent grant reuse mid-flow, and GIT_SSL_CAINFO CA trust for source control.",
+      "category": "Small Business Automation",
+      "id": "68c4d265-5452-48b6-8eca-99f8fd7b8ee7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n stable 2.38.7"
+      ],
+      "title": "n8n stable 2.38.7",
+      "uncertainty": "",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/stable"
+    },
+    {
+      "builder_takeaway": "Bug fixes including executing MCP toolkit members on workers and consent grant reuse mid-flow.",
+      "category": "Small Business Automation",
+      "id": "b4056b52-b063-492c-b33b-04afc3d003c3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n@2.38.7"
+      ],
+      "title": "n8n@2.38.7",
+      "uncertainty": "",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.38.7"
+    },
+    {
+      "builder_takeaway": "Bug fix trusting the CA from GIT_SSL_CAINFO for source control HTTPS remotes.",
+      "category": "Small Business Automation",
+      "id": "67b0c036-3e61-4259-8c75-244b22ed9fe8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n beta 2.39.3"
+      ],
+      "title": "n8n beta 2.39.3",
+      "uncertainty": "",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/beta"
+    },
+    {
+      "builder_takeaway": "Bug fix trusting the CA from GIT_SSL_CAINFO for source control HTTPS remotes.",
+      "category": "Small Business Automation",
+      "id": "82ed6967-5604-44b1-8645-8fd4a40a5e82",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n@2.39.3"
+      ],
+      "title": "n8n@2.39.3",
+      "uncertainty": "",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.3"
+    },
+    {
+      "builder_takeaway": "Canary build with miscellaneous internal changes, a React version bump and experimental image config.",
+      "category": "Tools Worth Testing",
+      "id": "b9322e1c-4c27-48f2-98df-64682409b3d6",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Next.js v16.4.0-canary.27"
+      ],
+      "title": "Next.js v16.4.0-canary.27",
+      "uncertainty": "",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.27"
+    },
+    {
+      "builder_takeaway": "Canary build with bundle analyzer views, turbopack changes and assorted fixes.",
+      "category": "Tools Worth Testing",
+      "id": "4b808872-7ab7-4a79-951e-a109814ef794",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Next.js v16.4.0-canary.26"
+      ],
+      "title": "Next.js v16.4.0-canary.26",
+      "uncertainty": "",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.26"
+    },
+    {
+      "builder_takeaway": "An HN mirror that filters out AI-related stories.",
+      "category": "Tools Worth Testing",
+      "id": "e1adb560-c9f8-4c8a-814e-0458db2d553d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "unslop.news",
+      "source_facts": [
+        "Show HN: Hacker News, Without AI"
+      ],
+      "title": "Show HN: Hacker News, Without AI",
+      "uncertainty": "",
+      "url": "https://www.unslop.news/"
+    },
+    {
+      "builder_takeaway": "A second HN mirror filtering AI stories, submitted the same day as another with the same premise.",
+      "category": "Tools Worth Testing",
+      "id": "018d3541-d4b3-4744-8d4c-9a51f89f08c9",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "hcker.news",
+      "source_facts": [
+        "Show HN: Hacker News, without AI"
+      ],
+      "title": "Show HN: Hacker News, without AI",
+      "uncertainty": "",
+      "url": "https://hcker.news/?ai=exclude"
+    },
+    {
+      "builder_takeaway": "A tmux-like terminal multiplexer built on the Godot game engine, with an FPS counter and configurable frame rate.",
+      "category": "Tools Worth Testing",
+      "id": "9ee79772-5400-4a46-a193-db1e96953b8b",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Show HN: Godot and Rust based multiplexer"
+      ],
+      "title": "Show HN: Godot and Rust based multiplexer",
+      "uncertainty": "",
+      "url": "https://github.com/godot-pty/gpty"
+    },
+    {
+      "builder_takeaway": "A personal essay collection about unusual bodily experiences.",
+      "category": "Tools Worth Testing",
+      "id": "31f3773b-dc0b-425d-9478-5efb266d2259",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "vester.si",
+      "source_facts": [
+        "Show HN: Bodily Oddities"
+      ],
+      "title": "Show HN: Bodily Oddities",
+      "uncertainty": "",
+      "url": "https://vester.si/bodily-oddities/"
+    },
+    {
+      "builder_takeaway": "An announcement from the Clay Mathematics Institute regarding the Navier-Stokes Millennium Prize problem.",
+      "category": "Tools Worth Testing",
+      "id": "0af815ad-aa56-4024-bfe8-63dc99d4262b",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "claymath.org",
+      "source_facts": [
+        "Clay Mathematics Institute on the Navier-Stokes Problem"
+      ],
+      "title": "Clay Mathematics Institute on the Navier-Stokes Problem",
+      "uncertainty": "",
+      "url": "https://www.claymath.org/news/navier-stokes-announcement/"
+    },
+    {
+      "builder_takeaway": "Reporting on Starlink emissions interfering with protected radio astronomy bands.",
+      "category": "Tools Worth Testing",
+      "id": "4ded901b-4ea6-4ba5-9b9f-8707eac6b7c7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "gadgetreview.com",
+      "source_facts": [
+        "Starlink signal leakage threatens radio astronomy frequencies"
+      ],
+      "title": "Starlink signal leakage threatens radio astronomy frequencies",
+      "uncertainty": "",
+      "url": "https://www.gadgetreview.com/starlinks-signal-leakage-is-threatening-radio-astronomys-most-critical-frequencies"
+    },
+    {
+      "builder_takeaway": "The primary report on the RubyGems agent attack. Covered via Simon Willison's writeup, which adds context and links to the original RubyGems security disclosure.",
+      "category": "AI Operations / Agent Control",
+      "id": "b5be33d6-b5e4-4c2e-8170-3efcd18de868",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "rubyhack.ai",
+      "source_facts": [
+        "OpenAI agents carried out an undisclosed attack on RubyGems"
+      ],
+      "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
+      "uncertainty": "",
+      "url": "https://www.rubyhack.ai/"
+    },
+    {
+      "builder_takeaway": "Archive of the Chaos Computer Club's building-scale light installation project.",
+      "category": "Tools Worth Testing",
+      "id": "46eb274d-884a-454a-8362-9e13d083e9b5",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "blinkenlights.de",
+      "source_facts": [
+        "Project Blinkenlights"
+      ],
+      "title": "Project Blinkenlights",
+      "uncertainty": "",
+      "url": "https://blinkenlights.de/en/"
+    },
+    {
+      "builder_takeaway": "The same ResolveHQ project surfaced through the HN top feed as well as Show HN.",
+      "category": "Tools Worth Testing",
+      "id": "d6d57dac-c306-46e2-bb15-036c09ecb13c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Show HN: ResolveHQ - a helpdesk built on Cloudflare Workers, D1, R2 and Queues"
+      ],
+      "title": "Show HN: ResolveHQ - a helpdesk built on Cloudflare Workers, D1, R2 and Queues",
+      "uncertainty": "",
+      "url": "https://github.com/mirza-rizvi/ResolveHQ"
+    },
+    {
+      "builder_takeaway": "A podcast discussion among AI researchers about timelines for recursive self-improvement.",
+      "category": "Tools Worth Testing",
+      "id": "39a7b26b-949c-4577-88fe-958a0a0be4ca",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "dwarkesh.com",
+      "source_facts": [
+        "AI researchers debate how close we are to recursive self-improvement"
+      ],
+      "title": "AI researchers debate how close we are to recursive self-improvement",
+      "uncertainty": "",
+      "url": "https://www.dwarkesh.com/p/john-beren-charlie"
+    },
+    {
+      "builder_takeaway": "Reporting on proposed removal of public review requirements for data centre pollution permits.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "eeb9d4f9-83dc-4632-b42e-5171c9eff92e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "capitalbnews.org",
+      "source_facts": [
+        "The EPA is planning to scrap public review rules for data center pollution"
+      ],
+      "title": "The EPA is planning to scrap public review rules for data center pollution",
+      "uncertainty": "",
+      "url": "https://capitalbnews.org/data-centers-permit-rules-epa/"
+    },
+    {
+      "builder_takeaway": "Berkeley's block-based educational programming environment.",
+      "category": "Tools Worth Testing",
+      "id": "1ea223f1-107c-41e5-9232-179ecf82c1f7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "snap.berkeley.edu",
+      "source_facts": [
+        "Snap - a programming language for kids and adults for CS study"
+      ],
+      "title": "Snap - a programming language for kids and adults for CS study",
+      "uncertainty": "",
+      "url": "https://snap.berkeley.edu/"
+    },
+    {
+      "builder_takeaway": "Archaeology reporting from Science on ritual drug use in early Andean societies.",
+      "category": "Tools Worth Testing",
+      "id": "464b6c07-be65-4eb7-8a3f-298e23053df9",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "science.org",
+      "source_facts": [
+        "Mind-altering drugs played key role in rise of Andean civilization"
+      ],
+      "title": "Mind-altering drugs played key role in rise of Andean civilization",
+      "uncertainty": "",
+      "url": "https://www.science.org/content/article/mind-altering-drugs-played-key-role-rise-andean-civilization"
+    },
+    {
+      "builder_takeaway": "An IAEA explainer on Cherenkov radiation.",
+      "category": "Tools Worth Testing",
+      "id": "146d2358-42b5-4add-93bd-b358302209f8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "iaea.org",
+      "source_facts": [
+        "Cherenkov Radiation"
+      ],
+      "title": "Cherenkov Radiation",
+      "uncertainty": "",
+      "url": "http://www.iaea.org/newscenter/news/what-is-cherenkov-radiation"
+    },
+    {
+      "builder_takeaway": "A Cell Reports Medicine paper on exercise intensity and cardiometabolic outcomes.",
+      "category": "Tools Worth Testing",
+      "id": "ff8cdceb-ca57-48ec-b36d-7b63d244f163",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "cell.com",
+      "source_facts": [
+        "Exercise intensity is associated with cardiometabolic health"
+      ],
+      "title": "Exercise intensity is associated with cardiometabolic health",
+      "uncertainty": "",
+      "url": "https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(26)00405-2"
+    },
+    {
+      "builder_takeaway": "A viral aggregator story about a student building a sound-wave fire extinguisher.",
+      "category": "Tools Worth Testing",
+      "id": "dd7b9a23-64e3-40fd-ab0f-9a861b1e02d8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "upsocl.com",
+      "source_facts": [
+        "Mexican student creates an acoustic fire extinguisher"
+      ],
+      "title": "Mexican student creates an acoustic fire extinguisher",
+      "uncertainty": "",
+      "url": "https://www.upsocl.com/en/16-year-old-mexican-student-creates-an-acoustic-fire-extinguisher-that-uses-sound-waves-to-put-out-fires-in-seconds/"
+    },
+    {
+      "builder_takeaway": "A music generation model project page claiming frontier results via symbolic planning.",
+      "category": "Model + API Changes",
+      "id": "3f4dd7c4-7ab8-4acd-9c92-c864d9ac355f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "map-yue2.github.io",
+      "source_facts": [
+        "YuE2: frontier music with symbolic planning"
+      ],
+      "title": "YuE2: frontier music with symbolic planning",
+      "uncertainty": "",
+      "url": "https://map-yue2.github.io/"
+    },
+    {
+      "builder_takeaway": "An NTSB investigative update on a cargo aircraft runway excursion.",
+      "category": "Tools Worth Testing",
+      "id": "58c6d3f2-36f4-4b2b-90b0-15e2c4ffaf8c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "ntsb.gov",
+      "source_facts": [
+        "NTSB issues investigative update on B-767 runway excursion in Miami"
+      ],
+      "title": "NTSB issues investigative update on B-767 runway excursion in Miami",
+      "uncertainty": "",
+      "url": "https://www.ntsb.gov:443/news/press-releases/Pages/NR20260909.aspx"
+    },
+    {
+      "builder_takeaway": "The same personal essay collection surfaced through the HN top feed.",
+      "category": "Tools Worth Testing",
+      "id": "12c626bd-c323-4e5a-b6d7-461401193ef9",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "vester.si",
+      "source_facts": [
+        "Show HN: Bodily Oddities"
+      ],
+      "title": "Show HN: Bodily Oddities",
+      "uncertainty": "",
+      "url": "https://vester.si/bodily-oddities/"
+    },
+    {
+      "builder_takeaway": "The original post on Python 3.15 soft-deprecating re.match() in favour of re.prefixmatch().",
+      "category": "Model + API Changes",
+      "id": "bfe03d8b-4684-4244-b7d3-fcea7c2ab901",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "hugovk.dev",
+      "source_facts": [
+        "Soft-deprecating re.match()"
+      ],
+      "title": "Soft-deprecating re.match()",
+      "uncertainty": "",
+      "url": "https://hugovk.dev/blog/2026/soft-deprecating-re.match/"
+    },
+    {
+      "builder_takeaway": "A speed test page used to gauge Fastly edge cache fetch performance.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "45982bca-7ac5-4bf7-b037-52356fa1e2b9",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "speed.edgecompute.app",
+      "source_facts": [
+        "Fastly Speedtest Test"
+      ],
+      "title": "Fastly Speedtest Test",
+      "uncertainty": "",
+      "url": "https://speed.edgecompute.app/"
+    },
+    {
+      "builder_takeaway": "Announcement page for a 2027 Gleam language conference.",
+      "category": "Tools Worth Testing",
+      "id": "a2247711-acb4-48da-8426-b7bf668a5e8e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "gleamgathering.com",
+      "source_facts": [
+        "Gleam Gathering 2027"
+      ],
+      "title": "Gleam Gathering 2027",
+      "uncertainty": "",
+      "url": "https://gleamgathering.com/"
+    },
+    {
+      "builder_takeaway": "A post on YAML parsing pitfalls and where the blame actually lies.",
+      "category": "Tools Worth Testing",
+      "id": "45104471-3c84-4d2d-9330-f37084154530",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "slugcat.systems",
+      "source_facts": [
+        "It's not the YAML spec's fault, but"
+      ],
+      "title": "It's not the YAML spec's fault, but",
+      "uncertainty": "",
+      "url": "https://slugcat.systems/post/26-09-10-yaml-spec/"
+    },
+    {
+      "builder_takeaway": "A Raymond Chen post on the Windows XP default user picture selection algorithm.",
+      "category": "Tools Worth Testing",
+      "id": "19fe401e-0b74-409a-bfba-dd23e9b372d7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "devblogs.microsoft.com",
+      "source_facts": [
+        "What algorithm did Windows XP use to choose your initial user picture?"
+      ],
+      "title": "What algorithm did Windows XP use to choose your initial user picture?",
+      "uncertainty": "",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20260909-00/?p=112683"
+    },
+    {
+      "builder_takeaway": "Shopify's engineering post on moving from React Native back to Swift and Kotlin.",
+      "category": "Tools Worth Testing",
+      "id": "f33be99f-d539-4220-89e5-b0bd9c9927d0",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "shopify.engineering",
+      "source_facts": [
+        "Native is now the future of mobile at Shopify (2026)"
+      ],
+      "title": "Native is now the future of mobile at Shopify (2026)",
+      "uncertainty": "",
+      "url": "https://shopify.engineering/back-to-native"
+    },
+    {
+      "builder_takeaway": "A review of an e-ink device.",
+      "category": "Tools Worth Testing",
+      "id": "207da284-6da1-4494-8445-1cd3b068c0e2",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "abstractnonsense.xyz",
+      "source_facts": [
+        "Xteink X4 Pro review"
+      ],
+      "title": "Xteink X4 Pro review",
+      "uncertainty": "",
+      "url": "https://abstractnonsense.xyz/microblog/2026-09-07-xteink-x4-pro-review/"
+    },
+    {
+      "builder_takeaway": "A retrospective on six years of the Bevy game engine project.",
+      "category": "Tools Worth Testing",
+      "id": "d6488c8f-fcaa-4938-b23d-f64662bc3c36",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "blog.fallible.net",
+      "source_facts": [
+        "It Breaks a Village: Bevy's 6th Birthday"
+      ],
+      "title": "It Breaks a Village: Bevy's 6th Birthday",
+      "uncertainty": "",
+      "url": "https://blog.fallible.net/it-breaks-a-village/"
+    },
+    {
+      "builder_takeaway": "An OpenAI customer story describing Perplexity using Astra to write communications, change software and monitor production systems with less frequent check-ins.",
+      "category": "Model + API Changes",
+      "id": "2881706c-e61d-408c-a4a5-51e087bf9475",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "openai.com",
+      "source_facts": [
+        "Perplexity trusts GPT-6 Astra with end-to-end systems"
+      ],
+      "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+      "uncertainty": "",
+      "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra"
+    },
+    {
+      "builder_takeaway": "An OpenAI customer story on Devin using Astra to test its own output.",
+      "category": "Model + API Changes",
+      "id": "712b5d72-af5e-4f86-a9de-be2a78c3057a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "openai.com",
+      "source_facts": [
+        "Cognition helps Devin test its own work with GPT-6 Astra"
+      ],
+      "title": "Cognition helps Devin test its own work with GPT-6 Astra",
+      "uncertainty": "",
+      "url": "https://openai.com/index/cognition-devin-testing-with-astra"
+    },
+    {
+      "builder_takeaway": "A resolved incident affecting 1% of ChatGPT Work turns on existing threads.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "8702f205-f9ac-4fd4-acc4-b79cf47da8b6",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "status.openai.com",
+      "source_facts": [
+        "1% of ChatGPT Work turns are failing for existing threads"
+      ],
+      "title": "1% of ChatGPT Work turns are failing for existing threads",
+      "uncertainty": "",
+      "url": "https://status.openai.com//incidents/01M28MEQWTQJDRCRPFD9FWQ0H3"
+    },
+    {
+      "builder_takeaway": "A resolved incident covering delayed OpenAI customer support responses.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "17f6f25a-0764-4b5e-9453-66d832274c84",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "status.openai.com",
+      "source_facts": [
+        "Delays in customer support responses"
+      ],
+      "title": "Delays in customer support responses",
+      "uncertainty": "",
+      "url": "https://status.openai.com//incidents/01M26E3PPAYJMMRHX2MZJCTHMF"
+    },
+    {
+      "builder_takeaway": "A resolved incident affecting ChatGPT Work.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "87bd25e8-888f-40dd-82bb-228bb9d76b48",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "status.openai.com",
+      "source_facts": [
+        "Elevated errors affecting ChatGPT Work"
+      ],
+      "title": "Elevated errors affecting ChatGPT Work",
+      "uncertainty": "",
+      "url": "https://status.openai.com//incidents/01M26DX2PP1AFHGJK5E4M6S2J6"
+    },
+    {
+      "builder_takeaway": "A founder describing a Stripe billing-anomaly monitoring tool framed as a question to the subreddit.",
+      "category": "Small Business Automation",
+      "id": "e23c3d94-d4b4-410a-ab8c-15c85f0de760",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "How are SaaS teams finding revenue leaks in Stripe?"
+      ],
+      "title": "How are SaaS teams finding revenue leaks in Stripe?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wd7qv7/how_are_saas_teams_finding_revenue_leaks_in_stripe/"
+    },
+    {
+      "builder_takeaway": "A founder pitching a lighter-weight compliance evidence tool against Vanta and Drata.",
+      "category": "Small Business Automation",
+      "id": "cd1eefda-c967-40a7-b839-763d23b60db7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I built a simpler alternative to Vanta and Drata for AI start ups"
+      ],
+      "title": "I built a simpler alternative to Vanta and Drata for AI start ups",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wd7npo/i_built_a_simpler_alternative_to_vanta_and_drata/"
+    },
+    {
+      "builder_takeaway": "A founder seeking feedback on an Australian aged-care compliance MVP built around care minute reconciliation.",
+      "category": "Small Business Automation",
+      "id": "73cbc3db-643f-4f0d-8124-6e879ee4d8ee",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "MVP for aged-care compliance"
+      ],
+      "title": "MVP for aged-care compliance",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wd735w/mvp_for_agedcare_compliance_would_love_for/"
+    },
+    {
+      "builder_takeaway": "Post removed by Reddit for violating content policy; no content remains.",
+      "category": "Small Business Automation",
+      "id": "41c44a7a-f37a-49f7-816e-84ce86ca726b",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "[ Removed by Reddit ]"
+      ],
+      "title": "[ Removed by Reddit ]",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wd6x7o/removed_by_reddit/"
+    },
+    {
+      "builder_takeaway": "A vendor-selection question about supplier collaboration tooling.",
+      "category": "Small Business Automation",
+      "id": "eb80ca38-714a-42d4-b82e-aa2a892bced8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "What supplier collaboration software are people using?"
+      ],
+      "title": "What supplier collaboration software are people using?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wd69g7/what_supplier_collaboration_software_are_people/"
+    },
+    {
+      "builder_takeaway": "A beginner asking for an introduction to SaaS as a career path.",
+      "category": "Small Business Automation",
+      "id": "dcea4c88-9f22-4a65-81fc-68dc0d2a4d4e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Can someone explain SaaS to me like I'm a wee little baby"
+      ],
+      "title": "Can someone explain SaaS to me like I'm a wee little baby",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wd4z1i/can_someone_explain_saas_to_me_like_im_a_wee/"
+    },
+    {
+      "builder_takeaway": "A founder reports unexpected signups traced to a university sharing their product, with attribution proving difficult.",
+      "category": "Small Business Automation",
+      "id": "d1cfd915-07b7-4687-8af5-34b76bb4ff99",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Suddenly getting signups from a country where I had zero users"
+      ],
+      "title": "Suddenly getting signups from a country where I had zero users",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wd4c4t/suddenly_getting_signups_from_a_country_where_i/"
+    },
+    {
+      "builder_takeaway": "A founder asking how to find an audience after launching.",
+      "category": "Small Business Automation",
+      "id": "e320d85f-e212-4135-929e-b07a5477452c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Recommendations for marketing"
+      ],
+      "title": "Recommendations for marketing",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wd1g2v/recommendations_for_marketing/"
+    },
+    {
+      "builder_takeaway": "A founder with a functional product asking how to convert beta feedback into paying users.",
+      "category": "Small Business Automation",
+      "id": "42071712-97b1-43b5-8db1-7915394a3df8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "looking for advice"
+      ],
+      "title": "looking for advice",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wczdi8/looking_for_advice/"
+    },
+    {
+      "builder_takeaway": "A lawn care franchise co-owner describing a custom ATS they built and want to take to market.",
+      "category": "Small Business Automation",
+      "id": "c0adb257-3c55-44f0-b054-2852e8e097aa",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "$60k per month business"
+      ],
+      "title": "$60k per month business",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wcxgh4/60k_per_month_business/"
+    },
+    {
+      "builder_takeaway": "A founder celebrating 15 paid subscribers out of 3,212 users and asking what helped others past that point.",
+      "category": "Small Business Automation",
+      "id": "b9c4e54e-6fb4-4edf-893d-848740a59da4",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "hit 15 paid subscribers"
+      ],
+      "title": "hit 15 paid subscribers",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wcvzn2/hit_15_paid_subscribers_small_number_but_feels/"
+    },
+    {
+      "builder_takeaway": "A developer asking the subreddit to suggest micro-SaaS ideas in the nail art space.",
+      "category": "Small Business Automation",
+      "id": "1f2923e8-f8ef-4ac3-b371-411873339f49",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "My sister was fired from nail salon during her pregnancy"
+      ],
+      "title": "My sister was fired from nail salon during her pregnancy",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wctyl8/my_sister_was_fired_from_nail_salon_during_her/"
+    },
+    {
+      "builder_takeaway": "Plugin release setting force_https in fly.toml, fixing a volume lookup bug and adding app-scoped deploy token compatibility.",
+      "category": "Tools Worth Testing",
+      "id": "a1cceb59-4394-4ae6-b283-fb6c58af14ac",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "datasette-publish-fly 1.4"
+      ],
+      "title": "datasette-publish-fly 1.4",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Sep/11/datasette-publish-fly/"
+    },
+    {
+      "builder_takeaway": "Patch release fixing compatibility with sqlite-utils 4.x.",
+      "category": "Tools Worth Testing",
+      "id": "de503cdb-8f7d-4221-8946-c2c5a289f59a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "github-to-sqlite 2.9.1"
+      ],
+      "title": "github-to-sqlite 2.9.1",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Sep/11/github-to-sqlite/"
+    },
+    {
+      "builder_takeaway": "Release note pointing at the Datasette security releases blog post.",
+      "category": "AI Operations / Agent Control",
+      "id": "6c77e0fc-904c-427d-b607-a4de34df876d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "datasette 0.65.4"
+      ],
+      "title": "datasette 0.65.4",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Sep/11/datasette/"
+    },
+    {
+      "builder_takeaway": "Release note pointing at the Datasette security releases blog post.",
+      "category": "AI Operations / Agent Control",
+      "id": "de4d97c5-2bc4-48cf-90d1-d0e6db652675",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "simonwillison.net",
+      "source_facts": [
+        "datasette 1.0a39"
+      ],
+      "title": "datasette 1.0a39",
+      "uncertainty": "",
+      "url": "https://simonwillison.net/2026/Sep/11/datasette-2/"
+    },
+    {
+      "builder_takeaway": "A weekly Stratechery roundup covering the Duo launch and assorted analysis.",
+      "category": "Tools Worth Testing",
+      "id": "c4aefcee-02be-4782-a31a-d3e78666176b",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "stratechery.com",
+      "source_facts": [
+        "2026.37: Duo Threats"
+      ],
+      "title": "2026.37: Duo Threats",
+      "uncertainty": "",
+      "url": "https://stratechery.com/2026/duo-threats/"
+    },
+    {
+      "builder_takeaway": "A Vercel customer story about Featured running 374 migrated Sanity sites and a multi-model chatbot on Vercel.",
+      "category": "Tools Worth Testing",
+      "id": "b9464be1-bfd2-4d2a-bb25-b11ee978e118",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "How Featured's users make 100K media pitches per month on Vercel"
+      ],
+      "title": "How Featured's users make 100K media pitches per month on Vercel",
+      "uncertainty": "",
+      "url": "https://vercel.com/blog/how-featureds-users-make-100k-media-pitches-per-month-on-vercel"
+    },
+    {
+      "builder_takeaway": "Vercel describes batching CDN metadata lookups instead of fetching one path at a time, cutting lookup latency 91%.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "952f4d7a-03a3-4dc4-8980-3bf9a1e19402",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "How we cut CDN metadata lookup latency by 91%"
+      ],
+      "title": "How we cut CDN metadata lookup latency by 91%",
+      "uncertainty": "",
+      "url": "https://vercel.com/blog/how-we-cut-cdn-metadata-lookup-latency-by-91-percent"
+    }
+  ],
+  "mode": "primary",
+  "run_id": "e07bfbce-7988-48dd-97e3-f980aca25e2a",
+  "status": "completed",
+  "summary": "Synthesized Nightly Librarian run with 54 promoted item(s), 125 scored item(s), and 71 rejected item(s).",
+  "title": "Nightly Librarian - 2026-09-12"
+}
