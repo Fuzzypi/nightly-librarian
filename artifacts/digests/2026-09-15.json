@@ -1,0 +1,776 @@
+{
+  "date": "2026-09-15",
+  "generated_at": "2026-09-15T06:14:08.134Z",
+  "imported_from": {
+    "importer_version": "digest-import/v1",
+    "source_artifact": "artifacts/synthesized/2026-09-15.json",
+    "source_sha256": "a5dd5fd29283056378e1df61d461e886f4c381baa8b27aeb909a02d1cc679297"
+  },
+  "items": [
+    {
+      "builder_takeaway": "Changes a practical security assumption for anyone shipping mobile apps or relying on device attestation.",
+      "category": "AI Operations / Agent Control",
+      "id": "f957e646-7816-41b4-bd4c-64a5ba4f737d",
+      "importance": "lead",
+      "labels": [
+        "reproducible",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "calif.io",
+      "source_facts": [
+        "A permissionless Android app can obtain root on current Samsung, Xiaomi, Oppo and OnePlus flagships via a page use-after-free in OEM kernel drivers, defeating verified boot and locked bootloaders."
+      ],
+      "title": "OEMpocalypse: unprivileged Android app gets root on Samsung, Xiaomi, Oppo, OnePlus",
+      "uncertainty": "Patch status per OEM is unclear from the writeup; some chains may already be fixed in August/September firmware.",
+      "url": "https://calif.io/research/oempocalypse"
+    },
+    {
+      "builder_takeaway": "Directly actionable cost/latency lever for voice-agent projects such as CalenCall.",
+      "category": "Voice AI / Realtime Agents",
+      "id": "618f2b10-44cf-4d39-ab9b-aa38062e3a7d",
+      "importance": "supporting",
+      "labels": [
+        "builder_reported",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "narilabs.com",
+      "source_facts": [
+        "Nari Labs open-sourced a Qwen3-TTS-specific inference engine and reports beating ElevenLabs and Cartesia on Coval WER accuracy at lower latency and cost."
+      ],
+      "title": "Nari Labs open-sources a Qwen3-TTS/ASR inference engine and claims #1 accuracy on Coval benchmarks",
+      "uncertainty": "Benchmark numbers are self-reported by the vendor on a third-party benchmark; independent replication not yet available.",
+      "url": "https://narilabs.com/blog/nari-labs-leads-coval-voice-ai-benchmarks/"
+    },
+    {
+      "builder_takeaway": "Fixes a real failure mode (memory pressure and silent truncation) for Mac-local model serving.",
+      "category": "Tools Worth Testing",
+      "id": "d3417122-3488-4a5a-9f09-7f10729787ee",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Ollama v0.34.1 adds MLX free-memory checks and runner eviction before model loads, plus prefix-cache eviction and an error (rather than a truncated result) when the token repeat limit is hit."
+      ],
+      "title": "Ollama v0.34.1: MLX memory-pressure handling and prefix-cache eviction fixes",
+      "uncertainty": "Tagged as v0.34.1-rc2; the stable tag may lag by a day or two.",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.34.1-rc2"
+    },
+    {
+      "builder_takeaway": "Useful positioning frame for a one-person shop deciding where to spend attention.",
+      "category": "Tools Worth Testing",
+      "id": "4a4a8886-7465-4e31-8d55-cab54c15f0ad",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "seldo.com",
+      "source_facts": [
+        "Laurie Voss argues the Product/Engineering career split is collapsing because codified engineering knowledge is being commoditised while tacit product judgement is not."
+      ],
+      "title": "We are all Product Engineers now",
+      "uncertainty": "Opinion piece; the labour-market claims are cited loosely rather than from a single dataset.",
+      "url": "https://seldo.com/posts/we-are-all-product-engineers-now/"
+    },
+    {
+      "builder_takeaway": "Tracks the regulatory narrative that eventually constrains model access and pricing.",
+      "category": "Tools Worth Testing",
+      "id": "edf64501-2c78-42b7-adfa-46f31b461a23",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "stratechery.com",
+      "source_facts": [
+        "Stratechery argues Dario Amodei’s frontier-pacing proposal is unrealistic and functions primarily as a mechanism for political control of AI."
+      ],
+      "title": "Stratechery: Pacing the Frontier, AI’s Digital Limits, AI Commissars",
+      "uncertainty": "Only the excerpt was available in the feed; the full argument sits behind the Stratechery paywall.",
+      "url": "https://stratechery.com/2026/pacing-the-frontier-ais-digital-limits-ai-commissars/"
+    },
+    {
+      "builder_takeaway": "Lowers the infrastructure requirement for RL fine-tuning from a GPU cluster to loosely-coupled rented jobs.",
+      "category": "Tools Worth Testing",
+      "id": "28bd9b8d-4742-4ed7-bbc7-6c938e037b2e",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "huggingface.co",
+      "source_facts": [
+        "Hugging Face demonstrates asynchronous GRPO LoRA training across HF Jobs coordinated via a bucket and proxy, avoiding NCCL and tightly-coupled GPU clusters."
+      ],
+      "title": "Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL",
+      "uncertainty": "Item body was empty in the feed; summary is based on the title and HF Jobs architecture, not the full post.",
+      "url": "https://huggingface.co/blog/asyncgrpo-lora-hfjobs"
+    },
+    {
+      "builder_takeaway": "Per-invocation overhead matters when an agent shells out to the CLI repeatedly.",
+      "category": "AI Operations / Agent Control",
+      "id": "74c86b8d-1476-40e0-bb54-046fa823b7f3",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Composio CLI beta.388 removes 221ms and 44MB RSS from every CLI invocation, with further startup deferrals through beta.393."
+      ],
+      "title": "Composio CLI cuts 221ms and 44MB RSS off every invocation",
+      "uncertainty": "Figures are the maintainer’s own measurements on an unspecified machine.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.388"
+    },
+    {
+      "builder_takeaway": "Cheap informal signal on cross-model generation quality drift.",
+      "category": "Model + API Changes",
+      "id": "8f3e0fd9-bfec-49c9-8484-40dc67cdd032",
+      "importance": "archive-only",
+      "labels": [
+        "reproducible",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "gally.net",
+      "source_facts": [
+        "A nine-month rerun of the pelican-bicycle SVG prompt benchmark across six current models shows how single-shot SVG generation has changed since late 2025."
+      ],
+      "title": "Show HN: re-running the pelican-on-a-bicycle SVG prompts nine months later",
+      "uncertainty": "Only ten of thirty prompts were rerun due to cost, so the comparison is partial.",
+      "url": "https://gally.net/temp/20260914pelican-alternatives/index.html"
+    },
+    {
+      "builder_takeaway": "Architecture reference for personal-assistant agents with per-user voice and memory.",
+      "category": "AI Operations / Agent Control",
+      "id": "a9362b76-1be8-4321-b05b-d537d9b00f8c",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "openai.com",
+      "source_facts": [
+        "OpenAI describes Fyxer’s AI executive assistant as combining fine-tuning, memory and user feedback to draft email in each user’s own voice."
+      ],
+      "title": "OpenAI case study: how Fyxer built an AI executive assistant people trust",
+      "uncertainty": "No independent metrics on accuracy, retention or cost; published by the model vendor.",
+      "url": "https://openai.com/index/fyxer"
+    },
+    {
+      "builder_takeaway": "Low-effort option for distinctive UI on internal tools.",
+      "category": "Tools Worth Testing",
+      "id": "96768346-c3e7-40dd-b5a7-306dace23b5d",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "neobrutalism.dev",
+      "source_facts": [
+        "Neobrutalism.dev added Base UI support and a new colour theme to its component collection."
+      ],
+      "title": "Neobrutalism.dev adds Base UI support and a new colour theme",
+      "uncertainty": "Item body was empty; scope of Base UI support not verified.",
+      "url": "https://www.neobrutalism.dev/"
+    },
+    {
+      "builder_takeaway": "Credential revocation failures are a real risk in multi-tenant automation deployments.",
+      "category": "Small Business Automation",
+      "id": "2ccbb1a6-d465-4b98-8af7-bf472ccad460",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n 2.39.5 adds log streaming events for instance reports and fixes a bug blocking end-user credential revocation."
+      ],
+      "title": "n8n 2.39.5: log streaming for instance reports, credential revocation fix",
+      "uncertainty": "Unclear how many deployments were affected by the revocation bug.",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.5"
+    },
+    {
+      "builder_takeaway": "Anecdotal single-datapoint pricing win post with no transferable method.",
+      "category": "Small Business Automation",
+      "id": "4907b76d-2a59-4a49-b25d-d56f1bfe9101",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Our highest-priced plan just got its first customer. And it feels different."
+      ],
+      "title": "Our highest-priced plan just got its first customer. And it feels different.",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wfwjoa/our_highestpriced_plan_just_got_its_first/"
+    },
+    {
+      "builder_takeaway": "Open-ended request for opinions on personal MRR; no claim, no signal.",
+      "category": "Small Business Automation",
+      "id": "31924013-a55e-4aad-9aff-2c36b3c00224",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Honest opinions on my MRR"
+      ],
+      "title": "Honest opinions on my MRR",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wfvpf5/honest_opinions_on_my_mrr/"
+    },
+    {
+      "builder_takeaway": "Beginner help-request thread; no transferable finding.",
+      "category": "Small Business Automation",
+      "id": "b21ab689-448e-43e4-9634-e520d3f9cd1d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "What am I doing wrong?"
+      ],
+      "title": "What am I doing wrong?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wfvwtb/what_am_i_doing_wrong/"
+    },
+    {
+      "builder_takeaway": "Speculative opinion about AI-generated sites eroding trust; no evidence.",
+      "category": "Small Business Automation",
+      "id": "c5740aa9-470d-4454-8414-18b2a2723ab6",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Loosing trust of users on the tech products"
+      ],
+      "title": "Loosing trust of users on the tech products",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wfws5l/loosing_trust_of_users_on_the_tech_products/"
+    },
+    {
+      "builder_takeaway": "Generic \"how do I market my SaaS\" question thread.",
+      "category": "Small Business Automation",
+      "id": "46f6a6b6-a1d4-4c73-b1c1-7311e71882d4",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I don't know how to market my SaaS.."
+      ],
+      "title": "I don't know how to market my SaaS..",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wfyfp6/i_dont_know_how_to_market_my_saas/"
+    },
+    {
+      "builder_takeaway": "Self-promotion of a trivial og:image preview tool; many equivalents exist.",
+      "category": "Tools Worth Testing",
+      "id": "f2eafe84-3c3f-4a00-9388-a1bd527f2616",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I made a free tool to preview og:image + metadata for any website"
+      ],
+      "title": "I made a free tool to preview og:image + metadata for any website",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wfxkdu/i_made_a_free_tool_to_preview_ogimage_metadata/"
+    },
+    {
+      "builder_takeaway": "Duplicate of the n8n 2.39.5 release, published under the rolling \"beta\" tag.",
+      "category": "Small Business Automation",
+      "id": "df2aa6da-0b46-4ca8-be01-52fafc521a51",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "beta"
+      ],
+      "title": "beta",
+      "uncertainty": "",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/beta"
+    },
+    {
+      "builder_takeaway": "Lobsters weekly open thread; no content.",
+      "category": "Tools Worth Testing",
+      "id": "2fe5f7e4-7fe0-48e1-be5a-3531de6414d5",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "lobste.rs",
+      "source_facts": [
+        "What are you doing this week?"
+      ],
+      "title": "What are you doing this week?",
+      "uncertainty": "",
+      "url": "https://lobste.rs/s/0inlyw/what_are_you_doing_this_week"
+    },
+    {
+      "builder_takeaway": "Apple accessory dimensional drawings; irrelevant to software work.",
+      "category": "Model + API Changes",
+      "id": "82cb41c7-3696-43c5-be9a-2cf1c5e5a355",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "developer.apple.com",
+      "source_facts": [
+        "Download Dimensional Drawings - Accessories"
+      ],
+      "title": "Download Dimensional Drawings - Accessories",
+      "uncertainty": "",
+      "url": "https://developer.apple.com/accessories/dimensional-drawings/"
+    },
+    {
+      "builder_takeaway": "Stone Age rope and twine history; interesting but off-topic.",
+      "category": "Tools Worth Testing",
+      "id": "7fef3b48-9073-4b9d-a642-34d115e946e4",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "knowablemagazine.org",
+      "source_facts": [
+        "Rope, twine and thread: Invisible technologies of the Stone Age"
+      ],
+      "title": "Rope, twine and thread: Invisible technologies of the Stone Age",
+      "uncertainty": "",
+      "url": "https://knowablemagazine.org/content/article/society/2026/prehistory-lost-threads"
+    },
+    {
+      "builder_takeaway": "2018 arXiv paper resurfacing on HN; no new information.",
+      "category": "AI Operations / Agent Control",
+      "id": "f5f8137b-3eed-4ae1-ac4e-7c5153ef39ba",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "arxiv.org",
+      "source_facts": [
+        "The Malicious Use of Artificial Intelligence"
+      ],
+      "title": "The Malicious Use of Artificial Intelligence",
+      "uncertainty": "",
+      "url": "https://arxiv.org/abs/1802.07228"
+    },
+    {
+      "builder_takeaway": "Consumer-brand market-cap story with no bearing on software decisions.",
+      "category": "Small Business Automation",
+      "id": "eb94c96f-eda4-487e-8c39-9f7fc8a6a794",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "fortune.com",
+      "source_facts": [
+        "Nike exits the S&P 100 after 18 years and a $200B market-cap wipeout"
+      ],
+      "title": "Nike exits the S&P 100 after 18 years and a $200B market-cap wipeout",
+      "uncertainty": "",
+      "url": "https://fortune.com/2026/09/08/nike-stock-plummets-sp500-market-cap-index/"
+    },
+    {
+      "builder_takeaway": "2022 essay on optimistic science fiction; off-topic.",
+      "category": "Tools Worth Testing",
+      "id": "1d61cf52-a154-4f04-b246-bb8c923b391e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "honisoit.com",
+      "source_facts": [
+        "Writing a better reality: The case for optimistic sci-fi (2022)"
+      ],
+      "title": "Writing a better reality: The case for optimistic sci-fi (2022)",
+      "uncertainty": "",
+      "url": "https://honisoit.com/2022/03/writing-a-better-reality-the-case-for-optimistic-sci-fi/"
+    },
+    {
+      "builder_takeaway": "Bird migration visualisation; interesting but not decision-relevant.",
+      "category": "Tools Worth Testing",
+      "id": "563fe6b4-2755-429e-93ff-f6da647a438f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "eurobirdportal.org",
+      "source_facts": [
+        "EuroBirdPortal – Live bird movements across Europe"
+      ],
+      "title": "EuroBirdPortal – Live bird movements across Europe",
+      "uncertainty": "",
+      "url": "https://www.eurobirdportal.org/ebp/en/"
+    },
+    {
+      "builder_takeaway": "Localised AI Studio deep-link with no changelog content; feed artefact.",
+      "category": "Model + API Changes",
+      "id": "e55e3b76-cde0-4126-8047-728e9dab82df",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "aistudio.google.com",
+      "source_facts": [
+        "ลองเลย"
+      ],
+      "title": "ลองเลย",
+      "uncertainty": "",
+      "url": "https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash&hl=th"
+    },
+    {
+      "builder_takeaway": "Next.js canary build with internal Turbopack refactors only.",
+      "category": "Model + API Changes",
+      "id": "04eb6fa5-13a7-45ae-99ca-a061db383d4d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v16.4.0-canary.29"
+      ],
+      "title": "v16.4.0-canary.29",
+      "uncertainty": "",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.29"
+    },
+    {
+      "builder_takeaway": "Composio CLI beta patch; superseded by the consolidated perf entry.",
+      "category": "AI Operations / Agent Control",
+      "id": "45dfb9e7-be9f-4407-9829-1d3b5313243a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "CLI Beta @composio/cli@0.4.2-beta.393"
+      ],
+      "title": "CLI Beta @composio/cli@0.4.2-beta.393",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.393"
+    },
+    {
+      "builder_takeaway": "Composio CLI beta patch; superseded by the consolidated perf entry.",
+      "category": "AI Operations / Agent Control",
+      "id": "458f865c-9685-4709-be51-72118ff977f0",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "CLI Beta @composio/cli@0.4.2-beta.392"
+      ],
+      "title": "CLI Beta @composio/cli@0.4.2-beta.392",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.392"
+    },
+    {
+      "builder_takeaway": "Composio CLI beta patch; superseded by the consolidated perf entry.",
+      "category": "AI Operations / Agent Control",
+      "id": "ff44a10b-5e5e-4ea8-93f3-74f13170738d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "CLI Beta @composio/cli@0.4.2-beta.391"
+      ],
+      "title": "CLI Beta @composio/cli@0.4.2-beta.391",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.391"
+    },
+    {
+      "builder_takeaway": "Composio CLI beta patch; superseded by the consolidated perf entry.",
+      "category": "AI Operations / Agent Control",
+      "id": "01a6c8d7-6ab1-40ee-940a-e4c971221182",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "CLI Beta @composio/cli@0.4.2-beta.390"
+      ],
+      "title": "CLI Beta @composio/cli@0.4.2-beta.390",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.390"
+    },
+    {
+      "builder_takeaway": "Composio CLI beta patch; superseded by the consolidated perf entry.",
+      "category": "AI Operations / Agent Control",
+      "id": "35b3cbb2-54a7-4da7-b05d-1b75c473747d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "CLI Beta @composio/cli@0.4.2-beta.389"
+      ],
+      "title": "CLI Beta @composio/cli@0.4.2-beta.389",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.389"
+    },
+    {
+      "builder_takeaway": "Niche hobbyist MIDI pedalboard macro tool; no broader leverage.",
+      "category": "Tools Worth Testing",
+      "id": "f8399297-3655-4f79-bd85-42f824b5f266",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Show HN: Macros with a Behringer FCB1010 MIDI Pedalboard in macOS"
+      ],
+      "title": "Show HN: Macros with a Behringer FCB1010 MIDI Pedalboard in macOS",
+      "uncertainty": "",
+      "url": "https://github.com/JamesRyanATX/fcbnerd"
+    },
+    {
+      "builder_takeaway": "Held back by the pre-triage volume cap; titles and sources spot-checked against the database and found to be low-signal (r/SaaS discussion threads and a Composio CLI patch bump).",
+      "category": "Small Business Automation",
+      "id": "808f2265-38aa-4b56-bf4d-508b8253ed10",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "What does marketing first look like?"
+      ],
+      "title": "What does marketing first look like?",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wfxkal/what_does_marketing_first_look_like/"
+    },
+    {
+      "builder_takeaway": "Held back by the pre-triage volume cap; titles and sources spot-checked against the database and found to be low-signal (r/SaaS discussion threads and a Composio CLI patch bump).",
+      "category": "Small Business Automation",
+      "id": "13a2cdd0-59a3-4aa1-a30c-439bdbc00da9",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "These 20 year old founders just made an uber for flights"
+      ],
+      "title": "These 20 year old founders just made an uber for flights",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wfzwze/these_20_year_old_founders_just_made_an_uber_for/"
+    },
+    {
+      "builder_takeaway": "Held back by the pre-triage volume cap; titles and sources spot-checked against the database and found to be low-signal (r/SaaS discussion threads and a Composio CLI patch bump).",
+      "category": "Small Business Automation",
+      "id": "91bce409-5f60-4779-9e14-ae3dbc19728a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Now a days distribution becomes 5x more important than building another product"
+      ],
+      "title": "Now a days distribution becomes 5x more important than building another product",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wfyx68/now_a_days_distribution_becomes_5x_more_important/"
+    },
+    {
+      "builder_takeaway": "Held back by the pre-triage volume cap; titles and sources spot-checked against the database and found to be low-signal (r/SaaS discussion threads and a Composio CLI patch bump).",
+      "category": "Small Business Automation",
+      "id": "80fe2932-48aa-4528-aeed-e040c3d86a41",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I asked 10 small business owners about WhatsApp support last week"
+      ],
+      "title": "I asked 10 small business owners about WhatsApp support last week",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wfzq72/i_asked_10_small_business_owners_about_whatsapp/"
+    },
+    {
+      "builder_takeaway": "Held back by the pre-triage volume cap; titles and sources spot-checked against the database and found to be low-signal (r/SaaS discussion threads and a Composio CLI patch bump).",
+      "category": "Small Business Automation",
+      "id": "3db62784-81bc-4da6-9f43-c16f341e7837",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Tiktok/Instagram marketing"
+      ],
+      "title": "Tiktok/Instagram marketing",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wfzkcy/tiktokinstagram_marketing/"
+    },
+    {
+      "builder_takeaway": "Held back by the pre-triage volume cap; titles and sources spot-checked against the database and found to be low-signal (r/SaaS discussion threads and a Composio CLI patch bump).",
+      "category": "Small Business Automation",
+      "id": "eebc8b6f-3eba-4e22-9e82-1483ec4abfec",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Trouver des clients B2b"
+      ],
+      "title": "Trouver des clients B2b",
+      "uncertainty": "",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wfyoaa/trouver_des_clients_b2b/"
+    },
+    {
+      "builder_takeaway": "Held back by the pre-triage volume cap; titles and sources spot-checked against the database and found to be low-signal (r/SaaS discussion threads and a Composio CLI patch bump).",
+      "category": "AI Operations / Agent Control",
+      "id": "4d92bb20-eaac-4c92-88ec-734454d70b47",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "CLI Beta @composio/cli@0.4.2-beta.387"
+      ],
+      "title": "CLI Beta @composio/cli@0.4.2-beta.387",
+      "uncertainty": "",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.387"
+    }
+  ],
+  "mode": "primary",
+  "run_id": "4f63b509-4b68-43cb-b23d-fc92e05e407d",
+  "status": "completed",
+  "summary": "Synthesized Nightly Librarian run with 11 promoted item(s), 40 scored item(s), and 29 rejected item(s).",
+  "title": "Nightly Librarian - 2026-09-15"
+}

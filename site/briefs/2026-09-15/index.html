@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>September 15, 2026 — The Nightly Librarian</title>
+  <meta name="description" content="Tonight's brief tracks AI Operations / Agent Control, Voice AI / Realtime Agents, Tools Worth Testing, and Model + API Changes.">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/briefs/2026-09-15/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="September 15, 2026 | The Nightly Librarian">
+  <meta property="og:description" content="Tonight's brief tracks AI Operations / Agent Control, Voice AI / Realtime Agents, Tools Worth Testing, and Model + API Changes.">
+  <meta property="og:url" content="https://thenightlylibrarian.com/briefs/2026-09-15/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="September 15, 2026 | The Nightly Librarian">
+  <meta name="twitter:description" content="Tonight's brief tracks AI Operations / Agent Control, Voice AI / Realtime Agents, Tools Worth Testing, and Model + API Changes.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"OEMpocalypse: unprivileged Android app gets root on Samsung, Xiaomi, Oppo, OnePlus","description":"Tonight's brief tracks AI Operations / Agent Control, Voice AI / Realtime Agents, Tools Worth Testing, and Model + API Changes. Synthesized Nightly Librarian run with 11 promoted item(s), 40 scored item(s), and 29 rejected item(s). The lead source signal is OEMpocalypse: unprivileged Android app gets root on Samsung, Xiaomi, Oppo, OnePlus: A permissionless Android app can obtain root on current Samsung, Xiaomi, Oppo and OnePlus flagships via a page use-after-free in OEM kernel drivers, defeating","url":"https://thenightlylibrarian.com/briefs/2026-09-15/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-09-15","dateModified":"2026-09-15"}</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/" class="nav-active">Archive</a><a href="/topics/">Topics</a><a href="/reports/">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>September 15, 2026</span>
+      <span style="font-style:italic;">What changed. Why it matters. What to do.</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/">All briefs</a>
+    <h1>September 15, 2026</h1>
+    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span><span><a href="/topics/voice-ai-realtime-agents/" style="color:inherit;">Voice AI / Realtime Agents</a></span><span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span><span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span></div>
+    <p class="lead-summary" style="margin-top:0.85rem;">Changes a practical security assumption for anyone shipping mobile apps or relying on device attestation.</p>
+    <h2>Worth mentioning</h2>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">1.</span>
+        <div>
+          <div class="item-title"><a href="https://calif.io/research/oempocalypse" target="_blank" rel="noopener">OEMpocalypse: unprivileged Android app gets root on Samsung, Xiaomi, Oppo, OnePlus</a></div>
+          <div class="item-takeaway">Changes a practical security assumption for anyone shipping mobile apps or relying on device attestation.</div>
+          <div class="item-facts"><div>A permissionless Android app can obtain root on current Samsung, Xiaomi, Oppo and OnePlus flagships via a page use-after-free in OEM kernel drivers, defeating verified boot and locked bootloaders.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Patch status per OEM is unclear from the writeup; some chains may already be fixed in August/September firmware.</div>
+          <div class="item-meta">
+            <span><a href="https://calif.io/research/oempocalypse" target="_blank" rel="noopener">calif.io</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span>2026-09-15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">2.</span>
+        <div>
+          <div class="item-title"><a href="https://narilabs.com/blog/nari-labs-leads-coval-voice-ai-benchmarks/" target="_blank" rel="noopener">Nari Labs open-sources a Qwen3-TTS/ASR inference engine and claims #1 accuracy on Coval benchmarks</a></div>
+          <div class="item-takeaway">Directly actionable cost/latency lever for voice-agent projects such as CalenCall.</div>
+          <div class="item-facts"><div>Nari Labs open-sourced a Qwen3-TTS-specific inference engine and reports beating ElevenLabs and Cartesia on Coval WER accuracy at lower latency and cost.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Benchmark numbers are self-reported by the vendor on a third-party benchmark; independent replication not yet available.</div>
+          <div class="item-meta">
+            <span><a href="https://narilabs.com/blog/nari-labs-leads-coval-voice-ai-benchmarks/" target="_blank" rel="noopener">narilabs.com</a></span>
+            <span><a href="/topics/voice-ai-realtime-agents/" style="color:inherit;">Voice AI / Realtime Agents</a></span>
+            <span>2026-09-15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">3.</span>
+        <div>
+          <div class="item-title"><a href="https://github.com/ollama/ollama/releases/tag/v0.34.1-rc2" target="_blank" rel="noopener">Ollama v0.34.1: MLX memory-pressure handling and prefix-cache eviction fixes</a></div>
+          <div class="item-takeaway">Fixes a real failure mode (memory pressure and silent truncation) for Mac-local model serving.</div>
+          <div class="item-facts"><div>Ollama v0.34.1 adds MLX free-memory checks and runner eviction before model loads, plus prefix-cache eviction and an error (rather than a truncated result) when the token repeat limit is hit.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Tagged as v0.34.1-rc2; the stable tag may lag by a day or two.</div>
+          <div class="item-meta">
+            <span><a href="https://github.com/ollama/ollama/releases/tag/v0.34.1-rc2" target="_blank" rel="noopener">github.com</a></span>
+            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
+            <span>2026-09-15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">4.</span>
+        <div>
+          <div class="item-title"><a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.388" target="_blank" rel="noopener">Composio CLI cuts 221ms and 44MB RSS off every invocation</a></div>
+          <div class="item-takeaway">Per-invocation overhead matters when an agent shells out to the CLI repeatedly.</div>
+          <div class="item-facts"><div>Composio CLI beta.388 removes 221ms and 44MB RSS from every CLI invocation, with further startup deferrals through beta.393.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Figures are the maintainer’s own measurements on an unspecified machine.</div>
+          <div class="item-meta">
+            <span><a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.388" target="_blank" rel="noopener">github.com</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span>2026-09-15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">5.</span>
+        <div>
+          <div class="item-title"><a href="https://seldo.com/posts/we-are-all-product-engineers-now/" target="_blank" rel="noopener">We are all Product Engineers now</a></div>
+          <div class="item-takeaway">Useful positioning frame for a one-person shop deciding where to spend attention.</div>
+          <div class="item-facts"><div>Laurie Voss argues the Product/Engineering career split is collapsing because codified engineering knowledge is being commoditised while tacit product judgement is not.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Opinion piece; the labour-market claims are cited loosely rather than from a single dataset.</div>
+          <div class="item-meta">
+            <span><a href="https://seldo.com/posts/we-are-all-product-engineers-now/" target="_blank" rel="noopener">seldo.com</a></span>
+            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
+            <span>2026-09-15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">6.</span>
+        <div>
+          <div class="item-title"><a href="https://stratechery.com/2026/pacing-the-frontier-ais-digital-limits-ai-commissars/" target="_blank" rel="noopener">Stratechery: Pacing the Frontier, AI’s Digital Limits, AI Commissars</a></div>
+          <div class="item-takeaway">Tracks the regulatory narrative that eventually constrains model access and pricing.</div>
+          <div class="item-facts"><div>Stratechery argues Dario Amodei’s frontier-pacing proposal is unrealistic and functions primarily as a mechanism for political control of AI.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Only the excerpt was available in the feed; the full argument sits behind the Stratechery paywall.</div>
+          <div class="item-meta">
+            <span><a href="https://stratechery.com/2026/pacing-the-frontier-ais-digital-limits-ai-commissars/" target="_blank" rel="noopener">stratechery.com</a></span>
+            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
+            <span>2026-09-15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">7.</span>
+        <div>
+          <div class="item-title"><a href="https://huggingface.co/blog/asyncgrpo-lora-hfjobs" target="_blank" rel="noopener">Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL</a></div>
+          <div class="item-takeaway">Lowers the infrastructure requirement for RL fine-tuning from a GPU cluster to loosely-coupled rented jobs.</div>
+          <div class="item-facts"><div>Hugging Face demonstrates asynchronous GRPO LoRA training across HF Jobs coordinated via a bucket and proxy, avoiding NCCL and tightly-coupled GPU clusters.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Item body was empty in the feed; summary is based on the title and HF Jobs architecture, not the full post.</div>
+          <div class="item-meta">
+            <span><a href="https://huggingface.co/blog/asyncgrpo-lora-hfjobs" target="_blank" rel="noopener">huggingface.co</a></span>
+            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
+            <span>2026-09-15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Monitor</h2>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">8.</span>
+        <div>
+          <div class="item-title"><a href="https://gally.net/temp/20260914pelican-alternatives/index.html" target="_blank" rel="noopener">Show HN: re-running the pelican-on-a-bicycle SVG prompts nine months later</a></div>
+          <div class="item-takeaway">Cheap informal signal on cross-model generation quality drift.</div>
+          <div class="item-facts"><div>A nine-month rerun of the pelican-bicycle SVG prompt benchmark across six current models shows how single-shot SVG generation has changed since late 2025.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Only ten of thirty prompts were rerun due to cost, so the comparison is partial.</div>
+          <div class="item-meta">
+            <span><a href="https://gally.net/temp/20260914pelican-alternatives/index.html" target="_blank" rel="noopener">gally.net</a></span>
+            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
+            <span>2026-09-15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">9.</span>
+        <div>
+          <div class="item-title"><a href="https://openai.com/index/fyxer" target="_blank" rel="noopener">OpenAI case study: how Fyxer built an AI executive assistant people trust</a></div>
+          <div class="item-takeaway">Architecture reference for personal-assistant agents with per-user voice and memory.</div>
+          <div class="item-facts"><div>OpenAI describes Fyxer’s AI executive assistant as combining fine-tuning, memory and user feedback to draft email in each user’s own voice.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: No independent metrics on accuracy, retention or cost; published by the model vendor.</div>
+          <div class="item-meta">
+            <span><a href="https://openai.com/index/fyxer" target="_blank" rel="noopener">openai.com</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span>2026-09-15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">10.</span>
+        <div>
+          <div class="item-title"><a href="https://www.neobrutalism.dev/" target="_blank" rel="noopener">Neobrutalism.dev adds Base UI support and a new colour theme</a></div>
+          <div class="item-takeaway">Low-effort option for distinctive UI on internal tools.</div>
+          <div class="item-facts"><div>Neobrutalism.dev added Base UI support and a new colour theme to its component collection.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Item body was empty; scope of Base UI support not verified.</div>
+          <div class="item-meta">
+            <span><a href="https://www.neobrutalism.dev/" target="_blank" rel="noopener">neobrutalism.dev</a></span>
+            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
+            <span>2026-09-15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-num">11.</span>
+        <div>
+          <div class="item-title"><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.5" target="_blank" rel="noopener">n8n 2.39.5: log streaming for instance reports, credential revocation fix</a></div>
+          <div class="item-takeaway">Credential revocation failures are a real risk in multi-tenant automation deployments.</div>
+          <div class="item-facts"><div>n8n 2.39.5 adds log streaming events for instance reports and fixes a bug blocking end-user credential revocation.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Unclear how many deployments were affected by the revocation bug.</div>
+          <div class="item-meta">
+            <span><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.5" target="_blank" rel="noopener">github.com</a></span>
+            <span><a href="/topics/small-business-automation/" style="color:inherit;">Small Business Automation</a></span>
+            <span>2026-09-15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>40 researched links (full index)</summary>
+      <div class="link-index">
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://calif.io/research/oempocalypse" target="_blank" rel="noopener">OEMpocalypse: unprivileged Android app gets root on Samsung, Xiaomi, Oppo, OnePlus</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://narilabs.com/blog/nari-labs-leads-coval-voice-ai-benchmarks/" target="_blank" rel="noopener">Nari Labs open-sources a Qwen3-TTS/ASR inference engine and claims #1 accuracy on Coval benchmarks</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/ollama/ollama/releases/tag/v0.34.1-rc2" target="_blank" rel="noopener">Ollama v0.34.1: MLX memory-pressure handling and prefix-cache eviction fixes</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.388" target="_blank" rel="noopener">Composio CLI cuts 221ms and 44MB RSS off every invocation</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://seldo.com/posts/we-are-all-product-engineers-now/" target="_blank" rel="noopener">We are all Product Engineers now</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://stratechery.com/2026/pacing-the-frontier-ais-digital-limits-ai-commissars/" target="_blank" rel="noopener">Stratechery: Pacing the Frontier, AI’s Digital Limits, AI Commissars</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://huggingface.co/blog/asyncgrpo-lora-hfjobs" target="_blank" rel="noopener">Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://gally.net/temp/20260914pelican-alternatives/index.html" target="_blank" rel="noopener">Show HN: re-running the pelican-on-a-bicycle SVG prompts nine months later</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://openai.com/index/fyxer" target="_blank" rel="noopener">OpenAI case study: how Fyxer built an AI executive assistant people trust</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.neobrutalism.dev/" target="_blank" rel="noopener">Neobrutalism.dev adds Base UI support and a new colour theme</a></div>
+        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.5" target="_blank" rel="noopener">n8n 2.39.5: log streaming for instance reports, credential revocation fix</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wfwjoa/our_highestpriced_plan_just_got_its_first/" target="_blank" rel="noopener">Our highest-priced plan just got its first customer. And it feels different.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wfvpf5/honest_opinions_on_my_mrr/" target="_blank" rel="noopener">Honest opinions on my MRR</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wfvwtb/what_am_i_doing_wrong/" target="_blank" rel="noopener">What am I doing wrong?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wfws5l/loosing_trust_of_users_on_the_tech_products/" target="_blank" rel="noopener">Loosing trust of users on the tech products</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wfyfp6/i_dont_know_how_to_market_my_saas/" target="_blank" rel="noopener">I don't know how to market my SaaS..</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wfxkdu/i_made_a_free_tool_to_preview_ogimage_metadata/" target="_blank" rel="noopener">I made a free tool to preview og:image + metadata for any website</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">beta</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://lobste.rs/s/0inlyw/what_are_you_doing_this_week" target="_blank" rel="noopener">What are you doing this week?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://developer.apple.com/accessories/dimensional-drawings/" target="_blank" rel="noopener">Download Dimensional Drawings - Accessories</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://knowablemagazine.org/content/article/society/2026/prehistory-lost-threads" target="_blank" rel="noopener">Rope, twine and thread: Invisible technologies of the Stone Age</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://arxiv.org/abs/1802.07228" target="_blank" rel="noopener">The Malicious Use of Artificial Intelligence</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://fortune.com/2026/09/08/nike-stock-plummets-sp500-market-cap-index/" target="_blank" rel="noopener">Nike exits the S&amp;P 100 after 18 years and a $200B market-cap wipeout</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://honisoit.com/2022/03/writing-a-better-reality-the-case-for-optimistic-sci-fi/" target="_blank" rel="noopener">Writing a better reality: The case for optimistic sci-fi (2022)</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.eurobirdportal.org/ebp/en/" target="_blank" rel="noopener">EuroBirdPortal – Live bird movements across Europe</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash&amp;hl=th" target="_blank" rel="noopener">ลองเลย</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.29" target="_blank" rel="noopener">v16.4.0-canary.29</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.393" target="_blank" rel="noopener">CLI Beta @composio/cli@0.4.2-beta.393</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.392" target="_blank" rel="noopener">CLI Beta @composio/cli@0.4.2-beta.392</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.391" target="_blank" rel="noopener">CLI Beta @composio/cli@0.4.2-beta.391</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.390" target="_blank" rel="noopener">CLI Beta @composio/cli@0.4.2-beta.390</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.389" target="_blank" rel="noopener">CLI Beta @composio/cli@0.4.2-beta.389</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/JamesRyanATX/fcbnerd" target="_blank" rel="noopener">Show HN: Macros with a Behringer FCB1010 MIDI Pedalboard in macOS</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wfxkal/what_does_marketing_first_look_like/" target="_blank" rel="noopener">What does marketing first look like?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wfzwze/these_20_year_old_founders_just_made_an_uber_for/" target="_blank" rel="noopener">These 20 year old founders just made an uber for flights</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wfyx68/now_a_days_distribution_becomes_5x_more_important/" target="_blank" rel="noopener">Now a days distribution becomes 5x more important than building another product</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wfzq72/i_asked_10_small_business_owners_about_whatsapp/" target="_blank" rel="noopener">I asked 10 small business owners about WhatsApp support last week</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wfzkcy/tiktokinstagram_marketing/" target="_blank" rel="noopener">Tiktok/Instagram marketing</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wfyoaa/trouver_des_clients_b2b/" target="_blank" rel="noopener">Trouver des clients B2b</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.387" target="_blank" rel="noopener">CLI Beta @composio/cli@0.4.2-beta.387</a></div>
+      </div>
+    </details>
+    <div class="subscribe-strip">
+      <div class="subscribe-headline">Get this every morning</div>
+      <p class="subscribe-desc">Filtered from 40+ sources daily — what changed, why it matters, what to do. Free.</p>
+      <form class="subscribe-form" action="https://thenightlylibrarian.substack.com/subscribe" method="GET" target="_blank">
+        <input class="subscribe-input" type="email" name="email" placeholder="your@email.com" required>
+        <button class="subscribe-btn" type="submit">Subscribe →</button>
+      </form>
+      <p class="subscribe-note">Free. Unsubscribe any time.</p>
+    </div>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
