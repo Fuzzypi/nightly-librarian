@@ -1,168 +1,263 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T06:17:21.674Z",
+  "generated_at": "2026-09-16T11:05:56.426Z",
   "imported_from": {
     "importer_version": "digest-import/v1",
     "source_artifact": "artifacts/synthesized/2026-09-16.json",
-    "source_sha256": "ee9aeb286117a8ac3dad1fe685ab3fe6756b2139bd21e96b9a12e13fe95bc991"
+    "source_sha256": "a50898b7d8d83a3484e76f5df13fce1faaa607a6c5bef939c4ee89c4dfb1c861"
   },
   "items": [
     {
-      "builder_takeaway": "Direct cost lever: lets agent workloads run off a flat-rate subscription instead of metered API spend, with no code change.",
-      "category": "Model + API Changes",
-      "id": "91cf4794-8af4-4e2e-9a58-591e22210f68",
-      "importance": "lead",
-      "labels": [
-        "vendor_claim",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "vercel.com",
-      "source_facts": [
-        "Vercel's AI SDK harness layer can now authenticate coding agents through their native subscriptions rather than provider API keys, with no code changes required."
-      ],
-      "title": "AI SDK harness layer now supports native subscription authentication",
-      "uncertainty": "Unclear which specific coding agents currently expose native subscription auth through the harness, and how sandboxed placeholder credentials behave in practice.",
-      "url": "https://vercel.com/changelog/ai-sdk-harness-native-subscription-authentication"
-    },
-    {
-      "builder_takeaway": "Concrete time-saving tool for anyone merging multiple parallel branches, which is the normal state of agent-assisted development.",
-      "category": "Tools Worth Testing",
-      "id": "afc8fe14-dec9-4abd-b313-9f418fb18aee",
-      "importance": "supporting",
-      "labels": [
-        "early_signal",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "codeberg.org",
-      "source_facts": [
-        "Mergiraf is an open source syntax-aware git merge driver that resolves conflicts using language syntax trees instead of line-based diffs."
-      ],
-      "title": "Mergiraf: A syntax-aware git merge driver",
-      "uncertainty": "Repository page was not fetched, so language coverage, maturity, and real-world conflict-resolution quality are unverified.",
-      "url": "https://codeberg.org/mergiraf/mergiraf"
-    },
-    {
-      "builder_takeaway": "Useful architectural pattern for solo multi-tenant SaaS, even after discounting the vendor framing.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "87586a27-6d4a-43f3-86f1-27a683beeef5",
-      "importance": "supporting",
-      "labels": [
-        "vendor_claim",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "neon.com",
-      "source_facts": [
-        "LuBot built a database-per-tenant Postgres architecture on Neon in six days, with each tenant database provisioned at the moment of payment."
-      ],
-      "title": "Inside LuBot's database-per-tenant architecture",
-      "uncertainty": "Vendor-published; the six-days-versus-a-quarter comparison is unaudited and the cost profile at higher tenant counts is not stated.",
-      "url": "https://neon.com/blog/inside-lubots-database-per-tenant-architecture"
-    },
-    {
-      "builder_takeaway": "Concrete risk-reduction heuristic for anyone considering buying a micro-SaaS, grounded in repeated first-hand review.",
-      "category": "Small Business Automation",
-      "id": "df8f73e0-52bd-4a4e-ba0a-7abecdd6eed7",
-      "importance": "supporting",
-      "labels": [
-        "builder_reported",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "An agency owner who reviewed roughly 40 micro-SaaS codebases listed on Acquire found none of them worth their asking price, arguing the multiple itself signals undisclosed risk."
-      ],
-      "title": "I've opened ~40 codebases for sale on Acquire. Not one was worth the asking price.",
-      "uncertainty": "One practitioner's sample, self-selected toward buyers who already wanted a second opinion; no listing data or outcomes are published.",
-      "url": "https://www.reddit.com/r/SaaS/comments/1wg3wx9/ive_opened_40_codebases_for_sale_on_acquire_not/"
-    },
-    {
-      "builder_takeaway": "A cross-lab evaluation standard would eventually affect documentation expectations for agent products, but nothing is actionable yet.",
-      "category": "Model + API Changes",
-      "id": "1513c748-08e1-4a74-9697-b11445eaad29",
+      "builder_takeaway": "Routine beta maintenance without decision-changing evidence.",
+      "category": "AI Operations / Agent Control",
+      "id": "98f5e1c4-ed96-412b-8cc6-bd726ff996ef",
       "importance": "archive-only",
       "labels": [
         "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Composio beta notes list CLI and documentation fixes; no demonstrated workflow change."
+      ],
+      "title": "CLI Beta @composio/cli@0.4.2-beta.394",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.394"
+    },
+    {
+      "builder_takeaway": "Sparse RC notes do not justify an upgrade recommendation.",
+      "category": "Tools Worth Testing",
+      "id": "b8a84302-c3e4-46c6-ba9e-da672e98be89",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Ollama release-candidate feed lists llama.cpp updates without explaining user impact."
+      ],
+      "title": "v0.34.2",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.34.2-rc0"
+    },
+    {
+      "builder_takeaway": "Track browser-agent distribution and privacy terms; no integration decision yet.",
+      "category": "Model + API Changes",
+      "id": "81cd3c7f-60e6-429b-b3d3-05cce6a23e51",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
         "monitor"
       ],
       "product_relevance": [],
       "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "latent.space",
+      "source": "mistral.ai",
       "source_facts": [
-        "An AEF-1 standard for third-party AI evaluators has reportedly been cosigned by xAI, OpenAI, and Anthropic."
+        "Mistral says Firefox Smart Window beta uses its models in France and North America."
       ],
-      "title": "AEF-1 standard emerges for Third Party Evaluators, as xAI, OpenAI, and Anthropic all cosign",
-      "uncertainty": "The feed item contained no body text and the article was not fetched; the scope, contents, and binding force of AEF-1 are entirely unverified.",
-      "url": "https://www.latent.space/p/ainews-aef-1-standard-emerges-for"
+      "title": "Mistral powers Firefox Smart Window beta",
+      "uncertainty": "Primary linked source read; claims not independently reproduced or tested.",
+      "url": "https://mistral.ai/news/mistral-x-mozilla/"
     },
     {
-      "builder_takeaway": "A developer extended an older proof of concept that reads sEMG data off the Meta Neural Band independently of the glasses, and built gesture control for macOS on top of it: switching desktops, opening Mission Control, and turning a virtual volume knob. Genuinely novel input work, but entirely gated on owning one specific piece of hardware, and the author notes the sample size is one band. No transferable leverage for a solo software shop.",
+      "builder_takeaway": "Interesting hobby hardware, little relevance to current developer decisions.",
       "category": "Tools Worth Testing",
-      "id": "cf0a329d-2a90-40d9-9971-0a3ff95c56ae",
+      "id": "e63f6bcf-5f6f-49b4-970f-7c200801302d",
       "importance": "archive-only",
       "labels": [
-        "builder_reported",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-16T00:00:00.000Z",
       "source": "github.com",
       "source_facts": [
-        "A developer built Kinesis, a tool that reads sEMG data from the Meta Neural Band independently of Meta's glasses to drive macOS gesture controls."
+        "Headline presents a bird-listening e-ink art frame."
       ],
-      "title": "Show HN: Kinesis – Control your Mac with the Meta Neural Band",
-      "uncertainty": "Author states it has only been tested on his own band, so cross-device behavior is unknown.",
-      "url": "https://github.com/callbacked/kinesis"
+      "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://github.com/arnegiacomo/fugleramme"
     },
     {
-      "builder_takeaway": "A Google-produced conversation video between astronaut Christina Koch and Google research SVP James Manyika. Brand content with no technical claim, product change, or actionable detail.",
-      "category": "Small Business Automation",
-      "id": "56c00656-c6e8-4d12-9b0e-ee99b83ab278",
+      "builder_takeaway": "Entertainment demo without transferable engineering evidence.",
+      "category": "Tools Worth Testing",
+      "id": "52cca8e9-e651-4078-9296-9b895e4fd2e7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "inflightsimulator.com",
+      "source_facts": [
+        "Feed describes a passenger-perspective flight simulator."
+      ],
+      "title": "Show HN: I made a flight simulator, except you're just a passenger",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://inflightsimulator.com"
+    },
+    {
+      "builder_takeaway": "Potentially useful for small offline tools, pending portability and migration tests.",
+      "category": "Tools Worth Testing",
+      "id": "afa63b10-c4dc-41fa-a2e4-2a2fd5c882c0",
       "importance": "archive-only",
       "labels": [
         "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "withcapsule.app",
+      "source_facts": [
+        "Capsule bundles HTML UI and SQLite data in portable files; desktop host required, mobile planned."
+      ],
+      "title": "Capsule offers portable local apps",
+      "uncertainty": "Primary linked source read; claims not independently reproduced or tested.",
+      "url": "https://withcapsule.app/"
+    },
+    {
+      "builder_takeaway": "No verified operational or carrier constraints; tangential hardware project.",
+      "category": "Tools Worth Testing",
+      "id": "b4816c62-ab5e-4f04-a843-dd8c84bb4bf2",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "bkovac.github.io",
+      "source_facts": [
+        "Headline describes modifying a low-cost 4G hotspot into a texting device."
+      ],
+      "title": "Show HN: Hacking a $20 4G wireless hotspot into a texting device",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://bkovac.github.io/modem-thing/"
+    },
+    {
+      "builder_takeaway": "Relevant orchestration design, but markers alone do not establish correctness.",
+      "category": "AI Operations / Agent Control",
+      "id": "d55a94e6-c217-49db-a9ee-fdc63ffe6b9b",
+      "importance": "supporting",
+      "labels": [
+        "builder_reported",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Ordewell documents editable task plans and multiple coding runners; completion relies on output markers."
+      ],
+      "title": "Ordewell makes agent plans editable",
+      "uncertainty": "Primary linked source read; claims not independently reproduced or tested.",
+      "url": "https://github.com/ordewell/ordewell"
+    },
+    {
+      "builder_takeaway": "Coverage and attribution are unverified; a lookup is not a compromise diagnosis.",
+      "category": "AI Operations / Agent Control",
+      "id": "b1a19d70-dd9f-400f-9396-b7c7cd165f42",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "haveibeenproxied.com",
+      "source_facts": [
+        "Headline offers an IP lookup against residential proxy observations."
+      ],
+      "title": "Show HN: Check if your IP has appeared in a residential proxy network",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://haveibeenproxied.com/"
+    },
+    {
+      "builder_takeaway": "Broad promotional overview, no actionable platform change.",
+      "category": "Model + API Changes",
+      "id": "e8b24b23-4443-4ce3-aa11-2f4f75857e3a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-16T00:00:00.000Z",
       "source": "blog.google",
       "source_facts": [
-        "Google published a Dialogues video featuring astronaut Christina Koch in conversation with James Manyika."
+        "Google feed promotes a collection of societal AI applications."
       ],
-      "title": "Watch astronaut Christina Koch and Google's James Manyika discuss space, technology, and discovery",
-      "uncertainty": "",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/dialogues-christina-koch/"
+      "title": "AI for Societal Impact",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/"
     },
     {
-      "builder_takeaway": "Google announces DevFest 2026 with more than 800 global community events. An event promotion with no technical or platform change attached.",
-      "category": "Small Business Automation",
-      "id": "d24b1d4a-a385-4adc-a04b-0adad554e1c2",
+      "builder_takeaway": "General impact narrative without a concrete developer decision.",
+      "category": "Model + API Changes",
+      "id": "f4342064-bfbe-4b49-aa38-3171fca9b1bc",
       "importance": "archive-only",
       "labels": [
-        "vendor_claim",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-16T00:00:00.000Z",
       "source": "blog.google",
       "source_facts": [
-        "Google announced DevFest 2026, spanning more than 800 global developer events."
+        "Google feed describes AI applications in science and public benefit."
       ],
-      "title": "DevFest is back",
-      "uncertainty": "",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/"
+      "title": "Building AI to accelerate science and improve lives",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/"
     },
     {
-      "builder_takeaway": "A backend developer argues that prompt-first tools produced a cohort who confuse generating code with engineering it, and predicts a hard market correction once anyone can produce a SaaS in a weekend. The distinction he draws between supervising an architecture and outsourcing every technical decision is reasonable, but the post offers no data, no reproducible case, and a predictive thesis that cannot be acted on.",
-      "category": "Tools Worth Testing",
-      "id": "d1752e61-b4a4-4450-92b7-0e7ccaa279ac",
+      "builder_takeaway": "No specific model, API, pricing or evaluation detail in available excerpt.",
+      "category": "Model + API Changes",
+      "id": "34aa8746-6425-4434-9d65-d9eb7665bd4e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "blog.google",
+      "source_facts": [
+        "Google feed outlines multilingual AI ambitions."
+      ],
+      "title": "AI for everyone in every language",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/"
+    },
+    {
+      "builder_takeaway": "Macro-level exploration does not change a near-term solo business decision.",
+      "category": "Small Business Automation",
+      "id": "5e425717-fafc-45e1-94f0-b282f87a108c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "blog.google",
+      "source_facts": [
+        "Google feed announces an interactive AI-economy data experience."
+      ],
+      "title": "New insights from Google’s AI & Economy ATLAS",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-economy-atlas-september-2026/"
+    },
+    {
+      "builder_takeaway": "Opinion framing without practical evidence.",
+      "category": "Small Business Automation",
+      "id": "23b0e1a2-4e57-4d27-afab-4b11d306fbdd",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -172,35 +267,16 @@
       "published_at": "2026-09-16T00:00:00.000Z",
       "source": "reddit.com",
       "source_facts": [
-        "A backend developer argues that prompt-driven development degrades software quality and that the market will correct as building ceases to be a differentiator."
+        "Title comments on how technology companies treat developers."
       ],
-      "title": "Vibe coding is making software worse, and I think the market is going to correct itself hard",
-      "uncertainty": "Entirely opinion; no measurements, no cases, and the central prediction is unfalsifiable in the near term.",
-      "url": "https://www.reddit.com/r/SaaS/comments/1wgfvnb/vibe_coding_is_making_software_worse_and_i_think/"
+      "title": "Tech Companies Treating Developers From 2013-2026",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wgwad2/tech_companies_treating_developers_from_20132026/"
     },
     {
-      "builder_takeaway": "A wheelchair user built a browser app that estimates body weight from circumference measurements using a published formula, previously distributed on Google Play Brazil with 200k+ installs and now free and global. A worthwhile product with a real audience, but it is a launch announcement with no transferable technical or business lesson.",
+      "builder_takeaway": "Provocative commentary without substantiated decision impact.",
       "category": "Small Business Automation",
-      "id": "6353b489-54dd-46a7-a139-1c7fefc8809d",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "A developer released a free browser-based app that estimates body weight from circumference measurements, aimed at wheelchair users and bedridden people."
-      ],
-      "title": "I created an app that lets you weigh yourself without a scale",
-      "uncertainty": "Install count is self-reported and the accuracy of the underlying estimation formula is not independently assessed here.",
-      "url": "https://www.reddit.com/r/SaaS/comments/1wgbhi7/i_created_an_app_that_lets_you_weigh_yourself/"
-    },
-    {
-      "builder_takeaway": "A RevOps operator at an 18-person startup asks whether AI SDR, AI sales copilot, AI reply agent, and AI email assistant are distinct software categories or the same product under different marketing. The question is a fair one, but the post contains only the question with no answer or synthesis attached.",
-      "category": "Small Business Automation",
-      "id": "0d2e4c38-3348-4c06-b602-93e0cde7a504",
+      "id": "e10c19cb-ed33-419d-b926-014fffb89dd4",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -210,16 +286,16 @@
       "published_at": "2026-09-16T00:00:00.000Z",
       "source": "reddit.com",
       "source_facts": [
-        "A RevOps operator asks whether AI SDR, copilot, reply agent, and email assistant describe functionally different products or the same category under different marketing."
+        "Title frames a committee as slowing AI development."
       ],
-      "title": "Can someone explain the actual difference between AI email agent / AI copilot / AI SDR",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1wgropx/can_someone_explain_the_actual_difference_between/"
+      "title": "The AI development slowdown committee has arrived",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wguiya/the_ai_development_slowdown_committee_has_arrived/"
     },
     {
-      "builder_takeaway": "A solo founder building a B2B marketing attribution tool asks how to reach prospects given LinkedIn connection limits, second and third degree contacts, missing work emails, and deliverability problems. A help request with an embedded product mention rather than a report of what worked.",
+      "builder_takeaway": "Unverified reach metrics do not establish retention or sustainable acquisition.",
       "category": "Small Business Automation",
-      "id": "2755482c-d8a4-481f-9e2a-8e9b2c23edcd",
+      "id": "5613c169-5863-4fec-ae15-ee556d0bee8f",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -229,16 +305,16 @@
       "published_at": "2026-09-16T00:00:00.000Z",
       "source": "reddit.com",
       "source_facts": [
-        "A solo founder asks how to reach B2B prospects when LinkedIn connection limits and email deliverability both block outreach."
+        "Feed author claims 30k visits and 5k users for a free offline image editor."
       ],
-      "title": "How do you contact leads when LinkedIn and email aren't working?",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1wgrc4o/how_do_you_contact_leads_when_linkedin_and_email/"
+      "title": "30k visitors, 5k users, $0 marketing spend",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wh07fz/30k_visitors_5k_users_0_marketing_spend/"
     },
     {
-      "builder_takeaway": "A French-language discussion prompt arguing that the difference between a project and a business is a paying customer, and asking the subreddit how to find the first one. An open-ended conversation starter with no findings.",
+      "builder_takeaway": "Small self-reported sample and unclear channel overlap limit transferability.",
       "category": "Small Business Automation",
-      "id": "0213bd25-435a-4f7c-b8a3-bf31dba45153",
+      "id": "0d914e0b-3590-4934-80aa-dbc806558428",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -248,225 +324,453 @@
       "published_at": "2026-09-16T00:00:00.000Z",
       "source": "reddit.com",
       "source_facts": [
-        "A founder argues that the first paying customer is what separates a project from a business and asks how to find one."
+        "Feed author reports $413 in one-time sales, explicitly not recurring revenue."
       ],
-      "title": "La théorie du premier client",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1wgqnez/la_th%C3%A9orie_du_premier_client/"
+      "title": "18 days since I launched my saas, $413 total with 0 marketing spend",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wh6g1w/18_days_since_i_launched_my_saas_413_total_with_0/"
     },
     {
-      "builder_takeaway": "A Next.js canary release containing one user-visible fix for detecting proxy.ts with compound pageExtensions, plus internal Turbopack test changes, tree-shaking improvements, and documentation updates. Nothing here warrants a version move on its own.",
-      "category": "Tools Worth Testing",
-      "id": "683dac80-9cb3-401c-ad18-762f9febcf7b",
+      "builder_takeaway": "Promotional revenue framing lacks validated buyer demand.",
+      "category": "Small Business Automation",
+      "id": "db288b7b-4ba1-4fe9-a375-cf58d4c3f0e1",
       "importance": "archive-only",
       "labels": [
-        "production_proven",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "github.com",
+      "source": "reddit.com",
       "source_facts": [
-        "Next.js released canary v16.4.0-canary.31 with a proxy.ts detection fix and internal build and test changes."
+        "Feed pitches seven SaaS niches using scanner scores and an ideas-site link."
       ],
-      "title": "Next.js v16.4.0-canary.31",
-      "uncertainty": "",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.31"
+      "title": "7 boring industries where you can build a $20k+ MRR SaaS",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wh2b1m/7_boring_industries_where_you_can_build_a_20k_mrr/"
     },
     {
-      "builder_takeaway": "A Next.js canary release consisting entirely of internal changes: chunk optimization, codemod documentation, a vendored dependency patch, and test infrastructure work. No user-facing change.",
-      "category": "Tools Worth Testing",
-      "id": "afa968e8-f97d-4eac-ae0f-e419e2a5ebc9",
+      "builder_takeaway": "Promotional market ratios without demonstrated decision quality.",
+      "category": "Small Business Automation",
+      "id": "0ba93718-e2b2-4af8-bc6b-b3f12af1b0c4",
       "importance": "archive-only",
       "labels": [
-        "production_proven",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "github.com",
+      "source": "reddit.com",
       "source_facts": [
-        "Next.js released canary v16.4.0-canary.30 containing internal build, codemod, and test changes only."
+        "Feed pitches a YouTube niche-analysis application."
       ],
-      "title": "Next.js v16.4.0-canary.30",
-      "uncertainty": "",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.30"
+      "title": "Created an app to help youtubers spot that niche everyone talk about",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whihuu/created_an_app_to_help_youtubers_spot_that_niche/"
     },
     {
-      "builder_takeaway": "A Latent Space podcast episode with Richard Socher, now running a recursive self-improvement startup spun out of You.com, framed around a $5B valuation. Valuation-led framing with no technical claim, benchmark, or platform change to evaluate.",
-      "category": "Tools Worth Testing",
-      "id": "950f8021-6c78-4494-94d8-14f2bb256c63",
+      "builder_takeaway": "Advice request, not new evidence.",
+      "category": "Small Business Automation",
+      "id": "3f2128b0-a5d5-4c80-b731-e68ecb0650f5",
       "importance": "archive-only",
       "labels": [
-        "vendor_claim",
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Title asks how to market a free first product."
+      ],
+      "title": "HOW THE FRICK DO I DO MARKETING?",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whkuqp/how_the_frick_do_i_do_marketing/"
+    },
+    {
+      "builder_takeaway": "Generic workflow frustration without measured solution.",
+      "category": "Small Business Automation",
+      "id": "149f035a-bb18-49b6-bdd2-d7ea1b410cb2",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Feed author describes difficulty sustaining LinkedIn marketing."
+      ],
+      "title": "The marketing problem I am having isn't from a lack of ideas",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whn5lx/the_marketing_problem_i_am_having_isnt_from_a/"
+    },
+    {
+      "builder_takeaway": "Unanswered feedback prompt without actionable findings.",
+      "category": "Small Business Automation",
+      "id": "f2fb6a23-95a3-46dc-aa58-a4679baa5282",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Title asks which scheduling tools failed to fit user workflows."
+      ],
+      "title": "what is one schceduling tool that looked useful at first, but didnot fit your workflow?",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whqcr8/what_is_one_schceduling_tool_that_looked_useful/"
+    },
+    {
+      "builder_takeaway": "Narrow self-reported launch lesson without enough causal evidence.",
+      "category": "Tools Worth Testing",
+      "id": "067a62b9-7e0f-4b1c-8fca-b9f7bae2d5b2",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Feed author reports 60 signups and no revenue for an AI hero-section tool."
+      ],
+      "title": "Months on an AI hero section tool. 60 signups, $0. What I wouldn’t do again.",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whmqxg/months_on_an_ai_hero_section_tool_60_signups_0/"
+    },
+    {
+      "builder_takeaway": "Unvalidated health product concept, not an established opportunity.",
+      "category": "Small Business Automation",
+      "id": "26844ede-8004-47b7-9d39-82ab9aff3155",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Feed proposes a $10 monthly chronic-condition tracking app."
+      ],
+      "title": "Validating a $10/month health app for chronic-condition patients, roast my idea🙂",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1who8xg/validating_a_10month_health_app_for/"
+    },
+    {
+      "builder_takeaway": "Promotional aggregate outcomes do not isolate the effect of onboarding.",
+      "category": "Tools Worth Testing",
+      "id": "e2c26914-3698-450f-a879-c504f6981387",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Supademo feed author attributes growth to repeated onboarding changes."
+      ],
+      "title": "We rebuilt our onboarding 50+ times as we went from $0-$4M ARR. Here are our metrics and lessons",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wh6itp/we_rebuilt_our_onboarding_50_times_as_we_went/"
+    },
+    {
+      "builder_takeaway": "Thin promotional demo without workflow evidence.",
+      "category": "AI Operations / Agent Control",
+      "id": "14cdd98f-b476-48f6-8fa6-2de80c18a82b",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Feed shares a demo intended to reduce screenshot explanation work."
+      ],
+      "title": "Sharing a demo of my saas to save people from screenshotting and explaining everything to AI.",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whqiks/sharing_a_demo_of_my_saas_to_save_people_from/"
+    },
+    {
+      "builder_takeaway": "Speculative comparison without comparable runs or logs.",
+      "category": "AI Operations / Agent Control",
+      "id": "6b9bcb1a-e453-4b7b-a4f4-4ccee4cdfdfe",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Title asks why Grok appears reliable on long-running tasks."
+      ],
+      "title": "How is Grok Bot supposedly doing this so reliably with just a prompt that other SaaS can't?",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whp2np/how_is_grok_bot_supposedly_doing_this_so_reliably/"
+    },
+    {
+      "builder_takeaway": "Cost claim lacks reviewed hardware, quality and total-cost evidence.",
+      "category": "Tools Worth Testing",
+      "id": "f09380a5-1e7f-4055-b0dd-08fc222baaf7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Feed author claims inexpensive local GPU podcast clipping."
+      ],
+      "title": "Got tired of SaaS prices, so I built a local GPU video clipper. Renders 1-hr podcasts for pennies",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wh9cfm/got_tired_of_saas_prices_so_i_built_a_local_gpu/"
+    },
+    {
+      "builder_takeaway": "Tiny self-reported experiment cannot establish channel effectiveness.",
+      "category": "Small Business Automation",
+      "id": "0584afde-85e3-40f1-9ca6-785e7bd69572",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Feed author reports three signups and no customers after $75 in ads."
+      ],
+      "title": "spent $75 on ads and got 3 signups, 0 customers",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whg79i/spent_75_on_ads_and_got_3_signups_0_customers/"
+    },
+    {
+      "builder_takeaway": "Low relevance and no technical comparison.",
+      "category": "Tools Worth Testing",
+      "id": "4bee9782-c992-4de2-aaf5-aa793ce5e617",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Feed promotes a free pixel-art converter."
+      ],
+      "title": "Made an image, GIF, Video to pixel art converter for free",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whj5hg/made_an_image_gif_video_to_pixel_art_converter/"
+    },
+    {
+      "builder_takeaway": "Generic advice request without new findings.",
+      "category": "Small Business Automation",
+      "id": "3bfdea39-b6bf-470a-9e13-5a95f1cff648",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Title asks how to acquire Reddit users under promotion restrictions."
+      ],
+      "title": "Reddit Marketing Doesn't Work, How to first 1-100 users when communities is so strict on any type of self-promotion direct or indirect?",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wh6x3h/reddit_marketing_doesnt_work_how_to_first_1100/"
+    },
+    {
+      "builder_takeaway": "Idea validation without implementation or user evidence.",
+      "category": "AI Operations / Agent Control",
+      "id": "9ed51c0c-9887-405e-9669-00a0876bc31e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Feed seeks demand for voice-driven UI component generation."
+      ],
+      "title": "Hey All ! A quick question. Would you use voice to generate/edit individual UI components?",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whqosz/hey_all_a_quick_question_would_you_use_voice_to/"
+    },
+    {
+      "builder_takeaway": "Potential design pattern but no demonstrated reliability or customer outcome.",
+      "category": "Tools Worth Testing",
+      "id": "25fd95b0-d457-45a7-baeb-feb224e743bf",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Feed describes in-place proposal edits with controlled forking."
+      ],
+      "title": "How should proposal revisions work in a SaaS product? We chose in-place edits + controlled forking",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whmj75/how_should_proposal_revisions_work_in_a_saas/"
+    },
+    {
+      "builder_takeaway": "Demo iteration does not validate claimed error reduction.",
+      "category": "AI Operations / Agent Control",
+      "id": "3643c09a-0a0c-4d71-93a4-a489422ed395",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Feed promotes a revised demo of a multi-model chat application."
+      ],
+      "title": "Everyone told me my previous product demo video was not clear enough, so I made a more conventional one.",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whjnqh/everyone_told_me_my_previous_product_demo_video/"
+    },
+    {
+      "builder_takeaway": "Crowded-category launch without comparative or reliability evidence.",
+      "category": "Small Business Automation",
+      "id": "016a24bd-76f5-4d5f-82ab-33212ca6ae5f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Feed announces an AI meeting-minutes application and requests feedback."
+      ],
+      "title": "Built and launched a SaaS for AI meeting minutes, would appreciate feedback from other SaaS builders",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whptj6/built_and_launched_a_saas_for_ai_meeting_minutes/"
+    },
+    {
+      "builder_takeaway": "Overlaps another same-author screenshot demo in this batch.",
+      "category": "AI Operations / Agent Control",
+      "id": "fa82a5b5-2f94-4004-8a94-a5f0555066ce",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Feed promotes an app for explaining multiple screenshots to AI."
+      ],
+      "title": "Ever faced the issue of taking multiple screenshots and explaining each of them and their connections to AI?",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whpm1f/ever_faced_the_issue_of_taking_multiple/"
+    },
+    {
+      "builder_takeaway": "Exploratory result without reviewed methods or deployment relevance.",
+      "category": "Model + API Changes",
+      "id": "4b1605d7-22d8-4772-95d0-5f06d5bcc4e0",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-16T00:00:00.000Z",
       "source": "latent.space",
       "source_facts": [
-        "Latent Space published a podcast episode with Richard Socher about Recursive, his recursive self-improvement startup spun out of You.com."
+        "Feed describes game training transferring to financial research in one setup."
       ],
-      "title": "Humanity's Last Invention — Richard Socher of Recursive",
-      "uncertainty": "Feed entry carried only a blurb; episode contents were not reviewed.",
-      "url": "https://www.latent.space/p/recursive"
+      "title": "Can Skills Learned in Games Transfer to Real-World Work?",
+      "uncertainty": "Linked page not opened; assessment limited to supplied title and feed excerpt.",
+      "url": "https://www.latent.space/p/good-start-labs"
     },
     {
-      "builder_takeaway": "Bryan Cantrill responds to a former Anthropic employee's claim that many researchers there believe AI could kill everyone by the end of the decade, arguing that such claims rest on hand-wavy extrapolation from people who are not domain experts in the harms they invoke. Well-argued and worth reading on its own terms, but it is commentary on discourse and changes no near-term technical or business decision.",
-      "category": "Tools Worth Testing",
-      "id": "d7820ec0-2d43-4d2b-836f-d2c3311ffeb9",
-      "importance": "archive-only",
+      "builder_takeaway": "Measure repeatability alongside average success before trusting agent workflows.",
+      "category": "AI Operations / Agent Control",
+      "id": "23c03163-f51b-42cc-8ae2-9f769898929e",
+      "importance": "supporting",
       "labels": [
-        "early_signal",
-        "reject"
+        "vendor_claim",
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "simonwillison.net",
+      "source": "huggingface.co",
       "source_facts": [
-        "Bryan Cantrill argues that AI extinction claims circulating from Anthropic-affiliated figures rest on non-expert, hand-wavy extrapolation."
+        "IBM reports AppWorld all-five-run success rising from 53% to 69% with consistency guidelines."
       ],
-      "title": "The contagion of fear",
-      "uncertainty": "This is argument rather than evidence; both sides of the exchange are claims about future risk that cannot be checked.",
-      "url": "https://simonwillison.net/2026/Sep/14/the-contagion-of-fear/"
+      "title": "Evaluate whether the same agent succeeds again",
+      "uncertainty": "Primary linked source read; claims not independently reproduced or tested.",
+      "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency"
     },
     {
-      "builder_takeaway": "Simon Willison's contribution to a Lobsters thread on formative blog posts, citing Joel Spolsky's Law of Leaky Abstractions and Will Larson's argument that migrations are a core engineering skill rather than one-off events. Good evergreen reading, but not news and not tied to any current decision.",
-      "category": "Tools Worth Testing",
-      "id": "f3e33ad5-1362-409f-a788-7d84ea1d5af4",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "Simon Willison listed the blog posts that most influenced his thinking, including Spolsky's Law of Leaky Abstractions and Larson's Migrations essay."
-      ],
-      "title": "What blog posts influenced your thinking the most?",
-      "uncertainty": "",
-      "url": "https://simonwillison.net/2026/Sep/14/influences/"
-    },
-    {
-      "builder_takeaway": "A quoted passage from Laurie Voss arguing that as the cost of writing, reviewing, and operating code collapses, what remains of software work is finding out what people want, defining it precisely, and making it pleasant to use. A clean framing of a thesis many people are circling, but it is an assertion, not a finding.",
-      "category": "Tools Worth Testing",
-      "id": "df59681a-a939-4991-a268-b0d47cd79a8b",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "Laurie Voss argues that as code production costs collapse, the enduring work of software becomes discovering what users want and defining it precisely."
-      ],
-      "title": "Quoting Laurie Voss",
-      "uncertainty": "A forward-looking thesis with no supporting measurement.",
-      "url": "https://simonwillison.net/2026/Sep/14/laurie-voss/"
-    },
-    {
-      "builder_takeaway": "A blog post surfaced via Lobsters, presumably on whether developers still read code produced by AI tooling. The feed entry contained only a comments link and the article was not fetched, so there is no verifiable claim to evaluate.",
-      "category": "Tools Worth Testing",
-      "id": "d047a2d2-5a54-4980-baaa-98993e838adf",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "zanlib.dev",
-      "source_facts": [
-        "A blog post titled 'Do You Still Read the Code?' was discussed on Lobsters."
-      ],
-      "title": "Do You Still Read the Code?",
-      "uncertainty": "Article not fetched; content and argument are entirely unknown beyond the title.",
-      "url": "https://zanlib.dev/blog/do-you-still-read-the-code/"
-    },
-    {
-      "builder_takeaway": "A systems writeup on UNIX domain sockets surfaced via Lobsters. The feed entry contained only a comments link. Evergreen systems material rather than a change anyone needs to react to.",
+      "builder_takeaway": "Review crawler settings to avoid accidental search exclusion or overstated training protection.",
       "category": "Data Infrastructure / Verification / Scraping",
-      "id": "46e41723-0779-4acf-87b5-f8500d02986c",
-      "importance": "archive-only",
+      "id": "db31f2ae-6a47-4314-8caa-54356b5bc1f1",
+      "importance": "lead",
       "labels": [
-        "early_signal",
-        "reject"
+        "vendor_claim",
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "yuvalino.com",
+      "source": "blog.cloudflare.com",
       "source_facts": [
-        "A blog post on UNIX domain sockets was discussed on Lobsters."
+        "Cloudflare changes crawler controls; training Block now includes search bots, with a Bing opt-out gap."
       ],
-      "title": "How can you not be romantic about UNIX domain sockets?",
-      "uncertainty": "Article not fetched; depth and novelty unknown.",
-      "url": "https://yuvalino.com/how-can-you-not-be-romantic-about-unix-domain-sockets"
+      "title": "Check crawler controls before selecting Block",
+      "uncertainty": "Primary linked source read; claims not independently reproduced or tested.",
+      "url": "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/"
     },
     {
-      "builder_takeaway": "An interactive equal-area map projection that reportedly zooms natively to Mercator, surfaced via Lobsters. Interesting cartography work, but outside the scope of what changes a solo software business decision.",
-      "category": "Tools Worth Testing",
-      "id": "d4646f37-931c-4612-b822-70d85a269031",
-      "importance": "archive-only",
+      "builder_takeaway": "Reduce token privileges and test deployment permissions before migrating.",
+      "category": "AI Operations / Agent Control",
+      "id": "51feb935-a73a-4d84-96df-8f132a0648d2",
+      "importance": "supporting",
       "labels": [
-        "early_signal",
-        "reject"
+        "vendor_claim",
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "benjoffe.com",
+      "source": "blog.cloudflare.com",
       "source_facts": [
-        "A new equal-area map projection designed for interactive use, which zooms natively to Mercator, was discussed on Lobsters."
+        "Cloudflare announces per-Worker scopes and four roles for users, CI and agents."
       ],
-      "title": "A New Equal-Area Map for Interactive Computer Use",
-      "uncertainty": "Page not fetched; licensing and availability as a reusable library are unknown.",
-      "url": "https://www.benjoffe.com/map"
-    },
-    {
-      "builder_takeaway": "A YouTube video essay surfaced via Lobsters. No transcript, no technical claim, and nothing to act on.",
-      "category": "Tools Worth Testing",
-      "id": "00c3091f-7f0b-4df9-957a-57fcbd502980",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "youtube.com",
-      "source_facts": [
-        "A video titled 'Why Am I Still Programming' was discussed on Lobsters."
-      ],
-      "title": "Why Am I Still Programming",
-      "uncertainty": "Video not watched; content unknown.",
-      "url": "https://www.youtube.com/watch?v=pOAj3mor8y8"
-    },
-    {
-      "builder_takeaway": "A personal reflection post from Dave Rupert surfaced via Lobsters. The feed entry contained only a comments link; a personal essay rather than a technical or business signal.",
-      "category": "Tools Worth Testing",
-      "id": "a86f7250-cb45-4d0a-a5f6-23bb22830ee5",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-16T00:00:00.000Z",
-      "source": "daverupert.com",
-      "source_facts": [
-        "Dave Rupert published a personal post titled 'I wish you the best in the Offline', discussed on Lobsters."
-      ],
-      "title": "I wish you the best in the Offline",
-      "uncertainty": "Article not fetched; content unknown beyond the title.",
-      "url": "https://daverupert.com/2026/09/i-wish-you-the-best-in-the-offline/"
+      "title": "Scope Workers credentials to the application",
+      "uncertainty": "Primary linked source read; claims not independently reproduced or tested.",
+      "url": "https://blog.cloudflare.com/workers-granular-authorization/"
     }
   ],
   "mode": "primary",
-  "run_id": "b7f9c95e-4c56-464e-beed-174f69b66469",
+  "run_id": "95d32cfe-104c-40e8-a254-acc0ffdef781",
   "status": "completed",
-  "summary": "Synthesized Nightly Librarian run with 5 promoted item(s), 24 scored item(s), and 19 rejected item(s).",
+  "summary": "Synthesized Nightly Librarian run with 6 promoted item(s), 40 scored item(s), and 34 rejected item(s).",
   "title": "Nightly Librarian - 2026-09-16"
 }
