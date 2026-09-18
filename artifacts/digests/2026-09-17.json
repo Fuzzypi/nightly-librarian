@@ -1,358 +1,643 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T06:17:34.700Z",
+  "generated_at": "2026-09-17T11:05:54.198Z",
   "imported_from": {
     "importer_version": "digest-import/v1",
     "source_artifact": "artifacts/synthesized/2026-09-17.json",
-    "source_sha256": "c7494328e3eefdc9f807b40846750f2e8a103545fe63cc6ddb12c89480d1167c"
+    "source_sha256": "46320fbe40f0af6abf976c94abfa4bffa0e3d6fdb264d5b8a71ea3306b1889c0"
   },
   "items": [
     {
-      "builder_takeaway": "Adds a concrete second option for realtime voice agents behind an abstraction layer that already handles failover and cost tracking.",
-      "category": "Voice AI / Realtime Agents",
-      "id": "69af922f-2ab6-4dec-813f-004b94486db0",
-      "importance": "lead",
-      "labels": [
-        "vendor_claim",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "vercel.com",
-      "source_facts": [
-        "Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking are now available through Vercel AI Gateway's realtime WebSocket API."
-      ],
-      "title": "Gemini 3.8 Live models now available on Vercel AI Gateway",
-      "uncertainty": "Latency, per-minute pricing and real-world interruption quality versus incumbent realtime providers are not stated in the changelog.",
-      "url": "https://vercel.com/changelog/gemini-3-8-live-models-now-available-on-ai-gateway"
-    },
-    {
-      "builder_takeaway": "Saves a day of realtime WebSocket plumbing for anyone evaluating speech-to-speech models this week.",
-      "category": "Voice AI / Realtime Agents",
-      "id": "744eeca7-b3f5-417e-a6ab-40db8320f02c",
-      "importance": "supporting",
-      "labels": [
-        "reproducible",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "A free, working browser-based client for Google's new Gemini 3.8 Live speech-to-speech models is publicly available, with interrupt support and transcript export."
-      ],
-      "title": "Gemini Live audio: a working browser client for the new speech-to-speech models",
-      "uncertainty": "It is a demo harness, not production code — no error handling, reconnection or cost guardrails should be assumed.",
-      "url": "https://simonwillison.net/2026/Sep/15/gemini-live/"
-    },
-    {
-      "builder_takeaway": "Photo authenticity is an unsolved trust problem for any product accepting submitted images as evidence; a platform-level answer changes the build-versus-wait calculus.",
+      "builder_takeaway": "Relevant correctness fix for MCP integrations.",
       "category": "AI Operations / Agent Control",
-      "id": "d5bd5fbe-b2be-481e-bef4-0d466eac88d3",
+      "id": "7f21efe6-9976-4ce3-b4f2-a05538ac461d",
       "importance": "supporting",
       "labels": [
         "vendor_claim",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "security.apple.com",
-      "source_facts": [
-        "Apple has published an approach called Reference Image for verifying that a photograph came from a genuine camera capture."
-      ],
-      "title": "Apple Reference Image: a new approach for verified photography",
-      "uncertainty": "The fetched item had no body content, so availability, developer API surface and timeline are unconfirmed from this source.",
-      "url": "https://security.apple.com/blog/apple-reference-image/"
-    },
-    {
-      "builder_takeaway": "archive.org is load-bearing infrastructure for scraping and link-verification workflows; access changes there break things quietly.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "75b23da7-59e7-4d30-9d65-5c03e79e4a36",
-      "importance": "supporting",
-      "labels": [
-        "vendor_claim",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "blog.archive.org",
-      "source_facts": [
-        "The Internet Archive has announced a change to Wayback Machine access."
-      ],
-      "title": "An update on Wayback Machine access",
-      "uncertainty": "The specific nature and scope of the access change could not be confirmed — the item arrived with empty content and the page was not retrievable during triage.",
-      "url": "https://blog.archive.org/2026/09/15/an-update-on-wayback-machine-access/"
-    },
-    {
-      "builder_takeaway": "Early read on a new distribution channel that solo products will eventually have to price into acquisition plans.",
-      "category": "Small Business Automation",
-      "id": "314f182b-e00b-4962-a343-f83b03ec90b8",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "stratechery.com",
-      "source_facts": [
-        "Ads inside ChatGPT are reportedly performing well enough that Amazon is placing ads there, turning assistant surfaces into a real advertising channel."
-      ],
-      "title": "OpenAI Ads, Amazon Ads in ChatGPT, Walmart to Accept Apple Pay",
-      "uncertainty": "The claim that ChatGPT ads are working is analyst interpretation; no performance figures were visible in the retrievable excerpt.",
-      "url": "https://stratechery.com/2026/openai-ads-amazon-ads-in-chatgpt-walmart-to-accept-apple-pay/"
-    },
-    {
-      "builder_takeaway": "Advance warning of a breaking change for anyone self-hosting n8n as automation infrastructure.",
-      "category": "Tools Worth Testing",
-      "id": "9d32c69e-efb5-4889-b8b1-0bcb7e79d462",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
         "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-17T00:00:00.000Z",
       "source": "github.com",
       "source_facts": [
-        "n8n 2.39.6 adds a v3 breaking-change rule for the storage directory rename and deprecates the N8N_DB_PING_TIMEOUT environment variable."
+        "Maintainers list an MCP object-argument preservation fix in LangChain 1.4.1."
       ],
-      "title": "n8n 2.39.6 adds a v3 breaking-change rule for the storage directory rename",
-      "uncertainty": "The v3 release timeline and the final storage directory path are not stated in this changelog.",
-      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.6"
+      "title": "langchain==1.4.1",
+      "uncertainty": "Linked primary page read; no independent execution, reproduction or deployment validation.",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.1"
     },
     {
-      "builder_takeaway": "Front-page launch from an unfamiliar vendor; cheap to track, premature to act on.",
+      "builder_takeaway": "Help-text maintenance does not change a practical decision.",
+      "category": "Tools Worth Testing",
+      "id": "9b1ffa1c-e3bc-4533-bf21-330e551aa2e3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Release feed lists curated CLI help in Composio beta."
+      ],
+      "title": "CLI Beta @composio/cli@0.4.2-beta.397",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.397"
+    },
+    {
+      "builder_takeaway": "Beta polish has limited immediate impact.",
+      "category": "Tools Worth Testing",
+      "id": "4d3e372a-9283-4aa4-bd90-7d08c70a3cfc",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "Release feed lists preview-card and plugin telemetry changes."
+      ],
+      "title": "CLI Beta @composio/cli@0.4.2-beta.396",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.396"
+    },
+    {
+      "builder_takeaway": "Narrow beta fix; insufficient detail to prioritize over stronger fixes.",
       "category": "Model + API Changes",
-      "id": "8444a09e-0d19-4a41-9366-8287dc67a287",
+      "id": "1e445040-44b5-4182-b864-edcb19f36495",
       "importance": "archive-only",
       "labels": [
         "early_signal",
-        "monitor"
+        "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "typesafe.ai",
+      "source": "github.com",
       "source_facts": [
-        "typesafe.ai has announced System One Models and a product called Jev."
+        "Release feed mentions retaining toolkit authentication metadata."
       ],
-      "title": "Introducing System One Models and Jev",
-      "uncertainty": "No content was retrievable — what System One and Jev actually are, and whether any evaluations were published, is unknown.",
-      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+      "title": "CLI Beta @composio/cli@0.4.2-beta.395",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.395"
     },
     {
-      "builder_takeaway": "Concrete reminder that payment-processor dependency can end a service faster than any technical failure.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "089feb10-fc8f-42a0-990e-982bb5da1d01",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "monitor"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "keepitfree.ai",
-      "source_facts": [
-        "Volunteer hosting collective Autistici/Inventati is shutting down after losing banking access, affecting roughly 20,000 mail accounts and 1,500 websites."
-      ],
-      "title": "Autistici/Inventati shuts down after losing financial access",
-      "uncertainty": "The account comes from the affected party and an advocate; the stated reasons for the loss of financial access are contested and not independently verified here.",
-      "url": "https://keepitfree.ai/announcements/a/i-shuts-down-stay-human/"
-    },
-    {
-      "builder_takeaway": "Cheap signal on which agent-facing standards a major platform is choosing to foreground.",
+      "builder_takeaway": "Feature inventory lacks demonstrated workflow improvement.",
       "category": "AI Operations / Agent Control",
-      "id": "7132dc84-96b3-416f-923e-9e53c458bec4",
+      "id": "c2c66d63-42f7-4285-baeb-da11bbb428a9",
       "importance": "archive-only",
       "labels": [
-        "vendor_claim",
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "CrewAI release feed lists connection aliases, tracing and model routing changes."
+      ],
+      "title": "1.15.22",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://github.com/crewAIInc/crewAI/releases/tag/1.15.22"
+    },
+    {
+      "builder_takeaway": "A cutoff dashboard alone does not establish model suitability.",
+      "category": "Model + API Changes",
+      "id": "184955ff-a2a6-43d4-aca1-9802ee32ca5a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "stale.jock.pl",
+      "source_facts": [
+        "Show HN title advertises model release-age and training-cutoff tracking."
+      ],
+      "title": "Show HN: How Stale Is Your AI? Release age and training cutoff for 20 models",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://stale.jock.pl/"
+    },
+    {
+      "builder_takeaway": "Useful workflow design to monitor, not an adoption recommendation.",
+      "category": "AI Operations / Agent Control",
+      "id": "2fe1469d-335f-453d-82ad-114c26fbba36",
+      "importance": "supporting",
+      "labels": [
+        "builder_reported",
         "monitor"
       ],
       "product_relevance": [],
       "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "vercel.com",
+      "source": "github.com",
       "source_facts": [
-        "Vercel's Is Agentic audit now presents its checks through four site-type views (content, business, app, commerce) selectable via a meta tag, without changing scores."
+        "Pizza Bot documents an inbox and approval queue for background agents; runtime remains untested here."
       ],
-      "title": "Is Agentic now tailors its audit by site type",
-      "uncertainty": "Whether the highlighted standards (x402, UCP, ACP) have meaningful adoption outside Vercel's ecosystem is unclear.",
-      "url": "https://vercel.com/changelog/is-agentic-report-categories"
+      "title": "Show HN: Pizza Bot – An inbox for AI agents that work in the background",
+      "uncertainty": "Linked primary page read; no independent execution, reproduction or deployment validation.",
+      "url": "https://github.com/pizza-bot-app/pizza-bot"
     },
     {
-      "builder_takeaway": "A Vercel-published customer story about Delphi, a 10-engineer team with no dedicated infrastructure role shipping 100+ production deploys a day behind feature flags, using preview deployments as the way coding agents verify their own work. The preview-deploy-as-agent-verification pattern is the one genuinely transferable idea. The rest is vendor marketing.",
-      "category": "Tools Worth Testing",
-      "id": "f1754467-5386-4889-a38d-b397db6f8a8c",
+      "builder_takeaway": "Milestone anecdote without transferable evidence.",
+      "category": "Small Business Automation",
+      "id": "49792090-71ac-4258-8c48-77d04f13f916",
       "importance": "archive-only",
       "labels": [
-        "vendor_claim",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "vercel.com",
+      "source": "reddit.com",
       "source_facts": [
-        "Delphi ships 100+ production deploys a day with 10 engineers by using Vercel preview deployments as the verification step for agent-written code."
+        "Poster celebrates a first monthly subscription."
       ],
-      "title": "How Delphi ships 100 times a day with its Python backend on Vercel",
-      "uncertainty": "Published by the vendor about its own customer; no independent verification of the deploy cadence or its costs.",
-      "url": "https://vercel.com/blog/how-delphi-ships-100-times-a-day-with-its-python-backend-on-vercel"
+      "title": "First Monthly Subscription",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wi88io/first_monthly_subscription/"
     },
     {
-      "builder_takeaway": "A Next.js canary release containing Turbopack internals, test-infrastructure enablement and small routing fixes. Nothing user-facing for anyone not tracking canaries.",
-      "category": "Tools Worth Testing",
-      "id": "7327b9d0-454b-4f10-bd32-184c4d716b3c",
+      "builder_takeaway": "Small self-reported prompt sample cannot establish causality or ROI.",
+      "category": "Small Business Automation",
+      "id": "757f6804-985f-428e-8b4d-4e13d47bc459",
       "importance": "archive-only",
       "labels": [
-        "production_proven",
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Poster claims to have decoded Tally visibility in AI answers."
+      ],
+      "title": "Tally is doing $5M+ ARR with 11 people. I decoded their AEO strategy.",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wime93/tally_is_doing_5m_arr_with_11_people_i_decoded/"
+    },
+    {
+      "builder_takeaway": "Generic advice solicitation, not a new finding.",
+      "category": "Small Business Automation",
+      "id": "71225dad-666e-45b9-913e-8c193ccf178d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Discussion asks which advantages a solo founder should prioritize."
+      ],
+      "title": "What should a solo SaaS founder optimize for first?",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wigoz1/what_should_a_solo_saas_founder_optimize_for_first/"
+    },
+    {
+      "builder_takeaway": "Customer-research question without reported answers or validation.",
+      "category": "Small Business Automation",
+      "id": "efe3aeff-a728-4c85-8f39-4617303de873",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Discussion asks groomers about booking and administrative pain points."
+      ],
+      "title": "What’s the hardest operational problem to solve in a vertical SaaS?",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wikfcu/whats_the_hardest_operational_problem_to_solve_in/"
+    },
+    {
+      "builder_takeaway": "Single anecdote cannot establish a repeatable channel.",
+      "category": "Small Business Automation",
+      "id": "4da1d22d-e4cb-4b93-a33e-0752d239dc3c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Poster attributes an initial paying customer to competitor-alternative SEO pages."
+      ],
+      "title": "Guys here is how i got my first paying customer even before promoting it anywhere else",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wi7lim/guys_here_is_how_i_got_my_first_paying_customer/"
+    },
+    {
+      "builder_takeaway": "Unresolved attribution question rather than measured guidance.",
+      "category": "Small Business Automation",
+      "id": "5100d1f7-28b6-475e-b96d-3e5caf6e76d3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Poster asks why a competitor appears more often in AI answers."
+      ],
+      "title": "Why does our biggest competitor show up in every AI answer and we don't?",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wil7lq/why_does_our_biggest_competitor_show_up_in_every/"
+    },
+    {
+      "builder_takeaway": "Personal credit balance has no general platform implication.",
+      "category": "Small Business Automation",
+      "id": "6fb8f3de-a24d-4bb8-b8dc-4dc434b5cfb5",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Poster asks how to use expiring promotional Claude credit."
+      ],
+      "title": "$87 of Claude credits expire tomorrow. Build what?",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wimn2u/87_of_claude_credits_expire_tomorrow_build_what/"
+    },
+    {
+      "builder_takeaway": "Audience conversation lacks acquisition evidence.",
+      "category": "Small Business Automation",
+      "id": "8bd98d4f-8b97-4668-bee4-d4e5e4d53248",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Discussion asks whether founders personally use short-form video."
+      ],
+      "title": "Do SaaS founders actually use TikTok/Reels, or is short-form video mostly a marketing obligation?",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wim5rn/do_saas_founders_actually_use_tiktokreels_or_is/"
+    },
+    {
+      "builder_takeaway": "Unverified revenue and promotion do not establish unit economics.",
+      "category": "Small Business Automation",
+      "id": "a39291d4-d023-4f70-adbd-2677bf1763ae",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Poster claims substantial solo SaaS revenue."
+      ],
+      "title": "I made $88K with my saas as a solo founder",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wi3b9a/i_made_88k_with_my_saas_as_a_solo_founder/"
+    },
+    {
+      "builder_takeaway": "Uncorroborated individual complaint cannot support a broad processor warning.",
+      "category": "Small Business Automation",
+      "id": "77c11781-82ae-4bcc-8420-f17e4995021f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Poster warns against Paddle based on an account experience."
+      ],
+      "title": "DO NOT USE PADDLE AS YOUR PAYMENT PROCESSOR",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whzvnu/do_not_use_paddle_as_your_payment_processor/"
+    },
+    {
+      "builder_takeaway": "Generic beginner question.",
+      "category": "Small Business Automation",
+      "id": "11e812f7-5629-4695-a682-bab3f141da22",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Beginner asks how to build SaaS and find paying clients."
+      ],
+      "title": "How to build a SaaS ? What are the things I need to know? How to get first paying clients?",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wiipfk/how_to_build_a_saas_what_are_the_things_i_need_to/"
+    },
+    {
+      "builder_takeaway": "Product promotion with no demonstrated distribution benefit.",
+      "category": "Small Business Automation",
+      "id": "7cff23f3-b9e7-47a7-9dae-f3c37ba8b8d6",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Poster pitches a product intended to improve SaaS leaderboard voting."
+      ],
+      "title": "Are SaaS leaderboards actually ranking products, or just ranking audiences?",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wimf4p/are_saas_leaderboards_actually_ranking_products/"
+    },
+    {
+      "builder_takeaway": "No decision-changing information.",
+      "category": "Small Business Automation",
+      "id": "b56c0250-4618-4997-92fb-66a4415ea8b9",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Beginner asks for a no-cost SaaS idea."
+      ],
+      "title": "How can I build my first SAAS project at no cost ?",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wieuaf/how_can_i_build_my_first_saas_project_at_no_cost/"
+    },
+    {
+      "builder_takeaway": "Question supplies no measured outcome.",
+      "category": "Small Business Automation",
+      "id": "c5e50f8d-4391-4e3d-9b41-8780d8eb24d3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Discussion solicits experiences using Loom in cold outreach."
+      ],
+      "title": "Anyone sending Loom videos in cold outreach? How did it actually go?",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wim0s6/anyone_sending_loom_videos_in_cold_outreach_how/"
+    },
+    {
+      "builder_takeaway": "Broad causal claim without data or a reproducible incident.",
+      "category": "AI Operations / Agent Control",
+      "id": "b807703c-5125-475c-8fed-be430ed07e51",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Poster argues that silent prompt regressions drive customer churn."
+      ],
+      "title": "The biggest reason AI features churn customers is silent prompt regressions",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wilqpg/the_biggest_reason_ai_features_churn_customers_is/"
+    },
+    {
+      "builder_takeaway": "Common onboarding anecdote.",
+      "category": "Small Business Automation",
+      "id": "57be3297-260c-41b1-a4dc-be954b278be7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Poster shares a personal welcome email to a first paying customer."
+      ],
+      "title": "i got my first customer today, so i sent them an EMAIL!!",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wigoav/i_got_my_first_customer_today_so_i_sent_them_an/"
+    },
+    {
+      "builder_takeaway": "Unresolved acquisition problem rather than validated learning.",
+      "category": "Small Business Automation",
+      "id": "696fcad2-6ffc-4efc-b0cf-08f6c2e57ae1",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "AI tutoring founder asks for distribution advice after Reddit resistance."
+      ],
+      "title": "I finished building my SaaS. Distribution is turning out to be harder than building it.",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wiiim0/i_finished_building_my_saas_distribution_is/"
+    },
+    {
+      "builder_takeaway": "Launch story without distinctive evidence of demand.",
+      "category": "Small Business Automation",
+      "id": "dbfe8b17-5e9e-482a-88b2-6ef213a73bec",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Poster describes building an event-photo micro SaaS."
+      ],
+      "title": "I got engaged and ended up building a micro SaaS for event photos and videos",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wid8tq/i_got_engaged_and_ended_up_building_a_micro_saas/"
+    },
+    {
+      "builder_takeaway": "No diagnosed cause or tested intervention.",
+      "category": "Small Business Automation",
+      "id": "8626d111-5ea6-4eec-b340-44934f52b062",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Career-support SaaS founder asks why traffic is not converting."
+      ],
+      "title": "Driving ok traffic, but barely any signups -> what's going wrong?",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wiia0n/driving_ok_traffic_but_barely_any_signups_whats/"
+    },
+    {
+      "builder_takeaway": "Undiagnosed support question.",
+      "category": "Small Business Automation",
+      "id": "49d5df5b-01fa-4ef6-9b75-7235d95bf3a3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Website owner asks why basic SEO has not produced rankings."
+      ],
+      "title": "Google isn't ranking our website despite following basic SEO best practices - what could be wrong?",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wi4nwv/google_isnt_ranking_our_website_despite_following/"
+    },
+    {
+      "builder_takeaway": "Substantially duplicates item 22 in this claim.",
+      "category": "Small Business Automation",
+      "id": "85b3b37e-f74d-45ee-b4ca-e38698fe1224",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Second post repeats the first-customer welcome-email anecdote."
+      ],
+      "title": "I GOT MY FIRST PAYING CUSTOMER AND SENT HIM AN EMAIL!",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wihthc/i_got_my_first_paying_customer_and_sent_him_an/"
+    },
+    {
+      "builder_takeaway": "Sweeping title and unverified anecdote do not establish outcomes.",
+      "category": "Small Business Automation",
+      "id": "a22fe61c-8b35-45e4-baa7-0bc1d36b6df1",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Poster pitches using ranking Reddit threads for SEO visibility."
+      ],
+      "title": "Ranking on page 1 of Google will change your life",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1whwwk6/ranking_on_page_1_of_google_will_change_your_life/"
+    },
+    {
+      "builder_takeaway": "Use the versioned release entry instead.",
+      "category": "Small Business Automation",
+      "id": "815a705c-1011-4757-b218-f0222e32d1df",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-17T00:00:00.000Z",
       "source": "github.com",
       "source_facts": [
-        "Next.js v16.4.0-canary.32 ships Turbopack internal changes, deploy-test enablement and minor Pages Router prefetch fixes."
+        "Moving stable tag repeats n8n 2.39.7."
       ],
-      "title": "Next.js v16.4.0-canary.32",
-      "uncertainty": "",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.32"
-    },
-    {
-      "builder_takeaway": "A moving stable tag pointing at n8n 2.39.6, whose contents are already covered by the versioned release entry.",
-      "category": "Tools Worth Testing",
-      "id": "bd95b4b0-0c45-4b80-880b-ed9fb634c68b",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "The n8n stable release tag now points at version 2.39.6."
-      ],
-      "title": "n8n stable tag (2.39.6)",
-      "uncertainty": "",
+      "title": "stable",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
       "url": "https://github.com/n8n-io/n8n/releases/tag/stable"
     },
     {
-      "builder_takeaway": "A single-fix patch on the n8n 1.x line applying credential allowed-domains to declarative node requests. Relevant only to operators pinned to 1.x.",
-      "category": "Tools Worth Testing",
-      "id": "235ad9ec-19f8-423f-b530-e42a34042ffb",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "n8n 1.123.80 applies credential allowed-domain restrictions in declarative node requests."
-      ],
-      "title": "n8n 1.123.80",
-      "uncertainty": "",
-      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.80"
-    },
-    {
-      "builder_takeaway": "A patch release with no described changes beyond an auto-generated review link.",
-      "category": "Tools Worth Testing",
-      "id": "af4aaa07-7142-4a99-9e88-596f5512642f",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "n8n released version 2.40.1 with no documented changes."
-      ],
-      "title": "n8n 2.40.1",
-      "uncertainty": "",
-      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.1"
-    },
-    {
-      "builder_takeaway": "A moving beta tag pointing at n8n 2.40.1, duplicating the versioned release entry.",
-      "category": "Tools Worth Testing",
-      "id": "5a1065a0-006c-490c-afa0-4a2061060570",
-      "importance": "archive-only",
-      "labels": [
-        "production_proven",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "The n8n beta release tag now points at version 2.40.1."
-      ],
-      "title": "n8n beta tag (2.40.1)",
-      "uncertainty": "",
-      "url": "https://github.com/n8n-io/n8n/releases/tag/beta"
-    },
-    {
-      "builder_takeaway": "A localized Portuguese call-to-action link into Google AI Studio with no changelog content. Not a substantive item.",
-      "category": "Model + API Changes",
-      "id": "a5440f45-f257-499b-bf27-8e48c976501e",
+      "builder_takeaway": "Concrete maintenance fixes for existing 2.39 users.",
+      "category": "Small Business Automation",
+      "id": "00c26dc6-69e0-4665-8049-9c84a938dbdc",
       "importance": "archive-only",
       "labels": [
         "vendor_claim",
-        "reject"
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "aistudio.google.com",
+      "source": "github.com",
       "source_facts": [
-        "A localized AI Studio call-to-action link for gemini-3.8-flash appeared in the Google AI changelog feed."
+        "n8n 2.39.7 lists resilient breaking-change checks and numeric credential-input fixes."
       ],
-      "title": "Faça um teste (AI Studio localized link)",
-      "uncertainty": "",
-      "url": "https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash&hl=pt-br"
+      "title": "n8n@2.39.7",
+      "uncertainty": "Linked primary page read; no independent execution, reproduction or deployment validation.",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.7"
     },
     {
-      "builder_takeaway": "A hobby project pairing bird-song identification with an e-ink display rendering period-style illustrations. Delightful, but it changes no decision.",
-      "category": "Tools Worth Testing",
-      "id": "5ac423a6-f5eb-43e0-b84e-4507db1ccf8e",
+      "builder_takeaway": "Relevant maintenance for operators still on the 1.x line.",
+      "category": "Small Business Automation",
+      "id": "9de1bc2a-bc97-4da7-a2b6-3ed1f4200c7b",
       "importance": "archive-only",
       "labels": [
-        "builder_reported",
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n 1.123.81 lists a domain-restricted credential fix and dependency updates."
+      ],
+      "title": "n8n@1.123.81",
+      "uncertainty": "Linked primary page read; no independent execution, reproduction or deployment validation.",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.81"
+    },
+    {
+      "builder_takeaway": "Parallel release-line repetition; lead with stable versioned entry.",
+      "category": "Small Business Automation",
+      "id": "2e8f907e-d072-4c9d-bc25-fe448fa197ea",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-17T00:00:00.000Z",
       "source": "github.com",
       "source_facts": [
-        "A developer built an e-ink picture frame that identifies bird songs and renders the birds as 1800s-style illustrations."
+        "Release feed lists the same two fixes for n8n 2.40.2."
       ],
-      "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
-      "uncertainty": "",
-      "url": "https://github.com/arnegiacomo/fugleramme"
+      "title": "n8n@2.40.2",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.2"
     },
     {
-      "builder_takeaway": "A browser toy that simulates being a commercial airline passenger with real terrain, weather and sun position. Entertainment, not signal.",
-      "category": "Tools Worth Testing",
-      "id": "19fff676-b2af-4db9-bbc7-b804189a0dac",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "inflightsimulator.com",
-      "source_facts": [
-        "A developer released a browser-based simulator that recreates the experience of flying as a commercial airline passenger."
-      ],
-      "title": "Show HN: I made a flight simulator, except you're just a passenger",
-      "uncertainty": "",
-      "url": "https://inflightsimulator.com"
-    },
-    {
-      "builder_takeaway": "An Internet Archive blog piece on Negativland and culture jamming. Cultural history with no builder relevance.",
+      "builder_takeaway": "Duplicate moving-tag entry.",
       "category": "Small Business Automation",
-      "id": "bd15edb2-67fe-4abb-89ba-a1097976309e",
+      "id": "1e586547-76e4-4481-a6c5-31378610ed20",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -360,18 +645,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "blog.archive.org",
+      "source": "github.com",
       "source_facts": [
-        "The Internet Archive published an essay on Negativland and the practice of culture jamming."
+        "Moving beta tag repeats n8n 2.40.2."
       ],
-      "title": "Negativland, Culture Jamming, and the Art of Making Something New",
-      "uncertainty": "",
-      "url": "https://blog.archive.org/2026/09/11/negativland-culture-jamming-and-the-art-of-making-something-new/"
+      "title": "beta",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/beta"
     },
     {
-      "builder_takeaway": "A very early port of the GEFS filesystem to OpenBSD, announced on a mailing list. Interesting to OpenBSD kernel people, nobody else yet.",
+      "builder_takeaway": "Headline-only aggregation does not establish costs or underlying causes.",
       "category": "Tools Worth Testing",
-      "id": "e3428ce2-bdda-46cb-81e0-34ae3fb2346f",
+      "id": "fbff14e5-12a2-4502-8f30-2e90b4d2cdf5",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -379,56 +664,113 @@
       ],
       "product_relevance": [],
       "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "marc.info",
+      "source": "latent.space",
       "source_facts": [
-        "An early preview port of the GEFS filesystem to OpenBSD has been announced on openbsd-tech."
+        "Newsletter title reports Gas Town shutdown and higher Astra costs."
       ],
-      "title": "GEFS on OpenBSD: A very early preview",
-      "uncertainty": "",
-      "url": "https://marc.info/?l=openbsd-tech&m=178948744271633&w=2"
+      "title": "[AINews] Reality Checks on AI News (Yegge shuts down Gas Town, Databricks’ +60% Astra cost)",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.latent.space/p/ainews-reality-checks-on-ai-news"
     },
     {
-      "builder_takeaway": "A general blog post arguing that small programming habits compound. Reasonable, but nothing new or actionable.",
-      "category": "Tools Worth Testing",
-      "id": "a969d91f-23c1-4be7-a5ce-fe7255655c02",
+      "builder_takeaway": "Fundraising interview is not evidence of useful coverage or economics.",
+      "category": "Small Business Automation",
+      "id": "fdef67b2-2cbc-4f4e-9492-d53151c63c65",
       "importance": "archive-only",
       "labels": [
-        "builder_reported",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "will-keleher.com",
+      "source": "latent.space",
       "source_facts": [
-        "A blog post argues that small programming tricks and habits meaningfully compound over a career."
+        "Interview title pitches underwriting agent systems."
       ],
-      "title": "Small Programming Tricks",
-      "uncertainty": "",
-      "url": "https://will-keleher.com/posts/small-programming-tricks-matter/"
+      "title": "Underwriting Superintelligence: Backing Agents you can Sue — Rune Kvist, AIUC",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.latent.space/p/aiuc"
     },
     {
-      "builder_takeaway": "An architecture writeup from the Veloren open-source voxel game. Well-written engine internals, but outside the scope of solo product work.",
-      "category": "Tools Worth Testing",
-      "id": "9d865607-fe85-455c-b44b-706a0a6580de",
+      "builder_takeaway": "Unexamined benchmark framing lacks comparable workloads and validation.",
+      "category": "Model + API Changes",
+      "id": "12e6486a-741b-4cc2-a80c-afbf0cf0e081",
       "importance": "archive-only",
       "labels": [
-        "builder_reported",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-17T00:00:00.000Z",
-      "source": "blog.jsbarretto.com",
+      "source": "latent.space",
       "source_facts": [
-        "The Veloren project published a writeup on architectural choices that differ from typical game engines."
+        "Newsletter title claims large speed and cost gains for a routing model."
       ],
-      "title": "Some things Veloren does differently",
-      "uncertainty": "",
-      "url": "https://blog.jsbarretto.com/post/veloren"
+      "title": "[AINews] Jev: a “System One Model” that only decides/classifies/routes/scores — >100x faster, >200x cheaper than small frontier LLMs",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://www.latent.space/p/ainews-jev-a-system-one-model-that"
+    },
+    {
+      "builder_takeaway": "Concrete defensive insight, with impact and detection claims attributed.",
+      "category": "AI Operations / Agent Control",
+      "id": "c6184282-7b0f-4444-a980-034dc8f120a2",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "blog.cloudflare.com",
+      "source_facts": [
+        "Cloudflare reports gated malicious storefront scripts that evade ordinary scanner visits."
+      ],
+      "title": "When scanners miss the attack: how Cloudflare Client-Side Security protects storefronts",
+      "uncertainty": "Linked primary page read; no independent execution, reproduction or deployment validation.",
+      "url": "https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/"
+    },
+    {
+      "builder_takeaway": "Retention policy directly affects rollback and preview availability.",
+      "category": "Model + API Changes",
+      "id": "ca134fba-c16c-4da7-8859-b66814d9a4ef",
+      "importance": "lead",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel changed Hobby retention; over-limit teams can lose unprotected deployments immediately."
+      ],
+      "title": "Hobby projects now retain fewer deployments to free up storage",
+      "uncertainty": "Linked primary page read; no independent execution, reproduction or deployment validation.",
+      "url": "https://vercel.com/changelog/hobby-projects-now-retain-fewer-deployments-to-free-up-storage"
+    },
+    {
+      "builder_takeaway": "Automatic limited-scope improvement requires no decision; not total build-time reduction.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "27e93260-3175-4846-a454-70b9b58f9142",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel feed reports build-start delay falling from 6.7 to 2.4 seconds for specific networking features."
+      ],
+      "title": "Secure Compute and Static IP builds start 64% faster",
+      "uncertainty": "Link not opened; assessment is limited to the supplied title and feed excerpt.",
+      "url": "https://vercel.com/changelog/secure-compute-and-static-ip-builds-start-64-faster"
     }
   ],
   "mode": "primary",
-  "run_id": "2a581cfe-e0d9-4815-8d90-24d07852f8d2",
+  "run_id": "433e7ae4-c0ef-4054-9137-82e9665f4882",
   "status": "completed",
-  "summary": "Synthesized Nightly Librarian run with 9 promoted item(s), 22 scored item(s), and 13 rejected item(s).",
+  "summary": "Synthesized Nightly Librarian run with 6 promoted item(s), 40 scored item(s), and 34 rejected item(s).",
   "title": "Nightly Librarian - 2026-09-17"
 }
