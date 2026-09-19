@@ -1,130 +1,16 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T06:13:26.457Z",
+  "generated_at": "2026-09-18T11:06:42.447Z",
   "imported_from": {
     "importer_version": "digest-import/v1",
     "source_artifact": "artifacts/synthesized/2026-09-18.json",
-    "source_sha256": "e9e0f7b3bb7101a954e1449d05f04c34f8ab7bd33d684c594c4466ead67d187b"
+    "source_sha256": "ec845500c9cacc007cb61d4de0b4a86e09432a0234f1023fed9013503fcc149f"
   },
   "items": [
     {
-      "builder_takeaway": "Directly targets the classification and scoring calls that dominate agent pipeline cost, including nightly-librarian's own triage step.",
-      "category": "Model + API Changes",
-      "id": "a965b28e-ea5f-40a0-b82d-7d6f6aa7fa73",
-      "importance": "lead",
-      "labels": [
-        "vendor_claim",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "source": "vercel.com",
-      "source_facts": [
-        "Jev, a typed probabilistic decision model from TypeSafe AI, is now available on Vercel AI Gateway via the AI SDK 7 experimental evaluate API, with vendor-reported gains up to 193.6x faster and 444.6x cheaper than LLMs."
-      ],
-      "title": "TypeSafe AI's Jev now available on AI Gateway",
-      "uncertainty": "The speed and cost multiples come from TypeSafe's own workflow evaluations with no independent reproduction, and the evaluate API is still experimental.",
-      "url": "https://vercel.com/changelog/typesafe-ai-jev-now-available-on-ai-gateway"
-    },
-    {
-      "builder_takeaway": "Bears directly on identity-verification product design, including Veremun/ContractorVerify.",
+      "builder_takeaway": "Experimental alpha merits tracking, not production adoption.",
       "category": "AI Operations / Agent Control",
-      "id": "a969db67-c892-4206-9625-f35e8c39b2d7",
-      "importance": "supporting",
-      "labels": [
-        "builder_reported",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "source": "ryan.science",
-      "source_facts": [
-        "Signing keys used for US driver's license PDF417 barcodes can be recovered, undermining barcode signature verification as proof of document authenticity."
-      ],
-      "title": "Keys Not Included: recovering the signing keys for US driver's license barcodes",
-      "uncertainty": "Full content was not retrieved by the fetcher, so the exact scope — which jurisdictions and how practical the recovery is — is unconfirmed from the title and source alone.",
-      "url": "https://ryan.science/blog/keys-not-included"
-    },
-    {
-      "builder_takeaway": "Changes how much weight a verification product should place on content provenance metadata.",
-      "category": "AI Operations / Agent Control",
-      "id": "53072b65-b175-4e65-b8ad-100e5c727174",
-      "importance": "supporting",
-      "labels": [
-        "builder_reported",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "source": "hackerfactor.com",
-      "source_facts": [
-        "C2PA content credentials can be forged on a Pixel 10, so a valid C2PA manifest does not prove an image is authentic."
-      ],
-      "title": "Forgery of C2PA on a Pixel 10",
-      "uncertainty": "Only the title and source were retrieved; the precise forgery technique and whether it requires device access is not confirmed here.",
-      "url": "https://www.hackerfactor.com/blog/index.php?/archives/1102-C2PA-and-Pixel-Glitter-Milk.html"
-    },
-    {
-      "builder_takeaway": "Removes onboarding friction for agent memory, a recurring need in MCP and agent work.",
-      "category": "Model + API Changes",
-      "id": "efc90986-ff8f-45e0-b7dd-34d693a62678",
-      "importance": "supporting",
-      "labels": [
-        "vendor_claim",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "source": "vercel.com",
-      "source_facts": [
-        "Mem0 is now a native Vercel Marketplace integration with auto-provisioned API keys and consolidated Vercel billing."
-      ],
-      "title": "Mem0 joins the Vercel Marketplace",
-      "uncertainty": "Pricing relative to running Mem0 directly is not stated in the changelog.",
-      "url": "https://vercel.com/changelog/mem0-joins-the-vercel-marketplace"
-    },
-    {
-      "builder_takeaway": "First-party vendor support meaningfully changes the viability of Rust for GPU work.",
-      "category": "Model + API Changes",
-      "id": "677a2ac5-bc9b-4e04-b66f-1f55d3d292e4",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "source": "developer.nvidia.com",
-      "source_facts": [
-        "Nvidia announced native support for writing CUDA GPU kernels in Rust via two supported tracks."
-      ],
-      "title": "Nvidia announces native GPU programming in Rust",
-      "uncertainty": "Content body was not retrieved; maturity and feature parity of each track versus C++ CUDA is unconfirmed.",
-      "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/"
-    },
-    {
-      "builder_takeaway": "Concrete dependency-risk example with a named deprecation, not just commentary.",
-      "category": "Tools Worth Testing",
-      "id": "d73cda95-a8bb-4fd2-998c-74bd0400b27b",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "source": "jakeasmith.com",
-      "source_facts": [
-        "The maintainer of the PHP http_build_url polyfill is deprecating it after nearly 20 million installs."
-      ],
-      "title": "My temporary PHP fix from 2014 has nearly 20M installs. Today I'm deprecating it",
-      "uncertainty": "Deprecation timeline and whether a maintained successor exists were not retrieved.",
-      "url": "https://jakeasmith.com/blog/http-build-url/"
-    },
-    {
-      "builder_takeaway": "Fits a pattern worth watching — small specialized models displacing both heuristics and general LLMs.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "33371639-4869-4634-8f9a-b5ae53b0b082",
+      "id": "721d4033-b80a-449c-8468-5b8752023f07",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -132,132 +18,37 @@
       ],
       "product_relevance": [],
       "published_at": "2026-09-18T00:00:00.000Z",
-      "source": "rohanbansal.com",
+      "source": "github.com",
       "source_facts": [
-        "A 4B-parameter RL-trained model reportedly produces query plans 81% faster than the Postgres query planner."
+        "langchain-typesafe==0.0.1a2"
       ],
-      "title": "Training a 4B model to produce 81% faster query plans than Postgres",
-      "uncertainty": "Single-author blog post; benchmark methodology, workload mix, and reproducibility are unverified.",
-      "url": "https://rohanbansal.com/qorl"
+      "title": "langchain-typesafe==0.0.1a2",
+      "uncertainty": "Primary release page read; behavior, reliability and costs not independently tested.",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-typesafe%3D%3D0.0.1a2"
     },
     {
-      "builder_takeaway": "Rare public visibility into an in-progress post-training run.",
-      "category": "Model + API Changes",
-      "id": "da010f00-15c4-4e5b-bdab-4c290e90e557",
+      "builder_takeaway": "Superseded by 0.0.1a2 in the same claim.",
+      "category": "Tools Worth Testing",
+      "id": "a41897d4-3fff-4648-bd85-23134191c965",
       "importance": "archive-only",
       "labels": [
         "early_signal",
-        "monitor"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "source": "mimo.xiaomi.com",
-      "source_facts": [
-        "Xiaomi published a live public dashboard of the reinforcement-learning post-training run for its Mimo 2.6 model."
-      ],
-      "title": "Xiaomi Mimo 2.6 live post-training dashboard",
-      "uncertainty": "No release, license, or benchmark details were retrieved alongside the dashboard.",
-      "url": "https://mimo.xiaomi.com/rl/"
-    },
-    {
-      "builder_takeaway": "Canary release containing internal Turbopack and code-generation changes, test fixes, and a revert. No user-facing features or breaking changes.",
-      "category": "Tools Worth Testing",
-      "id": "7cddf665-6ff9-406f-8984-ea21768080d9",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-18T00:00:00.000Z",
       "source": "github.com",
       "source_facts": [
-        "Next.js v16.4.0-canary.34 ships internal Turbopack and codegen changes with no user-facing features."
+        "langchain-typesafe==0.0.1a1"
       ],
-      "title": "Next.js v16.4.0-canary.34",
-      "uncertainty": "",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.34"
+      "title": "langchain-typesafe==0.0.1a1",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-typesafe%3D%3D0.0.1a1"
     },
     {
-      "builder_takeaway": "A comparison of arena architectures across malloc implementations. Solid systems writing, but there is no decision a solo application developer makes differently after reading it.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "8dded98f-9922-4377-974b-16f8a6262f27",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "source": "egbert.net",
-      "source_facts": [
-        "A technical comparison of arena architectures across different malloc implementations."
-      ],
-      "title": "Comparison of Malloc() Algorithms",
-      "uncertainty": "",
-      "url": "https://egbert.net/blog/articles/comparison-of-arena-architecture-in-malloc.html"
-    },
-    {
-      "builder_takeaway": "A personal post about retiring a .ru domain and the blog behind it. No generalizable action for a solo builder.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "31da0652-7019-4785-8309-019992ad04ef",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "source": "blog.verygoodsoftwarenotvirus.dev",
-      "source_facts": [
-        "The author is retiring the verygoodsoftwarenotvirus.ru domain."
-      ],
-      "title": "The end of verygoodsoftwarenotvirus.ru",
-      "uncertainty": "",
-      "url": "https://blog.verygoodsoftwarenotvirus.dev/posts/2026/09/12/the-end-of-verygoodsoftwarenotvirus-dot-ru/"
-    },
-    {
-      "builder_takeaway": "Release announcement for the GNOME 51 desktop environment. Out of scope for a solo software business deciding what to act on tomorrow.",
+      "builder_takeaway": "No substantive decision-changing behavior in the supplied excerpt.",
       "category": "Tools Worth Testing",
-      "id": "329ae56a-6585-4b22-b197-c2ebe6889381",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "source": "release.gnome.org",
-      "source_facts": [
-        "GNOME 51 has been released."
-      ],
-      "title": "Introducing GNOME 51",
-      "uncertainty": "",
-      "url": "https://release.gnome.org/51/"
-    },
-    {
-      "builder_takeaway": "A walkthrough for assigning DOIs to blog posts. Niche publishing workflow with little bearing on what a solo developer builds or ships.",
-      "category": "Small Business Automation",
-      "id": "a7e6e17c-c773-41d2-8ea1-0104785a9133",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "source": "shkspr.mobi",
-      "source_facts": [
-        "A guide to obtaining DOIs for self-published blog posts."
-      ],
-      "title": "How to get a DOI for your blog posts",
-      "uncertainty": "",
-      "url": "https://shkspr.mobi/blog/2026/09/how-to-get-a-doi-for-your-blog-posts/"
-    },
-    {
-      "builder_takeaway": "An opinion piece arguing that a recent Navier-Stokes result does not change the author's pessimistic view of LLMs. Editorial argument without reproducible evidence.",
-      "category": "Tools Worth Testing",
-      "id": "f2594c72-904d-43b9-86e2-bf56f81cff0f",
+      "id": "e020ba35-3166-457f-bf77-26078ca92a68",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -265,37 +56,721 @@
       ],
       "product_relevance": [],
       "published_at": "2026-09-18T00:00:00.000Z",
-      "source": "dank.systems",
+      "source": "github.com",
       "source_facts": [
-        "The author argues a recent Navier-Stokes result does not warrant optimism about LLM capability."
+        "CLI Beta @composio/cli@0.4.2-beta.398"
       ],
-      "title": "Why i'm still bearish on LLMs after Navier-Stokes",
-      "uncertainty": "",
-      "url": "https://dank.systems/posts/2026-09-15-ai-bear.html"
+      "title": "CLI Beta @composio/cli@0.4.2-beta.398",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.398"
     },
     {
-      "builder_takeaway": "C++26 removes undefined behaviour for trivial infinite loops. Meaningful for C++ practitioners, out of scope for this audience.",
-      "category": "Tools Worth Testing",
-      "id": "9bae423b-87d3-4620-9471-6ab11718717f",
+      "builder_takeaway": "Useful for global-statistics work, but low immediate relevance to this audience.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "0675fdd7-0763-49a6-9452-b1d79209b9fb",
       "importance": "archive-only",
       "labels": [
-        "builder_reported",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-18T00:00:00.000Z",
-      "source": "sandordargo.com",
+      "source": "blog.google",
       "source_facts": [
-        "C++26 makes trivial infinite loops well-defined rather than undefined behaviour."
+        "Making global data easier to explore"
       ],
-      "title": "C++26: Trivial infinite loops are no longer undefined behaviour",
-      "uncertainty": "",
-      "url": "https://www.sandordargo.com/blog/2026/09/16/cpp26-trivial-infinite-loops"
+      "title": "Making global data easier to explore",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/"
+    },
+    {
+      "builder_takeaway": "Launch title supplies no new technical evidence or meaningful change.",
+      "category": "Tools Worth Testing",
+      "id": "9f96f409-9268-4a3f-a76a-63cc80258385",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "snapdrop.me",
+      "source_facts": [
+        "Show HN: Snapdrop: Instantly share files between devices. No setup, no signup"
+      ],
+      "title": "Show HN: Snapdrop: Instantly share files between devices. No setup, no signup",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://snapdrop.me"
+    },
+    {
+      "builder_takeaway": "Directory promotion without measured workflow improvements.",
+      "category": "AI Operations / Agent Control",
+      "id": "aac133ee-bf2e-4f03-9056-25192e9885f0",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "mysetup.ai",
+      "source_facts": [
+        "Show HN: Share your AI Setup, Learn from others"
+      ],
+      "title": "Show HN: Share your AI Setup, Learn from others",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://mysetup.ai/"
+    },
+    {
+      "builder_takeaway": "Low relevance and no practical engineering finding in the excerpt.",
+      "category": "Small Business Automation",
+      "id": "6f49cc00-9c38-4a85-960e-1b7cc053b731",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "flat.social",
+      "source_facts": [
+        "Show HN: I built a new version of my fun spatial 3D online meeting app"
+      ],
+      "title": "Show HN: I built a new version of my fun spatial 3D online meeting app",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://flat.social"
+    },
+    {
+      "builder_takeaway": "Branch-aware backend components may simplify isolated application previews.",
+      "category": "Model + API Changes",
+      "id": "4e1d55c7-7a11-4776-b204-751ff7ed832a",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "neon.com",
+      "source_facts": [
+        "The Neon backend is GA: a complete set of primitives so agents can build"
+      ],
+      "title": "The Neon backend is GA: a complete set of primitives so agents can build",
+      "uncertainty": "Primary release page read; behavior, reliability and costs not independently tested.",
+      "url": "https://neon.com/blog/neon-backend-is-ga"
+    },
+    {
+      "builder_takeaway": "Motivational post without transferable evidence.",
+      "category": "Small Business Automation",
+      "id": "2b75c4ad-d5c2-40cf-8d84-28c9d4cb23b3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Keep hustling hard everybody 💪"
+      ],
+      "title": "Keep hustling hard everybody 💪",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wivwbg/keep_hustling_hard_everybody/"
+    },
+    {
+      "builder_takeaway": "Unverified time estimate lacks an evaluated remedy.",
+      "category": "Tools Worth Testing",
+      "id": "d6cbe938-9bec-4473-8ba5-b372aa904228",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Engineering is spending half a headcount maintaining our docs pipeline"
+      ],
+      "title": "Engineering is spending half a headcount maintaining our docs pipeline",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wj9c9x/engineering_is_spending_half_a_headcount/"
+    },
+    {
+      "builder_takeaway": "Question and self-reported metrics, not a tested conversion result.",
+      "category": "Small Business Automation",
+      "id": "bf09b73c-34af-457a-af20-3f36c919ee2f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "300+ daily active users, but consistent paid conversions are still hard. What would you investigate first?"
+      ],
+      "title": "300+ daily active users, but consistent paid conversions are still hard. What would you investigate first?",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wjg4ez/300_daily_active_users_but_consistent_paid/"
+    },
+    {
+      "builder_takeaway": "Bot-traffic inference lacks supporting measurement in the supplied excerpt.",
+      "category": "Small Business Automation",
+      "id": "10af8e65-e32b-4eb7-a503-23acfda274ac",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Burned hundreds on Reddit Ads"
+      ],
+      "title": "Burned hundreds on Reddit Ads",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wj8yif/burned_hundreds_on_reddit_ads/"
+    },
+    {
+      "builder_takeaway": "Relevant niche, but no validated intervention or repeatable lesson.",
+      "category": "Small Business Automation",
+      "id": "204fac8a-e5b2-441d-a428-e853b3431030",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "1 paying user 1 month later still 1!!"
+      ],
+      "title": "1 paying user 1 month later still 1!!",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wjeidv/1_paying_user_1_month_later_still_1/"
+    },
+    {
+      "builder_takeaway": "Excerpt stops before the actual fix and its measured outcome.",
+      "category": "Tools Worth Testing",
+      "id": "151b34e7-74ea-4d56-ab11-a3959b98480e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Update on the \"wow to ugh form\" thread. The best fix wasn't the one I was about to ship."
+      ],
+      "title": "Update on the \"wow to ugh form\" thread. The best fix wasn't the one I was about to ship.",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wjio1t/update_on_the_wow_to_ugh_form_thread_the_best_fix/"
+    },
+    {
+      "builder_takeaway": "Causality and recovery are not established by the excerpt.",
+      "category": "Small Business Automation",
+      "id": "c5cfaf9c-0b2f-4462-9c9e-64097b1461e7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Google cut my site from 4,539 impressions a day to 328 in three days. Every SEO tool I ran the same week said the site was perfect."
+      ],
+      "title": "Google cut my site from 4,539 impressions a day to 328 in three days. Every SEO tool I ran the same week said the site was perfect.",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wjdw96/google_cut_my_site_from_4539_impressions_a_day_to/"
+    },
+    {
+      "builder_takeaway": "Generic advice solicitation, no new result.",
+      "category": "Small Business Automation",
+      "id": "975cc7ff-b2c5-4063-9de5-d9a347a64164",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "What have you guys actually done to market your apps? The “dark side” of being a solo dev 😅"
+      ],
+      "title": "What have you guys actually done to market your apps? The “dark side” of being a solo dev 😅",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wiwqpl/what_have_you_guys_actually_done_to_market_your/"
+    },
+    {
+      "builder_takeaway": "Tool request, not a platform change or evaluated comparison.",
+      "category": "Model + API Changes",
+      "id": "0b91777e-412d-4c98-a6c7-6879d95f4621",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Tax engine for SaaS?"
+      ],
+      "title": "Tax engine for SaaS?",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wjc0fy/tax_engine_for_saas/"
+    },
+    {
+      "builder_takeaway": "Introduction and promotion without evidence.",
+      "category": "Small Business Automation",
+      "id": "559e9ba9-893e-47a5-9af7-934c2a1d58c7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Hi! I'm new here."
+      ],
+      "title": "Hi! I'm new here.",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wj8li2/hi_im_new_here/"
+    },
+    {
+      "builder_takeaway": "Speculative idea request without customer evidence.",
+      "category": "Small Business Automation",
+      "id": "7922a32f-03bc-43fe-8724-86a575ddafb7",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Hey, I want to build a SaaS platform and charge $5 per month. Can you suggest some problems I could solve? Is $5 too cheap, or can I provide a few useful features at that price?"
+      ],
+      "title": "Hey, I want to build a SaaS platform and charge $5 per month. Can you suggest some problems I could solve? Is $5 too cheap, or can I provide a few useful features at that price?",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wjjwqg/hey_i_want_to_build_a_saas_platform_and_charge_5/"
+    },
+    {
+      "builder_takeaway": "General discussion, no concrete validation finding.",
+      "category": "Small Business Automation",
+      "id": "b4ed8740-4589-41b8-b120-d858efefcd2e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "How do you validate ideas?"
+      ],
+      "title": "How do you validate ideas?",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wjjn4j/how_do_you_validate_ideas/"
+    },
+    {
+      "builder_takeaway": "Research prompt rather than documented deliverability or API change.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "a97809a9-9621-4a89-bd69-b1b7a41f0e6a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "What are SaaS founders' biggest frustrations with transactional email?"
+      ],
+      "title": "What are SaaS founders' biggest frustrations with transactional email?",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wjjfmn/what_are_saas_founders_biggest_frustrations_with/"
+    },
+    {
+      "builder_takeaway": "Generic retention question without tested signals.",
+      "category": "Small Business Automation",
+      "id": "84d6cc43-12a9-4d7c-9e34-da6764831052",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "How do you detect a customer who is about to quietly disappear?"
+      ],
+      "title": "How do you detect a customer who is about to quietly disappear?",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wjjdbo/how_do_you_detect_a_customer_who_is_about_to/"
+    },
+    {
+      "builder_takeaway": "Anecdote and image do not establish a useful operating lesson.",
+      "category": "Small Business Automation",
+      "id": "87e547c4-9b58-4940-a06f-2641cf9dd419",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "This can't be real!"
+      ],
+      "title": "This can't be real!",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wjbdy6/this_cant_be_real/"
+    },
+    {
+      "builder_takeaway": "Familiar discovery lesson without enough specific outcome evidence.",
+      "category": "Tools Worth Testing",
+      "id": "8da03409-e964-48e7-95a3-9e626fd187d8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "We built the product. Then we realized we might be solving the wrong problem."
+      ],
+      "title": "We built the product. Then we realized we might be solving the wrong problem.",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wji7oo/we_built_the_product_then_we_realized_we_might_be/"
+    },
+    {
+      "builder_takeaway": "Promotional framing lacks measured quality improvements.",
+      "category": "Small Business Automation",
+      "id": "eb58c793-4385-4fef-a36f-9f8f1c8f681a",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "We stopped obsessing over features and started obsessing over output quality"
+      ],
+      "title": "We stopped obsessing over features and started obsessing over output quality",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wjhwc6/we_stopped_obsessing_over_features_and_started/"
+    },
+    {
+      "builder_takeaway": "Feedback request, no demonstrated distribution leverage.",
+      "category": "Small Business Automation",
+      "id": "0f17bc93-f753-4b74-bc64-4ccd49d89aca",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Check out my SaaS and tell me what needs to improve"
+      ],
+      "title": "Check out my SaaS and tell me what needs to improve",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wjhrrn/check_out_my_saas_and_tell_me_what_needs_to/"
+    },
+    {
+      "builder_takeaway": "Speculative panic without evidence; reject.",
+      "category": "Model + API Changes",
+      "id": "c1c7f5f1-4f72-45be-ab3e-a9c9fcc54a8c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "SO WHAT CAN WE EARN IF ASTRA CAN DO EVERYTHING?"
+      ],
+      "title": "SO WHAT CAN WE EARN IF ASTRA CAN DO EVERYTHING?",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wjhl06/so_what_can_we_earn_if_astra_can_do_everything/"
+    },
+    {
+      "builder_takeaway": "Unverified promotional reach claims do not demonstrate durable acquisition value.",
+      "category": "Small Business Automation",
+      "id": "f8bb1b0b-e9ad-4cc1-8e37-94852e78251c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "120K+ Daily views on TikTok with a Phone Farm"
+      ],
+      "title": "120K+ Daily views on TikTok with a Phone Farm",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wja0h7/120k_daily_views_on_tiktok_with_a_phone_farm/"
+    },
+    {
+      "builder_takeaway": "Generic engagement prompt.",
+      "category": "Small Business Automation",
+      "id": "44f12d35-285d-4561-8dd6-b4e28856c978",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Which founder problem would you permanently remove?"
+      ],
+      "title": "Which founder problem would you permanently remove?",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wjh58g/which_founder_problem_would_you_permanently_remove/"
+    },
+    {
+      "builder_takeaway": "Supplied excerpt contains no specific decision-changing development.",
+      "category": "Model + API Changes",
+      "id": "74897f9d-8330-401b-a45b-33491cc4fc76",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "latent.space",
+      "source_facts": [
+        "[AINews] not much happened today"
+      ],
+      "title": "[AINews] not much happened today",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://www.latent.space/p/ainews-not-much-happened-today-612"
+    },
+    {
+      "builder_takeaway": "Duplicate coverage; preserve immutable versioned release instead.",
+      "category": "Small Business Automation",
+      "id": "435c7a0e-0f01-411a-a005-a84ccc33d7d2",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "stable"
+      ],
+      "title": "stable",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/stable"
+    },
+    {
+      "builder_takeaway": "Concrete maintenance changes warrant checking affected stable installations.",
+      "category": "Small Business Automation",
+      "id": "3aa12795-1b01-4893-ac97-4d849b6c7b70",
+      "importance": "lead",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n@2.39.8"
+      ],
+      "title": "n8n@2.39.8",
+      "uncertainty": "Primary release page read; behavior, reliability and costs not independently tested.",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.8"
+    },
+    {
+      "builder_takeaway": "Relevant to prerelease testers; stable operators should track 2.39.8.",
+      "category": "Small Business Automation",
+      "id": "53edf5a8-0606-4419-8112-91bde5c8bd79",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n@2.40.3"
+      ],
+      "title": "n8n@2.40.3",
+      "uncertainty": "Primary release page read; behavior, reliability and costs not independently tested.",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.3"
+    },
+    {
+      "builder_takeaway": "Duplicate coverage of the exact prerelease in this claim.",
+      "category": "Small Business Automation",
+      "id": "668b1b54-1670-45ad-bcc1-d3a98d19d08c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "beta"
+      ],
+      "title": "beta",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/beta"
+    },
+    {
+      "builder_takeaway": "New model listing and vendor speed claim lack workload quality or cost comparison.",
+      "category": "Model + API Changes",
+      "id": "34e7b138-3802-4025-9abd-7e554f4cda71",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "GLM 5.3 FlashX now available on AI Gateway"
+      ],
+      "title": "GLM 5.3 FlashX now available on AI Gateway",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://vercel.com/changelog/glm-5-3-flashx-now-available-on-ai-gateway"
+    },
+    {
+      "builder_takeaway": "Concrete file limits and CLI version make this useful for report-preview workflows.",
+      "category": "AI Operations / Agent Control",
+      "id": "94af347e-87ee-46c2-a230-277051639712",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Sub-second artifact deployments are now supported in Vercel CLI"
+      ],
+      "title": "Sub-second artifact deployments are now supported in Vercel CLI",
+      "uncertainty": "Primary release page read; behavior, reliability and costs not independently tested.",
+      "url": "https://vercel.com/changelog/sub-second-artifact-deployments-are-now-supported-in-vercel-cli"
+    },
+    {
+      "builder_takeaway": "Per-deployment capacity avoids changing the project-wide setting for one build.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "bf1cd5be-dd7e-4cb6-a174-9955d00318bd",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Turbo build machines can now be enabled per deployment"
+      ],
+      "title": "Turbo build machines can now be enabled per deployment",
+      "uncertainty": "Primary release page read; behavior, reliability and costs not independently tested.",
+      "url": "https://vercel.com/changelog/turbo-build-machines-can-now-be-enabled-per-deployment"
+    },
+    {
+      "builder_takeaway": "A concrete hosted evaluation adapter may remove local concurrency limits.",
+      "category": "AI Operations / Agent Control",
+      "id": "69885698-cfac-4286-88bf-ff63b4075dad",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Run Terminal-Bench and other Harbor evals on Vercel Sandbox"
+      ],
+      "title": "Run Terminal-Bench and other Harbor evals on Vercel Sandbox",
+      "uncertainty": "Primary release page read; behavior, reliability and costs not independently tested.",
+      "url": "https://vercel.com/changelog/run-terminal-bench-and-other-harbor-evals-on-vercel-sandbox"
+    },
+    {
+      "builder_takeaway": "Changes how teams can author and distribute reviewed agent instructions.",
+      "category": "AI Operations / Agent Control",
+      "id": "c28668dd-5334-4102-b6bf-d2dedfdb2c98",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "The skills CLI now supports Notion hosted skills"
+      ],
+      "title": "The skills CLI now supports Notion hosted skills",
+      "uncertainty": "Primary release page read; behavior, reliability and costs not independently tested.",
+      "url": "https://vercel.com/changelog/skills-cli-notion-skills"
+    },
+    {
+      "builder_takeaway": "Vendor-specific aggregate usage is not a workload-specific model recommendation.",
+      "category": "Small Business Automation",
+      "id": "c24ef0d0-61a7-4a8d-80f9-b11b10a79c48",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Open-weight models take 56% of token volume, Astra doubles Fable 5.1 spend"
+      ],
+      "title": "Open-weight models take 56% of token volume, Astra doubles Fable 5.1 spend",
+      "uncertainty": "Assessment based on supplied title/excerpt; linked page not opened.",
+      "url": "https://vercel.com/blog/ai-gateway-production-index-september-2026"
     }
   ],
   "mode": "primary",
-  "run_id": "2a8419dd-46ea-43a7-8e15-06eed1a69ea0",
+  "run_id": "ad477208-0c3a-4f24-92c4-0e7f646f9bd9",
   "status": "completed",
-  "summary": "Synthesized Nightly Librarian run with 8 promoted item(s), 15 scored item(s), and 7 rejected item(s).",
+  "summary": "Synthesized Nightly Librarian run with 8 promoted item(s), 40 scored item(s), and 32 rejected item(s).",
   "title": "Nightly Librarian - 2026-09-18"
 }

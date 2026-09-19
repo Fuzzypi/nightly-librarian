@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>September 19, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="10 stories cleared the bar, led by Be alert: targeted attacks on prominent Rustaceans, Hacking OpenAI, and Bonsai 2 27B: Near-Lossless Compression in a 9x">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-09-19/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="September 19, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="10 stories cleared the bar, led by Be alert: targeted attacks on prominent Rustaceans, Hacking OpenAI, and Bonsai 2 27B: Near-Lossless Compression in a 9x">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-09-19/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="September 19, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="10 stories cleared the bar, led by Be alert: targeted attacks on prominent Rustaceans, Hacking OpenAI, and Bonsai 2 27B: Near-Lossless Compression in a 9x">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>September 19, 2026 · Report log</span>
+      <span>Sep 19, 2026, 2:13 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>September 19, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>10 stories cleared the bar, led by Be alert: targeted attacks on prominent Rustaceans, Hacking OpenAI, and Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>10 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.rust-lang.org/2026/09/17/targeted-attacks/" target="_blank" rel="noopener">Be alert: targeted attacks on prominent Rustaceans</a></div>
+        <div class="item-takeaway">The crates.io team and Rust security response working group warn of an active campaign against rust-lang members and owners of popular crates, aimed at compromising devices and accounts in order to publish malware. The hook is a friendly video call about a job, contract or project, followed by a prompt to install a purportedly missing audio codec or run a command placed on the clipboard; attackers are using new but plausible company profiles with LinkedIn presences. If you hold publish rights anywhere, treat cold recruiter outreach as hostile, insist on call platforms you already trust, and never run a command handed to you mid-call.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.hacktron.ai/blog/hacking-openai" target="_blank" rel="noopener">Hacking OpenAI</a></div>
+        <div class="item-takeaway">A three-person team at Hacktron chained a malicious HEIF image upload into remote code execution on OpenAI's community forum, then exploited an SSO misconfiguration to steal identity tokens and take over ChatGPT and Codex accounts belonging to OpenAI employees, reaching internal monorepo access in under 72 hours. OpenAI patched within 14 hours and paid a $6,500 bounty. Two takeaways worth acting on: image parsers are still a live RCE surface, and a peripheral forum subdomain sharing your SSO can be a path straight into core identity.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://prismml.com/news/bonsai-2-27b" target="_blank" rel="noopener">Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint</a></div>
+        <div class="item-takeaway">PrismML ternary-quantized Qwen3.8 27B to 5.9GB at 1.76 effective bits per weight while retaining 98.2% of aggregate benchmark performance, up from 95% on the previous Bonsai release. It keeps the 262K context window and multimodal text-plus-image input, ships under Apache 2.0, and has an MLX build on Hugging Face. This is the first model in this class plausibly good enough to run agentic coding locally on a MacBook instead of paying per token — but the retention figures are vendor-reported, so verify on your own eval before moving real work off a hosted API.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/gpt-live-1-now-available-on-ai-gateway" target="_blank" rel="noopener">GPT-Live 1 now available on AI Gateway</a></div>
+        <div class="item-takeaway">OpenAI's GPT-Live 1, a full-duplex voice model, is now routable through Vercel AI Gateway with AI SDK 7 and @ai-sdk/openai 4.0.67. Full duplex means the model listens and speaks at the same time, removing the turn-detection boundary that makes most voice agents feel stilted. It also supports client delegation, so the voice session stays live while deeper work is handed to any text model on the Gateway. If you build phone or voice agents, this is worth a spike against your current turn-detection stack.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://openai.com/index/astra-for-law/" target="_blank" rel="noopener">Introducing Astra for Law</a></div>
+        <div class="item-takeaway">OpenAI wrapped GPT-6 Astra in a legal search index covering US case law, statutes, regulations and court rules across roughly 230 million URLs, launching with 26 partner plugins including Thomson Reuters, Harvey, Legora and iManage. OpenAI claims 40% higher research accuracy than GPT-6 Astra with plain web search. The signal for solo builders is structural rather than legal: OpenAI is now shipping vertical, index-backed configurations with a partner program, which squeezes thin-wrapper products while opening an integration surface.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://micahflee.com/flock-cameras-are-riddled-with-security-vulnerabilities-and-hard-coded-credentials/" target="_blank" rel="noopener">Flock cameras are riddled with security vulnerabilities and hard-coded credentials</a></div>
+        <div class="item-takeaway">Filesystem images extracted from a deployed Flock ALPR camera show Android 8.1 with a 2018 security patch level on a June 2025 build, exposing known kernel and Adreno GPU vulnerabilities. A hard-coded API key shared across 19 bundled apps can request Auth0 credentials for any camera by MAC address, and those credentials sit in plaintext on a persist partition that survives factory reset. No direct action for a solo shop, but it is the cleanest recent case study in how one shared secret plus a never-wiped partition turns a single extracted device into fleet compromise.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.minitap.ai/blog/i-expected-better-from-google" target="_blank" rel="noopener">I expected better from Google</a></div>
+        <div class="item-takeaway">Minitap alleges Google's Artemis mobile-automation project copied substantial code, prompts and examples from Minitap's open-source mobile-use repository, including identical bugs, and that earlier Artemis commits credited Minitap engineers before an August force-push replaced them. Minitap has contacted Google privately and opened a public GitHub issue asking for corrected attribution. This is one side of the story, but it is a practical reminder: if you publish research code, choose a license you would actually enforce and keep provenance you can point at.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://fex-emu.com/Scourge-of-emulation/" target="_blank" rel="noopener">The scourge of x86 emulation</a></div>
+        <div class="item-takeaway">FEX-Emu's first feature article explains why emulating the x86 memory model on ARM64 is the hardest problem in x86 emulation, covering atomics, ordering guarantees and the performance cost of preserving them. Deep and narrow, but useful background if you ship anything that must behave identically on Apple Silicon and x86 CI runners.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://bend-lang.com/" target="_blank" rel="noopener">Bend — a language that blocks AI mistakes via proof, on CPU and GPU</a></div>
+        <div class="item-takeaway">Bend 2 is a proof-checking language aiming for C-level single-core speed and massively parallel GPU execution, pitched at the problem of trusting AI-generated code without reading it. The compiler can verify mathematical proofs and claims sub-second checking on files that take other systems minutes. Compelling premise, but the claims are the project's own and there is no production track record yet.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/jemalloc/jemalloc/releases/tag/5.4.0" target="_blank" rel="noopener">Jemalloc 5.4.0</a></div>
+        <div class="item-takeaway">A new jemalloc point release. Relevant if you tune allocators directly or ship latency-sensitive native services; for most solo builders it will arrive indirectly through a runtime or distro upgrade rather than as a deliberate choice.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/gpt-live-1-now-available-on-ai-gateway" target="_blank" rel="noopener">GPT-Live 1 now available on AI Gateway</a>
+        </div>
+        <div class="item-takeaway">OpenAI's GPT-Live 1, a full-duplex voice model, is now routable through Vercel AI Gateway with AI SDK 7 and @ai-sdk/openai 4.0.67. Full duplex means the model listens and speaks at the same time, removing the turn-detection boundary that makes most voice agents feel stilted. It also supports client delegation, so the voice session stays live while deeper work is handed to any text model on the Gateway. If you build phone or voice agents, this is worth a spike against your current turn-detection stack.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/custom-environments-support-for-marketplace-integrations" target="_blank" rel="noopener">Native Marketplace integrations now support custom environments</a>
+        </div>
+        <div class="item-takeaway">Vercel now lets native Marketplace resources be connected to custom environments, not just production, preview and development, via dashboard, CLI or REST API. Environment variables from the connection are scoped to the selected environments, and existing deployments are unaffected until redeployed. Available on Pro and Enterprise plans only.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.35" target="_blank" rel="noopener">Next.js v16.4.0-canary.35</a>
+        </div>
+        <div class="item-takeaway">A Next.js canary release containing miscellaneous internal changes: agent-upgrade nudges for next upgrade --ai, Turbopack build-dependency tracking, an lz4_flex swap, swc bump to v79, and various turbo-persistence read-path cleanups. No user-facing features.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.hacktron.ai/blog/hacking-openai" target="_blank" rel="noopener">Hacking OpenAI</a>
+        </div>
+        <div class="item-takeaway">A three-person team at Hacktron chained a malicious HEIF image upload into remote code execution on OpenAI's community forum, then exploited an SSO misconfiguration to steal identity tokens and take over ChatGPT and Codex accounts belonging to OpenAI employees, reaching internal monorepo access in under 72 hours. OpenAI patched within 14 hours and paid a $6,500 bounty. Two takeaways worth acting on: image parsers are still a live RCE surface, and a peripheral forum subdomain sharing your SSO can be a path straight into core identity.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://github.com/jemalloc/jemalloc/releases/tag/5.4.0" target="_blank" rel="noopener">Jemalloc 5.4.0</a>
+        </div>
+        <div class="item-takeaway">A new jemalloc point release. Relevant if you tune allocators directly or ship latency-sensitive native services; for most solo builders it will arrive indirectly through a runtime or distro upgrade rather than as a deliberate choice.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://openai.com/index/astra-for-law/" target="_blank" rel="noopener">Introducing Astra for Law</a>
+        </div>
+        <div class="item-takeaway">OpenAI wrapped GPT-6 Astra in a legal search index covering US case law, statutes, regulations and court rules across roughly 230 million URLs, launching with 26 partner plugins including Thomson Reuters, Harvey, Legora and iManage. OpenAI claims 40% higher research accuracy than GPT-6 Astra with plain web search. The signal for solo builders is structural rather than legal: OpenAI is now shipping vertical, index-backed configurations with a partner program, which squeezes thin-wrapper products while opening an integration surface.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://fex-emu.com/Scourge-of-emulation/" target="_blank" rel="noopener">The scourge of x86 emulation</a>
+        </div>
+        <div class="item-takeaway">FEX-Emu's first feature article explains why emulating the x86 memory model on ARM64 is the hardest problem in x86 emulation, covering atomics, ordering guarantees and the performance cost of preserving them. Deep and narrow, but useful background if you ship anything that must behave identically on Apple Silicon and x86 CI runners.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://prismml.com/news/bonsai-2-27b" target="_blank" rel="noopener">Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint</a>
+        </div>
+        <div class="item-takeaway">PrismML ternary-quantized Qwen3.8 27B to 5.9GB at 1.76 effective bits per weight while retaining 98.2% of aggregate benchmark performance, up from 95% on the previous Bonsai release. It keeps the 262K context window and multimodal text-plus-image input, ships under Apache 2.0, and has an MLX build on Hugging Face. This is the first model in this class plausibly good enough to run agentic coding locally on a MacBook instead of paying per token — but the retention figures are vendor-reported, so verify on your own eval before moving real work off a hosted API.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          Bend
+        </div>
+        <div class="item-takeaway">a language that blocks AI mistakes via proof, on CPU and GPU — https://bend-lang.com/ — Bend 2 is a proof-checking language aiming for C-level single-core speed and massively parallel GPU execution, pitched at the problem of trusting AI-generated code without reading it. The compiler can verify mathematical proofs and claims sub-second checking on files that take other systems minutes. Compelling premise, but the claims are the project's own and there is no production track record yet.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://qwen.ai/blog?id=qwen3.8-omni-flash" target="_blank" rel="noopener">Qwen 3.8 Omni Flash</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://linguisticdiscovery.com/posts/pre-greek/" target="_blank" rel="noopener">Pre-Greek: The lost language hidden within Ancient Greek</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/asciimoo/hister" target="_blank" rel="noopener">Hister: A private search engine for the pages you visit and the files you keep</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://en.wikipedia.org/wiki/Wax_motor" target="_blank" rel="noopener">Wax motor</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://global.fujitsu/en-global/pr/news/2026/09/14-02" target="_blank" rel="noopener">Fujitsu launches made-in-Japan next-generation CPU FUJITSU-MONAKA</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://byteshape.com/blogs/Qwen3.8-27B/" target="_blank" rel="noopener">Shapelearn Qwen 3.8 27B (13.1 GB VRAM)</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/" target="_blank" rel="noopener">How to Write with an LLM</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://flet.dev/" target="_blank" rel="noopener">Flet 1.0 – Build cross-platform apps in Python</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.sci.news/paleontology/spanish-diplodocus-15064.html" target="_blank" rel="noopener">Diplodocus, Long Thought Exclusively American, Turns Up in Spain</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://liamnugent.me/posts/what-you-dont-build/" target="_blank" rel="noopener">The most important product decision is what you don't build</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://waymo.com/waymo-in-singapore/" target="_blank" rel="noopener">Waymo in Singapore</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.crowdsec.net/blog/crowdsec-statement-source-code-exposure" target="_blank" rel="noopener">CrowdSec Source Code Leak</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://gowers.wordpress.com/2026/09/17/why-i-didnt-sign-the-fields-medallists-letter/" target="_blank" rel="noopener">Why I didn’t sign the Fields medallists’ letter</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://mathoverflow.net/questions/515260/how-do-we-prevent-mathematics-from-devolving-into-the-medieval-era-of-secrecy" target="_blank" rel="noopener">How do we prevent mathemathics from devolving into the Medieval Era of secrecy?</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.uber.com/us/en/blog/protecting-against-retry-storms/" target="_blank" rel="noopener">How Uber Protects Against Retry Storms</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://snapdrop.me" target="_blank" rel="noopener">Show HN: Snapdrop: Instantly share files between devices. No setup, no signup</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://arxiv.org/abs/2609.18842" target="_blank" rel="noopener">Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://martinfowler.com/articles/2026-dont-like-llms.html" target="_blank" rel="noopener">I Don't Like LLMs</a>
+        </div>
+        <div class="item-takeaway">Martin Fowler writes that among his mixed feelings about LLMs, dislike dominates: the grating uncanny-valley voice, confident fabrication with shallow remorse, and wariness about the subculture producing them. He allows he may like them once they mature. Well-argued and from a credible voice, but there is nothing here to act on.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://verdagon.dev/blog/golden-spike-reviving-vale-valen" target="_blank" rel="noopener">The Golden Spike, and Resurrecting the Vale(n) Programming Language</a>
+        </div>
+        <div class="item-takeaway">A post on reviving the Vale(n) research programming language and reaching a milestone the author calls the golden spike. Interesting to programming-language people, but offers no leverage, tooling or decision for a solo software business.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://micahflee.com/flock-cameras-are-riddled-with-security-vulnerabilities-and-hard-coded-credentials/" target="_blank" rel="noopener">Flock cameras are riddled with security vulnerabilities and hard-coded credentials</a>
+        </div>
+        <div class="item-takeaway">Filesystem images extracted from a deployed Flock ALPR camera show Android 8.1 with a 2018 security patch level on a June 2025 build, exposing known kernel and Adreno GPU vulnerabilities. A hard-coded API key shared across 19 bundled apps can request Auth0 credentials for any camera by MAC address, and those credentials sit in plaintext on a persist partition that survives factory reset. No direct action for a solo shop, but it is the cleanest recent case study in how one shared secret plus a never-wiped partition turns a single extracted device into fleet compromise.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.rust-lang.org/2026/09/17/targeted-attacks/" target="_blank" rel="noopener">Be alert: targeted attacks on prominent Rustaceans</a>
+        </div>
+        <div class="item-takeaway">The crates.io team and Rust security response working group warn of an active campaign against rust-lang members and owners of popular crates, aimed at compromising devices and accounts in order to publish malware. The hook is a friendly video call about a job, contract or project, followed by a prompt to install a purportedly missing audio codec or run a command placed on the clipboard; attackers are using new but plausible company profiles with LinkedIn presences. If you hold publish rights anywhere, treat cold recruiter outreach as hostile, insist on call platforms you already trust, and never run a command handed to you mid-call.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.minitap.ai/blog/i-expected-better-from-google" target="_blank" rel="noopener">I expected better from Google</a>
+        </div>
+        <div class="item-takeaway">Minitap alleges Google's Artemis mobile-automation project copied substantial code, prompts and examples from Minitap's open-source mobile-use repository, including identical bugs, and that earlier Artemis commits credited Minitap engineers before an August force-push replaced them. Minitap has contacted Google privately and opened a public GitHub issue asking for corrected attribution. This is one side of the story, but it is a practical reminder: if you publish research code, choose a license you would actually enforce and keep provenance you can point at.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.netmeister.org/blog/everybodys-lost-their-minds.html" target="_blank" rel="noopener">Everybody's Lost Their Minds</a>
+        </div>
+        <div class="item-takeaway">A widely shared venting post about AI discourse and wanting off the ride. High engagement on Hacker News and Lobsters, but no claim, no evidence and nothing to decide.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev" target="_blank" rel="noopener">Introducing System One Models &amp; Jev</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://iev.ee/blog/categorize-everything-all-at-once/" target="_blank" rel="noopener">Labeled matches: why is this not in every regex engine?</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.mcsweeneys.net/articles/we-must-create-the-shit-machine" target="_blank" rel="noopener">We Must Create the Shit Machine</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://jakeasmith.com/blog/http-build-url/" target="_blank" rel="noopener">My temporary PHP fix from 2014 has nearly 20M installs. Today I'm deprecating it</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/jemalloc/jemalloc/releases/tag/5.4.0" target="_blank" rel="noopener">jemalloc 5.4.0 release</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.ploeh.dk/2026/09/16/on-learning-programming-in-an-age-of-llms/" target="_blank" rel="noopener">On learning programming in an age of LLMs</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://seclists.org/oss-sec/2026/q3/822" target="_blank" rel="noopener">A quartet of Linux local root vulns: DirtyAH6, PPPoEject, TUNderflow, and DiagSpill</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://harnesstax.github.io/" target="_blank" rel="noopener">HarnessTax: How Much Does the Harness Matter for Coding Agents?</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: a85ba261-0160-4902-b195-e123f26d445a
+Started: 2026-09-19T06:09:40.680Z
+Completed: 2026-09-19T06:13:44.539Z
+
+## Worth attention
+
+- **Be alert: targeted attacks on prominent Rustaceans**
+  https://blog.rust-lang.org/2026/09/17/targeted-attacks/
+  The crates.io team and Rust security response working group warn of an active campaign against rust-lang members and owners of popular crates, aimed at compromising devices and accounts in order to publish malware. The hook is a friendly video call about a job, contract or project, followed by a prompt to install a purportedly missing audio codec or run a command placed on the clipboard; attackers are using new but plausible company profiles with LinkedIn presences. If you hold publish rights anywhere, treat cold recruiter outreach as hostile, insist on call platforms you already trust, and never run a command handed to you mid-call.
+- **Hacking OpenAI**
+  https://www.hacktron.ai/blog/hacking-openai
+  A three-person team at Hacktron chained a malicious HEIF image upload into remote code execution on OpenAI's community forum, then exploited an SSO misconfiguration to steal identity tokens and take over ChatGPT and Codex accounts belonging to OpenAI employees, reaching internal monorepo access in under 72 hours. OpenAI patched within 14 hours and paid a $6,500 bounty. Two takeaways worth acting on: image parsers are still a live RCE surface, and a peripheral forum subdomain sharing your SSO can be a path straight into core identity.
+- **Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint**
+  https://prismml.com/news/bonsai-2-27b
+  PrismML ternary-quantized Qwen3.8 27B to 5.9GB at 1.76 effective bits per weight while retaining 98.2% of aggregate benchmark performance, up from 95% on the previous Bonsai release. It keeps the 262K context window and multimodal text-plus-image input, ships under Apache 2.0, and has an MLX build on Hugging Face. This is the first model in this class plausibly good enough to run agentic coding locally on a MacBook instead of paying per token — but the retention figures are vendor-reported, so verify on your own eval before moving real work off a hosted API.
+- **GPT-Live 1 now available on AI Gateway**
+  https://vercel.com/changelog/gpt-live-1-now-available-on-ai-gateway
+  OpenAI's GPT-Live 1, a full-duplex voice model, is now routable through Vercel AI Gateway with AI SDK 7 and @ai-sdk/openai 4.0.67. Full duplex means the model listens and speaks at the same time, removing the turn-detection boundary that makes most voice agents feel stilted. It also supports client delegation, so the voice session stays live while deeper work is handed to any text model on the Gateway. If you build phone or voice agents, this is worth a spike against your current turn-detection stack.
+- **Introducing Astra for Law**
+  https://openai.com/index/astra-for-law/
+  OpenAI wrapped GPT-6 Astra in a legal search index covering US case law, statutes, regulations and court rules across roughly 230 million URLs, launching with 26 partner plugins including Thomson Reuters, Harvey, Legora and iManage. OpenAI claims 40% higher research accuracy than GPT-6 Astra with plain web search. The signal for solo builders is structural rather than legal: OpenAI is now shipping vertical, index-backed configurations with a partner program, which squeezes thin-wrapper products while opening an integration surface.
+- **Flock cameras are riddled with security vulnerabilities and hard-coded credentials**
+  https://micahflee.com/flock-cameras-are-riddled-with-security-vulnerabilities-and-hard-coded-credentials/
+  Filesystem images extracted from a deployed Flock ALPR camera show Android 8.1 with a 2018 security patch level on a June 2025 build, exposing known kernel and Adreno GPU vulnerabilities. A hard-coded API key shared across 19 bundled apps can request Auth0 credentials for any camera by MAC address, and those credentials sit in plaintext on a persist partition that survives factory reset. No direct action for a solo shop, but it is the cleanest recent case study in how one shared secret plus a never-wiped partition turns a single extracted device into fleet compromise.
+- **I expected better from Google**
+  https://www.minitap.ai/blog/i-expected-better-from-google
+  Minitap alleges Google's Artemis mobile-automation project copied substantial code, prompts and examples from Minitap's open-source mobile-use repository, including identical bugs, and that earlier Artemis commits credited Minitap engineers before an August force-push replaced them. Minitap has contacted Google privately and opened a public GitHub issue asking for corrected attribution. This is one side of the story, but it is a practical reminder: if you publish research code, choose a license you would actually enforce and keep provenance you can point at.
+- **The scourge of x86 emulation**
+  https://fex-emu.com/Scourge-of-emulation/
+  FEX-Emu's first feature article explains why emulating the x86 memory model on ARM64 is the hardest problem in x86 emulation, covering atomics, ordering guarantees and the performance cost of preserving them. Deep and narrow, but useful background if you ship anything that must behave identically on Apple Silicon and x86 CI runners.
+- **Bend — a language that blocks AI mistakes via proof, on CPU and GPU**
+  https://bend-lang.com/
+  Bend 2 is a proof-checking language aiming for C-level single-core speed and massively parallel GPU execution, pitched at the problem of trusting AI-generated code without reading it. The compiler can verify mathematical proofs and claims sub-second checking on files that take other systems minutes. Compelling premise, but the claims are the project's own and there is no production track record yet.
+- **Jemalloc 5.4.0**
+  https://github.com/jemalloc/jemalloc/releases/tag/5.4.0
+  A new jemalloc point release. Relevant if you tune allocators directly or ship latency-sensitive native services; for most solo builders it will arrive indirectly through a runtime or distro upgrade rather than as a deliberate choice.
+
+## Full digest
+
+- [P] [vercel-changelog] GPT-Live 1 now available on AI Gateway — https://vercel.com/changelog/gpt-live-1-now-available-on-ai-gateway — OpenAI's GPT-Live 1, a full-duplex voice model, is now routable through Vercel AI Gateway with AI SDK 7 and @ai-sdk/openai 4.0.67. Full duplex means the model listens and speaks at the same time, removing the turn-detection boundary that makes most voice agents feel stilted. It also supports client delegation, so the voice session stays live while deeper work is handed to any text model on the Gateway. If you build phone or voice agents, this is worth a spike against your current turn-detection stack.
+- [R] [vercel-changelog] Native Marketplace integrations now support custom environments — https://vercel.com/changelog/custom-environments-support-for-marketplace-integrations — Vercel now lets native Marketplace resources be connected to custom environments, not just production, preview and development, via dashboard, CLI or REST API. Environment variables from the connection are scoped to the selected environments, and existing deployments are unaffected until redeployed. Available on Pro and Enterprise plans only.
+- [R] [gh-nextjs] Next.js v16.4.0-canary.35 — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.35 — A Next.js canary release containing miscellaneous internal changes: agent-upgrade nudges for next upgrade --ai, Turbopack build-dependency tracking, an lz4_flex swap, swc bump to v79, and various turbo-persistence read-path cleanups. No user-facing features.
+- [P] [hn-top] Hacking OpenAI — https://www.hacktron.ai/blog/hacking-openai — A three-person team at Hacktron chained a malicious HEIF image upload into remote code execution on OpenAI's community forum, then exploited an SSO misconfiguration to steal identity tokens and take over ChatGPT and Codex accounts belonging to OpenAI employees, reaching internal monorepo access in under 72 hours. OpenAI patched within 14 hours and paid a $6,500 bounty. Two takeaways worth acting on: image parsers are still a live RCE surface, and a peripheral forum subdomain sharing your SSO can be a path straight into core identity.
+- [M] [hn-top] Jemalloc 5.4.0 — https://github.com/jemalloc/jemalloc/releases/tag/5.4.0 — A new jemalloc point release. Relevant if you tune allocators directly or ship latency-sensitive native services; for most solo builders it will arrive indirectly through a runtime or distro upgrade rather than as a deliberate choice.
+- [P] [hn-top] Introducing Astra for Law — https://openai.com/index/astra-for-law/ — OpenAI wrapped GPT-6 Astra in a legal search index covering US case law, statutes, regulations and court rules across roughly 230 million URLs, launching with 26 partner plugins including Thomson Reuters, Harvey, Legora and iManage. OpenAI claims 40% higher research accuracy than GPT-6 Astra with plain web search. The signal for solo builders is structural rather than legal: OpenAI is now shipping vertical, index-backed configurations with a partner program, which squeezes thin-wrapper products while opening an integration surface.
+- [P] [hn-top] The scourge of x86 emulation — https://fex-emu.com/Scourge-of-emulation/ — FEX-Emu's first feature article explains why emulating the x86 memory model on ARM64 is the hardest problem in x86 emulation, covering atomics, ordering guarantees and the performance cost of preserving them. Deep and narrow, but useful background if you ship anything that must behave identically on Apple Silicon and x86 CI runners.
+- [P] [hn-top] Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint — https://prismml.com/news/bonsai-2-27b — PrismML ternary-quantized Qwen3.8 27B to 5.9GB at 1.76 effective bits per weight while retaining 98.2% of aggregate benchmark performance, up from 95% on the previous Bonsai release. It keeps the 262K context window and multimodal text-plus-image input, ships under Apache 2.0, and has an MLX build on Hugging Face. This is the first model in this class plausibly good enough to run agentic coding locally on a MacBook instead of paying per token — but the retention figures are vendor-reported, so verify on your own eval before moving real work off a hosted API.
+- [M] [hn-top] Bend — a language that blocks AI mistakes via proof, on CPU and GPU — https://bend-lang.com/ — Bend 2 is a proof-checking language aiming for C-level single-core speed and massively parallel GPU execution, pitched at the problem of trusting AI-generated code without reading it. The compiler can verify mathematical proofs and claims sub-second checking on files that take other systems minutes. Compelling premise, but the claims are the project's own and there is no production track record yet.
+- [R] [hn-top] Qwen 3.8 Omni Flash — https://qwen.ai/blog?id=qwen3.8-omni-flash — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Pre-Greek: The lost language hidden within Ancient Greek — https://linguisticdiscovery.com/posts/pre-greek/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Hister: A private search engine for the pages you visit and the files you keep — https://github.com/asciimoo/hister — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Wax motor — https://en.wikipedia.org/wiki/Wax_motor — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Fujitsu launches made-in-Japan next-generation CPU FUJITSU-MONAKA — https://global.fujitsu/en-global/pr/news/2026/09/14-02 — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Shapelearn Qwen 3.8 27B (13.1 GB VRAM) — https://byteshape.com/blogs/Qwen3.8-27B/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] How to Write with an LLM — https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Flet 1.0 – Build cross-platform apps in Python — https://flet.dev/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Diplodocus, Long Thought Exclusively American, Turns Up in Spain — https://www.sci.news/paleontology/spanish-diplodocus-15064.html — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] The most important product decision is what you don't build — https://liamnugent.me/posts/what-you-dont-build/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Waymo in Singapore — https://waymo.com/waymo-in-singapore/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] CrowdSec Source Code Leak — https://www.crowdsec.net/blog/crowdsec-statement-source-code-exposure — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Why I didn’t sign the Fields medallists’ letter — https://gowers.wordpress.com/2026/09/17/why-i-didnt-sign-the-fields-medallists-letter/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] How do we prevent mathemathics from devolving into the Medieval Era of secrecy? — https://mathoverflow.net/questions/515260/how-do-we-prevent-mathematics-from-devolving-into-the-medieval-era-of-secrecy — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] How Uber Protects Against Retry Storms — https://www.uber.com/us/en/blog/protecting-against-retry-storms/ — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Show HN: Snapdrop: Instantly share files between devices. No setup, no signup — https://snapdrop.me — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data — https://arxiv.org/abs/2609.18842 — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [lobsters] I Don't Like LLMs — https://martinfowler.com/articles/2026-dont-like-llms.html — Martin Fowler writes that among his mixed feelings about LLMs, dislike dominates: the grating uncanny-valley voice, confident fabrication with shallow remorse, and wariness about the subculture producing them. He allows he may like them once they mature. Well-argued and from a credible voice, but there is nothing here to act on.
+- [R] [lobsters] The Golden Spike, and Resurrecting the Vale(n) Programming Language — https://verdagon.dev/blog/golden-spike-reviving-vale-valen — A post on reviving the Vale(n) research programming language and reaching a milestone the author calls the golden spike. Interesting to programming-language people, but offers no leverage, tooling or decision for a solo software business.
+- [P] [lobsters] Flock cameras are riddled with security vulnerabilities and hard-coded credentials — https://micahflee.com/flock-cameras-are-riddled-with-security-vulnerabilities-and-hard-coded-credentials/ — Filesystem images extracted from a deployed Flock ALPR camera show Android 8.1 with a 2018 security patch level on a June 2025 build, exposing known kernel and Adreno GPU vulnerabilities. A hard-coded API key shared across 19 bundled apps can request Auth0 credentials for any camera by MAC address, and those credentials sit in plaintext on a persist partition that survives factory reset. No direct action for a solo shop, but it is the cleanest recent case study in how one shared secret plus a never-wiped partition turns a single extracted device into fleet compromise.
+- [P] [lobsters] Be alert: targeted attacks on prominent Rustaceans — https://blog.rust-lang.org/2026/09/17/targeted-attacks/ — The crates.io team and Rust security response working group warn of an active campaign against rust-lang members and owners of popular crates, aimed at compromising devices and accounts in order to publish malware. The hook is a friendly video call about a job, contract or project, followed by a prompt to install a purportedly missing audio codec or run a command placed on the clipboard; attackers are using new but plausible company profiles with LinkedIn presences. If you hold publish rights anywhere, treat cold recruiter outreach as hostile, insist on call platforms you already trust, and never run a command handed to you mid-call.
+- [P] [lobsters] I expected better from Google — https://www.minitap.ai/blog/i-expected-better-from-google — Minitap alleges Google's Artemis mobile-automation project copied substantial code, prompts and examples from Minitap's open-source mobile-use repository, including identical bugs, and that earlier Artemis commits credited Minitap engineers before an August force-push replaced them. Minitap has contacted Google privately and opened a public GitHub issue asking for corrected attribution. This is one side of the story, but it is a practical reminder: if you publish research code, choose a license you would actually enforce and keep provenance you can point at.
+- [R] [lobsters] Everybody's Lost Their Minds — https://www.netmeister.org/blog/everybodys-lost-their-minds.html — A widely shared venting post about AI discourse and wanting off the ride. High engagement on Hacker News and Lobsters, but no claim, no evidence and nothing to decide.
+- [R] [lobsters] Introducing System One Models &amp; Jev — https://typesafe.ai/blog/introducing-system-one-models-and-jev — Comments
+- [R] [lobsters] Labeled matches: why is this not in every regex engine? — https://iev.ee/blog/categorize-everything-all-at-once/ — Comments
+- [R] [lobsters] We Must Create the Shit Machine — https://www.mcsweeneys.net/articles/we-must-create-the-shit-machine — Comments
+- [R] [lobsters] My temporary PHP fix from 2014 has nearly 20M installs. Today I'm deprecating it — https://jakeasmith.com/blog/http-build-url/ — Comments
+- [R] [lobsters] jemalloc 5.4.0 release — https://github.com/jemalloc/jemalloc/releases/tag/5.4.0 — Comments
+- [R] [lobsters] On learning programming in an age of LLMs — https://blog.ploeh.dk/2026/09/16/on-learning-programming-in-an-age-of-llms/ — Comments
+- [R] [lobsters] A quartet of Linux local root vulns: DirtyAH6, PPPoEject, TUNderflow, and DiagSpill — https://seclists.org/oss-sec/2026/q3/822 — Comments
+- [R] [lobsters] HarnessTax: How Much Does the Harness Matter for Coding Agents? — https://harnesstax.github.io/ — Comments</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
