@@ -1,149 +1,206 @@
 {
   "date": "2026-09-20",
-  "generated_at": "2026-09-20T06:13:38.285Z",
+  "generated_at": "2026-09-20T11:06:51.970Z",
   "imported_from": {
     "importer_version": "digest-import/v1",
     "source_artifact": "artifacts/synthesized/2026-09-20.json",
-    "source_sha256": "4cbf09f72b29c0bbf23263daddc5e7a86ceb663402be0d0fe11802f7153fae63"
+    "source_sha256": "2e881a26b681ffb7fc2d855c12b1bd46cb2ce7c44cc6132e34418e3cd1e9211a"
   },
   "items": [
     {
-      "builder_takeaway": "A structural change in how Android platform code reaches non-Pixel devices, with direct consequences for API availability assumptions and security patch timing.",
-      "category": "Model + API Changes",
-      "id": "460e3c90-8d94-4a69-a582-465445d3db5e",
-      "importance": "lead",
-      "labels": [
-        "builder_reported",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-20T00:00:00.000Z",
-      "source": "grapheneos.social",
-      "source_facts": [
-        "Android 17 QPR1 is the first Android release since 3.x to ship new developer APIs whose implementations were not published to AOSP, leaving them Pixel-exclusive until QPR2 in December 2026."
-      ],
-      "title": "Android 17 QPR1 adds new APIs without releasing them to AOSP",
-      "uncertainty": "Claim originates from GrapheneOS and secondary press coverage; Google has not published a direct statement confirming the withholding or its intended duration.",
-      "url": "https://grapheneos.social/@GrapheneOS/117282080803799576"
-    },
-    {
-      "builder_takeaway": "Directly applicable architectural pattern for cheap agent automation, and per-step cost is the main blocker for running computer-use loops at volume.",
-      "category": "AI Operations / Agent Control",
-      "id": "30fa9cf0-1895-46e3-9c9c-c9116553e6f7",
-      "importance": "supporting",
-      "labels": [
-        "builder_reported",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-20T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "typesafe-computer-use performs macOS computer-use automation for roughly $0.0002 per step by combining deterministic screen OCR with a small action classifier instead of sending screenshots to a frontier vision model."
-      ],
-      "title": "typesafe-computer-use: macOS computer use at roughly $0.0002 per step",
-      "uncertainty": "Cost and speed multipliers are the author's own benchmarks; task success rate versus a frontier vision loop on non-trivial goals is not independently established.",
-      "url": "https://github.com/awlevin/typesafe-computer-use"
-    },
-    {
-      "builder_takeaway": "Direct financial exposure for anyone running Agent API containers, with a concrete action: verify the invoice rather than trusting the automatic refund.",
+      "builder_takeaway": "Research prompt without decision-changing evidence.",
       "category": "Small Business Automation",
-      "id": "e4228439-1078-400b-bdd6-d786f5e96382",
-      "importance": "supporting",
-      "labels": [
-        "vendor_claim",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-20T00:00:00.000Z",
-      "source": "status.openai.com",
-      "source_facts": [
-        "OpenAI confirmed a billing defect that overcharged customers for OpenAI-hosted containers in the Agent API on 2026-09-18 and is preparing refunds for affected accounts."
-      ],
-      "title": "OpenAI overbilled for hosted containers in the Agent API",
-      "uncertainty": "The magnitude of overcharge and whether refunds are automatic or require a support request are not stated in the incident notice.",
-      "url": "https://status.openai.com//incidents/01M2VA7X37P1ASADSNZ1CG4N4D"
-    },
-    {
-      "builder_takeaway": "Practical tooling option for programmatic document generation, a recurring need in solo builder workflows.",
-      "category": "Tools Worth Testing",
-      "id": "edfdae9e-5e09-48b8-8c20-e92f2e3950c2",
+      "id": "61c158b8-004d-40d8-b95e-f4c4340804f1",
       "importance": "archive-only",
       "labels": [
         "early_signal",
-        "publish_private"
+        "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-20T00:00:00.000Z",
-      "source": "lwn.net",
+      "source": "reddit.com",
       "source_facts": [
-        "Typst, the Rust-based LaTeX alternative, has made substantial recent progress according to LWN's coverage."
+        "Founder pain-point survey; no concrete findings in supplied excerpt."
       ],
-      "title": "Typst makes big strides",
-      "uncertainty": "The item was captured without article body content, so the specific feature milestones described by LWN were not verified here.",
-      "url": "https://lwn.net/Articles/1092993/"
+      "title": "SaaS founders, what’s your biggest pain right now?",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wkj42k/saas_founders_whats_your_biggest_pain_right_now/"
     },
     {
-      "builder_takeaway": "Auth architecture is a decision that is expensive to reverse, and the support-cost angle is underweighted in most passkey advocacy.",
+      "builder_takeaway": "Product introduction without comparative evidence.",
+      "category": "Tools Worth Testing",
+      "id": "9a25a4c6-97dc-495c-b3e9-286e32a86040",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Builder describes a Windows recorder; performance and workflow benefits remain unverified."
+      ],
+      "title": "I built a Windows screen recorder because I kept switching between other tools",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wkhq69/i_built_a_windows_screen_recorder_because_i_kept/"
+    },
+    {
+      "builder_takeaway": "Validation request, not a demonstrated workflow improvement.",
+      "category": "Small Business Automation",
+      "id": "17ba05a2-a87f-483a-9344-583c6e8c7c0b",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Invoicing MVP seeks feedback on basic client and invoice management."
+      ],
+      "title": "I built a simple invoicing app and I'm looking for honest feedback",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wkg7o5/i_built_a_simple_invoicing_app_and_im_looking_for/"
+    },
+    {
+      "builder_takeaway": "Relevant problem but anecdotal observations do not establish a new decision.",
       "category": "AI Operations / Agent Control",
-      "id": "8fc1aa7b-c222-46de-a8cf-67b10e8c7049",
+      "id": "6d103ef7-f5f1-4295-9e8c-6353f1e80383",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Opinion: context fragments across AI tools; no measured solution is supplied."
+      ],
+      "title": "7 things i noticed in AI memory recently",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wki6li/7_things_i_noticed_in_ai_memory_recently/"
+    },
+    {
+      "builder_takeaway": "Vendor promotion with no measured adoption or reliability evidence.",
+      "category": "Small Business Automation",
+      "id": "a255aeeb-dfa6-463d-a9c2-ce69f14eb83d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Postdom pitches API/MCP-driven social scheduling; adoption thesis remains speculative."
+      ],
+      "title": "I think social media schedulers are about to become agent infrastructure. I built Postdom around that bet",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wkhqqe/i_think_social_media_schedulers_are_about_to/"
+    },
+    {
+      "builder_takeaway": "Promotional capabilities without independent sync or permission testing.",
+      "category": "Small Business Automation",
+      "id": "7dc6d685-3aaa-4808-8f40-3faa8cbf4bc8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Calrows advertises Sheets/Calendar synchronization; duplicate-prevention claims are unverified."
+      ],
+      "title": "Your schedule lives in a Google Sheet. Your life lives in Google Calendar. Calrows connects them.",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wkhkac/your_schedule_lives_in_a_google_sheet_your_life/"
+    },
+    {
+      "builder_takeaway": "Question thread without supplied answers or attributable conversion results.",
+      "category": "Small Business Automation",
+      "id": "af013245-26bc-4eec-b25f-186c74122f31",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Thread requests the exact outreach message that won a paying customer."
+      ],
+      "title": "Paste the exact message that got you your last paying customer. Not the framework. The message.",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wkh0a1/paste_the_exact_message_that_got_you_your_last/"
+    },
+    {
+      "builder_takeaway": "Unverified affiliation and revenue promotion; no transferable mechanism.",
+      "category": "Small Business Automation",
+      "id": "ebd06496-0826-4a43-b25b-243452d621d0",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Agency claims Claude partner status and a client revenue milestone."
+      ],
+      "title": "Officially a Claude Partner: how we built a fintech client to $1M+ in 6 months",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wkghrl/officially_a_claude_partner_how_we_built_a/"
+    },
+    {
+      "builder_takeaway": "Generic validation question without findings.",
+      "category": "Small Business Automation",
+      "id": "ce2dcec3-401f-4d94-bc37-07742872d73f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Founder asks how to validate a demo after spending a month on an MVP."
+      ],
+      "title": "I Wasted a Month Building. I Don’t Want to Repeat It.",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wkgf0y/i_wasted_a_month_building_i_dont_want_to_repeat_it/"
+    },
+    {
+      "builder_takeaway": "Useful search architecture to watch; check commercial terms and corpus coverage before any evaluation.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "d56bb61e-ad9a-4e5d-a704-784c2b04e409",
       "importance": "supporting",
       "labels": [
-        "builder_reported",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-20T00:00:00.000Z",
-      "source": "hawksley.dev",
-      "source_facts": [
-        "A developer argues that passkeys introduce UX, portability and account-recovery problems that make them a poor sole authentication method for consumer products."
-      ],
-      "title": "I don't like passkeys",
-      "uncertainty": "Item captured without body content; the specific objections raised were not verified, and the piece is explicitly opinion.",
-      "url": "https://hawksley.dev/blog/i-dont-like-passkeys"
-    },
-    {
-      "builder_takeaway": "Build-loop latency compounds across every working day, and linker choice is a cheap change with measurable effect.",
-      "category": "Tools Worth Testing",
-      "id": "e5b8fef1-152c-497e-86e8-31622d9a86f4",
-      "importance": "archive-only",
-      "labels": [
-        "reproducible",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-20T00:00:00.000Z",
-      "source": "davidlattimore.github.io",
-      "source_facts": [
-        "Wild's author published benchmarks comparing link times for the Wild linker against Mold."
-      ],
-      "title": "Benchmarking Wild vs Mold",
-      "uncertainty": "Benchmarks are authored by the maintainer of one of the two tools being compared; independent replication was not checked.",
-      "url": "https://davidlattimore.github.io/posts/2026/09/18/benchmarking-wild-vs-mold.html"
-    },
-    {
-      "builder_takeaway": "Useful background if ARM migration or cross-architecture compatibility becomes relevant later.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "162297b2-bb71-4e68-9457-f2782aa0438e",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
+        "vendor_claim",
         "monitor"
       ],
       "product_relevance": [],
       "published_at": "2026-09-20T00:00:00.000Z",
-      "source": "fex-emu.com",
+      "source": "scry.io",
       "source_facts": [
-        "The FEX emulation project describes persistent structural difficulties in emulating x86 workloads on ARM hardware."
+        "Scry advertises programmable web research with congestion pricing and explicit query spending ceilings."
       ],
-      "title": "The scourge of x86 emulation",
-      "uncertainty": "Item captured without body content; the specific technical obstacles described were not verified.",
-      "url": "https://fex-emu.com/Scourge-of-emulation/"
+      "title": "Show HN: Scry, programmable internet search w/ congestion pricing",
+      "uncertainty": "Linked source read with approved browser; results were not independently reproduced.",
+      "url": "https://scry.io/"
     },
     {
-      "builder_takeaway": "A short appreciation of a practical-effects sequence in the 1988 film Who Framed Roger Rabbit. Film trivia with no engineering or business relevance.",
+      "builder_takeaway": "Older design opinion with no source text supplied; not a current engineering decision.",
       "category": "Tools Worth Testing",
-      "id": "fea64ef6-a729-4c37-ad97-d6c0a148b9d5",
+      "id": "531ad5b7-8c73-491c-a222-87ec84207b1f",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -151,18 +208,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-09-20T00:00:00.000Z",
-      "source": "simonwillison.net",
+      "source": "john.hartnup.uk",
       "source_facts": [
-        "A blog post admires the mixed practical and animated effects work in a sequence from Who Framed Roger Rabbit."
+        "June essay title argues AI-generated event posters can be better."
       ],
-      "title": "The Creative Spirit of Who Framed Roger Rabbit",
-      "uncertainty": "",
-      "url": "https://simonwillison.net/2026/Sep/18/the-creative-spirit-of-who-framed-roger-rabbit/"
+      "title": "AI-generated posters don’t have to be horrible",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html"
     },
     {
-      "builder_takeaway": "A general engineering essay arguing that no stage of a career or process removes the need for active judgment. Thoughtful, but it changes no near-term decision and offers nothing reproducible.",
+      "builder_takeaway": "Low relevance to tomorrow morning’s developer decisions.",
       "category": "Tools Worth Testing",
-      "id": "8754fefd-197b-4145-95f5-5ba3aa4065ba",
+      "id": "73ffd4cc-bb09-4d15-847b-b3cc04e67acb",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -170,18 +227,18 @@
       ],
       "product_relevance": [],
       "published_at": "2026-09-20T00:00:00.000Z",
-      "source": "danluu.com",
+      "source": "terrytao.wordpress.com",
       "source_facts": [
-        "An essay argues that engineers cannot rely on process or seniority to substitute for active judgment at any stage."
+        "Essay title calls for celebrating mathematics beyond proofs."
       ],
-      "title": "There's no point at which turning your brain off will work",
-      "uncertainty": "",
-      "url": "https://danluu.com/brain-off/"
+      "title": "If math is more than proof, we need to better celebrate the rest of it",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://terrytao.wordpress.com/2026/09/18/if-math-is-more-than-proof-we-need-to-better-celebrate-the-rest-of-it/"
     },
     {
-      "builder_takeaway": "Commentary proposing a cooperative ownership model for the CSS-Tricks publication. Industry speculation with no practical takeaway for a solo software business.",
-      "category": "Small Business Automation",
-      "id": "1776a3d6-38ff-4add-bb8b-708271096f9f",
+      "builder_takeaway": "Single benchmark headline is insufficient for a hardware decision.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "07c443ec-9eb9-4985-92f8-895e482c6c6c",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -189,37 +246,37 @@
       ],
       "product_relevance": [],
       "published_at": "2026-09-20T00:00:00.000Z",
-      "source": "ericwbailey.website",
+      "source": "browser.geekbench.com",
       "source_facts": [
-        "A blog post proposes that the CSS-Tricks publication could be restructured as a cooperative."
+        "Headline claims an M6 Pro Geekbench record; benchmark context is unverified."
       ],
-      "title": "CSS-Tricks could be a co-op",
-      "uncertainty": "",
-      "url": "https://ericwbailey.website/published/css-tricks-could-be-a-co-op/"
+      "title": "Apple M6 Pro Achieves the Highest Single-Core CPU Score in Geekbench 7",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://browser.geekbench.com/v7/cpu/389219"
     },
     {
-      "builder_takeaway": "Neuroscience research coverage from Stanford Medicine. Outside the scope of a solo developer's technology and business decisions.",
-      "category": "Tools Worth Testing",
-      "id": "cadd4809-15f5-44e9-a655-d77225763575",
-      "importance": "archive-only",
+      "builder_takeaway": "Apply the storage-layout lesson; do not expose this unauthenticated prototype to the internet.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "ebe85057-33c3-4022-8b1f-79bd6c56fcb3",
+      "importance": "supporting",
       "labels": [
-        "early_signal",
-        "reject"
+        "builder_reported",
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-20T00:00:00.000Z",
-      "source": "med.stanford.edu",
+      "source": "tigrisdata.com",
       "source_facts": [
-        "Stanford Medicine-led research reports findings characterizing the human brain as two separate organs."
+        "September 15 objgit report: range-friendly packfiles reduce storage calls; authentication is still missing."
       ],
-      "title": "Human brain is two separate organs, Stanford Medicine-led research finds",
-      "uncertainty": "",
-      "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html"
+      "title": "You can run Git on object storage if you re-make packfiles",
+      "uncertainty": "Linked source read with approved browser; results were not independently reproduced.",
+      "url": "https://www.tigrisdata.com/blog/objgit-packfiles/"
     },
     {
-      "builder_takeaway": "A capability anecdote claiming a frontier model solved a historical cipher. No reproducible method, no benchmark, and no decision follows from it. Classic engagement-driven capability story.",
+      "builder_takeaway": "One impressive task headline cannot establish general capability or workflow value.",
       "category": "Model + API Changes",
-      "id": "599835cc-3016-45e9-8960-46b12325735a",
+      "id": "f18c6368-0002-4fdb-bcb9-c18369d9ef24",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -229,35 +286,16 @@
       "published_at": "2026-09-20T00:00:00.000Z",
       "source": "prinzai.com",
       "source_facts": [
-        "A blog post claims GPT-6 Astra solved a World War I German radio cipher."
+        "Headline reports GPT-6 solving a historical cipher; no experimental details supplied."
       ],
       "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
-      "uncertainty": "",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
       "url": "https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio"
     },
     {
-      "builder_takeaway": "A novelty site referencing the US onion futures trading ban. Viral curiosity with no builder relevance.",
-      "category": "Small Business Automation",
-      "id": "4b4f10fd-aba9-4e58-841b-b5fc18c58d62",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-20T00:00:00.000Z",
-      "source": "onionfutures.com",
-      "source_facts": [
-        "A website presents the San Francisco Onion Futures Company as a novelty project."
-      ],
-      "title": "San Francisco Onion Futures Company",
-      "uncertainty": "",
-      "url": "https://onionfutures.com/"
-    },
-    {
-      "builder_takeaway": "An opinion essay arguing that scientific practice depends on open source software. Reasonable position, but nothing here changes a build or buy decision for a solo developer.",
+      "builder_takeaway": "Specialized retrospective without a concrete solo-developer action in the supplied evidence.",
       "category": "Tools Worth Testing",
-      "id": "66fea172-0f61-4e72-b3cd-666264fe1ee6",
+      "id": "5dc3d41a-be6a-4a99-b158-d24a8914c1cd",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -265,56 +303,474 @@
       ],
       "product_relevance": [],
       "published_at": "2026-09-20T00:00:00.000Z",
-      "source": "jepedersen.dk",
+      "source": "spectrum.ieee.org",
       "source_facts": [
-        "An essay argues that scientific research fundamentally depends on open source software."
+        "IEEE headline describes LLM-assisted chip design; no implementation details supplied."
       ],
-      "title": "Science Is Open Software",
-      "uncertainty": "",
-      "url": "https://jepedersen.dk/blog/202505_research/"
+      "title": "How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://spectrum.ieee.org/llms-for-chip-design"
     },
     {
-      "builder_takeaway": "An enterprise partnership announcement between Anthropic and Accenture on embedded evaluation. The item was captured with no body content and only a generic news index URL, and enterprise systems-integrator partnerships carry no practical consequence for a one-person shop.",
+      "builder_takeaway": "Review filesystem, network and tool boundaries independently of agent self-reporting.",
+      "category": "AI Operations / Agent Control",
+      "id": "9ddb1a12-37a6-4214-b687-c646f330885c",
+      "importance": "lead",
+      "labels": [
+        "early_signal",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "arxiv.org",
+      "source_facts": [
+        "September 2 research argues language-based monitoring cannot replace independent agent isolation."
+      ],
+      "title": "The Implications of Linguistic Illegibility for LLM Security",
+      "uncertainty": "Primary abstract read; conceptual security argument, not an independently validated exploit or proof of a deployed defense.",
+      "url": "https://arxiv.org/abs/2609.02852"
+    },
+    {
+      "builder_takeaway": "Old event promotion; no fresh API or operational change.",
       "category": "Small Business Automation",
-      "id": "3ec546be-2f0a-4f32-b658-bf4a195c0763",
+      "id": "6d42fa0b-0808-4e5d-8ec4-8ef39587ec46",
       "importance": "archive-only",
       "labels": [
-        "vendor_claim",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-20T00:00:00.000Z",
-      "source": "anthropic.com",
+      "source": "mistral.ai",
       "source_facts": [
-        "Anthropic announced a partnership with Accenture focused on embedded evaluation."
+        "Archive, May 28: Mistral AI Now Summit enterprise event announcement."
       ],
-      "title": "Partnering with Accenture on embedded evaluation",
-      "uncertainty": "Captured without article body and with a generic index URL, so the scope and substance of the partnership could not be assessed.",
-      "url": "https://www.anthropic.com/news"
+      "title": "CompanyAI Now Summit 2026Innovations for global enterprises solving the world’s hardest problems. May 28, 2026By Mistral",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/ai-now-summit-2026/"
     },
     {
-      "builder_takeaway": "A resolved OpenAI status incident reporting delayed support queue responses. Routine operational noise with no lasting consequence.",
-      "category": "Model + API Changes",
-      "id": "d0d0ffb3-586a-404b-9c02-0e3d70e3a9e2",
+      "builder_takeaway": "Old launch with only a listing excerpt; no September update established.",
+      "category": "AI Operations / Agent Control",
+      "id": "f7f4b06b-b4ea-463e-9111-4075e2124ec6",
       "importance": "archive-only",
       "labels": [
-        "vendor_claim",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-20T00:00:00.000Z",
-      "source": "status.openai.com",
+      "source": "mistral.ai",
       "source_facts": [
-        "OpenAI reported and resolved an incident causing delayed responses in its support queue."
+        "Archive, May 28: Vibe Work/Code modes and VS Code extension launch headline."
       ],
-      "title": "OpenAI: delayed support responses",
-      "uncertainty": "",
-      "url": "https://status.openai.com//incidents/01M2V76GEPJB0HQGRA0QERRZ3T"
+      "title": "ProductVibe gets to work.The unified agent for long-horizon productivity and coding, launching with Work and Code modes. Plus, a new Vibe VS Code extension.May 28, 2026By Mistral",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/vibe-agent/"
+    },
+    {
+      "builder_takeaway": "Potentially relevant search tooling, but stale headline and no new evidence.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "364512ba-46be-4b25-9031-6e3b29c9418f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, May 28: Mistral Search Toolkit launch headline."
+      ],
+      "title": "ProductIntroducing Search ToolkitProduction search pipelines, anywhere.May 28, 2026By Mistral",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/search-toolkit/"
+    },
+    {
+      "builder_takeaway": "Old specialized model announcement with low immediate applicability.",
+      "category": "Model + API Changes",
+      "id": "483083f4-485e-449f-b932-5434479f0e65",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, May 27: Mistral physics AI announcement."
+      ],
+      "title": "SolutionsIntroducing physics AI at Mistral: the foundation for engineering acceleration.A new class of AI models that predict the behavior of physical systems, powering the engineers and hardware products of tomorrow.May 27, 2026By Mistral",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/introducing-physics-ai-at-mistral/"
+    },
+    {
+      "builder_takeaway": "No new results or usable technical details in the supplied listing.",
+      "category": "Model + API Changes",
+      "id": "f31428f7-9583-4986-aa4e-2024f33a5c98",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, May 27: Mistral physics AI research listing."
+      ],
+      "title": "ResearchPhysics AI research that’s shaping the industry.Published breakthroughs pushing the state of the art.May 27, 2026By Mistral",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/physics-ai-research/"
+    },
+    {
+      "builder_takeaway": "Old corporate news without a developer action.",
+      "category": "Small Business Automation",
+      "id": "dc43807e-43be-428e-9642-77aac4629f4b",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, May 23: Emmi joins Mistral, according to the listing."
+      ],
+      "title": "CompanyEmmi joins Mistral to accelerate the AI-native industryMay 23, 2026By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/accelerate-ai-native-industry/"
+    },
+    {
+      "builder_takeaway": "Months-old launch; no fresh behavior or compatibility evidence.",
+      "category": "AI Operations / Agent Control",
+      "id": "b7034961-9e60-4362-9e8a-7fe166cdd60f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, May 22: Medium 3.5 and Vibe remote-agent launch listing."
+      ],
+      "title": "ProductRemote agents in Vibe. Powered by Mistral Medium 3.5.Introducing Mistral Medium 3.5, remote coding agents in Vibe, plus new Work mode in Le Chat for complex tasks.May 22, 2026By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5/"
+    },
+    {
+      "builder_takeaway": "Relevant architecture but no current change established by this stale listing.",
+      "category": "AI Operations / Agent Control",
+      "id": "bb813508-f8b1-495b-96a0-d863ddca594c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, May 22: Mistral Studio connectors and approval controls listing."
+      ],
+      "title": "ProductConnect the dots: Build with built-in and custom MCPs in StudioConnect enterprise data to your AI applications with reusable connectors, direct tool calling, and human-in-the-loop approval controls.May 22, 2026By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/connectors/"
+    },
+    {
+      "builder_takeaway": "Old preview announcement; current maturity unverified.",
+      "category": "Small Business Automation",
+      "id": "2c2cc3ee-978c-4fdd-8324-be95d0d19082",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, April 27: Mistral Workflows public preview listing."
+      ],
+      "title": "ProductWorkflows for work that runs the businessWorkflows is now in public preview.April 27, 2026By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/workflows/"
+    },
+    {
+      "builder_takeaway": "Owner relevance does not make an old launch fresh news; capability claims unverified.",
+      "category": "Voice AI / Realtime Agents",
+      "id": "4de7b2dc-54e3-4403-825a-146f62bb8b73",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, March 23: Voxtral TTS launch listing for voice agents."
+      ],
+      "title": "ResearchSpeaking of VoxtralVoxtral TTS: A frontier, open-weights text-to-speech model that’s fast, instantly adaptable, and produces lifelike speech for voice agents.March 23, 2026By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/voxtral-tts/"
+    },
+    {
+      "builder_takeaway": "Old enterprise offering with little immediate solo-developer leverage.",
+      "category": "Model + API Changes",
+      "id": "e3dd9e5b-cfaf-493c-abb6-bcc912d7b51f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, March 17: Forge enterprise model-building announcement."
+      ],
+      "title": "ProductIntroducing ForgeToday, we’re introducing Forge, a system for enterprises to build frontier-grade AI models grounded in their proprietary knowledge.March 17, 2026By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/forge/"
+    },
+    {
+      "builder_takeaway": "No current model change or evaluated performance supplied.",
+      "category": "Model + API Changes",
+      "id": "3eabba17-512a-498a-866f-dc24175d2e7c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, March 16: Mistral Small 4 launch listing."
+      ],
+      "title": "ResearchIntroducing Mistral Small 4March 16, 2026By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/mistral-small-4/"
+    },
+    {
+      "builder_takeaway": "Old strategic announcement without a concrete platform change.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "fae5d0f5-81ee-4fce-89cb-3a1e3d889492",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, March 16: Mistral/NVIDIA partnership listing."
+      ],
+      "title": "CompanyMistral AI partners with NVIDIA to accelerate open frontier modelsMarch 16, 2026By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/mistral-ai-and-nvidia-partner-to-accelerate-open-frontier-models/"
+    },
+    {
+      "builder_takeaway": "Old research launch without current adoption evidence or reproduced results.",
+      "category": "Tools Worth Testing",
+      "id": "5d2ac38b-933d-4824-a3be-69a7c2d42f0c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, March 16: Leanstral trustworthy coding launch listing."
+      ],
+      "title": "ResearchLeanstral: Open-Source foundation for trustworthy vibe-codingMarch 16, 2026By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/leanstral/"
+    },
+    {
+      "builder_takeaway": "Reference only: executable test feedback matters more than model-generated quality scores.",
+      "category": "AI Operations / Agent Control",
+      "id": "cf9730d2-4de6-4f76-b16e-f0b1917a07eb",
+      "importance": "supporting",
+      "labels": [
+        "builder_reported",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, March 11: Mistral reports executable RSpec validation improved agent-generated tests."
+      ],
+      "title": "Archive (2026-03-11): Rails testing on autopilot",
+      "uncertainty": "Linked source read with approved browser; results were not independently reproduced.",
+      "url": "https://mistral.ai/news/rails-testing-on-autopilot-building-an-agent-that-writes-what-developers-wont/"
+    },
+    {
+      "builder_takeaway": "Old speech model news; no fresh operational or cost change.",
+      "category": "Voice AI / Realtime Agents",
+      "id": "e36b3083-1bcf-4528-8909-42448e673ed6",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, February 4: Voxtral Transcribe 2 launch listing."
+      ],
+      "title": "ResearchVoxtral transcribes at the speed of sound.February 4, 2026By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/voxtral-transcribe-2/"
+    },
+    {
+      "builder_takeaway": "Superseded historical launch context without a current decision.",
+      "category": "AI Operations / Agent Control",
+      "id": "f83efe0f-c348-4465-b594-e7ad7b0fa2c8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, January 27: Mistral Vibe 2.0 listing."
+      ],
+      "title": "ProductTerminally online Mistral Vibe.January 27, 2026By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/mistral-vibe-2-0/"
+    },
+    {
+      "builder_takeaway": "Reference only: compare RSS and heap profiles before concluding there is no memory leak.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "8b3f72fb-6ca2-4153-bfc3-48e53f3b6139",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, January 21: Mistral traced vLLM RSS growth to UCX memory-registration hooks."
+      ],
+      "title": "Archive (2026-01-21): Debugging a vLLM memory leak",
+      "uncertainty": "Linked source read with approved browser; results were not independently reproduced.",
+      "url": "https://mistral.ai/news/debugging-memory-leak-in-vllm/"
+    },
+    {
+      "builder_takeaway": "Old OCR announcement; no new extraction quality or compatibility evidence.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "a47c2127-bf06-4c5e-a76c-0487ac2ee3bc",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, December 17, 2025: Mistral OCR 3 launch listing."
+      ],
+      "title": "ResearchIntroducing Mistral OCR 3December 17, 2025By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/mistral-ocr-3/"
+    },
+    {
+      "builder_takeaway": "Old coding-tool launch, not a new release.",
+      "category": "AI Operations / Agent Control",
+      "id": "2df543ec-5ab2-443e-99db-265ab849eb4e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, December 9, 2025: Devstral 2 and Vibe CLI listing."
+      ],
+      "title": "ResearchIntroducing: Devstral 2 and Mistral Vibe CLI.December 9, 2025By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/devstral-2-vibe-cli/"
+    },
+    {
+      "builder_takeaway": "Stale model announcement; reject on age and thin evidence, not an incorrect duplicate label.",
+      "category": "Model + API Changes",
+      "id": "b2d0abae-919e-45cb-a08c-4652141d0199",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, December 2, 2025: Mistral 3 listing, distinct from OCR 3 despite duplicate prefilter."
+      ],
+      "title": "ResearchIntroducing Mistral 3December 2, 2025By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/mistral-3/"
+    },
+    {
+      "builder_takeaway": "Old regional corporate news with no immediate developer action.",
+      "category": "Small Business Automation",
+      "id": "d2e46031-7a0a-4c95-8956-fc98cd286435",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, November 19, 2025: Mistral Germany announcement listing."
+      ],
+      "title": "CompanyMistral AI - KI für DeutschlandNovember 19, 2025By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/ki-fur-deutschland/"
+    },
+    {
+      "builder_takeaway": "Historical platform introduction; current capabilities not established.",
+      "category": "Model + API Changes",
+      "id": "4afa085b-b01c-427c-b2f0-56099a56c31f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "source": "mistral.ai",
+      "source_facts": [
+        "Archive, October 24, 2025: Mistral AI Studio introduction listing."
+      ],
+      "title": "ProductIntroducing Mistral AI Studio. October 24, 2025By Mistral AI",
+      "uncertainty": "Linked page not opened; assessment uses supplied title/excerpt only.",
+      "url": "https://mistral.ai/news/ai-studio/"
     }
   ],
   "mode": "primary",
-  "run_id": "77bceef5-6e0e-46a0-8376-fa3a06c74996",
+  "run_id": "d0a69d84-903b-426f-8b06-6e4c334cc257",
   "status": "completed",
-  "summary": "Synthesized Nightly Librarian run with 7 promoted item(s), 16 scored item(s), and 9 rejected item(s).",
+  "summary": "Synthesized Nightly Librarian run with 5 promoted item(s), 40 scored item(s), and 35 rejected item(s).",
   "title": "Nightly Librarian - 2026-09-20"
 }

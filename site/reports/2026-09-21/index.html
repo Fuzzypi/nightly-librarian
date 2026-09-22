@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>September 21, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="7 stories cleared the bar, led by n8n@2.39.9, Bot-free self-hosted analytics with GoatCounter on NixOS, and Adversarial examples for fast hash functions.">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-09-21/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="September 21, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="7 stories cleared the bar, led by n8n@2.39.9, Bot-free self-hosted analytics with GoatCounter on NixOS, and Adversarial examples for fast hash functions.">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-09-21/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="September 21, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="7 stories cleared the bar, led by n8n@2.39.9, Bot-free self-hosted analytics with GoatCounter on NixOS, and Adversarial examples for fast hash functions.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>September 21, 2026 · Report log</span>
+      <span>Sep 21, 2026, 7:04 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>September 21, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>7 stories cleared the bar, led by n8n@2.39.9, Bot-free self-hosted analytics with GoatCounter on NixOS, and Adversarial examples for fast hash functions.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>7 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.9" target="_blank" rel="noopener">n8n@2.39.9</a></div>
+        <div class="item-takeaway">n8n 2.39.9, released September 21 and marked latest, fixes HTTP 405 responses from the public credential PATCH endpoint and removes workflow triggers when publication encounters an unavailable node type. These changes matter if credential automation is failing or a publication failure can leave triggers behind. Check whether either path affects your instance, then verify both behaviors in staging before upgrading; the release notes were read, but the fixes were not runtime-tested here.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vincent.bernat.ch/en/blog/2026-goatcounter" target="_blank" rel="noopener">Bot-free self-hosted analytics with GoatCounter on NixOS</a></div>
+        <div class="item-takeaway">Vincent Bernat’s September 20 deployment report replaces noisy server-log analytics with interaction-triggered GoatCounter collection, a CSS fallback, buffered local proxies and NixOS deployment code. He reports roughly 2,000 daily log visitors versus fewer than 200 counted humans, but interaction gating also misses passive readers and RSS, so this is a change in measurement rather than proof of exact audience size. Audit what your own visitor metric counts before interpreting growth; the proxy is a custom fork and its upstream contribution was declined.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://thomasahle.com/blog/adversarial-examples-for-hashes/" target="_blank" rel="noopener">Adversarial examples for fast hash functions</a></div>
+        <div class="item-takeaway">Thomas Dybdahl Ahle reports adversarial collision examples across fast hash functions and supplies verifier packages, measurements and per-algorithm qualifications. The article distinguishes sampled findings from counted or proved results and warns that smoke checks do not establish equivalence on every input; these are author-reported research results, not a confirmed vulnerability in our services. Review whether attacker-controlled keys reach performance-sensitive hash tables and check the exact implementation and threat model before changing algorithms; no verifier or benchmark was run for this memo.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://sigabrt.dev" target="_blank" rel="noopener">Show HN: Sigabrt.dev – cronjob monitor with an SSH TUI</a></div>
+        <div class="item-takeaway">Sigabrt describes heartbeat monitoring that alerts by email or ntfy when a successful-job ping fails to arrive within its interval and grace period. Its SSH interface is explicitly a read-only work in progress, so the useful idea is missed-job detection, not a mature terminal control plane. Keep it on the watchlist and require an end-to-end missed-ping test before relying on it; no account or paid service was set up.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.4" target="_blank" rel="noopener">n8n@2.40.4</a></div>
+        <div class="item-takeaway">n8n 2.40.4 carries the unavailable-node trigger cleanup and avoids loading project members when listing credentials. GitHub marks this September 21 release as a prerelease, so its credential-listing improvement is distinct from the stable patch above. Track it if that operation is a bottleneck; do not switch release channels solely for an unmeasured performance claim.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://outdata.net/blog/260803" target="_blank" rel="noopener">Deterministic Core, Non-Deterministic Shell</a></div>
+        <div class="item-takeaway">The August 3 essay argues that deterministic state machines can offer testability benefits similar to pure functions without requiring functional purity. It proposes moving time, randomness and external effects out of business decisions and grouping deterministic logic incrementally. This is an archival design reference, not today’s release: use it when a specific flaky or hard-to-test module needs work rather than starting a general rewrite.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-typesafe%3D%3D0.0.1a3" target="_blank" rel="noopener">langchain-typesafe==0.0.1a3</a></div>
+        <div class="item-takeaway">LangChain’s September 20 typesafe 0.0.1a3 release introduces TypeSafeClassifier and experimental model-routing and automatic-mode middleware, with classifier questions scoped to each invocation. This is relevant to agent routing, but the alpha label and release notes do not establish reliability or savings. Watch API stability; evaluate routing quality on recorded tasks before considering adoption.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-typesafe%3D%3D0.0.1a3" target="_blank" rel="noopener">langchain-typesafe==0.0.1a3</a>
+        </div>
+        <div class="item-takeaway">LangChain’s September 20 typesafe 0.0.1a3 release introduces TypeSafeClassifier and experimental model-routing and automatic-mode middleware, with classifier questions scoped to each invocation. This is relevant to agent routing, but the alpha label and release notes do not establish reliability or savings. Watch API stability; evaluate routing quality on recorded tasks before considering adoption.</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://tinybrains.dev" target="_blank" rel="noopener">Show HN: A competition for small neural networks that play strategy games</a>
+        </div>
+        <div class="item-takeaway">Neural-network game competition; outside immediate builder decisions.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://radius.to/" target="_blank" rel="noopener">Show HN: Radius – A Meetup.com Alternative</a>
+        </div>
+        <div class="item-takeaway">Meetup alternative relaunch; no demonstrated workflow or distribution advantage.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://sigabrt.dev" target="_blank" rel="noopener">Show HN: Sigabrt.dev – cronjob monitor with an SSH TUI</a>
+        </div>
+        <div class="item-takeaway">Sigabrt describes heartbeat monitoring that alerts by email or ntfy when a successful-job ping fails to arrive within its interval and grace period. Its SSH interface is explicitly a read-only work in progress, so the useful idea is missed-job detection, not a mature terminal control plane. Keep it on the watchlist and require an end-to-end missed-ping test before relying on it; no account or paid service was set up.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wlzxqi/company_raised_416m_sold_for_465m_founders_got_0/" target="_blank" rel="noopener">company raised $416M, sold for $465M, founders got $0</a>
+        </div>
+        <div class="item-takeaway">Funding-outcome anecdote; acquisition and payout claims not independently checked.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wlg91y/my_saas_just_made_0000_revenue_in_60days_after/" target="_blank" rel="noopener">My SaaS just made $0.000 revenue in 60days after launch and I am so grateful, this feels so real 🎉🎉🎉</a>
+        </div>
+        <div class="item-takeaway">Zero-revenue celebration appears satirical; no useful operating evidence.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wlsbqq/the_self_promotion_rules_for_9_founder_subreddits/" target="_blank" rel="noopener">The self promotion rules for 9 founder subreddits before you get banned</a>
+        </div>
+        <div class="item-takeaway">Subreddit-rule roundup with promotional link; verify each community rule directly.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wm5214/trial_signups_without_a_card_when_to_stop_it/" target="_blank" rel="noopener">Trial signups without a card - when to stop it?</a>
+        </div>
+        <div class="item-takeaway">Cardless-trial conversion question; no controlled comparison or resolved lesson.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wm0qy2/unpopular_opinion_your_saas_isnt_failing_because/" target="_blank" rel="noopener">Unpopular opinion: Your SaaS isn't failing because of your product. It's failing because anyone can build your product (rant)</a>
+        </div>
+        <div class="item-takeaway">Opinion about SaaS competition; broad claims rather than decision-grade evidence.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wm2wdo/distribution_is_the_moat_is_repeated_constantly/" target="_blank" rel="noopener">&quot;Distribution is the moat&quot; is repeated constantly here. Nobody says what it actually means. Here's the version I wish I'd had.</a>
+        </div>
+        <div class="item-takeaway">Distribution advice based on one revenue anecdote; familiar guidance, limited evidence.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wm5zpv/day_1_of_sharing_journey_of_building_my_first_saas/" target="_blank" rel="noopener">Day 1 of Sharing Journey of building my first SaaS.</a>
+        </div>
+        <div class="item-takeaway">First-day build diary and traffic counts; too early to establish a useful result.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wm50io/hello_guys_how_are_you_actually_growing_mrr_in/" target="_blank" rel="noopener">Hello guys, How are you actually growing MRR in the AI era without creating AI slop?</a>
+        </div>
+        <div class="item-takeaway">Open growth question; no tested tactic or outcome.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wlt7ui/i_built_an_app_but_getting_the_first_users_feels/" target="_blank" rel="noopener">I built an app, but getting the first users feels much harder</a>
+        </div>
+        <div class="item-takeaway">Memory-sharing app promotion and acquisition question; low tooling relevance.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wm67l4/most_of_these_are_broken_links/" target="_blank" rel="noopener">Most of These are Broken Links!</a>
+        </div>
+        <div class="item-takeaway">Post alleges indexed quick tunnels; exposure scope and examples not verified.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wm67fh/week_one_after_launching_a_niche_b2b_saas_what/" target="_blank" rel="noopener">Week one after launching a niche B2B SaaS: what worked and what didn't</a>
+        </div>
+        <div class="item-takeaway">First-week B2B launch diary; limited time horizon and no verified durable outcome.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wm3v9z/i_built_a_simple_pto_attendance_tool_for_my_dads/" target="_blank" rel="noopener">I built a simple PTO / attendance tool for my dad’s small company - looking for feedback</a>
+        </div>
+        <div class="item-takeaway">PTO tool feedback request; no proven improvement over existing options.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wm6381/some_people_really_need_a_reality_check/" target="_blank" rel="noopener">some people really need a reality check 😂</a>
+        </div>
+        <div class="item-takeaway">Founder-copying meme; no actionable technical evidence.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wm1hkw/i_am_a_content_creator_open_for_collabs/" target="_blank" rel="noopener">I am a Content Creator Open for Collabs</a>
+        </div>
+        <div class="item-takeaway">Paid collaboration solicitation; promotional rather than editorial.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wm4tej/new_joiner_employee_onboarding_feature_for_hrms/" target="_blank" rel="noopener">New Joiner &amp; Employee Onboarding Feature for HRMS</a>
+        </div>
+        <div class="item-takeaway">HR onboarding feature preview; no measured workflow benefit.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wm3k59/your_saas_youtube_channel_getting_30_views_isnt/" target="_blank" rel="noopener">Your SaaS YouTube channel getting 30 views isn't an AI problem</a>
+        </div>
+        <div class="item-takeaway">YouTube discovery opinion; no experiment establishing a practical change.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wlwz9p/how_to_come_up_with_a_monetization_model/" target="_blank" rel="noopener">How to come up with a monetization model?</a>
+        </div>
+        <div class="item-takeaway">Monetization-model question; no tested pricing result.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wlyb9y/ive_looked_at_40_saas_codebases_for_sale_not_one/" target="_blank" rel="noopener">I've looked at ~40 SaaS codebases for sale. Not one was worth the asking price.</a>
+        </div>
+        <div class="item-takeaway">SaaS acquisition critique claims forty reviews; methodology not verified.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wm08l9/i_left_100_comments_in_3_weeks_79_of_them_got/" target="_blank" rel="noopener">I left 100 comments in 3 weeks. 79 of them got zero human reaction.</a>
+        </div>
+        <div class="item-takeaway">Comment-engagement anecdote; votes do not establish buyer conversion.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wm5vch/how_i_can_correctly_move_from_a_lifetime_plan_to/" target="_blank" rel="noopener">How I can correctly move from a Lifetime plan to subscription based?</a>
+        </div>
+        <div class="item-takeaway">Lifetime-to-subscription question; no completed migration evidence.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wm12pj/building_a_product_is_just_the_beginning_growth/" target="_blank" rel="noopener">Building a product is just the beginning. Growth is the real challenge.</a>
+        </div>
+        <div class="item-takeaway">Generic growth advice; lacks a specific tested result.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/stable" target="_blank" rel="noopener">stable</a>
+        </div>
+        <div class="item-takeaway">Moving stable tag duplicates the versioned n8n 2.39.9 item selected below.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.9" target="_blank" rel="noopener">n8n@2.39.9</a>
+        </div>
+        <div class="item-takeaway">n8n 2.39.9, released September 21 and marked latest, fixes HTTP 405 responses from the public credential PATCH endpoint and removes workflow triggers when publication encounters an unavailable node type. These changes matter if credential automation is failing or a publication failure can leave triggers behind. Check whether either path affects your instance, then verify both behaviors in staging before upgrading; the release notes were read, but the fixes were not runtime-tested here.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.4" target="_blank" rel="noopener">n8n@2.40.4</a>
+        </div>
+        <div class="item-takeaway">n8n 2.40.4 carries the unavailable-node trigger cleanup and avoids loading project members when listing credentials. GitHub marks this September 21 release as a prerelease, so its credential-listing improvement is distinct from the stable patch above. Track it if that operation is a bottleneck; do not switch release channels solely for an unmeasured performance claim.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">beta</a>
+        </div>
+        <div class="item-takeaway">Moving beta tag duplicates the versioned n8n 2.40.4 watch item.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.emilua.org/2025/01/12/software-sandboxing-basics/" target="_blank" rel="noopener">Software sandboxing: The basics (2025)</a>
+        </div>
+        <div class="item-takeaway">January 2025 sandboxing primer; archival and overlaps yesterday’s isolation coverage.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.osnews.com/story/145877/an-actively-maintained-and-updated-motif-fork-actually-exists/" target="_blank" rel="noopener">An actively maintained and updated Motif fork actually exists</a>
+        </div>
+        <div class="item-takeaway">Motif-fork report; limited relevance to current web and agent workflows.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/" target="_blank" rel="noopener">ChatGPT now knows what you do on other websites via ad collector</a>
+        </div>
+        <div class="item-takeaway">Headline alleges cross-site ChatGPT tracking; mechanism and scope unverified.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.philipzucker.com/lambda_miller_egg/" target="_blank" rel="noopener">Lambda MicroEgg</a>
+        </div>
+        <div class="item-takeaway">Lambda/equality-saturation experiment; specialist interest, no immediate application.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/" target="_blank" rel="noopener">What Sun got wrong</a>
+        </div>
+        <div class="item-takeaway">Retrospective on Sun; historical strategy rather than a present operating change.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.youtube.com/watch?v=V7AfAcQwLW0" target="_blank" rel="noopener">Are we really going to use the same Desktop UX forever?</a>
+        </div>
+        <div class="item-takeaway">Desktop UX video discussion; no substantiated tooling change in supplied material.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vincent.bernat.ch/en/blog/2026-goatcounter" target="_blank" rel="noopener">Bot-free self-hosted analytics with GoatCounter on NixOS</a>
+        </div>
+        <div class="item-takeaway">Vincent Bernat’s September 20 deployment report replaces noisy server-log analytics with interaction-triggered GoatCounter collection, a CSS fallback, buffered local proxies and NixOS deployment code. He reports roughly 2,000 daily log visitors versus fewer than 200 counted humans, but interaction gating also misses passive readers and RSS, so this is a change in measurement rather than proof of exact audience size. Audit what your own visitor metric counts before interpreting growth; the proxy is a custom fork and its upstream contribution was declined.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://outdata.net/blog/260803" target="_blank" rel="noopener">Deterministic Core, Non-Deterministic Shell</a>
+        </div>
+        <div class="item-takeaway">The August 3 essay argues that deterministic state machines can offer testability benefits similar to pure functions without requiring functional purity. It proposes moving time, randomness and external effects out of business decisions and grouping deterministic logic incrementally. This is an archival design reference, not today’s release: use it when a specific flaky or hard-to-test module needs work rather than starting a general rewrite.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.roku.com/developer/roku-lt-os" target="_blank" rel="noopener">Roku launches open-source Roku LT OS for creative programmers</a>
+        </div>
+        <div class="item-takeaway">Roku OS announcement; outside current platforms and near-term work.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://evanhahn.com/usergettingbored-vim/" target="_blank" rel="noopener">Vim's UserGettingBored autocmd</a>
+        </div>
+        <div class="item-takeaway">Vim autocmd curiosity; insufficient practical impact for this memo.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://thomasahle.com/blog/adversarial-examples-for-hashes/" target="_blank" rel="noopener">Adversarial examples for fast hash functions</a>
+        </div>
+        <div class="item-takeaway">Thomas Dybdahl Ahle reports adversarial collision examples across fast hash functions and supplies verifier packages, measurements and per-algorithm qualifications. The article distinguishes sampled findings from counted or proved results and warns that smoke checks do not establish equivalence on every input; these are author-reported research results, not a confirmed vulnerability in our services. Review whether attacker-controlled keys reach performance-sensitive hash tables and check the exact implementation and threat model before changing algorithms; no verifier or benchmark was run for this memo.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 39a426d5-0399-4966-a8cc-8302d9e1ef45
+Started: 2026-09-21T11:02:13.143Z
+Completed: 2026-09-21T11:04:44.634Z
+
+## Worth attention
+
+- **n8n@2.39.9**
+  https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.9
+  n8n 2.39.9, released September 21 and marked latest, fixes HTTP 405 responses from the public credential PATCH endpoint and removes workflow triggers when publication encounters an unavailable node type. These changes matter if credential automation is failing or a publication failure can leave triggers behind. Check whether either path affects your instance, then verify both behaviors in staging before upgrading; the release notes were read, but the fixes were not runtime-tested here.
+- **Bot-free self-hosted analytics with GoatCounter on NixOS**
+  https://vincent.bernat.ch/en/blog/2026-goatcounter
+  Vincent Bernat’s September 20 deployment report replaces noisy server-log analytics with interaction-triggered GoatCounter collection, a CSS fallback, buffered local proxies and NixOS deployment code. He reports roughly 2,000 daily log visitors versus fewer than 200 counted humans, but interaction gating also misses passive readers and RSS, so this is a change in measurement rather than proof of exact audience size. Audit what your own visitor metric counts before interpreting growth; the proxy is a custom fork and its upstream contribution was declined.
+- **Adversarial examples for fast hash functions**
+  https://thomasahle.com/blog/adversarial-examples-for-hashes/
+  Thomas Dybdahl Ahle reports adversarial collision examples across fast hash functions and supplies verifier packages, measurements and per-algorithm qualifications. The article distinguishes sampled findings from counted or proved results and warns that smoke checks do not establish equivalence on every input; these are author-reported research results, not a confirmed vulnerability in our services. Review whether attacker-controlled keys reach performance-sensitive hash tables and check the exact implementation and threat model before changing algorithms; no verifier or benchmark was run for this memo.
+- **Show HN: Sigabrt.dev – cronjob monitor with an SSH TUI**
+  https://sigabrt.dev
+  Sigabrt describes heartbeat monitoring that alerts by email or ntfy when a successful-job ping fails to arrive within its interval and grace period. Its SSH interface is explicitly a read-only work in progress, so the useful idea is missed-job detection, not a mature terminal control plane. Keep it on the watchlist and require an end-to-end missed-ping test before relying on it; no account or paid service was set up.
+- **n8n@2.40.4**
+  https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.4
+  n8n 2.40.4 carries the unavailable-node trigger cleanup and avoids loading project members when listing credentials. GitHub marks this September 21 release as a prerelease, so its credential-listing improvement is distinct from the stable patch above. Track it if that operation is a bottleneck; do not switch release channels solely for an unmeasured performance claim.
+- **Deterministic Core, Non-Deterministic Shell**
+  https://outdata.net/blog/260803
+  The August 3 essay argues that deterministic state machines can offer testability benefits similar to pure functions without requiring functional purity. It proposes moving time, randomness and external effects out of business decisions and grouping deterministic logic incrementally. This is an archival design reference, not today’s release: use it when a specific flaky or hard-to-test module needs work rather than starting a general rewrite.
+- **langchain-typesafe==0.0.1a3**
+  https://github.com/langchain-ai/langchain/releases/tag/langchain-typesafe%3D%3D0.0.1a3
+  LangChain’s September 20 typesafe 0.0.1a3 release introduces TypeSafeClassifier and experimental model-routing and automatic-mode middleware, with classifier questions scoped to each invocation. This is relevant to agent routing, but the alpha label and release notes do not establish reliability or savings. Watch API stability; evaluate routing quality on recorded tasks before considering adoption.
+
+## Full digest
+
+- [M] [gh-langchain] langchain-typesafe==0.0.1a3 — https://github.com/langchain-ai/langchain/releases/tag/langchain-typesafe%3D%3D0.0.1a3 — LangChain’s September 20 typesafe 0.0.1a3 release introduces TypeSafeClassifier and experimental model-routing and automatic-mode middleware, with classifier questions scoped to each invocation. This is relevant to agent routing, but the alpha label and release notes do not establish reliability or savings. Watch API stability; evaluate routing quality on recorded tasks before considering adoption.
+- [R] [hn-show] Show HN: A competition for small neural networks that play strategy games — https://tinybrains.dev — Neural-network game competition; outside immediate builder decisions.
+- [R] [hn-show] Show HN: Radius – A Meetup.com Alternative — https://radius.to/ — Meetup alternative relaunch; no demonstrated workflow or distribution advantage.
+- [M] [hn-show] Show HN: Sigabrt.dev – cronjob monitor with an SSH TUI — https://sigabrt.dev — Sigabrt describes heartbeat monitoring that alerts by email or ntfy when a successful-job ping fails to arrive within its interval and grace period. Its SSH interface is explicitly a read-only work in progress, so the useful idea is missed-job detection, not a mature terminal control plane. Keep it on the watchlist and require an end-to-end missed-ping test before relying on it; no account or paid service was set up.
+- [R] [reddit-saas] company raised $416M, sold for $465M, founders got $0 — https://www.reddit.com/r/SaaS/comments/1wlzxqi/company_raised_416m_sold_for_465m_founders_got_0/ — Funding-outcome anecdote; acquisition and payout claims not independently checked.
+- [R] [reddit-saas] My SaaS just made $0.000 revenue in 60days after launch and I am so grateful, this feels so real 🎉🎉🎉 — https://www.reddit.com/r/SaaS/comments/1wlg91y/my_saas_just_made_0000_revenue_in_60days_after/ — Zero-revenue celebration appears satirical; no useful operating evidence.
+- [R] [reddit-saas] The self promotion rules for 9 founder subreddits before you get banned — https://www.reddit.com/r/SaaS/comments/1wlsbqq/the_self_promotion_rules_for_9_founder_subreddits/ — Subreddit-rule roundup with promotional link; verify each community rule directly.
+- [R] [reddit-saas] Trial signups without a card - when to stop it? — https://www.reddit.com/r/SaaS/comments/1wm5214/trial_signups_without_a_card_when_to_stop_it/ — Cardless-trial conversion question; no controlled comparison or resolved lesson.
+- [R] [reddit-saas] Unpopular opinion: Your SaaS isn't failing because of your product. It's failing because anyone can build your product (rant) — https://www.reddit.com/r/SaaS/comments/1wm0qy2/unpopular_opinion_your_saas_isnt_failing_because/ — Opinion about SaaS competition; broad claims rather than decision-grade evidence.
+- [R] [reddit-saas] &quot;Distribution is the moat&quot; is repeated constantly here. Nobody says what it actually means. Here's the version I wish I'd had. — https://www.reddit.com/r/SaaS/comments/1wm2wdo/distribution_is_the_moat_is_repeated_constantly/ — Distribution advice based on one revenue anecdote; familiar guidance, limited evidence.
+- [R] [reddit-saas] Day 1 of Sharing Journey of building my first SaaS. — https://www.reddit.com/r/SaaS/comments/1wm5zpv/day_1_of_sharing_journey_of_building_my_first_saas/ — First-day build diary and traffic counts; too early to establish a useful result.
+- [R] [reddit-saas] Hello guys, How are you actually growing MRR in the AI era without creating AI slop? — https://www.reddit.com/r/SaaS/comments/1wm50io/hello_guys_how_are_you_actually_growing_mrr_in/ — Open growth question; no tested tactic or outcome.
+- [R] [reddit-saas] I built an app, but getting the first users feels much harder — https://www.reddit.com/r/SaaS/comments/1wlt7ui/i_built_an_app_but_getting_the_first_users_feels/ — Memory-sharing app promotion and acquisition question; low tooling relevance.
+- [R] [reddit-saas] Most of These are Broken Links! — https://www.reddit.com/r/SaaS/comments/1wm67l4/most_of_these_are_broken_links/ — Post alleges indexed quick tunnels; exposure scope and examples not verified.
+- [R] [reddit-saas] Week one after launching a niche B2B SaaS: what worked and what didn't — https://www.reddit.com/r/SaaS/comments/1wm67fh/week_one_after_launching_a_niche_b2b_saas_what/ — First-week B2B launch diary; limited time horizon and no verified durable outcome.
+- [R] [reddit-saas] I built a simple PTO / attendance tool for my dad’s small company - looking for feedback — https://www.reddit.com/r/SaaS/comments/1wm3v9z/i_built_a_simple_pto_attendance_tool_for_my_dads/ — PTO tool feedback request; no proven improvement over existing options.
+- [R] [reddit-saas] some people really need a reality check 😂 — https://www.reddit.com/r/SaaS/comments/1wm6381/some_people_really_need_a_reality_check/ — Founder-copying meme; no actionable technical evidence.
+- [R] [reddit-saas] I am a Content Creator Open for Collabs — https://www.reddit.com/r/SaaS/comments/1wm1hkw/i_am_a_content_creator_open_for_collabs/ — Paid collaboration solicitation; promotional rather than editorial.
+- [R] [reddit-saas] New Joiner &amp; Employee Onboarding Feature for HRMS — https://www.reddit.com/r/SaaS/comments/1wm4tej/new_joiner_employee_onboarding_feature_for_hrms/ — HR onboarding feature preview; no measured workflow benefit.
+- [R] [reddit-saas] Your SaaS YouTube channel getting 30 views isn't an AI problem — https://www.reddit.com/r/SaaS/comments/1wm3k59/your_saas_youtube_channel_getting_30_views_isnt/ — YouTube discovery opinion; no experiment establishing a practical change.
+- [R] [reddit-saas] How to come up with a monetization model? — https://www.reddit.com/r/SaaS/comments/1wlwz9p/how_to_come_up_with_a_monetization_model/ — Monetization-model question; no tested pricing result.
+- [R] [reddit-saas] I've looked at ~40 SaaS codebases for sale. Not one was worth the asking price. — https://www.reddit.com/r/SaaS/comments/1wlyb9y/ive_looked_at_40_saas_codebases_for_sale_not_one/ — SaaS acquisition critique claims forty reviews; methodology not verified.
+- [R] [reddit-saas] I left 100 comments in 3 weeks. 79 of them got zero human reaction. — https://www.reddit.com/r/SaaS/comments/1wm08l9/i_left_100_comments_in_3_weeks_79_of_them_got/ — Comment-engagement anecdote; votes do not establish buyer conversion.
+- [R] [reddit-saas] How I can correctly move from a Lifetime plan to subscription based? — https://www.reddit.com/r/SaaS/comments/1wm5vch/how_i_can_correctly_move_from_a_lifetime_plan_to/ — Lifetime-to-subscription question; no completed migration evidence.
+- [R] [reddit-saas] Building a product is just the beginning. Growth is the real challenge. — https://www.reddit.com/r/SaaS/comments/1wm12pj/building_a_product_is_just_the_beginning_growth/ — Generic growth advice; lacks a specific tested result.
+- [R] [gh-n8n] stable — https://github.com/n8n-io/n8n/releases/tag/stable — Moving stable tag duplicates the versioned n8n 2.39.9 item selected below.
+- [P] [gh-n8n] n8n@2.39.9 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.9 — n8n 2.39.9, released September 21 and marked latest, fixes HTTP 405 responses from the public credential PATCH endpoint and removes workflow triggers when publication encounters an unavailable node type. These changes matter if credential automation is failing or a publication failure can leave triggers behind. Check whether either path affects your instance, then verify both behaviors in staging before upgrading; the release notes were read, but the fixes were not runtime-tested here.
+- [M] [gh-n8n] n8n@2.40.4 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.4 — n8n 2.40.4 carries the unavailable-node trigger cleanup and avoids loading project members when listing credentials. GitHub marks this September 21 release as a prerelease, so its credential-listing improvement is distinct from the stable patch above. Track it if that operation is a bottleneck; do not switch release channels solely for an unmeasured performance claim.
+- [R] [gh-n8n] beta — https://github.com/n8n-io/n8n/releases/tag/beta — Moving beta tag duplicates the versioned n8n 2.40.4 watch item.
+- [R] [lobsters] Software sandboxing: The basics (2025) — https://blog.emilua.org/2025/01/12/software-sandboxing-basics/ — January 2025 sandboxing primer; archival and overlaps yesterday’s isolation coverage.
+- [R] [lobsters] An actively maintained and updated Motif fork actually exists — https://www.osnews.com/story/145877/an-actively-maintained-and-updated-motif-fork-actually-exists/ — Motif-fork report; limited relevance to current web and agent workflows.
+- [R] [lobsters] ChatGPT now knows what you do on other websites via ad collector — https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/ — Headline alleges cross-site ChatGPT tracking; mechanism and scope unverified.
+- [R] [lobsters] Lambda MicroEgg — https://www.philipzucker.com/lambda_miller_egg/ — Lambda/equality-saturation experiment; specialist interest, no immediate application.
+- [R] [lobsters] What Sun got wrong — https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/ — Retrospective on Sun; historical strategy rather than a present operating change.
+- [R] [lobsters] Are we really going to use the same Desktop UX forever? — https://www.youtube.com/watch?v=V7AfAcQwLW0 — Desktop UX video discussion; no substantiated tooling change in supplied material.
+- [P] [lobsters] Bot-free self-hosted analytics with GoatCounter on NixOS — https://vincent.bernat.ch/en/blog/2026-goatcounter — Vincent Bernat’s September 20 deployment report replaces noisy server-log analytics with interaction-triggered GoatCounter collection, a CSS fallback, buffered local proxies and NixOS deployment code. He reports roughly 2,000 daily log visitors versus fewer than 200 counted humans, but interaction gating also misses passive readers and RSS, so this is a change in measurement rather than proof of exact audience size. Audit what your own visitor metric counts before interpreting growth; the proxy is a custom fork and its upstream contribution was declined.
+- [M] [lobsters] Deterministic Core, Non-Deterministic Shell — https://outdata.net/blog/260803 — The August 3 essay argues that deterministic state machines can offer testability benefits similar to pure functions without requiring functional purity. It proposes moving time, randomness and external effects out of business decisions and grouping deterministic logic incrementally. This is an archival design reference, not today’s release: use it when a specific flaky or hard-to-test module needs work rather than starting a general rewrite.
+- [R] [lobsters] Roku launches open-source Roku LT OS for creative programmers — https://blog.roku.com/developer/roku-lt-os — Roku OS announcement; outside current platforms and near-term work.
+- [R] [lobsters] Vim's UserGettingBored autocmd — https://evanhahn.com/usergettingbored-vim/ — Vim autocmd curiosity; insufficient practical impact for this memo.
+- [P] [lobsters] Adversarial examples for fast hash functions — https://thomasahle.com/blog/adversarial-examples-for-hashes/ — Thomas Dybdahl Ahle reports adversarial collision examples across fast hash functions and supplies verifier packages, measurements and per-algorithm qualifications. The article distinguishes sampled findings from counted or proved results and warns that smoke checks do not establish equivalence on every input; these are author-reported research results, not a confirmed vulnerability in our services. Review whether attacker-controlled keys reach performance-sensitive hash tables and check the exact implementation and threat model before changing algorithms; no verifier or benchmark was run for this memo.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
