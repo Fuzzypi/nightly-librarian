@@ -1,187 +1,244 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T06:07:31.867Z",
+  "generated_at": "2026-09-22T11:06:54.662Z",
   "imported_from": {
     "importer_version": "digest-import/v1",
     "source_artifact": "artifacts/synthesized/2026-09-22.json",
-    "source_sha256": "e68319a27ddee12edc56768a772c09387a70ff02c0abb9407771227e19019e15"
+    "source_sha256": "abfa56f1b9d24d7f79c79f8c65b2d5d30bd5bb6d56cad80b463c9493d7ffe630"
   },
   "items": [
     {
-      "builder_takeaway": "Production-grade reference for anyone who may need collaborative editing.",
-      "category": "Tools Worth Testing",
-      "id": "c4aad021-4c68-44d6-b0cf-bb4fe60d9dc5",
-      "importance": "archive-only",
+      "builder_takeaway": "LlamaIndex release notes describe tool retry, streaming, and dependency security fixes.",
+      "category": "AI Operations / Agent Control",
+      "id": "cc19967c-e86f-499e-8bc9-1bb8af3b1096",
+      "importance": "supporting",
       "labels": [
-        "production_proven",
+        "vendor_claim",
         "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "notion.com",
+      "source": "github.com",
       "source_facts": [
-        "Notion uses CRDTs to resolve concurrent edits in its production collaborative editor."
+        "v0.14.25 — # Release Notes ## [2026-09-21] ### llama-index-agent-agentmesh [0.3.0] - fix: resolve a ton of security alerts ([#22855](https://github.com/run-llama/llama_index/pull/22855)) ### llama-index-agent-azure [0.4.0] - fix: resolve a ton of secu…"
       ],
-      "title": "How Notion handles concurrent editing with CRDTs",
-      "uncertainty": "Only the title and link were available in the feed; the depth of implementation detail is unverified.",
-      "url": "https://www.notion.com/blog/how-notion-handles-concurrent-editing-with-crdts"
+      "title": "v0.14.25",
+      "uncertainty": "Primary linked page read; claims not independently reproduced.",
+      "url": "https://github.com/run-llama/llama_index/releases/tag/v0.14.25"
     },
     {
-      "builder_takeaway": "Jane Street published research on sequence weighting at scale. It is serious ML research aimed at large-scale training practitioners. Nothing here changes a decision for a one-person software shop.",
+      "builder_takeaway": "versioning-example@0.1.3 example dependency patch; no standalone SDK behavior change established.",
       "category": "Tools Worth Testing",
-      "id": "57f989d1-bd7c-4b57-aba1-d09cce1a8fb3",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "blog.janestreet.com",
-      "source_facts": [
-        "Jane Street published a study of sequence weighting techniques applied at large training scale."
-      ],
-      "title": "A study of sequence weighting at scale",
-      "uncertainty": "Only title-level information was available from the feed.",
-      "url": "https://blog.janestreet.com/a-study-of-sequence-weighting-at-scale/"
-    },
-    {
-      "builder_takeaway": "A yearly status update on w64devkit, a portable C/C++ development kit for Windows. Relevant to native Windows toolchain users only. No overlap with agent, web, or SaaS work.",
-      "category": "Tools Worth Testing",
-      "id": "c7e475b3-778d-4b04-951a-3dd8cf068718",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "nullprogram.com",
-      "source_facts": [
-        "The w64devkit Windows C/C++ toolchain published a year-in-review of its changes."
-      ],
-      "title": "What's been going on in w64devkit the past year",
-      "uncertainty": "",
-      "url": "https://nullprogram.com/blog/2026/09/20/"
-    },
-    {
-      "builder_takeaway": "Early signal on a real organisational failure mode in agent-heavy engineering.",
-      "category": "AI Operations / Agent Control",
-      "id": "6d669af1-cebb-4318-8aff-ccd5162066e4",
+      "id": "cf815026-3abf-429c-a683-dffa9ee0dd63",
       "importance": "archive-only",
       "labels": [
         "early_signal",
-        "monitor"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "An engineer reports their large employer now produces all specs, code, tests and tickets via Claude Code with no human reading them."
-      ],
-      "title": "Quoting voxium on fully agent-generated engineering work",
-      "uncertainty": "Single anonymous account, no corroboration, and no way to verify the org or the scale described.",
-      "url": "https://simonwillison.net/2026/Sep/20/voxium/"
-    },
-    {
-      "builder_takeaway": "Cheap, concrete improvement to secret handling in remote agent workflows.",
-      "category": "AI Operations / Agent Control",
-      "id": "8e3f84db-7ec3-4098-903b-4569ab7234b2",
-      "importance": "supporting",
-      "labels": [
-        "builder_reported",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "simonwillison.net",
-      "source_facts": [
-        "llm-keys-ui 0.1 provides a local web UI for loading API keys onto remote machines so coding agents never see pasted secrets."
-      ],
-      "title": "llm-keys-ui 0.1 — set API keys on remote agent machines without pasting secrets",
-      "uncertainty": "Version 0.1; the exposed web UI is itself a surface that needs to be kept off untrusted networks.",
-      "url": "https://simonwillison.net/2026/Sep/20/llm-keys-ui/"
-    },
-    {
-      "builder_takeaway": "A patch release of the datasette-explain plugin that makes explain plans work on read-only stored-query pages. Single narrow fix in a niche plugin. Nothing to act on unless you already run Datasette with this plugin.",
-      "category": "Tools Worth Testing",
-      "id": "9d985b97-d9ba-4d3d-a635-66289923c38b",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "simonwillison.net",
+      "source": "github.com",
       "source_facts": [
-        "datasette-explain 0.2.2 makes explain plans work on read-only stored-query pages."
+        "versioning-example@0.1.3 — ### Patch Changes - Updated dependencies [62e51e8] - Updated dependencies [7055914] - Updated dependencies [b4b9fc4] - Updated dependencies [d4d3060] - Updated dependencies [efc2e52] - Updated dependencies [9d0cb2c] - Updated dependencies […"
       ],
-      "title": "datasette-explain 0.2.2",
-      "uncertainty": "",
-      "url": "https://simonwillison.net/2026/Sep/20/datasette-explain/"
+      "title": "versioning-example@0.1.3",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/versioning-example%400.1.3"
     },
     {
-      "builder_takeaway": "A scanned 1996 internal puzzle design document for the adventure game Grim Fandango. Interesting game-design history, no engineering or business relevance.",
+      "builder_takeaway": "vercel-example@0.1.12 example dependency patch; no standalone SDK behavior change established.",
       "category": "Tools Worth Testing",
-      "id": "bf0d916f-a213-4b5e-a408-bda95111d237",
+      "id": "30045c9b-1944-4fe3-9710-4919a66aa827",
       "importance": "archive-only",
       "labels": [
-        "builder_reported",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "gameshelf.jmac.org",
+      "source": "github.com",
       "source_facts": [
-        "A 1996 internal puzzle design document for Grim Fandango is available as a scanned PDF."
+        "vercel-example@0.1.12 — ### Patch Changes - Updated dependencies [62e51e8] - Updated dependencies [7055914] - Updated dependencies [b4b9fc4] - Updated dependencies [d4d3060] - Updated dependencies [efc2e52] - Updated dependencies [9d0cb2c] - Updated dependencies […"
       ],
-      "title": "Grim Fandango Puzzle Document (1996)",
-      "uncertainty": "",
-      "url": "http://gameshelf.jmac.org/2008/11/13/GrimPuzzleDoc_small.pdf"
+      "title": "vercel-example@0.1.12",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/vercel-example%400.1.12"
     },
     {
-      "builder_takeaway": "A major vendor open-sourcing an agent orchestration runtime directly affects architecture decisions for agent and MCP work.",
+      "builder_takeaway": "typesafe-example@0.0.1 example dependency patch; no standalone SDK behavior change established.",
+      "category": "Tools Worth Testing",
+      "id": "70c0dafa-eed8-4767-9a11-f90f136734e3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "typesafe-example@0.0.1 — ### Patch Changes - Updated dependencies [62e51e8] - Updated dependencies [7055914] - Updated dependencies [b4b9fc4] - Updated dependencies [d4d3060] - Updated dependencies [efc2e52] - Updated dependencies [9d0cb2c] - Updated dependencies […"
+      ],
+      "title": "typesafe-example@0.0.1",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/typesafe-example%400.0.1"
+    },
+    {
+      "builder_takeaway": "triggers-example@0.1.3 example dependency patch; no standalone SDK behavior change established.",
+      "category": "Tools Worth Testing",
+      "id": "ae421be9-e35b-47ab-91eb-f45d9ae3093b",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "triggers-example@0.1.3 — ### Patch Changes - Updated dependencies [62e51e8] - Updated dependencies [7055914] - Updated dependencies [b4b9fc4] - Updated dependencies [d4d3060] - Updated dependencies [efc2e52] - Updated dependencies [9d0cb2c] - Updated dependencies […"
+      ],
+      "title": "triggers-example@0.1.3",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/triggers-example%400.1.3"
+    },
+    {
+      "builder_takeaway": "tools-example@0.1.3 example dependency patch; no standalone SDK behavior change established.",
+      "category": "Tools Worth Testing",
+      "id": "e0a2ad69-e11c-4b33-99dc-3c96ddedd1c3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "tools-example@0.1.3 — ### Patch Changes - Updated dependencies [62e51e8] - Updated dependencies [7055914] - Updated dependencies [b4b9fc4] - Updated dependencies [d4d3060] - Updated dependencies [efc2e52] - Updated dependencies [9d0cb2c] - Updated dependencies […"
+      ],
+      "title": "tools-example@0.1.3",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/tools-example%400.1.3"
+    },
+    {
+      "builder_takeaway": "toolkits-example@0.1.12 example dependency patch; no standalone SDK behavior change established.",
+      "category": "Tools Worth Testing",
+      "id": "8e7fc6bd-a49e-4ee9-9a90-62052dc08b02",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "toolkits-example@0.1.12 — ### Patch Changes - Updated dependencies [62e51e8] - Updated dependencies [7055914] - Updated dependencies [b4b9fc4] - Updated dependencies [d4d3060] - Updated dependencies [efc2e52] - Updated dependencies [9d0cb2c] - Updated dependencies […"
+      ],
+      "title": "toolkits-example@0.1.12",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/toolkits-example%400.1.12"
+    },
+    {
+      "builder_takeaway": "tool-router-example@1.0.13 example dependency patch; no standalone SDK behavior change established.",
+      "category": "Tools Worth Testing",
+      "id": "acb60110-e064-4750-90a6-f2ff44ae2661",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "tool-router-example@1.0.13 — ### Patch Changes - Updated dependencies [62e51e8] - Updated dependencies [7055914] - Updated dependencies [b4b9fc4] - Updated dependencies [d4d3060] - Updated dependencies [efc2e52] - Updated dependencies [9d0cb2c] - Updated dependencies […"
+      ],
+      "title": "tool-router-example@1.0.13",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/tool-router-example%401.0.13"
+    },
+    {
+      "builder_takeaway": "session-management-example@0.1.3 example dependency patch; no standalone SDK behavior change established.",
+      "category": "Tools Worth Testing",
+      "id": "6e87f6b2-8196-4a23-866a-f6be34a8138f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "session-management-example@0.1.3 — ### Patch Changes - Updated dependencies [62e51e8] - Updated dependencies [7055914] - Updated dependencies [b4b9fc4] - Updated dependencies [d4d3060] - Updated dependencies [efc2e52] - Updated dependencies [9d0cb2c] - Updated dependencies […"
+      ],
+      "title": "session-management-example@0.1.3",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/session-management-example%400.1.3"
+    },
+    {
+      "builder_takeaway": "openai-example@0.1.12 example dependency patch; no standalone SDK behavior change established.",
+      "category": "Tools Worth Testing",
+      "id": "379e21ea-ad67-435f-b8dc-a514eea39873",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "openai-example@0.1.12 — ### Patch Changes - Updated dependencies [62e51e8] - Updated dependencies [7055914] - Updated dependencies [b4b9fc4] - Updated dependencies [d4d3060] - Updated dependencies [efc2e52] - Updated dependencies [9d0cb2c] - Updated dependencies […"
+      ],
+      "title": "openai-example@0.1.12",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/openai-example%400.1.12"
+    },
+    {
+      "builder_takeaway": "modifiers-example@0.1.12 example dependency patch; no standalone SDK behavior change established.",
+      "category": "Tools Worth Testing",
+      "id": "1d21669f-72fb-4155-a008-17b487b03511",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "modifiers-example@0.1.12 — ### Patch Changes - Updated dependencies [62e51e8] - Updated dependencies [7055914] - Updated dependencies [b4b9fc4] - Updated dependencies [d4d3060] - Updated dependencies [efc2e52] - Updated dependencies [9d0cb2c] - Updated dependencies […"
+      ],
+      "title": "modifiers-example@0.1.12",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/modifiers-example%400.1.12"
+    },
+    {
+      "builder_takeaway": "Open WebUI fixes access control; Redis outages still permit revoked tokens, per release notes.",
       "category": "AI Operations / Agent Control",
-      "id": "b764757a-0608-410e-bc6f-1bc3a8ed85bc",
+      "id": "f274b3ae-f08f-4a9b-862c-9da569d5d945",
       "importance": "lead",
       "labels": [
         "vendor_claim",
-        "publish_public"
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "agentexecutor.io",
+      "source": "github.com",
       "source_facts": [
-        "Google released AX, an Apache 2.0 licensed declarative orchestrator for running autonomous agent workloads at cluster scale."
+        "v0.11.4 — ### Added - 📉 **Far smaller slim image.** A slim build now comes down at around 175 MB, near enough 89% smaller than the last release, the local models, the packages around them and the tools that installed them all gone from it; what that…"
       ],
-      "title": "AX — Google's open agentic orchestrator",
-      "uncertainty": "Throughput claims (billions of agent tasks per cluster) are vendor-stated and unverified; real-world operational complexity is unknown at this stage.",
-      "url": "https://agentexecutor.io"
+      "title": "v0.11.4",
+      "uncertainty": "Primary linked page read; claims not independently reproduced.",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.11.4"
     },
     {
-      "builder_takeaway": "Upstream supply signal relevant to future compute cost.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "0a61462c-2393-4cef-8e65-d1b2ca917737",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "monitor"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "en.sedaily.com",
-      "source_facts": [
-        "Samsung is expected to more than double HBM4 and HBM4E DRAM output next year."
-      ],
-      "title": "Samsung expected to more than double HBM4 and HBM4E output",
-      "uncertainty": "Sourced to unnamed industry sources; production plans frequently shift and do not map cleanly onto end-user pricing.",
-      "url": "https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say"
-    },
-    {
-      "builder_takeaway": "An account of the current status and fate of the Snowden document archive. Worthwhile journalism-history reading but it does not change any technical or business decision for a solo builder.",
+      "builder_takeaway": "OpenRouter adapter patch lists model-profile maintenance; no clear decision-changing feature.",
       "category": "Tools Worth Testing",
-      "id": "da324e8a-73a4-4161-906a-2a01b13f5c18",
+      "id": "788dde28-7397-40b9-b973-2f0408b091c2",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -189,170 +246,151 @@
       ],
       "product_relevance": [],
       "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "libroot.org",
+      "source": "github.com",
       "source_facts": [
-        "An article recounts what became of the Snowden document archive."
+        "langchain-openrouter==0.2.9 — Changes since langchain-openrouter==0.2.8 release(openrouter): 0.2.9 (#40736) chore(model-profiles): refresh model profile data (#40705) chore(model-profiles): refresh model profile data (#40685) chore(model-profiles): refresh model profile…"
       ],
-      "title": "What happened to the Snowden archive",
-      "uncertainty": "Only title-level information was available from the feed.",
-      "url": "https://libroot.org/posts/what-happened-to-the-snowden-archive"
+      "title": "langchain-openrouter==0.2.9",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.9"
     },
     {
-      "builder_takeaway": "Capable open-weight image model whose license blocks the obvious commercial use — that is a decision, not a detail.",
-      "category": "Model + API Changes",
-      "id": "4389c1cb-b664-47a9-ad99-4d14a3e660a7",
+      "builder_takeaway": "Fireworks adapter patch lists test-model and dependency maintenance.",
+      "category": "Tools Worth Testing",
+      "id": "ca18297f-d9f1-4db6-9226-bec9f379d96e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "langchain-fireworks==1.6.2 — Changes since langchain-fireworks==1.6.1 fix(fireworks): use current completions model in LLM tests (#40740) hotfix(fireworks): use available model in LLM tests (#40737) release(fireworks): 1.6.2 (#40735) chore(model-profiles): refresh mode…"
+      ],
+      "title": "langchain-fireworks==1.6.2",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.6.2"
+    },
+    {
+      "builder_takeaway": "DeepSeek adapter fixes dependency compatibility, strict-mode routing, and cache accounting.",
+      "category": "Tools Worth Testing",
+      "id": "9bd5a13d-07cc-4afc-a200-091bc361bb23",
       "importance": "supporting",
       "labels": [
         "vendor_claim",
-        "publish_public"
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "qwen.ai",
+      "source": "github.com",
       "source_facts": [
-        "Qwen-Image-2.1 is a 7B open-weight unified image generation and editing model released under a non-commercial research license."
+        "langchain-deepseek==1.1.1 — Changes since langchain-deepseek==1.1.0 fix(deepseek,infra): resolve compatible minimum OpenAI dependencies, bump min ver (#40738) release(deepseek): 1.1.1 (#40734) chore(deps): bump anyio from 4.11.0 to 4.14.2 in /libs/partners/deepseek (#…"
       ],
-      "title": "Qwen-Image-2.1 ships open weights under a research-only license",
-      "uncertainty": "Benchmark numbers are from Qwen's own Qwen-Image-Bench; independent evaluation is not yet available. Licensing terms may be revised post-launch.",
-      "url": "https://qwen.ai/blog?id=qwen-image-2.1"
+      "title": "langchain-deepseek==1.1.1",
+      "uncertainty": "Primary linked page read; claims not independently reproduced.",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-deepseek%3D%3D1.1.1"
     },
     {
-      "builder_takeaway": "A 2024 essay on how CRT display characteristics shaped the appearance and design of pixel art. Enjoyable graphics history with no bearing on current tooling or business decisions.",
+      "builder_takeaway": "OpenAI adapter exposes inferred Responses routing and adds request-constraint support.",
       "category": "Tools Worth Testing",
-      "id": "8cd1094f-a7ed-4f0f-b36d-684b518ff785",
+      "id": "c67408a6-7ed0-4f12-827d-e91eef09700b",
       "importance": "archive-only",
       "labels": [
-        "builder_reported",
-        "reject"
+        "vendor_claim",
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "datagubbe.se",
+      "source": "github.com",
       "source_facts": [
-        "An essay analyses how CRT display properties affected the appearance of pixel art."
+        "langchain-openai==1.6.3 — Changes since langchain-openai==1.6.2 release(openai): 1.6.3 (#40719) fix(openai): expose inferred Responses API routing at initialization (#40715) chore(deps): bump anyio from 4.11.0 to 4.14.2 in /libs/partners/openai (#40629) fix(openai):…"
       ],
-      "title": "The Effect of CRTs on Pixel Art (2024)",
-      "uncertainty": "",
-      "url": "https://datagubbe.se/crt/"
+      "title": "langchain-openai==1.6.3",
+      "uncertainty": "Primary linked page read; claims not independently reproduced.",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.3"
     },
     {
-      "builder_takeaway": "Training-from-scratch on consumer hardware would be meaningful leverage if the scaling holds up.",
+      "builder_takeaway": "LangChain core marks chat message history deprecated; inspect usage before upgrading.",
       "category": "Tools Worth Testing",
-      "id": "e581445e-b2a4-48f7-91a8-a3f53248e5d5",
+      "id": "af777ddf-4255-4ebe-90b1-6d276f04947e",
       "importance": "archive-only",
       "labels": [
-        "early_signal",
+        "vendor_claim",
         "monitor"
       ],
       "product_relevance": [],
       "published_at": "2026-09-22T00:00:00.000Z",
       "source": "github.com",
       "source_facts": [
-        "An open-source project claims a continual-learning MoE model can be trained from scratch on 8GB of consumer VRAM with favourable scaling."
+        "langchain-core==1.6.4 — Changes since langchain-core==1.6.3 release(core): 1.6.4 (#40718) chore(core): deprecate chat message history (#40711) chore(deps): bump anyio from 4.12.0 to 4.14.2 in /libs/core (#40634) chore(deps): bump soupsieve from 2.8.4 to 2.9 in /li…"
       ],
-      "title": "Show HN: mini-AGI — continual learning model trained on 8GB VRAM",
-      "uncertainty": "Single-author results with no independent reproduction; the scaling chart covers a small range and the AGI framing invites overreading.",
-      "url": "https://github.com/volotat/mini-AGI/"
+      "title": "langchain-core==1.6.4",
+      "uncertainty": "Primary linked page read; claims not independently reproduced.",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.4"
     },
     {
-      "builder_takeaway": "A Reddit post inviting founders to pitch their products in the comments in exchange for a promised first sale. It is a comment-farming format rather than a source of information. No signal.",
-      "category": "Small Business Automation",
-      "id": "96d05840-5dd9-4e42-b426-433463adf8e4",
+      "builder_takeaway": "Neon adds branch-specific custom domains with automatic TLS; function traffic remains billable.",
+      "category": "Model + API Changes",
+      "id": "45c6e129-092f-40d7-b271-acb61f89ac14",
       "importance": "archive-only",
       "labels": [
-        "early_signal",
-        "reject"
+        "vendor_claim",
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "neon.com",
       "source_facts": [
-        "A Reddit user invited founders to pitch products in comments in exchange for becoming their first customer."
+        "Custom domains for Neon Functions — During beta, each Function was reachable only at its Neon invocation URL, something like `https://br-cool-forest-a1b2c3d4-api.compute.c-2.us-east-2.aws.neon.tech`. Now, we support custom domains - you can put it behind `api.example.com` ins…"
       ],
-      "title": "I'll be your first customer if you can convince me with your offer",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1wm82hn/ill_be_your_first_customer_if_you_can_convince_me/"
+      "title": "Custom domains for Neon Functions",
+      "uncertainty": "Primary linked page read; claims not independently reproduced.",
+      "url": "https://neon.com/blog/custom-domains-for-neon-functions"
     },
     {
-      "builder_takeaway": "A Reddit post arguing that founders manufacture their own competition by building horizontally, and that narrowing positioning to a specific segment both reduces competitors and simplifies the product. The reasoning is sound but it is standard niche-positioning advice with no new data behind it.",
-      "category": "Small Business Automation",
-      "id": "f4c9ca45-6f5f-4ebc-aaa0-2732204a52a5",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "Narrowing a SaaS product's positioning to a specific segment reduces effective competition and simplifies the build."
-      ],
-      "title": "A lot of competition disappears when you stop building for everyone",
-      "uncertainty": "Opinion post with no supporting data or case examples.",
-      "url": "https://www.reddit.com/r/SaaS/comments/1wm7a6y/a_lot_of_competition_disappears_when_you_stop/"
-    },
-    {
-      "builder_takeaway": "Hard numbers on a distribution channel many solo builders default to.",
-      "category": "Small Business Automation",
-      "id": "ef0e3028-2ced-425d-b6c9-243b8a9e731e",
+      "builder_takeaway": "Neon adds branch-scoped function schedules compatible with scale to zero.",
+      "category": "Model + API Changes",
+      "id": "e95f3ca8-0bc8-4ba1-a41e-630423bed404",
       "importance": "supporting",
       "labels": [
-        "builder_reported",
-        "publish_public"
+        "vendor_claim",
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "neon.com",
       "source_facts": [
-        "A viral post with 410k views on a founder subreddit converted to 2 signups, roughly 0.0005%."
+        "Your Neon Functions can now run on a schedule — During the beta phase, the only way to run a Neon Function was to send it an HTTP request. That works well for jobs triggered by your app, but not so much for backend jobs. If you wanted to pull an external API into Postgres every 15 minute…"
       ],
-      "title": "410k Reddit views converted into 2 signups",
-      "uncertainty": "Single self-reported case, a deliberately satirical post, and a niche product — conversion for an on-topic post about a relevant tool could differ substantially.",
-      "url": "https://www.reddit.com/r/SaaS/comments/1wm8e0b/i_accidentally_made_the_2_post_of_the_year_here/"
+      "title": "Your Neon Functions can now run on a schedule",
+      "uncertainty": "Primary linked page read; claims not independently reproduced.",
+      "url": "https://neon.com/blog/your-neon-functions-can-now-run-on-a-schedule"
     },
     {
-      "builder_takeaway": "A first-sale milestone post from a builder who received a $9 payment for a project. Genuine but purely personal; there is no transferable lesson, channel detail, or method described.",
-      "category": "Small Business Automation",
-      "id": "5236e3ae-c4b1-47b5-92ac-0297331fb053",
+      "builder_takeaway": "Lossless-memory preserves raw logs; single-user operation and Japanese-only relative-date parsing.",
+      "category": "AI Operations / Agent Control",
+      "id": "fb2f16d1-2f1a-4959-93e7-7af0998d9e81",
       "importance": "archive-only",
       "labels": [
         "builder_reported",
-        "reject"
+        "monitor"
       ],
       "product_relevance": [],
       "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "reddit.com",
+      "source": "github.com",
       "source_facts": [
-        "A solo builder reported receiving their first $9 payment for a project they built."
+        "Show HN: Lossless-memory – a personal AI memory that never summarizes —"
       ],
-      "title": "I made my first $9 online from something I built",
-      "uncertainty": "",
-      "url": "https://www.reddit.com/r/SaaS/comments/1wm9hum/i_made_my_first_9_online_from_something_i_built/"
+      "title": "Show HN: Lossless-memory – a personal AI memory that never summarizes",
+      "uncertainty": "Primary linked page read; claims not independently reproduced.",
+      "url": "https://github.com/aru-labs/lossless-memory"
     },
     {
-      "builder_takeaway": "A founder posted a progress update on an AI virtual try-on product now working with its first wig retailer, covering hair density, hairline accuracy, colour fidelity and face preservation during movement. It is a promotional product update rather than a generalisable finding, though the stated problem of deciding when a preview is reliable enough to sit in a sales flow is a real one.",
-      "category": "Tools Worth Testing",
-      "id": "54cdf8c0-9c7c-48eb-9bb5-6e2e3b76afc2",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-22T00:00:00.000Z",
-      "source": "reddit.com",
-      "source_facts": [
-        "An AI virtual try-on startup reported accuracy challenges such as hair density and colour fidelity while onboarding its first wig retail client."
-      ],
-      "title": "Update on a live AI try-on product's first wig client",
-      "uncertainty": "Self-reported vendor update with demo footage; no independent verification of quality claims.",
-      "url": "https://www.reddit.com/r/SaaS/comments/1wm8pe1/update_on_our_live_ai_tryon_our_first_wig_client/"
-    },
-    {
-      "builder_takeaway": "A post from a vendor account arguing that generative AI now makes long-held adaptive-learning product ideas buildable, anchored on an unsourced anecdote of a founder going from $10M to $300M revenue in one year. The revenue claim is unverifiable and the piece functions as content marketing for the poster's platform.",
+      "builder_takeaway": "Title reports 111k views and zero revenue; no reproducible acquisition evidence.",
       "category": "Small Business Automation",
-      "id": "084c523e-1090-456c-9515-4d7a6d5c8bc5",
+      "id": "6753c64a-392f-4200-90ea-b06b8c23c4b3",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -362,16 +400,377 @@
       "published_at": "2026-09-22T00:00:00.000Z",
       "source": "reddit.com",
       "source_facts": [
-        "A vendor argues generative AI now makes previously unbuildable adaptive learning products feasible without an engineering team."
+        "111k people watched me make $0.000 😅 — This is probably the funniest thing that has happened since I started building. Months of coding, shipping features, fixing bugs, and trying to get users. Then I posted my actual revenue: $0.000 And somehow 111k people saw it. At this point…"
       ],
-      "title": "Can instructional design tech finally catch up to our ideas?",
-      "uncertainty": "The $10M to $300M figure is attributed to an unnamed founder at a vendor-run summit and cannot be checked.",
-      "url": "https://www.reddit.com/r/SaaS/comments/1wm76zv/can_instructional_design_tech_finally_catch_up_to/"
+      "title": "111k people watched me make $0.000 😅",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wn1080/111k_people_watched_me_make_0000/"
+    },
+    {
+      "builder_takeaway": "Founder celebrates worldwide users; no measured workflow or decision-changing result.",
+      "category": "Small Business Automation",
+      "id": "7d4af685-ac6c-46f2-bf5e-4f9ea4530564",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "It's such a cool feeling having people use your app from all over the world — Building a SaaS is HARD but man it can feel so rewarding. I worked in big tech for many years, and don't get me wrong it was a good and comfortable career, but personally after a while it just felt like I was going through the motions and y…"
+      ],
+      "title": "It's such a cool feeling having people use your app from all over the world",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wmk3ow/its_such_a_cool_feeling_having_people_use_your/"
+    },
+    {
+      "builder_takeaway": "Discussion asks what would break under growth; no demonstrated bottleneck.",
+      "category": "Small Business Automation",
+      "id": "abb279ee-3dff-4310-8237-eeeeff31a7d8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "If your SaaS suddenly got 3x more customers, what would break first? — It's interesting how different parts of a SaaS handle sudden growth. It's easy to focus on infrastructure, but support, onboarding, internal processes, or even billing can become bottlenecks too. For those who've experienced a sudden jump i…"
+      ],
+      "title": "If your SaaS suddenly got 3x more customers, what would break first?",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wn0n7t/if_your_saas_suddenly_got_3x_more_customers_what/"
+    },
+    {
+      "builder_takeaway": "Author reports a failed live PayPal funnel despite sandbox testing; root cause is unspecified.",
+      "category": "Small Business Automation",
+      "id": "d2adf703-f1b2-4c20-9d49-e1a65151bbe4",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Yesterday I lost my first customer — i thought my PayPal funnel was working fine, but it never really worked. feels so awkward. (yes, of course, i tested the sandbox before going live, but i never tried a real payment because i was worried that paying myself through paypal mig…"
+      ],
+      "title": "Yesterday I lost my first customer",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wmh4ix/yesterday_i_lost_my_first_customer/"
+    },
+    {
+      "builder_takeaway": "Founder attributes faster sales to a cofounder; causal and revenue claims remain unverified.",
+      "category": "Small Business Automation",
+      "id": "8dfd100d-4ed5-4796-bab9-e64286771a99",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Choose your non-tech/sales co-founder wisely — Just wanted to share my ordeal as a first-time tech founder with fellow people who are questioning whether they have the right co-founder or not: Attempt 1: Time to 100K ARR: 2+ years and still did not make it Same idea and customer segment…"
+      ],
+      "title": "Choose your non-tech/sales co-founder wisely",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wmxulk/choose_your_nontechsales_cofounder_wisely/"
+    },
+    {
+      "builder_takeaway": "Founder describes difficulty acquiring BI users; no controlled acquisition evidence.",
+      "category": "Small Business Automation",
+      "id": "2e79c0eb-c112-43c6-ab00-de8aa06eead2",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Giving up after a year — I think the hardest part of building the product is not the technical part but finding people to try it. I have spent 1 year just building the product and spending 9 months to asking people to just “try it”. I have asked friends, families w…"
+      ],
+      "title": "Giving up after a year",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wn1y27/giving_up_after_a_year/"
+    },
+    {
+      "builder_takeaway": "Opinion argues AI cannot replace app builders; no actionable comparative evidence.",
+      "category": "Small Business Automation",
+      "id": "f679b50d-abd8-4dd8-993b-d5eea2b7ef2d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Unpopular Opinion: Ai doesn't mean anyone can build your app — Here is likely a truly unpopular, but correct opinion. Im writing this in response to the DAILY deluge of posts about how AI tools can now build your app immediately, killing off SaaS, which is soooo wrong that its absurd. If the only thing…"
+      ],
+      "title": "Unpopular Opinion: Ai doesn't mean anyone can build your app",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wmdzmv/unpopular_opinion_ai_doesnt_mean_anyone_can_build/"
+    },
+    {
+      "builder_takeaway": "Founder celebrates a first paid subscriber; no transferable acquisition measurements.",
+      "category": "Small Business Automation",
+      "id": "ee3b028c-44d6-4ea7-a334-7d4f67f3a9f5",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Got my first paid subscriber — Built out a market intelligence hub for retail traders and investors, i offer educational content / financial literacy for free and actual market reports, options data, insider flows and anything that has a real cost behind a paywall. Went…"
+      ],
+      "title": "Got my first paid subscriber",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wmvqp9/got_my_first_paid_subscriber/"
+    },
+    {
+      "builder_takeaway": "Title claims 100 users and six sales after launch; no verified conversion evidence.",
+      "category": "Small Business Automation",
+      "id": "109cef26-1a54-4dc3-9486-7fcbc563a276",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Website finished yesterday and today I got +100 users and made 6 sales 🥹 — Feels so weird to have result so fast lol. Ofc it's really small payment but gives a lot of energy ! Plan is to keep going and see what happens This is what I built, idk if this is truly a saas ? https://wikimillion.com/ Anyway it's really…"
+      ],
+      "title": "Website finished yesterday and today I got +100 users and made 6 sales 🥹",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wmm96s/website_finished_yesterday_and_today_i_got_100/"
+    },
+    {
+      "builder_takeaway": "Opinion blames startup struggles on social posting; no causal evidence.",
+      "category": "Small Business Automation",
+      "id": "0e7d87ff-3f2d-4fbc-a415-93c207e860d3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Reason why your startup isn't taking off — I'm just tired of seeing all of this AI slop on Twitter, LinkedIn and on Instagram about Jev from all the builders and solopreneurs and indie hackers. No wonder when they complain that their startup is not taking off. Instead of focusing on…"
+      ],
+      "title": "Reason why your startup isn't taking off",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wn2ti2/reason_why_your_startup_isnt_taking_off/"
+    },
+    {
+      "builder_takeaway": "SEO progress report cites small user and payer counts; attribution remains unclear.",
+      "category": "Small Business Automation",
+      "id": "d920ec3a-2688-4344-925a-3cd06ecbf09b",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "3 month SEO update — Context, it's an EdTech website I initially built for my teacher wife, then turned it into a product. Sitting at about 70 users now (teachers or parents), and 82 students (no account but PIN locked pages). Only 3 paying users so far, free t…"
+      ],
+      "title": "3 month SEO update",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wn0iki/3_month_seo_update/"
+    },
+    {
+      "builder_takeaway": "Post asks whether to switch coding subscriptions; no comparative evaluation.",
+      "category": "Small Business Automation",
+      "id": "5e184f3f-237f-40d2-8d88-ca0821c1389f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Need Suggestion to take subscription for best AI platform for coding — I have claude subscription for vibe coding SAAS applications and real time applications, now I want to switch to chatgpt, is it worth or should I continue with claude subscription? Need suggestions. &#32; submitted by &#32; /u/Prasad3424 [l…"
+      ],
+      "title": "Need Suggestion to take subscription for best AI platform for coding",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wn1n17/need_suggestion_to_take_subscription_for_best_ai/"
+    },
+    {
+      "builder_takeaway": "Proposed live-auction concept seeks feedback; no validated demand evidence.",
+      "category": "Small Business Automation",
+      "id": "9b5d66a1-7d5e-4b52-8993-e5e607bca657",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Live auctions for handmade/vintage sellers, but the seller never goes on camera. Does this hold up? — Some of you might remember my girls' night idea. You pretty much talked me out of it, which was the point. Got a new one and I'd rather get torn apart here than after building it. Been working on this for a few weeks and want people to tear…"
+      ],
+      "title": "Live auctions for handmade/vintage sellers, but the seller never goes on camera. Does this hold up?",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wn1cto/live_auctions_for_handmadevintage_sellers_but_the/"
+    },
+    {
+      "builder_takeaway": "Meeting-notes product story describes competing with a funded startup; no verified traction.",
+      "category": "Small Business Automation",
+      "id": "8b99a41c-38e8-4091-9357-e89098b00c4b",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "a funded startup shipped my idea before me. built it anyway — i'd been sitting on this idea for a while: record any meeting, get the notes and to-dos done for you then Pocket launched basically that. funded, solid team, nice hardware. ngl i was kinda gutted but the more i looked at it the more one thi…"
+      ],
+      "title": "a funded startup shipped my idea before me. built it anyway",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wn16ok/a_funded_startup_shipped_my_idea_before_me_built/"
+    },
+    {
+      "builder_takeaway": "Discussion asks who maintains AI-built apps; no demonstrated maintenance solution.",
+      "category": "Small Business Automation",
+      "id": "5ea73284-d661-4f80-bda1-eb5cd66e7f78",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Vibe coding made building easy. Who maintains the app after you ship it? — I'm not a developer. I started building software because AI made it possible for someone like me to turn an idea into something that actually works. And the more I build, the more I realize that building might actually be the easy part now.…"
+      ],
+      "title": "Vibe coding made building easy. Who maintains the app after you ship it?",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wn33bp/vibe_coding_made_building_easy_who_maintains_the/"
+    },
+    {
+      "builder_takeaway": "Request for SaaS naming advice; no new tool or tested method.",
+      "category": "Small Business Automation",
+      "id": "35cdb1da-4743-4c97-9d36-e8a37d2c8e57",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Saas naming strategy? — Hi everyone. I've been putting in more time then necessary for naming my saas products. I'm looking for some frameworks, sops, hacks that's gonna save me some time and also help me get a decent brand name generated in short amount of time.…"
+      ],
+      "title": "Saas naming strategy?",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wn31dz/saas_naming_strategy/"
+    },
+    {
+      "builder_takeaway": "Question about discovering SaaS tools; no measured distribution results.",
+      "category": "Small Business Automation",
+      "id": "6a0ca8b6-c22d-4c45-ab52-80392664587e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Where do you actually discover useful SaaS products? — I'm curious where people find tools that aren't already all over Product Hunt, LinkedIn and Google. Reddit obviously has a lot of recommendations, but I'm wondering what other places people use. Communities? Newsletters? Indie Hackers? Rand…"
+      ],
+      "title": "Where do you actually discover useful SaaS products?",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wn2xm4/where_do_you_actually_discover_useful_saas/"
+    },
+    {
+      "builder_takeaway": "Founder describes swappable AI product direction; no implementation evidence verified.",
+      "category": "Small Business Automation",
+      "id": "15f91f20-7037-4622-a404-0a3569262831",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "building a personal AI product where the customer can change the AI — i’m the founder of Wrkr. one decision i keep coming back to is what should stay the same when a customer wants a different AI. Grok Bot, Meta Muse and Instinct are the products i’m thinking about alongside this. getting started matters, but…"
+      ],
+      "title": "building a personal AI product where the customer can change the AI",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wn2rk4/building_a_personal_ai_product_where_the_customer/"
+    },
+    {
+      "builder_takeaway": "Question about posting consistently; no tested distribution strategy.",
+      "category": "Small Business Automation",
+      "id": "1b83234e-5bbd-4199-bd80-91485663b878",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "How do you get yourself to post consistently on X/LinkedIn? — I've noticed building the product is the easy part now; getting anyone to see it is what actually stops me. But even knowing that, I still freeze when it's time to post. Not because writing is hard, I just don't know what's worth saying tha…"
+      ],
+      "title": "How do you get yourself to post consistently on X/LinkedIn?",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wmmwwx/how_do_you_get_yourself_to_post_consistently_on/"
+    },
+    {
+      "builder_takeaway": "First-subscriber milestone for Draft2Publish.AI; no transferable sales evidence.",
+      "category": "Small Business Automation",
+      "id": "2987ab14-491c-4870-ac90-6d7948e239ee",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I just got my first paying customer. ❤️ — Finally got my first $9.99 paid subscriber and it feels great. It's better than $0, and it validates all the hard work we put into Draft2Publish.AI. Someone found us, looked at it, and decided it was worth a try. I'm nowhere near where I wa…"
+      ],
+      "title": "I just got my first paying customer. ❤️",
+      "uncertainty": "Assessed from supplied title and excerpt; linked page not opened.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wmsvfp/i_just_got_my_first_paying_customer/"
     }
   ],
   "mode": "primary",
-  "run_id": "a0957525-8f61-42e6-a113-ba30dc6ec6b4",
+  "run_id": "86b151b0-14fa-4867-b939-3d7e68bbb9c6",
   "status": "completed",
-  "summary": "Synthesized Nightly Librarian run with 8 promoted item(s), 19 scored item(s), and 11 rejected item(s).",
+  "summary": "Synthesized Nightly Librarian run with 8 promoted item(s), 40 scored item(s), and 32 rejected item(s).",
   "title": "Nightly Librarian - 2026-09-22"
 }

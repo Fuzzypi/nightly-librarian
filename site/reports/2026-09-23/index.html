@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>September 23, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="11 stories cleared the bar, led by Python Workers are now generally available, Xiaomi MiMo V2.">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-09-23/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="September 23, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="11 stories cleared the bar, led by Python Workers are now generally available, Xiaomi MiMo V2.">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-09-23/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="September 23, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="11 stories cleared the bar, led by Python Workers are now generally available, Xiaomi MiMo V2.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>September 23, 2026 · Report log</span>
+      <span>Sep 23, 2026, 2:05 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>September 23, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>11 stories cleared the bar, led by Python Workers are now generally available, Xiaomi MiMo V2.6 (Pro, Flash, UltraSpeed) now callable via Vercel AI Gateway, and n8n 2.40.5 / 2.39.10: backported fix limiting declarative routing during base-URL ownership checks.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>11 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/python-workers-ga/" target="_blank" rel="noopener">Python Workers are now generally available</a></div>
+        <div class="item-takeaway">Cloudflare says Python Workers are now generally available, so Python web frameworks and AI orchestration libraries run natively on the Workers runtime with direct access to D1, R2 and Workers AI, with no JavaScript glue needed. For a solo builder this makes a Python-first edge deployment a supported production option rather than a beta experiment. If you run Python glue services on a VPS, check whether they fit Workers limits before your next deploy.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/mimo-v2-6-models-now-available-on-ai-gateway" target="_blank" rel="noopener">Xiaomi MiMo V2.6 (Pro, Flash, UltraSpeed) now callable via Vercel AI Gateway</a></div>
+        <div class="item-takeaway">Xiaomi's MiMo V2.6 family is available on Vercel AI Gateway: Pro (1.02T total / 42B active MoE), Flash (309B / 15B active) and Pro UltraSpeed (claimed up to 20x output speed). All have a 1M-token context, up to 128K output tokens, structured outputs and multimodal input. Latent Space reports Pro as the new top open-weights model, trained for about $3M. If you route agent or coding work through a gateway, it costs little to add as a candidate and benchmark against your current default.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.5" target="_blank" rel="noopener">n8n 2.40.5 / 2.39.10: backported fix limiting declarative routing during base-URL ownership checks</a></div>
+        <div class="item-takeaway">n8n shipped same-day patch releases on both the 2.40 and 2.39 lines with one fix: &quot;Limit declarative routing during base URL ownership checks&quot;. A single-fix backport to two release lines usually means a security hardening fix, probably around request routing or SSRF. If you self-host n8n, update to 2.40.5, 2.39.10 or 2.41.0.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/deployments-now-show-billable-duration-and-cpu-minutes" target="_blank" rel="noopener">Deployments now show billable duration and CPU minutes</a></div>
+        <div class="item-takeaway">Vercel deployments now show billable build duration (build plus post-build time, rounded up to the minute) and CPU minutes (duration × vCPUs) in the dashboard, in `vc inspect` (CLI 59.23.1+) and in the REST API. This helps you find which builds are eating your usage.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/" target="_blank" rel="noopener">Looking forward to Git 2.56 - and 3.0</a></div>
+        <div class="item-takeaway">LWN previews Git 2.56 and the upcoming Git 3.0, the release where long-planned breaking default changes land. Title-based only: the article was not read. Skim it before 3.0 ships so CI scripts and tooling that assume old defaults don't break.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://huggingface.co/blog/tokenizers-v1" target="_blank" rel="noopener">tokenizers v1: encode, decode and scaling, measured</a></div>
+        <div class="item-takeaway">Hugging Face published a post on tokenizers v1, the first major version of its widely used tokenization library, with measured encode/decode and scaling performance. Title-based only; no content was fetched. It matters mainly if you run tokenization in your own pipelines.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/vercel-connect-microsoft-teams" target="_blank" rel="noopener">Vercel Connect now supports Microsoft Teams</a></div>
+        <div class="item-takeaway">Vercel Connect now has a managed Microsoft Teams connector. Vercel registers the Entra app and Azure Bot in your tenant, so you don't have to store a client secret, and forwards verified Teams messages to your project so an agent can reply as a bot. This lowers the effort of shipping an agent into enterprise Teams channels, a possible distribution route for B2B agent products.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/ai-gateway-now-supports-typesafe-clients-and-http-api-for-jev" target="_blank" rel="noopener">AI Gateway now supports TypeSafe clients and an HTTP API for Jev</a></div>
+        <div class="item-takeaway">Vercel AI Gateway now proxies Jev from TypeSafe AI, a &quot;probabilistic decision model&quot; that returns typed boolean, choice or score answers with probabilities instead of generated text, through the TypeSafe client, an HTTP API (POST /v1/evaluate) or the AI SDK. Vercel's eve agent framework uses it for model selection and tool approvals. It could be interesting for agent gating decisions, but it's early and vendor-driven.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://david.alvarezrosa.com/posts/self-hosting-behind-cgnat/" target="_blank" rel="noopener">Self-Hosting Behind CGNAT</a></div>
+        <div class="item-takeaway">A builder's write-up on self-hosting services behind carrier-grade NAT, where you can't port-forward. Title-based only. Useful if you plan to run anything from a home connection.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/grok-4-7-now-available-and-40-off-on-ai-gateway-fx-eve" target="_blank" rel="noopener">Grok 4.7 now available and 40% off on AI Gateway, fx, and eve</a></div>
+        <div class="item-takeaway">Grok 4.7 (500K context, four reasoning levels) is on Vercel AI Gateway at 40% off through September 27. The discount is time-limited, so only relevant if you are already evaluating it.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://huggingface.co/blog/omlx" target="_blank" rel="noopener">Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community</a></div>
+        <div class="item-takeaway">Jun Kim, creator of oMLX, has joined Hugging Face to support the MLX (Apple Silicon) community. This is a signal that local inference on Macs will get more investment. It doesn't call for any action yet.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/ainews-xiaomi-mimo-v26-pro-1t-a42b" target="_blank" rel="noopener">[AINews] Xiaomi MiMo-V2.6-Pro 1T-A42B: the new top Open Weights model, trained for $3M</a>
+        </div>
+        <div class="item-takeaway">Latent Space AINews covers Xiaomi MiMo-V2.6-Pro (1T total, 42B active) as the new top open-weights model, reportedly trained for $3M.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          Jev: System One models for Prod, not God
+        </div>
+        <div class="item-takeaway">with Diogo Almeida, CEO, TypeSafe AI — https://www.latent.space/p/jev — A Latent Space podcast with TypeSafe AI's CEO about the Jev model.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://huggingface.co/blog/omlx" target="_blank" rel="noopener">Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community</a>
+        </div>
+        <div class="item-takeaway">Jun Kim, creator of oMLX, has joined Hugging Face to support the MLX (Apple Silicon) community. This is a signal that local inference on Macs will get more investment. It doesn't call for any action yet.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an" target="_blank" rel="noopener">Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem</a>
+        </div>
+        <div class="item-takeaway">A research blog post framing LLM block pruning as an Ising optimization problem.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://huggingface.co/blog/tokenizers-v1" target="_blank" rel="noopener">tokenizers v1: encode, decode and scaling, measured</a>
+        </div>
+        <div class="item-takeaway">Hugging Face published a post on tokenizers v1, the first major version of its widely used tokenization library, with measured encode/decode and scaling performance. Title-based only; no content was fetched. It matters mainly if you run tokenization in your own pipelines.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.0" target="_blank" rel="noopener">n8n@2.41.0</a>
+        </div>
+        <div class="item-takeaway">n8n 2.41.0 is a bug-fix rollup: AI builder fixes, multi-main publishing, Vault reads, and execution status guards.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">beta</a>
+        </div>
+        <div class="item-takeaway">The n8n &quot;beta&quot; tag release duplicates 2.41.0.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/stable" target="_blank" rel="noopener">stable</a>
+        </div>
+        <div class="item-takeaway">The n8n &quot;stable&quot; tag release duplicates 2.40.5.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.5" target="_blank" rel="noopener">n8n 2.40.5 / 2.39.10: backported fix limiting declarative routing during base-URL ownership checks</a>
+        </div>
+        <div class="item-takeaway">n8n shipped same-day patch releases on both the 2.40 and 2.39 lines with one fix: &quot;Limit declarative routing during base URL ownership checks&quot;. A single-fix backport to two release lines usually means a security hardening fix, probably around request routing or SSRF. If you self-host n8n, update to 2.40.5, 2.39.10 or 2.41.0.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.10" target="_blank" rel="noopener">n8n@2.39.10</a>
+        </div>
+        <div class="item-takeaway">n8n 2.39.10 is the same base-URL routing fix, backported to 2.39.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/python-workers-ga/" target="_blank" rel="noopener">Python Workers are now generally available</a>
+        </div>
+        <div class="item-takeaway">Cloudflare says Python Workers are now generally available, so Python web frameworks and AI orchestration libraries run natively on the Workers runtime with direct access to D1, R2 and Workers AI, with no JavaScript glue needed. For a solo builder this makes a Python-first edge deployment a supported production option rather than a beta experiment. If you run Python glue services on a VPS, check whether they fit Workers limits before your next deploy.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash&amp;hl=ko" target="_blank" rel="noopener">Google AI Studio: &quot;Try it&quot; link for gemini-3.8-flash (Korean locale)</a>
+        </div>
+        <div class="item-takeaway">A Google AI changelog entry that is only a Korean-locale &quot;try it&quot; link to gemini-3.8-flash in AI Studio, with no content.</div>
+        <div class="item-meta">
+          <span>google-ai-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/vercel-connect-microsoft-teams" target="_blank" rel="noopener">Vercel Connect now supports Microsoft Teams</a>
+        </div>
+        <div class="item-takeaway">Vercel Connect now has a managed Microsoft Teams connector. Vercel registers the Entra app and Azure Bot in your tenant, so you don't have to store a client secret, and forwards verified Teams messages to your project so an agent can reply as a bot. This lowers the effort of shipping an agent into enterprise Teams channels, a possible distribution route for B2B agent products.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/deployments-now-show-billable-duration-and-cpu-minutes" target="_blank" rel="noopener">Deployments now show billable duration and CPU minutes</a>
+        </div>
+        <div class="item-takeaway">Vercel deployments now show billable build duration (build plus post-build time, rounded up to the minute) and CPU minutes (duration × vCPUs) in the dashboard, in `vc inspect` (CLI 59.23.1+) and in the REST API. This helps you find which builds are eating your usage.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/mimo-v2-6-models-now-available-on-ai-gateway" target="_blank" rel="noopener">Xiaomi MiMo V2.6 (Pro, Flash, UltraSpeed) now callable via Vercel AI Gateway</a>
+        </div>
+        <div class="item-takeaway">Xiaomi's MiMo V2.6 family is available on Vercel AI Gateway: Pro (1.02T total / 42B active MoE), Flash (309B / 15B active) and Pro UltraSpeed (claimed up to 20x output speed). All have a 1M-token context, up to 128K output tokens, structured outputs and multimodal input. Latent Space reports Pro as the new top open-weights model, trained for about $3M. If you route agent or coding work through a gateway, it costs little to add as a candidate and benchmark against your current default.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://vercel.com/changelog/ai-gateway-now-supports-typesafe-clients-and-http-api-for-jev" target="_blank" rel="noopener">AI Gateway now supports TypeSafe clients and an HTTP API for Jev</a>
+        </div>
+        <div class="item-takeaway">Vercel AI Gateway now proxies Jev from TypeSafe AI, a &quot;probabilistic decision model&quot; that returns typed boolean, choice or score answers with probabilities instead of generated text, through the TypeSafe client, an HTTP API (POST /v1/evaluate) or the AI SDK. Vercel's eve agent framework uses it for model selection and tool approvals. It could be interesting for agent gating decisions, but it's early and vendor-driven.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://vercel.com/changelog/grok-4-7-now-available-and-40-off-on-ai-gateway-fx-eve" target="_blank" rel="noopener">Grok 4.7 now available and 40% off on AI Gateway, fx, and eve</a>
+        </div>
+        <div class="item-takeaway">Grok 4.7 (500K context, four reasoning levels) is on Vercel AI Gateway at 40% off through September 27. The discount is time-limited, so only relevant if you are already evaluating it.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://david.alvarezrosa.com/posts/self-hosting-behind-cgnat/" target="_blank" rel="noopener">Self-Hosting Behind CGNAT</a>
+        </div>
+        <div class="item-takeaway">A builder's write-up on self-hosting services behind carrier-grade NAT, where you can't port-forward. Title-based only. Useful if you plan to run anything from a home connection.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://botahamec.dev/named-optional-args" target="_blank" rel="noopener">Named and Optional Arguments are Awesome</a>
+        </div>
+        <div class="item-takeaway">An opinion essay on language design that argues for named and optional arguments.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/acsandmann/rift/" target="_blank" rel="noopener">rift - a tiling window manager for macos</a>
+        </div>
+        <div class="item-takeaway">rift, an open-source tiling window manager for macOS.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ahelwer.ca/post/2026-09-21-concurrency-textbook/" target="_blank" rel="noopener">Textbook review: Is Parallel Programming Hard, And, If So, What Can You Do About It?</a>
+        </div>
+        <div class="item-takeaway">A review of Paul McKenney's concurrency textbook.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/" target="_blank" rel="noopener">Looking forward to Git 2.56 - and 3.0</a>
+        </div>
+        <div class="item-takeaway">LWN previews Git 2.56 and the upcoming Git 3.0, the release where long-planned breaking default changes land. Title-based only: the article was not read. Skim it before 3.0 ships so CI scripts and tooling that assume old defaults don't break.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://code.irenes.space/evocation/tree/README.txt" target="_blank" rel="noopener">evocation (experimental computation project README)</a>
+        </div>
+        <div class="item-takeaway">The README for an experimental, artistically framed computation project.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://dbushell.com/2026/09/22/apple-intelligence/" target="_blank" rel="noopener">I said no and Apple said yes</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://remy.wang/blog/ra-ra.html" target="_blank" rel="noopener">Relation algebra is not relational algebra</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://kevquirk.com/do-you-use-visited-on-links" target="_blank" rel="noopener">Do you use :visited on links?</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/dtonon/squalk" target="_blank" rel="noopener">Squalk: an old-school forum engine built on Nostr (NIP-29 groups, NIP-7D threads)</a>
+        </div>
+        <div class="item-takeaway">I miss classic forums: slow, asynchronous threads that stay readable and searchable for years, instead of knowledge dissolving into chat scr…</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://brennan.day/creating-a-blog-in-gemini/" target="_blank" rel="noopener">Creating a Blog in Gemini://</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.artima.com/insidejvm/whyCAFEBABE.html" target="_blank" rel="noopener">Why 0xCAFEBABE?</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://a.l3x.in/blog/throwaway-vpn/" target="_blank" rel="noopener">Cheap and easy throwaway VPN server</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lobste.rs/s/fyngrv/what_are_you_doing_this_week" target="_blank" rel="noopener">What are you doing this week?</a>
+        </div>
+        <div class="item-takeaway">What are you doing this week? Feel free to share! Keep in mind it’s OK to do nothing at all, too.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://arialdo.codeberg.page/ju-ju-tsu/" target="_blank" rel="noopener">Ju! Ju! Tsu</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://htmx.org/essays/markdown-in-src/" target="_blank" rel="noopener">Markdown in /src</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://alicegg.tech/2026/09/21/attention" target="_blank" rel="noopener">Attention is all you have</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://steveklabnik.com/writing/arguing-about-arguments/" target="_blank" rel="noopener">Arguing about arguments</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.veritates.love/design-it-right" target="_blank" rel="noopener">Design your programming languages right (2024)</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://mattgreer.dev/blog/making-a-game-for-gba-and-pc/" target="_blank" rel="noopener">Making a game for the GBA and PC from the same codebase</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://canonical.com/blog/zephyr-lts-announcement" target="_blank" rel="noopener">Canonical announces Zephyr 26.04 LTS</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://anishathalye.com/optimal-trace/" target="_blank" rel="noopener">Running an Optimal Trace</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://mimo.xiaomi.com/mimo-v2-6" target="_blank" rel="noopener">MiMo v2.6</a>
+        </div>
+        <div class="item-takeaway">Xiaomi's MiMo v2.6 announcement page, trending on Hacker News.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 6ac204db-87f9-4f7e-b205-22e30640552a
+Started: 2026-09-23T06:03:05.045Z
+Completed: 2026-09-23T06:05:18.645Z
+
+## Worth attention
+
+- **Python Workers are now generally available**
+  https://blog.cloudflare.com/python-workers-ga/
+  Cloudflare says Python Workers are now generally available, so Python web frameworks and AI orchestration libraries run natively on the Workers runtime with direct access to D1, R2 and Workers AI, with no JavaScript glue needed. For a solo builder this makes a Python-first edge deployment a supported production option rather than a beta experiment. If you run Python glue services on a VPS, check whether they fit Workers limits before your next deploy.
+- **Xiaomi MiMo V2.6 (Pro, Flash, UltraSpeed) now callable via Vercel AI Gateway**
+  https://vercel.com/changelog/mimo-v2-6-models-now-available-on-ai-gateway
+  Xiaomi's MiMo V2.6 family is available on Vercel AI Gateway: Pro (1.02T total / 42B active MoE), Flash (309B / 15B active) and Pro UltraSpeed (claimed up to 20x output speed). All have a 1M-token context, up to 128K output tokens, structured outputs and multimodal input. Latent Space reports Pro as the new top open-weights model, trained for about $3M. If you route agent or coding work through a gateway, it costs little to add as a candidate and benchmark against your current default.
+- **n8n 2.40.5 / 2.39.10: backported fix limiting declarative routing during base-URL ownership checks**
+  https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.5
+  n8n shipped same-day patch releases on both the 2.40 and 2.39 lines with one fix: &quot;Limit declarative routing during base URL ownership checks&quot;. A single-fix backport to two release lines usually means a security hardening fix, probably around request routing or SSRF. If you self-host n8n, update to 2.40.5, 2.39.10 or 2.41.0.
+- **Deployments now show billable duration and CPU minutes**
+  https://vercel.com/changelog/deployments-now-show-billable-duration-and-cpu-minutes
+  Vercel deployments now show billable build duration (build plus post-build time, rounded up to the minute) and CPU minutes (duration × vCPUs) in the dashboard, in `vc inspect` (CLI 59.23.1+) and in the REST API. This helps you find which builds are eating your usage.
+- **Looking forward to Git 2.56 - and 3.0**
+  https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/
+  LWN previews Git 2.56 and the upcoming Git 3.0, the release where long-planned breaking default changes land. Title-based only: the article was not read. Skim it before 3.0 ships so CI scripts and tooling that assume old defaults don't break.
+- **tokenizers v1: encode, decode and scaling, measured**
+  https://huggingface.co/blog/tokenizers-v1
+  Hugging Face published a post on tokenizers v1, the first major version of its widely used tokenization library, with measured encode/decode and scaling performance. Title-based only; no content was fetched. It matters mainly if you run tokenization in your own pipelines.
+- **Vercel Connect now supports Microsoft Teams**
+  https://vercel.com/changelog/vercel-connect-microsoft-teams
+  Vercel Connect now has a managed Microsoft Teams connector. Vercel registers the Entra app and Azure Bot in your tenant, so you don't have to store a client secret, and forwards verified Teams messages to your project so an agent can reply as a bot. This lowers the effort of shipping an agent into enterprise Teams channels, a possible distribution route for B2B agent products.
+- **AI Gateway now supports TypeSafe clients and an HTTP API for Jev**
+  https://vercel.com/changelog/ai-gateway-now-supports-typesafe-clients-and-http-api-for-jev
+  Vercel AI Gateway now proxies Jev from TypeSafe AI, a &quot;probabilistic decision model&quot; that returns typed boolean, choice or score answers with probabilities instead of generated text, through the TypeSafe client, an HTTP API (POST /v1/evaluate) or the AI SDK. Vercel's eve agent framework uses it for model selection and tool approvals. It could be interesting for agent gating decisions, but it's early and vendor-driven.
+- **Self-Hosting Behind CGNAT**
+  https://david.alvarezrosa.com/posts/self-hosting-behind-cgnat/
+  A builder's write-up on self-hosting services behind carrier-grade NAT, where you can't port-forward. Title-based only. Useful if you plan to run anything from a home connection.
+- **Grok 4.7 now available and 40% off on AI Gateway, fx, and eve**
+  https://vercel.com/changelog/grok-4-7-now-available-and-40-off-on-ai-gateway-fx-eve
+  Grok 4.7 (500K context, four reasoning levels) is on Vercel AI Gateway at 40% off through September 27. The discount is time-limited, so only relevant if you are already evaluating it.
+- **Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community**
+  https://huggingface.co/blog/omlx
+  Jun Kim, creator of oMLX, has joined Hugging Face to support the MLX (Apple Silicon) community. This is a signal that local inference on Macs will get more investment. It doesn't call for any action yet.
+
+## Full digest
+
+- [R] [latent-space] [AINews] Xiaomi MiMo-V2.6-Pro 1T-A42B: the new top Open Weights model, trained for $3M — https://www.latent.space/p/ainews-xiaomi-mimo-v26-pro-1t-a42b — Latent Space AINews covers Xiaomi MiMo-V2.6-Pro (1T total, 42B active) as the new top open-weights model, reportedly trained for $3M.
+- [R] [latent-space] Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI — https://www.latent.space/p/jev — A Latent Space podcast with TypeSafe AI's CEO about the Jev model.
+- [M] [huggingface-blog] Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community — https://huggingface.co/blog/omlx — Jun Kim, creator of oMLX, has joined Hugging Face to support the MLX (Apple Silicon) community. This is a signal that local inference on Macs will get more investment. It doesn't call for any action yet.
+- [R] [huggingface-blog] Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem — https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an — A research blog post framing LLM block pruning as an Ising optimization problem.
+- [P] [huggingface-blog] tokenizers v1: encode, decode and scaling, measured — https://huggingface.co/blog/tokenizers-v1 — Hugging Face published a post on tokenizers v1, the first major version of its widely used tokenization library, with measured encode/decode and scaling performance. Title-based only; no content was fetched. It matters mainly if you run tokenization in your own pipelines.
+- [R] [gh-n8n] n8n@2.41.0 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.0 — n8n 2.41.0 is a bug-fix rollup: AI builder fixes, multi-main publishing, Vault reads, and execution status guards.
+- [R] [gh-n8n] beta — https://github.com/n8n-io/n8n/releases/tag/beta — The n8n &quot;beta&quot; tag release duplicates 2.41.0.
+- [R] [gh-n8n] stable — https://github.com/n8n-io/n8n/releases/tag/stable — The n8n &quot;stable&quot; tag release duplicates 2.40.5.
+- [P] [gh-n8n] n8n 2.40.5 / 2.39.10: backported fix limiting declarative routing during base-URL ownership checks — https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.5 — n8n shipped same-day patch releases on both the 2.40 and 2.39 lines with one fix: &quot;Limit declarative routing during base URL ownership checks&quot;. A single-fix backport to two release lines usually means a security hardening fix, probably around request routing or SSRF. If you self-host n8n, update to 2.40.5, 2.39.10 or 2.41.0.
+- [R] [gh-n8n] n8n@2.39.10 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.10 — n8n 2.39.10 is the same base-URL routing fix, backported to 2.39.
+- [P] [cloudflare-blog] Python Workers are now generally available — https://blog.cloudflare.com/python-workers-ga/ — Cloudflare says Python Workers are now generally available, so Python web frameworks and AI orchestration libraries run natively on the Workers runtime with direct access to D1, R2 and Workers AI, with no JavaScript glue needed. For a solo builder this makes a Python-first edge deployment a supported production option rather than a beta experiment. If you run Python glue services on a VPS, check whether they fit Workers limits before your next deploy.
+- [R] [google-ai-changelog] Google AI Studio: &quot;Try it&quot; link for gemini-3.8-flash (Korean locale) — https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash&amp;hl=ko — A Google AI changelog entry that is only a Korean-locale &quot;try it&quot; link to gemini-3.8-flash in AI Studio, with no content.
+- [P] [vercel-changelog] Vercel Connect now supports Microsoft Teams — https://vercel.com/changelog/vercel-connect-microsoft-teams — Vercel Connect now has a managed Microsoft Teams connector. Vercel registers the Entra app and Azure Bot in your tenant, so you don't have to store a client secret, and forwards verified Teams messages to your project so an agent can reply as a bot. This lowers the effort of shipping an agent into enterprise Teams channels, a possible distribution route for B2B agent products.
+- [P] [vercel-changelog] Deployments now show billable duration and CPU minutes — https://vercel.com/changelog/deployments-now-show-billable-duration-and-cpu-minutes — Vercel deployments now show billable build duration (build plus post-build time, rounded up to the minute) and CPU minutes (duration × vCPUs) in the dashboard, in `vc inspect` (CLI 59.23.1+) and in the REST API. This helps you find which builds are eating your usage.
+- [P] [vercel-changelog] Xiaomi MiMo V2.6 (Pro, Flash, UltraSpeed) now callable via Vercel AI Gateway — https://vercel.com/changelog/mimo-v2-6-models-now-available-on-ai-gateway — Xiaomi's MiMo V2.6 family is available on Vercel AI Gateway: Pro (1.02T total / 42B active MoE), Flash (309B / 15B active) and Pro UltraSpeed (claimed up to 20x output speed). All have a 1M-token context, up to 128K output tokens, structured outputs and multimodal input. Latent Space reports Pro as the new top open-weights model, trained for about $3M. If you route agent or coding work through a gateway, it costs little to add as a candidate and benchmark against your current default.
+- [M] [vercel-changelog] AI Gateway now supports TypeSafe clients and an HTTP API for Jev — https://vercel.com/changelog/ai-gateway-now-supports-typesafe-clients-and-http-api-for-jev — Vercel AI Gateway now proxies Jev from TypeSafe AI, a &quot;probabilistic decision model&quot; that returns typed boolean, choice or score answers with probabilities instead of generated text, through the TypeSafe client, an HTTP API (POST /v1/evaluate) or the AI SDK. Vercel's eve agent framework uses it for model selection and tool approvals. It could be interesting for agent gating decisions, but it's early and vendor-driven.
+- [M] [vercel-changelog] Grok 4.7 now available and 40% off on AI Gateway, fx, and eve — https://vercel.com/changelog/grok-4-7-now-available-and-40-off-on-ai-gateway-fx-eve — Grok 4.7 (500K context, four reasoning levels) is on Vercel AI Gateway at 40% off through September 27. The discount is time-limited, so only relevant if you are already evaluating it.
+- [P] [lobsters] Self-Hosting Behind CGNAT — https://david.alvarezrosa.com/posts/self-hosting-behind-cgnat/ — A builder's write-up on self-hosting services behind carrier-grade NAT, where you can't port-forward. Title-based only. Useful if you plan to run anything from a home connection.
+- [R] [lobsters] Named and Optional Arguments are Awesome — https://botahamec.dev/named-optional-args — An opinion essay on language design that argues for named and optional arguments.
+- [R] [lobsters] rift - a tiling window manager for macos — https://github.com/acsandmann/rift/ — rift, an open-source tiling window manager for macOS.
+- [R] [lobsters] Textbook review: Is Parallel Programming Hard, And, If So, What Can You Do About It? — https://ahelwer.ca/post/2026-09-21-concurrency-textbook/ — A review of Paul McKenney's concurrency textbook.
+- [P] [lobsters] Looking forward to Git 2.56 - and 3.0 — https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/ — LWN previews Git 2.56 and the upcoming Git 3.0, the release where long-planned breaking default changes land. Title-based only: the article was not read. Skim it before 3.0 ships so CI scripts and tooling that assume old defaults don't break.
+- [R] [lobsters] evocation (experimental computation project README) — https://code.irenes.space/evocation/tree/README.txt — The README for an experimental, artistically framed computation project.
+- [R] [lobsters] I said no and Apple said yes — https://dbushell.com/2026/09/22/apple-intelligence/ — Comments
+- [R] [lobsters] Relation algebra is not relational algebra — https://remy.wang/blog/ra-ra.html — Comments
+- [R] [lobsters] Do you use :visited on links? — https://kevquirk.com/do-you-use-visited-on-links — Comments
+- [R] [lobsters] Squalk: an old-school forum engine built on Nostr (NIP-29 groups, NIP-7D threads) — https://github.com/dtonon/squalk — I miss classic forums: slow, asynchronous threads that stay readable and searchable for years, instead of knowledge dissolving into chat scr…
+- [R] [lobsters] Creating a Blog in Gemini:// — https://brennan.day/creating-a-blog-in-gemini/ — Comments
+- [R] [lobsters] Why 0xCAFEBABE? — https://www.artima.com/insidejvm/whyCAFEBABE.html — Comments
+- [R] [lobsters] Cheap and easy throwaway VPN server — https://a.l3x.in/blog/throwaway-vpn/ — Comments
+- [R] [lobsters] What are you doing this week? — https://lobste.rs/s/fyngrv/what_are_you_doing_this_week — What are you doing this week? Feel free to share! Keep in mind it’s OK to do nothing at all, too.
+- [R] [lobsters] Ju! Ju! Tsu — https://arialdo.codeberg.page/ju-ju-tsu/ — Comments
+- [R] [lobsters] Markdown in /src — https://htmx.org/essays/markdown-in-src/ — Comments
+- [R] [lobsters] Attention is all you have — https://alicegg.tech/2026/09/21/attention — Comments
+- [R] [lobsters] Arguing about arguments — https://steveklabnik.com/writing/arguing-about-arguments/ — Comments
+- [R] [lobsters] Design your programming languages right (2024) — https://blog.veritates.love/design-it-right — Comments
+- [R] [lobsters] Making a game for the GBA and PC from the same codebase — https://mattgreer.dev/blog/making-a-game-for-gba-and-pc/ — Comments
+- [R] [lobsters] Canonical announces Zephyr 26.04 LTS — https://canonical.com/blog/zephyr-lts-announcement — Comments
+- [R] [lobsters] Running an Optimal Trace — https://anishathalye.com/optimal-trace/ — Comments
+- [R] [hn-top] MiMo v2.6 — https://mimo.xiaomi.com/mimo-v2-6 — Xiaomi's MiMo v2.6 announcement page, trending on Hacker News.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>

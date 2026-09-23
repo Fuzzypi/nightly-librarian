@@ -5,21 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>September 22, 2026 report log — The Nightly Librarian</title>
-  <meta name="description" content="8 stories cleared the bar, led by AX — Google's open agentic orchestrator, Qwen-Image-2.">
+  <meta name="description" content="8 stories cleared the bar, led by v0.11.4, v0.14.25, and Your Neon Functions can now run on a schedule.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-09-22/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="September 22, 2026 report log | The Nightly Librarian">
-  <meta property="og:description" content="8 stories cleared the bar, led by AX — Google's open agentic orchestrator, Qwen-Image-2.">
+  <meta property="og:description" content="8 stories cleared the bar, led by v0.11.4, v0.14.25, and Your Neon Functions can now run on a schedule.">
   <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-09-22/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="September 22, 2026 report log | The Nightly Librarian">
-  <meta name="twitter:description" content="8 stories cleared the bar, led by AX — Google's open agentic orchestrator, Qwen-Image-2.">
+  <meta name="twitter:description" content="8 stories cleared the bar, led by v0.11.4, v0.14.25, and Your Neon Functions can now run on a schedule.">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
@@ -36,7 +36,7 @@
     </div>
     <div class="dateline">
       <span>September 22, 2026 · Report log</span>
-      <span>Sep 22, 2026, 2:07 AM</span>
+      <span>Sep 22, 2026, 7:06 AM</span>
     </div>
   </header>
   <main>
@@ -44,7 +44,7 @@
     <h1>September 22, 2026</h1>
     <div class="summary-card">
       <div class="eyebrow">Report summary</div>
-      <p>8 stories cleared the bar, led by AX — Google's open agentic orchestrator, Qwen-Image-2.1 ships open weights under a research-only license, and 410k Reddit views converted into 2 signups.</p>
+      <p>8 stories cleared the bar, led by v0.11.4, v0.14.25, and Your Neon Functions can now run on a schedule.</p>
       <div class="meta" style="margin-top:0.4rem;">
         <span>8 worth-attention items</span><span>40 digest lines</span>
       </div>
@@ -53,43 +53,43 @@
     <div class="item-stack">
 
       <div class="item">
-        <div class="item-title"><a href="https://agentexecutor.io" target="_blank" rel="noopener">AX — Google's open agentic orchestrator</a></div>
-        <div class="item-takeaway">Google open-sourced AX under Apache 2.0, a declarative orchestrator for composing, coordinating and supervising autonomous agents across cloud, edge and device, running on Agent Substrate for sandboxed execution and modelled loosely on Kubernetes. It ships a reference stack with research, customer-service and data-pipeline agents demonstrating context handoff and state. For anyone building agent or MCP tooling this is the most consequential item tonight: it is a serious bid to standardise the agent runtime layer. Read the repo and decide whether your own agent plumbing converges on it or stays independent.</div>
+        <div class="item-title"><a href="https://github.com/open-webui/open-webui/releases/tag/v0.11.4" target="_blank" rel="noopener">v0.11.4</a></div>
+        <div class="item-takeaway">Open WebUI 0.11.4, released September 21, fixes credential logging, identity-provider role handling, session termination, and several access checks. Operators should prioritize an upgrade review, but the same notes say tokens are accepted when the Redis revocation list is unreachable, so revocation may be delayed during an outage. Test authentication and revocation behavior in staging, and check the new cookie-forwarding opt-in before rollout; the smaller slim image is a maintainer claim, not a measurement reproduced here.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://qwen.ai/blog?id=qwen-image-2.1" target="_blank" rel="noopener">Qwen-Image-2.1 ships open weights under a research-only license</a></div>
-        <div class="item-takeaway">Alibaba released Qwen-Image-2.1, a 7B unified text-to-image and editing model with native 2K output, transparent RGBA generation, up to ten reference images, mask-based local edits and identity preservation, with weights on Hugging Face and ModelScope. On Qwen's own benchmark it edges out Nano Banana 2.0 and GPT Image 1.5. The decision-changing detail is the license: the Qwen Research License Agreement permits non-commercial use only, and commercial use requires a separately negotiated license. Check that before building it into anything you charge for.</div>
+        <div class="item-title"><a href="https://github.com/run-llama/llama_index/releases/tag/v0.14.25" target="_blank" rel="noopener">v0.14.25</a></div>
+        <div class="item-takeaway">LlamaIndex 0.14.25, released September 21, lists fixes for failed function-tool retries and compact/refine streaming, alongside broad dependency-security maintenance. That matters for agents whose tool calls can produce side effects, but a release note is not proof that a particular deployment is vulnerable or repaired. Review the packages you actually install, then test failed tool calls and streaming before upgrading; some integrations also raise Python requirements or remove deprecated components.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://www.reddit.com/r/SaaS/comments/1wm8e0b/i_accidentally_made_the_2_post_of_the_year_here/" target="_blank" rel="noopener">410k Reddit views converted into 2 signups</a></div>
-        <div class="item-takeaway">A founder's satirical post hit 410k views, 995 upvotes and 300 comments, becoming the #2 post of the year on r/micro_saas, and produced 8 followers and 2 app signups — about a 0.0005% conversion rate. The author's explanation is that founder subreddits are overwhelmingly other builders hunting for an audience, not buyers. This is a concrete number to weigh before spending distribution effort in founder communities.</div>
+        <div class="item-title"><a href="https://neon.com/blog/your-neon-functions-can-now-run-on-a-schedule" target="_blank" rel="noopener">Your Neon Functions can now run on a schedule</a></div>
+        <div class="item-takeaway">Neon's September 21 announcement introduces branch-scoped scheduled Function Triggers whose timer works while database compute scales to zero. Child branches inherit schedules disabled, reducing accidental duplicate jobs when creating previews. For jobs centered on Neon data, this could remove an external scheduler; first validate invocation authorization, idempotency, failure handling, and execution costs, since this review read the vendor example but did not run it.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://simonwillison.net/2026/Sep/20/llm-keys-ui/" target="_blank" rel="noopener">llm-keys-ui 0.1 — set API keys on remote agent machines without pasting secrets</a></div>
-        <div class="item-takeaway">Simon Willison released an LLM plugin that serves a small web UI (reachable over local network or Tailscale) for entering API keys on a remote machine, so a coding agent can later retrieve them with `llm keys get &lt;name&gt;` instead of having secrets pasted into the agent conversation. It is a small tool that closes a real hygiene gap for anyone running Codex Remote or similar agents on remote boxes. Adoption cost is one uvx command.</div>
+        <div class="item-title"><a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-deepseek%3D%3D1.1.1" target="_blank" rel="noopener">langchain-deepseek==1.1.1</a></div>
+        <div class="item-takeaway">LangChain's DeepSeek adapter 1.1.1 release notes list compatible minimum dependency fixes, strict-mode routing to the beta endpoint, and cache-token accounting changes. These can affect installation, structured requests, and usage reporting for existing integrations. Re-resolve the lockfile and test strict-mode calls and cached-usage fields against your own workload before adopting; the fixes were not executed in this review.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://www.notion.com/blog/how-notion-handles-concurrent-editing-with-crdts" target="_blank" rel="noopener">How Notion handles concurrent editing with CRDTs</a></div>
-        <div class="item-takeaway">Notion published an engineering write-up on how it handles multi-user concurrent editing using CRDTs. It is a substantive look at conflict resolution in a production collaborative editor rather than a conceptual overview. Useful reference material if collaborative or offline-first editing is ever on the roadmap, but no immediate action.</div>
+        <div class="item-title"><a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.3" target="_blank" rel="noopener">langchain-openai==1.6.3</a></div>
+        <div class="item-takeaway">LangChain's OpenAI adapter 1.6.3 release notes expose inferred Responses API routing at initialization and list support for GPT-6 request constraints. For applications relying on implicit routing, this is a reason to inspect which request path is selected and whether the adapter accepts the intended parameters. Test the integration before upgrading; this is an adapter-maintainer statement, not independent confirmation of model availability or capabilities.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://simonwillison.net/2026/Sep/20/voxium/" target="_blank" rel="noopener">Quoting voxium on fully agent-generated engineering work</a></div>
-        <div class="item-takeaway">An engineer at a large company reports that specs, code, tests, PRDs, tickets and reports are all generated by Claude Code, that nobody reads any of it, and that management treats shipping code as no longer the bottleneck. It is a single unverified anecdote, but it describes a failure mode worth naming: agent throughput without review capacity. Track whether this pattern shows up in more first-hand reports before drawing conclusions.</div>
+        <div class="item-title"><a href="https://neon.com/blog/custom-domains-for-neon-functions" target="_blank" rel="noopener">Custom domains for Neon Functions</a></div>
+        <div class="item-takeaway">Neon's September 21 announcement adds custom domains to Functions, with automatic TLS and no separate domain charge, while normal Function traffic remains billable. Hostnames attach to a function on one branch and are not automatically reassigned to preview branches, which matters for stable webhook or MCP endpoints. Existing Neon users can evaluate a dedicated hostname instead of an extra proxy; confirm their actual traffic costs and routing requirements before changing infrastructure.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say" target="_blank" rel="noopener">Samsung expected to more than double HBM4 and HBM4E output</a></div>
-        <div class="item-takeaway">Reporting indicates Samsung plans to more than double production of HBM4 and HBM4E high-bandwidth memory next year. More HBM supply is the main upstream constraint on accelerator availability and, eventually, on inference pricing. Nothing to act on now, but it is the kind of supply signal that precedes compute cost movement.</div>
+        <div class="item-title"><a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.4" target="_blank" rel="noopener">langchain-core==1.6.4</a></div>
+        <div class="item-takeaway">LangChain core 1.6.4 marks chat message history deprecated in its September 21 release notes. That is a migration warning for applications using those abstractions, not evidence that they were removed in this patch. Inventory usages and read the linked deprecation change before choosing a replacement; keep this on the watch list until the migration scope is clear.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://github.com/volotat/mini-AGI/" target="_blank" rel="noopener">Show HN: mini-AGI — continual learning model trained on 8GB VRAM</a></div>
-        <div class="item-takeaway">A solo developer released mini-AGI, an open-source continual-learning architecture using a many-expert MoE design, trainable on consumer 8GB VRAM hardware, with a published training sample and a scaling curve the author calls promising. The motivation is full control over training data rather than fine-tuning a corporate base model. The naming is overreaching and the results are single-author and unreproduced, so treat the scaling claim as unverified until someone else runs it.</div>
+        <div class="item-title"><a href="https://github.com/aru-labs/lossless-memory" target="_blank" rel="noopener">Show HN: Lossless-memory – a personal AI memory that never summarizes</a></div>
+        <div class="item-takeaway">Lossless-memory stores timestamped raw conversation logs with rebuildable SQLite indexes and time-filtered recall. Its author reports daily single-user operation, but explicitly provides no comparative benchmarks and currently limits relative-date parsing to Japanese; English queries need absolute dates. The useful idea is preserving source logs independently of retrieval indexes, so monitor the project and test it on non-sensitive sample data before considering any memory-system migration.</div>
       </div>
     </div>
     <h2>Full digest</h2>
@@ -98,339 +98,218 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://www.notion.com/blog/how-notion-handles-concurrent-editing-with-crdts" target="_blank" rel="noopener">How Notion handles concurrent editing with CRDTs</a>
+          <a href="https://github.com/run-llama/llama_index/releases/tag/v0.14.25" target="_blank" rel="noopener">v0.14.25</a>
         </div>
-        <div class="item-takeaway">Notion published an engineering write-up on how it handles multi-user concurrent editing using CRDTs. It is a substantive look at conflict resolution in a production collaborative editor rather than a conceptual overview. Useful reference material if collaborative or offline-first editing is ever on the roadmap, but no immediate action.</div>
+        <div class="item-takeaway">LlamaIndex 0.14.25, released September 21, lists fixes for failed function-tool retries and compact/refine streaming, alongside broad dependency-security maintenance. That matters for agents whose tool calls can produce side effects, but a release note is not proof that a particular deployment is vulnerable or repaired. Review the packages you actually install, then test failed tool calls and streaming before upgrading; some integrations also raise Python requirements or remove deprecated components.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-llamaindex</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://blog.janestreet.com/a-study-of-sequence-weighting-at-scale/" target="_blank" rel="noopener">A study of sequence weighting at scale</a>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/versioning-example%400.1.3" target="_blank" rel="noopener">versioning-example@0.1.3</a>
         </div>
-        <div class="item-takeaway">Jane Street published research on sequence weighting at scale. It is serious ML research aimed at large-scale training practitioners. Nothing here changes a decision for a one-person software shop.</div>
+        <div class="item-takeaway">versioning-example@0.1.3 example dependency patch; no standalone SDK behavior change established.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://nullprogram.com/blog/2026/09/20/" target="_blank" rel="noopener">What's been going on in w64devkit the past year</a>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/vercel-example%400.1.12" target="_blank" rel="noopener">vercel-example@0.1.12</a>
         </div>
-        <div class="item-takeaway">A yearly status update on w64devkit, a portable C/C++ development kit for Windows. Relevant to native Windows toolchain users only. No overlap with agent, web, or SaaS work.</div>
+        <div class="item-takeaway">vercel-example@0.1.12 example dependency patch; no standalone SDK behavior change established.</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://simonwillison.net/2026/Sep/20/voxium/" target="_blank" rel="noopener">Quoting voxium on fully agent-generated engineering work</a>
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/typesafe-example%400.0.1" target="_blank" rel="noopener">typesafe-example@0.0.1</a>
         </div>
-        <div class="item-takeaway">An engineer at a large company reports that specs, code, tests, PRDs, tickets and reports are all generated by Claude Code, that nobody reads any of it, and that management treats shipping code as no longer the bottleneck. It is a single unverified anecdote, but it describes a failure mode worth naming: agent throughput without review capacity. Track whether this pattern shows up in more first-hand reports before drawing conclusions.</div>
+        <div class="item-takeaway">typesafe-example@0.0.1 example dependency patch; no standalone SDK behavior change established.</div>
         <div class="item-meta">
-          <span>simon-willison</span>
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/triggers-example%400.1.3" target="_blank" rel="noopener">triggers-example@0.1.3</a>
+        </div>
+        <div class="item-takeaway">triggers-example@0.1.3 example dependency patch; no standalone SDK behavior change established.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/tools-example%400.1.3" target="_blank" rel="noopener">tools-example@0.1.3</a>
+        </div>
+        <div class="item-takeaway">tools-example@0.1.3 example dependency patch; no standalone SDK behavior change established.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/toolkits-example%400.1.12" target="_blank" rel="noopener">toolkits-example@0.1.12</a>
+        </div>
+        <div class="item-takeaway">toolkits-example@0.1.12 example dependency patch; no standalone SDK behavior change established.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/tool-router-example%401.0.13" target="_blank" rel="noopener">tool-router-example@1.0.13</a>
+        </div>
+        <div class="item-takeaway">tool-router-example@1.0.13 example dependency patch; no standalone SDK behavior change established.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/session-management-example%400.1.3" target="_blank" rel="noopener">session-management-example@0.1.3</a>
+        </div>
+        <div class="item-takeaway">session-management-example@0.1.3 example dependency patch; no standalone SDK behavior change established.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/openai-example%400.1.12" target="_blank" rel="noopener">openai-example@0.1.12</a>
+        </div>
+        <div class="item-takeaway">openai-example@0.1.12 example dependency patch; no standalone SDK behavior change established.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/modifiers-example%400.1.12" target="_blank" rel="noopener">modifiers-example@0.1.12</a>
+        </div>
+        <div class="item-takeaway">modifiers-example@0.1.12 example dependency patch; no standalone SDK behavior change established.</div>
+        <div class="item-meta">
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          llm-keys-ui 0.1
+          <a href="https://github.com/open-webui/open-webui/releases/tag/v0.11.4" target="_blank" rel="noopener">v0.11.4</a>
         </div>
-        <div class="item-takeaway">set API keys on remote agent machines without pasting secrets — https://simonwillison.net/2026/Sep/20/llm-keys-ui/ — Simon Willison released an LLM plugin that serves a small web UI (reachable over local network or Tailscale) for entering API keys on a remote machine, so a coding agent can later retrieve them with `llm keys get &lt;name&gt;` instead of having secrets pasted into the agent conversation. It is a small tool that closes a real hygiene gap for anyone running Codex Remote or similar agents on remote boxes. Adoption cost is one uvx command.</div>
+        <div class="item-takeaway">Open WebUI 0.11.4, released September 21, fixes credential logging, identity-provider role handling, session termination, and several access checks. Operators should prioritize an upgrade review, but the same notes say tokens are accepted when the Redis revocation list is unreachable, so revocation may be delayed during an outage. Test authentication and revocation behavior in staging, and check the new cookie-forwarding opt-in before rollout; the smaller slim image is a maintainer claim, not a measurement reproduced here.</div>
         <div class="item-meta">
-          <span>simon-willison</span>
+          <span>gh-open-webui</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://simonwillison.net/2026/Sep/20/datasette-explain/" target="_blank" rel="noopener">datasette-explain 0.2.2</a>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.9" target="_blank" rel="noopener">langchain-openrouter==0.2.9</a>
         </div>
-        <div class="item-takeaway">A patch release of the datasette-explain plugin that makes explain plans work on read-only stored-query pages. Single narrow fix in a niche plugin. Nothing to act on unless you already run Datasette with this plugin.</div>
+        <div class="item-takeaway">OpenRouter adapter patch lists model-profile maintenance; no clear decision-changing feature.</div>
         <div class="item-meta">
-          <span>simon-willison</span>
+          <span>gh-langchain</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="http://gameshelf.jmac.org/2008/11/13/GrimPuzzleDoc_small.pdf" target="_blank" rel="noopener">Grim Fandango Puzzle Document (1996)</a>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.6.2" target="_blank" rel="noopener">langchain-fireworks==1.6.2</a>
         </div>
-        <div class="item-takeaway">A scanned 1996 internal puzzle design document for the adventure game Grim Fandango. Interesting game-design history, no engineering or business relevance.</div>
+        <div class="item-takeaway">Fireworks adapter patch lists test-model and dependency maintenance.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>gh-langchain</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          AX
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-deepseek%3D%3D1.1.1" target="_blank" rel="noopener">langchain-deepseek==1.1.1</a>
         </div>
-        <div class="item-takeaway">Google's open agentic orchestrator — https://agentexecutor.io — Google open-sourced AX under Apache 2.0, a declarative orchestrator for composing, coordinating and supervising autonomous agents across cloud, edge and device, running on Agent Substrate for sandboxed execution and modelled loosely on Kubernetes. It ships a reference stack with research, customer-service and data-pipeline agents demonstrating context handoff and state. For anyone building agent or MCP tooling this is the most consequential item tonight: it is a serious bid to standardise the agent runtime layer. Read the repo and decide whether your own agent plumbing converges on it or stays independent.</div>
+        <div class="item-takeaway">LangChain's DeepSeek adapter 1.1.1 release notes list compatible minimum dependency fixes, strict-mode routing to the beta endpoint, and cache-token accounting changes. These can affect installation, structured requests, and usage reporting for existing integrations. Re-resolve the lockfile and test strict-mode calls and cached-usage fields against your own workload before adopting; the fixes were not executed in this review.</div>
         <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say" target="_blank" rel="noopener">Samsung expected to more than double HBM4 and HBM4E output</a>
-        </div>
-        <div class="item-takeaway">Reporting indicates Samsung plans to more than double production of HBM4 and HBM4E high-bandwidth memory next year. More HBM supply is the main upstream constraint on accelerator availability and, eventually, on inference pricing. Nothing to act on now, but it is the kind of supply signal that precedes compute cost movement.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://libroot.org/posts/what-happened-to-the-snowden-archive" target="_blank" rel="noopener">What happened to the Snowden archive</a>
-        </div>
-        <div class="item-takeaway">An account of the current status and fate of the Snowden document archive. Worthwhile journalism-history reading but it does not change any technical or business decision for a solo builder.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
+          <span>gh-langchain</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://qwen.ai/blog?id=qwen-image-2.1" target="_blank" rel="noopener">Qwen-Image-2.1 ships open weights under a research-only license</a>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.3" target="_blank" rel="noopener">langchain-openai==1.6.3</a>
         </div>
-        <div class="item-takeaway">Alibaba released Qwen-Image-2.1, a 7B unified text-to-image and editing model with native 2K output, transparent RGBA generation, up to ten reference images, mask-based local edits and identity preservation, with weights on Hugging Face and ModelScope. On Qwen's own benchmark it edges out Nano Banana 2.0 and GPT Image 1.5. The decision-changing detail is the license: the Qwen Research License Agreement permits non-commercial use only, and commercial use requires a separately negotiated license. Check that before building it into anything you charge for.</div>
+        <div class="item-takeaway">LangChain's OpenAI adapter 1.6.3 release notes expose inferred Responses API routing at initialization and list support for GPT-6 request constraints. For applications relying on implicit routing, this is a reason to inspect which request path is selected and whether the adapter accepts the intended parameters. Test the integration before upgrading; this is an adapter-maintainer statement, not independent confirmation of model availability or capabilities.</div>
         <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://datagubbe.se/crt/" target="_blank" rel="noopener">The Effect of CRTs on Pixel Art (2024)</a>
-        </div>
-        <div class="item-takeaway">A 2024 essay on how CRT display characteristics shaped the appearance and design of pixel art. Enjoyable graphics history with no bearing on current tooling or business decisions.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.aeaweb.org/research/immigration-restrictions-firms-workers" target="_blank" rel="noopener">Winning the visa lottery</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://amigaux.org/" target="_blank" rel="noopener">Amiga Unix, Again</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html" target="_blank" rel="noopener">I am often wrong</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.gadgetreview.com/singapore-is-paying-people-to-put-down-their-phones-and-read-books" target="_blank" rel="noopener">Singapore’s National Library Board offers micropayments to build reading habits</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://maharship.com/blog/why-mcp-was-always-a-bad-idea/" target="_blank" rel="noopener">MCP was always a bad idea?</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.dxomark.com/apple-iphone-18-pro-camera-test/" target="_blank" rel="noopener">Apple iPhone 18 Pro Camera test</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://lithub.com/a-necessary-history-of-the-oddest-letter-w/" target="_blank" rel="noopener">A Necessary History of the Oddest Letter: W</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/lfarroco/ogre-battle-64-recomp" target="_blank" rel="noopener">Ogre Battle 64 Recompiled Project at 99.05%</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/kyle-pena-nlp/jevchat/" target="_blank" rel="noopener">I turned Jev into a (lousy) chatbot</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://toolguyd.com/sherline-tools-shutting-down-usa-production/" target="_blank" rel="noopener">Sherline Tools Is Going Out of Business</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://terrytao.wordpress.com/2026/09/19/why-do-we-need-human-mathematicians-anymore/" target="_blank" rel="noopener">Why do we need human mathematicians anymore?</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://softwarecrisis.dev/letters/llmentalist/" target="_blank" rel="noopener">The LLMentalist Effect (2023)</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.ft.com/content/c0cd359d-df84-4208-a789-ffa864b43666" target="_blank" rel="noopener">AI chatbots give wrong answers to financial queries 'most of the time'</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://github.com/adonis-singh/re4" target="_blank" rel="noopener">Resident Evil 4 (GameCube) – complete byte-identical decompilation to C/C++</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://unsung.aresluna.org/key-symbols-we-lost-to-time-pt-2-the-mac-side/" target="_blank" rel="noopener">Key symbols we lost to time, pt. 2: The Mac side</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://tinybrains.dev" target="_blank" rel="noopener">Show HN: A competition for small neural networks that play strategy games</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://radius.to/" target="_blank" rel="noopener">Show HN: Radius – A Meetup.com Alternative</a>
-        </div>
-        <div class="item-takeaway">Hello HN! I&amp;#x27;m relaunching Radius [1] - far too long after the original Show HN [2] (I&amp;#x27;ll blame the day job for that). Radius start…</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://gist.github.com/fordnox/e592d0f68b543fd044be8e6d040863a0" target="_blank" rel="noopener">Laya on Mac M4 CoreML Offline</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
+          <span>gh-langchain</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-m">M</span>
-          Show HN: mini-AGI
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.4" target="_blank" rel="noopener">langchain-core==1.6.4</a>
         </div>
-        <div class="item-takeaway">continual learning model trained on 8GB VRAM — https://github.com/volotat/mini-AGI/ — A solo developer released mini-AGI, an open-source continual-learning architecture using a many-expert MoE design, trainable on consumer 8GB VRAM hardware, with a published training sample and a scaling curve the author calls promising. The motivation is full control over training data rather than fine-tuning a corporate base model. The naming is overreaching and the results are single-author and unreproduced, so treat the scaling claim as unverified until someone else runs it.</div>
+        <div class="item-takeaway">LangChain core 1.6.4 marks chat message history deprecated in its September 21 release notes. That is a migration warning for applications using those abstractions, not evidence that they were removed in this patch. Inventory usages and read the linked deprecation change before choosing a replacement; keep this on the watch list until the migration scope is clear.</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://neon.com/blog/custom-domains-for-neon-functions" target="_blank" rel="noopener">Custom domains for Neon Functions</a>
+        </div>
+        <div class="item-takeaway">Neon's September 21 announcement adds custom domains to Functions, with automatic TLS and no separate domain charge, while normal Function traffic remains billable. Hostnames attach to a function on one branch and are not automatically reassigned to preview branches, which matters for stable webhook or MCP endpoints. Existing Neon users can evaluate a dedicated hostname instead of an extra proxy; confirm their actual traffic costs and routing requirements before changing infrastructure.</div>
+        <div class="item-meta">
+          <span>neon-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://neon.com/blog/your-neon-functions-can-now-run-on-a-schedule" target="_blank" rel="noopener">Your Neon Functions can now run on a schedule</a>
+        </div>
+        <div class="item-takeaway">Neon's September 21 announcement introduces branch-scoped scheduled Function Triggers whose timer works while database compute scales to zero. Child branches inherit schedules disabled, reducing accidental duplicate jobs when creating previews. For jobs centered on Neon data, this could remove an external scheduler; first validate invocation authorization, idempotency, failure handling, and execution costs, since this review read the vendor example but did not run it.</div>
+        <div class="item-meta">
+          <span>neon-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://github.com/aru-labs/lossless-memory" target="_blank" rel="noopener">Show HN: Lossless-memory – a personal AI memory that never summarizes</a>
+        </div>
+        <div class="item-takeaway">Lossless-memory stores timestamped raw conversation logs with rebuildable SQLite indexes and time-filtered recall. Its author reports daily single-user operation, but explicitly provides no comparative benchmarks and currently limits relative-date parsing to Japanese; English queries need absolute dates. The useful idea is preserving source logs independently of retrieval indexes, so monitor the project and test it on non-sensitive sample data before considering any memory-system migration.</div>
         <div class="item-meta">
           <span>hn-show</span>
         </div>
@@ -439,9 +318,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1wm82hn/ill_be_your_first_customer_if_you_can_convince_me/" target="_blank" rel="noopener">I'll be your first customer if you can convince me with your offer</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wn1080/111k_people_watched_me_make_0000/" target="_blank" rel="noopener">111k people watched me make $0.000 😅</a>
         </div>
-        <div class="item-takeaway">A Reddit post inviting founders to pitch their products in the comments in exchange for a promised first sale. It is a comment-farming format rather than a source of information. No signal.</div>
+        <div class="item-takeaway">Title reports 111k views and zero revenue; no reproducible acquisition evidence.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -450,20 +329,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1wm7a6y/a_lot_of_competition_disappears_when_you_stop/" target="_blank" rel="noopener">A lot of competition disappears when you stop building for everyone</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wmk3ow/its_such_a_cool_feeling_having_people_use_your/" target="_blank" rel="noopener">It's such a cool feeling having people use your app from all over the world</a>
         </div>
-        <div class="item-takeaway">A Reddit post arguing that founders manufacture their own competition by building horizontally, and that narrowing positioning to a specific segment both reduces competitors and simplifies the product. The reasoning is sound but it is standard niche-positioning advice with no new data behind it.</div>
-        <div class="item-meta">
-          <span>reddit-saas</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1wm8e0b/i_accidentally_made_the_2_post_of_the_year_here/" target="_blank" rel="noopener">410k Reddit views converted into 2 signups</a>
-        </div>
-        <div class="item-takeaway">A founder's satirical post hit 410k views, 995 upvotes and 300 comments, becoming the #2 post of the year on r/micro_saas, and produced 8 followers and 2 app signups — about a 0.0005% conversion rate. The author's explanation is that founder subreddits are overwhelmingly other builders hunting for an audience, not buyers. This is a concrete number to weigh before spending distribution effort in founder communities.</div>
+        <div class="item-takeaway">Founder celebrates worldwide users; no measured workflow or decision-changing result.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -472,9 +340,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1wm9hum/i_made_my_first_9_online_from_something_i_built/" target="_blank" rel="noopener">I made my first $9 online from something I built</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wn0n7t/if_your_saas_suddenly_got_3x_more_customers_what/" target="_blank" rel="noopener">If your SaaS suddenly got 3x more customers, what would break first?</a>
         </div>
-        <div class="item-takeaway">A first-sale milestone post from a builder who received a $9 payment for a project. Genuine but purely personal; there is no transferable lesson, channel detail, or method described.</div>
+        <div class="item-takeaway">Discussion asks what would break under growth; no demonstrated bottleneck.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -483,9 +351,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1wm8pe1/update_on_our_live_ai_tryon_our_first_wig_client/" target="_blank" rel="noopener">Update on a live AI try-on product's first wig client</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wmh4ix/yesterday_i_lost_my_first_customer/" target="_blank" rel="noopener">Yesterday I lost my first customer</a>
         </div>
-        <div class="item-takeaway">A founder posted a progress update on an AI virtual try-on product now working with its first wig retailer, covering hair density, hairline accuracy, colour fidelity and face preservation during movement. It is a promotional product update rather than a generalisable finding, though the stated problem of deciding when a preview is reliable enough to sit in a sales flow is a real one.</div>
+        <div class="item-takeaway">Author reports a failed live PayPal funnel despite sandbox testing; root cause is unspecified.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -494,9 +362,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1wm76zv/can_instructional_design_tech_finally_catch_up_to/" target="_blank" rel="noopener">Can instructional design tech finally catch up to our ideas?</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wmxulk/choose_your_nontechsales_cofounder_wisely/" target="_blank" rel="noopener">Choose your non-tech/sales co-founder wisely</a>
         </div>
-        <div class="item-takeaway">A post from a vendor account arguing that generative AI now makes long-held adaptive-learning product ideas buildable, anchored on an unsourced anecdote of a founder going from $10M to $300M revenue in one year. The revenue claim is unverifiable and the piece functions as content marketing for the poster's platform.</div>
+        <div class="item-takeaway">Founder attributes faster sales to a cofounder; causal and revenue claims remain unverified.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -505,9 +373,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1wm6rmy/looking_for_an_app_idea_check_which_categories/" target="_blank" rel="noopener">Looking for an app idea ? Check which categories are actually growing first (spoiler : it's not Games)</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wn1y27/giving_up_after_a_year/" target="_blank" rel="noopener">Giving up after a year</a>
         </div>
-        <div class="item-takeaway">Productivity, where ChatGPT and most AI assistants are listed, is up ~55% in time spent and has roughly doubled its revenue since 2025. No o…</div>
+        <div class="item-takeaway">Founder describes difficulty acquiring BI users; no controlled acquisition evidence.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -516,9 +384,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1wm3uie/whats_one_feature_you_spent_weeks_building_that/" target="_blank" rel="noopener">What's one feature you spent weeks building that almost nobody used?</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wmdzmv/unpopular_opinion_ai_doesnt_mean_anyone_can_build/" target="_blank" rel="noopener">Unpopular Opinion: Ai doesn't mean anyone can build your app</a>
         </div>
-        <div class="item-takeaway">I think every founder has at least one feature they were convinced users would love... ...only to discover almost nobody touched it. Looking…</div>
+        <div class="item-takeaway">Opinion argues AI cannot replace app builders; no actionable comparative evidence.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -527,9 +395,141 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1wm9klv/what_is_the_most_annoying_manual_workaround_in/" target="_blank" rel="noopener">What is the most annoying manual workaround in your daily workflow right now?</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wmvqp9/got_my_first_paid_subscriber/" target="_blank" rel="noopener">Got my first paid subscriber</a>
         </div>
-        <div class="item-takeaway">Trying to streamline my own growth stack and realizing how much of my day is spent doing glorified data entry. If you had to eliminate one o…</div>
+        <div class="item-takeaway">Founder celebrates a first paid subscriber; no transferable acquisition measurements.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wmm96s/website_finished_yesterday_and_today_i_got_100/" target="_blank" rel="noopener">Website finished yesterday and today I got +100 users and made 6 sales 🥹</a>
+        </div>
+        <div class="item-takeaway">Title claims 100 users and six sales after launch; no verified conversion evidence.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wn2ti2/reason_why_your_startup_isnt_taking_off/" target="_blank" rel="noopener">Reason why your startup isn't taking off</a>
+        </div>
+        <div class="item-takeaway">Opinion blames startup struggles on social posting; no causal evidence.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wn0iki/3_month_seo_update/" target="_blank" rel="noopener">3 month SEO update</a>
+        </div>
+        <div class="item-takeaway">SEO progress report cites small user and payer counts; attribution remains unclear.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wn1n17/need_suggestion_to_take_subscription_for_best_ai/" target="_blank" rel="noopener">Need Suggestion to take subscription for best AI platform for coding</a>
+        </div>
+        <div class="item-takeaway">Post asks whether to switch coding subscriptions; no comparative evaluation.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wn1cto/live_auctions_for_handmadevintage_sellers_but_the/" target="_blank" rel="noopener">Live auctions for handmade/vintage sellers, but the seller never goes on camera. Does this hold up?</a>
+        </div>
+        <div class="item-takeaway">Proposed live-auction concept seeks feedback; no validated demand evidence.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wn16ok/a_funded_startup_shipped_my_idea_before_me_built/" target="_blank" rel="noopener">a funded startup shipped my idea before me. built it anyway</a>
+        </div>
+        <div class="item-takeaway">Meeting-notes product story describes competing with a funded startup; no verified traction.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wn33bp/vibe_coding_made_building_easy_who_maintains_the/" target="_blank" rel="noopener">Vibe coding made building easy. Who maintains the app after you ship it?</a>
+        </div>
+        <div class="item-takeaway">Discussion asks who maintains AI-built apps; no demonstrated maintenance solution.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wn31dz/saas_naming_strategy/" target="_blank" rel="noopener">Saas naming strategy?</a>
+        </div>
+        <div class="item-takeaway">Request for SaaS naming advice; no new tool or tested method.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wn2xm4/where_do_you_actually_discover_useful_saas/" target="_blank" rel="noopener">Where do you actually discover useful SaaS products?</a>
+        </div>
+        <div class="item-takeaway">Question about discovering SaaS tools; no measured distribution results.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wn2rk4/building_a_personal_ai_product_where_the_customer/" target="_blank" rel="noopener">building a personal AI product where the customer can change the AI</a>
+        </div>
+        <div class="item-takeaway">Founder describes swappable AI product direction; no implementation evidence verified.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wmmwwx/how_do_you_get_yourself_to_post_consistently_on/" target="_blank" rel="noopener">How do you get yourself to post consistently on X/LinkedIn?</a>
+        </div>
+        <div class="item-takeaway">Question about posting consistently; no tested distribution strategy.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wmsvfp/i_just_got_my_first_paying_customer/" target="_blank" rel="noopener">I just got my first paying customer. ❤️</a>
+        </div>
+        <div class="item-takeaway">First-subscriber milestone for Draft2Publish.AI; no transferable sales evidence.</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -539,79 +539,79 @@
       <summary>Original markdown</summary>
       <pre class="raw-report"># Nightly Librarian — Newsletter draft
 
-Run: a0957525-8f61-42e6-a113-ba30dc6ec6b4
-Started: 2026-09-22T06:03:50.966Z
-Completed: 2026-09-22T06:07:18.406Z
+Run: 86b151b0-14fa-4867-b939-3d7e68bbb9c6
+Started: 2026-09-22T11:02:31.792Z
+Completed: 2026-09-22T11:06:11.623Z
 
 ## Worth attention
 
-- **AX — Google's open agentic orchestrator**
-  https://agentexecutor.io
-  Google open-sourced AX under Apache 2.0, a declarative orchestrator for composing, coordinating and supervising autonomous agents across cloud, edge and device, running on Agent Substrate for sandboxed execution and modelled loosely on Kubernetes. It ships a reference stack with research, customer-service and data-pipeline agents demonstrating context handoff and state. For anyone building agent or MCP tooling this is the most consequential item tonight: it is a serious bid to standardise the agent runtime layer. Read the repo and decide whether your own agent plumbing converges on it or stays independent.
-- **Qwen-Image-2.1 ships open weights under a research-only license**
-  https://qwen.ai/blog?id=qwen-image-2.1
-  Alibaba released Qwen-Image-2.1, a 7B unified text-to-image and editing model with native 2K output, transparent RGBA generation, up to ten reference images, mask-based local edits and identity preservation, with weights on Hugging Face and ModelScope. On Qwen's own benchmark it edges out Nano Banana 2.0 and GPT Image 1.5. The decision-changing detail is the license: the Qwen Research License Agreement permits non-commercial use only, and commercial use requires a separately negotiated license. Check that before building it into anything you charge for.
-- **410k Reddit views converted into 2 signups**
-  https://www.reddit.com/r/SaaS/comments/1wm8e0b/i_accidentally_made_the_2_post_of_the_year_here/
-  A founder's satirical post hit 410k views, 995 upvotes and 300 comments, becoming the #2 post of the year on r/micro_saas, and produced 8 followers and 2 app signups — about a 0.0005% conversion rate. The author's explanation is that founder subreddits are overwhelmingly other builders hunting for an audience, not buyers. This is a concrete number to weigh before spending distribution effort in founder communities.
-- **llm-keys-ui 0.1 — set API keys on remote agent machines without pasting secrets**
-  https://simonwillison.net/2026/Sep/20/llm-keys-ui/
-  Simon Willison released an LLM plugin that serves a small web UI (reachable over local network or Tailscale) for entering API keys on a remote machine, so a coding agent can later retrieve them with `llm keys get &lt;name&gt;` instead of having secrets pasted into the agent conversation. It is a small tool that closes a real hygiene gap for anyone running Codex Remote or similar agents on remote boxes. Adoption cost is one uvx command.
-- **How Notion handles concurrent editing with CRDTs**
-  https://www.notion.com/blog/how-notion-handles-concurrent-editing-with-crdts
-  Notion published an engineering write-up on how it handles multi-user concurrent editing using CRDTs. It is a substantive look at conflict resolution in a production collaborative editor rather than a conceptual overview. Useful reference material if collaborative or offline-first editing is ever on the roadmap, but no immediate action.
-- **Quoting voxium on fully agent-generated engineering work**
-  https://simonwillison.net/2026/Sep/20/voxium/
-  An engineer at a large company reports that specs, code, tests, PRDs, tickets and reports are all generated by Claude Code, that nobody reads any of it, and that management treats shipping code as no longer the bottleneck. It is a single unverified anecdote, but it describes a failure mode worth naming: agent throughput without review capacity. Track whether this pattern shows up in more first-hand reports before drawing conclusions.
-- **Samsung expected to more than double HBM4 and HBM4E output**
-  https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say
-  Reporting indicates Samsung plans to more than double production of HBM4 and HBM4E high-bandwidth memory next year. More HBM supply is the main upstream constraint on accelerator availability and, eventually, on inference pricing. Nothing to act on now, but it is the kind of supply signal that precedes compute cost movement.
-- **Show HN: mini-AGI — continual learning model trained on 8GB VRAM**
-  https://github.com/volotat/mini-AGI/
-  A solo developer released mini-AGI, an open-source continual-learning architecture using a many-expert MoE design, trainable on consumer 8GB VRAM hardware, with a published training sample and a scaling curve the author calls promising. The motivation is full control over training data rather than fine-tuning a corporate base model. The naming is overreaching and the results are single-author and unreproduced, so treat the scaling claim as unverified until someone else runs it.
+- **v0.11.4**
+  https://github.com/open-webui/open-webui/releases/tag/v0.11.4
+  Open WebUI 0.11.4, released September 21, fixes credential logging, identity-provider role handling, session termination, and several access checks. Operators should prioritize an upgrade review, but the same notes say tokens are accepted when the Redis revocation list is unreachable, so revocation may be delayed during an outage. Test authentication and revocation behavior in staging, and check the new cookie-forwarding opt-in before rollout; the smaller slim image is a maintainer claim, not a measurement reproduced here.
+- **v0.14.25**
+  https://github.com/run-llama/llama_index/releases/tag/v0.14.25
+  LlamaIndex 0.14.25, released September 21, lists fixes for failed function-tool retries and compact/refine streaming, alongside broad dependency-security maintenance. That matters for agents whose tool calls can produce side effects, but a release note is not proof that a particular deployment is vulnerable or repaired. Review the packages you actually install, then test failed tool calls and streaming before upgrading; some integrations also raise Python requirements or remove deprecated components.
+- **Your Neon Functions can now run on a schedule**
+  https://neon.com/blog/your-neon-functions-can-now-run-on-a-schedule
+  Neon's September 21 announcement introduces branch-scoped scheduled Function Triggers whose timer works while database compute scales to zero. Child branches inherit schedules disabled, reducing accidental duplicate jobs when creating previews. For jobs centered on Neon data, this could remove an external scheduler; first validate invocation authorization, idempotency, failure handling, and execution costs, since this review read the vendor example but did not run it.
+- **langchain-deepseek==1.1.1**
+  https://github.com/langchain-ai/langchain/releases/tag/langchain-deepseek%3D%3D1.1.1
+  LangChain's DeepSeek adapter 1.1.1 release notes list compatible minimum dependency fixes, strict-mode routing to the beta endpoint, and cache-token accounting changes. These can affect installation, structured requests, and usage reporting for existing integrations. Re-resolve the lockfile and test strict-mode calls and cached-usage fields against your own workload before adopting; the fixes were not executed in this review.
+- **langchain-openai==1.6.3**
+  https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.3
+  LangChain's OpenAI adapter 1.6.3 release notes expose inferred Responses API routing at initialization and list support for GPT-6 request constraints. For applications relying on implicit routing, this is a reason to inspect which request path is selected and whether the adapter accepts the intended parameters. Test the integration before upgrading; this is an adapter-maintainer statement, not independent confirmation of model availability or capabilities.
+- **Custom domains for Neon Functions**
+  https://neon.com/blog/custom-domains-for-neon-functions
+  Neon's September 21 announcement adds custom domains to Functions, with automatic TLS and no separate domain charge, while normal Function traffic remains billable. Hostnames attach to a function on one branch and are not automatically reassigned to preview branches, which matters for stable webhook or MCP endpoints. Existing Neon users can evaluate a dedicated hostname instead of an extra proxy; confirm their actual traffic costs and routing requirements before changing infrastructure.
+- **langchain-core==1.6.4**
+  https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.4
+  LangChain core 1.6.4 marks chat message history deprecated in its September 21 release notes. That is a migration warning for applications using those abstractions, not evidence that they were removed in this patch. Inventory usages and read the linked deprecation change before choosing a replacement; keep this on the watch list until the migration scope is clear.
+- **Show HN: Lossless-memory – a personal AI memory that never summarizes**
+  https://github.com/aru-labs/lossless-memory
+  Lossless-memory stores timestamped raw conversation logs with rebuildable SQLite indexes and time-filtered recall. Its author reports daily single-user operation, but explicitly provides no comparative benchmarks and currently limits relative-date parsing to Japanese; English queries need absolute dates. The useful idea is preserving source logs independently of retrieval indexes, so monitor the project and test it on non-sensitive sample data before considering any memory-system migration.
 
 ## Full digest
 
-- [P] [lobsters] How Notion handles concurrent editing with CRDTs — https://www.notion.com/blog/how-notion-handles-concurrent-editing-with-crdts — Notion published an engineering write-up on how it handles multi-user concurrent editing using CRDTs. It is a substantive look at conflict resolution in a production collaborative editor rather than a conceptual overview. Useful reference material if collaborative or offline-first editing is ever on the roadmap, but no immediate action.
-- [R] [lobsters] A study of sequence weighting at scale — https://blog.janestreet.com/a-study-of-sequence-weighting-at-scale/ — Jane Street published research on sequence weighting at scale. It is serious ML research aimed at large-scale training practitioners. Nothing here changes a decision for a one-person software shop.
-- [R] [lobsters] What's been going on in w64devkit the past year — https://nullprogram.com/blog/2026/09/20/ — A yearly status update on w64devkit, a portable C/C++ development kit for Windows. Relevant to native Windows toolchain users only. No overlap with agent, web, or SaaS work.
-- [M] [simon-willison] Quoting voxium on fully agent-generated engineering work — https://simonwillison.net/2026/Sep/20/voxium/ — An engineer at a large company reports that specs, code, tests, PRDs, tickets and reports are all generated by Claude Code, that nobody reads any of it, and that management treats shipping code as no longer the bottleneck. It is a single unverified anecdote, but it describes a failure mode worth naming: agent throughput without review capacity. Track whether this pattern shows up in more first-hand reports before drawing conclusions.
-- [P] [simon-willison] llm-keys-ui 0.1 — set API keys on remote agent machines without pasting secrets — https://simonwillison.net/2026/Sep/20/llm-keys-ui/ — Simon Willison released an LLM plugin that serves a small web UI (reachable over local network or Tailscale) for entering API keys on a remote machine, so a coding agent can later retrieve them with `llm keys get &lt;name&gt;` instead of having secrets pasted into the agent conversation. It is a small tool that closes a real hygiene gap for anyone running Codex Remote or similar agents on remote boxes. Adoption cost is one uvx command.
-- [R] [simon-willison] datasette-explain 0.2.2 — https://simonwillison.net/2026/Sep/20/datasette-explain/ — A patch release of the datasette-explain plugin that makes explain plans work on read-only stored-query pages. Single narrow fix in a niche plugin. Nothing to act on unless you already run Datasette with this plugin.
-- [R] [hn-top] Grim Fandango Puzzle Document (1996) — http://gameshelf.jmac.org/2008/11/13/GrimPuzzleDoc_small.pdf — A scanned 1996 internal puzzle design document for the adventure game Grim Fandango. Interesting game-design history, no engineering or business relevance.
-- [P] [hn-top] AX — Google's open agentic orchestrator — https://agentexecutor.io — Google open-sourced AX under Apache 2.0, a declarative orchestrator for composing, coordinating and supervising autonomous agents across cloud, edge and device, running on Agent Substrate for sandboxed execution and modelled loosely on Kubernetes. It ships a reference stack with research, customer-service and data-pipeline agents demonstrating context handoff and state. For anyone building agent or MCP tooling this is the most consequential item tonight: it is a serious bid to standardise the agent runtime layer. Read the repo and decide whether your own agent plumbing converges on it or stays independent.
-- [M] [hn-top] Samsung expected to more than double HBM4 and HBM4E output — https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say — Reporting indicates Samsung plans to more than double production of HBM4 and HBM4E high-bandwidth memory next year. More HBM supply is the main upstream constraint on accelerator availability and, eventually, on inference pricing. Nothing to act on now, but it is the kind of supply signal that precedes compute cost movement.
-- [R] [hn-top] What happened to the Snowden archive — https://libroot.org/posts/what-happened-to-the-snowden-archive — An account of the current status and fate of the Snowden document archive. Worthwhile journalism-history reading but it does not change any technical or business decision for a solo builder.
-- [P] [hn-top] Qwen-Image-2.1 ships open weights under a research-only license — https://qwen.ai/blog?id=qwen-image-2.1 — Alibaba released Qwen-Image-2.1, a 7B unified text-to-image and editing model with native 2K output, transparent RGBA generation, up to ten reference images, mask-based local edits and identity preservation, with weights on Hugging Face and ModelScope. On Qwen's own benchmark it edges out Nano Banana 2.0 and GPT Image 1.5. The decision-changing detail is the license: the Qwen Research License Agreement permits non-commercial use only, and commercial use requires a separately negotiated license. Check that before building it into anything you charge for.
-- [R] [hn-top] The Effect of CRTs on Pixel Art (2024) — https://datagubbe.se/crt/ — A 2024 essay on how CRT display characteristics shaped the appearance and design of pixel art. Enjoyable graphics history with no bearing on current tooling or business decisions.
-- [R] [hn-top] Winning the visa lottery — https://www.aeaweb.org/research/immigration-restrictions-firms-workers — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Amiga Unix, Again — https://amigaux.org/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] I am often wrong — https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Singapore’s National Library Board offers micropayments to build reading habits — https://www.gadgetreview.com/singapore-is-paying-people-to-put-down-their-phones-and-read-books — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] MCP was always a bad idea? — https://maharship.com/blog/why-mcp-was-always-a-bad-idea/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Apple iPhone 18 Pro Camera test — https://www.dxomark.com/apple-iphone-18-pro-camera-test/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] A Necessary History of the Oddest Letter: W — https://lithub.com/a-necessary-history-of-the-oddest-letter-w/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Ogre Battle 64 Recompiled Project at 99.05% — https://github.com/lfarroco/ogre-battle-64-recomp — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] I turned Jev into a (lousy) chatbot — https://github.com/kyle-pena-nlp/jevchat/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Sherline Tools Is Going Out of Business — https://toolguyd.com/sherline-tools-shutting-down-usa-production/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Why do we need human mathematicians anymore? — https://terrytao.wordpress.com/2026/09/19/why-do-we-need-human-mathematicians-anymore/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] The LLMentalist Effect (2023) — https://softwarecrisis.dev/letters/llmentalist/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] AI chatbots give wrong answers to financial queries 'most of the time' — https://www.ft.com/content/c0cd359d-df84-4208-a789-ffa864b43666 — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Resident Evil 4 (GameCube) – complete byte-identical decompilation to C/C++ — https://github.com/adonis-singh/re4 — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Key symbols we lost to time, pt. 2: The Mac side — https://unsung.aresluna.org/key-symbols-we-lost-to-time-pt-2-the-mac-side/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Show HN: A competition for small neural networks that play strategy games — https://tinybrains.dev — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Show HN: Radius – A Meetup.com Alternative — https://radius.to/ — Hello HN! I&amp;#x27;m relaunching Radius [1] - far too long after the original Show HN [2] (I&amp;#x27;ll blame the day job for that). Radius start…
-- [R] [hn-top] Laya on Mac M4 CoreML Offline — https://gist.github.com/fordnox/e592d0f68b543fd044be8e6d040863a0 — Scheduled agent omitted this claimed item from the completion payload.
-- [M] [hn-show] Show HN: mini-AGI — continual learning model trained on 8GB VRAM — https://github.com/volotat/mini-AGI/ — A solo developer released mini-AGI, an open-source continual-learning architecture using a many-expert MoE design, trainable on consumer 8GB VRAM hardware, with a published training sample and a scaling curve the author calls promising. The motivation is full control over training data rather than fine-tuning a corporate base model. The naming is overreaching and the results are single-author and unreproduced, so treat the scaling claim as unverified until someone else runs it.
-- [R] [reddit-saas] I'll be your first customer if you can convince me with your offer — https://www.reddit.com/r/SaaS/comments/1wm82hn/ill_be_your_first_customer_if_you_can_convince_me/ — A Reddit post inviting founders to pitch their products in the comments in exchange for a promised first sale. It is a comment-farming format rather than a source of information. No signal.
-- [R] [reddit-saas] A lot of competition disappears when you stop building for everyone — https://www.reddit.com/r/SaaS/comments/1wm7a6y/a_lot_of_competition_disappears_when_you_stop/ — A Reddit post arguing that founders manufacture their own competition by building horizontally, and that narrowing positioning to a specific segment both reduces competitors and simplifies the product. The reasoning is sound but it is standard niche-positioning advice with no new data behind it.
-- [P] [reddit-saas] 410k Reddit views converted into 2 signups — https://www.reddit.com/r/SaaS/comments/1wm8e0b/i_accidentally_made_the_2_post_of_the_year_here/ — A founder's satirical post hit 410k views, 995 upvotes and 300 comments, becoming the #2 post of the year on r/micro_saas, and produced 8 followers and 2 app signups — about a 0.0005% conversion rate. The author's explanation is that founder subreddits are overwhelmingly other builders hunting for an audience, not buyers. This is a concrete number to weigh before spending distribution effort in founder communities.
-- [R] [reddit-saas] I made my first $9 online from something I built — https://www.reddit.com/r/SaaS/comments/1wm9hum/i_made_my_first_9_online_from_something_i_built/ — A first-sale milestone post from a builder who received a $9 payment for a project. Genuine but purely personal; there is no transferable lesson, channel detail, or method described.
-- [R] [reddit-saas] Update on a live AI try-on product's first wig client — https://www.reddit.com/r/SaaS/comments/1wm8pe1/update_on_our_live_ai_tryon_our_first_wig_client/ — A founder posted a progress update on an AI virtual try-on product now working with its first wig retailer, covering hair density, hairline accuracy, colour fidelity and face preservation during movement. It is a promotional product update rather than a generalisable finding, though the stated problem of deciding when a preview is reliable enough to sit in a sales flow is a real one.
-- [R] [reddit-saas] Can instructional design tech finally catch up to our ideas? — https://www.reddit.com/r/SaaS/comments/1wm76zv/can_instructional_design_tech_finally_catch_up_to/ — A post from a vendor account arguing that generative AI now makes long-held adaptive-learning product ideas buildable, anchored on an unsourced anecdote of a founder going from $10M to $300M revenue in one year. The revenue claim is unverifiable and the piece functions as content marketing for the poster's platform.
-- [R] [reddit-saas] Looking for an app idea ? Check which categories are actually growing first (spoiler : it's not Games) — https://www.reddit.com/r/SaaS/comments/1wm6rmy/looking_for_an_app_idea_check_which_categories/ — Productivity, where ChatGPT and most AI assistants are listed, is up ~55% in time spent and has roughly doubled its revenue since 2025. No o…
-- [R] [reddit-saas] What's one feature you spent weeks building that almost nobody used? — https://www.reddit.com/r/SaaS/comments/1wm3uie/whats_one_feature_you_spent_weeks_building_that/ — I think every founder has at least one feature they were convinced users would love... ...only to discover almost nobody touched it. Looking…
-- [R] [reddit-saas] What is the most annoying manual workaround in your daily workflow right now? — https://www.reddit.com/r/SaaS/comments/1wm9klv/what_is_the_most_annoying_manual_workaround_in/ — Trying to streamline my own growth stack and realizing how much of my day is spent doing glorified data entry. If you had to eliminate one o…</pre>
+- [P] [gh-llamaindex] v0.14.25 — https://github.com/run-llama/llama_index/releases/tag/v0.14.25 — LlamaIndex 0.14.25, released September 21, lists fixes for failed function-tool retries and compact/refine streaming, alongside broad dependency-security maintenance. That matters for agents whose tool calls can produce side effects, but a release note is not proof that a particular deployment is vulnerable or repaired. Review the packages you actually install, then test failed tool calls and streaming before upgrading; some integrations also raise Python requirements or remove deprecated components.
+- [R] [gh-composio] versioning-example@0.1.3 — https://github.com/ComposioHQ/composio/releases/tag/versioning-example%400.1.3 — versioning-example@0.1.3 example dependency patch; no standalone SDK behavior change established.
+- [R] [gh-composio] vercel-example@0.1.12 — https://github.com/ComposioHQ/composio/releases/tag/vercel-example%400.1.12 — vercel-example@0.1.12 example dependency patch; no standalone SDK behavior change established.
+- [R] [gh-composio] typesafe-example@0.0.1 — https://github.com/ComposioHQ/composio/releases/tag/typesafe-example%400.0.1 — typesafe-example@0.0.1 example dependency patch; no standalone SDK behavior change established.
+- [R] [gh-composio] triggers-example@0.1.3 — https://github.com/ComposioHQ/composio/releases/tag/triggers-example%400.1.3 — triggers-example@0.1.3 example dependency patch; no standalone SDK behavior change established.
+- [R] [gh-composio] tools-example@0.1.3 — https://github.com/ComposioHQ/composio/releases/tag/tools-example%400.1.3 — tools-example@0.1.3 example dependency patch; no standalone SDK behavior change established.
+- [R] [gh-composio] toolkits-example@0.1.12 — https://github.com/ComposioHQ/composio/releases/tag/toolkits-example%400.1.12 — toolkits-example@0.1.12 example dependency patch; no standalone SDK behavior change established.
+- [R] [gh-composio] tool-router-example@1.0.13 — https://github.com/ComposioHQ/composio/releases/tag/tool-router-example%401.0.13 — tool-router-example@1.0.13 example dependency patch; no standalone SDK behavior change established.
+- [R] [gh-composio] session-management-example@0.1.3 — https://github.com/ComposioHQ/composio/releases/tag/session-management-example%400.1.3 — session-management-example@0.1.3 example dependency patch; no standalone SDK behavior change established.
+- [R] [gh-composio] openai-example@0.1.12 — https://github.com/ComposioHQ/composio/releases/tag/openai-example%400.1.12 — openai-example@0.1.12 example dependency patch; no standalone SDK behavior change established.
+- [R] [gh-composio] modifiers-example@0.1.12 — https://github.com/ComposioHQ/composio/releases/tag/modifiers-example%400.1.12 — modifiers-example@0.1.12 example dependency patch; no standalone SDK behavior change established.
+- [P] [gh-open-webui] v0.11.4 — https://github.com/open-webui/open-webui/releases/tag/v0.11.4 — Open WebUI 0.11.4, released September 21, fixes credential logging, identity-provider role handling, session termination, and several access checks. Operators should prioritize an upgrade review, but the same notes say tokens are accepted when the Redis revocation list is unreachable, so revocation may be delayed during an outage. Test authentication and revocation behavior in staging, and check the new cookie-forwarding opt-in before rollout; the smaller slim image is a maintainer claim, not a measurement reproduced here.
+- [R] [gh-langchain] langchain-openrouter==0.2.9 — https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.9 — OpenRouter adapter patch lists model-profile maintenance; no clear decision-changing feature.
+- [R] [gh-langchain] langchain-fireworks==1.6.2 — https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.6.2 — Fireworks adapter patch lists test-model and dependency maintenance.
+- [P] [gh-langchain] langchain-deepseek==1.1.1 — https://github.com/langchain-ai/langchain/releases/tag/langchain-deepseek%3D%3D1.1.1 — LangChain's DeepSeek adapter 1.1.1 release notes list compatible minimum dependency fixes, strict-mode routing to the beta endpoint, and cache-token accounting changes. These can affect installation, structured requests, and usage reporting for existing integrations. Re-resolve the lockfile and test strict-mode calls and cached-usage fields against your own workload before adopting; the fixes were not executed in this review.
+- [P] [gh-langchain] langchain-openai==1.6.3 — https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.3 — LangChain's OpenAI adapter 1.6.3 release notes expose inferred Responses API routing at initialization and list support for GPT-6 request constraints. For applications relying on implicit routing, this is a reason to inspect which request path is selected and whether the adapter accepts the intended parameters. Test the integration before upgrading; this is an adapter-maintainer statement, not independent confirmation of model availability or capabilities.
+- [M] [gh-langchain] langchain-core==1.6.4 — https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.4 — LangChain core 1.6.4 marks chat message history deprecated in its September 21 release notes. That is a migration warning for applications using those abstractions, not evidence that they were removed in this patch. Inventory usages and read the linked deprecation change before choosing a replacement; keep this on the watch list until the migration scope is clear.
+- [P] [neon-blog] Custom domains for Neon Functions — https://neon.com/blog/custom-domains-for-neon-functions — Neon's September 21 announcement adds custom domains to Functions, with automatic TLS and no separate domain charge, while normal Function traffic remains billable. Hostnames attach to a function on one branch and are not automatically reassigned to preview branches, which matters for stable webhook or MCP endpoints. Existing Neon users can evaluate a dedicated hostname instead of an extra proxy; confirm their actual traffic costs and routing requirements before changing infrastructure.
+- [P] [neon-blog] Your Neon Functions can now run on a schedule — https://neon.com/blog/your-neon-functions-can-now-run-on-a-schedule — Neon's September 21 announcement introduces branch-scoped scheduled Function Triggers whose timer works while database compute scales to zero. Child branches inherit schedules disabled, reducing accidental duplicate jobs when creating previews. For jobs centered on Neon data, this could remove an external scheduler; first validate invocation authorization, idempotency, failure handling, and execution costs, since this review read the vendor example but did not run it.
+- [M] [hn-show] Show HN: Lossless-memory – a personal AI memory that never summarizes — https://github.com/aru-labs/lossless-memory — Lossless-memory stores timestamped raw conversation logs with rebuildable SQLite indexes and time-filtered recall. Its author reports daily single-user operation, but explicitly provides no comparative benchmarks and currently limits relative-date parsing to Japanese; English queries need absolute dates. The useful idea is preserving source logs independently of retrieval indexes, so monitor the project and test it on non-sensitive sample data before considering any memory-system migration.
+- [R] [reddit-saas] 111k people watched me make $0.000 😅 — https://www.reddit.com/r/SaaS/comments/1wn1080/111k_people_watched_me_make_0000/ — Title reports 111k views and zero revenue; no reproducible acquisition evidence.
+- [R] [reddit-saas] It's such a cool feeling having people use your app from all over the world — https://www.reddit.com/r/SaaS/comments/1wmk3ow/its_such_a_cool_feeling_having_people_use_your/ — Founder celebrates worldwide users; no measured workflow or decision-changing result.
+- [R] [reddit-saas] If your SaaS suddenly got 3x more customers, what would break first? — https://www.reddit.com/r/SaaS/comments/1wn0n7t/if_your_saas_suddenly_got_3x_more_customers_what/ — Discussion asks what would break under growth; no demonstrated bottleneck.
+- [R] [reddit-saas] Yesterday I lost my first customer — https://www.reddit.com/r/SaaS/comments/1wmh4ix/yesterday_i_lost_my_first_customer/ — Author reports a failed live PayPal funnel despite sandbox testing; root cause is unspecified.
+- [R] [reddit-saas] Choose your non-tech/sales co-founder wisely — https://www.reddit.com/r/SaaS/comments/1wmxulk/choose_your_nontechsales_cofounder_wisely/ — Founder attributes faster sales to a cofounder; causal and revenue claims remain unverified.
+- [R] [reddit-saas] Giving up after a year — https://www.reddit.com/r/SaaS/comments/1wn1y27/giving_up_after_a_year/ — Founder describes difficulty acquiring BI users; no controlled acquisition evidence.
+- [R] [reddit-saas] Unpopular Opinion: Ai doesn't mean anyone can build your app — https://www.reddit.com/r/SaaS/comments/1wmdzmv/unpopular_opinion_ai_doesnt_mean_anyone_can_build/ — Opinion argues AI cannot replace app builders; no actionable comparative evidence.
+- [R] [reddit-saas] Got my first paid subscriber — https://www.reddit.com/r/SaaS/comments/1wmvqp9/got_my_first_paid_subscriber/ — Founder celebrates a first paid subscriber; no transferable acquisition measurements.
+- [R] [reddit-saas] Website finished yesterday and today I got +100 users and made 6 sales 🥹 — https://www.reddit.com/r/SaaS/comments/1wmm96s/website_finished_yesterday_and_today_i_got_100/ — Title claims 100 users and six sales after launch; no verified conversion evidence.
+- [R] [reddit-saas] Reason why your startup isn't taking off — https://www.reddit.com/r/SaaS/comments/1wn2ti2/reason_why_your_startup_isnt_taking_off/ — Opinion blames startup struggles on social posting; no causal evidence.
+- [R] [reddit-saas] 3 month SEO update — https://www.reddit.com/r/SaaS/comments/1wn0iki/3_month_seo_update/ — SEO progress report cites small user and payer counts; attribution remains unclear.
+- [R] [reddit-saas] Need Suggestion to take subscription for best AI platform for coding — https://www.reddit.com/r/SaaS/comments/1wn1n17/need_suggestion_to_take_subscription_for_best_ai/ — Post asks whether to switch coding subscriptions; no comparative evaluation.
+- [R] [reddit-saas] Live auctions for handmade/vintage sellers, but the seller never goes on camera. Does this hold up? — https://www.reddit.com/r/SaaS/comments/1wn1cto/live_auctions_for_handmadevintage_sellers_but_the/ — Proposed live-auction concept seeks feedback; no validated demand evidence.
+- [R] [reddit-saas] a funded startup shipped my idea before me. built it anyway — https://www.reddit.com/r/SaaS/comments/1wn16ok/a_funded_startup_shipped_my_idea_before_me_built/ — Meeting-notes product story describes competing with a funded startup; no verified traction.
+- [R] [reddit-saas] Vibe coding made building easy. Who maintains the app after you ship it? — https://www.reddit.com/r/SaaS/comments/1wn33bp/vibe_coding_made_building_easy_who_maintains_the/ — Discussion asks who maintains AI-built apps; no demonstrated maintenance solution.
+- [R] [reddit-saas] Saas naming strategy? — https://www.reddit.com/r/SaaS/comments/1wn31dz/saas_naming_strategy/ — Request for SaaS naming advice; no new tool or tested method.
+- [R] [reddit-saas] Where do you actually discover useful SaaS products? — https://www.reddit.com/r/SaaS/comments/1wn2xm4/where_do_you_actually_discover_useful_saas/ — Question about discovering SaaS tools; no measured distribution results.
+- [R] [reddit-saas] building a personal AI product where the customer can change the AI — https://www.reddit.com/r/SaaS/comments/1wn2rk4/building_a_personal_ai_product_where_the_customer/ — Founder describes swappable AI product direction; no implementation evidence verified.
+- [R] [reddit-saas] How do you get yourself to post consistently on X/LinkedIn? — https://www.reddit.com/r/SaaS/comments/1wmmwwx/how_do_you_get_yourself_to_post_consistently_on/ — Question about posting consistently; no tested distribution strategy.
+- [R] [reddit-saas] I just got my first paying customer. ❤️ — https://www.reddit.com/r/SaaS/comments/1wmsvfp/i_just_got_my_first_paying_customer/ — First-subscriber milestone for Draft2Publish.AI; no transferable sales evidence.</pre>
     </details>
   </main>
   <footer>

@@ -1,0 +1,472 @@
+{
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T06:05:23.274Z",
+  "imported_from": {
+    "importer_version": "digest-import/v1",
+    "source_artifact": "artifacts/synthesized/2026-09-23.json",
+    "source_sha256": "57416342fea7c5461548af647b0ea11d26ba340ca15efa9aec7e1da2977f50e4"
+  },
+  "items": [
+    {
+      "builder_takeaway": "Production-ready platform change on infrastructure Fuzzy already uses (Cloudflare Pages); could move VPS-hosted Python jobs to the edge.",
+      "category": "Model + API Changes",
+      "id": "e6ea86b7-4842-40dc-ba3d-d74c41b3f6cc",
+      "importance": "lead",
+      "labels": [
+        "vendor_claim",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "blog.cloudflare.com",
+      "source_facts": [
+        "Cloudflare Python Workers are generally available with native bindings to D1, R2 and Workers AI."
+      ],
+      "title": "Python Workers are now generally available",
+      "uncertainty": "Package compatibility, cold-start and CPU-time limits for heavier Python libraries are not described in the snippet.",
+      "url": "https://blog.cloudflare.com/python-workers-ga/"
+    },
+    {
+      "builder_takeaway": "A new open-weights frontier-class option with long context for agent work, available through one API today.",
+      "category": "Model + API Changes",
+      "id": "fb9828b1-5f0b-427d-8671-2f498f3676d9",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_public"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "MiMo V2.6 Pro/Flash/UltraSpeed are available on Vercel AI Gateway with 1M context and 128K max output."
+      ],
+      "title": "Xiaomi MiMo V2.6 (Pro, Flash, UltraSpeed) now callable via Vercel AI Gateway",
+      "uncertainty": "Quality and \"top open weights\" ranking are vendor/newsletter claims; no independent reproducible evals seen; pricing not in snippet.",
+      "url": "https://vercel.com/changelog/mimo-v2-6-models-now-available-on-ai-gateway"
+    },
+    {
+      "builder_takeaway": "Possible security fix for a commonly self-hosted automation tool; cheap to patch.",
+      "category": "AI Operations / Agent Control",
+      "id": "9776f260-bac3-4911-9fe5-c0545036fb61",
+      "importance": "supporting",
+      "labels": [
+        "early_signal",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n 2.40.5 and 2.39.10 backport a fix limiting declarative routing during base URL ownership checks."
+      ],
+      "title": "n8n 2.40.5 / 2.39.10: backported fix limiting declarative routing during base-URL ownership checks",
+      "uncertainty": "No advisory/CVE linked; security impact is inferred from the backport pattern.",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.5"
+    },
+    {
+      "builder_takeaway": "Direct cost visibility for Vercel users.",
+      "category": "Small Business Automation",
+      "id": "baf89005-19fe-4329-95c3-71031a57582c",
+      "importance": "supporting",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel now exposes per-deployment billable duration and CPU minutes via dashboard, CLI and REST API."
+      ],
+      "title": "Deployments now show billable duration and CPU minutes",
+      "uncertainty": "",
+      "url": "https://vercel.com/changelog/deployments-now-show-billable-duration-and-cpu-minutes"
+    },
+    {
+      "builder_takeaway": "Shortcut to Teams distribution for agent products.",
+      "category": "Small Business Automation",
+      "id": "79e403c2-69ca-4b81-bc04-544dbe2d5581",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Vercel Connect adds a managed Microsoft Teams bot connector with no client secret to store."
+      ],
+      "title": "Vercel Connect now supports Microsoft Teams",
+      "uncertainty": "Requires a tenant admin with an Azure subscription; pricing not stated.",
+      "url": "https://vercel.com/changelog/vercel-connect-microsoft-teams"
+    },
+    {
+      "builder_takeaway": "Git 3.0 default changes can break scripts/CI.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "12b26ac9-4d1b-4ab4-9c71-488cec161041",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "lwn.net",
+      "source_facts": [
+        "LWN previews changes coming in Git 2.56 and Git 3.0."
+      ],
+      "title": "Looking forward to Git 2.56 - and 3.0",
+      "uncertainty": "Article not read; specific breaking changes not verified here.",
+      "url": "https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/"
+    },
+    {
+      "builder_takeaway": "Major version of a core library.",
+      "category": "Tools Worth Testing",
+      "id": "62a2cb46-299e-4617-a227-df045e4f9607",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "huggingface.co",
+      "source_facts": [
+        "Hugging Face tokenizers reaches v1 with measured encode/decode and scaling performance."
+      ],
+      "title": "tokenizers v1: encode, decode and scaling, measured",
+      "uncertainty": "No content fetched; API breaking changes unknown.",
+      "url": "https://huggingface.co/blog/tokenizers-v1"
+    },
+    {
+      "builder_takeaway": "Practical self-hosting pattern.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "e13ebf0b-1020-4536-a3e4-bd99a000564c",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "david.alvarezrosa.com",
+      "source_facts": [
+        "Self-Hosting Behind CGNAT"
+      ],
+      "title": "Self-Hosting Behind CGNAT",
+      "uncertainty": "Article not read.",
+      "url": "https://david.alvarezrosa.com/posts/self-hosting-behind-cgnat/"
+    },
+    {
+      "builder_takeaway": "New primitive for agent control flow (e.g., \"should the agent keep going\").",
+      "category": "Model + API Changes",
+      "id": "1a05bf61-0eb1-4492-8467-03154246b294",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Jev (typed probabilistic decision model) is callable via Vercel AI Gateway using TypeSafe clients, HTTP API or AI SDK."
+      ],
+      "title": "AI Gateway now supports TypeSafe clients and an HTTP API for Jev",
+      "uncertainty": "No independent evidence on calibration or accuracy of the probabilities.",
+      "url": "https://vercel.com/changelog/ai-gateway-now-supports-typesafe-clients-and-http-api-for-jev"
+    },
+    {
+      "builder_takeaway": "Short-lived price window on a new model.",
+      "category": "Small Business Automation",
+      "id": "9d73deb0-18cf-4df9-9f34-b5209944a2f0",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "vercel.com",
+      "source_facts": [
+        "Grok 4.7 is available on Vercel AI Gateway at 40% off through Sep 27, 2026."
+      ],
+      "title": "Grok 4.7 now available and 40% off on AI Gateway, fx, and eve",
+      "uncertainty": "No quality data; promotional.",
+      "url": "https://vercel.com/changelog/grok-4-7-now-available-and-40-off-on-ai-gateway-fx-eve"
+    },
+    {
+      "builder_takeaway": "Signal for Apple Silicon local inference tooling.",
+      "category": "Tools Worth Testing",
+      "id": "eb425e4e-2b3e-4e4d-a313-affe83759749",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "huggingface.co",
+      "source_facts": [
+        "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community"
+      ],
+      "title": "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community",
+      "uncertainty": "No content fetched.",
+      "url": "https://huggingface.co/blog/omlx"
+    },
+    {
+      "builder_takeaway": "n8n 2.41.0 is a bug-fix rollup: AI builder fixes, multi-main publishing, Vault reads, and execution status guards.",
+      "category": "Small Business Automation",
+      "id": "399b72cc-ff7f-45e6-9dd3-975259d86f17",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n@2.41.0"
+      ],
+      "title": "n8n@2.41.0",
+      "uncertainty": "",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.0"
+    },
+    {
+      "builder_takeaway": "The n8n \"beta\" tag release duplicates 2.41.0.",
+      "category": "Small Business Automation",
+      "id": "36b998fb-db4d-489e-8c97-d4958541a5db",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "beta"
+      ],
+      "title": "beta",
+      "uncertainty": "",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/beta"
+    },
+    {
+      "builder_takeaway": "The n8n \"stable\" tag release duplicates 2.40.5.",
+      "category": "AI Operations / Agent Control",
+      "id": "38350361-cf2d-41a8-a427-353ca71c500f",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "stable"
+      ],
+      "title": "stable",
+      "uncertainty": "",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/stable"
+    },
+    {
+      "builder_takeaway": "n8n 2.39.10 is the same base-URL routing fix, backported to 2.39.",
+      "category": "AI Operations / Agent Control",
+      "id": "819613f1-7aef-4667-a62e-64ab1d50e3f5",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "n8n@2.39.10"
+      ],
+      "title": "n8n@2.39.10",
+      "uncertainty": "",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.10"
+    },
+    {
+      "builder_takeaway": "Latent Space AINews covers Xiaomi MiMo-V2.6-Pro (1T total, 42B active) as the new top open-weights model, reportedly trained for $3M.",
+      "category": "Model + API Changes",
+      "id": "da38ae70-0d86-404e-ad0f-f2eebe6f9a47",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "latent.space",
+      "source_facts": [
+        "[AINews] Xiaomi MiMo-V2.6-Pro 1T-A42B: the new top Open Weights model, trained for $3M"
+      ],
+      "title": "[AINews] Xiaomi MiMo-V2.6-Pro 1T-A42B: the new top Open Weights model, trained for $3M",
+      "uncertainty": "",
+      "url": "https://www.latent.space/p/ainews-xiaomi-mimo-v26-pro-1t-a42b"
+    },
+    {
+      "builder_takeaway": "Xiaomi's MiMo v2.6 announcement page, trending on Hacker News.",
+      "category": "Model + API Changes",
+      "id": "6010cac8-d1bf-44bf-86e4-9677dc082f1c",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "mimo.xiaomi.com",
+      "source_facts": [
+        "MiMo v2.6"
+      ],
+      "title": "MiMo v2.6",
+      "uncertainty": "",
+      "url": "https://mimo.xiaomi.com/mimo-v2-6"
+    },
+    {
+      "builder_takeaway": "A Latent Space podcast with TypeSafe AI's CEO about the Jev model.",
+      "category": "Tools Worth Testing",
+      "id": "d282086b-c80c-431b-95c1-d86337954083",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "latent.space",
+      "source_facts": [
+        "Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI"
+      ],
+      "title": "Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI",
+      "uncertainty": "",
+      "url": "https://www.latent.space/p/jev"
+    },
+    {
+      "builder_takeaway": "A Google AI changelog entry that is only a Korean-locale \"try it\" link to gemini-3.8-flash in AI Studio, with no content.",
+      "category": "Model + API Changes",
+      "id": "898f5659-560e-4937-b468-c91ebabfb805",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "aistudio.google.com",
+      "source_facts": [
+        "Google AI Studio links to gemini-3.8-flash."
+      ],
+      "title": "Google AI Studio: \"Try it\" link for gemini-3.8-flash (Korean locale)",
+      "uncertainty": "",
+      "url": "https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash&hl=ko"
+    },
+    {
+      "builder_takeaway": "A research blog post framing LLM block pruning as an Ising optimization problem.",
+      "category": "Tools Worth Testing",
+      "id": "f9274978-25b6-4685-b0e4-878d45359151",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "huggingface.co",
+      "source_facts": [
+        "Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem"
+      ],
+      "title": "Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem",
+      "uncertainty": "",
+      "url": "https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an"
+    },
+    {
+      "builder_takeaway": "An opinion essay on language design that argues for named and optional arguments.",
+      "category": "Tools Worth Testing",
+      "id": "37994363-6acc-4cad-8617-f48dca2c20e9",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "botahamec.dev",
+      "source_facts": [
+        "Named and Optional Arguments are Awesome"
+      ],
+      "title": "Named and Optional Arguments are Awesome",
+      "uncertainty": "",
+      "url": "https://botahamec.dev/named-optional-args"
+    },
+    {
+      "builder_takeaway": "rift, an open-source tiling window manager for macOS.",
+      "category": "Tools Worth Testing",
+      "id": "08b6995e-bdae-443f-b8b6-f679a642f3e0",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "rift - a tiling window manager for macos"
+      ],
+      "title": "rift - a tiling window manager for macos",
+      "uncertainty": "",
+      "url": "https://github.com/acsandmann/rift/"
+    },
+    {
+      "builder_takeaway": "A review of Paul McKenney's concurrency textbook.",
+      "category": "Tools Worth Testing",
+      "id": "21015be2-a993-4a5a-90d4-0bba3471acd3",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "ahelwer.ca",
+      "source_facts": [
+        "Textbook review: Is Parallel Programming Hard, And, If So, What Can You Do About It?"
+      ],
+      "title": "Textbook review: Is Parallel Programming Hard, And, If So, What Can You Do About It?",
+      "uncertainty": "",
+      "url": "https://ahelwer.ca/post/2026-09-21-concurrency-textbook/"
+    },
+    {
+      "builder_takeaway": "The README for an experimental, artistically framed computation project.",
+      "category": "Tools Worth Testing",
+      "id": "1dac8a4c-b04c-4507-9581-7a19831e8167",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "code.irenes.space",
+      "source_facts": [
+        "evocation - Call forth the blue-green flame of computation from the universe, weave its energies into a fabric, that we may share our blood with it"
+      ],
+      "title": "evocation (experimental computation project README)",
+      "uncertainty": "",
+      "url": "https://code.irenes.space/evocation/tree/README.txt"
+    }
+  ],
+  "mode": "primary",
+  "run_id": "6ac204db-87f9-4f7e-b205-22e30640552a",
+  "status": "completed",
+  "summary": "Synthesized Nightly Librarian run with 11 promoted item(s), 24 scored item(s), and 13 rejected item(s).",
+  "title": "Nightly Librarian - 2026-09-23"
+}
