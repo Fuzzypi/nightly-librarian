@@ -1,92 +1,605 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T06:05:23.274Z",
+  "generated_at": "2026-09-23T11:08:02.720Z",
   "imported_from": {
     "importer_version": "digest-import/v1",
     "source_artifact": "artifacts/synthesized/2026-09-23.json",
-    "source_sha256": "57416342fea7c5461548af647b0ea11d26ba340ca15efa9aec7e1da2977f50e4"
+    "source_sha256": "d9d3ac475439e885e892188e106bc3c5c9c5a464331f13286b0e2ca1f8b4634a"
   },
   "items": [
     {
-      "builder_takeaway": "Production-ready platform change on infrastructure Fuzzy already uses (Cloudflare Pages); could move VPS-hosted Python jobs to the edge.",
+      "builder_takeaway": "Routine metadata refresh; no consequential behavior change in supplied notes.",
       "category": "Model + API Changes",
-      "id": "e6ea86b7-4842-40dc-ba3d-d74c41b3f6cc",
-      "importance": "lead",
+      "id": "b772d4d2-a2f9-4243-805b-7f0d087e7b9f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "langchain-openai==1.6.4"
+      ],
+      "title": "langchain-openai==1.6.4",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.4"
+    },
+    {
+      "builder_takeaway": "If using this adapter, test schema validation and message ordering before upgrading; this is a targeted compatibility release, not a model-quality result.",
+      "category": "AI Operations / Agent Control",
+      "id": "fdc88cf8-cc76-4112-955c-727e60bea395",
+      "importance": "supporting",
       "labels": [
         "vendor_claim",
-        "publish_public"
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "LangChain Anthropic 1.7.3 routes Fable/Opus 5.5 structured outputs to JSON schema."
+      ],
+      "title": "langchain-anthropic==1.7.3",
+      "uncertainty": "Maintainer changelog read; adapter behavior has not been reproduced locally.",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.3"
+    },
+    {
+      "builder_takeaway": "RC tag despite stable-looking title; wait for stable confirmation rather than recommend deployment.",
+      "category": "Tools Worth Testing",
+      "id": "9f91e77b-061f-4023-98bc-823df93d1a78",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "v0.34.4"
+      ],
+      "title": "v0.34.4",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.34.4-rc0"
+    },
+    {
+      "builder_takeaway": "Prerelease maintenance with no clear practical decision in the supplied excerpt.",
+      "category": "AI Operations / Agent Control",
+      "id": "4fff098d-8bcb-499f-b3c6-116a8098deb3",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "github.com",
+      "source_facts": [
+        "CLI Beta @composio/cli@0.4.2-beta.401"
+      ],
+      "title": "CLI Beta @composio/cli@0.4.2-beta.401",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://github.com/ComposioHQ/composio/releases/tag/%40composio/cli%400.4.2-beta.401"
+    },
+    {
+      "builder_takeaway": "Promotional comparative framing; no independently checked benchmark evidence.",
+      "category": "Tools Worth Testing",
+      "id": "e2687eb4-9894-4d3b-b956-6952c9859564",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "benchmarkheaven.com",
+      "source_facts": [
+        "Show HN: JevBench, a reproducible benchmark for typed decision models"
+      ],
+      "title": "Show HN: JevBench, a reproducible benchmark for typed decision models",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://benchmarkheaven.com/jev-models"
+    },
+    {
+      "builder_takeaway": "Interesting research lead, but no read or validated accuracy basis for operational filtering.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "86f26ac5-5c62-4879-a896-9529ebe94c70",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "arxiv.org",
+      "source_facts": [
+        "Show HN: Training a model to identify AI web content from structure alone"
+      ],
+      "title": "Show HN: Training a model to identify AI web content from structure alone",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://arxiv.org/abs/2609.15369"
+    },
+    {
+      "builder_takeaway": "Monitor it and validate mounts, network access, and escape assumptions in a disposable test environment before entrusting credentials or sensitive workloads.",
+      "category": "AI Operations / Agent Control",
+      "id": "3c4365d8-1a4c-47cb-ab80-dd082af44ee5",
+      "importance": "archive-only",
+      "labels": [
+        "builder_reported",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "droprun.sh",
+      "source_facts": [
+        "Drop offers rootless Linux namespaces and optional gVisor; isolation is unverified here."
+      ],
+      "title": "Show HN: Drop – A rootless Linux sandbox with gVisor support",
+      "uncertainty": "Project homepage read; no installation, code audit, escape testing, or independent security validation.",
+      "url": "https://droprun.sh/"
+    },
+    {
+      "builder_takeaway": "Test retries and enable the trigger deliberately in a test branch, and keep unreviewed uploads private because processing happens after upload.",
+      "category": "Small Business Automation",
+      "id": "a6fe2dde-68b1-4770-ac5f-a9e4a23cd184",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "neon.com",
+      "source_facts": [
+        "Neon upload triggers invoke Functions; child-branch triggers start disabled."
+      ],
+      "title": "When a file is uploaded, run the job on Neon",
+      "uncertainty": "Primary vendor walkthrough read; delivery guarantees and end-to-end behavior not tested.",
+      "url": "https://neon.com/blog/when-a-file-is-uploaded-run-the-job-on-neon"
+    },
+    {
+      "builder_takeaway": "Self-reported workload and costs cannot establish a general hosting comparison.",
+      "category": "Small Business Automation",
+      "id": "ba1db966-a5ab-4d4b-afbb-5b673eac722f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "$60–70/mo on Vercel + Supabase for 350k+ monthly users. Is self-hosting/VPS actually worth it?"
+      ],
+      "title": "$60–70/mo on Vercel + Supabase for 350k+ monthly users. Is self-hosting/VPS actually worth it?",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnvqv6/6070mo_on_vercel_supabase_for_350k_monthly_users/"
+    },
+    {
+      "builder_takeaway": "Meme without actionable technical or business evidence.",
+      "category": "Small Business Automation",
+      "id": "ad569e9f-7f4c-4130-a4a0-84fdab5052a5",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "She: Why are you randomly smiling at 3 AM looking at your phone? Me:"
+      ],
+      "title": "She: Why are you randomly smiling at 3 AM looking at your phone? Me:",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnos1a/she_why_are_you_randomly_smiling_at_3_am_looking/"
+    },
+    {
+      "builder_takeaway": "Relevant topic, but supplied promotional post lacks verified repository or operating evidence.",
+      "category": "Voice AI / Realtime Agents",
+      "id": "580906c1-ff7b-46b5-9996-1ff7a029da4d",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Milestone: I open-sourced my voice interview SaaS"
+      ],
+      "title": "Milestone: I open-sourced my voice interview SaaS",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnyk5x/milestone_i_opensourced_my_voice_interview_saas/"
+    },
+    {
+      "builder_takeaway": "Milestone rather than a transferable, evidenced acquisition lesson.",
+      "category": "Small Business Automation",
+      "id": "942b3974-cd39-4abc-ba54-e2ce2725084f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "My SaaS crossed $1500 in revenue"
+      ],
+      "title": "My SaaS crossed $1500 in revenue",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnz3rn/my_saas_crossed_1500_in_revenue/"
+    },
+    {
+      "builder_takeaway": "Celebration without practical method or supporting evidence.",
+      "category": "Small Business Automation",
+      "id": "3f58290f-5e46-427a-aef9-49a5a4f144e1",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "just hit 17 subss!!"
+      ],
+      "title": "just hit 17 subss!!",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wng32i/just_hit_17_subss/"
+    },
+    {
+      "builder_takeaway": "Unverified revenue and spending claims accompanying a general advice request.",
+      "category": "Small Business Automation",
+      "id": "2e8f02b8-20a9-4827-b770-bf6c24a04d90",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Running a software company"
+      ],
+      "title": "Running a software company",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnyeoy/running_a_software_company/"
+    },
+    {
+      "builder_takeaway": "Question, not a tested deliverability or acquisition result.",
+      "category": "Small Business Automation",
+      "id": "32dd847d-f9dc-43a9-9bd7-aa05bf727c44",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "How do you set up email outreach for B2B SaaS?"
+      ],
+      "title": "How do you set up email outreach for B2B SaaS?",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnyxno/how_do_you_set_up_email_outreach_for_b2b_saas/"
+    },
+    {
+      "builder_takeaway": "Generic product demand prompt without implementation or measured benefit.",
+      "category": "Small Business Automation",
+      "id": "6833b3f3-28c0-43dc-9dc8-e2cc4255dee8",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Is there an app that creates invoices automatically from Airtable or Google Sheets?"
+      ],
+      "title": "Is there an app that creates invoices automatically from Airtable or Google Sheets?",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnumn3/is_there_an_app_that_creates_invoices/"
+    },
+    {
+      "builder_takeaway": "Recruitment request outside the editorial decision scope.",
+      "category": "Small Business Automation",
+      "id": "7a1712e7-94e8-47e4-ba71-256dfb086b05",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Looking for a sales focused co-founder for pet care software"
+      ],
+      "title": "Looking for a sales focused co-founder for pet care software",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnw6z7/looking_for_a_sales_focused_cofounder_for_pet/"
+    },
+    {
+      "builder_takeaway": "Advice solicitation supplies no reproducible acquisition evidence.",
+      "category": "Small Business Automation",
+      "id": "c1273573-f3f7-4bbc-8bed-37e6f1b79100",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "What was your outreach method that got results?"
+      ],
+      "title": "What was your outreach method that got results?",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnqc3g/what_was_your_outreach_method_that_got_results/"
+    },
+    {
+      "builder_takeaway": "Speculative idea solicitation rather than demonstrated opportunity.",
+      "category": "Small Business Automation",
+      "id": "16632b9a-5f56-4fc5-a462-11156b03f7d5",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I unexpectedly ended up with ~$2,200 in Claude + Codex API credits. If your only goal was to turn it into profit, what would you build?"
+      ],
+      "title": "I unexpectedly ended up with ~$2,200 in Claude + Codex API credits. If your only goal was to turn it into profit, what would you build?",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnydyy/i_unexpectedly_ended_up_with_2200_in_claude_codex/"
+    },
+    {
+      "builder_takeaway": "Milestone lacks concrete tactics or evidence that changes a decision.",
+      "category": "Small Business Automation",
+      "id": "e7fa55b9-4b2d-4b30-9b08-46dc134dddc4",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "It’s finally my time to post the Stripe screenshot!"
+      ],
+      "title": "It’s finally my time to post the Stripe screenshot!",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnm5gy/its_finally_my_time_to_post_the_stripe_screenshot/"
+    },
+    {
+      "builder_takeaway": "Low practical relevance; no demonstrated workflow improvement.",
+      "category": "Tools Worth Testing",
+      "id": "f5654091-0249-49bd-850e-51ec1677a1dd",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "I made my GitHub commits grow a pixel art Garden 🌳, and now I feel guilty skipping a day"
+      ],
+      "title": "I made my GitHub commits grow a pixel art Garden 🌳, and now I feel guilty skipping a day",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnv2se/i_made_my_github_commits_grow_a_pixel_art_garden/"
+    },
+    {
+      "builder_takeaway": "Generic sales advice request without results.",
+      "category": "Small Business Automation",
+      "id": "3f09155c-bc54-421b-9429-78438307bc2e",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Building report with prospects at trade shows/conferences"
+      ],
+      "title": "Building report with prospects at trade shows/conferences",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnwsfo/building_report_with_prospects_at_trade/"
+    },
+    {
+      "builder_takeaway": "Portfolio framing without measured usability evidence in supplied material.",
+      "category": "Tools Worth Testing",
+      "id": "238fee10-1b66-410e-bb5a-003e8b3bc3d4",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Finance experts need high data density, but most tools look like '90s spreadsheets. Here’s how we modernized a heavy UI without dumbing it down."
+      ],
+      "title": "Finance experts need high data density, but most tools look like '90s spreadsheets. Here’s how we modernized a heavy UI without dumbing it down.",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnzgre/finance_experts_need_high_data_density_but_most/"
+    },
+    {
+      "builder_takeaway": "General architecture question with no quantified workload or solution.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "b53365ad-1390-4a3f-ab29-f6609fae4e00",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Building a C2C tech stack vs B2C/B2B-what hit you during scale?"
+      ],
+      "title": "Building a C2C tech stack vs B2C/B2B-what hit you during scale?",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnzg4c/building_a_c2c_tech_stack_vs_b2cb2bwhat_hit_you/"
+    },
+    {
+      "builder_takeaway": "Growth screenshot narrative without causal acquisition detail.",
+      "category": "Small Business Automation",
+      "id": "8528fb99-4299-4d70-9d7c-94a33101c50f",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "We were at 1–3 active orgs for weeks. Finally some movement."
+      ],
+      "title": "We were at 1–3 active orgs for weeks. Finally some movement.",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnv5m7/we_were_at_13_active_orgs_for_weeks_finally_some/"
+    },
+    {
+      "builder_takeaway": "Generic testing prompt; no new method or comparative evidence.",
+      "category": "AI Operations / Agent Control",
+      "id": "c36cc6bf-2d88-430d-a591-b9eb55a2c6e1",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "Do you actually know what changed after an update?"
+      ],
+      "title": "Do you actually know what changed after an update?",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnymbv/do_you_actually_know_what_changed_after_an_update/"
+    },
+    {
+      "builder_takeaway": "Anecdote lacks product, cohort, and retention context.",
+      "category": "Small Business Automation",
+      "id": "aced96fa-7f55-42d9-a010-6b0a5b22bf9c",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "India is the 2nd highest revenue source for my SaaS"
+      ],
+      "title": "India is the 2nd highest revenue source for my SaaS",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnxzx1/india_is_the_2nd_highest_revenue_source_for_my/"
+    },
+    {
+      "builder_takeaway": "Personal reflection without a decision-changing result.",
+      "category": "Small Business Automation",
+      "id": "e8b7dfe9-9806-4e3c-8eb9-d13be0af2c58",
+      "importance": "archive-only",
+      "labels": [
+        "early_signal",
+        "reject"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "reddit.com",
+      "source_facts": [
+        "hey there i just wanted to thank you all"
+      ],
+      "title": "hey there i just wanted to thank you all",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wnbv9k/hey_there_i_just_wanted_to_thank_you_all/"
+    },
+    {
+      "builder_takeaway": "Monitor availability and assess which services could share identical build-time inputs; do not schedule a migration around access that has not been granted.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "a415e0e5-87bc-445c-a901-55044891c2de",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "monitor"
+      ],
+      "product_relevance": [],
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "source": "render.com",
+      "source_facts": [
+        "Render Build Reuse is a private beta for sharing immutable artifacts across services."
+      ],
+      "title": "Reuse builds across multiple services",
+      "uncertainty": "Vendor beta announcement read; no beta access or artifact-promotion test.",
+      "url": "https://render.com/blog/build-reuse-private-beta"
+    },
+    {
+      "builder_takeaway": "Test actual language and format variants, bypass personalized or unbounded variation, and remember that a bypass change does not remove existing entries that need purging.",
+      "category": "Data Infrastructure / Verification / Scraping",
+      "id": "e713318d-3afd-44bc-9c22-8e37c0e581e7",
+      "importance": "archive-only",
+      "labels": [
+        "vendor_claim",
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-23T00:00:00.000Z",
       "source": "blog.cloudflare.com",
       "source_facts": [
-        "Cloudflare Python Workers are generally available with native bindings to D1, R2 and Workers AI."
+        "Cloudflare adds configurable Vary support; personalized headers need careful bypass rules."
       ],
-      "title": "Python Workers are now generally available",
-      "uncertainty": "Package compatibility, cold-start and CPU-time limits for heavier Python libraries are not described in the snippet.",
-      "url": "https://blog.cloudflare.com/python-workers-ga/"
+      "title": "We just shipped support for the ugliest part of HTTP: Vary",
+      "uncertainty": "Vendor implementation description read; cache behavior was not tested on an application.",
+      "url": "https://blog.cloudflare.com/vary-support/"
     },
     {
-      "builder_takeaway": "A new open-weights frontier-class option with long context for agent work, available through one API today.",
-      "category": "Model + API Changes",
-      "id": "fb9828b1-5f0b-427d-8671-2f498f3676d9",
-      "importance": "supporting",
-      "labels": [
-        "vendor_claim",
-        "publish_public"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "vercel.com",
-      "source_facts": [
-        "MiMo V2.6 Pro/Flash/UltraSpeed are available on Vercel AI Gateway with 1M context and 128K max output."
-      ],
-      "title": "Xiaomi MiMo V2.6 (Pro, Flash, UltraSpeed) now callable via Vercel AI Gateway",
-      "uncertainty": "Quality and \"top open weights\" ranking are vendor/newsletter claims; no independent reproducible evals seen; pricing not in snippet.",
-      "url": "https://vercel.com/changelog/mimo-v2-6-models-now-available-on-ai-gateway"
-    },
-    {
-      "builder_takeaway": "Possible security fix for a commonly self-hosted automation tool; cheap to patch.",
+      "builder_takeaway": "Map those dependencies and test with explicit nonproduction bindings before treating a preview as an isolated full-system test.",
       "category": "AI Operations / Agent Control",
-      "id": "9776f260-bac3-4911-9fe5-c0545036fb61",
-      "importance": "supporting",
-      "labels": [
-        "early_signal",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "n8n 2.40.5 and 2.39.10 backport a fix limiting declarative routing during base URL ownership checks."
-      ],
-      "title": "n8n 2.40.5 / 2.39.10: backported fix limiting declarative routing during base-URL ownership checks",
-      "uncertainty": "No advisory/CVE linked; security impact is inferred from the backport pattern.",
-      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.5"
-    },
-    {
-      "builder_takeaway": "Direct cost visibility for Vercel users.",
-      "category": "Small Business Automation",
-      "id": "baf89005-19fe-4329-95c3-71031a57582c",
-      "importance": "supporting",
+      "id": "f4acb5f0-57a4-4079-bd69-a4c5404a3377",
+      "importance": "lead",
       "labels": [
         "vendor_claim",
         "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "vercel.com",
+      "source": "blog.cloudflare.com",
       "source_facts": [
-        "Vercel now exposes per-deployment billable duration and CPU minutes via dashboard, CLI and REST API."
+        "Worker Previews isolate branch state, but service bindings can still reach production."
       ],
-      "title": "Deployments now show billable duration and CPU minutes",
-      "uncertainty": "",
-      "url": "https://vercel.com/changelog/deployments-now-show-billable-duration-and-cpu-minutes"
+      "title": "Introducing Worker Previews: Isolated preview environments for every change your agent makes",
+      "uncertainty": "Primary announcement read; platform isolation claims not independently exercised.",
+      "url": "https://blog.cloudflare.com/worker-previews/"
     },
     {
-      "builder_takeaway": "Shortcut to Teams distribution for agent products.",
-      "category": "Small Business Automation",
-      "id": "79e403c2-69ca-4b81-bc04-544dbe2d5581",
+      "builder_takeaway": "If already using the gateway, compare completed-task cost and quality on an existing evaluation set before changing routing defaults.",
+      "category": "Model + API Changes",
+      "id": "6cb6d3bc-d773-4964-9f8d-469eae2997ab",
       "importance": "archive-only",
       "labels": [
         "vendor_claim",
@@ -96,206 +609,54 @@
       "published_at": "2026-09-23T00:00:00.000Z",
       "source": "vercel.com",
       "source_facts": [
-        "Vercel Connect adds a managed Microsoft Teams bot connector with no client secret to store."
+        "GPT-6 Sol and Luna arrive on Vercel AI Gateway; workload-specific savings remain untested."
       ],
-      "title": "Vercel Connect now supports Microsoft Teams",
-      "uncertainty": "Requires a tenant admin with an Azure subscription; pricing not stated.",
-      "url": "https://vercel.com/changelog/vercel-connect-microsoft-teams"
+      "title": "GPT-6 Sol and Luna now available on AI Gateway",
+      "uncertainty": "Gateway availability announcement read; quality and relative cost are vendor claims, not independent measurements.",
+      "url": "https://vercel.com/changelog/gpt-6-sol-and-luna-now-available-on-ai-gateway"
     },
     {
-      "builder_takeaway": "Git 3.0 default changes can break scripts/CI.",
+      "builder_takeaway": "For persistent agent workspaces, design writer ownership and snapshot refresh explicitly, then estimate regional storage and I/O costs before adopting the beta.",
       "category": "Data Infrastructure / Verification / Scraping",
-      "id": "12b26ac9-4d1b-4ab4-9c71-488cec161041",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "lwn.net",
-      "source_facts": [
-        "LWN previews changes coming in Git 2.56 and Git 3.0."
-      ],
-      "title": "Looking forward to Git 2.56 - and 3.0",
-      "uncertainty": "Article not read; specific breaking changes not verified here.",
-      "url": "https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/"
-    },
-    {
-      "builder_takeaway": "Major version of a core library.",
-      "category": "Tools Worth Testing",
-      "id": "62a2cb46-299e-4617-a227-df045e4f9607",
+      "id": "7177342b-201b-45f0-a293-1ded5c8a7b6f",
       "importance": "archive-only",
       "labels": [
         "vendor_claim",
         "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "huggingface.co",
-      "source_facts": [
-        "Hugging Face tokenizers reaches v1 with measured encode/decode and scaling performance."
-      ],
-      "title": "tokenizers v1: encode, decode and scaling, measured",
-      "uncertainty": "No content fetched; API breaking changes unknown.",
-      "url": "https://huggingface.co/blog/tokenizers-v1"
-    },
-    {
-      "builder_takeaway": "Practical self-hosting pattern.",
-      "category": "Data Infrastructure / Verification / Scraping",
-      "id": "e13ebf0b-1020-4536-a3e4-bd99a000564c",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
-        "publish_private"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "david.alvarezrosa.com",
-      "source_facts": [
-        "Self-Hosting Behind CGNAT"
-      ],
-      "title": "Self-Hosting Behind CGNAT",
-      "uncertainty": "Article not read.",
-      "url": "https://david.alvarezrosa.com/posts/self-hosting-behind-cgnat/"
-    },
-    {
-      "builder_takeaway": "New primitive for agent control flow (e.g., \"should the agent keep going\").",
-      "category": "Model + API Changes",
-      "id": "1a05bf61-0eb1-4492-8467-03154246b294",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "monitor"
       ],
       "product_relevance": [],
       "published_at": "2026-09-23T00:00:00.000Z",
       "source": "vercel.com",
       "source_facts": [
-        "Jev (typed probabilistic decision model) is callable via Vercel AI Gateway using TypeSafe clients, HTTP API or AI SDK."
+        "Vercel Sandbox Drives persist state, with one writer and region-local mounts."
       ],
-      "title": "AI Gateway now supports TypeSafe clients and an HTTP API for Jev",
-      "uncertainty": "No independent evidence on calibration or accuracy of the probabilities.",
-      "url": "https://vercel.com/changelog/ai-gateway-now-supports-typesafe-clients-and-http-api-for-jev"
+      "title": "Drives for Vercel Sandbox are now in public beta",
+      "uncertainty": "Vendor announcement read; durability, throughput, and regional pricing not independently tested.",
+      "url": "https://vercel.com/changelog/drives-for-vercel-sandbox-are-now-in-public-beta"
     },
     {
-      "builder_takeaway": "Short-lived price window on a new model.",
-      "category": "Small Business Automation",
-      "id": "9d73deb0-18cf-4df9-9f34-b5209944a2f0",
-      "importance": "archive-only",
+      "builder_takeaway": "Audit those request fields, use structured outputs for JSON, and test tool-selection misses before migrating.",
+      "category": "Model + API Changes",
+      "id": "93a605d8-5739-4b52-af63-a91c978bedcb",
+      "importance": "supporting",
       "labels": [
         "vendor_claim",
-        "monitor"
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-23T00:00:00.000Z",
       "source": "vercel.com",
       "source_facts": [
-        "Grok 4.7 is available on Vercel AI Gateway at 40% off through Sep 27, 2026."
+        "Opus 5.5 Gateway requests must use adaptive thinking and cannot force tools."
       ],
-      "title": "Grok 4.7 now available and 40% off on AI Gateway, fx, and eve",
-      "uncertainty": "No quality data; promotional.",
-      "url": "https://vercel.com/changelog/grok-4-7-now-available-and-40-off-on-ai-gateway-fx-eve"
+      "title": "Claude Opus 5.5 now available on AI Gateway",
+      "uncertainty": "Primary gateway announcement read; claimed speed and cost improvements were not independently benchmarked.",
+      "url": "https://vercel.com/changelog/claude-opus-5-5-now-available-on-ai-gateway"
     },
     {
-      "builder_takeaway": "Signal for Apple Silicon local inference tooling.",
-      "category": "Tools Worth Testing",
-      "id": "eb425e4e-2b3e-4e4d-a313-affe83759749",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "monitor"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "huggingface.co",
-      "source_facts": [
-        "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community"
-      ],
-      "title": "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community",
-      "uncertainty": "No content fetched.",
-      "url": "https://huggingface.co/blog/omlx"
-    },
-    {
-      "builder_takeaway": "n8n 2.41.0 is a bug-fix rollup: AI builder fixes, multi-main publishing, Vault reads, and execution status guards.",
-      "category": "Small Business Automation",
-      "id": "399b72cc-ff7f-45e6-9dd3-975259d86f17",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "n8n@2.41.0"
-      ],
-      "title": "n8n@2.41.0",
-      "uncertainty": "",
-      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.0"
-    },
-    {
-      "builder_takeaway": "The n8n \"beta\" tag release duplicates 2.41.0.",
-      "category": "Small Business Automation",
-      "id": "36b998fb-db4d-489e-8c97-d4958541a5db",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "beta"
-      ],
-      "title": "beta",
-      "uncertainty": "",
-      "url": "https://github.com/n8n-io/n8n/releases/tag/beta"
-    },
-    {
-      "builder_takeaway": "The n8n \"stable\" tag release duplicates 2.40.5.",
-      "category": "AI Operations / Agent Control",
-      "id": "38350361-cf2d-41a8-a427-353ca71c500f",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "stable"
-      ],
-      "title": "stable",
-      "uncertainty": "",
-      "url": "https://github.com/n8n-io/n8n/releases/tag/stable"
-    },
-    {
-      "builder_takeaway": "n8n 2.39.10 is the same base-URL routing fix, backported to 2.39.",
-      "category": "AI Operations / Agent Control",
-      "id": "819613f1-7aef-4667-a62e-64ab1d50e3f5",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "github.com",
-      "source_facts": [
-        "n8n@2.39.10"
-      ],
-      "title": "n8n@2.39.10",
-      "uncertainty": "",
-      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.39.10"
-    },
-    {
-      "builder_takeaway": "Latent Space AINews covers Xiaomi MiMo-V2.6-Pro (1T total, 42B active) as the new top open-weights model, reportedly trained for $3M.",
+      "builder_takeaway": "Primary platform announcements already cover the useful changes; avoid repeating headline price claims.",
       "category": "Model + API Changes",
-      "id": "da38ae70-0d86-404e-ad0f-f2eebe6f9a47",
+      "id": "d59de232-bf4b-4402-9ffb-ef1c2d61f458",
       "importance": "archive-only",
       "labels": [
         "early_signal",
@@ -305,168 +666,111 @@
       "published_at": "2026-09-23T00:00:00.000Z",
       "source": "latent.space",
       "source_facts": [
-        "[AINews] Xiaomi MiMo-V2.6-Pro 1T-A42B: the new top Open Weights model, trained for $3M"
+        "[AINews] Claude Opus 5.5, the new default model for AINews — and everybody cuts prices 40-50%"
       ],
-      "title": "[AINews] Xiaomi MiMo-V2.6-Pro 1T-A42B: the new top Open Weights model, trained for $3M",
-      "uncertainty": "",
-      "url": "https://www.latent.space/p/ainews-xiaomi-mimo-v26-pro-1t-a42b"
+      "title": "[AINews] Claude Opus 5.5, the new default model for AINews — and everybody cuts prices 40-50%",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.latent.space/p/ainews-claude-opus-55-the-new-default"
     },
     {
-      "builder_takeaway": "Xiaomi's MiMo v2.6 announcement page, trending on Hacker News.",
-      "category": "Model + API Changes",
-      "id": "6010cac8-d1bf-44bf-86e4-9677dc082f1c",
-      "importance": "archive-only",
-      "labels": [
-        "vendor_claim",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "mimo.xiaomi.com",
-      "source_facts": [
-        "MiMo v2.6"
-      ],
-      "title": "MiMo v2.6",
-      "uncertainty": "",
-      "url": "https://mimo.xiaomi.com/mimo-v2-6"
-    },
-    {
-      "builder_takeaway": "A Latent Space podcast with TypeSafe AI's CEO about the Jev model.",
+      "builder_takeaway": "Broad science interview has low immediate solo-developer decision relevance.",
       "category": "Tools Worth Testing",
-      "id": "d282086b-c80c-431b-95c1-d86337954083",
+      "id": "d557ac33-7a4a-433a-aa69-335a4eacc04d",
       "importance": "archive-only",
       "labels": [
-        "vendor_claim",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-23T00:00:00.000Z",
       "source": "latent.space",
       "source_facts": [
-        "Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI"
+        "🔬 An Oscar, Two Asteroids, and the Algorithm in Your sklearn: John Platt on AI for Science"
       ],
-      "title": "Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI",
-      "uncertainty": "",
-      "url": "https://www.latent.space/p/jev"
+      "title": "🔬 An Oscar, Two Asteroids, and the Algorithm in Your sklearn: John Platt on AI for Science",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://www.latent.space/p/john-platt"
     },
     {
-      "builder_takeaway": "A Google AI changelog entry that is only a Korean-locale \"try it\" link to gemini-3.8-flash in AI Studio, with no content.",
-      "category": "Model + API Changes",
-      "id": "898f5659-560e-4937-b468-c91ebabfb805",
-      "importance": "archive-only",
-      "labels": [
-        "early_signal",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "aistudio.google.com",
-      "source_facts": [
-        "Google AI Studio links to gemini-3.8-flash."
-      ],
-      "title": "Google AI Studio: \"Try it\" link for gemini-3.8-flash (Korean locale)",
-      "uncertainty": "",
-      "url": "https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash&hl=ko"
-    },
-    {
-      "builder_takeaway": "A research blog post framing LLM block pruning as an Ising optimization problem.",
+      "builder_takeaway": "Use the cards to inspect setup before choosing models, while treating the announcement as a reporting resource rather than our independent reproduction of its results.",
       "category": "Tools Worth Testing",
-      "id": "f9274978-25b6-4685-b0e4-878d45359151",
+      "id": "92c32b31-c438-433f-8278-49ba96917c79",
       "importance": "archive-only",
       "labels": [
-        "early_signal",
-        "reject"
+        "vendor_claim",
+        "monitor"
       ],
       "product_relevance": [],
       "published_at": "2026-09-23T00:00:00.000Z",
       "source": "huggingface.co",
       "source_facts": [
-        "Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem"
+        "AISI shares evaluation configurations through Evaluation Cards for interpretable comparisons."
       ],
-      "title": "Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem",
-      "uncertainty": "",
-      "url": "https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an"
+      "title": "How UK AISI and EvalEval Are Making Benchmark Results Reproducible",
+      "uncertainty": "Collaboration announcement read; underlying datasets and evaluation runs were not independently reproduced.",
+      "url": "https://huggingface.co/blog/evaleval-aisi"
     },
     {
-      "builder_takeaway": "An opinion essay on language design that argues for named and optional arguments.",
+      "builder_takeaway": "Experimental bundle; prioritize the stable security releases in this same batch.",
       "category": "Tools Worth Testing",
-      "id": "37994363-6acc-4cad-8617-f48dca2c20e9",
+      "id": "044f679f-dddd-4259-9134-3b7db21d2117",
       "importance": "archive-only",
       "labels": [
-        "builder_reported",
-        "reject"
-      ],
-      "product_relevance": [],
-      "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "botahamec.dev",
-      "source_facts": [
-        "Named and Optional Arguments are Awesome"
-      ],
-      "title": "Named and Optional Arguments are Awesome",
-      "uncertainty": "",
-      "url": "https://botahamec.dev/named-optional-args"
-    },
-    {
-      "builder_takeaway": "rift, an open-source tiling window manager for macOS.",
-      "category": "Tools Worth Testing",
-      "id": "08b6995e-bdae-443f-b8b6-f679a642f3e0",
-      "importance": "archive-only",
-      "labels": [
-        "builder_reported",
+        "early_signal",
         "reject"
       ],
       "product_relevance": [],
       "published_at": "2026-09-23T00:00:00.000Z",
       "source": "github.com",
       "source_facts": [
-        "rift - a tiling window manager for macos"
+        "v16.4.0-canary.39"
       ],
-      "title": "rift - a tiling window manager for macos",
-      "uncertainty": "",
-      "url": "https://github.com/acsandmann/rift/"
+      "title": "v16.4.0-canary.39",
+      "uncertainty": "Linked page not opened; judgment uses the supplied title and feed excerpt only.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.39"
     },
     {
-      "builder_takeaway": "A review of Paul McKenney's concurrency textbook.",
-      "category": "Tools Worth Testing",
-      "id": "21015be2-a993-4a5a-90d4-0bba3471acd3",
-      "importance": "archive-only",
+      "builder_takeaway": "Check affected image routes and prioritize the patched release; if an upgrade must wait, prevent those untrusted values from reaching SVG rendering.",
+      "category": "AI Operations / Agent Control",
+      "id": "47015a65-f367-472d-88fb-5d0f8281331f",
+      "importance": "supporting",
       "labels": [
-        "builder_reported",
-        "reject"
+        "vendor_claim",
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "ahelwer.ca",
+      "source": "github.com",
       "source_facts": [
-        "Textbook review: Is Parallel Programming Hard, And, If So, What Can You Do About It?"
+        "Next.js 16.3.6 fixes conditional RCE in Node.js next/og SVG rendering."
       ],
-      "title": "Textbook review: Is Parallel Programming Hard, And, If So, What Can You Do About It?",
-      "uncertainty": "",
-      "url": "https://ahelwer.ca/post/2026-09-21-concurrency-textbook/"
+      "title": "v16.3.6",
+      "uncertainty": "Maintainer advisory read; no exploit reproduction or local application exposure audit performed.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.6"
     },
     {
-      "builder_takeaway": "The README for an experimental, artistically framed computation project.",
-      "category": "Tools Worth Testing",
-      "id": "1dac8a4c-b04c-4507-9581-7a19831e8167",
+      "builder_takeaway": "Teams staying on 15.x should review and test this maintenance update without treating the separate 16.x vulnerability as proven exposure on their branch.",
+      "category": "AI Operations / Agent Control",
+      "id": "357c10c4-cf43-49ac-94f2-eb430b80b2fe",
       "importance": "archive-only",
       "labels": [
-        "early_signal",
-        "reject"
+        "vendor_claim",
+        "publish_private"
       ],
       "product_relevance": [],
       "published_at": "2026-09-23T00:00:00.000Z",
-      "source": "code.irenes.space",
+      "source": "github.com",
       "source_facts": [
-        "evocation - Call forth the blue-green flame of computation from the universe, weave its energies into a fabric, that we may share our blood with it"
+        "Next.js 15.5.26 adds next/og hardening; do not infer the 16.x RCE affects 15.x."
       ],
-      "title": "evocation (experimental computation project README)",
-      "uncertainty": "",
-      "url": "https://code.irenes.space/evocation/tree/README.txt"
+      "title": "v15.5.26",
+      "uncertainty": "Release note read; linked broader security post was not read and 15.x exposure is not asserted.",
+      "url": "https://github.com/vercel/next.js/releases/tag/v15.5.26"
     }
   ],
   "mode": "primary",
-  "run_id": "6ac204db-87f9-4f7e-b205-22e30640552a",
+  "run_id": "a44d91cb-8b91-4889-b84a-1f031a60d4cc",
   "status": "completed",
-  "summary": "Synthesized Nightly Librarian run with 11 promoted item(s), 24 scored item(s), and 13 rejected item(s).",
+  "summary": "Synthesized Nightly Librarian run with 12 promoted item(s), 40 scored item(s), and 28 rejected item(s).",
   "title": "Nightly Librarian - 2026-09-23"
 }
