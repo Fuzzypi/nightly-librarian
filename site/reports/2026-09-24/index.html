@@ -5,21 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>September 24, 2026 report log — The Nightly Librarian</title>
-  <meta name="description" content="7 stories cleared the bar, led by OpenAI releases GPT-6 Sol and Luna with ~50% lower API prices, Anthropic releases Claude Opus 5.">
+  <meta name="description" content="5 stories cleared the bar, led by v3.2.0-rc1, langchain-anthropic==1.7.4, and Show HN: Npunlock – Run custom C kernels for Intel NPUs.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-09-24/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="September 24, 2026 report log | The Nightly Librarian">
-  <meta property="og:description" content="7 stories cleared the bar, led by OpenAI releases GPT-6 Sol and Luna with ~50% lower API prices, Anthropic releases Claude Opus 5.">
+  <meta property="og:description" content="5 stories cleared the bar, led by v3.2.0-rc1, langchain-anthropic==1.7.4, and Show HN: Npunlock – Run custom C kernels for Intel NPUs.">
   <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-09-24/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="September 24, 2026 report log | The Nightly Librarian">
-  <meta name="twitter:description" content="7 stories cleared the bar, led by OpenAI releases GPT-6 Sol and Luna with ~50% lower API prices, Anthropic releases Claude Opus 5.">
+  <meta name="twitter:description" content="5 stories cleared the bar, led by v3.2.0-rc1, langchain-anthropic==1.7.4, and Show HN: Npunlock – Run custom C kernels for Intel NPUs.">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
@@ -36,7 +36,7 @@
     </div>
     <div class="dateline">
       <span>September 24, 2026 · Report log</span>
-      <span>Sep 24, 2026, 2:04 AM</span>
+      <span>Sep 24, 2026, 7:04 AM</span>
     </div>
   </header>
   <main>
@@ -44,47 +44,37 @@
     <h1>September 24, 2026</h1>
     <div class="summary-card">
       <div class="eyebrow">Report summary</div>
-      <p>7 stories cleared the bar, led by OpenAI releases GPT-6 Sol and Luna with ~50% lower API prices, Anthropic releases Claude Opus 5.5 at lower price, and tokens too cheap to meter.</p>
+      <p>5 stories cleared the bar, led by v3.2.0-rc1, langchain-anthropic==1.7.4, and Show HN: Npunlock – Run custom C kernels for Intel NPUs.</p>
       <div class="meta" style="margin-top:0.4rem;">
-        <span>7 worth-attention items</span><span>40 digest lines</span>
+        <span>5 worth-attention items</span><span>40 digest lines</span>
       </div>
     </div>
     <h2>Worth attention</h2>
     <div class="item-stack">
 
       <div class="item">
-        <div class="item-title"><a href="https://openai.com/index/introducing-gpt-6-sol-and-luna/" target="_blank" rel="noopener">OpenAI releases GPT-6 Sol and Luna with ~50% lower API prices</a></div>
-        <div class="item-takeaway">OpenAI shipped GPT-6 Sol and GPT-6 Luna, two tiers below GPT-6 Astra. Reported API pricing is $2/$10 per M tokens for Sol and $0.10/$0.50 for Luna, about half of GPT-5.6, and OpenAI told VentureBeat these are permanent rates; prompt caching also gets higher default hit rates with up to 90% off cached reads. If you run high-volume classification, extraction or triage calls (like nightly-librarian or CalenCall summaries), re-price your cheapest tier against Luna this week.</div>
+        <div class="item-title"><a href="https://github.com/deepset-ai/haystack/releases/tag/v3.2.0-rc1" target="_blank" rel="noopener">v3.2.0-rc1</a></div>
+        <div class="item-takeaway">## ⭐️ Highlights ### 🧠 SummarizationCompactor: Compact Agent Context Without Losing It The experimental <a href="https://docs.haystack.deepset.ai/docs/summarization-compactor" target="_blank" rel="noopener">`SummarizationCompactor`</a> is a new compaction strategy for [`Compaction…</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Anthropic releases Claude Opus 5.5 at lower price</a></div>
-        <div class="item-takeaway">Anthropic released Claude Opus 5.5, the first of its 5.5 family, priced at $4/$20 per M tokens with cache reads cut to $0.20/M, about 40% cheaper to run than Opus 5 and 30%+ faster output. Anthropic reports it beats Fable 5.1 on agentic coding, computer use and knowledge work; it is live on the API, AWS, Google Cloud and Azure, with Sonnet 5.5 and Haiku 5.5 promised soon. If your agent/MCP pipelines run on Opus 5, swapping the model string is a near-free cost and latency win worth testing now.</div>
+        <div class="item-title"><a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.4" target="_blank" rel="noopener">langchain-anthropic==1.7.4</a></div>
+        <div class="item-takeaway">Changes since langchain-anthropic==1.7.3 chore(anthropic): fix integration test cassette (#40790) release(anthropic): 1.7.4 (#40786) fix(anthropic): add Opus 5.5 and GPT-6 profile augmentations (#40785) feat(anthropic,openai): mid-conversat…</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://jyn.dev/tokens-too-cheap-to-meter/" target="_blank" rel="noopener">tokens too cheap to meter</a></div>
-        <div class="item-takeaway">An essay arguing the cost of getting a task done with machine intelligence is falling by orders of magnitude per year, and working through what that does to supply and demand. It lands the same week as two big API price cuts, which makes it a useful framing piece. Worth a read if you are deciding whether to design products around token cost as a constraint at all.</div>
+        <div class="item-title"><a href="https://github.com/hsfzxjy/npunlock" target="_blank" rel="noopener">Show HN: Npunlock – Run custom C kernels for Intel NPUs</a></div>
+        <div class="item-takeaway">(No summary available.)</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://foxscript.org/" target="_blank" rel="noopener">FoxScript: Visual FoxPro revived on a Rust/wasm runtime (MIT)</a></div>
-        <div class="item-takeaway">A developer rebuilt the Visual FoxPro 9 language on a new Rust runtime compiled to wasm, checked against the real vfp9.exe, removing the 2 GB table limit, still loading old 32-bit .fll add-ins, and adding lambdas, JSON and an HTTP server. It was built for a paying customer who wanted to keep a 20-year-old business app alive; reports are unfinished and builds unsigned. Mostly interesting as a proof of the &quot;keep legacy business apps running&quot; market for solo builders.</div>
+        <div class="item-title"><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.1" target="_blank" rel="noopener">n8n@2.41.1</a></div>
+        <div class="item-takeaway">## <a href="https://github.com/n8n-io/n8n/compare/n8n@2.41.0...n8n@2.41.1" target="_blank" rel="noopener">2.41.1</a> (2026-09-23) ### Bug Fixes * **core:** Restore pubsub subscriptions after Redis reconnect and detect half-open subscriber connections ([#39241](https://github.com/n8…</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://linebender.org/blog/fearless-simd-1-0/" target="_blank" rel="noopener">Fearless SIMD v1.0 released (Rust)</a></div>
-        <div class="item-takeaway">Linebender shipped v1.0 of Fearless SIMD, a Rust library for portable, safe SIMD code. A 1.0 signals API stability for Rust developers who need vectorized hot paths. Only relevant if you write performance-sensitive Rust.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://www.cryptocellar.org/bgac/the-mvueh-break.html" target="_blank" rel="noopener">GPT-6 Astra reportedly breaks long-unsolved Enigma message</a></div>
-        <div class="item-takeaway">A cryptography-history site reports that GPT-6 Astra helped break an Enigma message unsolved since 2005. It is an interesting capability data point, but a single anecdote rather than a workflow change. Keep an eye out for how the model was actually used.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/" target="_blank" rel="noopener">Hackers claim to have data on all FBI employees</a></div>
-        <div class="item-takeaway">404 Media reports a hacking group claiming to hold data on all FBI employees. The claim is attacker-sourced and not yet confirmed. No direct action for a solo developer; watch for confirmation or details on the entry vector.</div>
+        <div class="item-title"><a href="https://blogs.gnome.org/alatiera/2026/09/23/the-gnome-llm-policy-that-i-want/" target="_blank" rel="noopener">The GNOME LLM Policy That I Want</a></div>
+        <div class="item-takeaway">Comments</div>
       </div>
     </div>
     <h2>Full digest</h2>
@@ -93,440 +83,440 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://paste.sr.ht/~awal/b76caf6f213a96a634454fa7292c035a10035b49" target="_blank" rel="noopener">Plain-text files are at risk</a>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/versioning-example%400.1.4" target="_blank" rel="noopener">versioning-example@0.1.4</a>
         </div>
-        <div class="item-takeaway">A Lobsters-linked paste arguing that plain-text files are at risk. Content could not be read and there is no identifiable concrete change behind it.</div>
+        <div class="item-takeaway">### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://no-sloptober.com/" target="_blank" rel="noopener">No Sloptober</a>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/vercel-example%400.1.13" target="_blank" rel="noopener">vercel-example@0.1.13</a>
         </div>
-        <div class="item-takeaway">A campaign site urging people to avoid AI-generated &quot;slop&quot; for October. Advocacy, not news.</div>
+        <div class="item-takeaway">### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0 - @composio/vercel@0.12.1</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://inessential.com/2026/09/22/that-about-wraps-it-up-for.html" target="_blank" rel="noopener">That About Wraps It Up for Stock Mac UI</a>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/typesafe-example%400.0.2" target="_blank" rel="noopener">typesafe-example@0.0.2</a>
         </div>
-        <div class="item-takeaway">An opinion post on the state of stock macOS UI conventions. Mostly commentary for Mac app developers.</div>
+        <div class="item-takeaway">### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0 - @composio/openai@0.12.3 - @comp…</div>
         <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://linebender.org/blog/fearless-simd-1-0/" target="_blank" rel="noopener">Fearless SIMD v1.0 released (Rust)</a>
-        </div>
-        <div class="item-takeaway">Linebender shipped v1.0 of Fearless SIMD, a Rust library for portable, safe SIMD code. A 1.0 signals API stability for Rust developers who need vectorized hot paths. Only relevant if you write performance-sensitive Rust.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://jyn.dev/tokens-too-cheap-to-meter/" target="_blank" rel="noopener">tokens too cheap to meter</a>
-        </div>
-        <div class="item-takeaway">An essay arguing the cost of getting a task done with machine intelligence is falling by orders of magnitude per year, and working through what that does to supply and demand. It lands the same week as two big API price cuts, which makes it a useful framing piece. Worth a read if you are deciding whether to design products around token cost as a constraint at all.</div>
-        <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://levmiseri.com/nospace" target="_blank" rel="noopener">Jev-powered autocorrection</a>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/triggers-example%400.1.4" target="_blank" rel="noopener">triggers-example@0.1.4</a>
         </div>
-        <div class="item-takeaway">A small web demo of text autocorrection. A toy, not a tool.</div>
+        <div class="item-takeaway">### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://buttondown.com/maiht3k/archive/how-to-talk-about-ai-without-adding-to-the/" target="_blank" rel="noopener">How to talk about &quot;AI&quot; without adding to the anthropomorphization</a>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/tools-example%400.1.4" target="_blank" rel="noopener">tools-example@0.1.4</a>
         </div>
-        <div class="item-takeaway">Very good to use for documentation of systems and tasks Comments</div>
+        <div class="item-takeaway">### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0 - @composio/vercel@0.12.1</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://blog.rust-lang.org/2026/09/21/github-actions-leaking-secrets-when-miri-output-is-cached/" target="_blank" rel="noopener">GitHub Actions leaking secrets when Miri output is cached</a>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/toolkits-example%400.1.13" target="_blank" rel="noopener">toolkits-example@0.1.13</a>
         </div>
-        <div class="item-takeaway">Comments</div>
+        <div class="item-takeaway">### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0 - @composio/vercel@0.12.1</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://blog.verygoodsoftwarenotvirus.dev/posts/2026/09/22/redis-is-not-a-map-you-talk-to-over-tcp/" target="_blank" rel="noopener">Redis is not a map you talk to over TCP</a>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/tool-router-example%401.0.14" target="_blank" rel="noopener">tool-router-example@1.0.14</a>
         </div>
-        <div class="item-takeaway">Comments</div>
+        <div class="item-takeaway">### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0 - @composio/claude-agent-sdk@0.12…</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://web.archive.org/web/20180603053407/http://article.gmane.org/gmane.comp.lang.lua.general/75426" target="_blank" rel="noopener">Re: Suggestions on implementing an efficient instruction set simulator in LuaJIT2 (2011)</a>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/session-management-example%400.1.4" target="_blank" rel="noopener">session-management-example@0.1.4</a>
         </div>
-        <div class="item-takeaway">Comments</div>
+        <div class="item-takeaway">### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.jeffgeerling.com/blog/2026/raspberry-pi-ram-lockdown/" target="_blank" rel="noopener">Raspberry Pi locks down Pi 5 RAM upgrades in firmware</a>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/openai-example%400.1.13" target="_blank" rel="noopener">openai-example@0.1.13</a>
         </div>
-        <div class="item-takeaway">Comments</div>
+        <div class="item-takeaway">### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0 - @composio/openai@0.12.3 - @comp…</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://yorickpeterse.com/articles/sandboxing-with-minimal-effort/" target="_blank" rel="noopener">Sandboxing with minimal effort</a>
+          <a href="https://github.com/ComposioHQ/composio/releases/tag/modifiers-example%400.1.13" target="_blank" rel="noopener">modifiers-example@0.1.13</a>
         </div>
-        <div class="item-takeaway">Comments</div>
+        <div class="item-takeaway">### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0 - @composio/vercel@0.12.1</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>gh-composio</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://arthi-chaud.github.io/posts/json-ir/" target="_blank" rel="noopener">Parsing JSON Objects without intermediate ASTs</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wo09wp/marketing_vs_product/" target="_blank" rel="noopener">Marketing vs Product</a>
         </div>
-        <div class="item-takeaway">Comments</div>
+        <div class="item-takeaway">I've seen bad products with good marketing works out but not the vice versa. Which side are you picking up as a developer with no marketing skills? &amp;#32; submitted by &amp;#32; /u/billl_buttlicker [link] &amp;#32; [comments]</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://utcc.utoronto.ca/~cks/space/blog/tech/EditorsAreACommitment" target="_blank" rel="noopener">Serious editors are a commitment (at least for me)</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wo1uc8/d1_retention_is_48_but_i_only_get_422_new_users_a/" target="_blank" rel="noopener">D1 retention is 48%, but I only get 4–22 new users a week. What would you fix first?</a>
         </div>
-        <div class="item-takeaway">Comments</div>
+        <div class="item-takeaway">Solo dev, small consumer app. Stack is React + Vite with Capacitor for iOS/Android, Supabase and Vercel. The stack was the easy part. The numbers that bug me: D1 retention around 48% 4 to 22 new users per week 95% of iOS store impressions c…</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://langdev.stackexchange.com/questions/3233/why-do-common-rust-packages-depend-on-c-code/3237#3237" target="_blank" rel="noopener">Why do common Rust packages depend on C code? (2023)</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wo0mls/confusion_how_do_you_keep_everyone_in_sync_when/" target="_blank" rel="noopener">Confusion 🤔 How do you keep everyone in sync when something changes mid-project?</a>
         </div>
-        <div class="item-takeaway">Comments</div>
+        <div class="item-takeaway">Mid-project, something might change, perhaps engineering discovers a limitation or research invalidates an assumption. How do you ensure design, Jira, documentation and other systems aren’t still operating under the old context? For me, reg…</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.scientificamerican.com/article/did-openai-solve-the-wrong-navier-stokes-problem/" target="_blank" rel="noopener">Did OpenAI solve the wrong Navier-Stokes problem?</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wo0avs/opensource_or_reliable_production_grade_chatbot_ui/" target="_blank" rel="noopener">Open-source or reliable Production grade chatbot UI</a>
         </div>
-        <div class="item-takeaway">Comments</div>
+        <div class="item-takeaway">Hi everyone! I am looking for some initial chat interface (UI) which can be used as initial start point and can be modified easily (specifically by vibe coding). I must need it to be production deployment ready. Anyone has any insights or s…</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://alexn.org/blog/2026/09/22/ai-has-no-wisdom-and-neither-will-you/" target="_blank" rel="noopener">AI Has No Wisdom and Neither Will You</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wnzssc/whats_your_opinion_on_the_consulting_saas_strategy/" target="_blank" rel="noopener">Whats your opinion on the &quot;consulting + saas&quot; strategy?</a>
         </div>
-        <div class="item-takeaway">Comments</div>
+        <div class="item-takeaway">Ive recently seen some people doing consulting and saas at the same time, basicly just consulting to find pain points and build saas around that and am thinking of doing the same thing. Do you think its worth it or is it just a distraction…</div>
         <div class="item-meta">
-          <span>lobsters</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://web.archive.org/web/20250418124519/http://evilvm.ninja/" target="_blank" rel="noopener">EvilVM: Forth shellcode (2019)</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wo2ks9/i_tried_lots_of_app_to_enhance_photosvideos_but/" target="_blank" rel="noopener">I tried lots of App to enhance photos&amp;Videos but result is artificial</a>
         </div>
-        <div class="item-takeaway">Comments</div>
+        <div class="item-takeaway">I was tired searching for an app that enhances images or video without losing our original texture and quality so that it could look like improved but not artificial many of the apps gives result like added makeup ,over smoothes our skin ,r…</div>
         <div class="item-meta">
-          <span>lobsters</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://openai.com/index/introducing-gpt-6-sol-and-luna/" target="_blank" rel="noopener">OpenAI releases GPT-6 Sol and Luna with ~50% lower API prices</a>
-        </div>
-        <div class="item-takeaway">OpenAI shipped GPT-6 Sol and GPT-6 Luna, two tiers below GPT-6 Astra. Reported API pricing is $2/$10 per M tokens for Sol and $0.10/$0.50 for Luna, about half of GPT-5.6, and OpenAI told VentureBeat these are permanent rates; prompt caching also gets higher default hit rates with up to 90% off cached reads. If you run high-volume classification, extraction or triage calls (like nightly-librarian or CalenCall summaries), re-price your cheapest tier against Luna this week.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Anthropic releases Claude Opus 5.5 at lower price</a>
-        </div>
-        <div class="item-takeaway">Anthropic released Claude Opus 5.5, the first of its 5.5 family, priced at $4/$20 per M tokens with cache reads cut to $0.20/M, about 40% cheaper to run than Opus 5 and 30%+ faster output. Anthropic reports it beats Fable 5.1 on agentic coding, computer use and knowledge work; it is live on the API, AWS, Google Cloud and Azure, with Sonnet 5.5 and Haiku 5.5 promised soon. If your agent/MCP pipelines run on Opus 5, swapping the model string is a near-free cost and latency win worth testing now.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://waymo.com/blog/2026/09/transit-rewards/" target="_blank" rel="noopener">Waymo transit rewards</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wo2j9z/who_has_built_anything_useful_for_day_to_day_work/" target="_blank" rel="noopener">Who has built anything useful for day to day work with Jev?</a>
         </div>
-        <div class="item-takeaway">Waymo announced a transit rewards program. Consumer product news with no relevance to solo software builders.</div>
+        <div class="item-takeaway">Tired of seeing all the same deterministic demos with Jev around coding. If anyone has built anything useful which runs Jev at its core like a proper game, chrome extension, mac app, I'd love to see. Doesn't need to be a proper product, a m…</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wo1zj7/made_a_launch_video_completely_with_remotion/" target="_blank" rel="noopener">made a launch video completely with remotion + claude code - pls rate it I tried</a>
+        </div>
+        <div class="item-takeaway">title basically, the saas is about you receiving investment research about the stock market with no scammy calls and eventually you learn to do the research yourself (there is an interactive course!) so that you don't need to depend on our…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wo1oem/day_3_of_building_my_first_saas/" target="_blank" rel="noopener">Day 3 of building my first SaaS</a>
+        </div>
+        <div class="item-takeaway">9 visitors today. 71 page views. Visitors dropped quite a bit today, but that's part of the journey. - Added a testimonials section to the landing page - still working on the SEO side, mainly improving the content on different pages. - Stil…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://stratechery.com/2026/more-on-muse-amazon-and-walmart-muse-and-expedia-whither-google/" target="_blank" rel="noopener">More on Muse, Amazon, and Walmart; Muse and Expedia; Whither Google?</a>
+        </div>
+        <div class="item-takeaway">Meta needs Walmart to wait out Amazon; Expedia seeks to keep its middleware position; meanwhile, where is Google?</div>
+        <div class="item-meta">
+          <span>stratechery</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-m">M</span>
-          <a href="https://www.cryptocellar.org/bgac/the-mvueh-break.html" target="_blank" rel="noopener">GPT-6 Astra reportedly breaks long-unsolved Enigma message</a>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.1" target="_blank" rel="noopener">n8n@2.41.1</a>
         </div>
-        <div class="item-takeaway">A cryptography-history site reports that GPT-6 Astra helped break an Enigma message unsolved since 2005. It is an interesting capability data point, but a single anecdote rather than a workflow change. Keep an eye out for how the model was actually used.</div>
+        <div class="item-takeaway">## <a href="https://github.com/n8n-io/n8n/compare/n8n@2.41.0...n8n@2.41.1" target="_blank" rel="noopener">2.41.1</a> (2026-09-23) ### Bug Fixes * **core:** Restore pubsub subscriptions after Redis reconnect and detect half-open subscriber connections ([#39241](https://github.com/n8…</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">beta</a>
+        </div>
+        <div class="item-takeaway">## <a href="https://github.com/n8n-io/n8n/compare/n8n@2.41.0...n8n@2.41.1" target="_blank" rel="noopener">2.41.1</a> (2026-09-23) ### Bug Fixes * **core:** Restore pubsub subscriptions after Redis reconnect and detect half-open subscriber connections ([#39241](https://github.com/n8…</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.melashri.net/posts/scientific-linux-mistake/" target="_blank" rel="noopener">Abandoning Scientific Linux Was a Mistake</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-m">M</span>
-          <a href="https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/" target="_blank" rel="noopener">Hackers claim to have data on all FBI employees</a>
+          <a href="https://blogs.gnome.org/alatiera/2026/09/23/the-gnome-llm-policy-that-i-want/" target="_blank" rel="noopener">The GNOME LLM Policy That I Want</a>
         </div>
-        <div class="item-takeaway">404 Media reports a hacking group claiming to hold data on all FBI employees. The claim is attacker-sourced and not yet confirmed. No direct action for a solo developer; watch for confirmation or details on the entry vector.</div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://mashbean.net/en/blog/2026/0813-16xy2v/" target="_blank" rel="noopener">Measuring Taiwan’s Mobile Slowdown with OONI in Taipei</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.nobodywho.ai/posts/jev-in-25-lines/" target="_blank" rel="noopener">Jev in 25 Lines of Python</a>
+        </div>
+        <div class="item-takeaway">Rejected: thin, stale, promotional, speculative, or not materially actionable for a solo developer.</div>
         <div class="item-meta">
           <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.usenix.org/publications/loginonline/data-only-attacks-are-easier-you-think" target="_blank" rel="noopener">Data-only attacks are easier than you think (2024)</a>
+        </div>
+        <div class="item-takeaway">Rejected: thin, stale, promotional, speculative, or not materially actionable for a solo developer.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://status.openai.com//incidents/01M36RMC01ZFWQ861WYJKC4XE1" target="_blank" rel="noopener">Elevated Error Rates for ChatGPT across Plus and Pro plans.</a>
+        </div>
+        <div class="item-takeaway">Status: Resolved All impacted services have now fully recovered. Affected components Conversations (Operational)</div>
+        <div class="item-meta">
+          <span>openai-status</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://foxscript.org/" target="_blank" rel="noopener">FoxScript: Visual FoxPro revived on a Rust/wasm runtime (MIT)</a>
+          <a href="https://github.com/deepset-ai/haystack/releases/tag/v3.2.0-rc1" target="_blank" rel="noopener">v3.2.0-rc1</a>
         </div>
-        <div class="item-takeaway">A developer rebuilt the Visual FoxPro 9 language on a new Rust runtime compiled to wasm, checked against the real vfp9.exe, removing the 2 GB table limit, still loading old 32-bit .fll add-ins, and adding lambdas, JSON and an HTTP server. It was built for a paying customer who wanted to keep a 20-year-old business app alive; reports are unfinished and builds unsigned. Mostly interesting as a proof of the &quot;keep legacy business apps running&quot; market for solo builders.</div>
+        <div class="item-takeaway">## ⭐️ Highlights ### 🧠 SummarizationCompactor: Compact Agent Context Without Losing It The experimental <a href="https://docs.haystack.deepset.ai/docs/summarization-compactor" target="_blank" rel="noopener">`SummarizationCompactor`</a> is a new compaction strategy for [`Compaction…</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>gh-haystack</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://github.com/xCuri0/ReBarUEFI" target="_blank" rel="noopener">ReBarUEFI: Resizable BAR for almost any UEFI system</a>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.5" target="_blank" rel="noopener">langchain-openai==1.6.5</a>
         </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-takeaway">Changes since langchain-openai==1.6.4 release(openai): 1.6.5 (#40787) fix(anthropic): add Opus 5.5 and GPT-6 profile augmentations (#40785) feat(anthropic,openai): mid-conversation tool changes on `SystemMessage` (#40758)</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.4" target="_blank" rel="noopener">langchain-anthropic==1.7.4</a>
+        </div>
+        <div class="item-takeaway">Changes since langchain-anthropic==1.7.3 chore(anthropic): fix integration test cassette (#40790) release(anthropic): 1.7.4 (#40786) fix(anthropic): add Opus 5.5 and GPT-6 profile augmentations (#40785) feat(anthropic,openai): mid-conversat…</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/hsfzxjy/npunlock" target="_blank" rel="noopener">Show HN: Npunlock – Run custom C kernels for Intel NPUs</a>
+        </div>
+        <div class="item-takeaway">npunlock documents experimental custom C kernels on Intel NPU3720 with NumPy-checked examples; narrow hardware/toolchain scope.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.kqed.org/science/2002033/heres-what-california-is-learning-from-solar-panels-built-over-irrigation-canals" target="_blank" rel="noopener">What California is learning from solar panels built over irrigation canals</a>
+          <a href="https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/" target="_blank" rel="noopener">Google Beam expands with new regions, partners, and customers</a>
         </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-takeaway">We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>google-ai-blog</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/" target="_blank" rel="noopener">SAML: A fractal of bad design</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wok0cg/jev_broke_down_724_live_ads_from_37_brands_in_40/" target="_blank" rel="noopener">JEV broke down 724 live ads from 37 brands in 40 seconds for 9¢ of tokens: here's what it means for SaaS</a>
         </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-takeaway">Came across a video on X where TypeSafe’s new model (Jev) broke down 724 live competitor ads across 37 brands in 40 seconds for 9 cents. If you haven’t followed the buzz around Jev this week, people are treating it like a major shift becaus…</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://lemire.me/blog/2026/09/18/how-did-amd-ryzen-get-50-faster-in-two-years/" target="_blank" rel="noopener">How did AMD Ryzen get 50% faster in two years?</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wossa4/need_ai_native_complexhigh_in_demand_project_ideas/" target="_blank" rel="noopener">Need AI Native Complex/High in Demand Project Ideas</a>
         </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-takeaway">Hey, I am looking for ideas which are very complex but needed by users or ideas which are high in demands. &amp;#32; submitted by &amp;#32; /u/HopefulPriority2717 [link] &amp;#32; [comments]</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp" target="_blank" rel="noopener">WordPress: Unauthenticated path traversal leading to conditional RCE</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wougwq/scaling_from_23k_mrr_to_100k_mrr/" target="_blank" rel="noopener">Scaling from 23k MRR to 100k MRR?</a>
         </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-takeaway">Looking for input of the experienced saas founders. Background: It is my first saas. We launched 6 months ago and are currently at 23k € MRR, two people (only me and co founder). It is a b2b SaaS. I hope to get some guideance and input. I h…</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://artificialanalysis.ai/models/claude-opus-5-5" target="_blank" rel="noopener">Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wosn4x/my_saas_crossed_900_in_revenue_in_its_first_20/" target="_blank" rel="noopener">My SaaS crossed $900 in revenue in its first 20 days after adding a paywall.</a>
         </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-takeaway">My SaaS crossed $900 in revenue in its first 20 days behind a paywall. I am literally shaking. Here are the exact numbers: Revenue: $900+ Paid customers: 30+ Ad spend: $0 Traffic: 100% organic Audience: 200K+ followers Monthly reach: 5M+ vi…</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.bloomberg.com/graphics/2026-iran-school-attack/" target="_blank" rel="noopener">Pentagon says overreliance on AI contributed to missile strike on Iran school</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wov2hq/a_product_for_ai_critics_how_do_you_reach_them/" target="_blank" rel="noopener">A product for AI critics : how do you reach them?</a>
         </div>
-        <div class="item-takeaway">https:&amp;#x2F;&amp;#x2F;archive.ph&amp;#x2F;0V37g</div>
+        <div class="item-takeaway">Have you ever run into this problem? You’re building something with AI that you genuinely find useful, and you’re convinced there are people who would benefit from it too. But then you realize that a big part of your potential audience is v…</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://unreallabs.ai/blog/unreal-agent/" target="_blank" rel="noopener">Unreal Agent</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wouys6/built_my_own_local_lead_scraper_and_desktop_crm/" target="_blank" rel="noopener">Built my own local lead scraper and desktop CRM (Bitz Tracker) because existing tools were too bloated</a>
         </div>
-        <div class="item-takeaway">https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;unreallabsai&amp;#x2F;unreal-agent</div>
+        <div class="item-takeaway">Hey everyone, Like a lot of devs doing client work, I got tired of switching between Google Maps, random scrapers, messy Excel sheets, and manual messaging just to pitch local businesses. I wanted something lightweight that lived entirely o…</div>
         <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.interconnects.ai/p/the-current-balance-of-power-in-open" target="_blank" rel="noopener">The current balance of power in open models</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wos0ox/recruiteasy_alternatives_explore_similar_apps/" target="_blank" rel="noopener">RecruitEasy Alternatives - Explore Similar Apps</a>
         </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-takeaway">&amp;#32; submitted by &amp;#32; /u/Remarkable_Lynx_1677 [link] &amp;#32; [comments]</div>
         <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.bloomberg.com/news/articles/2026-09-18/to-quit-vaping-some-are-starting-to-smoke" target="_blank" rel="noopener">People hooked on vapes try a new way to quit: cigarettes</a>
-        </div>
-        <div class="item-takeaway">https:&amp;#x2F;&amp;#x2F;archive.ph&amp;#x2F;FvOhx</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/sysadmin/comments/1wjdpgx/psa_grammarly_will_send_unhinged_messages_to_all/" target="_blank" rel="noopener">Grammarly will send unhinged messages to all your users if you try to cancel</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://obscura.com/#faq-technical" target="_blank" rel="noopener">Obscura: VPN that can't log your activity</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://benchmarkheaven.com/jev-models" target="_blank" rel="noopener">Show HN: JevBench, a reproducible benchmark for typed decision models</a>
-        </div>
-        <div class="item-takeaway">Hi HN! I built JevBench because Jev kicks ass, and the world deserves to know how the serious open source and fake lookalike projects really…</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/" target="_blank" rel="noopener">OpenAI is well positioned to fast-follow Jev</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.evalapply.org/posts/side-step-secretary-problem-hiring/index.html" target="_blank" rel="noopener">Side-stepping the Secretary Problem, unwittingly</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://htmx.org/essays/markdown-in-src/" target="_blank" rel="noopener">Markdown in /src</a>
-        </div>
-        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
+          <span>reddit-saas</span>
         </div>
       </div>
     </div>
@@ -534,76 +524,70 @@
       <summary>Original markdown</summary>
       <pre class="raw-report"># Nightly Librarian — Newsletter draft
 
-Run: bde438e4-9d42-4c2e-b223-894e4a632c3e
-Started: 2026-09-24T06:03:05.856Z
-Completed: 2026-09-24T06:04:20.889Z
+Run: b20b7d92-ba58-49df-af60-839564e3d2c8
+Started: 2026-09-24T11:01:29.132Z
+Completed: 2026-09-24T11:04:04.945Z
 
 ## Worth attention
 
-- **OpenAI releases GPT-6 Sol and Luna with ~50% lower API prices**
-  https://openai.com/index/introducing-gpt-6-sol-and-luna/
-  OpenAI shipped GPT-6 Sol and GPT-6 Luna, two tiers below GPT-6 Astra. Reported API pricing is $2/$10 per M tokens for Sol and $0.10/$0.50 for Luna, about half of GPT-5.6, and OpenAI told VentureBeat these are permanent rates; prompt caching also gets higher default hit rates with up to 90% off cached reads. If you run high-volume classification, extraction or triage calls (like nightly-librarian or CalenCall summaries), re-price your cheapest tier against Luna this week.
-- **Anthropic releases Claude Opus 5.5 at lower price**
-  https://www.anthropic.com/claude-opus-5-5
-  Anthropic released Claude Opus 5.5, the first of its 5.5 family, priced at $4/$20 per M tokens with cache reads cut to $0.20/M, about 40% cheaper to run than Opus 5 and 30%+ faster output. Anthropic reports it beats Fable 5.1 on agentic coding, computer use and knowledge work; it is live on the API, AWS, Google Cloud and Azure, with Sonnet 5.5 and Haiku 5.5 promised soon. If your agent/MCP pipelines run on Opus 5, swapping the model string is a near-free cost and latency win worth testing now.
-- **tokens too cheap to meter**
-  https://jyn.dev/tokens-too-cheap-to-meter/
-  An essay arguing the cost of getting a task done with machine intelligence is falling by orders of magnitude per year, and working through what that does to supply and demand. It lands the same week as two big API price cuts, which makes it a useful framing piece. Worth a read if you are deciding whether to design products around token cost as a constraint at all.
-- **FoxScript: Visual FoxPro revived on a Rust/wasm runtime (MIT)**
-  https://foxscript.org/
-  A developer rebuilt the Visual FoxPro 9 language on a new Rust runtime compiled to wasm, checked against the real vfp9.exe, removing the 2 GB table limit, still loading old 32-bit .fll add-ins, and adding lambdas, JSON and an HTTP server. It was built for a paying customer who wanted to keep a 20-year-old business app alive; reports are unfinished and builds unsigned. Mostly interesting as a proof of the &quot;keep legacy business apps running&quot; market for solo builders.
-- **Fearless SIMD v1.0 released (Rust)**
-  https://linebender.org/blog/fearless-simd-1-0/
-  Linebender shipped v1.0 of Fearless SIMD, a Rust library for portable, safe SIMD code. A 1.0 signals API stability for Rust developers who need vectorized hot paths. Only relevant if you write performance-sensitive Rust.
-- **GPT-6 Astra reportedly breaks long-unsolved Enigma message**
-  https://www.cryptocellar.org/bgac/the-mvueh-break.html
-  A cryptography-history site reports that GPT-6 Astra helped break an Enigma message unsolved since 2005. It is an interesting capability data point, but a single anecdote rather than a workflow change. Keep an eye out for how the model was actually used.
-- **Hackers claim to have data on all FBI employees**
-  https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/
-  404 Media reports a hacking group claiming to hold data on all FBI employees. The claim is attacker-sourced and not yet confirmed. No direct action for a solo developer; watch for confirmation or details on the entry vector.
+- **v3.2.0-rc1**
+  https://github.com/deepset-ai/haystack/releases/tag/v3.2.0-rc1
+  ## ⭐️ Highlights ### 🧠 SummarizationCompactor: Compact Agent Context Without Losing It The experimental [`SummarizationCompactor`](https://docs.haystack.deepset.ai/docs/summarization-compactor) is a new compaction strategy for [`Compaction…
+- **langchain-anthropic==1.7.4**
+  https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.4
+  Changes since langchain-anthropic==1.7.3 chore(anthropic): fix integration test cassette (#40790) release(anthropic): 1.7.4 (#40786) fix(anthropic): add Opus 5.5 and GPT-6 profile augmentations (#40785) feat(anthropic,openai): mid-conversat…
+- **Show HN: Npunlock – Run custom C kernels for Intel NPUs**
+  https://github.com/hsfzxjy/npunlock
+  (No summary available.)
+- **n8n@2.41.1**
+  https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.1
+  ## [2.41.1](https://github.com/n8n-io/n8n/compare/n8n@2.41.0...n8n@2.41.1) (2026-09-23) ### Bug Fixes * **core:** Restore pubsub subscriptions after Redis reconnect and detect half-open subscriber connections ([#39241](https://github.com/n8…
+- **The GNOME LLM Policy That I Want**
+  https://blogs.gnome.org/alatiera/2026/09/23/the-gnome-llm-policy-that-i-want/
+  Comments
 
 ## Full digest
 
-- [R] [lobsters] Plain-text files are at risk — https://paste.sr.ht/~awal/b76caf6f213a96a634454fa7292c035a10035b49 — A Lobsters-linked paste arguing that plain-text files are at risk. Content could not be read and there is no identifiable concrete change behind it.
-- [R] [lobsters] No Sloptober — https://no-sloptober.com/ — A campaign site urging people to avoid AI-generated &quot;slop&quot; for October. Advocacy, not news.
-- [R] [lobsters] That About Wraps It Up for Stock Mac UI — https://inessential.com/2026/09/22/that-about-wraps-it-up-for.html — An opinion post on the state of stock macOS UI conventions. Mostly commentary for Mac app developers.
-- [P] [lobsters] Fearless SIMD v1.0 released (Rust) — https://linebender.org/blog/fearless-simd-1-0/ — Linebender shipped v1.0 of Fearless SIMD, a Rust library for portable, safe SIMD code. A 1.0 signals API stability for Rust developers who need vectorized hot paths. Only relevant if you write performance-sensitive Rust.
-- [P] [lobsters] tokens too cheap to meter — https://jyn.dev/tokens-too-cheap-to-meter/ — An essay arguing the cost of getting a task done with machine intelligence is falling by orders of magnitude per year, and working through what that does to supply and demand. It lands the same week as two big API price cuts, which makes it a useful framing piece. Worth a read if you are deciding whether to design products around token cost as a constraint at all.
-- [R] [lobsters] Jev-powered autocorrection — https://levmiseri.com/nospace — A small web demo of text autocorrection. A toy, not a tool.
-- [R] [lobsters] How to talk about &quot;AI&quot; without adding to the anthropomorphization — https://buttondown.com/maiht3k/archive/how-to-talk-about-ai-without-adding-to-the/ — Very good to use for documentation of systems and tasks Comments
-- [R] [lobsters] GitHub Actions leaking secrets when Miri output is cached — https://blog.rust-lang.org/2026/09/21/github-actions-leaking-secrets-when-miri-output-is-cached/ — Comments
-- [R] [lobsters] Redis is not a map you talk to over TCP — https://blog.verygoodsoftwarenotvirus.dev/posts/2026/09/22/redis-is-not-a-map-you-talk-to-over-tcp/ — Comments
-- [R] [lobsters] Re: Suggestions on implementing an efficient instruction set simulator in LuaJIT2 (2011) — https://web.archive.org/web/20180603053407/http://article.gmane.org/gmane.comp.lang.lua.general/75426 — Comments
-- [R] [lobsters] Raspberry Pi locks down Pi 5 RAM upgrades in firmware — https://www.jeffgeerling.com/blog/2026/raspberry-pi-ram-lockdown/ — Comments
-- [R] [lobsters] Sandboxing with minimal effort — https://yorickpeterse.com/articles/sandboxing-with-minimal-effort/ — Comments
-- [R] [lobsters] Parsing JSON Objects without intermediate ASTs — https://arthi-chaud.github.io/posts/json-ir/ — Comments
-- [R] [lobsters] Serious editors are a commitment (at least for me) — https://utcc.utoronto.ca/~cks/space/blog/tech/EditorsAreACommitment — Comments
-- [R] [lobsters] Why do common Rust packages depend on C code? (2023) — https://langdev.stackexchange.com/questions/3233/why-do-common-rust-packages-depend-on-c-code/3237#3237 — Comments
-- [R] [lobsters] Did OpenAI solve the wrong Navier-Stokes problem? — https://www.scientificamerican.com/article/did-openai-solve-the-wrong-navier-stokes-problem/ — Comments
-- [R] [lobsters] AI Has No Wisdom and Neither Will You — https://alexn.org/blog/2026/09/22/ai-has-no-wisdom-and-neither-will-you/ — Comments
-- [R] [lobsters] EvilVM: Forth shellcode (2019) — https://web.archive.org/web/20250418124519/http://evilvm.ninja/ — Comments
-- [P] [hn-top] OpenAI releases GPT-6 Sol and Luna with ~50% lower API prices — https://openai.com/index/introducing-gpt-6-sol-and-luna/ — OpenAI shipped GPT-6 Sol and GPT-6 Luna, two tiers below GPT-6 Astra. Reported API pricing is $2/$10 per M tokens for Sol and $0.10/$0.50 for Luna, about half of GPT-5.6, and OpenAI told VentureBeat these are permanent rates; prompt caching also gets higher default hit rates with up to 90% off cached reads. If you run high-volume classification, extraction or triage calls (like nightly-librarian or CalenCall summaries), re-price your cheapest tier against Luna this week.
-- [P] [hn-top] Anthropic releases Claude Opus 5.5 at lower price — https://www.anthropic.com/claude-opus-5-5 — Anthropic released Claude Opus 5.5, the first of its 5.5 family, priced at $4/$20 per M tokens with cache reads cut to $0.20/M, about 40% cheaper to run than Opus 5 and 30%+ faster output. Anthropic reports it beats Fable 5.1 on agentic coding, computer use and knowledge work; it is live on the API, AWS, Google Cloud and Azure, with Sonnet 5.5 and Haiku 5.5 promised soon. If your agent/MCP pipelines run on Opus 5, swapping the model string is a near-free cost and latency win worth testing now.
-- [R] [hn-top] Waymo transit rewards — https://waymo.com/blog/2026/09/transit-rewards/ — Waymo announced a transit rewards program. Consumer product news with no relevance to solo software builders.
-- [M] [hn-top] GPT-6 Astra reportedly breaks long-unsolved Enigma message — https://www.cryptocellar.org/bgac/the-mvueh-break.html — A cryptography-history site reports that GPT-6 Astra helped break an Enigma message unsolved since 2005. It is an interesting capability data point, but a single anecdote rather than a workflow change. Keep an eye out for how the model was actually used.
-- [M] [hn-top] Hackers claim to have data on all FBI employees — https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/ — 404 Media reports a hacking group claiming to hold data on all FBI employees. The claim is attacker-sourced and not yet confirmed. No direct action for a solo developer; watch for confirmation or details on the entry vector.
-- [P] [hn-top] FoxScript: Visual FoxPro revived on a Rust/wasm runtime (MIT) — https://foxscript.org/ — A developer rebuilt the Visual FoxPro 9 language on a new Rust runtime compiled to wasm, checked against the real vfp9.exe, removing the 2 GB table limit, still loading old 32-bit .fll add-ins, and adding lambdas, JSON and an HTTP server. It was built for a paying customer who wanted to keep a 20-year-old business app alive; reports are unfinished and builds unsigned. Mostly interesting as a proof of the &quot;keep legacy business apps running&quot; market for solo builders.
-- [R] [hn-top] ReBarUEFI: Resizable BAR for almost any UEFI system — https://github.com/xCuri0/ReBarUEFI — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] What California is learning from solar panels built over irrigation canals — https://www.kqed.org/science/2002033/heres-what-california-is-learning-from-solar-panels-built-over-irrigation-canals — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] SAML: A fractal of bad design — https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] How did AMD Ryzen get 50% faster in two years? — https://lemire.me/blog/2026/09/18/how-did-amd-ryzen-get-50-faster-in-two-years/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] WordPress: Unauthenticated path traversal leading to conditional RCE — https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max) — https://artificialanalysis.ai/models/claude-opus-5-5 — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Pentagon says overreliance on AI contributed to missile strike on Iran school — https://www.bloomberg.com/graphics/2026-iran-school-attack/ — https:&amp;#x2F;&amp;#x2F;archive.ph&amp;#x2F;0V37g
-- [R] [hn-top] Unreal Agent — https://unreallabs.ai/blog/unreal-agent/ — https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;unreallabsai&amp;#x2F;unreal-agent
-- [R] [hn-top] The current balance of power in open models — https://www.interconnects.ai/p/the-current-balance-of-power-in-open — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] People hooked on vapes try a new way to quit: cigarettes — https://www.bloomberg.com/news/articles/2026-09-18/to-quit-vaping-some-are-starting-to-smoke — https:&amp;#x2F;&amp;#x2F;archive.ph&amp;#x2F;FvOhx
-- [R] [hn-top] Grammarly will send unhinged messages to all your users if you try to cancel — https://www.reddit.com/r/sysadmin/comments/1wjdpgx/psa_grammarly_will_send_unhinged_messages_to_all/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Obscura: VPN that can't log your activity — https://obscura.com/#faq-technical — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Show HN: JevBench, a reproducible benchmark for typed decision models — https://benchmarkheaven.com/jev-models — Hi HN! I built JevBench because Jev kicks ass, and the world deserves to know how the serious open source and fake lookalike projects really…
-- [R] [hn-top] OpenAI is well positioned to fast-follow Jev — https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/ — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Side-stepping the Secretary Problem, unwittingly — https://www.evalapply.org/posts/side-step-secretary-problem-hiring/index.html — Scheduled agent omitted this claimed item from the completion payload.
-- [R] [hn-top] Markdown in /src — https://htmx.org/essays/markdown-in-src/ — Scheduled agent omitted this claimed item from the completion payload.</pre>
+- [R] [gh-composio] versioning-example@0.1.4 — https://github.com/ComposioHQ/composio/releases/tag/versioning-example%400.1.4 — ### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0
+- [R] [gh-composio] vercel-example@0.1.13 — https://github.com/ComposioHQ/composio/releases/tag/vercel-example%400.1.13 — ### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0 - @composio/vercel@0.12.1
+- [R] [gh-composio] typesafe-example@0.0.2 — https://github.com/ComposioHQ/composio/releases/tag/typesafe-example%400.0.2 — ### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0 - @composio/openai@0.12.3 - @comp…
+- [R] [gh-composio] triggers-example@0.1.4 — https://github.com/ComposioHQ/composio/releases/tag/triggers-example%400.1.4 — ### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0
+- [R] [gh-composio] tools-example@0.1.4 — https://github.com/ComposioHQ/composio/releases/tag/tools-example%400.1.4 — ### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0 - @composio/vercel@0.12.1
+- [R] [gh-composio] toolkits-example@0.1.13 — https://github.com/ComposioHQ/composio/releases/tag/toolkits-example%400.1.13 — ### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0 - @composio/vercel@0.12.1
+- [R] [gh-composio] tool-router-example@1.0.14 — https://github.com/ComposioHQ/composio/releases/tag/tool-router-example%401.0.14 — ### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0 - @composio/claude-agent-sdk@0.12…
+- [R] [gh-composio] session-management-example@0.1.4 — https://github.com/ComposioHQ/composio/releases/tag/session-management-example%400.1.4 — ### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0
+- [R] [gh-composio] openai-example@0.1.13 — https://github.com/ComposioHQ/composio/releases/tag/openai-example%400.1.13 — ### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0 - @composio/openai@0.12.3 - @comp…
+- [R] [gh-composio] modifiers-example@0.1.13 — https://github.com/ComposioHQ/composio/releases/tag/modifiers-example%400.1.13 — ### Patch Changes - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - Updated dependencies [6c56b73] - Updated dependencies [a4a40a1] - Updated dependencies [6c56b73] - @composio/core@0.20.0 - @composio/vercel@0.12.1
+- [R] [reddit-saas] Marketing vs Product — https://www.reddit.com/r/SaaS/comments/1wo09wp/marketing_vs_product/ — I've seen bad products with good marketing works out but not the vice versa. Which side are you picking up as a developer with no marketing skills? &amp;#32; submitted by &amp;#32; /u/billl_buttlicker [link] &amp;#32; [comments]
+- [R] [reddit-saas] D1 retention is 48%, but I only get 4–22 new users a week. What would you fix first? — https://www.reddit.com/r/SaaS/comments/1wo1uc8/d1_retention_is_48_but_i_only_get_422_new_users_a/ — Solo dev, small consumer app. Stack is React + Vite with Capacitor for iOS/Android, Supabase and Vercel. The stack was the easy part. The numbers that bug me: D1 retention around 48% 4 to 22 new users per week 95% of iOS store impressions c…
+- [R] [reddit-saas] Confusion 🤔 How do you keep everyone in sync when something changes mid-project? — https://www.reddit.com/r/SaaS/comments/1wo0mls/confusion_how_do_you_keep_everyone_in_sync_when/ — Mid-project, something might change, perhaps engineering discovers a limitation or research invalidates an assumption. How do you ensure design, Jira, documentation and other systems aren’t still operating under the old context? For me, reg…
+- [R] [reddit-saas] Open-source or reliable Production grade chatbot UI — https://www.reddit.com/r/SaaS/comments/1wo0avs/opensource_or_reliable_production_grade_chatbot_ui/ — Hi everyone! I am looking for some initial chat interface (UI) which can be used as initial start point and can be modified easily (specifically by vibe coding). I must need it to be production deployment ready. Anyone has any insights or s…
+- [R] [reddit-saas] Whats your opinion on the &quot;consulting + saas&quot; strategy? — https://www.reddit.com/r/SaaS/comments/1wnzssc/whats_your_opinion_on_the_consulting_saas_strategy/ — Ive recently seen some people doing consulting and saas at the same time, basicly just consulting to find pain points and build saas around that and am thinking of doing the same thing. Do you think its worth it or is it just a distraction…
+- [R] [reddit-saas] I tried lots of App to enhance photos&amp;Videos but result is artificial — https://www.reddit.com/r/SaaS/comments/1wo2ks9/i_tried_lots_of_app_to_enhance_photosvideos_but/ — I was tired searching for an app that enhances images or video without losing our original texture and quality so that it could look like improved but not artificial many of the apps gives result like added makeup ,over smoothes our skin ,r…
+- [R] [reddit-saas] Who has built anything useful for day to day work with Jev? — https://www.reddit.com/r/SaaS/comments/1wo2j9z/who_has_built_anything_useful_for_day_to_day_work/ — Tired of seeing all the same deterministic demos with Jev around coding. If anyone has built anything useful which runs Jev at its core like a proper game, chrome extension, mac app, I'd love to see. Doesn't need to be a proper product, a m…
+- [R] [reddit-saas] made a launch video completely with remotion + claude code - pls rate it I tried — https://www.reddit.com/r/SaaS/comments/1wo1zj7/made_a_launch_video_completely_with_remotion/ — title basically, the saas is about you receiving investment research about the stock market with no scammy calls and eventually you learn to do the research yourself (there is an interactive course!) so that you don't need to depend on our…
+- [R] [reddit-saas] Day 3 of building my first SaaS — https://www.reddit.com/r/SaaS/comments/1wo1oem/day_3_of_building_my_first_saas/ — 9 visitors today. 71 page views. Visitors dropped quite a bit today, but that's part of the journey. - Added a testimonials section to the landing page - still working on the SEO side, mainly improving the content on different pages. - Stil…
+- [R] [stratechery] More on Muse, Amazon, and Walmart; Muse and Expedia; Whither Google? — https://stratechery.com/2026/more-on-muse-amazon-and-walmart-muse-and-expedia-whither-google/ — Meta needs Walmart to wait out Amazon; Expedia seeks to keep its middleware position; meanwhile, where is Google?
+- [M] [gh-n8n] n8n@2.41.1 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.1 — ## [2.41.1](https://github.com/n8n-io/n8n/compare/n8n@2.41.0...n8n@2.41.1) (2026-09-23) ### Bug Fixes * **core:** Restore pubsub subscriptions after Redis reconnect and detect half-open subscriber connections ([#39241](https://github.com/n8…
+- [R] [gh-n8n] beta — https://github.com/n8n-io/n8n/releases/tag/beta — ## [2.41.1](https://github.com/n8n-io/n8n/compare/n8n@2.41.0...n8n@2.41.1) (2026-09-23) ### Bug Fixes * **core:** Restore pubsub subscriptions after Redis reconnect and detect half-open subscriber connections ([#39241](https://github.com/n8…
+- [R] [lobsters] Abandoning Scientific Linux Was a Mistake — https://blog.melashri.net/posts/scientific-linux-mistake/ — Comments
+- [M] [lobsters] The GNOME LLM Policy That I Want — https://blogs.gnome.org/alatiera/2026/09/23/the-gnome-llm-policy-that-i-want/ — Comments
+- [R] [lobsters] Measuring Taiwan’s Mobile Slowdown with OONI in Taipei — https://mashbean.net/en/blog/2026/0813-16xy2v/ — Comments
+- [R] [hn-top] Jev in 25 Lines of Python — https://www.nobodywho.ai/posts/jev-in-25-lines/ — Rejected: thin, stale, promotional, speculative, or not materially actionable for a solo developer.
+- [R] [hn-top] Data-only attacks are easier than you think (2024) — https://www.usenix.org/publications/loginonline/data-only-attacks-are-easier-you-think — Rejected: thin, stale, promotional, speculative, or not materially actionable for a solo developer.
+- [R] [openai-status] Elevated Error Rates for ChatGPT across Plus and Pro plans. — https://status.openai.com//incidents/01M36RMC01ZFWQ861WYJKC4XE1 — Status: Resolved All impacted services have now fully recovered. Affected components Conversations (Operational)
+- [P] [gh-haystack] v3.2.0-rc1 — https://github.com/deepset-ai/haystack/releases/tag/v3.2.0-rc1 — ## ⭐️ Highlights ### 🧠 SummarizationCompactor: Compact Agent Context Without Losing It The experimental [`SummarizationCompactor`](https://docs.haystack.deepset.ai/docs/summarization-compactor) is a new compaction strategy for [`Compaction…
+- [R] [gh-langchain] langchain-openai==1.6.5 — https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.5 — Changes since langchain-openai==1.6.4 release(openai): 1.6.5 (#40787) fix(anthropic): add Opus 5.5 and GPT-6 profile augmentations (#40785) feat(anthropic,openai): mid-conversation tool changes on `SystemMessage` (#40758)
+- [P] [gh-langchain] langchain-anthropic==1.7.4 — https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.4 — Changes since langchain-anthropic==1.7.3 chore(anthropic): fix integration test cassette (#40790) release(anthropic): 1.7.4 (#40786) fix(anthropic): add Opus 5.5 and GPT-6 profile augmentations (#40785) feat(anthropic,openai): mid-conversat…
+- [P] [hn-show] Show HN: Npunlock – Run custom C kernels for Intel NPUs — https://github.com/hsfzxjy/npunlock — npunlock documents experimental custom C kernels on Intel NPU3720 with NumPy-checked examples; narrow hardware/toolchain scope.
+- [R] [google-ai-blog] Google Beam expands with new regions, partners, and customers — https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/ — We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.
+- [R] [reddit-saas] JEV broke down 724 live ads from 37 brands in 40 seconds for 9¢ of tokens: here's what it means for SaaS — https://www.reddit.com/r/SaaS/comments/1wok0cg/jev_broke_down_724_live_ads_from_37_brands_in_40/ — Came across a video on X where TypeSafe’s new model (Jev) broke down 724 live competitor ads across 37 brands in 40 seconds for 9 cents. If you haven’t followed the buzz around Jev this week, people are treating it like a major shift becaus…
+- [R] [reddit-saas] Need AI Native Complex/High in Demand Project Ideas — https://www.reddit.com/r/SaaS/comments/1wossa4/need_ai_native_complexhigh_in_demand_project_ideas/ — Hey, I am looking for ideas which are very complex but needed by users or ideas which are high in demands. &amp;#32; submitted by &amp;#32; /u/HopefulPriority2717 [link] &amp;#32; [comments]
+- [R] [reddit-saas] Scaling from 23k MRR to 100k MRR? — https://www.reddit.com/r/SaaS/comments/1wougwq/scaling_from_23k_mrr_to_100k_mrr/ — Looking for input of the experienced saas founders. Background: It is my first saas. We launched 6 months ago and are currently at 23k € MRR, two people (only me and co founder). It is a b2b SaaS. I hope to get some guideance and input. I h…
+- [R] [reddit-saas] My SaaS crossed $900 in revenue in its first 20 days after adding a paywall. — https://www.reddit.com/r/SaaS/comments/1wosn4x/my_saas_crossed_900_in_revenue_in_its_first_20/ — My SaaS crossed $900 in revenue in its first 20 days behind a paywall. I am literally shaking. Here are the exact numbers: Revenue: $900+ Paid customers: 30+ Ad spend: $0 Traffic: 100% organic Audience: 200K+ followers Monthly reach: 5M+ vi…
+- [R] [reddit-saas] A product for AI critics : how do you reach them? — https://www.reddit.com/r/SaaS/comments/1wov2hq/a_product_for_ai_critics_how_do_you_reach_them/ — Have you ever run into this problem? You’re building something with AI that you genuinely find useful, and you’re convinced there are people who would benefit from it too. But then you realize that a big part of your potential audience is v…
+- [R] [reddit-saas] Built my own local lead scraper and desktop CRM (Bitz Tracker) because existing tools were too bloated — https://www.reddit.com/r/SaaS/comments/1wouys6/built_my_own_local_lead_scraper_and_desktop_crm/ — Hey everyone, Like a lot of devs doing client work, I got tired of switching between Google Maps, random scrapers, messy Excel sheets, and manual messaging just to pitch local businesses. I wanted something lightweight that lived entirely o…
+- [R] [reddit-saas] RecruitEasy Alternatives - Explore Similar Apps — https://www.reddit.com/r/SaaS/comments/1wos0ox/recruiteasy_alternatives_explore_similar_apps/ — &amp;#32; submitted by &amp;#32; /u/Remarkable_Lynx_1677 [link] &amp;#32; [comments]</pre>
     </details>
   </main>
   <footer>

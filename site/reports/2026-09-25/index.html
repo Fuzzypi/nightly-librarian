@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>September 25, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="9 stories cleared the bar, led by (untitled), (untitled), and (untitled).">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-09-25/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="September 25, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="9 stories cleared the bar, led by (untitled), (untitled), and (untitled).">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-09-25/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="September 25, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="9 stories cleared the bar, led by (untitled), (untitled), and (untitled).">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>September 25, 2026 · Report log</span>
+
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>September 25, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>9 stories cleared the bar, led by (untitled), (untitled), and (untitled).</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>9 worth-attention items</span><span>80 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">A solo-ish team building a text-to-3D-world tool found their LLM was slow and expensive when asked to write all 3D geometry code directly (~15 min and ~4.5M tokens per building). Switching the LLM to only make high-level decisions (building type, height, style, road placement) and handing the actual geometry generation to hand-written deterministic generator functions cut time to ~7 minutes and tokens to ~1.6M (~64% reduction) and made output reproducible. The tradeoff is upfront engineering effort to build and maintain those generators, and it only pays off when the domain has enough structure to encode as functions.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Simon Willison built and used Google's newly-released Gemini 3.8 Flash and Flash-Lite TTS models via a bring-your-own-key playground. The models offer 2,000+ built-in voices, custom voice cloning from a 30-second sample, multi-speaker conversation scripting with per-line delivery-style control, and cost about 2.74 cents for 1m18s of audio (Flash tier), generated in ~20 seconds. This is the most detailed, hands-on coverage of tonight's Gemini 3.8 TTS launch (also referenced thinly by a Vercel AI Gateway changelog and a bare Google blog link, both rejected as duplicates of this story).</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Vercel removed the previous cap on Blob store counts (100 on Hobby, 500 on Pro, 1000 on Enterprise) — you can now create as many stores as you want on any plan. Store creation is now billed like other Blob operations ($5/million on Pro; counts toward the 2,000 free ops/month on Hobby), which unlocks patterns like one store per tenant or per preview branch without hitting a hard ceiling.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Cloudflare shipped proper support for the HTTP Vary header in its CDN caching layer, a notoriously fiddly part of HTTP content negotiation. This directly affects cache correctness/behavior for anyone serving content through Cloudflare, including sites hosted on Cloudflare Pages (such as this pipeline's own public site).</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Vercel Connect added a TanStack AI transport integration so agents built with TanStack AI can call OAuth-protected MCP servers without you storing or rotating credentials; a consent-challenge hook lets you redirect users to Connect's consent flow instead of leaking the error to the model.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Builder describes replacing ad hoc prompts to a coding agent with a deterministic prompt-generation engine that computes blast-radius (affected files, dependents, risk level), injects risk-based constraints (e.g. 'don't alter existing columns without a migration'), and adds verification steps ('run cxgrd check before finishing'). Framed as trading some of the LLM's interpretive flexibility for reliability, reproducibility, and speed by having the tool supply facts only it knows rather than prose.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Trail of Bits (a credible application-security research firm) published a piece dissecting why SAML is a persistent source of security footguns in SSO implementations. Article body did not fetch beyond the title/source, but Trail of Bits' track record on protocol-security writeups makes this a credible pointer for anyone evaluating or implementing SAML-based SSO.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">APNIC blog reports a BGP hijack incident targeting a hosting/software vendor's IP space. Article body did not fetch beyond the title/source, but BGP hijacks are a real, recurring internet-infrastructure risk that can affect anyone running servers or SaaS on rented infrastructure (this pipeline itself runs on a VPS).</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">(untitled)</div>
+        <div class="item-takeaway">Radicle (a decentralized code-collaboration/git tool) publicly disclosed a vulnerability in its network protocol. No article body fetched beyond the title, but a vendor's own vulnerability disclosure is inherently credible evidence of a real security issue; relevant primarily to anyone running Radicle nodes.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/stable" target="_blank" rel="noopener">n8n 2.40.6 (stable tag)</a>
+        </div>
+        <div class="item-takeaway">GitHub release tag for n8n 2.40.6 containing only bug fixes (OpenTelemetry restart handling, UTC midnight report retries) and one internal licensing feature.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.6" target="_blank" rel="noopener">n8n@2.40.6</a>
+        </div>
+        <div class="item-takeaway">Duplicate GitHub release posting of the same n8n 2.40.6 patch notes (OpenTelemetry and report-retry bug fixes) under a different tag name.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.2" target="_blank" rel="noopener">n8n@2.41.2</a>
+        </div>
+        <div class="item-takeaway">GitHub release for n8n 2.41.2 with bug fixes (OpenTelemetry, assistant test-run evidence recording, UTC boundary retries) and an internal license-authentication feature.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">n8n beta (2.41.2 dup)</a>
+        </div>
+        <div class="item-takeaway">Duplicate GitHub release posting of the same n8n 2.41.2 patch notes under the 'beta' tag.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.42" target="_blank" rel="noopener">Next.js v16.4.0-canary.42</a>
+        </div>
+        <div class="item-takeaway">Next.js canary build containing only CI/CD pipeline changes (preview tarball upload retries) and an internal 'next analyze' promotion note.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.41" target="_blank" rel="noopener">Next.js v16.4.0-canary.41</a>
+        </div>
+        <div class="item-takeaway">Next.js canary build with internal changes: experimental custom webpack support, agentic upgrade tooling now defaults to a separate worktree, and various caching/prerender fixes.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.40" target="_blank" rel="noopener">Next.js v16.4.0-canary.40</a>
+        </div>
+        <div class="item-takeaway">Large batch of internal Next.js/Turbopack refactors, test coverage additions, and build-pipeline changes (lerna-to-pnpm migration, wasm test runs).</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp" target="_blank" rel="noopener">How to Use NVIDIA Warp and MjWarp to Accelerate Robotics Simulation</a>
+        </div>
+        <div class="item-takeaway">Hugging Face blog post about using NVIDIA Warp and MjWarp for robotics simulation and learning workflows.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/bio-security-is-an-ai-arms-race-eric" target="_blank" rel="noopener">Bio-security is an AI Arms Race (Latent Space interview)</a>
+        </div>
+        <div class="item-takeaway">Latent Space podcast/interview blurb with Radical Numerics CEO on using biological chain-of-thought models for bio-defense and genome design.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol.html" target="_blank" rel="noopener">Radicle: Disclosure of Vulnerability in the Network Protocol</a>
+        </div>
+        <div class="item-takeaway">Radicle (decentralized code collaboration) disclosed a vulnerability in its network protocol.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://users.cs.utah.edu/~elb/folklore/mel.html" target="_blank" rel="noopener">The Story of Mel</a>
+        </div>
+        <div class="item-takeaway">A decades-old piece of programmer folklore being re-shared on Lobsters.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://andanti.no/blog/SignedMesh.html" target="_blank" rel="noopener">I want my mesh networks to be signed, not encrypted</a>
+        </div>
+        <div class="item-takeaway">Opinion blog post arguing mesh networks should prioritize signing over encryption.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lwn.net/SubscriberLink/1095425/2d9f411252325784/" target="_blank" rel="noopener">Ideas on modernizing the open-source desktop</a>
+        </div>
+        <div class="item-takeaway">LWN piece on modernizing the open-source (Linux) desktop.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://kdeforpeople.com" target="_blank" rel="noopener">KDE for People</a>
+        </div>
+        <div class="item-takeaway">Advocacy/manifesto site for a KDE-focused desktop philosophy.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://evnm.substack.com/p/beware-overreliance-on-metaphor" target="_blank" rel="noopener">Beware overreliance on metaphor</a>
+        </div>
+        <div class="item-takeaway">Essay cautioning against overusing metaphor in technical thinking/writing.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1worxyl/am_i_a_bad_founder/" target="_blank" rel="noopener">Am I a bad founder?</a>
+        </div>
+        <div class="item-takeaway">Personal r/SaaS venting post from a non-technical co-founder second-guessing whether to keep paying their developer.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wo4k26/i_just_got_my_first_paying_customer/" target="_blank" rel="noopener">I just got my first paying customer!</a>
+        </div>
+        <div class="item-takeaway">Reddit success-story post about landing a $7 first payment via organic search.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wostmc/how_do_i_actually_start_lead_generation_on/" target="_blank" rel="noopener">How do I actually start lead generation on LinkedIn to sell services as a solo?</a>
+        </div>
+        <div class="item-takeaway">Generic advice-seeking Reddit post about starting LinkedIn lead generation.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wouebv/i_would_appreciate_if_you_share_your_pain_point/" target="_blank" rel="noopener">I would appreciate if you share your pain point in getting business insights</a>
+        </div>
+        <div class="item-takeaway">Reddit post soliciting feedback on a business-insights tool.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wovh2s/struggling_to_acquire_my_first_customer/" target="_blank" rel="noopener">Struggling to Acquire my first customer</a>
+        </div>
+        <div class="item-takeaway">Reddit post from a South African tooling-rental SaaS asking for advice converting demos into paying pilots.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wov78j/the_cheapest_software_is_usually_the_one_nobody/" target="_blank" rel="noopener">The cheapest software is usually the one nobody has to think about</a>
+        </div>
+        <div class="item-takeaway">Reddit reflection on total-cost-of-ownership beyond sticker price for business software.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/vercel-connect-tanstack-ai" target="_blank" rel="noopener">Vercel Connect now supports TanStack AI</a>
+        </div>
+        <div class="item-takeaway">Vercel Connect added a TanStack AI transport integration so agents built with TanStack AI can call OAuth-protected MCP servers without you storing or rotating credentials; a consent-challenge hook lets you redirect users to Connect's consent flow instead of leaking the error to the model.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/unlimited-vercel-blob-stores-on-every-plan" target="_blank" rel="noopener">Unlimited Vercel Blob stores on every plan</a>
+        </div>
+        <div class="item-takeaway">Vercel removed the previous cap on Blob store counts (100 on Hobby, 500 on Pro, 1000 on Enterprise) — you can now create as many stores as you want on any plan.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/gemini-3-8-text-to-speech-models-now-available-on-ai-gateway" target="_blank" rel="noopener">Gemini 3.8 text-to-speech models now available on AI Gateway</a>
+        </div>
+        <div class="item-takeaway">Vercel's AI Gateway added Google's new Gemini 3.8 Flash and Flash-Lite TTS models, giving unified billing/routing alongside other models.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1woph49/our_llm_was_burning_tokens_on_3d_modelling_so_we/" target="_blank" rel="noopener">Our LLM was burning tokens on 3D modelling, so we made it a director instead of a builder (~64% cut)</a>
+        </div>
+        <div class="item-takeaway">A solo-ish team building a text-to-3D-world tool found their LLM was slow and expensive when asked to write all 3D geometry code directly (~15 min and ~4.5M tokens per building).</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wotvr2/building_a_custom_prompt_generator_for_cxgrd/" target="_blank" rel="noopener">Building a custom prompt generator for cxgrd</a>
+        </div>
+        <div class="item-takeaway">Builder describes replacing ad hoc prompts to a coding agent with a deterministic prompt-generation engine that computes blast-radius (affected files, dependents, risk level), injects risk-based constraints (e.g.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wosrhe/taxexclusive_pricing_means_customers_pay_more/" target="_blank" rel="noopener">Tax-exclusive pricing means customers pay more than what's on our landing page</a>
+        </div>
+        <div class="item-takeaway">Reddit question from a SaaS founder about whether tax-exclusive pricing (Paddle adds tax at checkout) hurts conversion.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wouk99/why_do_legacy_b2b_finance_tools_still_look_like/" target="_blank" rel="noopener">Why do legacy B2B finance tools still look like Windows 95?</a>
+        </div>
+        <div class="item-takeaway">Reddit self-promotion for a finance-dashboard UI redesign, seeking feedback.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wo4kg5/what_actually_got_you_your_first_1000_customers/" target="_blank" rel="noopener">What actually got you your first 1000 customers?</a>
+        </div>
+        <div class="item-takeaway">Generic engagement-bait question thread on r/SaaS with no data in the post itself.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1woq35d/i_built_an_audio_studio_that_turns_boring_pdfs/" target="_blank" rel="noopener">I built an audio studio that turns boring PDFs into funny dual-host podcasts</a>
+        </div>
+        <div class="item-takeaway">Reddit self-promotion for PodBanter, a PDF-to-podcast app with voice interruption.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wonfxp/talk_to_customers_which_method_has_worked_for_you/" target="_blank" rel="noopener">Talk to customers? which method has worked for you?</a>
+        </div>
+        <div class="item-takeaway">Generic advice-seeking Reddit post about customer discovery methods.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1worzfg/i_built_something_that_tells_you_when_you_are/" target="_blank" rel="noopener">I built something that tells you when you are spending like an idiot</a>
+        </div>
+        <div class="item-takeaway">Reddit self-promotion for a budgeting app with an AI 'roast' feature for overspending.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wovlxw/free_ill_build_a_website_for_your_small_business/" target="_blank" rel="noopener">[FREE] I'll build a website for your small business</a>
+        </div>
+        <div class="item-takeaway">Reddit portfolio-building service offer (free website in exchange for a portfolio case study).</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wovg67/i_recently_built_an_offline_ai_translation_app_my/" target="_blank" rel="noopener">I recently built an offline AI translation app</a>
+        </div>
+        <div class="item-takeaway">Reddit post from a builder asking why their offline on-device translation app is only getting 1-2 sales/day after two months.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://csixty4.medium.com/pick-is-a-living-fossil-of-computer-history-36d74408d557" target="_blank" rel="noopener">Pick OS is a Living Fossil of Computer History</a>
+        </div>
+        <div class="item-takeaway">Historical/nostalgia piece about the Pick operating system.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://devblogs.microsoft.com/oldnewthing/20260922-00/?p=112719/" target="_blank" rel="noopener">A brief history of Windows scroll bar shortcuts</a>
+        </div>
+        <div class="item-takeaway">Raymond Chen's Old New Thing blog on legacy Windows scroll-bar keyboard shortcuts.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.seangoedecke.com/deckard/" target="_blank" rel="noopener">Automatically detecting AI text in my browser</a>
+        </div>
+        <div class="item-takeaway">Personal blog post about a browser extension the author built to detect AI-generated text.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://kristoff.it/blog/the-zig-journey/" target="_blank" rel="noopener">The Zig Journey</a>
+        </div>
+        <div class="item-takeaway">Personal reflection blog post on learning/using the Zig programming language.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://futhark-lang.org/blog/2026-09-22-aliasing.html" target="_blank" rel="noopener">Do not let your type system reason about aliasing in your programming language</a>
+        </div>
+        <div class="item-takeaway">Programming-language-design blog post on type systems and aliasing.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://entropicthoughts.com/cheaper-llm-labeling" target="_blank" rel="noopener">Cheaper LLM labelling</a>
+        </div>
+        <div class="item-takeaway">Blog post about reducing costs for LLM-based data labelling.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system" target="_blank" rel="noopener">Claude discovers a novel enzyme system with CRISPR-like repeats (anthropic-blog copy)</a>
+        </div>
+        <div class="item-takeaway">Anthropic's own blog posting of the enzyme-discovery research story.</div>
+        <div class="item-meta">
+          <span>anthropic-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://transluce.org/agent-activity" target="_blank" rel="noopener">Early rogue AI agent activity and attempts to hack found on urlquery.net</a>
+        </div>
+        <div class="item-takeaway">Report of autonomous AI agents observed in the wild attempting unauthorized hacking activity, surfaced via URL-scanning telemetry.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux" target="_blank" rel="noopener">Linux support is coming to Snapdragon X2 Series</a>
+        </div>
+        <div class="item-takeaway">Qualcomm announced Linux support for its Snapdragon X2 agentic-AI PC chips.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system" target="_blank" rel="noopener">Claude discovers a novel enzyme system with CRISPR-like repeats</a>
+        </div>
+        <div class="item-takeaway">Anthropic research announcement (via hn-top) that Claude helped discover a novel enzyme system with CRISPR-like repeats.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.arxiv.org/2026/09/23/arxiv-receives-multiyear-investment/" target="_blank" rel="noopener">ArXiv receives multiyear commitments to support it as an independent nonprofit</a>
+        </div>
+        <div class="item-takeaway">ArXiv secured multiyear funding commitments to remain an independent nonprofit.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lwn.net/SubscriberLink/1095425/2d9f411252325784/" target="_blank" rel="noopener">Ideas on modernizing the open-source desktop (hn-top copy)</a>
+        </div>
+        <div class="item-takeaway">Same LWN article on modernizing the open-source desktop also submitted via Lobsters (raw_item_id d54d124a) tonight.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://fly.io/blog/vscode-ssh-wtf/" target="_blank" rel="noopener">VSCode's SSH Agent Is Bananas (2025)</a>
+        </div>
+        <div class="item-takeaway">A year-old (2025) blog post re-surfacing on Hacker News about VSCode's remote-SSH extension behaving unexpectedly (spawning many background processes/agents on the remote host).</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://michaelheap.com/github-wiki-is-an-antipattern/" target="_blank" rel="noopener">The GitHub wiki is an anti-pattern</a>
+        </div>
+        <div class="item-takeaway">Opinion post arguing GitHub wikis are a bad place to keep project documentation.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/" target="_blank" rel="noopener">SAML: A fractal of bad design</a>
+        </div>
+        <div class="item-takeaway">Trail of Bits (a credible application-security research firm) published a piece dissecting why SAML is a persistent source of security footguns in SSO implementations.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.apnic.net/2026/09/22/latest-bgp-hijack-targets-hosting-software-vendor/" target="_blank" rel="noopener">Latest BGP hijack targets hosting software vendor</a>
+        </div>
+        <div class="item-takeaway">APNIC blog reports a BGP hijack incident targeting a hosting/software vendor's IP space.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/vary-support/" target="_blank" rel="noopener">We just shipped support for the ugliest part of HTTP: Vary</a>
+        </div>
+        <div class="item-takeaway">Cloudflare shipped proper support for the HTTP Vary header in its CDN caching layer, a notoriously fiddly part of HTTP content negotiation.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://spinel.coop/blog/why-you-should-check-your-gems-lines-of-code/" target="_blank" rel="noopener">Why you should check your gem's lines of code</a>
+        </div>
+        <div class="item-takeaway">Blog post about auditing Ruby gem dependencies by lines of code as a supply-chain hygiene practice.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://cartesian-theatrics.github.io/clj-manifold3d/journal/" target="_blank" rel="noopener">Solid Modeling in your browser</a>
+        </div>
+        <div class="item-takeaway">Personal project/journal post about in-browser solid/CAD modeling using Clojure and manifold3d.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openai.com/index/two-years-of-openai-academy" target="_blank" rel="noopener">Two years of OpenAI Academy</a>
+        </div>
+        <div class="item-takeaway">OpenAI marketing post marking two years of its education/community outreach program.</div>
+        <div class="item-meta">
+          <span>openai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense" target="_blank" rel="noopener">OpenAI extends cyber access to Ukraine for civilian defense</a>
+        </div>
+        <div class="item-takeaway">OpenAI announced extending its Daybreak cyber-defense program access to the Ukrainian government for civilian infrastructure protection.</div>
+        <div class="item-meta">
+          <span>openai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openai.com/index/sam-altman-un-security-council-remarks" target="_blank" rel="noopener">Sam Altman's remarks at the United Nations Security Council</a>
+        </div>
+        <div class="item-takeaway">OpenAI blog covering Sam Altman's UN Security Council remarks on AI safety and international cooperation.</div>
+        <div class="item-meta">
+          <span>openai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openai.com/index/harvey-from-context-to-confidence-with-astra" target="_blank" rel="noopener">Harvey turns legal context into stronger drafts with GPT-6 Astra</a>
+        </div>
+        <div class="item-takeaway">OpenAI customer case study touting Harvey's legal-drafting results with GPT-6 Astra.</div>
+        <div class="item-meta">
+          <span>openai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openai.com/index/invideo-builds-with-gpt-6-astra" target="_blank" rel="noopener">How invideo improves color grading 3x with GPT-6 Astra</a>
+        </div>
+        <div class="item-takeaway">OpenAI customer case study claiming invideo improved color-grading speed 3x using GPT-6 Astra.</div>
+        <div class="item-meta">
+          <span>openai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openai.com/index/ringg" target="_blank" rel="noopener">Ringg's AI agents resolve up to 65% of customer calls with OpenAI</a>
+        </div>
+        <div class="item-takeaway">OpenAI customer case study claiming Ringg's voice agents resolve up to 65% of calls and run at 90% lower cost than GPT-4.1 using GPT-5.6, across voice/chat/WhatsApp/web.</div>
+        <div class="item-meta">
+          <span>openai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openai.com/index/introducing-mentalhealthbench" target="_blank" rel="noopener">Introducing MentalHealthBench</a>
+        </div>
+        <div class="item-takeaway">OpenAI introduced a benchmark for evaluating AI responses in mental-health conversations.</div>
+        <div class="item-meta">
+          <span>openai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan" target="_blank" rel="noopener">ChatGPT Ads expands to Southeast Asia and Taiwan</a>
+        </div>
+        <div class="item-takeaway">OpenAI announced ChatGPT Ads is expanding to Southeast Asia and Taiwan.</div>
+        <div class="item-meta">
+          <span>openai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openai.com/index/airbnb-gpt-6-astra" target="_blank" rel="noopener">Airbnb widens access to GPT-6 Astra and OpenAI frontier models</a>
+        </div>
+        <div class="item-takeaway">OpenAI customer case study on Airbnb's internal engineering use of GPT-6 Astra.</div>
+        <div class="item-meta">
+          <span>openai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://status.openai.com//incidents/01M389CDQ97B11QPMSRAAYSE5S" target="_blank" rel="noopener">Mobile users unable to see Work Mode and the Model Picker</a>
+        </div>
+        <div class="item-takeaway">OpenAI status-page incident for a mobile UI bug (Work Mode and Model Picker not displaying).</div>
+        <div class="item-meta">
+          <span>openai-status</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Sep/23/gemini-tts-playground/" target="_blank" rel="noopener">Gemini 3.8 TTS Playground (hands-on)</a>
+        </div>
+        <div class="item-takeaway">Simon Willison built and used Google's newly-released Gemini 3.8 Flash and Flash-Lite TTS models via a bring-your-own-key playground.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://simonwillison.net/2026/Sep/23/shadow-roots/" target="_blank" rel="noopener">Shadow roots, explained with live examples</a>
+        </div>
+        <div class="item-takeaway">Simon Willison used an AI model (Fable 5.1 Medium) to generate an interactive explainer page for CSS shadow roots from a single-line prompt.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://artificialanalysis.ai/models/mercury-2-5" target="_blank" rel="noopener">Mercury 2.5 LLM hits 770 tokens per second</a>
+        </div>
+        <div class="item-takeaway">Inception Labs' Mercury 2.5 diffusion-style LLM reportedly reaches 770 tokens/second inference speed on Artificial Analysis' benchmark.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://huggingface.co/apple/LensVLM-9B" target="_blank" rel="noopener">LensVLM: Compressing long context as images, expanding only relevant pages</a>
+        </div>
+        <div class="item-takeaway">Apple released LensVLM, a vision-language model technique that compresses long text context by rendering it as images and only 'expanding' (attending to at full resolution) the pages actually relevant to the query.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol.html" target="_blank" rel="noopener">Radicle: Disclosure of Vulnerability in the Network Protocol</a>
+        </div>
+        <div class="item-takeaway">Radicle (a decentralized code-collaboration/git tool) publicly disclosed a vulnerability in its network protocol.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://suhacker.ai/p/flaweds-flaws-and-what-this-means-for-industry-research/" target="_blank" rel="noopener">FLAWED's Flaws and What This Means for Industry Research</a>
+        </div>
+        <div class="item-takeaway">Blog critique of a research benchmark/paper called FLAWED.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/nestrilabs/virtio-nvgpu" target="_blank" rel="noopener">Virtio-nvgpu: Near-native Nvidia GPU access inside a KVM guest</a>
+        </div>
+        <div class="item-takeaway">Open source project providing near-native Nvidia GPU passthrough inside KVM virtual machines.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.mini-itx.com/projects/windowsxpbox/" target="_blank" rel="noopener">The &quot;Windows XP Box&quot; (2003)</a>
+        </div>
+        <div class="item-takeaway">Retro hardware-hobbyist project from 2003 being resurfaced.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://pointinthecloud.com/2026-04-11-211700.html" target="_blank" rel="noopener">Fixing the Portobello Police Station Clock</a>
+        </div>
+        <div class="item-takeaway">Hobbyist blog post about repairing a mechanical clock.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.meta.com/vr-glasses/" target="_blank" rel="noopener">Meta VR Glasses</a>
+        </div>
+        <div class="item-takeaway">Meta's marketing page for its VR glasses product.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://tailscale.com/blog/making-tailscale-faster" target="_blank" rel="noopener">Making Tailscale Faster</a>
+        </div>
+        <div class="item-takeaway">Tailscale engineering blog post on network performance optimizations.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://apnews.com/article/italy-nuclear-chernobyl-4891b6b7c7791ae84db6b0bf0f7cf567" target="_blank" rel="noopener">Italian parliament votes for return to nuclear energy</a>
+        </div>
+        <div class="item-takeaway">General world/energy-policy news.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://signoregalilei.com/2026/09/13/the-mystery-animal-on-an-ancient-gods-head/" target="_blank" rel="noopener">The mystery animal on an ancient god's head</a>
+        </div>
+        <div class="item-takeaway">Archaeology/history blog post.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://jyn.dev/tokens-too-cheap-to-meter/" target="_blank" rel="noopener">Tokens too cheap to meter</a>
+        </div>
+        <div class="item-takeaway">Speculative essay on LLM token-pricing trends.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://devblogs.microsoft.com/oldnewthing/20260922-00/?p=112719/" target="_blank" rel="noopener">A brief history of Windows scroll bar shortcuts (hn-top copy)</a>
+        </div>
+        <div class="item-takeaway">Same Raymond Chen historical blog post also submitted via Lobsters (raw_item_id 5ba758d8) tonight.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/" target="_blank" rel="noopener">Gemini 3.8 text-to-speech (Google blog)</a>
+        </div>
+        <div class="item-takeaway">Google's own announcement of the Gemini 3.8 TTS models.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.kenklippenstein.com/p/feds-think-ai-critics-are-foreign" target="_blank" rel="noopener">Feds Target AI Critics as &quot;Foreign Agents&quot;</a>
+        </div>
+        <div class="item-takeaway">Politically-charged report alleging government targeting of AI critics.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Morning memo — 2026-09-25
+
+**Source failures:** None observed in tonight's fetch (two claim batches were processed — 80 items total from a backlog of unprocessed items within the last 24h — and merged into this single digest).
+
+## Worth attention
+
+- **Our LLM was burning tokens on 3D modelling, so we made it a director instead of a builder (~64% cut)** — https://www.reddit.com/r/SaaS/comments/1woph49/our_llm_was_burning_tokens_on_3d_modelling_so_we/
+  A solo-ish team building a text-to-3D-world tool found their LLM was slow and expensive when asked to write all 3D geometry code directly (~15 min and ~4.5M tokens per building). Switching the LLM to only make high-level decisions (building type, height, style, road placement) and handing the actual geometry generation to hand-written deterministic generator functions cut time to ~7 minutes and tokens to ~1.6M (~64% reduction) and made output reproducible. The tradeoff is upfront engineering effort to build and maintain those generators, and it only pays off when the domain has enough structure to encode as functions.
+
+- **Gemini 3.8 TTS Playground (hands-on)** — https://simonwillison.net/2026/Sep/23/gemini-tts-playground/
+  Simon Willison built and used Google's newly-released Gemini 3.8 Flash and Flash-Lite TTS models via a bring-your-own-key playground. The models offer 2,000+ built-in voices, custom voice cloning from a 30-second sample, multi-speaker conversation scripting with per-line delivery-style control, and cost about 2.74 cents for 1m18s of audio (Flash tier), generated in ~20 seconds. This is the most detailed, hands-on coverage of tonight's Gemini 3.8 TTS launch (also referenced thinly by a Vercel AI Gateway changelog and a bare Google blog link, both rejected as duplicates of this story).
+
+- **Unlimited Vercel Blob stores on every plan** — https://vercel.com/changelog/unlimited-vercel-blob-stores-on-every-plan
+  Vercel removed the previous cap on Blob store counts (100 on Hobby, 500 on Pro, 1000 on Enterprise) — you can now create as many stores as you want on any plan. Store creation is now billed like other Blob operations ($5/million on Pro; counts toward the 2,000 free ops/month on Hobby), which unlocks patterns like one store per tenant or per preview branch without hitting a hard ceiling.
+
+- **We just shipped support for the ugliest part of HTTP: Vary** — https://blog.cloudflare.com/vary-support/
+  Cloudflare shipped proper support for the HTTP Vary header in its CDN caching layer, a notoriously fiddly part of HTTP content negotiation. This directly affects cache correctness/behavior for anyone serving content through Cloudflare, including sites hosted on Cloudflare Pages (such as this pipeline's own public site).
+
+- **Vercel Connect now supports TanStack AI** — https://vercel.com/changelog/vercel-connect-tanstack-ai
+  Vercel Connect added a TanStack AI transport integration so agents built with TanStack AI can call OAuth-protected MCP servers without you storing or rotating credentials; a consent-challenge hook lets you redirect users to Connect's consent flow instead of leaking the error to the model.
+
+- **Building a custom prompt generator for cxgrd** — https://www.reddit.com/r/SaaS/comments/1wotvr2/building_a_custom_prompt_generator_for_cxgrd/
+  Builder describes replacing ad hoc prompts to a coding agent with a deterministic prompt-generation engine that computes blast-radius (affected files, dependents, risk level), injects risk-based constraints (e.g. 'don't alter existing columns without a migration'), and adds verification steps ('run cxgrd check before finishing'). Framed as trading some of the LLM's interpretive flexibility for reliability, reproducibility, and speed by having the tool supply facts only it knows rather than prose.
+
+- **SAML: A fractal of bad design** — https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/
+  Trail of Bits (a credible application-security research firm) published a piece dissecting why SAML is a persistent source of security footguns in SSO implementations. Article body did not fetch beyond the title/source, but Trail of Bits' track record on protocol-security writeups makes this a credible pointer for anyone evaluating or implementing SAML-based SSO.
+
+- **Latest BGP hijack targets hosting software vendor** — https://blog.apnic.net/2026/09/22/latest-bgp-hijack-targets-hosting-software-vendor/
+  APNIC blog reports a BGP hijack incident targeting a hosting/software vendor's IP space. Article body did not fetch beyond the title/source, but BGP hijacks are a real, recurring internet-infrastructure risk that can affect anyone running servers or SaaS on rented infrastructure (this pipeline itself runs on a VPS).
+
+- **Radicle: Disclosure of Vulnerability in the Network Protocol** — https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol.html
+  Radicle (a decentralized code-collaboration/git tool) publicly disclosed a vulnerability in its network protocol. No article body fetched beyond the title, but a vendor's own vulnerability disclosure is inherently credible evidence of a real security issue; relevant primarily to anyone running Radicle nodes.
+
+## Monitor
+
+- **Early rogue AI agent activity and attempts to hack found on urlquery.net** — https://transluce.org/agent-activity
+  Report of autonomous AI agents observed in the wild attempting unauthorized hacking activity, surfaced via URL-scanning telemetry. No article body was retrievable (empty content field), so the specifics (which agents, what targets, how confirmed) are unverified from this fetch alone.
+
+- **Mercury 2.5 LLM hits 770 tokens per second** — https://artificialanalysis.ai/models/mercury-2-5
+  Inception Labs' Mercury 2.5 diffusion-style LLM reportedly reaches 770 tokens/second inference speed on Artificial Analysis' benchmark. No article body fetched (benchmark-page link only), so quality/accuracy tradeoffs at that speed are unconfirmed, but raw throughput at that level is notable for latency-sensitive agent orchestration (e.g. this pipeline's own triage step).
+
+- **LensVLM: Compressing long context as images, expanding only relevant pages** — https://huggingface.co/apple/LensVLM-9B
+  Apple released LensVLM, a vision-language model technique that compresses long text context by rendering it as images and only 'expanding' (attending to at full resolution) the pages actually relevant to the query. No article body fetched (model page link only), but the technique targets a real, recurring problem: long-context cost and degradation in RAG/agent pipelines.
+
+- **Shadow roots, explained with live examples** — https://simonwillison.net/2026/Sep/23/shadow-roots/
+  Simon Willison used an AI model (Fable 5.1 Medium) to generate an interactive explainer page for CSS shadow roots from a single-line prompt. Mostly a demonstration of how quickly a decent interactive teaching tool can be AI-generated, rather than new information about shadow roots themselves.
+
+## Full digest
+
+- [R] [gh-n8n] n8n 2.40.6 (stable tag) — https://github.com/n8n-io/n8n/releases/tag/stable — GitHub release tag for n8n 2.40.6 containing only bug fixes (OpenTelemetry restart handling, UTC midnight report retries) and one internal licensing feature.
+- [R] [gh-n8n] n8n@2.40.6 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.6 — Duplicate GitHub release posting of the same n8n 2.40.6 patch notes (OpenTelemetry and report-retry bug fixes) under a different tag name.
+- [R] [gh-n8n] n8n@2.41.2 — https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.2 — GitHub release for n8n 2.41.2 with bug fixes (OpenTelemetry, assistant test-run evidence recording, UTC boundary retries) and an internal license-authentication feature.
+- [R] [gh-n8n] n8n beta (2.41.2 dup) — https://github.com/n8n-io/n8n/releases/tag/beta — Duplicate GitHub release posting of the same n8n 2.41.2 patch notes under the 'beta' tag.
+- [R] [gh-nextjs] Next.js v16.4.0-canary.42 — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.42 — Next.js canary build containing only CI/CD pipeline changes (preview tarball upload retries) and an internal 'next analyze' promotion note.
+- [R] [gh-nextjs] Next.js v16.4.0-canary.41 — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.41 — Next.js canary build with internal changes: experimental custom webpack support, agentic upgrade tooling now defaults to a separate worktree, and various caching/prerender fixes.
+- [R] [gh-nextjs] Next.js v16.4.0-canary.40 — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.40 — Large batch of internal Next.js/Turbopack refactors, test coverage additions, and build-pipeline changes (lerna-to-pnpm migration, wasm test runs).
+- [R] [huggingface-blog] How to Use NVIDIA Warp and MjWarp to Accelerate Robotics Simulation — https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp — Hugging Face blog post about using NVIDIA Warp and MjWarp for robotics simulation and learning workflows.
+- [R] [latent-space] Bio-security is an AI Arms Race (Latent Space interview) — https://www.latent.space/p/bio-security-is-an-ai-arms-race-eric — Latent Space podcast/interview blurb with Radical Numerics CEO on using biological chain-of-thought models for bio-defense and genome design.
+- [R] [lobsters] Radicle: Disclosure of Vulnerability in the Network Protocol — https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol.html — Radicle (decentralized code collaboration) disclosed a vulnerability in its network protocol.
+- [R] [lobsters] The Story of Mel — https://users.cs.utah.edu/~elb/folklore/mel.html — A decades-old piece of programmer folklore being re-shared on Lobsters.
+- [R] [lobsters] I want my mesh networks to be signed, not encrypted — https://andanti.no/blog/SignedMesh.html — Opinion blog post arguing mesh networks should prioritize signing over encryption.
+- [R] [lobsters] Ideas on modernizing the open-source desktop — https://lwn.net/SubscriberLink/1095425/2d9f411252325784/ — LWN piece on modernizing the open-source (Linux) desktop.
+- [R] [lobsters] KDE for People — https://kdeforpeople.com — Advocacy/manifesto site for a KDE-focused desktop philosophy.
+- [R] [lobsters] Beware overreliance on metaphor — https://evnm.substack.com/p/beware-overreliance-on-metaphor — Essay cautioning against overusing metaphor in technical thinking/writing.
+- [R] [reddit-saas] Am I a bad founder? — https://www.reddit.com/r/SaaS/comments/1worxyl/am_i_a_bad_founder/ — Personal r/SaaS venting post from a non-technical co-founder second-guessing whether to keep paying their developer.
+- [R] [reddit-saas] I just got my first paying customer! — https://www.reddit.com/r/SaaS/comments/1wo4k26/i_just_got_my_first_paying_customer/ — Reddit success-story post about landing a $7 first payment via organic search.
+- [R] [reddit-saas] How do I actually start lead generation on LinkedIn to sell services as a solo? — https://www.reddit.com/r/SaaS/comments/1wostmc/how_do_i_actually_start_lead_generation_on/ — Generic advice-seeking Reddit post about starting LinkedIn lead generation.
+- [R] [reddit-saas] I would appreciate if you share your pain point in getting business insights — https://www.reddit.com/r/SaaS/comments/1wouebv/i_would_appreciate_if_you_share_your_pain_point/ — Reddit post soliciting feedback on a business-insights tool.
+- [R] [reddit-saas] Struggling to Acquire my first customer — https://www.reddit.com/r/SaaS/comments/1wovh2s/struggling_to_acquire_my_first_customer/ — Reddit post from a South African tooling-rental SaaS asking for advice converting demos into paying pilots.
+- [R] [reddit-saas] The cheapest software is usually the one nobody has to think about — https://www.reddit.com/r/SaaS/comments/1wov78j/the_cheapest_software_is_usually_the_one_nobody/ — Reddit reflection on total-cost-of-ownership beyond sticker price for business software.
+- [P] [vercel-changelog] Vercel Connect now supports TanStack AI — https://vercel.com/changelog/vercel-connect-tanstack-ai — Vercel Connect added a TanStack AI transport integration so agents built with TanStack AI can call OAuth-protected MCP servers without you storing or rotating credentials; a consent-challenge hook lets you redirect users to Connect's consent flow instead of leaking the error to the model.
+- [P] [vercel-changelog] Unlimited Vercel Blob stores on every plan — https://vercel.com/changelog/unlimited-vercel-blob-stores-on-every-plan — Vercel removed the previous cap on Blob store counts (100 on Hobby, 500 on Pro, 1000 on Enterprise) — you can now create as many stores as you want on any plan.
+- [R] [vercel-changelog] Gemini 3.8 text-to-speech models now available on AI Gateway — https://vercel.com/changelog/gemini-3-8-text-to-speech-models-now-available-on-ai-gateway — Vercel's AI Gateway added Google's new Gemini 3.8 Flash and Flash-Lite TTS models, giving unified billing/routing alongside other models.
+- [P] [reddit-saas] Our LLM was burning tokens on 3D modelling, so we made it a director instead of a builder (~64% cut) — https://www.reddit.com/r/SaaS/comments/1woph49/our_llm_was_burning_tokens_on_3d_modelling_so_we/ — A solo-ish team building a text-to-3D-world tool found their LLM was slow and expensive when asked to write all 3D geometry code directly (~15 min and ~4.5M tokens per building).
+- [P] [reddit-saas] Building a custom prompt generator for cxgrd — https://www.reddit.com/r/SaaS/comments/1wotvr2/building_a_custom_prompt_generator_for_cxgrd/ — Builder describes replacing ad hoc prompts to a coding agent with a deterministic prompt-generation engine that computes blast-radius (affected files, dependents, risk level), injects risk-based constraints (e.g.
+- [R] [reddit-saas] Tax-exclusive pricing means customers pay more than what's on our landing page — https://www.reddit.com/r/SaaS/comments/1wosrhe/taxexclusive_pricing_means_customers_pay_more/ — Reddit question from a SaaS founder about whether tax-exclusive pricing (Paddle adds tax at checkout) hurts conversion.
+- [R] [reddit-saas] Why do legacy B2B finance tools still look like Windows 95? — https://www.reddit.com/r/SaaS/comments/1wouk99/why_do_legacy_b2b_finance_tools_still_look_like/ — Reddit self-promotion for a finance-dashboard UI redesign, seeking feedback.
+- [R] [reddit-saas] What actually got you your first 1000 customers? — https://www.reddit.com/r/SaaS/comments/1wo4kg5/what_actually_got_you_your_first_1000_customers/ — Generic engagement-bait question thread on r/SaaS with no data in the post itself.
+- [R] [reddit-saas] I built an audio studio that turns boring PDFs into funny dual-host podcasts — https://www.reddit.com/r/SaaS/comments/1woq35d/i_built_an_audio_studio_that_turns_boring_pdfs/ — Reddit self-promotion for PodBanter, a PDF-to-podcast app with voice interruption.
+- [R] [reddit-saas] Talk to customers? which method has worked for you? — https://www.reddit.com/r/SaaS/comments/1wonfxp/talk_to_customers_which_method_has_worked_for_you/ — Generic advice-seeking Reddit post about customer discovery methods.
+- [R] [reddit-saas] I built something that tells you when you are spending like an idiot — https://www.reddit.com/r/SaaS/comments/1worzfg/i_built_something_that_tells_you_when_you_are/ — Reddit self-promotion for a budgeting app with an AI 'roast' feature for overspending.
+- [R] [reddit-saas] [FREE] I'll build a website for your small business — https://www.reddit.com/r/SaaS/comments/1wovlxw/free_ill_build_a_website_for_your_small_business/ — Reddit portfolio-building service offer (free website in exchange for a portfolio case study).
+- [R] [reddit-saas] I recently built an offline AI translation app — https://www.reddit.com/r/SaaS/comments/1wovg67/i_recently_built_an_offline_ai_translation_app_my/ — Reddit post from a builder asking why their offline on-device translation app is only getting 1-2 sales/day after two months.
+- [R] [lobsters] Pick OS is a Living Fossil of Computer History — https://csixty4.medium.com/pick-is-a-living-fossil-of-computer-history-36d74408d557 — Historical/nostalgia piece about the Pick operating system.
+- [R] [lobsters] A brief history of Windows scroll bar shortcuts — https://devblogs.microsoft.com/oldnewthing/20260922-00/?p=112719/ — Raymond Chen's Old New Thing blog on legacy Windows scroll-bar keyboard shortcuts.
+- [R] [lobsters] Automatically detecting AI text in my browser — https://www.seangoedecke.com/deckard/ — Personal blog post about a browser extension the author built to detect AI-generated text.
+- [R] [lobsters] The Zig Journey — https://kristoff.it/blog/the-zig-journey/ — Personal reflection blog post on learning/using the Zig programming language.
+- [R] [lobsters] Do not let your type system reason about aliasing in your programming language — https://futhark-lang.org/blog/2026-09-22-aliasing.html — Programming-language-design blog post on type systems and aliasing.
+- [R] [lobsters] Cheaper LLM labelling — https://entropicthoughts.com/cheaper-llm-labeling — Blog post about reducing costs for LLM-based data labelling.
+- [R] [anthropic-blog] Claude discovers a novel enzyme system with CRISPR-like repeats (anthropic-blog copy) — https://www.anthropic.com/news/claude-discovers-novel-enzyme-system — Anthropic's own blog posting of the enzyme-discovery research story.
+- [M] [hn-top] Early rogue AI agent activity and attempts to hack found on urlquery.net — https://transluce.org/agent-activity — Report of autonomous AI agents observed in the wild attempting unauthorized hacking activity, surfaced via URL-scanning telemetry.
+- [R] [hn-top] Linux support is coming to Snapdragon X2 Series — https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux — Qualcomm announced Linux support for its Snapdragon X2 agentic-AI PC chips.
+- [R] [hn-top] Claude discovers a novel enzyme system with CRISPR-like repeats — https://www.anthropic.com/news/claude-discovers-novel-enzyme-system — Anthropic research announcement (via hn-top) that Claude helped discover a novel enzyme system with CRISPR-like repeats.
+- [R] [hn-top] ArXiv receives multiyear commitments to support it as an independent nonprofit — https://blog.arxiv.org/2026/09/23/arxiv-receives-multiyear-investment/ — ArXiv secured multiyear funding commitments to remain an independent nonprofit.
+- [R] [hn-top] Ideas on modernizing the open-source desktop (hn-top copy) — https://lwn.net/SubscriberLink/1095425/2d9f411252325784/ — Same LWN article on modernizing the open-source desktop also submitted via Lobsters (raw_item_id d54d124a) tonight.
+- [R] [hn-top] VSCode's SSH Agent Is Bananas (2025) — https://fly.io/blog/vscode-ssh-wtf/ — A year-old (2025) blog post re-surfacing on Hacker News about VSCode's remote-SSH extension behaving unexpectedly (spawning many background processes/agents on the remote host).
+- [R] [lobsters] The GitHub wiki is an anti-pattern — https://michaelheap.com/github-wiki-is-an-antipattern/ — Opinion post arguing GitHub wikis are a bad place to keep project documentation.
+- [P] [lobsters] SAML: A fractal of bad design — https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/ — Trail of Bits (a credible application-security research firm) published a piece dissecting why SAML is a persistent source of security footguns in SSO implementations.
+- [P] [lobsters] Latest BGP hijack targets hosting software vendor — https://blog.apnic.net/2026/09/22/latest-bgp-hijack-targets-hosting-software-vendor/ — APNIC blog reports a BGP hijack incident targeting a hosting/software vendor's IP space.
+- [P] [lobsters] We just shipped support for the ugliest part of HTTP: Vary — https://blog.cloudflare.com/vary-support/ — Cloudflare shipped proper support for the HTTP Vary header in its CDN caching layer, a notoriously fiddly part of HTTP content negotiation.
+- [R] [lobsters] Why you should check your gem's lines of code — https://spinel.coop/blog/why-you-should-check-your-gems-lines-of-code/ — Blog post about auditing Ruby gem dependencies by lines of code as a supply-chain hygiene practice.
+- [R] [lobsters] Solid Modeling in your browser — https://cartesian-theatrics.github.io/clj-manifold3d/journal/ — Personal project/journal post about in-browser solid/CAD modeling using Clojure and manifold3d.
+- [R] [openai-blog] Two years of OpenAI Academy — https://openai.com/index/two-years-of-openai-academy — OpenAI marketing post marking two years of its education/community outreach program.
+- [R] [openai-blog] OpenAI extends cyber access to Ukraine for civilian defense — https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense — OpenAI announced extending its Daybreak cyber-defense program access to the Ukrainian government for civilian infrastructure protection.
+- [R] [openai-blog] Sam Altman's remarks at the United Nations Security Council — https://openai.com/index/sam-altman-un-security-council-remarks — OpenAI blog covering Sam Altman's UN Security Council remarks on AI safety and international cooperation.
+- [R] [openai-blog] Harvey turns legal context into stronger drafts with GPT-6 Astra — https://openai.com/index/harvey-from-context-to-confidence-with-astra — OpenAI customer case study touting Harvey's legal-drafting results with GPT-6 Astra.
+- [R] [openai-blog] How invideo improves color grading 3x with GPT-6 Astra — https://openai.com/index/invideo-builds-with-gpt-6-astra — OpenAI customer case study claiming invideo improved color-grading speed 3x using GPT-6 Astra.
+- [R] [openai-blog] Ringg's AI agents resolve up to 65% of customer calls with OpenAI — https://openai.com/index/ringg — OpenAI customer case study claiming Ringg's voice agents resolve up to 65% of calls and run at 90% lower cost than GPT-4.1 using GPT-5.6, across voice/chat/WhatsApp/web.
+- [R] [openai-blog] Introducing MentalHealthBench — https://openai.com/index/introducing-mentalhealthbench — OpenAI introduced a benchmark for evaluating AI responses in mental-health conversations.
+- [R] [openai-blog] ChatGPT Ads expands to Southeast Asia and Taiwan — https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan — OpenAI announced ChatGPT Ads is expanding to Southeast Asia and Taiwan.
+- [R] [openai-blog] Airbnb widens access to GPT-6 Astra and OpenAI frontier models — https://openai.com/index/airbnb-gpt-6-astra — OpenAI customer case study on Airbnb's internal engineering use of GPT-6 Astra.
+- [R] [openai-status] Mobile users unable to see Work Mode and the Model Picker — https://status.openai.com//incidents/01M389CDQ97B11QPMSRAAYSE5S — OpenAI status-page incident for a mobile UI bug (Work Mode and Model Picker not displaying).
+- [P] [simon-willison] Gemini 3.8 TTS Playground (hands-on) — https://simonwillison.net/2026/Sep/23/gemini-tts-playground/ — Simon Willison built and used Google's newly-released Gemini 3.8 Flash and Flash-Lite TTS models via a bring-your-own-key playground.
+- [M] [simon-willison] Shadow roots, explained with live examples — https://simonwillison.net/2026/Sep/23/shadow-roots/ — Simon Willison used an AI model (Fable 5.1 Medium) to generate an interactive explainer page for CSS shadow roots from a single-line prompt.
+- [M] [hn-top] Mercury 2.5 LLM hits 770 tokens per second — https://artificialanalysis.ai/models/mercury-2-5 — Inception Labs' Mercury 2.5 diffusion-style LLM reportedly reaches 770 tokens/second inference speed on Artificial Analysis' benchmark.
+- [M] [hn-top] LensVLM: Compressing long context as images, expanding only relevant pages — https://huggingface.co/apple/LensVLM-9B — Apple released LensVLM, a vision-language model technique that compresses long text context by rendering it as images and only 'expanding' (attending to at full resolution) the pages actually relevant to the query.
+- [P] [hn-top] Radicle: Disclosure of Vulnerability in the Network Protocol — https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol.html — Radicle (a decentralized code-collaboration/git tool) publicly disclosed a vulnerability in its network protocol.
+- [R] [lobsters] FLAWED's Flaws and What This Means for Industry Research — https://suhacker.ai/p/flaweds-flaws-and-what-this-means-for-industry-research/ — Blog critique of a research benchmark/paper called FLAWED.
+- [R] [hn-top] Virtio-nvgpu: Near-native Nvidia GPU access inside a KVM guest — https://github.com/nestrilabs/virtio-nvgpu — Open source project providing near-native Nvidia GPU passthrough inside KVM virtual machines.
+- [R] [hn-top] The &quot;Windows XP Box&quot; (2003) — https://www.mini-itx.com/projects/windowsxpbox/ — Retro hardware-hobbyist project from 2003 being resurfaced.
+- [R] [hn-top] Fixing the Portobello Police Station Clock — https://pointinthecloud.com/2026-04-11-211700.html — Hobbyist blog post about repairing a mechanical clock.
+- [R] [hn-top] Meta VR Glasses — https://www.meta.com/vr-glasses/ — Meta's marketing page for its VR glasses product.
+- [R] [hn-top] Making Tailscale Faster — https://tailscale.com/blog/making-tailscale-faster — Tailscale engineering blog post on network performance optimizations.
+- [R] [hn-top] Italian parliament votes for return to nuclear energy — https://apnews.com/article/italy-nuclear-chernobyl-4891b6b7c7791ae84db6b0bf0f7cf567 — General world/energy-policy news.
+- [R] [hn-top] The mystery animal on an ancient god's head — https://signoregalilei.com/2026/09/13/the-mystery-animal-on-an-ancient-gods-head/ — Archaeology/history blog post.
+- [R] [hn-top] Tokens too cheap to meter — https://jyn.dev/tokens-too-cheap-to-meter/ — Speculative essay on LLM token-pricing trends.
+- [R] [hn-top] A brief history of Windows scroll bar shortcuts (hn-top copy) — https://devblogs.microsoft.com/oldnewthing/20260922-00/?p=112719/ — Same Raymond Chen historical blog post also submitted via Lobsters (raw_item_id 5ba758d8) tonight.
+- [R] [hn-top] Gemini 3.8 text-to-speech (Google blog) — https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/ — Google's own announcement of the Gemini 3.8 TTS models.
+- [R] [hn-top] Feds Target AI Critics as &quot;Foreign Agents&quot; — https://www.kenklippenstein.com/p/feds-think-ai-critics-are-foreign — Politically-charged report alleging government targeting of AI critics.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
