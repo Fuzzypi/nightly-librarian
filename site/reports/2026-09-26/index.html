@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>September 26, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="9 stories cleared the bar, led by Cloudflare discloses cross-tenant data exposure vulnerability in Containers, Whiteboard (YC W26): open-source IDE for">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-09-26/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="September 26, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="9 stories cleared the bar, led by Cloudflare discloses cross-tenant data exposure vulnerability in Containers, Whiteboard (YC W26): open-source IDE for">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-09-26/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="September 26, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="9 stories cleared the bar, led by Cloudflare discloses cross-tenant data exposure vulnerability in Containers, Whiteboard (YC W26): open-source IDE for">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>September 26, 2026 · Report log</span>
+      <span>Sep 26, 2026, 2:25 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>September 26, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>9 stories cleared the bar, led by Cloudflare discloses cross-tenant data exposure vulnerability in Containers, Whiteboard (YC W26): open-source IDE for humans + agents to architect software together, and Sourcehut account takeover via build-log XSS in ansi2html.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>9 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/containers-cross-tenant-vulnerability/" target="_blank" rel="noopener">Cloudflare discloses cross-tenant data exposure vulnerability in Containers</a></div>
+        <div class="item-takeaway">Cloudflare disclosed and fixed a vulnerability in its Containers product where residual disk data from a previous workload could leak to a different tenant. This is a real cross-tenant isolation failure at a major cloud provider, found by external researchers and publicly written up with remediation details. If you run workloads on Cloudflare Containers (or any shared-container platform), check whether you rely on ephemeral disk state for anything sensitive and review Cloudflare's advisory.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/devdotfast/whiteboard" target="_blank" rel="noopener">Whiteboard (YC W26): open-source IDE for humans + agents to architect software together</a></div>
+        <div class="item-takeaway">A YC-backed team launched Whiteboard, an open-source desktop IDE (built on Code-OSS) where an agent draws diagrams — sequence, ERD, architecture — on a shared canvas while you work, and clicking a diagram element jumps to the underlying code. It plugs into Claude Code and Codex via an SDK, and includes a semantic AST-aware diff viewer written in Rust. This is directly relevant to anyone doing serious agent-assisted development: it's a concrete attempt at solving the 'I can't see what the agent actually did' problem.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.arusekk.pl/posts/srht-account-takeover/" target="_blank" rel="noopener">Sourcehut account takeover via build-log XSS in ansi2html</a></div>
+        <div class="item-takeaway">A researcher walked through an account-takeover chain on Sourcehut that started with an XSS vulnerability in the ansi2html library used to render CI build logs as HTML. The generalizable lesson: any dev tool that renders ANSI-coded terminal output (build logs, CI dashboards) as HTML without careful sanitization is a plausible XSS vector, not just a Sourcehut-specific bug. Worth a five-minute check if you render terminal/log output as HTML anywhere in your own tools.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/blog/the-vercel-bug-bounty-program-is-now-publicly-available" target="_blank" rel="noopener">Vercel takes its bug bounty program fully public</a></div>
+        <div class="item-takeaway">Vercel merged its private HackerOne program and OSS bounty program into a single public bug bounty program, citing AI-assisted research as a reason public programs are now viable (more reports, but also more noise their team has built tooling to filter). Worth knowing if you deploy on Vercel — more eyes on the platform's security is generally good news, and it signals Vercel's security posture is maturing.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/" target="_blank" rel="noopener">Pragmatic Engineer: a CPU shortage is emerging, driven by AI agents</a></div>
+        <div class="item-takeaway">Gergely Orosz flags a developing CPU shortage, following the GPU and memory shortages, attributed to AI agents burning much more CPU via tool use than typical workloads. If real and sustained, this could push up compute costs for anyone running agent-heavy workflows (including local dev loops and CI). Only a one-line teaser came through from the feed — no figures or timeline yet.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://simonwillison.net/2026/Sep/24/datasette/" target="_blank" rel="noopener">Datasette 1.0a41: OpenTelemetry support, unified modal Web Component</a></div>
+        <div class="item-takeaway">Simon Willison's Datasette shipped OpenTelemetry support (contributed by Alec Garcia) and a refactor of all modal dialogs into a single, documented Web Component that plugin authors can reuse. Concrete, shippable improvements to a real tool rather than a dependency bump — useful if you run Datasette or build plugins for it.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark" target="_blank" rel="noopener">Liquid AI ships LFM2.5-VL-DSpark vision-language model</a></div>
+        <div class="item-takeaway">Liquid AI announced LFM2.5-VL-DSpark, a new vision-language model release, but the source page's body text didn't come through in the fetch — only the title and URL are confirmed. Worth a glance if you're evaluating small/efficient VLMs, but there isn't enough here yet to say what's actually new.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.latent.space/p/runway" target="_blank" rel="noopener">Runway's WorldPrompt and 'GWM Worlds 2': real-time world models</a></div>
+        <div class="item-takeaway">Latent Space covers Runway's WorldPrompt work, where a 'GWM Worlds 2' model uses persistent context and timed actions to steer real-time generative video/audio world models. Only a short teaser came through — interesting direction for real-time generative media but not something actionable for a typical solo software business today.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/" target="_blank" rel="noopener">Google's 'Project Suncatcher' aims to put ML infrastructure in space</a></div>
+        <div class="item-takeaway">Google is reportedly exploring putting ML compute infrastructure into orbit ('Project Suncatcher'), per NYT coverage referenced from Google's own research blog. This is a long-horizon infrastructure bet, not something with near-term relevance to a solo developer, but worth tracking as a signal of how seriously compute-constrained hyperscalers are.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wpheua/anyone_actually_taken_equity_to_build_in_a/" target="_blank" rel="noopener">Reddit r/SaaS: 'anyone taken equity to build in a crowded space' thread</a>
+        </div>
+        <div class="item-takeaway">A Reddit thread asking for anecdotes about taking equity/unpaid work to build in a crowded SaaS category. Personal anecdote-seeking, no new information or actionable signal for a solo builder.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          Reddit r/SaaS: 'New Product'
+        </div>
+        <div class="item-takeaway">beginner pricing/launch questions — https://www.reddit.com/r/SaaS/comments/1wpjj3z/new_product/ — A first-time builder asks basic launch and pricing questions about a healthcare app on Reddit. Not a signal, just a beginner asking for advice.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          Reddit r/SaaS: 'I have a few opportunities'
+        </div>
+        <div class="item-takeaway">solicitation post — https://www.reddit.com/r/SaaS/comments/1wpn0q1/i_have_a_few_opportunities/ — A vague solicitation post offering unspecified 'opportunities' to founders and marketers. Reads as spam/promotional outreach.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wpd8cg/advice_only_not_selling_anything/" target="_blank" rel="noopener">Reddit r/SaaS: mover shares gig-platform marketing anecdote</a>
+        </div>
+        <div class="item-takeaway">A long, rambling personal anecdote from a moving-services gig worker about marketing platforms and business identifiers. Not software-relevant and not actionable for a solo software builder.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wp9lyt/what_are_the_best_saas_marketing_tools_for/" target="_blank" rel="noopener">Reddit r/SaaS: 'best SaaS marketing tools' thread</a>
+        </div>
+        <div class="item-takeaway">A generic question asking which SaaS marketing tools actually work. Crowdsourced opinion thread, no concrete information.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/containers-cross-tenant-vulnerability/" target="_blank" rel="noopener">Cloudflare discloses cross-tenant data exposure vulnerability in Containers</a>
+        </div>
+        <div class="item-takeaway">Cloudflare disclosed and fixed a vulnerability in its Containers product where residual disk data from a previous workload could leak to a different tenant. This is a real cross-tenant isolation failure at a major cloud provider, found by external researchers and publicly written up with remediation details. If you run workloads on Cloudflare Containers (or any shared-container platform), check whether you rely on ephemeral disk state for anything sensitive and review Cloudflare's advisory.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          n8n 'stable' release tag
+        </div>
+        <div class="item-takeaway">internal bug fix only — https://github.com/n8n-io/n8n/releases/tag/stable — Pure internal bug fix (span attribute propagation), no user-facing change.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          n8n@2.40.7
+        </div>
+        <div class="item-takeaway">duplicate tag of the same bug-fix release — https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.7 — Same release as the 'stable' tag above (internal span-attribute fix), just a differently-named tag.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          n8n@1.123.82
+        </div>
+        <div class="item-takeaway">dependency bump only (adm-zip) — https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.82 — Single dependency version bump, no functional change.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          n8n@2.41.3
+        </div>
+        <div class="item-takeaway">duplicate internal bug-fix tag — https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.3 — Same internal span-attribute bug fix as the other n8n tags claimed tonight, just another tag name.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          n8n 'beta' tag
+        </div>
+        <div class="item-takeaway">duplicate of the same 2.41.3 bug fix — https://github.com/n8n-io/n8n/releases/tag/beta — Same 2.41.3 internal bug fix under a fourth tag name.</div>
+        <div class="item-meta">
+          <span>gh-n8n</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/blog/the-vercel-bug-bounty-program-is-now-publicly-available" target="_blank" rel="noopener">Vercel takes its bug bounty program fully public</a>
+        </div>
+        <div class="item-takeaway">Vercel merged its private HackerOne program and OSS bounty program into a single public bug bounty program, citing AI-assisted research as a reason public programs are now viable (more reports, but also more noise their team has built tooling to filter). Worth knowing if you deploy on Vercel — more eyes on the platform's security is generally good news, and it signals Vercel's security posture is maturing.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/blog/how-klaviyo-shipped-356-internal-apps-in-two-weeks-on-vercel" target="_blank" rel="noopener">Vercel blog: Klaviyo's internal-apps platform case study</a>
+        </div>
+        <div class="item-takeaway">A Vercel-published case study on how Klaviyo built an internal citizen-developer app platform (512 builders, 356 apps) with SSO-gating and centralized secrets. Polished vendor content marketing aimed at enterprise platform teams — not directly applicable to a one-person shop.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          Next.js v16.4.0-canary.45
+        </div>
+        <div class="item-takeaway">internal misc changes only — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.45 — Internal Turbopack/tooling misc changes (deploy adapters, agent-upgrade handoff context, docs tweaks) in a canary build — no new user-facing feature.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          Next.js v16.4.0-canary.44
+        </div>
+        <div class="item-takeaway">internal misc changes only — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.44 — Another canary build with only internal Turbopack/test-infra changes — no new user-facing feature, and effectively superseded by canary.45 above.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark" target="_blank" rel="noopener">Liquid AI ships LFM2.5-VL-DSpark vision-language model</a>
+        </div>
+        <div class="item-takeaway">Liquid AI announced LFM2.5-VL-DSpark, a new vision-language model release, but the source page's body text didn't come through in the fetch — only the title and URL are confirmed. Worth a glance if you're evaluating small/efficient VLMs, but there isn't enough here yet to say what's actually new.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/" target="_blank" rel="noopener">Pragmatic Engineer: a CPU shortage is emerging, driven by AI agents</a>
+        </div>
+        <div class="item-takeaway">Gergely Orosz flags a developing CPU shortage, following the GPU and memory shortages, attributed to AI agents burning much more CPU via tool use than typical workloads. If real and sustained, this could push up compute costs for anyone running agent-heavy workflows (including local dev loops and CI). Only a one-line teaser came through from the feed — no figures or timeline yet.</div>
+        <div class="item-meta">
+          <span>pragmatic-engineer</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/ainews-the-future-of-latent-space" target="_blank" rel="noopener">Latent Space: 'The Future of Latent Space' meta post</a>
+        </div>
+        <div class="item-takeaway">A short, self-referential newsletter post about the newsletter itself being 'open for business.' No substantive content.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.latent.space/p/runway" target="_blank" rel="noopener">Runway's WorldPrompt and 'GWM Worlds 2': real-time world models</a>
+        </div>
+        <div class="item-takeaway">Latent Space covers Runway's WorldPrompt work, where a 'GWM Worlds 2' model uses persistent context and timed actions to steer real-time generative video/audio world models. Only a short teaser came through — interesting direction for real-time generative media but not something actionable for a typical solo software business today.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.latent.space/p/foundries-vs-navigators-lowering" target="_blank" rel="noopener">Latent Space guest post: 'Foundries vs Navigators' (economics of science)</a>
+        </div>
+        <div class="item-takeaway">A guest essay on how cheap AI-assisted thinking versus still-expensive 'doing' is reshaping how research organizations operate. Thoughtful but editorial/econ-of-science content, not a decision-changing signal for a solo software builder.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          commit-rewriter 0.2
+        </div>
+        <div class="item-takeaway">adds non-default-branch support — https://simonwillison.net/2026/Sep/24/commit-rewriter/ — Simon Willison's small commit-rewriter CLI tool added support for targeting branches other than the default. A real but very small, niche feature addition.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://simonwillison.net/2026/Sep/24/datasette/" target="_blank" rel="noopener">Datasette 1.0a41: OpenTelemetry support, unified modal Web Component</a>
+        </div>
+        <div class="item-takeaway">Simon Willison's Datasette shipped OpenTelemetry support (contributed by Alec Garcia) and a refactor of all modal dialogs into a single, documented Web Component that plugin authors can reuse. Concrete, shippable improvements to a real tool rather than a dependency bump — useful if you run Datasette or build plugins for it.</div>
+        <div class="item-meta">
+          <span>simon-willison</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html" target="_blank" rel="noopener">F-Droid 2.0 released</a>
+        </div>
+        <div class="item-takeaway">F-Droid, the alternative Android app store, released version 2.0. Not relevant to this audience's software/agent-building work.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://bastardica.mitpit.com" target="_blank" rel="noopener">Show HN: 'cursed fonts' ligature joke tool</a>
+        </div>
+        <div class="item-takeaway">A joke tool that abuses OpenType ligatures to mix fonts together, running client-side via Python-in-WASM. Fun HN novelty, not a serious signal.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/devdotfast/whiteboard" target="_blank" rel="noopener">Whiteboard (YC W26): open-source IDE for humans + agents to architect software together</a>
+        </div>
+        <div class="item-takeaway">A YC-backed team launched Whiteboard, an open-source desktop IDE (built on Code-OSS) where an agent draws diagrams — sequence, ERD, architecture — on a shared canvas while you work, and clicking a diagram element jumps to the underlying code. It plugs into Claude Code and Codex via an SDK, and includes a semantic AST-aware diff viewer written in Rust. This is directly relevant to anyone doing serious agent-assisted development: it's a concrete attempt at solving the 'I can't see what the agent actually did' problem.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://dynomight.substack.com/p/liver" target="_blank" rel="noopener">'Why is the liver so weirdly regenerative?' (HN)</a>
+        </div>
+        <div class="item-takeaway">A biology blog post on liver regeneration. Not relevant to software/agent building.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://2dwillneverdie.com/" target="_blank" rel="noopener">'2DWillNeverDie' (HN, no content fetched)</a>
+        </div>
+        <div class="item-takeaway">Link surfaced on Hacker News with no fetchable body content and an ambiguous title; can't be evaluated for substance.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.youtube.com/watch?v=vDjW_dRyKXY" target="_blank" rel="noopener">Rails World 2026 opening keynote (video, no content fetched)</a>
+        </div>
+        <div class="item-takeaway">A YouTube video of the Rails World 2026 opening keynote surfaced via HN, with no transcript or description fetched. Not evaluable, and not clearly relevant to this audience's toolchain.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://linebender.org/blog/fearless-simd-1-0/" target="_blank" rel="noopener">Fearless SIMD v1.0 (Rust SIMD library)</a>
+        </div>
+        <div class="item-takeaway">A Rust SIMD abstraction library hit a 1.0 release. Niche systems-programming release with no fetched detail; low relevance to this audience's typical stack.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://electrek.co/2026/09/23/toyota-best-selling-corolla-electric/" target="_blank" rel="noopener">Toyota takes the Corolla electric</a>
+        </div>
+        <div class="item-takeaway">Automotive news about an electric Corolla. Not relevant to software/agent building.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ahmedhossamdev.com/writing/my-weird-new-hobby-wandering-around-tokyo/" target="_blank" rel="noopener">Personal blog: wandering Tokyo on Google Maps</a>
+        </div>
+        <div class="item-takeaway">A personal hobby blog post about exploring Tokyo virtually via Google Maps. Not relevant to software/agent building.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://resobscura.substack.com/p/ai-labs-need-to-start-funding-historical" target="_blank" rel="noopener">Using LLMs to trace alchemical knowledge in 17th-century letters</a>
+        </div>
+        <div class="item-takeaway">A history-of-science piece on using LLMs to help decode 17th-century alchemical correspondence. Interesting application but not relevant to this audience's day-to-day building.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://macanorak.com/two-tier-encryption-in-the-uk/" target="_blank" rel="noopener">'Two-tier encryption' policy piece (UK)</a>
+        </div>
+        <div class="item-takeaway">A policy/politics blog post about UK encryption policy. Not directly actionable for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/" target="_blank" rel="noopener">Google's 'Project Suncatcher' aims to put ML infrastructure in space</a>
+        </div>
+        <div class="item-takeaway">Google is reportedly exploring putting ML compute infrastructure into orbit ('Project Suncatcher'), per NYT coverage referenced from Google's own research blog. This is a long-horizon infrastructure bet, not something with near-term relevance to a solo developer, but worth tracking as a signal of how seriously compute-constrained hyperscalers are.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://launchvideo.io" target="_blank" rel="noopener">'Opus 5.5 is good at explainer videos' (launchvideo.io)</a>
+        </div>
+        <div class="item-takeaway">A promotional-looking post/tool touting Opus 5.5's ability to make explainer videos, linking to a video-generation product site. Reads as marketing for a specific tool rather than a substantive signal.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.datahaskell.org/blog/2026/09/18/writing-parquet-files-using-haskell.html" target="_blank" rel="noopener">Writing Parquet files using Haskell</a>
+        </div>
+        <div class="item-takeaway">A technical blog post on implementing a Parquet writer in Haskell. Niche-language systems programming, low relevance to this audience's typical Node/JS-based stack.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ahelwer.ca/post/2026-09-21-concurrency-textbook/" target="_blank" rel="noopener">Book review: 'Is parallel programming hard, and what can you do about it?'</a>
+        </div>
+        <div class="item-takeaway">A book review covering a classic concurrency textbook. Educational but not a timely or decision-relevant signal.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://grantland.com/features/diplomacy-the-board-game-of-the-alpha-nerds/" target="_blank" rel="noopener">'The Board Game of the Alpha Nerds' (2014 reprint)</a>
+        </div>
+        <div class="item-takeaway">A 2014 Grantland feature about the board game Diplomacy, resurfaced on HN. Old, off-topic content with no relevance to software building.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.landeconomics.org/p/california-is-chasing-wealth-that" target="_blank" rel="noopener">'California is chasing wealth that has feet'</a>
+        </div>
+        <div class="item-takeaway">An economics/policy blog post on California's tax base and wealth migration. Not relevant to software/agent building.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.arusekk.pl/posts/srht-account-takeover/" target="_blank" rel="noopener">Sourcehut account takeover via build-log XSS in ansi2html</a>
+        </div>
+        <div class="item-takeaway">A researcher walked through an account-takeover chain on Sourcehut that started with an XSS vulnerability in the ansi2html library used to render CI build logs as HTML. The generalizable lesson: any dev tool that renders ANSI-coded terminal output (build logs, CI dashboards) as HTML without careful sanitization is a plausible XSS vector, not just a Sourcehut-specific bug. Worth a five-minute check if you render terminal/log output as HTML anywhere in your own tools.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 16b796cd-6171-4d03-83f3-610ea911ce8d
+Started: 2026-09-26T06:03:42.985Z
+Completed: 2026-09-26T06:25:56.166Z
+
+## Worth attention
+
+- **Cloudflare discloses cross-tenant data exposure vulnerability in Containers**
+  https://blog.cloudflare.com/containers-cross-tenant-vulnerability/
+  Cloudflare disclosed and fixed a vulnerability in its Containers product where residual disk data from a previous workload could leak to a different tenant. This is a real cross-tenant isolation failure at a major cloud provider, found by external researchers and publicly written up with remediation details. If you run workloads on Cloudflare Containers (or any shared-container platform), check whether you rely on ephemeral disk state for anything sensitive and review Cloudflare's advisory.
+- **Whiteboard (YC W26): open-source IDE for humans + agents to architect software together**
+  https://github.com/devdotfast/whiteboard
+  A YC-backed team launched Whiteboard, an open-source desktop IDE (built on Code-OSS) where an agent draws diagrams — sequence, ERD, architecture — on a shared canvas while you work, and clicking a diagram element jumps to the underlying code. It plugs into Claude Code and Codex via an SDK, and includes a semantic AST-aware diff viewer written in Rust. This is directly relevant to anyone doing serious agent-assisted development: it's a concrete attempt at solving the 'I can't see what the agent actually did' problem.
+- **Sourcehut account takeover via build-log XSS in ansi2html**
+  https://blog.arusekk.pl/posts/srht-account-takeover/
+  A researcher walked through an account-takeover chain on Sourcehut that started with an XSS vulnerability in the ansi2html library used to render CI build logs as HTML. The generalizable lesson: any dev tool that renders ANSI-coded terminal output (build logs, CI dashboards) as HTML without careful sanitization is a plausible XSS vector, not just a Sourcehut-specific bug. Worth a five-minute check if you render terminal/log output as HTML anywhere in your own tools.
+- **Vercel takes its bug bounty program fully public**
+  https://vercel.com/blog/the-vercel-bug-bounty-program-is-now-publicly-available
+  Vercel merged its private HackerOne program and OSS bounty program into a single public bug bounty program, citing AI-assisted research as a reason public programs are now viable (more reports, but also more noise their team has built tooling to filter). Worth knowing if you deploy on Vercel — more eyes on the platform's security is generally good news, and it signals Vercel's security posture is maturing.
+- **Pragmatic Engineer: a CPU shortage is emerging, driven by AI agents**
+  https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/
+  Gergely Orosz flags a developing CPU shortage, following the GPU and memory shortages, attributed to AI agents burning much more CPU via tool use than typical workloads. If real and sustained, this could push up compute costs for anyone running agent-heavy workflows (including local dev loops and CI). Only a one-line teaser came through from the feed — no figures or timeline yet.
+- **Datasette 1.0a41: OpenTelemetry support, unified modal Web Component**
+  https://simonwillison.net/2026/Sep/24/datasette/
+  Simon Willison's Datasette shipped OpenTelemetry support (contributed by Alec Garcia) and a refactor of all modal dialogs into a single, documented Web Component that plugin authors can reuse. Concrete, shippable improvements to a real tool rather than a dependency bump — useful if you run Datasette or build plugins for it.
+- **Liquid AI ships LFM2.5-VL-DSpark vision-language model**
+  https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark
+  Liquid AI announced LFM2.5-VL-DSpark, a new vision-language model release, but the source page's body text didn't come through in the fetch — only the title and URL are confirmed. Worth a glance if you're evaluating small/efficient VLMs, but there isn't enough here yet to say what's actually new.
+- **Runway's WorldPrompt and 'GWM Worlds 2': real-time world models**
+  https://www.latent.space/p/runway
+  Latent Space covers Runway's WorldPrompt work, where a 'GWM Worlds 2' model uses persistent context and timed actions to steer real-time generative video/audio world models. Only a short teaser came through — interesting direction for real-time generative media but not something actionable for a typical solo software business today.
+- **Google's 'Project Suncatcher' aims to put ML infrastructure in space**
+  https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/
+  Google is reportedly exploring putting ML compute infrastructure into orbit ('Project Suncatcher'), per NYT coverage referenced from Google's own research blog. This is a long-horizon infrastructure bet, not something with near-term relevance to a solo developer, but worth tracking as a signal of how seriously compute-constrained hyperscalers are.
+
+## Full digest
+
+- [R] [reddit-saas] Reddit r/SaaS: 'anyone taken equity to build in a crowded space' thread — https://www.reddit.com/r/SaaS/comments/1wpheua/anyone_actually_taken_equity_to_build_in_a/ — A Reddit thread asking for anecdotes about taking equity/unpaid work to build in a crowded SaaS category. Personal anecdote-seeking, no new information or actionable signal for a solo builder.
+- [R] [reddit-saas] Reddit r/SaaS: 'New Product' — beginner pricing/launch questions — https://www.reddit.com/r/SaaS/comments/1wpjj3z/new_product/ — A first-time builder asks basic launch and pricing questions about a healthcare app on Reddit. Not a signal, just a beginner asking for advice.
+- [R] [reddit-saas] Reddit r/SaaS: 'I have a few opportunities' — solicitation post — https://www.reddit.com/r/SaaS/comments/1wpn0q1/i_have_a_few_opportunities/ — A vague solicitation post offering unspecified 'opportunities' to founders and marketers. Reads as spam/promotional outreach.
+- [R] [reddit-saas] Reddit r/SaaS: mover shares gig-platform marketing anecdote — https://www.reddit.com/r/SaaS/comments/1wpd8cg/advice_only_not_selling_anything/ — A long, rambling personal anecdote from a moving-services gig worker about marketing platforms and business identifiers. Not software-relevant and not actionable for a solo software builder.
+- [R] [reddit-saas] Reddit r/SaaS: 'best SaaS marketing tools' thread — https://www.reddit.com/r/SaaS/comments/1wp9lyt/what_are_the_best_saas_marketing_tools_for/ — A generic question asking which SaaS marketing tools actually work. Crowdsourced opinion thread, no concrete information.
+- [P] [cloudflare-blog] Cloudflare discloses cross-tenant data exposure vulnerability in Containers — https://blog.cloudflare.com/containers-cross-tenant-vulnerability/ — Cloudflare disclosed and fixed a vulnerability in its Containers product where residual disk data from a previous workload could leak to a different tenant. This is a real cross-tenant isolation failure at a major cloud provider, found by external researchers and publicly written up with remediation details. If you run workloads on Cloudflare Containers (or any shared-container platform), check whether you rely on ephemeral disk state for anything sensitive and review Cloudflare's advisory.
+- [R] [gh-n8n] n8n 'stable' release tag — internal bug fix only — https://github.com/n8n-io/n8n/releases/tag/stable — Pure internal bug fix (span attribute propagation), no user-facing change.
+- [R] [gh-n8n] n8n@2.40.7 — duplicate tag of the same bug-fix release — https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.7 — Same release as the 'stable' tag above (internal span-attribute fix), just a differently-named tag.
+- [R] [gh-n8n] n8n@1.123.82 — dependency bump only (adm-zip) — https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.82 — Single dependency version bump, no functional change.
+- [R] [gh-n8n] n8n@2.41.3 — duplicate internal bug-fix tag — https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.3 — Same internal span-attribute bug fix as the other n8n tags claimed tonight, just another tag name.
+- [R] [gh-n8n] n8n 'beta' tag — duplicate of the same 2.41.3 bug fix — https://github.com/n8n-io/n8n/releases/tag/beta — Same 2.41.3 internal bug fix under a fourth tag name.
+- [P] [vercel-changelog] Vercel takes its bug bounty program fully public — https://vercel.com/blog/the-vercel-bug-bounty-program-is-now-publicly-available — Vercel merged its private HackerOne program and OSS bounty program into a single public bug bounty program, citing AI-assisted research as a reason public programs are now viable (more reports, but also more noise their team has built tooling to filter). Worth knowing if you deploy on Vercel — more eyes on the platform's security is generally good news, and it signals Vercel's security posture is maturing.
+- [R] [vercel-changelog] Vercel blog: Klaviyo's internal-apps platform case study — https://vercel.com/blog/how-klaviyo-shipped-356-internal-apps-in-two-weeks-on-vercel — A Vercel-published case study on how Klaviyo built an internal citizen-developer app platform (512 builders, 356 apps) with SSO-gating and centralized secrets. Polished vendor content marketing aimed at enterprise platform teams — not directly applicable to a one-person shop.
+- [R] [gh-nextjs] Next.js v16.4.0-canary.45 — internal misc changes only — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.45 — Internal Turbopack/tooling misc changes (deploy adapters, agent-upgrade handoff context, docs tweaks) in a canary build — no new user-facing feature.
+- [R] [gh-nextjs] Next.js v16.4.0-canary.44 — internal misc changes only — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.44 — Another canary build with only internal Turbopack/test-infra changes — no new user-facing feature, and effectively superseded by canary.45 above.
+- [M] [huggingface-blog] Liquid AI ships LFM2.5-VL-DSpark vision-language model — https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark — Liquid AI announced LFM2.5-VL-DSpark, a new vision-language model release, but the source page's body text didn't come through in the fetch — only the title and URL are confirmed. Worth a glance if you're evaluating small/efficient VLMs, but there isn't enough here yet to say what's actually new.
+- [M] [pragmatic-engineer] Pragmatic Engineer: a CPU shortage is emerging, driven by AI agents — https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/ — Gergely Orosz flags a developing CPU shortage, following the GPU and memory shortages, attributed to AI agents burning much more CPU via tool use than typical workloads. If real and sustained, this could push up compute costs for anyone running agent-heavy workflows (including local dev loops and CI). Only a one-line teaser came through from the feed — no figures or timeline yet.
+- [R] [latent-space] Latent Space: 'The Future of Latent Space' meta post — https://www.latent.space/p/ainews-the-future-of-latent-space — A short, self-referential newsletter post about the newsletter itself being 'open for business.' No substantive content.
+- [M] [latent-space] Runway's WorldPrompt and 'GWM Worlds 2': real-time world models — https://www.latent.space/p/runway — Latent Space covers Runway's WorldPrompt work, where a 'GWM Worlds 2' model uses persistent context and timed actions to steer real-time generative video/audio world models. Only a short teaser came through — interesting direction for real-time generative media but not something actionable for a typical solo software business today.
+- [R] [latent-space] Latent Space guest post: 'Foundries vs Navigators' (economics of science) — https://www.latent.space/p/foundries-vs-navigators-lowering — A guest essay on how cheap AI-assisted thinking versus still-expensive 'doing' is reshaping how research organizations operate. Thoughtful but editorial/econ-of-science content, not a decision-changing signal for a solo software builder.
+- [R] [simon-willison] commit-rewriter 0.2 — adds non-default-branch support — https://simonwillison.net/2026/Sep/24/commit-rewriter/ — Simon Willison's small commit-rewriter CLI tool added support for targeting branches other than the default. A real but very small, niche feature addition.
+- [P] [simon-willison] Datasette 1.0a41: OpenTelemetry support, unified modal Web Component — https://simonwillison.net/2026/Sep/24/datasette/ — Simon Willison's Datasette shipped OpenTelemetry support (contributed by Alec Garcia) and a refactor of all modal dialogs into a single, documented Web Component that plugin authors can reuse. Concrete, shippable improvements to a real tool rather than a dependency bump — useful if you run Datasette or build plugins for it.
+- [R] [hn-top] F-Droid 2.0 released — https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html — F-Droid, the alternative Android app store, released version 2.0. Not relevant to this audience's software/agent-building work.
+- [R] [hn-top] Show HN: 'cursed fonts' ligature joke tool — https://bastardica.mitpit.com — A joke tool that abuses OpenType ligatures to mix fonts together, running client-side via Python-in-WASM. Fun HN novelty, not a serious signal.
+- [P] [hn-top] Whiteboard (YC W26): open-source IDE for humans + agents to architect software together — https://github.com/devdotfast/whiteboard — A YC-backed team launched Whiteboard, an open-source desktop IDE (built on Code-OSS) where an agent draws diagrams — sequence, ERD, architecture — on a shared canvas while you work, and clicking a diagram element jumps to the underlying code. It plugs into Claude Code and Codex via an SDK, and includes a semantic AST-aware diff viewer written in Rust. This is directly relevant to anyone doing serious agent-assisted development: it's a concrete attempt at solving the 'I can't see what the agent actually did' problem.
+- [R] [hn-top] 'Why is the liver so weirdly regenerative?' (HN) — https://dynomight.substack.com/p/liver — A biology blog post on liver regeneration. Not relevant to software/agent building.
+- [R] [hn-top] '2DWillNeverDie' (HN, no content fetched) — https://2dwillneverdie.com/ — Link surfaced on Hacker News with no fetchable body content and an ambiguous title; can't be evaluated for substance.
+- [R] [hn-top] Rails World 2026 opening keynote (video, no content fetched) — https://www.youtube.com/watch?v=vDjW_dRyKXY — A YouTube video of the Rails World 2026 opening keynote surfaced via HN, with no transcript or description fetched. Not evaluable, and not clearly relevant to this audience's toolchain.
+- [R] [hn-top] Fearless SIMD v1.0 (Rust SIMD library) — https://linebender.org/blog/fearless-simd-1-0/ — A Rust SIMD abstraction library hit a 1.0 release. Niche systems-programming release with no fetched detail; low relevance to this audience's typical stack.
+- [R] [hn-top] Toyota takes the Corolla electric — https://electrek.co/2026/09/23/toyota-best-selling-corolla-electric/ — Automotive news about an electric Corolla. Not relevant to software/agent building.
+- [R] [hn-top] Personal blog: wandering Tokyo on Google Maps — https://ahmedhossamdev.com/writing/my-weird-new-hobby-wandering-around-tokyo/ — A personal hobby blog post about exploring Tokyo virtually via Google Maps. Not relevant to software/agent building.
+- [R] [hn-top] Using LLMs to trace alchemical knowledge in 17th-century letters — https://resobscura.substack.com/p/ai-labs-need-to-start-funding-historical — A history-of-science piece on using LLMs to help decode 17th-century alchemical correspondence. Interesting application but not relevant to this audience's day-to-day building.
+- [R] [hn-top] 'Two-tier encryption' policy piece (UK) — https://macanorak.com/two-tier-encryption-in-the-uk/ — A policy/politics blog post about UK encryption policy. Not directly actionable for a solo software builder.
+- [M] [hn-top] Google's 'Project Suncatcher' aims to put ML infrastructure in space — https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/ — Google is reportedly exploring putting ML compute infrastructure into orbit ('Project Suncatcher'), per NYT coverage referenced from Google's own research blog. This is a long-horizon infrastructure bet, not something with near-term relevance to a solo developer, but worth tracking as a signal of how seriously compute-constrained hyperscalers are.
+- [R] [hn-top] 'Opus 5.5 is good at explainer videos' (launchvideo.io) — https://launchvideo.io — A promotional-looking post/tool touting Opus 5.5's ability to make explainer videos, linking to a video-generation product site. Reads as marketing for a specific tool rather than a substantive signal.
+- [R] [hn-top] Writing Parquet files using Haskell — https://www.datahaskell.org/blog/2026/09/18/writing-parquet-files-using-haskell.html — A technical blog post on implementing a Parquet writer in Haskell. Niche-language systems programming, low relevance to this audience's typical Node/JS-based stack.
+- [R] [hn-top] Book review: 'Is parallel programming hard, and what can you do about it?' — https://ahelwer.ca/post/2026-09-21-concurrency-textbook/ — A book review covering a classic concurrency textbook. Educational but not a timely or decision-relevant signal.
+- [R] [hn-top] 'The Board Game of the Alpha Nerds' (2014 reprint) — https://grantland.com/features/diplomacy-the-board-game-of-the-alpha-nerds/ — A 2014 Grantland feature about the board game Diplomacy, resurfaced on HN. Old, off-topic content with no relevance to software building.
+- [R] [hn-top] 'California is chasing wealth that has feet' — https://blog.landeconomics.org/p/california-is-chasing-wealth-that — An economics/policy blog post on California's tax base and wealth migration. Not relevant to software/agent building.
+- [P] [hn-top] Sourcehut account takeover via build-log XSS in ansi2html — https://blog.arusekk.pl/posts/srht-account-takeover/ — A researcher walked through an account-takeover chain on Sourcehut that started with an XSS vulnerability in the ansi2html library used to render CI build logs as HTML. The generalizable lesson: any dev tool that renders ANSI-coded terminal output (build logs, CI dashboards) as HTML without careful sanitization is a plausible XSS vector, not just a Sourcehut-specific bug. Worth a five-minute check if you render terminal/log output as HTML anywhere in your own tools.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
