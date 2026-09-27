@@ -5,21 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>September 26, 2026 report log — The Nightly Librarian</title>
-  <meta name="description" content="9 stories cleared the bar, led by Cloudflare discloses cross-tenant data exposure vulnerability in Containers, Whiteboard (YC W26): open-source IDE for">
+  <meta name="description" content="6 stories cleared the bar, led by Push images to Vercel Container Registry from GitHub Actions, Revealing the details of how OpenAI agents hacked Hugging">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-09-26/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="September 26, 2026 report log | The Nightly Librarian">
-  <meta property="og:description" content="9 stories cleared the bar, led by Cloudflare discloses cross-tenant data exposure vulnerability in Containers, Whiteboard (YC W26): open-source IDE for">
+  <meta property="og:description" content="6 stories cleared the bar, led by Push images to Vercel Container Registry from GitHub Actions, Revealing the details of how OpenAI agents hacked Hugging">
   <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-09-26/">
   <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="September 26, 2026 report log | The Nightly Librarian">
-  <meta name="twitter:description" content="9 stories cleared the bar, led by Cloudflare discloses cross-tenant data exposure vulnerability in Containers, Whiteboard (YC W26): open-source IDE for">
+  <meta name="twitter:description" content="6 stories cleared the bar, led by Push images to Vercel Container Registry from GitHub Actions, Revealing the details of how OpenAI agents hacked Hugging">
   <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
   <link rel="stylesheet" href="/style.css">
@@ -36,7 +36,7 @@
     </div>
     <div class="dateline">
       <span>September 26, 2026 · Report log</span>
-      <span>Sep 26, 2026, 2:25 AM</span>
+      <span>Sep 26, 2026, 7:04 AM</span>
     </div>
   </header>
   <main>
@@ -44,57 +44,42 @@
     <h1>September 26, 2026</h1>
     <div class="summary-card">
       <div class="eyebrow">Report summary</div>
-      <p>9 stories cleared the bar, led by Cloudflare discloses cross-tenant data exposure vulnerability in Containers, Whiteboard (YC W26): open-source IDE for humans + agents to architect software together, and Sourcehut account takeover via build-log XSS in ansi2html.</p>
+      <p>6 stories cleared the bar, led by Push images to Vercel Container Registry from GitHub Actions, Revealing the details of how OpenAI agents hacked Hugging Face, and Pixel Canary is now available in stealth for free on AI Gateway.</p>
       <div class="meta" style="margin-top:0.4rem;">
-        <span>9 worth-attention items</span><span>40 digest lines</span>
+        <span>6 worth-attention items</span><span>40 digest lines</span>
       </div>
     </div>
     <h2>Worth attention</h2>
     <div class="item-stack">
 
       <div class="item">
-        <div class="item-title"><a href="https://blog.cloudflare.com/containers-cross-tenant-vulnerability/" target="_blank" rel="noopener">Cloudflare discloses cross-tenant data exposure vulnerability in Containers</a></div>
-        <div class="item-takeaway">Cloudflare disclosed and fixed a vulnerability in its Containers product where residual disk data from a previous workload could leak to a different tenant. This is a real cross-tenant isolation failure at a major cloud provider, found by external researchers and publicly written up with remediation details. If you run workloads on Cloudflare Containers (or any shared-container platform), check whether you rely on ephemeral disk state for anything sensitive and review Cloudflare's advisory.</div>
+        <div class="item-title"><a href="https://vercel.com/changelog/vcr-login-github-action" target="_blank" rel="noopener">Push images to Vercel Container Registry from GitHub Actions</a></div>
+        <div class="item-takeaway">Vercel added a GitHub Action that logs into Vercel Container Registry via GitHub OIDC, issuing a short-lived token instead of storing registry credentials.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://github.com/devdotfast/whiteboard" target="_blank" rel="noopener">Whiteboard (YC W26): open-source IDE for humans + agents to architect software together</a></div>
-        <div class="item-takeaway">A YC-backed team launched Whiteboard, an open-source desktop IDE (built on Code-OSS) where an agent draws diagrams — sequence, ERD, architecture — on a shared canvas while you work, and clicking a diagram element jumps to the underlying code. It plugs into Claude Code and Codex via an SDK, and includes a semantic AST-aware diff viewer written in Rust. This is directly relevant to anyone doing serious agent-assisted development: it's a concrete attempt at solving the 'I can't see what the agent actually did' problem.</div>
+        <div class="item-title"><a href="https://swarmtraces.org/" target="_blank" rel="noopener">Revealing the details of how OpenAI agents hacked Hugging Face</a></div>
+        <div class="item-takeaway">Swarmtraces reconstructs alleged agent activity in the Hugging Face incident, including attempts at persistence, credential escalation, DNS exfiltration, and CAPTCHA bypass; the authors explicitly say the reconstruction is incomplete and outcomes are often unknown.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://blog.arusekk.pl/posts/srht-account-takeover/" target="_blank" rel="noopener">Sourcehut account takeover via build-log XSS in ansi2html</a></div>
-        <div class="item-takeaway">A researcher walked through an account-takeover chain on Sourcehut that started with an XSS vulnerability in the ansi2html library used to render CI build logs as HTML. The generalizable lesson: any dev tool that renders ANSI-coded terminal output (build logs, CI dashboards) as HTML without careful sanitization is a plausible XSS vector, not just a Sourcehut-specific bug. Worth a five-minute check if you render terminal/log output as HTML anywhere in your own tools.</div>
+        <div class="item-title"><a href="https://vercel.com/changelog/pixel-canary-is-now-available-in-stealth-for-free-on-ai-gateway" target="_blank" rel="noopener">Pixel Canary is now available in stealth for free on AI Gateway</a></div>
+        <div class="item-takeaway">Vercel AI Gateway added stealth/pixel-canary free for a limited time; Vercel reports strong Next.js eval results but says ZDR is unavailable and prompts may be used for training.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://vercel.com/blog/the-vercel-bug-bounty-program-is-now-publicly-available" target="_blank" rel="noopener">Vercel takes its bug bounty program fully public</a></div>
-        <div class="item-takeaway">Vercel merged its private HackerOne program and OSS bounty program into a single public bug bounty program, citing AI-assisted research as a reason public programs are now viable (more reports, but also more noise their team has built tooling to filter). Worth knowing if you deploy on Vercel — more eyes on the platform's security is generally good news, and it signals Vercel's security posture is maturing.</div>
+        <div class="item-title"><a href="https://vercel.com/changelog/vercel-sandbox-now-supports-memory-observability" target="_blank" rel="noopener">Vercel Sandbox now supports memory observability</a></div>
+        <div class="item-takeaway">Vercel Sandbox now exposes memory usage in the dashboard, query builder, and vercel metrics CLI, including averages, P75, P95, and an 85% ceiling reference.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/" target="_blank" rel="noopener">Pragmatic Engineer: a CPU shortage is emerging, driven by AI agents</a></div>
-        <div class="item-takeaway">Gergely Orosz flags a developing CPU shortage, following the GPU and memory shortages, attributed to AI agents burning much more CPU via tool use than typical workloads. If real and sustained, this could push up compute costs for anyone running agent-heavy workflows (including local dev loops and CI). Only a one-line teaser came through from the feed — no figures or timeline yet.</div>
+        <div class="item-title"><a href="https://blog.cloudflare.com/turnstile-spin/" target="_blank" rel="noopener">Agents can now set up your website’s security with Turnstile Spin</a></div>
+        <div class="item-takeaway">Cloudflare introduced Turnstile Spin, an agent-assisted setup flow aimed at preventing the common mistake of adding Turnstile without server-side token validation.</div>
       </div>
 
       <div class="item">
-        <div class="item-title"><a href="https://simonwillison.net/2026/Sep/24/datasette/" target="_blank" rel="noopener">Datasette 1.0a41: OpenTelemetry support, unified modal Web Component</a></div>
-        <div class="item-takeaway">Simon Willison's Datasette shipped OpenTelemetry support (contributed by Alec Garcia) and a refactor of all modal dialogs into a single, documented Web Component that plugin authors can reuse. Concrete, shippable improvements to a real tool rather than a dependency bump — useful if you run Datasette or build plugins for it.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark" target="_blank" rel="noopener">Liquid AI ships LFM2.5-VL-DSpark vision-language model</a></div>
-        <div class="item-takeaway">Liquid AI announced LFM2.5-VL-DSpark, a new vision-language model release, but the source page's body text didn't come through in the fetch — only the title and URL are confirmed. Worth a glance if you're evaluating small/efficient VLMs, but there isn't enough here yet to say what's actually new.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://www.latent.space/p/runway" target="_blank" rel="noopener">Runway's WorldPrompt and 'GWM Worlds 2': real-time world models</a></div>
-        <div class="item-takeaway">Latent Space covers Runway's WorldPrompt work, where a 'GWM Worlds 2' model uses persistent context and timed actions to steer real-time generative video/audio world models. Only a short teaser came through — interesting direction for real-time generative media but not something actionable for a typical solo software business today.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title"><a href="https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/" target="_blank" rel="noopener">Google's 'Project Suncatcher' aims to put ML infrastructure in space</a></div>
-        <div class="item-takeaway">Google is reportedly exploring putting ML compute infrastructure into orbit ('Project Suncatcher'), per NYT coverage referenced from Google's own research blog. This is a long-horizon infrastructure bet, not something with near-term relevance to a solo developer, but worth tracking as a signal of how seriously compute-constrained hyperscalers are.</div>
+        <div class="item-title"><a href="https://vercel.com/blog/state-of-agent-skills" target="_blank" rel="noopener">State of agent skills</a></div>
+        <div class="item-takeaway">Vercel reports that skills.sh passed one million listings and nearly 280 million installs, with demand concentrated in a small set of reusable workflows.</div>
       </div>
     </div>
     <h2>Full digest</h2>
@@ -103,9 +88,64 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1wpheua/anyone_actually_taken_equity_to_build_in_a/" target="_blank" rel="noopener">Reddit r/SaaS: 'anyone taken equity to build in a crowded space' thread</a>
+          <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.6.3" target="_blank" rel="noopener">langchain-fireworks==1.6.3</a>
         </div>
-        <div class="item-takeaway">A Reddit thread asking for anecdotes about taking equity/unpaid work to build in a crowded SaaS category. Personal anecdote-seeking, no new information or actionable signal for a solo builder.</div>
+        <div class="item-takeaway">Changes since langchain-fireworks==1.6.2 release(fireworks): 1.6.3 (#40834) fix(fireworks): declare native PDF inputs unsupported (#40814) fix(fireworks): preserve malformed tool arguments as diagnostic JSON (#40818) cho</div>
+        <div class="item-meta">
+          <span>gh-langchain</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://jev-pokemon.vercel.app/" target="_blank" rel="noopener">Show HN: Jev Plays Pokémon Red</a>
+        </div>
+        <div class="item-takeaway">Hey HN! Wanted to share a fun project I&amp;#x27;ve been hacking on. Given Jev can make decisions really fast (but not fast enough to play Doom yet sadly), I wanted to try and push it to play a more complex game than Tetris.</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://gmays.com/making-math-automatic-with-mathy/" target="_blank" rel="noopener">Show HN: Make math automatic with Mathy</a>
+        </div>
+        <div class="item-takeaway">https:&amp;#x2F;&amp;#x2F;mathy.game&amp;#x2F; https:&amp;#x2F;&amp;#x2F;mathy.game&amp;#x2F;app https:&amp;#x2F;&amp;#x2F;apps.apple.com&amp;#x2F;us&amp;#x2F;app&amp;#x2F;mathy-build-math-automaticity&amp;#x2F;...</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.doom-or-bloom.com" target="_blank" rel="noopener">Show HN: Doom or Bloom, map your AI worldview</a>
+        </div>
+        <div class="item-takeaway">Map your AI worldview by answering a few questions, and see how you compare with others. only takes a few minutes &amp;amp;&amp;amp; free &amp;amp; open source &amp;amp;&amp;amp; private by default &amp;amp;&amp;amp; powered by Jev I think this is</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://hackeratlas.com/" target="_blank" rel="noopener">Show HN: Hacker Atlas - A map of what Hacker News talks about</a>
+        </div>
+        <div class="item-takeaway">I built a tool to explore HN topics and how they change over time. Currently covers 2024 to today. Is it useful? What&amp;#x27;s missing?</div>
+        <div class="item-meta">
+          <span>hn-show</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wpz98o/why_does_slack_need_over_2000_employees/" target="_blank" rel="noopener">Why does slack need over 2000 employees??</a>
+        </div>
+        <div class="item-takeaway">Can someone explain me why slack a single product based company require over 2000 employees? I’m not able to understand why &amp;#32; submitted by &amp;#32; /u/troop_surfer [link] &amp;#32; [comments]</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -114,9 +154,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          Reddit r/SaaS: 'New Product'
+          <a href="https://www.reddit.com/r/SaaS/comments/1wq9go2/got_my_first_internet_stranger_to_give_me_money/" target="_blank" rel="noopener">Got my first internet stranger to give me money for my product</a>
         </div>
-        <div class="item-takeaway">beginner pricing/launch questions — https://www.reddit.com/r/SaaS/comments/1wpjj3z/new_product/ — A first-time builder asks basic launch and pricing questions about a healthcare app on Reddit. Not a signal, just a beginner asking for advice.</div>
+        <div class="item-takeaway">The question is obviously &amp;quot;how did you do it&amp;quot; I think this one came from Reddit, which obvously doesn&amp;#39;t scale. However, I have another user on the free trial (and I emailed back and forth with them so I kno</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -125,9 +165,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          Reddit r/SaaS: 'I have a few opportunities'
+          <a href="https://www.reddit.com/r/SaaS/comments/1wqcfdu/you_have_1000_to_teach_a_developer_how_to_sell/" target="_blank" rel="noopener">You have $1,000 to teach a developer how to sell. Where does every euro go?</a>
         </div>
-        <div class="item-takeaway">solicitation post — https://www.reddit.com/r/SaaS/comments/1wpn0q1/i_have_a_few_opportunities/ — A vague solicitation post offering unspecified 'opportunities' to founders and marketers. Reads as spam/promotional outreach.</div>
+        <div class="item-takeaway">I&amp;#39;m a dev. I can ship a SaaS in a few weeks I&amp;#39;ve built several: a B2B tool for companies and a management platform for restaurants. My problem: I build well and sell badly. I don&amp;#39;t think like a founder yet. I</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -136,9 +176,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1wpd8cg/advice_only_not_selling_anything/" target="_blank" rel="noopener">Reddit r/SaaS: mover shares gig-platform marketing anecdote</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wqjitm/am_i_the_only_one_seeing_conversion_cycles_of/" target="_blank" rel="noopener">Am I the only one seeing conversion cycles of over 12 months in enterprise SaaS? I have to keep leads on simmer before they actually convert.</a>
         </div>
-        <div class="item-takeaway">A long, rambling personal anecdote from a moving-services gig worker about marketing platforms and business identifiers. Not software-relevant and not actionable for a solo software builder.</div>
+        <div class="item-takeaway">Is it because of the nature of business? Or, is that generally true for enterprise SaaS? Are there more approachable markets out there with smaller conversion cycles? &amp;#32; submitted by &amp;#32; /u/icengine101 [link] &amp;#32;</div>
         <div class="item-meta">
           <span>reddit-saas</span>
         </div>
@@ -147,20 +187,262 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.reddit.com/r/SaaS/comments/1wp9lyt/what_are_the_best_saas_marketing_tools_for/" target="_blank" rel="noopener">Reddit r/SaaS: 'best SaaS marketing tools' thread</a>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wpxexz/the_fear_of_getting_your_saas_cloned_is_overblown/" target="_blank" rel="noopener">The fear of getting your SAAS cloned is overblown in my opinion</a>
         </div>
-        <div class="item-takeaway">A generic question asking which SaaS marketing tools actually work. Crowdsourced opinion thread, no concrete information.</div>
+        <div class="item-takeaway">Software has always been something you can replicate just that AI made the process faster, so even if a saas or an app get&amp;#39;s cloned, how exactly are you going to clone the distribution? Distribution is so tricky that</div>
         <div class="item-meta">
           <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wqji3n/the_most_useful_part_of_a_brand_isnt_the_logo_its/" target="_blank" rel="noopener">The most useful part of a brand isn't the logo. It's the cover it gives you on hard decisions.</a>
+        </div>
+        <div class="item-takeaway">I&amp;#39;ve worked in brand strategy for a long time, and the part that pays off fastest for a small business has nothing to do with how it looks. It&amp;#39;s what it does for your decisions. A lot of owners see branding as a</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wqerrq/agpl_taught_me_my_first_saas_lesson_before/" target="_blank" rel="noopener">AGPL taught me my first SaaS lesson before writing any code: read the LICENSE first</a>
+        </div>
+        <div class="item-takeaway">I'm still in the learning and planning phase before building my first SaaS product , and this week I accidentally learned a painful lesson about open-source licenses. I was browsing tools I imagined using one day: intern</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wqg5qv/what_if_my_web_app_doesnt_lend_itself_to_viral/" target="_blank" rel="noopener">What if my web app doesn’t lend itself to viral UGC? It seems like it’s the only way to get your Saas going these days. - I will not promote.</a>
+        </div>
+        <div class="item-takeaway">I can’t see making a video about what I’m building, let alone anyone would care if they saw my Saas on Insta or TikTok. I think UGC marketing works for B2C but not B2B or a niche category. Anyway, I keep seeing videos ab</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wpx5s1/thanks_claude_for_the_promo_video/" target="_blank" rel="noopener">Thanks, Claude, for the promo video 🙏</a>
+        </div>
+        <div class="item-takeaway">I didn't use any additional skills or MCP's - just plain Claude Code (CLI) I asked him to do a walkthrough of my extension and create a promo video. As far as I understand, he created animations in the browser using JS a</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wqkj7v/do_you_ever_need_to_control_a_file_after_youve/" target="_blank" rel="noopener">Do you ever need to control a file after you've already sent it?</a>
+        </div>
+        <div class="item-takeaway">Ever sent a file and then thought, “Hmm, I wish I could still control this”? I’ve been thinking about that a lot. Usually, once you send a file, you pretty much lose all control over it. But there are cases where you’d w</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wqkf9o/founders_and_support_teams_whats_still_painfully/" target="_blank" rel="noopener">Founders and support teams: what's still painfully manual in your customer-support workflow?</a>
+        </div>
+        <div class="item-takeaway">I'm researching how SaaS companies handle customer support, particularly issues that require checking multiple internal systems. I'm curious about three things: 1. What support tasks still require switching between your</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wqkbs5/claude_helped_me_create_a_video_for_my_product/" target="_blank" rel="noopener">Claude helped me create a video for my Product.</a>
+        </div>
+        <div class="item-takeaway">I gave Claude the entire codebase and had it actually use the product instead of just generating generic screenshots. I told it to go through the platform, use the different features, and screen record the process, break</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wqjyzb/how_do_you_actually_test_whether_an_ai_tool/" target="_blank" rel="noopener">How do you actually test whether an AI tool &quot;understands&quot; something vs. just sounds confident?</a>
+        </div>
+        <div class="item-takeaway">Ran into this building a content-planning tool, asked it to analyze my own website, and it got my entire business category wrong, very confidently. Sounded completely plausible if you didn't already know the answer. Ende</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wqafcj/how_do_you_guys_find_winning_saas_ideas/" target="_blank" rel="noopener">How do you guys find winning SaaS ideas?</a>
+        </div>
+        <div class="item-takeaway">I've tried sinking deep into a rabbithole of meta ads library, but it's been only a headache for me &amp;#32; submitted by &amp;#32; /u/Forsaken_Software152 [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wq4vl8/how_do_you_securitycheck_and_test_your_vibecoded/" target="_blank" rel="noopener">How do you security-check and test your vibe-coded apps before shipping?</a>
+        </div>
+        <div class="item-takeaway">I’ve been building a few apps and was wondering how you guys make sure they’re actually secure, reliable, and production-ready before shipping. Do you have a specific checklist or workflow? What tools do you use for thin</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wqj40r/we_killed_6_products_before_launch_the_problem/" target="_blank" rel="noopener">we killed 6 products before launch. the problem kept changing shape</a>
+        </div>
+        <div class="item-takeaway">in early 2025 i started with one thesis: models could do a lot, but they lacked the company context to do useful work. we built apps to probe that gap, then infrastructure to feed context to agents when opus 4.5 arrived,</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wpwyis/does_vibecoded_means_shitty_or_low_quality_product/" target="_blank" rel="noopener">Does vibe-coded means shitty or low quality product ?</a>
+        </div>
+        <div class="item-takeaway">I saw this discussion in a subreddit, A guy built a chrome extension, probably a technical person who's vibe coding stuff.. but the question is does vibecoding always means shitty and low quality product or it can't scal</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wq8pur/need_some_free_tool_to_create_ads_from_my_saas/" target="_blank" rel="noopener">Need some free tool to create ads from my saas</a>
+        </div>
+        <div class="item-takeaway">This is what I was able to create with url motion, it's okay but it's not that good, even the voice is very choppy I can build things but marketing holy shit, just thinking about it makes me want hit my head on a wall, w</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wqhg0b/3_real_examples_of_how_founders_got_their_first/" target="_blank" rel="noopener">3 real examples of how founders got their first customers</a>
+        </div>
+        <div class="item-takeaway">There’s a lot of advice about getting your first customers: do SEO, post on Twitter, launch on Product Hunt, run ads, build an audience. But I’ve been more interested in what founders actually did when they had zero cust</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wq67br/some_calm_results_seo_1_month_work/" target="_blank" rel="noopener">Some calm results, SEO 1 month work</a>
+        </div>
+        <div class="item-takeaway">I have 40 pages indexed and bro this SEO stuff is not easy. Had to go back to back with cursor to fix some these pages. I did 5 clicks this months, and i started posting blogs late August. Right now my goal is get more b</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wqgxo1/need_advice_building_a_tallyprime_zoho_books/" target="_blank" rel="noopener">Need advice building a TallyPrime + Zoho Books platform</a>
+        </div>
+        <div class="item-takeaway">Hey everyone, I'm building a multi-client accounting review platform and need some advice from people experienced with TallyPrime/Zoho Books APIs. The idea is simple: 20+ clients → Tally/Zoho → pull data → normalize → ru</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wqgq3n/rate_launch_video/" target="_blank" rel="noopener">Rate launch video</a>
+        </div>
+        <div class="item-takeaway">/10 what number you have this launch video ( I’m not the owner of this product- I’m the creator) &amp;#32; submitted by &amp;#32; /u/No-Friendship6165 [link] &amp;#32; [comments]</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          OpenRouter: from Seed to Stripe
+        </div>
+        <div class="item-takeaway">with OpenRouter’s Alex Atallah &amp; AMP’s Anjney Midha — https://www.latent.space/p/openrouter — In 2023 most people doubted that there could be more than 1 or 2 frontier model labs. Now there are dozens.... and Stripe just bought the best known one for $7B.</div>
+        <div class="item-meta">
+          <span>latent-space</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://blog.cloudflare.com/containers-cross-tenant-vulnerability/" target="_blank" rel="noopener">Cloudflare discloses cross-tenant data exposure vulnerability in Containers</a>
+          <a href="https://vercel.com/changelog/vcr-login-github-action" target="_blank" rel="noopener">Push images to Vercel Container Registry from GitHub Actions</a>
         </div>
-        <div class="item-takeaway">Cloudflare disclosed and fixed a vulnerability in its Containers product where residual disk data from a previous workload could leak to a different tenant. This is a real cross-tenant isolation failure at a major cloud provider, found by external researchers and publicly written up with remediation details. If you run workloads on Cloudflare Containers (or any shared-container platform), check whether you rely on ephemeral disk state for anything sensitive and review Cloudflare's advisory.</div>
+        <div class="item-takeaway">Vercel added a GitHub Action that logs into Vercel Container Registry via GitHub OIDC, issuing a short-lived token instead of storing registry credentials.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/blog/state-of-agent-skills" target="_blank" rel="noopener">State of agent skills</a>
+        </div>
+        <div class="item-takeaway">Vercel reports that skills.sh passed one million listings and nearly 280 million installs, with demand concentrated in a small set of reusable workflows.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/pixel-canary-is-now-available-in-stealth-for-free-on-ai-gateway" target="_blank" rel="noopener">Pixel Canary is now available in stealth for free on AI Gateway</a>
+        </div>
+        <div class="item-takeaway">Vercel AI Gateway added stealth/pixel-canary free for a limited time; Vercel reports strong Next.js eval results but says ZDR is unavailable and prompts may be used for training.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/vercel-sandbox-now-supports-memory-observability" target="_blank" rel="noopener">Vercel Sandbox now supports memory observability</a>
+        </div>
+        <div class="item-takeaway">Vercel Sandbox now exposes memory usage in the dashboard, query builder, and vercel metrics CLI, including averages, P75, P95, and an 85% ceiling reference.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/turnstile-spin/" target="_blank" rel="noopener">Agents can now set up your website’s security with Turnstile Spin</a>
+        </div>
+        <div class="item-takeaway">Cloudflare introduced Turnstile Spin, an agent-assisted setup flow aimed at preventing the common mistake of adding Turnstile without server-side token validation.</div>
         <div class="item-meta">
           <span>cloudflare-blog</span>
         </div>
@@ -169,86 +451,20 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          n8n 'stable' release tag
+          <a href="https://stratechery.com/2026/begun-the-aggregator-wars-have/" target="_blank" rel="noopener">2026.39: Begun, the Aggregator Wars Have</a>
         </div>
-        <div class="item-takeaway">internal bug fix only — https://github.com/n8n-io/n8n/releases/tag/stable — Pure internal bug fix (span attribute propagation), no user-facing change.</div>
+        <div class="item-takeaway">The best Stratechery content from the week of September 21, 2026, including Meta vs. Amazon, GM bending the knee to CarPlay, and profiling the profiler.</div>
         <div class="item-meta">
-          <span>gh-n8n</span>
+          <span>stratechery</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          n8n@2.40.7
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.48" target="_blank" rel="noopener">v16.4.0-canary.48</a>
         </div>
-        <div class="item-takeaway">duplicate tag of the same bug-fix release — https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.7 — Same release as the 'stable' tag above (internal span-attribute fix), just a differently-named tag.</div>
-        <div class="item-meta">
-          <span>gh-n8n</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          n8n@1.123.82
-        </div>
-        <div class="item-takeaway">dependency bump only (adm-zip) — https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.82 — Single dependency version bump, no functional change.</div>
-        <div class="item-meta">
-          <span>gh-n8n</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          n8n@2.41.3
-        </div>
-        <div class="item-takeaway">duplicate internal bug-fix tag — https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.3 — Same internal span-attribute bug fix as the other n8n tags claimed tonight, just another tag name.</div>
-        <div class="item-meta">
-          <span>gh-n8n</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          n8n 'beta' tag
-        </div>
-        <div class="item-takeaway">duplicate of the same 2.41.3 bug fix — https://github.com/n8n-io/n8n/releases/tag/beta — Same 2.41.3 internal bug fix under a fourth tag name.</div>
-        <div class="item-meta">
-          <span>gh-n8n</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://vercel.com/blog/the-vercel-bug-bounty-program-is-now-publicly-available" target="_blank" rel="noopener">Vercel takes its bug bounty program fully public</a>
-        </div>
-        <div class="item-takeaway">Vercel merged its private HackerOne program and OSS bounty program into a single public bug bounty program, citing AI-assisted research as a reason public programs are now viable (more reports, but also more noise their team has built tooling to filter). Worth knowing if you deploy on Vercel — more eyes on the platform's security is generally good news, and it signals Vercel's security posture is maturing.</div>
-        <div class="item-meta">
-          <span>vercel-changelog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://vercel.com/blog/how-klaviyo-shipped-356-internal-apps-in-two-weeks-on-vercel" target="_blank" rel="noopener">Vercel blog: Klaviyo's internal-apps platform case study</a>
-        </div>
-        <div class="item-takeaway">A Vercel-published case study on how Klaviyo built an internal citizen-developer app platform (512 builders, 356 apps) with SSO-gating and centralized secrets. Polished vendor content marketing aimed at enterprise platform teams — not directly applicable to a one-person shop.</div>
-        <div class="item-meta">
-          <span>vercel-changelog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          Next.js v16.4.0-canary.45
-        </div>
-        <div class="item-takeaway">internal misc changes only — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.45 — Internal Turbopack/tooling misc changes (deploy adapters, agent-upgrade handoff context, docs tweaks) in a canary build — no new user-facing feature.</div>
+        <div class="item-takeaway">### Misc Changes - Hoist resolved pathname into app page route match: #99259 - docs: papercuts in image API reference: #99256 - test: run the TypeScript version warning suites in deploy: #99195 - test: drop skipDeploymen</div>
         <div class="item-meta">
           <span>gh-nextjs</span>
         </div>
@@ -257,9 +473,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          Next.js v16.4.0-canary.44
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.47" target="_blank" rel="noopener">v16.4.0-canary.47</a>
         </div>
-        <div class="item-takeaway">internal misc changes only — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.44 — Another canary build with only internal Turbopack/test-infra changes — no new user-facing feature, and effectively superseded by canary.45 above.</div>
+        <div class="item-takeaway">### Misc Changes - Prepare `'use cache'` for static root-param tracking: #99239 - [test] Adjust the prerender-encoding open fallback gate for non-adapter deploys: #99240 - Turbopack: avoid project-wide traces from packag</div>
         <div class="item-meta">
           <span>gh-nextjs</span>
         </div>
@@ -267,87 +483,21 @@
 
       <div class="item">
         <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark" target="_blank" rel="noopener">Liquid AI ships LFM2.5-VL-DSpark vision-language model</a>
-        </div>
-        <div class="item-takeaway">Liquid AI announced LFM2.5-VL-DSpark, a new vision-language model release, but the source page's body text didn't come through in the fetch — only the title and URL are confirmed. Worth a glance if you're evaluating small/efficient VLMs, but there isn't enough here yet to say what's actually new.</div>
-        <div class="item-meta">
-          <span>huggingface-blog</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/" target="_blank" rel="noopener">Pragmatic Engineer: a CPU shortage is emerging, driven by AI agents</a>
-        </div>
-        <div class="item-takeaway">Gergely Orosz flags a developing CPU shortage, following the GPU and memory shortages, attributed to AI agents burning much more CPU via tool use than typical workloads. If real and sustained, this could push up compute costs for anyone running agent-heavy workflows (including local dev loops and CI). Only a one-line teaser came through from the feed — no figures or timeline yet.</div>
-        <div class="item-meta">
-          <span>pragmatic-engineer</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://www.latent.space/p/ainews-the-future-of-latent-space" target="_blank" rel="noopener">Latent Space: 'The Future of Latent Space' meta post</a>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.46" target="_blank" rel="noopener">v16.4.0-canary.46</a>
         </div>
-        <div class="item-takeaway">A short, self-referential newsletter post about the newsletter itself being 'open for business.' No substantive content.</div>
+        <div class="item-takeaway">### Misc Changes - Revert &quot;Add experimental custom webpack support&quot;: #99227 - test: stabilize lazy dynamic import error overlay: #98730 - turbo-tasks-gc: tear down reverse edges when collecting a task: #99145 - Sequence</div>
         <div class="item-meta">
-          <span>latent-space</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://www.latent.space/p/runway" target="_blank" rel="noopener">Runway's WorldPrompt and 'GWM Worlds 2': real-time world models</a>
-        </div>
-        <div class="item-takeaway">Latent Space covers Runway's WorldPrompt work, where a 'GWM Worlds 2' model uses persistent context and timed actions to steer real-time generative video/audio world models. Only a short teaser came through — interesting direction for real-time generative media but not something actionable for a typical solo software business today.</div>
-        <div class="item-meta">
-          <span>latent-space</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.latent.space/p/foundries-vs-navigators-lowering" target="_blank" rel="noopener">Latent Space guest post: 'Foundries vs Navigators' (economics of science)</a>
-        </div>
-        <div class="item-takeaway">A guest essay on how cheap AI-assisted thinking versus still-expensive 'doing' is reshaping how research organizations operate. Thoughtful but editorial/econ-of-science content, not a decision-changing signal for a solo software builder.</div>
-        <div class="item-meta">
-          <span>latent-space</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          commit-rewriter 0.2
-        </div>
-        <div class="item-takeaway">adds non-default-branch support — https://simonwillison.net/2026/Sep/24/commit-rewriter/ — Simon Willison's small commit-rewriter CLI tool added support for targeting branches other than the default. A real but very small, niche feature addition.</div>
-        <div class="item-meta">
-          <span>simon-willison</span>
+          <span>gh-nextjs</span>
         </div>
       </div>
 
       <div class="item">
         <div class="item-title">
           <span class="tag tag-p">P</span>
-          <a href="https://simonwillison.net/2026/Sep/24/datasette/" target="_blank" rel="noopener">Datasette 1.0a41: OpenTelemetry support, unified modal Web Component</a>
+          <a href="https://swarmtraces.org/" target="_blank" rel="noopener">Revealing the details of how OpenAI agents hacked Hugging Face</a>
         </div>
-        <div class="item-takeaway">Simon Willison's Datasette shipped OpenTelemetry support (contributed by Alec Garcia) and a refactor of all modal dialogs into a single, documented Web Component that plugin authors can reuse. Concrete, shippable improvements to a real tool rather than a dependency bump — useful if you run Datasette or build plugins for it.</div>
-        <div class="item-meta">
-          <span>simon-willison</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html" target="_blank" rel="noopener">F-Droid 2.0 released</a>
-        </div>
-        <div class="item-takeaway">F-Droid, the alternative Android app store, released version 2.0. Not relevant to this audience's software/agent-building work.</div>
+        <div class="item-takeaway">Swarmtraces reconstructs alleged agent activity in the Hugging Face incident, including attempts at persistence, credential escalation, DNS exfiltration, and CAPTCHA bypass; the authors explicitly say the reconstruction is incomplete and outcomes are often unknown.</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -356,20 +506,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://bastardica.mitpit.com" target="_blank" rel="noopener">Show HN: 'cursed fonts' ligature joke tool</a>
+          <a href="http://allanrbo.blogspot.com/2026/09/a-jev-like-wrapper-for-llms-including.html" target="_blank" rel="noopener">A single function Jev-like wrapper for LLMs, including vision models</a>
         </div>
-        <div class="item-takeaway">A joke tool that abuses OpenType ligatures to mix fonts together, running client-side via Python-in-WASM. Fun HN novelty, not a serious signal.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://github.com/devdotfast/whiteboard" target="_blank" rel="noopener">Whiteboard (YC W26): open-source IDE for humans + agents to architect software together</a>
-        </div>
-        <div class="item-takeaway">A YC-backed team launched Whiteboard, an open-source desktop IDE (built on Code-OSS) where an agent draws diagrams — sequence, ERD, architecture — on a shared canvas while you work, and clicking a diagram element jumps to the underlying code. It plugs into Claude Code and Codex via an SDK, and includes a semantic AST-aware diff viewer written in Rust. This is directly relevant to anyone doing serious agent-assisted development: it's a concrete attempt at solving the 'I can't see what the agent actually did' problem.</div>
+        <div class="item-takeaway">A single function Jev-like wrapper for LLMs, including vision models</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -378,163 +517,9 @@
       <div class="item">
         <div class="item-title">
           <span class="tag tag-r">R</span>
-          <a href="https://dynomight.substack.com/p/liver" target="_blank" rel="noopener">'Why is the liver so weirdly regenerative?' (HN)</a>
+          <a href="https://www.aymannadeem.com/artificial/intelligence,/developer/tools/2026/09/24/plan-mode-is-dead.html" target="_blank" rel="noopener">Plan mode is dead</a>
         </div>
-        <div class="item-takeaway">A biology blog post on liver regeneration. Not relevant to software/agent building.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://2dwillneverdie.com/" target="_blank" rel="noopener">'2DWillNeverDie' (HN, no content fetched)</a>
-        </div>
-        <div class="item-takeaway">Link surfaced on Hacker News with no fetchable body content and an ambiguous title; can't be evaluated for substance.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.youtube.com/watch?v=vDjW_dRyKXY" target="_blank" rel="noopener">Rails World 2026 opening keynote (video, no content fetched)</a>
-        </div>
-        <div class="item-takeaway">A YouTube video of the Rails World 2026 opening keynote surfaced via HN, with no transcript or description fetched. Not evaluable, and not clearly relevant to this audience's toolchain.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://linebender.org/blog/fearless-simd-1-0/" target="_blank" rel="noopener">Fearless SIMD v1.0 (Rust SIMD library)</a>
-        </div>
-        <div class="item-takeaway">A Rust SIMD abstraction library hit a 1.0 release. Niche systems-programming release with no fetched detail; low relevance to this audience's typical stack.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://electrek.co/2026/09/23/toyota-best-selling-corolla-electric/" target="_blank" rel="noopener">Toyota takes the Corolla electric</a>
-        </div>
-        <div class="item-takeaway">Automotive news about an electric Corolla. Not relevant to software/agent building.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://ahmedhossamdev.com/writing/my-weird-new-hobby-wandering-around-tokyo/" target="_blank" rel="noopener">Personal blog: wandering Tokyo on Google Maps</a>
-        </div>
-        <div class="item-takeaway">A personal hobby blog post about exploring Tokyo virtually via Google Maps. Not relevant to software/agent building.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://resobscura.substack.com/p/ai-labs-need-to-start-funding-historical" target="_blank" rel="noopener">Using LLMs to trace alchemical knowledge in 17th-century letters</a>
-        </div>
-        <div class="item-takeaway">A history-of-science piece on using LLMs to help decode 17th-century alchemical correspondence. Interesting application but not relevant to this audience's day-to-day building.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://macanorak.com/two-tier-encryption-in-the-uk/" target="_blank" rel="noopener">'Two-tier encryption' policy piece (UK)</a>
-        </div>
-        <div class="item-takeaway">A policy/politics blog post about UK encryption policy. Not directly actionable for a solo software builder.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-m">M</span>
-          <a href="https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/" target="_blank" rel="noopener">Google's 'Project Suncatcher' aims to put ML infrastructure in space</a>
-        </div>
-        <div class="item-takeaway">Google is reportedly exploring putting ML compute infrastructure into orbit ('Project Suncatcher'), per NYT coverage referenced from Google's own research blog. This is a long-horizon infrastructure bet, not something with near-term relevance to a solo developer, but worth tracking as a signal of how seriously compute-constrained hyperscalers are.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://launchvideo.io" target="_blank" rel="noopener">'Opus 5.5 is good at explainer videos' (launchvideo.io)</a>
-        </div>
-        <div class="item-takeaway">A promotional-looking post/tool touting Opus 5.5's ability to make explainer videos, linking to a video-generation product site. Reads as marketing for a specific tool rather than a substantive signal.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://www.datahaskell.org/blog/2026/09/18/writing-parquet-files-using-haskell.html" target="_blank" rel="noopener">Writing Parquet files using Haskell</a>
-        </div>
-        <div class="item-takeaway">A technical blog post on implementing a Parquet writer in Haskell. Niche-language systems programming, low relevance to this audience's typical Node/JS-based stack.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://ahelwer.ca/post/2026-09-21-concurrency-textbook/" target="_blank" rel="noopener">Book review: 'Is parallel programming hard, and what can you do about it?'</a>
-        </div>
-        <div class="item-takeaway">A book review covering a classic concurrency textbook. Educational but not a timely or decision-relevant signal.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://grantland.com/features/diplomacy-the-board-game-of-the-alpha-nerds/" target="_blank" rel="noopener">'The Board Game of the Alpha Nerds' (2014 reprint)</a>
-        </div>
-        <div class="item-takeaway">A 2014 Grantland feature about the board game Diplomacy, resurfaced on HN. Old, off-topic content with no relevance to software building.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-r">R</span>
-          <a href="https://blog.landeconomics.org/p/california-is-chasing-wealth-that" target="_blank" rel="noopener">'California is chasing wealth that has feet'</a>
-        </div>
-        <div class="item-takeaway">An economics/policy blog post on California's tax base and wealth migration. Not relevant to software/agent building.</div>
-        <div class="item-meta">
-          <span>hn-top</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="tag tag-p">P</span>
-          <a href="https://blog.arusekk.pl/posts/srht-account-takeover/" target="_blank" rel="noopener">Sourcehut account takeover via build-log XSS in ansi2html</a>
-        </div>
-        <div class="item-takeaway">A researcher walked through an account-takeover chain on Sourcehut that started with an XSS vulnerability in the ansi2html library used to render CI build logs as HTML. The generalizable lesson: any dev tool that renders ANSI-coded terminal output (build logs, CI dashboards) as HTML without careful sanitization is a plausible XSS vector, not just a Sourcehut-specific bug. Worth a five-minute check if you render terminal/log output as HTML anywhere in your own tools.</div>
+        <div class="item-takeaway">Plan mode is dead</div>
         <div class="item-meta">
           <span>hn-top</span>
         </div>
@@ -544,82 +529,73 @@
       <summary>Original markdown</summary>
       <pre class="raw-report"># Nightly Librarian — Newsletter draft
 
-Run: 16b796cd-6171-4d03-83f3-610ea911ce8d
-Started: 2026-09-26T06:03:42.985Z
-Completed: 2026-09-26T06:25:56.166Z
+Run: 487e2ce7-8006-4ba7-8eaa-ba793d21465d
+Started: 2026-09-26T11:01:50.995Z
+Completed: 2026-09-26T11:04:17.027Z
 
 ## Worth attention
 
-- **Cloudflare discloses cross-tenant data exposure vulnerability in Containers**
-  https://blog.cloudflare.com/containers-cross-tenant-vulnerability/
-  Cloudflare disclosed and fixed a vulnerability in its Containers product where residual disk data from a previous workload could leak to a different tenant. This is a real cross-tenant isolation failure at a major cloud provider, found by external researchers and publicly written up with remediation details. If you run workloads on Cloudflare Containers (or any shared-container platform), check whether you rely on ephemeral disk state for anything sensitive and review Cloudflare's advisory.
-- **Whiteboard (YC W26): open-source IDE for humans + agents to architect software together**
-  https://github.com/devdotfast/whiteboard
-  A YC-backed team launched Whiteboard, an open-source desktop IDE (built on Code-OSS) where an agent draws diagrams — sequence, ERD, architecture — on a shared canvas while you work, and clicking a diagram element jumps to the underlying code. It plugs into Claude Code and Codex via an SDK, and includes a semantic AST-aware diff viewer written in Rust. This is directly relevant to anyone doing serious agent-assisted development: it's a concrete attempt at solving the 'I can't see what the agent actually did' problem.
-- **Sourcehut account takeover via build-log XSS in ansi2html**
-  https://blog.arusekk.pl/posts/srht-account-takeover/
-  A researcher walked through an account-takeover chain on Sourcehut that started with an XSS vulnerability in the ansi2html library used to render CI build logs as HTML. The generalizable lesson: any dev tool that renders ANSI-coded terminal output (build logs, CI dashboards) as HTML without careful sanitization is a plausible XSS vector, not just a Sourcehut-specific bug. Worth a five-minute check if you render terminal/log output as HTML anywhere in your own tools.
-- **Vercel takes its bug bounty program fully public**
-  https://vercel.com/blog/the-vercel-bug-bounty-program-is-now-publicly-available
-  Vercel merged its private HackerOne program and OSS bounty program into a single public bug bounty program, citing AI-assisted research as a reason public programs are now viable (more reports, but also more noise their team has built tooling to filter). Worth knowing if you deploy on Vercel — more eyes on the platform's security is generally good news, and it signals Vercel's security posture is maturing.
-- **Pragmatic Engineer: a CPU shortage is emerging, driven by AI agents**
-  https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/
-  Gergely Orosz flags a developing CPU shortage, following the GPU and memory shortages, attributed to AI agents burning much more CPU via tool use than typical workloads. If real and sustained, this could push up compute costs for anyone running agent-heavy workflows (including local dev loops and CI). Only a one-line teaser came through from the feed — no figures or timeline yet.
-- **Datasette 1.0a41: OpenTelemetry support, unified modal Web Component**
-  https://simonwillison.net/2026/Sep/24/datasette/
-  Simon Willison's Datasette shipped OpenTelemetry support (contributed by Alec Garcia) and a refactor of all modal dialogs into a single, documented Web Component that plugin authors can reuse. Concrete, shippable improvements to a real tool rather than a dependency bump — useful if you run Datasette or build plugins for it.
-- **Liquid AI ships LFM2.5-VL-DSpark vision-language model**
-  https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark
-  Liquid AI announced LFM2.5-VL-DSpark, a new vision-language model release, but the source page's body text didn't come through in the fetch — only the title and URL are confirmed. Worth a glance if you're evaluating small/efficient VLMs, but there isn't enough here yet to say what's actually new.
-- **Runway's WorldPrompt and 'GWM Worlds 2': real-time world models**
-  https://www.latent.space/p/runway
-  Latent Space covers Runway's WorldPrompt work, where a 'GWM Worlds 2' model uses persistent context and timed actions to steer real-time generative video/audio world models. Only a short teaser came through — interesting direction for real-time generative media but not something actionable for a typical solo software business today.
-- **Google's 'Project Suncatcher' aims to put ML infrastructure in space**
-  https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/
-  Google is reportedly exploring putting ML compute infrastructure into orbit ('Project Suncatcher'), per NYT coverage referenced from Google's own research blog. This is a long-horizon infrastructure bet, not something with near-term relevance to a solo developer, but worth tracking as a signal of how seriously compute-constrained hyperscalers are.
+- **Push images to Vercel Container Registry from GitHub Actions**
+  https://vercel.com/changelog/vcr-login-github-action
+  Vercel added a GitHub Action that logs into Vercel Container Registry via GitHub OIDC, issuing a short-lived token instead of storing registry credentials.
+- **Revealing the details of how OpenAI agents hacked Hugging Face**
+  https://swarmtraces.org/
+  Swarmtraces reconstructs alleged agent activity in the Hugging Face incident, including attempts at persistence, credential escalation, DNS exfiltration, and CAPTCHA bypass; the authors explicitly say the reconstruction is incomplete and outcomes are often unknown.
+- **Pixel Canary is now available in stealth for free on AI Gateway**
+  https://vercel.com/changelog/pixel-canary-is-now-available-in-stealth-for-free-on-ai-gateway
+  Vercel AI Gateway added stealth/pixel-canary free for a limited time; Vercel reports strong Next.js eval results but says ZDR is unavailable and prompts may be used for training.
+- **Vercel Sandbox now supports memory observability**
+  https://vercel.com/changelog/vercel-sandbox-now-supports-memory-observability
+  Vercel Sandbox now exposes memory usage in the dashboard, query builder, and vercel metrics CLI, including averages, P75, P95, and an 85% ceiling reference.
+- **Agents can now set up your website’s security with Turnstile Spin**
+  https://blog.cloudflare.com/turnstile-spin/
+  Cloudflare introduced Turnstile Spin, an agent-assisted setup flow aimed at preventing the common mistake of adding Turnstile without server-side token validation.
+- **State of agent skills**
+  https://vercel.com/blog/state-of-agent-skills
+  Vercel reports that skills.sh passed one million listings and nearly 280 million installs, with demand concentrated in a small set of reusable workflows.
 
 ## Full digest
 
-- [R] [reddit-saas] Reddit r/SaaS: 'anyone taken equity to build in a crowded space' thread — https://www.reddit.com/r/SaaS/comments/1wpheua/anyone_actually_taken_equity_to_build_in_a/ — A Reddit thread asking for anecdotes about taking equity/unpaid work to build in a crowded SaaS category. Personal anecdote-seeking, no new information or actionable signal for a solo builder.
-- [R] [reddit-saas] Reddit r/SaaS: 'New Product' — beginner pricing/launch questions — https://www.reddit.com/r/SaaS/comments/1wpjj3z/new_product/ — A first-time builder asks basic launch and pricing questions about a healthcare app on Reddit. Not a signal, just a beginner asking for advice.
-- [R] [reddit-saas] Reddit r/SaaS: 'I have a few opportunities' — solicitation post — https://www.reddit.com/r/SaaS/comments/1wpn0q1/i_have_a_few_opportunities/ — A vague solicitation post offering unspecified 'opportunities' to founders and marketers. Reads as spam/promotional outreach.
-- [R] [reddit-saas] Reddit r/SaaS: mover shares gig-platform marketing anecdote — https://www.reddit.com/r/SaaS/comments/1wpd8cg/advice_only_not_selling_anything/ — A long, rambling personal anecdote from a moving-services gig worker about marketing platforms and business identifiers. Not software-relevant and not actionable for a solo software builder.
-- [R] [reddit-saas] Reddit r/SaaS: 'best SaaS marketing tools' thread — https://www.reddit.com/r/SaaS/comments/1wp9lyt/what_are_the_best_saas_marketing_tools_for/ — A generic question asking which SaaS marketing tools actually work. Crowdsourced opinion thread, no concrete information.
-- [P] [cloudflare-blog] Cloudflare discloses cross-tenant data exposure vulnerability in Containers — https://blog.cloudflare.com/containers-cross-tenant-vulnerability/ — Cloudflare disclosed and fixed a vulnerability in its Containers product where residual disk data from a previous workload could leak to a different tenant. This is a real cross-tenant isolation failure at a major cloud provider, found by external researchers and publicly written up with remediation details. If you run workloads on Cloudflare Containers (or any shared-container platform), check whether you rely on ephemeral disk state for anything sensitive and review Cloudflare's advisory.
-- [R] [gh-n8n] n8n 'stable' release tag — internal bug fix only — https://github.com/n8n-io/n8n/releases/tag/stable — Pure internal bug fix (span attribute propagation), no user-facing change.
-- [R] [gh-n8n] n8n@2.40.7 — duplicate tag of the same bug-fix release — https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.7 — Same release as the 'stable' tag above (internal span-attribute fix), just a differently-named tag.
-- [R] [gh-n8n] n8n@1.123.82 — dependency bump only (adm-zip) — https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.82 — Single dependency version bump, no functional change.
-- [R] [gh-n8n] n8n@2.41.3 — duplicate internal bug-fix tag — https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.3 — Same internal span-attribute bug fix as the other n8n tags claimed tonight, just another tag name.
-- [R] [gh-n8n] n8n 'beta' tag — duplicate of the same 2.41.3 bug fix — https://github.com/n8n-io/n8n/releases/tag/beta — Same 2.41.3 internal bug fix under a fourth tag name.
-- [P] [vercel-changelog] Vercel takes its bug bounty program fully public — https://vercel.com/blog/the-vercel-bug-bounty-program-is-now-publicly-available — Vercel merged its private HackerOne program and OSS bounty program into a single public bug bounty program, citing AI-assisted research as a reason public programs are now viable (more reports, but also more noise their team has built tooling to filter). Worth knowing if you deploy on Vercel — more eyes on the platform's security is generally good news, and it signals Vercel's security posture is maturing.
-- [R] [vercel-changelog] Vercel blog: Klaviyo's internal-apps platform case study — https://vercel.com/blog/how-klaviyo-shipped-356-internal-apps-in-two-weeks-on-vercel — A Vercel-published case study on how Klaviyo built an internal citizen-developer app platform (512 builders, 356 apps) with SSO-gating and centralized secrets. Polished vendor content marketing aimed at enterprise platform teams — not directly applicable to a one-person shop.
-- [R] [gh-nextjs] Next.js v16.4.0-canary.45 — internal misc changes only — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.45 — Internal Turbopack/tooling misc changes (deploy adapters, agent-upgrade handoff context, docs tweaks) in a canary build — no new user-facing feature.
-- [R] [gh-nextjs] Next.js v16.4.0-canary.44 — internal misc changes only — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.44 — Another canary build with only internal Turbopack/test-infra changes — no new user-facing feature, and effectively superseded by canary.45 above.
-- [M] [huggingface-blog] Liquid AI ships LFM2.5-VL-DSpark vision-language model — https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark — Liquid AI announced LFM2.5-VL-DSpark, a new vision-language model release, but the source page's body text didn't come through in the fetch — only the title and URL are confirmed. Worth a glance if you're evaluating small/efficient VLMs, but there isn't enough here yet to say what's actually new.
-- [M] [pragmatic-engineer] Pragmatic Engineer: a CPU shortage is emerging, driven by AI agents — https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/ — Gergely Orosz flags a developing CPU shortage, following the GPU and memory shortages, attributed to AI agents burning much more CPU via tool use than typical workloads. If real and sustained, this could push up compute costs for anyone running agent-heavy workflows (including local dev loops and CI). Only a one-line teaser came through from the feed — no figures or timeline yet.
-- [R] [latent-space] Latent Space: 'The Future of Latent Space' meta post — https://www.latent.space/p/ainews-the-future-of-latent-space — A short, self-referential newsletter post about the newsletter itself being 'open for business.' No substantive content.
-- [M] [latent-space] Runway's WorldPrompt and 'GWM Worlds 2': real-time world models — https://www.latent.space/p/runway — Latent Space covers Runway's WorldPrompt work, where a 'GWM Worlds 2' model uses persistent context and timed actions to steer real-time generative video/audio world models. Only a short teaser came through — interesting direction for real-time generative media but not something actionable for a typical solo software business today.
-- [R] [latent-space] Latent Space guest post: 'Foundries vs Navigators' (economics of science) — https://www.latent.space/p/foundries-vs-navigators-lowering — A guest essay on how cheap AI-assisted thinking versus still-expensive 'doing' is reshaping how research organizations operate. Thoughtful but editorial/econ-of-science content, not a decision-changing signal for a solo software builder.
-- [R] [simon-willison] commit-rewriter 0.2 — adds non-default-branch support — https://simonwillison.net/2026/Sep/24/commit-rewriter/ — Simon Willison's small commit-rewriter CLI tool added support for targeting branches other than the default. A real but very small, niche feature addition.
-- [P] [simon-willison] Datasette 1.0a41: OpenTelemetry support, unified modal Web Component — https://simonwillison.net/2026/Sep/24/datasette/ — Simon Willison's Datasette shipped OpenTelemetry support (contributed by Alec Garcia) and a refactor of all modal dialogs into a single, documented Web Component that plugin authors can reuse. Concrete, shippable improvements to a real tool rather than a dependency bump — useful if you run Datasette or build plugins for it.
-- [R] [hn-top] F-Droid 2.0 released — https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html — F-Droid, the alternative Android app store, released version 2.0. Not relevant to this audience's software/agent-building work.
-- [R] [hn-top] Show HN: 'cursed fonts' ligature joke tool — https://bastardica.mitpit.com — A joke tool that abuses OpenType ligatures to mix fonts together, running client-side via Python-in-WASM. Fun HN novelty, not a serious signal.
-- [P] [hn-top] Whiteboard (YC W26): open-source IDE for humans + agents to architect software together — https://github.com/devdotfast/whiteboard — A YC-backed team launched Whiteboard, an open-source desktop IDE (built on Code-OSS) where an agent draws diagrams — sequence, ERD, architecture — on a shared canvas while you work, and clicking a diagram element jumps to the underlying code. It plugs into Claude Code and Codex via an SDK, and includes a semantic AST-aware diff viewer written in Rust. This is directly relevant to anyone doing serious agent-assisted development: it's a concrete attempt at solving the 'I can't see what the agent actually did' problem.
-- [R] [hn-top] 'Why is the liver so weirdly regenerative?' (HN) — https://dynomight.substack.com/p/liver — A biology blog post on liver regeneration. Not relevant to software/agent building.
-- [R] [hn-top] '2DWillNeverDie' (HN, no content fetched) — https://2dwillneverdie.com/ — Link surfaced on Hacker News with no fetchable body content and an ambiguous title; can't be evaluated for substance.
-- [R] [hn-top] Rails World 2026 opening keynote (video, no content fetched) — https://www.youtube.com/watch?v=vDjW_dRyKXY — A YouTube video of the Rails World 2026 opening keynote surfaced via HN, with no transcript or description fetched. Not evaluable, and not clearly relevant to this audience's toolchain.
-- [R] [hn-top] Fearless SIMD v1.0 (Rust SIMD library) — https://linebender.org/blog/fearless-simd-1-0/ — A Rust SIMD abstraction library hit a 1.0 release. Niche systems-programming release with no fetched detail; low relevance to this audience's typical stack.
-- [R] [hn-top] Toyota takes the Corolla electric — https://electrek.co/2026/09/23/toyota-best-selling-corolla-electric/ — Automotive news about an electric Corolla. Not relevant to software/agent building.
-- [R] [hn-top] Personal blog: wandering Tokyo on Google Maps — https://ahmedhossamdev.com/writing/my-weird-new-hobby-wandering-around-tokyo/ — A personal hobby blog post about exploring Tokyo virtually via Google Maps. Not relevant to software/agent building.
-- [R] [hn-top] Using LLMs to trace alchemical knowledge in 17th-century letters — https://resobscura.substack.com/p/ai-labs-need-to-start-funding-historical — A history-of-science piece on using LLMs to help decode 17th-century alchemical correspondence. Interesting application but not relevant to this audience's day-to-day building.
-- [R] [hn-top] 'Two-tier encryption' policy piece (UK) — https://macanorak.com/two-tier-encryption-in-the-uk/ — A policy/politics blog post about UK encryption policy. Not directly actionable for a solo software builder.
-- [M] [hn-top] Google's 'Project Suncatcher' aims to put ML infrastructure in space — https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/ — Google is reportedly exploring putting ML compute infrastructure into orbit ('Project Suncatcher'), per NYT coverage referenced from Google's own research blog. This is a long-horizon infrastructure bet, not something with near-term relevance to a solo developer, but worth tracking as a signal of how seriously compute-constrained hyperscalers are.
-- [R] [hn-top] 'Opus 5.5 is good at explainer videos' (launchvideo.io) — https://launchvideo.io — A promotional-looking post/tool touting Opus 5.5's ability to make explainer videos, linking to a video-generation product site. Reads as marketing for a specific tool rather than a substantive signal.
-- [R] [hn-top] Writing Parquet files using Haskell — https://www.datahaskell.org/blog/2026/09/18/writing-parquet-files-using-haskell.html — A technical blog post on implementing a Parquet writer in Haskell. Niche-language systems programming, low relevance to this audience's typical Node/JS-based stack.
-- [R] [hn-top] Book review: 'Is parallel programming hard, and what can you do about it?' — https://ahelwer.ca/post/2026-09-21-concurrency-textbook/ — A book review covering a classic concurrency textbook. Educational but not a timely or decision-relevant signal.
-- [R] [hn-top] 'The Board Game of the Alpha Nerds' (2014 reprint) — https://grantland.com/features/diplomacy-the-board-game-of-the-alpha-nerds/ — A 2014 Grantland feature about the board game Diplomacy, resurfaced on HN. Old, off-topic content with no relevance to software building.
-- [R] [hn-top] 'California is chasing wealth that has feet' — https://blog.landeconomics.org/p/california-is-chasing-wealth-that — An economics/policy blog post on California's tax base and wealth migration. Not relevant to software/agent building.
-- [P] [hn-top] Sourcehut account takeover via build-log XSS in ansi2html — https://blog.arusekk.pl/posts/srht-account-takeover/ — A researcher walked through an account-takeover chain on Sourcehut that started with an XSS vulnerability in the ansi2html library used to render CI build logs as HTML. The generalizable lesson: any dev tool that renders ANSI-coded terminal output (build logs, CI dashboards) as HTML without careful sanitization is a plausible XSS vector, not just a Sourcehut-specific bug. Worth a five-minute check if you render terminal/log output as HTML anywhere in your own tools.</pre>
+- [R] [gh-langchain] langchain-fireworks==1.6.3 — https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.6.3 — Changes since langchain-fireworks==1.6.2 release(fireworks): 1.6.3 (#40834) fix(fireworks): declare native PDF inputs unsupported (#40814) fix(fireworks): preserve malformed tool arguments as diagnostic JSON (#40818) cho
+- [R] [hn-show] Show HN: Jev Plays Pokémon Red — https://jev-pokemon.vercel.app/ — Hey HN! Wanted to share a fun project I&amp;#x27;ve been hacking on. Given Jev can make decisions really fast (but not fast enough to play Doom yet sadly), I wanted to try and push it to play a more complex game than Tetris.
+- [R] [hn-show] Show HN: Make math automatic with Mathy — https://gmays.com/making-math-automatic-with-mathy/ — https:&amp;#x2F;&amp;#x2F;mathy.game&amp;#x2F; https:&amp;#x2F;&amp;#x2F;mathy.game&amp;#x2F;app https:&amp;#x2F;&amp;#x2F;apps.apple.com&amp;#x2F;us&amp;#x2F;app&amp;#x2F;mathy-build-math-automaticity&amp;#x2F;...
+- [R] [hn-show] Show HN: Doom or Bloom, map your AI worldview — https://www.doom-or-bloom.com — Map your AI worldview by answering a few questions, and see how you compare with others. only takes a few minutes &amp;amp;&amp;amp; free &amp;amp; open source &amp;amp;&amp;amp; private by default &amp;amp;&amp;amp; powered by Jev I think this is
+- [R] [hn-show] Show HN: Hacker Atlas - A map of what Hacker News talks about — https://hackeratlas.com/ — I built a tool to explore HN topics and how they change over time. Currently covers 2024 to today. Is it useful? What&amp;#x27;s missing?
+- [R] [reddit-saas] Why does slack need over 2000 employees?? — https://www.reddit.com/r/SaaS/comments/1wpz98o/why_does_slack_need_over_2000_employees/ — Can someone explain me why slack a single product based company require over 2000 employees? I’m not able to understand why &amp;#32; submitted by &amp;#32; /u/troop_surfer [link] &amp;#32; [comments]
+- [R] [reddit-saas] Got my first internet stranger to give me money for my product — https://www.reddit.com/r/SaaS/comments/1wq9go2/got_my_first_internet_stranger_to_give_me_money/ — The question is obviously &amp;quot;how did you do it&amp;quot; I think this one came from Reddit, which obvously doesn&amp;#39;t scale. However, I have another user on the free trial (and I emailed back and forth with them so I kno
+- [R] [reddit-saas] You have $1,000 to teach a developer how to sell. Where does every euro go? — https://www.reddit.com/r/SaaS/comments/1wqcfdu/you_have_1000_to_teach_a_developer_how_to_sell/ — I&amp;#39;m a dev. I can ship a SaaS in a few weeks I&amp;#39;ve built several: a B2B tool for companies and a management platform for restaurants. My problem: I build well and sell badly. I don&amp;#39;t think like a founder yet. I
+- [R] [reddit-saas] Am I the only one seeing conversion cycles of over 12 months in enterprise SaaS? I have to keep leads on simmer before they actually convert. — https://www.reddit.com/r/SaaS/comments/1wqjitm/am_i_the_only_one_seeing_conversion_cycles_of/ — Is it because of the nature of business? Or, is that generally true for enterprise SaaS? Are there more approachable markets out there with smaller conversion cycles? &amp;#32; submitted by &amp;#32; /u/icengine101 [link] &amp;#32;
+- [R] [reddit-saas] The fear of getting your SAAS cloned is overblown in my opinion — https://www.reddit.com/r/SaaS/comments/1wpxexz/the_fear_of_getting_your_saas_cloned_is_overblown/ — Software has always been something you can replicate just that AI made the process faster, so even if a saas or an app get&amp;#39;s cloned, how exactly are you going to clone the distribution? Distribution is so tricky that
+- [R] [reddit-saas] The most useful part of a brand isn't the logo. It's the cover it gives you on hard decisions. — https://www.reddit.com/r/SaaS/comments/1wqji3n/the_most_useful_part_of_a_brand_isnt_the_logo_its/ — I&amp;#39;ve worked in brand strategy for a long time, and the part that pays off fastest for a small business has nothing to do with how it looks. It&amp;#39;s what it does for your decisions. A lot of owners see branding as a
+- [R] [reddit-saas] AGPL taught me my first SaaS lesson before writing any code: read the LICENSE first — https://www.reddit.com/r/SaaS/comments/1wqerrq/agpl_taught_me_my_first_saas_lesson_before/ — I'm still in the learning and planning phase before building my first SaaS product , and this week I accidentally learned a painful lesson about open-source licenses. I was browsing tools I imagined using one day: intern
+- [R] [reddit-saas] What if my web app doesn’t lend itself to viral UGC? It seems like it’s the only way to get your Saas going these days. - I will not promote. — https://www.reddit.com/r/SaaS/comments/1wqg5qv/what_if_my_web_app_doesnt_lend_itself_to_viral/ — I can’t see making a video about what I’m building, let alone anyone would care if they saw my Saas on Insta or TikTok. I think UGC marketing works for B2C but not B2B or a niche category. Anyway, I keep seeing videos ab
+- [R] [reddit-saas] Thanks, Claude, for the promo video 🙏 — https://www.reddit.com/r/SaaS/comments/1wpx5s1/thanks_claude_for_the_promo_video/ — I didn't use any additional skills or MCP's - just plain Claude Code (CLI) I asked him to do a walkthrough of my extension and create a promo video. As far as I understand, he created animations in the browser using JS a
+- [R] [reddit-saas] Do you ever need to control a file after you've already sent it? — https://www.reddit.com/r/SaaS/comments/1wqkj7v/do_you_ever_need_to_control_a_file_after_youve/ — Ever sent a file and then thought, “Hmm, I wish I could still control this”? I’ve been thinking about that a lot. Usually, once you send a file, you pretty much lose all control over it. But there are cases where you’d w
+- [R] [reddit-saas] Founders and support teams: what's still painfully manual in your customer-support workflow? — https://www.reddit.com/r/SaaS/comments/1wqkf9o/founders_and_support_teams_whats_still_painfully/ — I'm researching how SaaS companies handle customer support, particularly issues that require checking multiple internal systems. I'm curious about three things: 1. What support tasks still require switching between your
+- [R] [reddit-saas] Claude helped me create a video for my Product. — https://www.reddit.com/r/SaaS/comments/1wqkbs5/claude_helped_me_create_a_video_for_my_product/ — I gave Claude the entire codebase and had it actually use the product instead of just generating generic screenshots. I told it to go through the platform, use the different features, and screen record the process, break
+- [R] [reddit-saas] How do you actually test whether an AI tool &quot;understands&quot; something vs. just sounds confident? — https://www.reddit.com/r/SaaS/comments/1wqjyzb/how_do_you_actually_test_whether_an_ai_tool/ — Ran into this building a content-planning tool, asked it to analyze my own website, and it got my entire business category wrong, very confidently. Sounded completely plausible if you didn't already know the answer. Ende
+- [R] [reddit-saas] How do you guys find winning SaaS ideas? — https://www.reddit.com/r/SaaS/comments/1wqafcj/how_do_you_guys_find_winning_saas_ideas/ — I've tried sinking deep into a rabbithole of meta ads library, but it's been only a headache for me &amp;#32; submitted by &amp;#32; /u/Forsaken_Software152 [link] &amp;#32; [comments]
+- [R] [reddit-saas] How do you security-check and test your vibe-coded apps before shipping? — https://www.reddit.com/r/SaaS/comments/1wq4vl8/how_do_you_securitycheck_and_test_your_vibecoded/ — I’ve been building a few apps and was wondering how you guys make sure they’re actually secure, reliable, and production-ready before shipping. Do you have a specific checklist or workflow? What tools do you use for thin
+- [R] [reddit-saas] we killed 6 products before launch. the problem kept changing shape — https://www.reddit.com/r/SaaS/comments/1wqj40r/we_killed_6_products_before_launch_the_problem/ — in early 2025 i started with one thesis: models could do a lot, but they lacked the company context to do useful work. we built apps to probe that gap, then infrastructure to feed context to agents when opus 4.5 arrived,
+- [R] [reddit-saas] Does vibe-coded means shitty or low quality product ? — https://www.reddit.com/r/SaaS/comments/1wpwyis/does_vibecoded_means_shitty_or_low_quality_product/ — I saw this discussion in a subreddit, A guy built a chrome extension, probably a technical person who's vibe coding stuff.. but the question is does vibecoding always means shitty and low quality product or it can't scal
+- [R] [reddit-saas] Need some free tool to create ads from my saas — https://www.reddit.com/r/SaaS/comments/1wq8pur/need_some_free_tool_to_create_ads_from_my_saas/ — This is what I was able to create with url motion, it's okay but it's not that good, even the voice is very choppy I can build things but marketing holy shit, just thinking about it makes me want hit my head on a wall, w
+- [R] [reddit-saas] 3 real examples of how founders got their first customers — https://www.reddit.com/r/SaaS/comments/1wqhg0b/3_real_examples_of_how_founders_got_their_first/ — There’s a lot of advice about getting your first customers: do SEO, post on Twitter, launch on Product Hunt, run ads, build an audience. But I’ve been more interested in what founders actually did when they had zero cust
+- [R] [reddit-saas] Some calm results, SEO 1 month work — https://www.reddit.com/r/SaaS/comments/1wq67br/some_calm_results_seo_1_month_work/ — I have 40 pages indexed and bro this SEO stuff is not easy. Had to go back to back with cursor to fix some these pages. I did 5 clicks this months, and i started posting blogs late August. Right now my goal is get more b
+- [R] [reddit-saas] Need advice building a TallyPrime + Zoho Books platform — https://www.reddit.com/r/SaaS/comments/1wqgxo1/need_advice_building_a_tallyprime_zoho_books/ — Hey everyone, I'm building a multi-client accounting review platform and need some advice from people experienced with TallyPrime/Zoho Books APIs. The idea is simple: 20+ clients → Tally/Zoho → pull data → normalize → ru
+- [R] [reddit-saas] Rate launch video — https://www.reddit.com/r/SaaS/comments/1wqgq3n/rate_launch_video/ — /10 what number you have this launch video ( I’m not the owner of this product- I’m the creator) &amp;#32; submitted by &amp;#32; /u/No-Friendship6165 [link] &amp;#32; [comments]
+- [R] [latent-space] OpenRouter: from Seed to Stripe — with OpenRouter’s Alex Atallah &amp; AMP’s Anjney Midha — https://www.latent.space/p/openrouter — In 2023 most people doubted that there could be more than 1 or 2 frontier model labs. Now there are dozens.... and Stripe just bought the best known one for $7B.
+- [P] [vercel-changelog] Push images to Vercel Container Registry from GitHub Actions — https://vercel.com/changelog/vcr-login-github-action — Vercel added a GitHub Action that logs into Vercel Container Registry via GitHub OIDC, issuing a short-lived token instead of storing registry credentials.
+- [P] [vercel-changelog] State of agent skills — https://vercel.com/blog/state-of-agent-skills — Vercel reports that skills.sh passed one million listings and nearly 280 million installs, with demand concentrated in a small set of reusable workflows.
+- [P] [vercel-changelog] Pixel Canary is now available in stealth for free on AI Gateway — https://vercel.com/changelog/pixel-canary-is-now-available-in-stealth-for-free-on-ai-gateway — Vercel AI Gateway added stealth/pixel-canary free for a limited time; Vercel reports strong Next.js eval results but says ZDR is unavailable and prompts may be used for training.
+- [P] [vercel-changelog] Vercel Sandbox now supports memory observability — https://vercel.com/changelog/vercel-sandbox-now-supports-memory-observability — Vercel Sandbox now exposes memory usage in the dashboard, query builder, and vercel metrics CLI, including averages, P75, P95, and an 85% ceiling reference.
+- [P] [cloudflare-blog] Agents can now set up your website’s security with Turnstile Spin — https://blog.cloudflare.com/turnstile-spin/ — Cloudflare introduced Turnstile Spin, an agent-assisted setup flow aimed at preventing the common mistake of adding Turnstile without server-side token validation.
+- [R] [stratechery] 2026.39: Begun, the Aggregator Wars Have — https://stratechery.com/2026/begun-the-aggregator-wars-have/ — The best Stratechery content from the week of September 21, 2026, including Meta vs. Amazon, GM bending the knee to CarPlay, and profiling the profiler.
+- [R] [gh-nextjs] v16.4.0-canary.48 — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.48 — ### Misc Changes - Hoist resolved pathname into app page route match: #99259 - docs: papercuts in image API reference: #99256 - test: run the TypeScript version warning suites in deploy: #99195 - test: drop skipDeploymen
+- [R] [gh-nextjs] v16.4.0-canary.47 — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.47 — ### Misc Changes - Prepare `'use cache'` for static root-param tracking: #99239 - [test] Adjust the prerender-encoding open fallback gate for non-adapter deploys: #99240 - Turbopack: avoid project-wide traces from packag
+- [R] [gh-nextjs] v16.4.0-canary.46 — https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.46 — ### Misc Changes - Revert &quot;Add experimental custom webpack support&quot;: #99227 - test: stabilize lazy dynamic import error overlay: #98730 - turbo-tasks-gc: tear down reverse edges when collecting a task: #99145 - Sequence
+- [P] [hn-top] Revealing the details of how OpenAI agents hacked Hugging Face — https://swarmtraces.org/ — Swarmtraces reconstructs alleged agent activity in the Hugging Face incident, including attempts at persistence, credential escalation, DNS exfiltration, and CAPTCHA bypass; the authors explicitly say the reconstruction is incomplete and outcomes are often unknown.
+- [R] [hn-top] A single function Jev-like wrapper for LLMs, including vision models — http://allanrbo.blogspot.com/2026/09/a-jev-like-wrapper-for-llms-including.html — A single function Jev-like wrapper for LLMs, including vision models
+- [R] [hn-top] Plan mode is dead — https://www.aymannadeem.com/artificial/intelligence,/developer/tools/2026/09/24/plan-mode-is-dead.html — Plan mode is dead</pre>
     </details>
   </main>
   <footer>

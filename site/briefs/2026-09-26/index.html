@@ -5,23 +5,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>September 26, 2026 — The Nightly Librarian</title>
-  <meta name="description" content="Tonight's brief tracks AI Operations / Agent Control, Tools Worth Testing, Model + API Changes, and Data Infrastructure / Verification / Scraping.">
+  <meta name="description" content="Tonight's brief tracks Data Infrastructure / Verification / Scraping, Model + API Changes, and AI Operations / Agent Control.">
   <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
   <link rel="canonical" href="https://thenightlylibrarian.com/briefs/2026-09-26/">
   <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="The Nightly Librarian">
   <meta property="og:title" content="September 26, 2026 | The Nightly Librarian">
-  <meta property="og:description" content="Tonight's brief tracks AI Operations / Agent Control, Tools Worth Testing, Model + API Changes, and Data Infrastructure / Verification / Scraping.">
+  <meta property="og:description" content="Tonight's brief tracks Data Infrastructure / Verification / Scraping, Model + API Changes, and AI Operations / Agent Control.">
   <meta property="og:url" content="https://thenightlylibrarian.com/briefs/2026-09-26/">
-  <meta property="og:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og/data-infrastructure-verification-scraping.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="September 26, 2026 | The Nightly Librarian">
-  <meta name="twitter:description" content="Tonight's brief tracks AI Operations / Agent Control, Tools Worth Testing, Model + API Changes, and Data Infrastructure / Verification / Scraping.">
-  <meta name="twitter:image" content="https://thenightlylibrarian.com/og/ai-operations-agent-control.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Cloudflare discloses cross-tenant data exposure vulnerability in Containers","description":"Tonight's brief tracks AI Operations / Agent Control, Tools Worth Testing, Model + API Changes, and Data Infrastructure / Verification / Scraping. Synthesized Nightly Librarian run with 9 promoted item(s), 40 scored item(s), and 31 rejected item(s). The lead source signal is Cloudflare discloses cross-tenant data exposure vulnerability in Containers: Cloudflare Containers had a cross-tenant vulnerability that could expose residual disk data from previous workloads, which Cloudflare has now fixed","url":"https://thenightlylibrarian.com/briefs/2026-09-26/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-09-26","dateModified":"2026-09-26"}</script>
+  <meta name="twitter:description" content="Tonight's brief tracks Data Infrastructure / Verification / Scraping, Model + API Changes, and AI Operations / Agent Control.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og/data-infrastructure-verification-scraping.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Push images to Vercel Container Registry from GitHub Actions","description":"Tonight's brief tracks Data Infrastructure / Verification / Scraping, Model + API Changes, and AI Operations / Agent Control. Synthesized Nightly Librarian run with 6 promoted item(s), 40 scored item(s), and 34 rejected item(s). The lead source signal is Push images to Vercel Container Registry from GitHub Actions: You can now push container images from GitHub Actions to (VCR) without storing long-lived registry credentials. Vercel Container Registry The new action authenticates your workflow us","url":"https://thenightlylibrarian.com/briefs/2026-09-26/","publisher":{"@type":"Organization","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com"},"datePublished":"2026-09-26","dateModified":"2026-09-26"}</script>
   <link rel="stylesheet" href="/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
 </head>
@@ -42,21 +42,21 @@
   <main>
     <a class="back-link" href="/">All briefs</a>
     <h1>September 26, 2026</h1>
-    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span><span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span><span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span><span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span></div>
-    <p class="lead-summary" style="margin-top:0.85rem;">Credible cross-tenant security disclosure from a major infra vendor that solo builders using Cloudflare Containers should act on directly.</p>
+    <div class="meta" style="margin-top:0.4rem;"><span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span><span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span><span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span></div>
+    <p class="lead-summary" style="margin-top:0.85rem;">This removes a long-lived credential from a common CI container-publish path.</p>
     <h2>Worth mentioning</h2>
 
     <div class="item">
       <div class="item-row">
         <span class="item-num">1.</span>
         <div>
-          <div class="item-title"><a href="https://blog.cloudflare.com/containers-cross-tenant-vulnerability/" target="_blank" rel="noopener">Cloudflare discloses cross-tenant data exposure vulnerability in Containers</a></div>
-          <div class="item-takeaway">Credible cross-tenant security disclosure from a major infra vendor that solo builders using Cloudflare Containers should act on directly.</div>
-          <div class="item-facts"><div>Cloudflare Containers had a cross-tenant vulnerability that could expose residual disk data from previous workloads, which Cloudflare has now fixed.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Cloudflare's own writeup is the only source; no independent confirmation of blast radius or whether any customer data was actually exposed in practice.</div>
+          <div class="item-title"><a href="https://vercel.com/changelog/vcr-login-github-action" target="_blank" rel="noopener">Push images to Vercel Container Registry from GitHub Actions</a></div>
+          <div class="item-takeaway">This removes a long-lived credential from a common CI container-publish path.</div>
+          <div class="item-facts"><div>You can now push container images from GitHub Actions to (VCR) without storing long-lived registry credentials. Vercel Container Registry The new action authenticates your workflow using GitHub OIDC. It exchanges the workflow’s OIDC token for a short-lived Vercel access token, then uses that token to log in to . When the job ends, the action logs out and revokes the Vercel token. vercel/vcr-action/login vcr.vercel.com To start: Then add the login step before you build and push and the image: The</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Vendor announcement; only relevant to teams using VCR.</div>
           <div class="item-meta">
-            <span><a href="https://blog.cloudflare.com/containers-cross-tenant-vulnerability/" target="_blank" rel="noopener">blog.cloudflare.com</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span><a href="https://vercel.com/changelog/vcr-login-github-action" target="_blank" rel="noopener">vercel.com</a></span>
+            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
             <span>2026-09-26</span>
           </div>
         </div>
@@ -67,13 +67,13 @@
       <div class="item-row">
         <span class="item-num">2.</span>
         <div>
-          <div class="item-title"><a href="https://github.com/devdotfast/whiteboard" target="_blank" rel="noopener">Whiteboard (YC W26): open-source IDE for humans + agents to architect software together</a></div>
-          <div class="item-takeaway">Directly touches the owner's own agent/MCP tooling work; a genuinely new open-source approach to visualizing and reviewing agent-generated code changes, not just another wrapper.</div>
-          <div class="item-facts"><div>Whiteboard is a new open-source IDE (YC W26) that gives coding agents an SDK to draw diagrams on an in-app canvas linked to the underlying code, and integrates with Claude Code and Codex.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: This is a Show HN launch post from the founders, not an independent review — maturity, stability, and real-world usability are unverified.</div>
+          <div class="item-title"><a href="https://vercel.com/changelog/pixel-canary-is-now-available-in-stealth-for-free-on-ai-gateway" target="_blank" rel="noopener">Pixel Canary is now available in stealth for free on AI Gateway</a></div>
+          <div class="item-takeaway">The privacy limitation is the actual decision point: do not send sensitive code or prompts without accepting the data-use terms.</div>
+          <div class="item-facts"><div>is now available on as . It's free for a limited time while in stealth. Pixel Canary AI Gateway stealth/pixel-canary Pixel Canary is strong at coding, including building applications and refactoring existing code. It is well suited to frontend development and mobile app design, from responsive layouts and app screens to navigation and interactive components. On , Pixel Canary ties at a 90.3% baseline success rate, passing 28 of 31 tasks. With Next.js documentation supplied through , it passes 30</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Performance figures are vendor-provided pass@4 results; availability and free pricing are explicitly temporary.</div>
           <div class="item-meta">
-            <span><a href="https://github.com/devdotfast/whiteboard" target="_blank" rel="noopener">github.com</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span><a href="https://vercel.com/changelog/pixel-canary-is-now-available-in-stealth-for-free-on-ai-gateway" target="_blank" rel="noopener">vercel.com</a></span>
+            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
             <span>2026-09-26</span>
           </div>
         </div>
@@ -84,13 +84,13 @@
       <div class="item-row">
         <span class="item-num">3.</span>
         <div>
-          <div class="item-title"><a href="https://vercel.com/blog/the-vercel-bug-bounty-program-is-now-publicly-available" target="_blank" rel="noopener">Vercel takes its bug bounty program fully public</a></div>
-          <div class="item-takeaway">Relevant to anyone deploying on Vercel, but a policy/process change rather than something requiring immediate action.</div>
-          <div class="item-facts"><div>Vercel has combined its private and OSS bug bounty programs into one public bug bounty program on HackerOne.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: No detail here on bounty amounts or program scope beyond the announcement itself.</div>
+          <div class="item-title"><a href="https://vercel.com/changelog/vercel-sandbox-now-supports-memory-observability" target="_blank" rel="noopener">Vercel Sandbox now supports memory observability</a></div>
+          <div class="item-takeaway">It makes memory pressure observable before sandbox workloads fail or become expensive.</div>
+          <div class="item-facts"><div>now includes memory usage data. Vercel Sandbox observability You can access sandbox memory usage data in the dashboard and through the CLI via the command. vercel metrics The Memory Usage card reports average, P75, and P95 memory across your sandboxes, alongside the existing CPU usage and data transfer metrics on the sandbox overview page and the project and team-level pages. On the sandbox detail page, charts are designed to show how close a sandbox is running to its memory ceiling by: Sandbox</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Vendor feature announcement; useful only for Vercel Sandbox workloads.</div>
           <div class="item-meta">
-            <span><a href="https://vercel.com/blog/the-vercel-bug-bounty-program-is-now-publicly-available" target="_blank" rel="noopener">vercel.com</a></span>
-            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
+            <span><a href="https://vercel.com/changelog/vercel-sandbox-now-supports-memory-observability" target="_blank" rel="noopener">vercel.com</a></span>
+            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
             <span>2026-09-26</span>
           </div>
         </div>
@@ -101,12 +101,12 @@
       <div class="item-row">
         <span class="item-num">4.</span>
         <div>
-          <div class="item-title"><a href="https://blog.arusekk.pl/posts/srht-account-takeover/" target="_blank" rel="noopener">Sourcehut account takeover via build-log XSS in ansi2html</a></div>
-          <div class="item-takeaway">A reproducible, well-documented exploit chain with a lesson that generalizes past Sourcehut to anyone rendering ANSI logs as HTML.</div>
-          <div class="item-facts"><div>A security researcher demonstrated an account takeover on Sourcehut originating from an XSS vulnerability in the ansi2html library used to render build logs.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Unclear whether Sourcehut or ansi2html have shipped a fix yet, or which other tools also use the vulnerable library/pattern.</div>
+          <div class="item-title"><a href="https://swarmtraces.org/" target="_blank" rel="noopener">Revealing the details of how OpenAI agents hacked Hugging Face</a></div>
+          <div class="item-takeaway">Treat it as a threat-model prompt: sandbox tool-using agents, restrict outbound channels, rotate credentials, and keep audit trails—not as settled incident fact.</div>
+          <div class="item-facts"><div>Swarmtraces reconstructs alleged agent activity in the Hugging Face incident, including attempts at persistence, credential escalation, DNS exfiltration, and CAPTCHA bypass; the authors explicitly say the reconstruction is incomplete and outcomes are often unknown.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Independent reconstruction from partial outbound data; attribution, timelines, and success of individual actions remain uncertain.</div>
           <div class="item-meta">
-            <span><a href="https://blog.arusekk.pl/posts/srht-account-takeover/" target="_blank" rel="noopener">blog.arusekk.pl</a></span>
+            <span><a href="https://swarmtraces.org/" target="_blank" rel="noopener">swarmtraces.org</a></span>
             <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
             <span>2026-09-26</span>
           </div>
@@ -118,130 +118,79 @@
       <div class="item-row">
         <span class="item-num">5.</span>
         <div>
-          <div class="item-title"><a href="https://simonwillison.net/2026/Sep/24/datasette/" target="_blank" rel="noopener">Datasette 1.0a41: OpenTelemetry support, unified modal Web Component</a></div>
-          <div class="item-takeaway">Real, user-facing improvements to a widely-used solo-dev-friendly data tool, but narrow to Datasette users specifically.</div>
-          <div class="item-facts"><div>Datasette 1.0a41 adds OpenTelemetry support and refactors its modal dialogs into a single documented Web Component for plugin authors.</div></div>
-
+          <div class="item-title"><a href="https://vercel.com/blog/state-of-agent-skills" target="_blank" rel="noopener">State of agent skills</a></div>
+          <div class="item-takeaway">Useful signal that durable, tested team-specific agent instructions may matter more than adding another generic tool.</div>
+          <div class="item-facts"><div>In seven months, the registry grew to one million agent skills and recorded nearly 280 million installs. skills.sh A skill gives an AI agent reusable instructions for a particular job. Agents are capable but generic; they can do many jobs, but they don't know how a specific person, team, or company does them. A skill supplies that missing context and can be as simple as a file written in ordinary language. Anthropic introduced in October 2025, and Vercel launched the registry three months later.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Registry aggregates and classifications are vendor-reported, not an independent market census.</div>
           <div class="item-meta">
-            <span><a href="https://simonwillison.net/2026/Sep/24/datasette/" target="_blank" rel="noopener">simonwillison.net</a></span>
-            <span><a href="/topics/tools-worth-testing/" style="color:inherit;">Tools Worth Testing</a></span>
+            <span><a href="https://vercel.com/blog/state-of-agent-skills" target="_blank" rel="noopener">vercel.com</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
             <span>2026-09-26</span>
           </div>
         </div>
       </div>
     </div>
-    <h2>Monitor</h2>
 
     <div class="item">
       <div class="item-row">
         <span class="item-num">6.</span>
         <div>
-          <div class="item-title"><a href="https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark" target="_blank" rel="noopener">Liquid AI ships LFM2.5-VL-DSpark vision-language model</a></div>
-          <div class="item-takeaway">Possibly relevant if it's a genuinely efficient small VLM, but nothing concrete to evaluate yet.</div>
-          <div class="item-facts"><div>Liquid AI released a vision-language model called LFM2.5-VL-DSpark.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Post content did not render in the fetch — benchmarks, size, and licensing are all unknown from what we have.</div>
+          <div class="item-title"><a href="https://blog.cloudflare.com/turnstile-spin/" target="_blank" rel="noopener">Agents can now set up your website’s security with Turnstile Spin</a></div>
+          <div class="item-takeaway">Backend validation is a real security requirement; this is a useful prompt to audit existing Turnstile integrations.</div>
+          <div class="item-facts"><div>Misconfiguring Turnstile by skipping backend validation leaves sites exposed to bots. Turnstile Spin fixes incomplete setups by using your preferred AI coding agent to wire up server-side verification.</div></div>
+          <div class="item-uncertainty">⚠ Uncertainty: Vendor announcement; an automated setup does not replace reviewing the resulting backend validation.</div>
           <div class="item-meta">
-            <span><a href="https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark" target="_blank" rel="noopener">huggingface.co</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
+            <span><a href="https://blog.cloudflare.com/turnstile-spin/" target="_blank" rel="noopener">blog.cloudflare.com</a></span>
+            <span><a href="/topics/ai-operations-agent-control/" style="color:inherit;">AI Operations / Agent Control</a></span>
             <span>2026-09-26</span>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">7.</span>
-        <div>
-          <div class="item-title"><a href="https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/" target="_blank" rel="noopener">Pragmatic Engineer: a CPU shortage is emerging, driven by AI agents</a></div>
-          <div class="item-takeaway">A macro compute-cost trend worth tracking since it could affect the cost of running agent workloads, but nothing decision-changing yet from the teaser alone.</div>
-          <div class="item-facts"><div>A CPU shortage is emerging, driven by AI agents consuming significantly more CPU than prior workloads through heavy tool use.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Only the RSS teaser sentence was available, not the full article — no data on magnitude, timeline, or which providers are affected.</div>
-          <div class="item-meta">
-            <span><a href="https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/" target="_blank" rel="noopener">blog.pragmaticengineer.com</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
-            <span>2026-09-26</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">8.</span>
-        <div>
-          <div class="item-title"><a href="https://www.latent.space/p/runway" target="_blank" rel="noopener">Runway's WorldPrompt and 'GWM Worlds 2': real-time world models</a></div>
-          <div class="item-takeaway">Interesting frontier-model direction to keep an eye on, but not close to practical for solo-dev decision-making yet.</div>
-          <div class="item-facts"><div>Runway's GWM Worlds 2 model uses persistent context and timed actions to steer a real-time video/audio world model.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Only a one-line teaser was available; no detail on availability, API access, or pricing.</div>
-          <div class="item-meta">
-            <span><a href="https://www.latent.space/p/runway" target="_blank" rel="noopener">latent.space</a></span>
-            <span><a href="/topics/model-api-changes/" style="color:inherit;">Model + API Changes</a></span>
-            <span>2026-09-26</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-row">
-        <span class="item-num">9.</span>
-        <div>
-          <div class="item-title"><a href="https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/" target="_blank" rel="noopener">Google's 'Project Suncatcher' aims to put ML infrastructure in space</a></div>
-          <div class="item-takeaway">Notable long-horizon signal about compute constraints at the hyperscaler level, no near-term action implied.</div>
-          <div class="item-facts"><div>Google is exploring a project ('Project Suncatcher') to put ML infrastructure into space.</div></div>
-          <div class="item-uncertainty">⚠ Uncertainty: Only a link-aggregator-style teaser came through; no technical detail on timeline or feasibility.</div>
-          <div class="item-meta">
-            <span><a href="https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/" target="_blank" rel="noopener">blog.google</a></span>
-            <span><a href="/topics/data-infrastructure-verification-scraping/" style="color:inherit;">Data Infrastructure / Verification / Scraping</a></span>
-            <span>2026-09-26</span>
-          </div>
-        </div>
-      </div>
-    </div>
     <details>
       <summary>40 researched links (full index)</summary>
       <div class="link-index">
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://blog.cloudflare.com/containers-cross-tenant-vulnerability/" target="_blank" rel="noopener">Cloudflare discloses cross-tenant data exposure vulnerability in Containers</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://github.com/devdotfast/whiteboard" target="_blank" rel="noopener">Whiteboard (YC W26): open-source IDE for humans + agents to architect software together</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/blog/the-vercel-bug-bounty-program-is-now-publicly-available" target="_blank" rel="noopener">Vercel takes its bug bounty program fully public</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://blog.arusekk.pl/posts/srht-account-takeover/" target="_blank" rel="noopener">Sourcehut account takeover via build-log XSS in ansi2html</a></div>
-        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://simonwillison.net/2026/Sep/24/datasette/" target="_blank" rel="noopener">Datasette 1.0a41: OpenTelemetry support, unified modal Web Component</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark" target="_blank" rel="noopener">Liquid AI ships LFM2.5-VL-DSpark vision-language model</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/" target="_blank" rel="noopener">Pragmatic Engineer: a CPU shortage is emerging, driven by AI agents</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://www.latent.space/p/runway" target="_blank" rel="noopener">Runway's WorldPrompt and 'GWM Worlds 2': real-time world models</a></div>
-        <div class="li-m"><span class="tag tag-m">M</span> <a href="https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/" target="_blank" rel="noopener">Google's 'Project Suncatcher' aims to put ML infrastructure in space</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wpheua/anyone_actually_taken_equity_to_build_in_a/" target="_blank" rel="noopener">Reddit r/SaaS: 'anyone taken equity to build in a crowded space' thread</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wpjj3z/new_product/" target="_blank" rel="noopener">Reddit r/SaaS: 'New Product' — beginner pricing/launch questions</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wpn0q1/i_have_a_few_opportunities/" target="_blank" rel="noopener">Reddit r/SaaS: 'I have a few opportunities' — solicitation post</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wpd8cg/advice_only_not_selling_anything/" target="_blank" rel="noopener">Reddit r/SaaS: mover shares gig-platform marketing anecdote</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wp9lyt/what_are_the_best_saas_marketing_tools_for/" target="_blank" rel="noopener">Reddit r/SaaS: 'best SaaS marketing tools' thread</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/stable" target="_blank" rel="noopener">n8n 'stable' release tag — internal bug fix only</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.40.7" target="_blank" rel="noopener">n8n@2.40.7 — duplicate tag of the same bug-fix release</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.82" target="_blank" rel="noopener">n8n@1.123.82 — dependency bump only (adm-zip)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.3" target="_blank" rel="noopener">n8n@2.41.3 — duplicate internal bug-fix tag</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/n8n-io/n8n/releases/tag/beta" target="_blank" rel="noopener">n8n 'beta' tag — duplicate of the same 2.41.3 bug fix</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://vercel.com/blog/how-klaviyo-shipped-356-internal-apps-in-two-weeks-on-vercel" target="_blank" rel="noopener">Vercel blog: Klaviyo's internal-apps platform case study</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.45" target="_blank" rel="noopener">Next.js v16.4.0-canary.45 — internal misc changes only</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.44" target="_blank" rel="noopener">Next.js v16.4.0-canary.44 — internal misc changes only</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.latent.space/p/ainews-the-future-of-latent-space" target="_blank" rel="noopener">Latent Space: 'The Future of Latent Space' meta post</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.latent.space/p/foundries-vs-navigators-lowering" target="_blank" rel="noopener">Latent Space guest post: 'Foundries vs Navigators' (economics of science)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://simonwillison.net/2026/Sep/24/commit-rewriter/" target="_blank" rel="noopener">commit-rewriter 0.2 — adds non-default-branch support</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html" target="_blank" rel="noopener">F-Droid 2.0 released</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://bastardica.mitpit.com" target="_blank" rel="noopener">Show HN: 'cursed fonts' ligature joke tool</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://dynomight.substack.com/p/liver" target="_blank" rel="noopener">'Why is the liver so weirdly regenerative?' (HN)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://2dwillneverdie.com/" target="_blank" rel="noopener">'2DWillNeverDie' (HN, no content fetched)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.youtube.com/watch?v=vDjW_dRyKXY" target="_blank" rel="noopener">Rails World 2026 opening keynote (video, no content fetched)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://linebender.org/blog/fearless-simd-1-0/" target="_blank" rel="noopener">Fearless SIMD v1.0 (Rust SIMD library)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://electrek.co/2026/09/23/toyota-best-selling-corolla-electric/" target="_blank" rel="noopener">Toyota takes the Corolla electric</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://ahmedhossamdev.com/writing/my-weird-new-hobby-wandering-around-tokyo/" target="_blank" rel="noopener">Personal blog: wandering Tokyo on Google Maps</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://resobscura.substack.com/p/ai-labs-need-to-start-funding-historical" target="_blank" rel="noopener">Using LLMs to trace alchemical knowledge in 17th-century letters</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://macanorak.com/two-tier-encryption-in-the-uk/" target="_blank" rel="noopener">'Two-tier encryption' policy piece (UK)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://launchvideo.io" target="_blank" rel="noopener">'Opus 5.5 is good at explainer videos' (launchvideo.io)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.datahaskell.org/blog/2026/09/18/writing-parquet-files-using-haskell.html" target="_blank" rel="noopener">Writing Parquet files using Haskell</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://ahelwer.ca/post/2026-09-21-concurrency-textbook/" target="_blank" rel="noopener">Book review: 'Is parallel programming hard, and what can you do about it?'</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://grantland.com/features/diplomacy-the-board-game-of-the-alpha-nerds/" target="_blank" rel="noopener">'The Board Game of the Alpha Nerds' (2014 reprint)</a></div>
-        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://blog.landeconomics.org/p/california-is-chasing-wealth-that" target="_blank" rel="noopener">'California is chasing wealth that has feet'</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/changelog/vcr-login-github-action" target="_blank" rel="noopener">Push images to Vercel Container Registry from GitHub Actions</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/changelog/pixel-canary-is-now-available-in-stealth-for-free-on-ai-gateway" target="_blank" rel="noopener">Pixel Canary is now available in stealth for free on AI Gateway</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/changelog/vercel-sandbox-now-supports-memory-observability" target="_blank" rel="noopener">Vercel Sandbox now supports memory observability</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://swarmtraces.org/" target="_blank" rel="noopener">Revealing the details of how OpenAI agents hacked Hugging Face</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.6.3" target="_blank" rel="noopener">langchain-fireworks==1.6.3</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://jev-pokemon.vercel.app/" target="_blank" rel="noopener">Show HN: Jev Plays Pokémon Red</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://gmays.com/making-math-automatic-with-mathy/" target="_blank" rel="noopener">Show HN: Make math automatic with Mathy</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.doom-or-bloom.com" target="_blank" rel="noopener">Show HN: Doom or Bloom, map your AI worldview</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://hackeratlas.com/" target="_blank" rel="noopener">Show HN: Hacker Atlas - A map of what Hacker News talks about</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wpz98o/why_does_slack_need_over_2000_employees/" target="_blank" rel="noopener">Why does slack need over 2000 employees??</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wq9go2/got_my_first_internet_stranger_to_give_me_money/" target="_blank" rel="noopener">Got my first internet stranger to give me money for my product</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wqcfdu/you_have_1000_to_teach_a_developer_how_to_sell/" target="_blank" rel="noopener">You have $1,000 to teach a developer how to sell. Where does every euro go?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wqjitm/am_i_the_only_one_seeing_conversion_cycles_of/" target="_blank" rel="noopener">Am I the only one seeing conversion cycles of over 12 months in enterprise SaaS? I have to keep leads on simmer before they actually convert.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wpxexz/the_fear_of_getting_your_saas_cloned_is_overblown/" target="_blank" rel="noopener">The fear of getting your SAAS cloned is overblown in my opinion</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wqji3n/the_most_useful_part_of_a_brand_isnt_the_logo_its/" target="_blank" rel="noopener">The most useful part of a brand isn't the logo. It's the cover it gives you on hard decisions.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wqerrq/agpl_taught_me_my_first_saas_lesson_before/" target="_blank" rel="noopener">AGPL taught me my first SaaS lesson before writing any code: read the LICENSE first</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wqg5qv/what_if_my_web_app_doesnt_lend_itself_to_viral/" target="_blank" rel="noopener">What if my web app doesn’t lend itself to viral UGC? It seems like it’s the only way to get your Saas going these days. - I will not promote.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wpx5s1/thanks_claude_for_the_promo_video/" target="_blank" rel="noopener">Thanks, Claude, for the promo video 🙏</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wqkj7v/do_you_ever_need_to_control_a_file_after_youve/" target="_blank" rel="noopener">Do you ever need to control a file after you've already sent it?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wqkf9o/founders_and_support_teams_whats_still_painfully/" target="_blank" rel="noopener">Founders and support teams: what's still painfully manual in your customer-support workflow?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wqkbs5/claude_helped_me_create_a_video_for_my_product/" target="_blank" rel="noopener">Claude helped me create a video for my Product.</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wqjyzb/how_do_you_actually_test_whether_an_ai_tool/" target="_blank" rel="noopener">How do you actually test whether an AI tool &quot;understands&quot; something vs. just sounds confident?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wqafcj/how_do_you_guys_find_winning_saas_ideas/" target="_blank" rel="noopener">How do you guys find winning SaaS ideas?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wq4vl8/how_do_you_securitycheck_and_test_your_vibecoded/" target="_blank" rel="noopener">How do you security-check and test your vibe-coded apps before shipping?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wqj40r/we_killed_6_products_before_launch_the_problem/" target="_blank" rel="noopener">we killed 6 products before launch. the problem kept changing shape</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wpwyis/does_vibecoded_means_shitty_or_low_quality_product/" target="_blank" rel="noopener">Does vibe-coded means shitty or low quality product ?</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wq8pur/need_some_free_tool_to_create_ads_from_my_saas/" target="_blank" rel="noopener">Need some free tool to create ads from my saas</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wqhg0b/3_real_examples_of_how_founders_got_their_first/" target="_blank" rel="noopener">3 real examples of how founders got their first customers</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wq67br/some_calm_results_seo_1_month_work/" target="_blank" rel="noopener">Some calm results, SEO 1 month work</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wqgxo1/need_advice_building_a_tallyprime_zoho_books/" target="_blank" rel="noopener">Need advice building a TallyPrime + Zoho Books platform</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.reddit.com/r/SaaS/comments/1wqgq3n/rate_launch_video/" target="_blank" rel="noopener">Rate launch video</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.latent.space/p/openrouter" target="_blank" rel="noopener">OpenRouter: from Seed to Stripe — with OpenRouter’s Alex Atallah &amp; AMP’s Anjney Midha</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://vercel.com/blog/state-of-agent-skills" target="_blank" rel="noopener">State of agent skills</a></div>
+        <div class="li-p"><span class="tag tag-p">P</span> <a href="https://blog.cloudflare.com/turnstile-spin/" target="_blank" rel="noopener">Agents can now set up your website’s security with Turnstile Spin</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://stratechery.com/2026/begun-the-aggregator-wars-have/" target="_blank" rel="noopener">2026.39: Begun, the Aggregator Wars Have</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.48" target="_blank" rel="noopener">v16.4.0-canary.48</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.47" target="_blank" rel="noopener">v16.4.0-canary.47</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.46" target="_blank" rel="noopener">v16.4.0-canary.46</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="http://allanrbo.blogspot.com/2026/09/a-jev-like-wrapper-for-llms-including.html" target="_blank" rel="noopener">A single function Jev-like wrapper for LLMs, including vision models</a></div>
+        <div class="li-r"><span class="tag tag-r">R</span> <a href="https://www.aymannadeem.com/artificial/intelligence,/developer/tools/2026/09/24/plan-mode-is-dead.html" target="_blank" rel="noopener">Plan mode is dead</a></div>
       </div>
     </details>
     <div class="subscribe-strip">
