@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>October 4, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="9 stories cleared the bar, led by Protected Quick Tunnels: simple accountless authentication for your next dev project, Build anything: Supabase from">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-10-04/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="October 4, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="9 stories cleared the bar, led by Protected Quick Tunnels: simple accountless authentication for your next dev project, Build anything: Supabase from">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-10-04/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="October 4, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="9 stories cleared the bar, led by Protected Quick Tunnels: simple accountless authentication for your next dev project, Build anything: Supabase from">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>October 4, 2026 · Report log</span>
+      <span>Oct 4, 2026, 2:04 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>October 4, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>9 stories cleared the bar, led by Protected Quick Tunnels: simple accountless authentication for your next dev project, Build anything: Supabase from code, and an MCP server for your app, and Supabase is acquiring Turso.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>9 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/protected-quick-tunnels/" target="_blank" rel="noopener">Protected Quick Tunnels: simple accountless authentication for your next dev project</a></div>
+        <div class="item-takeaway">Cloudflare Quick Tunnels now support email-based auth via a single --allowed-mail flag on cloudflared, with no Cloudflare account needed. This makes sharing a local dev app or demo with a client safely a one-liner. Worth trying for demos and webhook-testing workflows.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://supabase.com/blog/select-2026-build-anything" target="_blank" rel="noopener">Build anything: Supabase from code, and an MCP server for your app</a></div>
+        <div class="item-takeaway">Supabase now lets agents set up the backend from code, ships an MCP server for your own app so your users' agents can work with it, and adds Supabase Compute for long-running tasks. Directly relevant to MCP/agent work: an app-level MCP server could be a cheap distribution path. Read the docs before committing.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://supabase.com/blog/supabase-is-acquiring-turso" target="_blank" rel="noopener">Supabase is acquiring Turso</a></div>
+        <div class="item-takeaway">Supabase is acquiring Turso (libSQL/SQLite-edge database) to build database infrastructure for agentic AI. If you depend on Turso, watch for pricing, roadmap or licensing changes; if you use Supabase, expect SQLite-style offerings.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://frankwiles.com/posts/i-got-targeted/" target="_blank" rel="noopener">I got targeted: Trying to get your credentials via a git post-checkout hook</a></div>
+        <div class="item-takeaway">A developer describes a targeted attempt to steal credentials through a malicious git post-checkout hook in a cloned repo. Relevant to anyone cloning unfamiliar repos, especially via recruiter or client 'take-home' requests. Review hooks before running git operations in untrusted clones and consider disabling hooks (core.hooksPath) for them.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/speed-insights-deprecates-first-input-delay-on-november-first" target="_blank" rel="noopener">Speed Insights deprecates First Input Delay on November 1st</a></div>
+        <div class="item-takeaway">Vercel Speed Insights stops recording First Input Delay on November 1; it already uses INP as the responsiveness metric. If you have dashboards, alerts or reports keyed to FID, switch them to INP before then.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/account-abuse-protection-dashboard/" target="_blank" rel="noopener">Follow the thread: a new dashboard to investigate account abuse</a></div>
+        <div class="item-takeaway">Cloudflare launched an Account Abuse Protection dashboard that uses stateful analysis and edge-generated Hashed User IDs to investigate fraud and account abuse. Relevant if you run signup/login flows behind Cloudflare, especially with AI-driven abuse rising. Check plan availability before relying on it.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://supabase.com/blog/select-2026-scale-without-limits" target="_blank" rel="noopener">Scale without limits: Multigres, OrioleDB, and dbarena</a></div>
+        <div class="item-takeaway">Supabase announced Multigres (Postgres sharding), OrioleDB and dbarena as its scale story. Interesting direction but nothing to act on until availability and pricing are clear.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://supabase.com/blog/select-2026-operate-with-confidence" target="_blank" rel="noopener">Operate with confidence</a></div>
+        <div class="item-takeaway">Supabase is adding more observability data and tooling so agents can investigate project issues and propose fixes. Track it if you let agents operate your Supabase projects.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.cloudflare.com/announcing-cloudflare-ohttp-gateway/" target="_blank" rel="noopener">Cloudflare OHTTP gateway</a></div>
+        <div class="item-takeaway">Cloudflare announced an OHTTP gateway for privacy-preserving request relaying. Worth a look if you build privacy-sensitive features or proxy requests to model APIs; not urgent.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/account-abuse-protection-dashboard/" target="_blank" rel="noopener">Follow the thread: a new dashboard to investigate account abuse</a>
+        </div>
+        <div class="item-takeaway">Cloudflare launched an Account Abuse Protection dashboard that uses stateful analysis and edge-generated Hashed User IDs to investigate fraud and account abuse. Relevant if you run signup/login flows behind Cloudflare, especially with AI-driven abuse rising. Check plan availability before relying on it.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/protected-quick-tunnels/" target="_blank" rel="noopener">Protected Quick Tunnels: simple accountless authentication for your next dev project</a>
+        </div>
+        <div class="item-takeaway">Cloudflare Quick Tunnels now support email-based auth via a single --allowed-mail flag on cloudflared, with no Cloudflare account needed. This makes sharing a local dev app or demo with a client safely a one-liner. Worth trying for demos and webhook-testing workflows.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.cloudflare.com/civil-society-automation/" target="_blank" rel="noopener">Building for good: How civil society organizations are automating on Cloudflare</a>
+        </div>
+        <div class="item-takeaway">Promotional piece on non-profits automating on Cloudflare. No new capability or decision impact for a solo developer.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.cloudflare.com/network-performance-birthday-week-2026/" target="_blank" rel="noopener">2026 Birthday week: network performance update</a>
+        </div>
+        <div class="item-takeaway">Cloudflare's Birthday Week network performance rankings (fastest in 74% of top networks). Vendor benchmark with no action for a solo builder.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://supabase.com/blog/supabase-select-2026-recap" target="_blank" rel="noopener">Supabase Select 2026 Recap</a>
+        </div>
+        <div class="item-takeaway">Event recap umbrella post for Supabase Select 2026; the substantive announcements are covered by the individual posts.</div>
+        <div class="item-meta">
+          <span>supabase-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://supabase.com/blog/select-2026-scale-without-limits" target="_blank" rel="noopener">Scale without limits: Multigres, OrioleDB, and dbarena</a>
+        </div>
+        <div class="item-takeaway">Supabase announced Multigres (Postgres sharding), OrioleDB and dbarena as its scale story. Interesting direction but nothing to act on until availability and pricing are clear.</div>
+        <div class="item-meta">
+          <span>supabase-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://supabase.com/blog/select-2026-operate-with-confidence" target="_blank" rel="noopener">Operate with confidence</a>
+        </div>
+        <div class="item-takeaway">Supabase is adding more observability data and tooling so agents can investigate project issues and propose fixes. Track it if you let agents operate your Supabase projects.</div>
+        <div class="item-meta">
+          <span>supabase-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://supabase.com/blog/select-2026-build-anything" target="_blank" rel="noopener">Build anything: Supabase from code, and an MCP server for your app</a>
+        </div>
+        <div class="item-takeaway">Supabase now lets agents set up the backend from code, ships an MCP server for your own app so your users' agents can work with it, and adds Supabase Compute for long-running tasks. Directly relevant to MCP/agent work: an app-level MCP server could be a cheap distribution path. Read the docs before committing.</div>
+        <div class="item-meta">
+          <span>supabase-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://supabase.com/blog/supabase-is-acquiring-turso" target="_blank" rel="noopener">Supabase is acquiring Turso</a>
+        </div>
+        <div class="item-takeaway">Supabase is acquiring Turso (libSQL/SQLite-edge database) to build database infrastructure for agentic AI. If you depend on Turso, watch for pricing, roadmap or licensing changes; if you use Supabase, expect SQLite-style offerings.</div>
+        <div class="item-meta">
+          <span>supabase-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/blog/jev-for-python-engineers" target="_blank" rel="noopener">Jev for Python engineers</a>
+        </div>
+        <div class="item-takeaway">Vercel explainer riding a viral tool trend with social-media examples. No platform change or decision impact.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/blog/how-rogo-ships-agent-written-code-to-production-in-5-minutes-on-vercel" target="_blank" rel="noopener">How Rogo ships agent-written code to production in 5 minutes on Vercel</a>
+        </div>
+        <div class="item-takeaway">Vercel customer case study claiming 73k deployments a month and agent code shipped in 5 minutes. Promotional, with no reproducible workflow.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/speed-insights-deprecates-first-input-delay-on-november-first" target="_blank" rel="noopener">Speed Insights deprecates First Input Delay on November 1st</a>
+        </div>
+        <div class="item-takeaway">Vercel Speed Insights stops recording First Input Delay on November 1; it already uses INP as the responsiveness metric. If you have dashboards, alerts or reports keyed to FID, switch them to INP before then.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://frankwiles.com/posts/i-got-targeted/" target="_blank" rel="noopener">I got targeted: Trying to get your credentials via a git post-checkout hook</a>
+        </div>
+        <div class="item-takeaway">A developer describes a targeted attempt to steal credentials through a malicious git post-checkout hook in a cloned repo. Relevant to anyone cloning unfamiliar repos, especially via recruiter or client 'take-home' requests. Review hooks before running git operations in untrusted clones and consider disabling hooks (core.hooksPath) for them.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ziglang.org/download/0.17.0/release-notes.html" target="_blank" rel="noopener">Zig 0.17.0 Release Notes</a>
+        </div>
+        <div class="item-takeaway">Zig 0.17.0 release notes. Language-specific and not tied to current projects.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://onlineonly.christies.com/s/fine-printed-books-manuscripts-science/carrier-pigeon-internet-protocol-150/325216" target="_blank" rel="noopener">Actual RFC1149 packet being auctioned</a>
+        </div>
+        <div class="item-takeaway">Auction listing of a physical RFC 1149 item. Entertainment.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://alexalejandre.com/interviews/peter-bex/" target="_blank" rel="noopener">Lobsters Interview with Sjamaan</a>
+        </div>
+        <div class="item-takeaway">Community interview with a CHICKEN Scheme maintainer. Not relevant to a solo shop's decisions.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://distantprovince.substack.com/p/the-four-horsemen-of-agentic-coding" target="_blank" rel="noopener">The Four Horsemen of Agentic Coding</a>
+        </div>
+        <div class="item-takeaway">Opinion essay on agentic coding pitfalls. Editorial without reproducible data; judged from title only.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://yuka.dev/blog-2026-10-02-linux-m4.html" target="_blank" rel="noopener">The forgetful CPU (Linux on M4)</a>
+        </div>
+        <div class="item-takeaway">Blog post on Linux support for Apple M4 hardware. Hobbyist-level, no practical impact.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://developer.apple.com/news/?id=p6zjojqw" target="_blank" rel="noopener">Updates to Full Disk Access in macOS</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://gvisor.dev/blog/2026/10/02/gvisor-cncf/" target="_blank" rel="noopener">gVisor is being donated to CNCF</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://futhark-lang.org/blog/2026-10-02-cpu_function.html" target="_blank" rel="noopener">Keeping Futhark off the GPU</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://loige.co/hidden-design-compromises-of-docker-layers/" target="_blank" rel="noopener">The hidden design compromises of Docker layers</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.rust-lang.org/inside-rust/2026/10/02/generic-const-args-and-you/" target="_blank" rel="noopener">Generic Const Args and You</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lobste.rs/s/hfmcxi/what_are_you_doing_this_weekend" target="_blank" rel="noopener">What are you doing this weekend?</a>
+        </div>
+        <div class="item-takeaway">Feel free to tell what you plan on doing this weekend and even ask for help or feedback. Please keep in mind it’s more than OK to do nothing…</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://kirancodes.me/posts/log-end-of-pl.html" target="_blank" rel="noopener">The Era of Programming Languages Exploration is upon Us</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://kobzol.github.io/rust/2026/09/30/stf-august-september-2026.html" target="_blank" rel="noopener">Upstream Rust maintenance report</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://linuxiac.com/klassik-revives-the-kde-3-desktop-on-modern-plasma-6/" target="_blank" rel="noopener">Klassik Revives the KDE 3 Desktop on Modern Plasma 6</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://sgt.hootr.club/blog/driving-gdeh0154d67-with-rust/" target="_blank" rel="noopener">Driving the GDEH0154D67 e-paper display with Rust</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.trailofbits.com/2026/10/02/sequencehash-multihashing-for-the-rest-of-us/" target="_blank" rel="noopener">SequenceHash: multihashing for the rest of us</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://thoughtbot.com/blog/respecting-your-users-dread-of-the-clankers" target="_blank" rel="noopener">Respecting your users' dread of the clankers</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://write.as/tmcb/thrust-vs-steer-or-yet-another-anecdotal-case-of-the-dunning-kruger-effect" target="_blank" rel="noopener">Thrust vs. Steer (or: Yet Another Anecdotal Case of the Dunning-Kruger Effect)</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ericwbailey.website/published/github-repository-landing-pages-now-show-an-accessibility-tab-if-provided/" target="_blank" rel="noopener">GitHub repository landing pages now show an accessibility tab, if provided</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.extrabigassintelligence.com/" target="_blank" rel="noopener">Extra Big Ass Intelligence</a>
+        </div>
+        <div class="item-takeaway">Joke/novelty site with no substantive content.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.newgrounds.com/" target="_blank" rel="noopener">Newgrounds.com – A community of games, music, and art</a>
+        </div>
+        <div class="item-takeaway">Homepage of a long-running games and art community. Not news.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility" target="_blank" rel="noopener">Court agrees with EFF: Utah's VPN law demands a technical impossibility</a>
+        </div>
+        <div class="item-takeaway">EFF reports a court sided with it that Utah's VPN law demands a technical impossibility. Policy news with no near-term effect on a solo software shop.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://yuka.dev/blog-2026-10-02-linux-m4.html" target="_blank" rel="noopener">The Forgetful CPU (Linux on M4)</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.nytimes.com/athletic/7648198/2026/10/01/mike-tomlin-minecraft-nfl-coach/" target="_blank" rel="noopener">Mike Tomlin spent 12 years building a Minecraft city</a>
+        </div>
+        <div class="item-takeaway">Sports profile of an NFL coach's Minecraft hobby. Entertainment.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.cloudflare.com/announcing-cloudflare-ohttp-gateway/" target="_blank" rel="noopener">Cloudflare OHTTP gateway</a>
+        </div>
+        <div class="item-takeaway">Cloudflare announced an OHTTP gateway for privacy-preserving request relaying. Worth a look if you build privacy-sensitive features or proxy requests to model APIs; not urgent.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://bsky.app/profile/theplanetaryguy.com/post/3mwucf5ert22f" target="_blank" rel="noopener">A 12-year sequence of telescope images of a star and four planets orbiting</a>
+        </div>
+        <div class="item-takeaway">Astronomy image sequence. Entertainment.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://developer.apple.com/pass-designer/" target="_blank" rel="noopener">Apple Pass Designer</a>
+        </div>
+        <div class="item-takeaway">Scheduled agent omitted this claimed item from the completion payload.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: ef64207a-a331-4659-84fd-50c0bcdd41b6
+Started: 2026-10-04T06:03:49.963Z
+Completed: 2026-10-04T06:04:59.046Z
+
+## Worth attention
+
+- **Protected Quick Tunnels: simple accountless authentication for your next dev project**
+  https://blog.cloudflare.com/protected-quick-tunnels/
+  Cloudflare Quick Tunnels now support email-based auth via a single --allowed-mail flag on cloudflared, with no Cloudflare account needed. This makes sharing a local dev app or demo with a client safely a one-liner. Worth trying for demos and webhook-testing workflows.
+- **Build anything: Supabase from code, and an MCP server for your app**
+  https://supabase.com/blog/select-2026-build-anything
+  Supabase now lets agents set up the backend from code, ships an MCP server for your own app so your users' agents can work with it, and adds Supabase Compute for long-running tasks. Directly relevant to MCP/agent work: an app-level MCP server could be a cheap distribution path. Read the docs before committing.
+- **Supabase is acquiring Turso**
+  https://supabase.com/blog/supabase-is-acquiring-turso
+  Supabase is acquiring Turso (libSQL/SQLite-edge database) to build database infrastructure for agentic AI. If you depend on Turso, watch for pricing, roadmap or licensing changes; if you use Supabase, expect SQLite-style offerings.
+- **I got targeted: Trying to get your credentials via a git post-checkout hook**
+  https://frankwiles.com/posts/i-got-targeted/
+  A developer describes a targeted attempt to steal credentials through a malicious git post-checkout hook in a cloned repo. Relevant to anyone cloning unfamiliar repos, especially via recruiter or client 'take-home' requests. Review hooks before running git operations in untrusted clones and consider disabling hooks (core.hooksPath) for them.
+- **Speed Insights deprecates First Input Delay on November 1st**
+  https://vercel.com/changelog/speed-insights-deprecates-first-input-delay-on-november-first
+  Vercel Speed Insights stops recording First Input Delay on November 1; it already uses INP as the responsiveness metric. If you have dashboards, alerts or reports keyed to FID, switch them to INP before then.
+- **Follow the thread: a new dashboard to investigate account abuse**
+  https://blog.cloudflare.com/account-abuse-protection-dashboard/
+  Cloudflare launched an Account Abuse Protection dashboard that uses stateful analysis and edge-generated Hashed User IDs to investigate fraud and account abuse. Relevant if you run signup/login flows behind Cloudflare, especially with AI-driven abuse rising. Check plan availability before relying on it.
+- **Scale without limits: Multigres, OrioleDB, and dbarena**
+  https://supabase.com/blog/select-2026-scale-without-limits
+  Supabase announced Multigres (Postgres sharding), OrioleDB and dbarena as its scale story. Interesting direction but nothing to act on until availability and pricing are clear.
+- **Operate with confidence**
+  https://supabase.com/blog/select-2026-operate-with-confidence
+  Supabase is adding more observability data and tooling so agents can investigate project issues and propose fixes. Track it if you let agents operate your Supabase projects.
+- **Cloudflare OHTTP gateway**
+  https://blog.cloudflare.com/announcing-cloudflare-ohttp-gateway/
+  Cloudflare announced an OHTTP gateway for privacy-preserving request relaying. Worth a look if you build privacy-sensitive features or proxy requests to model APIs; not urgent.
+
+## Full digest
+
+- [P] [cloudflare-blog] Follow the thread: a new dashboard to investigate account abuse — https://blog.cloudflare.com/account-abuse-protection-dashboard/ — Cloudflare launched an Account Abuse Protection dashboard that uses stateful analysis and edge-generated Hashed User IDs to investigate fraud and account abuse. Relevant if you run signup/login flows behind Cloudflare, especially with AI-driven abuse rising. Check plan availability before relying on it.
+- [P] [cloudflare-blog] Protected Quick Tunnels: simple accountless authentication for your next dev project — https://blog.cloudflare.com/protected-quick-tunnels/ — Cloudflare Quick Tunnels now support email-based auth via a single --allowed-mail flag on cloudflared, with no Cloudflare account needed. This makes sharing a local dev app or demo with a client safely a one-liner. Worth trying for demos and webhook-testing workflows.
+- [R] [cloudflare-blog] Building for good: How civil society organizations are automating on Cloudflare — https://blog.cloudflare.com/civil-society-automation/ — Promotional piece on non-profits automating on Cloudflare. No new capability or decision impact for a solo developer.
+- [R] [cloudflare-blog] 2026 Birthday week: network performance update — https://blog.cloudflare.com/network-performance-birthday-week-2026/ — Cloudflare's Birthday Week network performance rankings (fastest in 74% of top networks). Vendor benchmark with no action for a solo builder.
+- [R] [supabase-blog] Supabase Select 2026 Recap — https://supabase.com/blog/supabase-select-2026-recap — Event recap umbrella post for Supabase Select 2026; the substantive announcements are covered by the individual posts.
+- [M] [supabase-blog] Scale without limits: Multigres, OrioleDB, and dbarena — https://supabase.com/blog/select-2026-scale-without-limits — Supabase announced Multigres (Postgres sharding), OrioleDB and dbarena as its scale story. Interesting direction but nothing to act on until availability and pricing are clear.
+- [M] [supabase-blog] Operate with confidence — https://supabase.com/blog/select-2026-operate-with-confidence — Supabase is adding more observability data and tooling so agents can investigate project issues and propose fixes. Track it if you let agents operate your Supabase projects.
+- [P] [supabase-blog] Build anything: Supabase from code, and an MCP server for your app — https://supabase.com/blog/select-2026-build-anything — Supabase now lets agents set up the backend from code, ships an MCP server for your own app so your users' agents can work with it, and adds Supabase Compute for long-running tasks. Directly relevant to MCP/agent work: an app-level MCP server could be a cheap distribution path. Read the docs before committing.
+- [P] [supabase-blog] Supabase is acquiring Turso — https://supabase.com/blog/supabase-is-acquiring-turso — Supabase is acquiring Turso (libSQL/SQLite-edge database) to build database infrastructure for agentic AI. If you depend on Turso, watch for pricing, roadmap or licensing changes; if you use Supabase, expect SQLite-style offerings.
+- [R] [vercel-changelog] Jev for Python engineers — https://vercel.com/blog/jev-for-python-engineers — Vercel explainer riding a viral tool trend with social-media examples. No platform change or decision impact.
+- [R] [vercel-changelog] How Rogo ships agent-written code to production in 5 minutes on Vercel — https://vercel.com/blog/how-rogo-ships-agent-written-code-to-production-in-5-minutes-on-vercel — Vercel customer case study claiming 73k deployments a month and agent code shipped in 5 minutes. Promotional, with no reproducible workflow.
+- [P] [vercel-changelog] Speed Insights deprecates First Input Delay on November 1st — https://vercel.com/changelog/speed-insights-deprecates-first-input-delay-on-november-first — Vercel Speed Insights stops recording First Input Delay on November 1; it already uses INP as the responsiveness metric. If you have dashboards, alerts or reports keyed to FID, switch them to INP before then.
+- [P] [lobsters] I got targeted: Trying to get your credentials via a git post-checkout hook — https://frankwiles.com/posts/i-got-targeted/ — A developer describes a targeted attempt to steal credentials through a malicious git post-checkout hook in a cloned repo. Relevant to anyone cloning unfamiliar repos, especially via recruiter or client 'take-home' requests. Review hooks before running git operations in untrusted clones and consider disabling hooks (core.hooksPath) for them.
+- [R] [lobsters] Zig 0.17.0 Release Notes — https://ziglang.org/download/0.17.0/release-notes.html — Zig 0.17.0 release notes. Language-specific and not tied to current projects.
+- [R] [lobsters] Actual RFC1149 packet being auctioned — https://onlineonly.christies.com/s/fine-printed-books-manuscripts-science/carrier-pigeon-internet-protocol-150/325216 — Auction listing of a physical RFC 1149 item. Entertainment.
+- [R] [lobsters] Lobsters Interview with Sjamaan — https://alexalejandre.com/interviews/peter-bex/ — Community interview with a CHICKEN Scheme maintainer. Not relevant to a solo shop's decisions.
+- [R] [lobsters] The Four Horsemen of Agentic Coding — https://distantprovince.substack.com/p/the-four-horsemen-of-agentic-coding — Opinion essay on agentic coding pitfalls. Editorial without reproducible data; judged from title only.
+- [R] [lobsters] The forgetful CPU (Linux on M4) — https://yuka.dev/blog-2026-10-02-linux-m4.html — Blog post on Linux support for Apple M4 hardware. Hobbyist-level, no practical impact.
+- [R] [lobsters] Updates to Full Disk Access in macOS — https://developer.apple.com/news/?id=p6zjojqw — Comments
+- [R] [lobsters] gVisor is being donated to CNCF — https://gvisor.dev/blog/2026/10/02/gvisor-cncf/ — Comments
+- [R] [lobsters] Keeping Futhark off the GPU — https://futhark-lang.org/blog/2026-10-02-cpu_function.html — Comments
+- [R] [lobsters] The hidden design compromises of Docker layers — https://loige.co/hidden-design-compromises-of-docker-layers/ — Comments
+- [R] [lobsters] Generic Const Args and You — https://blog.rust-lang.org/inside-rust/2026/10/02/generic-const-args-and-you/ — Comments
+- [R] [lobsters] What are you doing this weekend? — https://lobste.rs/s/hfmcxi/what_are_you_doing_this_weekend — Feel free to tell what you plan on doing this weekend and even ask for help or feedback. Please keep in mind it’s more than OK to do nothing…
+- [R] [lobsters] The Era of Programming Languages Exploration is upon Us — https://kirancodes.me/posts/log-end-of-pl.html — Comments
+- [R] [lobsters] Upstream Rust maintenance report — https://kobzol.github.io/rust/2026/09/30/stf-august-september-2026.html — Comments
+- [R] [lobsters] Klassik Revives the KDE 3 Desktop on Modern Plasma 6 — https://linuxiac.com/klassik-revives-the-kde-3-desktop-on-modern-plasma-6/ — Comments
+- [R] [lobsters] Driving the GDEH0154D67 e-paper display with Rust — https://sgt.hootr.club/blog/driving-gdeh0154d67-with-rust/ — Comments
+- [R] [lobsters] SequenceHash: multihashing for the rest of us — https://blog.trailofbits.com/2026/10/02/sequencehash-multihashing-for-the-rest-of-us/ — Comments
+- [R] [lobsters] Respecting your users' dread of the clankers — https://thoughtbot.com/blog/respecting-your-users-dread-of-the-clankers — Comments
+- [R] [lobsters] Thrust vs. Steer (or: Yet Another Anecdotal Case of the Dunning-Kruger Effect) — https://write.as/tmcb/thrust-vs-steer-or-yet-another-anecdotal-case-of-the-dunning-kruger-effect — Comments
+- [R] [lobsters] GitHub repository landing pages now show an accessibility tab, if provided — https://ericwbailey.website/published/github-repository-landing-pages-now-show-an-accessibility-tab-if-provided/ — Comments
+- [R] [hn-top] Extra Big Ass Intelligence — https://www.extrabigassintelligence.com/ — Joke/novelty site with no substantive content.
+- [R] [hn-top] Newgrounds.com – A community of games, music, and art — https://www.newgrounds.com/ — Homepage of a long-running games and art community. Not news.
+- [R] [hn-top] Court agrees with EFF: Utah's VPN law demands a technical impossibility — https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility — EFF reports a court sided with it that Utah's VPN law demands a technical impossibility. Policy news with no near-term effect on a solo software shop.
+- [R] [hn-top] The Forgetful CPU (Linux on M4) — https://yuka.dev/blog-2026-10-02-linux-m4.html — Scheduled agent omitted this claimed item from the completion payload.
+- [R] [hn-top] Mike Tomlin spent 12 years building a Minecraft city — https://www.nytimes.com/athletic/7648198/2026/10/01/mike-tomlin-minecraft-nfl-coach/ — Sports profile of an NFL coach's Minecraft hobby. Entertainment.
+- [P] [hn-top] Cloudflare OHTTP gateway — https://blog.cloudflare.com/announcing-cloudflare-ohttp-gateway/ — Cloudflare announced an OHTTP gateway for privacy-preserving request relaying. Worth a look if you build privacy-sensitive features or proxy requests to model APIs; not urgent.
+- [R] [hn-top] A 12-year sequence of telescope images of a star and four planets orbiting — https://bsky.app/profile/theplanetaryguy.com/post/3mwucf5ert22f — Astronomy image sequence. Entertainment.
+- [R] [hn-top] Apple Pass Designer — https://developer.apple.com/pass-designer/ — Scheduled agent omitted this claimed item from the completion payload.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
