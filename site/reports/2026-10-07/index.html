@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>October 7, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="6 stories cleared the bar, led by Mold 3.0.0 Released, Elevated errors for Claude Mythos 5.1 and Claude Fable 5.">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-10-07/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="October 7, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="6 stories cleared the bar, led by Mold 3.0.0 Released, Elevated errors for Claude Mythos 5.1 and Claude Fable 5.">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-10-07/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="October 7, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="6 stories cleared the bar, led by Mold 3.0.0 Released, Elevated errors for Claude Mythos 5.1 and Claude Fable 5.">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>October 7, 2026 · Report log</span>
+      <span>Oct 7, 2026, 2:05 AM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>October 7, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>6 stories cleared the bar, led by Mold 3.0.0 Released, Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1, and Our approach to EU text provenance rules.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>6 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/rui314/mold/releases/tag/v3.0.0" target="_blank" rel="noopener">Mold 3.0.0 Released</a></div>
+        <div class="item-takeaway">Mold 3.0.0 was released, a major version of the fast linker. Only the title and release link were available, so the specific changes are unread. If your Linux/C/C++/Rust builds link slowly, skim the release notes for breaking changes before upgrading.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://status.claude.com/incidents/bhphxz3vr58g" target="_blank" rel="noopener">Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1</a></div>
+        <div class="item-takeaway">Claude status reported elevated errors for Claude Mythos 5.1 and Claude Fable 5.1 on Oct 5 from 12:40 to 13:10 UTC. It was resolved within about 30 minutes. Check that agent and MCP jobs have retries if they call those models.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://openai.com/index/eu-text-provenance" target="_blank" rel="noopener">Our approach to EU text provenance rules</a></div>
+        <div class="item-takeaway">OpenAI published its approach to EU text-provenance (watermark) rules: where watermarks apply, how detection works, and that access starts with researchers. Relevant only if you ship AI-generated text to EU users; no immediate action.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://git.sig-io.nl/Sig-IO/mailcheck/" target="_blank" rel="noopener">Golang tool to check SPF, DKIM, TLSA, and TLS settings for mailservers</a></div>
+        <div class="item-takeaway">A Go tool that checks SPF, DKIM, TLSA and TLS settings for mail servers, which the author admits is fully vibe-coded. Possibly handy for email-deliverability checks, but unreviewed; read the code before running it on anything real.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://status.openai.com//incidents/01M47AFBNRNXKJWN549T3PMYV8" target="_blank" rel="noopener">Elevated errors in API Platform login and administration APIs.</a></div>
+        <div class="item-takeaway">OpenAI had elevated errors in API Platform login and administration APIs on Oct 6, now resolved. Affects key and project admin, not inference. No action unless automation hits the admin APIs.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://status.openai.com//incidents/01M46KED6KQ6PR195KZYYVNY8W" target="_blank" rel="noopener">Elevated error rates in Codex Cloud</a></div>
+        <div class="item-takeaway">OpenAI reported elevated error rates in Codex Cloud on Oct 5; a mitigation was applied and it was still in monitoring state at fetch time. Only matters if you rely on Codex Cloud.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://gleam.run/news/gleam-doesnt-compile-to-erlang-source-anymore/" target="_blank" rel="noopener">Gleam doesn't compile to Erlang source anymore</a>
+        </div>
+        <div class="item-takeaway">Gleam compiler change on Erlang output.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://elm-lang.org/news/another-step-towards-elm-v1" target="_blank" rel="noopener">Another step towards elm v1</a>
+        </div>
+        <div class="item-takeaway">Elm progress toward v1.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://jross.me/open-source-as-we-know-it-is-dead/" target="_blank" rel="noopener">Open Source as We Know It Is Dead</a>
+        </div>
+        <div class="item-takeaway">Opinion essay on the future of open source.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://github.com/rui314/mold/releases/tag/v3.0.0" target="_blank" rel="noopener">Mold 3.0.0 Released</a>
+        </div>
+        <div class="item-takeaway">Mold 3.0.0 was released, a major version of the fast linker. Only the title and release link were available, so the specific changes are unread. If your Linux/C/C++/Rust builds link slowly, skim the release notes for breaking changes before upgrading.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://git.sig-io.nl/Sig-IO/mailcheck/" target="_blank" rel="noopener">Golang tool to check SPF, DKIM, TLSA, and TLS settings for mailservers</a>
+        </div>
+        <div class="item-takeaway">A Go tool that checks SPF, DKIM, TLSA and TLS settings for mail servers, which the author admits is fully vibe-coded. Possibly handy for email-deliverability checks, but unreviewed; read the code before running it on anything real.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lobste.rs/s/nvkrb9/what_are_you_doing_this_week" target="_blank" rel="noopener">What are you doing this week?</a>
+        </div>
+        <div class="item-takeaway">Weekly open thread.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://floreal.tech/blog/2026/making-a-gtk-app-in-haskell-part-1/" target="_blank" rel="noopener">Making a GTK application in Haskell, part 1</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://re.factorcode.org/2026/10/factor-overview.html" target="_blank" rel="noopener">Factor Overview</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://kitallis.in/p/hutch-a-local-code-review-interface-for-magit/" target="_blank" rel="noopener">hutch: local code reviews in emacs for the mildly disenfranchised</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://burningwitness.github.io/blog/posts/against-effect-systems/" target="_blank" rel="noopener">You don't need an effect system</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://tangled.org/poacher.dev/spoonful" target="_blank" rel="noopener">spoonful: static site generator written in Nix</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.cloudflare.com/containers-cross-tenant-vulnerability/" target="_blank" rel="noopener">How Cloudflare addressed a cross-tenant data exposure vulnerability in Containers</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://mastodon.social/@bagder/117392573268225646" target="_blank" rel="noopener">Two arm64-specific miscompiles induce vulnerabilities in curl</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.vivienhenz.com/common-lisp" target="_blank" rel="noopener">Why Common Lisp Is Now the Best Programming Language</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://johns.codes/blog/nix-on-steam-frame" target="_blank" rel="noopener">Nix on the Steam Frame</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://nivdayan.github.io/dostoevsky.pdf" target="_blank" rel="noopener">Dostoevsky: Better Space-Time Trade-Offs for LSM-Tree Based Key-Value Stores via Adaptive Removal of Superfluous Merging</a>
+        </div>
+        <div class="item-takeaway">Comments</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://status.openai.com//incidents/01M47HC9SGHGFPBN44KGC6SKAQ" target="_blank" rel="noopener">Elevated errors affecting multiple products including ChatGPT (conversations), Image generations, Spaces and Pages, API rehydration, and Dots.</a>
+        </div>
+        <div class="item-takeaway">Resolved OpenAI consumer product incident.</div>
+        <div class="item-meta">
+          <span>openai-status</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://status.openai.com//incidents/01M47AFBNRNXKJWN549T3PMYV8" target="_blank" rel="noopener">Elevated errors in API Platform login and administration APIs.</a>
+        </div>
+        <div class="item-takeaway">OpenAI had elevated errors in API Platform login and administration APIs on Oct 6, now resolved. Affects key and project admin, not inference. No action unless automation hits the admin APIs.</div>
+        <div class="item-meta">
+          <span>openai-status</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://status.openai.com//incidents/01M46G248GGHV9RSAJE82BZY1X" target="_blank" rel="noopener">Elevated errors in ChatGPT conversations</a>
+        </div>
+        <div class="item-takeaway">Resolved ChatGPT incident.</div>
+        <div class="item-meta">
+          <span>openai-status</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://status.openai.com//incidents/01M46C47WYYD9NMZVGH83X3ZR1" target="_blank" rel="noopener">Admin Console Intermittently Inaccessible</a>
+        </div>
+        <div class="item-takeaway">Resolved admin console incident.</div>
+        <div class="item-meta">
+          <span>openai-status</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://status.openai.com//incidents/01M46KED6KQ6PR195KZYYVNY8W" target="_blank" rel="noopener">Elevated error rates in Codex Cloud</a>
+        </div>
+        <div class="item-takeaway">OpenAI reported elevated error rates in Codex Cloud on Oct 5; a mitigation was applied and it was still in monitoring state at fetch time. Only matters if you rely on Codex Cloud.</div>
+        <div class="item-meta">
+          <span>openai-status</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://status.openai.com//incidents/01M461GYDMCVJJK8330PVCH42C" target="_blank" rel="noopener">Issues saving and editing Pages</a>
+        </div>
+        <div class="item-takeaway">Resolved Pages editing incident.</div>
+        <div class="item-meta">
+          <span>openai-status</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://status.claude.com/incidents/bhphxz3vr58g" target="_blank" rel="noopener">Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1</a>
+        </div>
+        <div class="item-takeaway">Claude status reported elevated errors for Claude Mythos 5.1 and Claude Fable 5.1 on Oct 5 from 12:40 to 13:10 UTC. It was resolved within about 30 minutes. Check that agent and MCP jobs have retries if they call those models.</div>
+        <div class="item-meta">
+          <span>claude-status</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://openai.com/index/eu-text-provenance" target="_blank" rel="noopener">Our approach to EU text provenance rules</a>
+        </div>
+        <div class="item-takeaway">OpenAI published its approach to EU text-provenance (watermark) rules: where watermarks apply, how detection works, and that access starts with researchers. Relevant only if you ship AI-generated text to EU users; no immediate action.</div>
+        <div class="item-meta">
+          <span>openai-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wyxgg9/after_3_years_our_signups_are_finally/" target="_blank" rel="noopener">After 3 years, our signups are finally skyrocketing! There’s just one tiny catch...</a>
+        </div>
+        <div class="item-takeaway">Reddit post about signup growth with an unstated catch.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wyy9gs/i_built_a_saas_product_around_community_now_im/" target="_blank" rel="noopener">I built a SaaS product around community. Now I’m learning that the software was the easy part.</a>
+        </div>
+        <div class="item-takeaway">Founder post about community-platform SaaS.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wyyrkv/how_did_you_get_your_first_100_users/" target="_blank" rel="noopener">How did you get your first 100 users</a>
+        </div>
+        <div class="item-takeaway">Question thread on getting first 100 users.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wywyzv/so_happy_my_saas_helped_so_much_architects/" target="_blank" rel="noopener">So happy my Saas helped so much architects</a>
+        </div>
+        <div class="item-takeaway">Feel-good post about a SaaS for architects.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wyyw1j/lots_of_users_but_very_little_returning_traffic/" target="_blank" rel="noopener">Lots of users but very little returning traffic.</a>
+        </div>
+        <div class="item-takeaway">Post about low returning traffic.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wyyp1c/if_your_budget_is_100_usd_how_would_you_invest_it/" target="_blank" rel="noopener">if your budget is 100 usd how would you invest it in SEO?</a>
+        </div>
+        <div class="item-takeaway">Question about SEO backlink services.</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wyxxch/something_that_i_have_been_thinking_to_build/" target="_blank" rel="noopener">Something that I have been thinking to build</a>
+        </div>
+        <div class="item-takeaway">Background - I have been working in tech sales for over an year now, and sales reporting takes a lot of my time and energy, with AI tools, i…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wyxqti/psa_theres_no_such_thing_as_soc_2_certified/" target="_blank" rel="noopener">PSA: there's no such thing as SOC 2 certified.</a>
+        </div>
+        <div class="item-takeaway">One of the most common slips in vendor security, and buyers who read closely do notice it. SOC 2 is an attestation, not a certification. A C…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wyxggn/is_there_still_scope_for_my_saas/" target="_blank" rel="noopener">Is there still scope for my SaaS?</a>
+        </div>
+        <div class="item-takeaway">I have been running a SaaS for 5 years now, I have made decent revenue from it but lately we have lost a lot of customers and organic growth…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wywus8/what_happened_when_we_audited_why_inbound_leads/" target="_blank" rel="noopener">What happened when we audited why inbound leads bounce off the demo form</a>
+        </div>
+        <div class="item-takeaway">For months, our team treated the 'Schedule a Demo' button as the primary conversion goal on our site. We drove decent traffic to product pag…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wyzmid/low_quality_support_requests_from_vibe_coder/" target="_blank" rel="noopener">Low quality support requests from vibe coder customers</a>
+        </div>
+        <div class="item-takeaway">I've been running an API for about 3 years now and i've seen this a few times. A vibe coder comes to me saying my service is down or not wor…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wyzfrx/hiignite_for_personal_trainers_coaching_platform/" target="_blank" rel="noopener">Hiignite - for Personal Trainers / Coaching platform</a>
+        </div>
+        <div class="item-takeaway">Hello, Last November I started building https://hiignite.com/ after having a discussion with few personal coaches i trained with &amp; I've just…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wyz6ke/i_built_a_small_prototype_for_evaluating_whether/" target="_blank" rel="noopener">I built a small prototype for evaluating whether engineers can actually do the work they claimed they can. looking for hiring managers and hiring related people to test</a>
+        </div>
+        <div class="item-takeaway">hey everyone, i've been researching how engineering teams evaluate candidates, especially with resumes, take homes, and ai making traditiona…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.reddit.com/r/SaaS/comments/1wyyumb/i_added_50_earlybird_spots_to_windowshot_and_the/" target="_blank" rel="noopener">I added 50 early-bird spots to Windowshot, and the main reason was not really to create FOMO</a>
+        </div>
+        <div class="item-takeaway">When a product is still new, the first users are taking more of a risk than everyone who comes later. They are buying before there are hundr…</div>
+        <div class="item-meta">
+          <span>reddit-saas</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://stratechery.com/2026/game-decompilation-is-this-legal-a-well-trodden-path/" target="_blank" rel="noopener">Game Decompilation, Is This Legal?, A Well-Trodden Path</a>
+        </div>
+        <div class="item-takeaway">Stratechery piece on game decompilation legality.</div>
+        <div class="item-meta">
+          <span>stratechery</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lobste.rs/s/rwloew/email_self_hosters_what_are_you_using" target="_blank" rel="noopener">Email Self Hosters - what are you using?</a>
+        </div>
+        <div class="item-takeaway">At the moment I self host using maddy for a bunch of domains that need a mailbox or catch all. There are some minor issues with it - some ar…</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 3a0a9e49-ca2d-44ad-b613-706afebc6455
+Started: 2026-10-07T06:04:55.190Z
+Completed: 2026-10-07T06:05:58.844Z
+
+## Worth attention
+
+- **Mold 3.0.0 Released**
+  https://github.com/rui314/mold/releases/tag/v3.0.0
+  Mold 3.0.0 was released, a major version of the fast linker. Only the title and release link were available, so the specific changes are unread. If your Linux/C/C++/Rust builds link slowly, skim the release notes for breaking changes before upgrading.
+- **Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1**
+  https://status.claude.com/incidents/bhphxz3vr58g
+  Claude status reported elevated errors for Claude Mythos 5.1 and Claude Fable 5.1 on Oct 5 from 12:40 to 13:10 UTC. It was resolved within about 30 minutes. Check that agent and MCP jobs have retries if they call those models.
+- **Our approach to EU text provenance rules**
+  https://openai.com/index/eu-text-provenance
+  OpenAI published its approach to EU text-provenance (watermark) rules: where watermarks apply, how detection works, and that access starts with researchers. Relevant only if you ship AI-generated text to EU users; no immediate action.
+- **Golang tool to check SPF, DKIM, TLSA, and TLS settings for mailservers**
+  https://git.sig-io.nl/Sig-IO/mailcheck/
+  A Go tool that checks SPF, DKIM, TLSA and TLS settings for mail servers, which the author admits is fully vibe-coded. Possibly handy for email-deliverability checks, but unreviewed; read the code before running it on anything real.
+- **Elevated errors in API Platform login and administration APIs.**
+  https://status.openai.com//incidents/01M47AFBNRNXKJWN549T3PMYV8
+  OpenAI had elevated errors in API Platform login and administration APIs on Oct 6, now resolved. Affects key and project admin, not inference. No action unless automation hits the admin APIs.
+- **Elevated error rates in Codex Cloud**
+  https://status.openai.com//incidents/01M46KED6KQ6PR195KZYYVNY8W
+  OpenAI reported elevated error rates in Codex Cloud on Oct 5; a mitigation was applied and it was still in monitoring state at fetch time. Only matters if you rely on Codex Cloud.
+
+## Full digest
+
+- [R] [lobsters] Gleam doesn't compile to Erlang source anymore — https://gleam.run/news/gleam-doesnt-compile-to-erlang-source-anymore/ — Gleam compiler change on Erlang output.
+- [R] [lobsters] Another step towards elm v1 — https://elm-lang.org/news/another-step-towards-elm-v1 — Elm progress toward v1.
+- [R] [lobsters] Open Source as We Know It Is Dead — https://jross.me/open-source-as-we-know-it-is-dead/ — Opinion essay on the future of open source.
+- [P] [lobsters] Mold 3.0.0 Released — https://github.com/rui314/mold/releases/tag/v3.0.0 — Mold 3.0.0 was released, a major version of the fast linker. Only the title and release link were available, so the specific changes are unread. If your Linux/C/C++/Rust builds link slowly, skim the release notes for breaking changes before upgrading.
+- [M] [lobsters] Golang tool to check SPF, DKIM, TLSA, and TLS settings for mailservers — https://git.sig-io.nl/Sig-IO/mailcheck/ — A Go tool that checks SPF, DKIM, TLSA and TLS settings for mail servers, which the author admits is fully vibe-coded. Possibly handy for email-deliverability checks, but unreviewed; read the code before running it on anything real.
+- [R] [lobsters] What are you doing this week? — https://lobste.rs/s/nvkrb9/what_are_you_doing_this_week — Weekly open thread.
+- [R] [lobsters] Making a GTK application in Haskell, part 1 — https://floreal.tech/blog/2026/making-a-gtk-app-in-haskell-part-1/ — Comments
+- [R] [lobsters] Factor Overview — https://re.factorcode.org/2026/10/factor-overview.html — Comments
+- [R] [lobsters] hutch: local code reviews in emacs for the mildly disenfranchised — https://kitallis.in/p/hutch-a-local-code-review-interface-for-magit/ — Comments
+- [R] [lobsters] You don't need an effect system — https://burningwitness.github.io/blog/posts/against-effect-systems/ — Comments
+- [R] [lobsters] spoonful: static site generator written in Nix — https://tangled.org/poacher.dev/spoonful — Comments
+- [R] [lobsters] How Cloudflare addressed a cross-tenant data exposure vulnerability in Containers — https://blog.cloudflare.com/containers-cross-tenant-vulnerability/ — Comments
+- [R] [lobsters] Two arm64-specific miscompiles induce vulnerabilities in curl — https://mastodon.social/@bagder/117392573268225646 — Comments
+- [R] [lobsters] Why Common Lisp Is Now the Best Programming Language — https://www.vivienhenz.com/common-lisp — Comments
+- [R] [lobsters] Nix on the Steam Frame — https://johns.codes/blog/nix-on-steam-frame — Comments
+- [R] [lobsters] Dostoevsky: Better Space-Time Trade-Offs for LSM-Tree Based Key-Value Stores via Adaptive Removal of Superfluous Merging — https://nivdayan.github.io/dostoevsky.pdf — Comments
+- [R] [openai-status] Elevated errors affecting multiple products including ChatGPT (conversations), Image generations, Spaces and Pages, API rehydration, and Dots. — https://status.openai.com//incidents/01M47HC9SGHGFPBN44KGC6SKAQ — Resolved OpenAI consumer product incident.
+- [M] [openai-status] Elevated errors in API Platform login and administration APIs. — https://status.openai.com//incidents/01M47AFBNRNXKJWN549T3PMYV8 — OpenAI had elevated errors in API Platform login and administration APIs on Oct 6, now resolved. Affects key and project admin, not inference. No action unless automation hits the admin APIs.
+- [R] [openai-status] Elevated errors in ChatGPT conversations — https://status.openai.com//incidents/01M46G248GGHV9RSAJE82BZY1X — Resolved ChatGPT incident.
+- [R] [openai-status] Admin Console Intermittently Inaccessible — https://status.openai.com//incidents/01M46C47WYYD9NMZVGH83X3ZR1 — Resolved admin console incident.
+- [M] [openai-status] Elevated error rates in Codex Cloud — https://status.openai.com//incidents/01M46KED6KQ6PR195KZYYVNY8W — OpenAI reported elevated error rates in Codex Cloud on Oct 5; a mitigation was applied and it was still in monitoring state at fetch time. Only matters if you rely on Codex Cloud.
+- [R] [openai-status] Issues saving and editing Pages — https://status.openai.com//incidents/01M461GYDMCVJJK8330PVCH42C — Resolved Pages editing incident.
+- [M] [claude-status] Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1 — https://status.claude.com/incidents/bhphxz3vr58g — Claude status reported elevated errors for Claude Mythos 5.1 and Claude Fable 5.1 on Oct 5 from 12:40 to 13:10 UTC. It was resolved within about 30 minutes. Check that agent and MCP jobs have retries if they call those models.
+- [M] [openai-blog] Our approach to EU text provenance rules — https://openai.com/index/eu-text-provenance — OpenAI published its approach to EU text-provenance (watermark) rules: where watermarks apply, how detection works, and that access starts with researchers. Relevant only if you ship AI-generated text to EU users; no immediate action.
+- [R] [reddit-saas] After 3 years, our signups are finally skyrocketing! There’s just one tiny catch... — https://www.reddit.com/r/SaaS/comments/1wyxgg9/after_3_years_our_signups_are_finally/ — Reddit post about signup growth with an unstated catch.
+- [R] [reddit-saas] I built a SaaS product around community. Now I’m learning that the software was the easy part. — https://www.reddit.com/r/SaaS/comments/1wyy9gs/i_built_a_saas_product_around_community_now_im/ — Founder post about community-platform SaaS.
+- [R] [reddit-saas] How did you get your first 100 users — https://www.reddit.com/r/SaaS/comments/1wyyrkv/how_did_you_get_your_first_100_users/ — Question thread on getting first 100 users.
+- [R] [reddit-saas] So happy my Saas helped so much architects — https://www.reddit.com/r/SaaS/comments/1wywyzv/so_happy_my_saas_helped_so_much_architects/ — Feel-good post about a SaaS for architects.
+- [R] [reddit-saas] Lots of users but very little returning traffic. — https://www.reddit.com/r/SaaS/comments/1wyyw1j/lots_of_users_but_very_little_returning_traffic/ — Post about low returning traffic.
+- [R] [reddit-saas] if your budget is 100 usd how would you invest it in SEO? — https://www.reddit.com/r/SaaS/comments/1wyyp1c/if_your_budget_is_100_usd_how_would_you_invest_it/ — Question about SEO backlink services.
+- [R] [reddit-saas] Something that I have been thinking to build — https://www.reddit.com/r/SaaS/comments/1wyxxch/something_that_i_have_been_thinking_to_build/ — Background - I have been working in tech sales for over an year now, and sales reporting takes a lot of my time and energy, with AI tools, i…
+- [R] [reddit-saas] PSA: there's no such thing as SOC 2 certified. — https://www.reddit.com/r/SaaS/comments/1wyxqti/psa_theres_no_such_thing_as_soc_2_certified/ — One of the most common slips in vendor security, and buyers who read closely do notice it. SOC 2 is an attestation, not a certification. A C…
+- [R] [reddit-saas] Is there still scope for my SaaS? — https://www.reddit.com/r/SaaS/comments/1wyxggn/is_there_still_scope_for_my_saas/ — I have been running a SaaS for 5 years now, I have made decent revenue from it but lately we have lost a lot of customers and organic growth…
+- [R] [reddit-saas] What happened when we audited why inbound leads bounce off the demo form — https://www.reddit.com/r/SaaS/comments/1wywus8/what_happened_when_we_audited_why_inbound_leads/ — For months, our team treated the 'Schedule a Demo' button as the primary conversion goal on our site. We drove decent traffic to product pag…
+- [R] [reddit-saas] Low quality support requests from vibe coder customers — https://www.reddit.com/r/SaaS/comments/1wyzmid/low_quality_support_requests_from_vibe_coder/ — I've been running an API for about 3 years now and i've seen this a few times. A vibe coder comes to me saying my service is down or not wor…
+- [R] [reddit-saas] Hiignite - for Personal Trainers / Coaching platform — https://www.reddit.com/r/SaaS/comments/1wyzfrx/hiignite_for_personal_trainers_coaching_platform/ — Hello, Last November I started building https://hiignite.com/ after having a discussion with few personal coaches i trained with &amp; I've just…
+- [R] [reddit-saas] I built a small prototype for evaluating whether engineers can actually do the work they claimed they can. looking for hiring managers and hiring related people to test — https://www.reddit.com/r/SaaS/comments/1wyz6ke/i_built_a_small_prototype_for_evaluating_whether/ — hey everyone, i've been researching how engineering teams evaluate candidates, especially with resumes, take homes, and ai making traditiona…
+- [R] [reddit-saas] I added 50 early-bird spots to Windowshot, and the main reason was not really to create FOMO — https://www.reddit.com/r/SaaS/comments/1wyyumb/i_added_50_earlybird_spots_to_windowshot_and_the/ — When a product is still new, the first users are taking more of a risk than everyone who comes later. They are buying before there are hundr…
+- [R] [stratechery] Game Decompilation, Is This Legal?, A Well-Trodden Path — https://stratechery.com/2026/game-decompilation-is-this-legal-a-well-trodden-path/ — Stratechery piece on game decompilation legality.
+- [R] [lobsters] Email Self Hosters - what are you using? — https://lobste.rs/s/rwloew/email_self_hosters_what_are_you_using — At the moment I self host using maddy for a bunch of domains that need a mailbox or catch all. There are some minor issues with it - some ar…</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
