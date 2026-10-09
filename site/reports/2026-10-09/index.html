@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){var t=localStorage.getItem('nl-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>October 9, 2026 report log — The Nightly Librarian</title>
+  <meta name="description" content="9 stories cleared the bar, led by The Pulse: Firebase’s global outage &amp; poor response, Skip sending request bodies to Routing Middleware, and Vercel">
+  <meta name="google-site-verification" content="NhzYYJ24Y6pYmDnDy5CMOLpCTni62o8frdscybOp4K8">
+  <link rel="canonical" href="https://thenightlylibrarian.com/reports/2026-10-09/">
+  <link rel="alternate" type="application/rss+xml" title="The Nightly Librarian" href="https://thenightlylibrarian.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Nightly Librarian">
+  <meta property="og:title" content="October 9, 2026 report log | The Nightly Librarian">
+  <meta property="og:description" content="9 stories cleared the bar, led by The Pulse: Firebase’s global outage &amp; poor response, Skip sending request bodies to Routing Middleware, and Vercel">
+  <meta property="og:url" content="https://thenightlylibrarian.com/reports/2026-10-09/">
+  <meta property="og:image" content="https://thenightlylibrarian.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="October 9, 2026 report log | The Nightly Librarian">
+  <meta name="twitter:description" content="9 stories cleared the bar, led by The Pulse: Firebase’s global outage &amp; poor response, Skip sending request bodies to Routing Middleware, and Vercel">
+  <meta name="twitter:image" content="https://thenightlylibrarian.com/og-image.png">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it."},{"@context":"https://schema.org","@type":"Blog","name":"The Nightly Librarian","url":"https://thenightlylibrarian.com","description":"Daily AI and dev intelligence for builders and operators. What changed, why it matters, what to do about it.","author":{"@type":"Person","name":"The Nightly Librarian"}}]</script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <div>
+        <a class="brand" href="/">The Nightly Librarian</a>
+        <p class="brand-tagline">AI signal without the noise</p>
+      </div>
+      <nav class="site-nav"><a href="/">Archive</a><a href="/topics/">Topics</a><a href="/reports/" class="nav-active">Reports</a><button id="nl-theme-btn" class="theme-btn" onclick="_nlThemeToggle()" aria-label="Toggle dark mode">&#9790;</button></nav>
+    </div>
+    <div class="dateline">
+      <span>October 9, 2026 · Report log</span>
+      <span>Oct 9, 2026, 4:08 PM</span>
+    </div>
+  </header>
+  <main>
+    <a class="back-link" href="/reports/">All reports</a>
+    <h1>October 9, 2026</h1>
+    <div class="summary-card">
+      <div class="eyebrow">Report summary</div>
+      <p>9 stories cleared the bar, led by The Pulse: Firebase’s global outage &amp; poor response, Skip sending request bodies to Routing Middleware, and Vercel Sandbox creation now returns a ready sandbox.</p>
+      <div class="meta" style="margin-top:0.4rem;">
+        <span>9 worth-attention items</span><span>40 digest lines</span>
+      </div>
+    </div>
+    <h2>Worth attention</h2>
+    <div class="item-stack">
+
+      <div class="item">
+        <div class="item-title"><a href="https://blog.pragmaticengineer.com/the-pulse-firebases-global-outage-poor-response/" target="_blank" rel="noopener">The Pulse: Firebase’s global outage &amp; poor response</a></div>
+        <div class="item-takeaway">A backend change at Google crashed the Firebase iOS SDK, taking down every app using Firebase analytics for roughly 2-6 hours. The status page was not updated and a postmortem arrived four days later. Wrap third-party SDK init defensively and do not rely on vendor status pages for incident detection.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/skip-sending-request-bodies-to-routing-middleware" target="_blank" rel="noopener">Skip sending request bodies to Routing Middleware</a></div>
+        <div class="item-takeaway">Vercel lets you skip sending client request bodies to Routing Middleware via a new config flag. This cuts Fast Origin Transfer usage and can improve time to first byte for large-body requests. If you run middleware on Vercel, enable it for routes that never read the body.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/sandbox-create-waits-until-ready" target="_blank" rel="noopener">Vercel Sandbox creation now returns a ready sandbox</a></div>
+        <div class="item-takeaway">Sandbox.create() in Vercel Sandbox now resolves only after snapshot restoration completes, and startup errors reject at create time instead of on the first command. Relevant if you run agent code execution in Vercel Sandbox; check any retry/wait logic that assumed the old behaviour.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://vercel.com/changelog/step-5-preview-now-available-on-ai-gateway" target="_blank" rel="noopener">Step 5 Preview now available on AI Gateway</a></div>
+        <div class="item-takeaway">StepFun's Step 5 Preview (1M-context MoE aimed at agentic coding) is now on Vercel AI Gateway and OpenRouter. No independent evals yet; track for cost versus current coding models.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://cactuscompute.com/blog/whistle" target="_blank" rel="noopener">Whistle: Speech to Text in 16.9 MB</a></div>
+        <div class="item-takeaway">Whistle is a speech-to-text model packaged in 16.9 MB, aimed at on-device use. Worth a look for voice-agent work needing tiny local ASR; claims are unverified here, so benchmark accuracy and latency before relying on it.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://mitchellh.com/writing/program-status-osc7501" target="_blank" rel="noopener">A Terminal Protocol for Program Status (OSC 7501)</a></div>
+        <div class="item-takeaway">Mitchell Hashimoto proposes an OSC 7501 terminal escape protocol for programs to report status to the terminal. Relevant to CLI agent tooling that wants structured status; adoption depends on terminal support, so watch rather than build on it.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://huggingface.co/blog/tiiuae/falcon-asr" target="_blank" rel="noopener">Introducing Falcon ASR</a></div>
+        <div class="item-takeaway">TII announced Falcon ASR on the Hugging Face blog. No content was retrieved beyond the title; revisit if you evaluate open ASR models.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/" target="_blank" rel="noopener">Why isn't the industry freaking out about DeepSeek 4.1 Flash?</a></div>
+        <div class="item-takeaway">An opinion post asks why DeepSeek 4.1 Flash is not getting more attention. It is commentary without reproducible data; check pricing and quality yourself if you use cheap models.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-title"><a href="https://github.com/duckdb/ducklake" target="_blank" rel="noopener">DuckDB Ducklake</a></div>
+        <div class="item-takeaway">DuckDB's DuckLake repo surfaced on HN. It is a lakehouse table format on DuckDB; no details retrieved. Track if you do analytics on a single node.</div>
+      </div>
+    </div>
+    <h2>Full digest</h2>
+    <div class="compact-list">
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://huggingface.co/blog/building-with-ml-intern" target="_blank" rel="noopener">The model that didn't exist, so you made it yourself</a>
+        </div>
+        <div class="item-takeaway">The model that didn't exist, so you made it yourself. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://huggingface.co/blog/tiiuae/falcon-asr" target="_blank" rel="noopener">Introducing Falcon ASR</a>
+        </div>
+        <div class="item-takeaway">TII announced Falcon ASR on the Hugging Face blog. No content was retrieved beyond the title; revisit if you evaluate open ASR models.</div>
+        <div class="item-meta">
+          <span>huggingface-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://blog.pragmaticengineer.com/the-pulse-firebases-global-outage-poor-response/" target="_blank" rel="noopener">The Pulse: Firebase’s global outage &amp; poor response</a>
+        </div>
+        <div class="item-takeaway">A backend change at Google crashed the Firebase iOS SDK, taking down every app using Firebase analytics for roughly 2-6 hours. The status page was not updated and a postmortem arrived four days later. Wrap third-party SDK init defensively and do not rely on vendor status pages for incident detection.</div>
+        <div class="item-meta">
+          <span>pragmatic-engineer</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://blog.cloudflare.com/radar-redesign/" target="_blank" rel="noopener">Bridging technical depth and usability: The story behind Radar’s redesign</a>
+        </div>
+        <div class="item-takeaway">Bridging technical depth and usability: The story behind Radar’s redesign. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>cloudflare-blog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.5" target="_blank" rel="noopener">v16.5.0-canary.5</a>
+        </div>
+        <div class="item-takeaway">Next.js canary containing only test/deployment-test fixes.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.4" target="_blank" rel="noopener">v16.5.0-canary.4</a>
+        </div>
+        <div class="item-takeaway">Next.js canary with docs and telemetry fixes only.</div>
+        <div class="item-meta">
+          <span>gh-nextjs</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/skip-sending-request-bodies-to-routing-middleware" target="_blank" rel="noopener">Skip sending request bodies to Routing Middleware</a>
+        </div>
+        <div class="item-takeaway">Vercel lets you skip sending client request bodies to Routing Middleware via a new config flag. This cuts Fast Origin Transfer usage and can improve time to first byte for large-body requests. If you run middleware on Vercel, enable it for routes that never read the body.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://vercel.com/changelog/sandbox-create-waits-until-ready" target="_blank" rel="noopener">Vercel Sandbox creation now returns a ready sandbox</a>
+        </div>
+        <div class="item-takeaway">Sandbox.create() in Vercel Sandbox now resolves only after snapshot restoration completes, and startup errors reject at create time instead of on the first command. Relevant if you run agent code execution in Vercel Sandbox; check any retry/wait logic that assumed the old behaviour.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vercel.com/changelog/grok-imagine-video-1-5-lite-on-ai-gateway" target="_blank" rel="noopener">Grok Imagine Video 1.5 Lite on AI Gateway</a>
+        </div>
+        <div class="item-takeaway">Grok Imagine Video 1.5 Lite added to AI Gateway; video generation not relevant to current work.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://vercel.com/changelog/step-5-preview-now-available-on-ai-gateway" target="_blank" rel="noopener">Step 5 Preview now available on AI Gateway</a>
+        </div>
+        <div class="item-takeaway">StepFun's Step 5 Preview (1M-context MoE aimed at agentic coding) is now on Vercel AI Gateway and OpenRouter. No independent evals yet; track for cost versus current coding models.</div>
+        <div class="item-meta">
+          <span>vercel-changelog</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/" target="_blank" rel="noopener">Why isn't the industry freaking out about DeepSeek 4.1 Flash?</a>
+        </div>
+        <div class="item-takeaway">An opinion post asks why DeepSeek 4.1 Flash is not getting more attention. It is commentary without reproducible data; check pricing and quality yourself if you use cheap models.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://cactuscompute.com/blog/whistle" target="_blank" rel="noopener">Whistle: Speech to Text in 16.9 MB</a>
+        </div>
+        <div class="item-takeaway">Whistle is a speech-to-text model packaged in 16.9 MB, aimed at on-device use. Worth a look for voice-agent work needing tiny local ASR; claims are unverified here, so benchmark accuracy and latency before relying on it.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://unsung.aresluna.org/deeper-dive-keyboard-differences-between-windows-and-macs/" target="_blank" rel="noopener">Keyboard differences between Windows and Macs</a>
+        </div>
+        <div class="item-takeaway">Keyboard differences between Windows and Macs. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.dexerto.com/entertainment/man-discovers-his-parents-coffee-machine-used-1tb-of-data-in-10-days-3416399/" target="_blank" rel="noopener">Man discovers his parents' coffee machine used 1TB of data in 10 days</a>
+        </div>
+        <div class="item-takeaway">Man discovers his parents' coffee machine used 1TB of data in 10 days. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.theranos.world/" target="_blank" rel="noopener">Theranos.world</a>
+        </div>
+        <div class="item-takeaway">Theranos.world. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://antonfrolov.substack.com/p/i-hired-an-illustrator-to-draw-my" target="_blank" rel="noopener">I hired an illustrator to draw my house. Now it's my Home Assistant dashboard</a>
+        </div>
+        <div class="item-takeaway">I hired an illustrator to draw my house. Now it's my Home Assistant dashboard. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://htmx.org/essays/yes-and/" target="_blank" rel="noopener">Yes, and</a>
+        </div>
+        <div class="item-takeaway">Yes, and. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://karagila.org/2026/openai-pp/" target="_blank" rel="noopener">OpenAI, the Partition Principle, and Mathematics</a>
+        </div>
+        <div class="item-takeaway">OpenAI, the Partition Principle, and Mathematics. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://quake-srp.pages.dev/" target="_blank" rel="noopener">Show HN: Quake ported to safe Rust, playable in browser</a>
+        </div>
+        <div class="item-takeaway">Show HN: Quake ported to safe Rust, playable in browser. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://ken.arneson.name/2015/11/the-value-of-not-getting-to-the-point/" target="_blank" rel="noopener">The value of not getting to the point (2015)</a>
+        </div>
+        <div class="item-takeaway">The value of not getting to the point (2015). Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://lwn.net/Articles/1095811/" target="_blank" rel="noopener">Reducing undefined behavior in the C language</a>
+        </div>
+        <div class="item-takeaway">Reducing undefined behavior in the C language. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://biohub.org/news/virtual-biology-initiative-expansion/" target="_blank" rel="noopener">AI-ready biological data: $1.8B global commitment</a>
+        </div>
+        <div class="item-takeaway">AI-ready biological data: $1.8B global commitment. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://naturalsystems.io/eth68" target="_blank" rel="noopener">ETH-68: Ethernet Audio Interface for Linux</a>
+        </div>
+        <div class="item-takeaway">ETH-68: Ethernet Audio Interface for Linux. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://news.ycombinator.com/item?id=49985548" target="_blank" rel="noopener">Ask HN: What do you run on a $5 VPS that's worth keeping online 24/7?</a>
+        </div>
+        <div class="item-takeaway">Ask HN: What do you run on a $5 VPS that's worth keeping online 24/7?. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://vale.rocks/posts/dvd-menus" target="_blank" rel="noopener">Beauty in DVD Menus</a>
+        </div>
+        <div class="item-takeaway">Beauty in DVD Menus. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://terrytao.wordpress.com/2026/10/08/what-should-we-tell-our-students/" target="_blank" rel="noopener">What should we tell our students?</a>
+        </div>
+        <div class="item-takeaway">What should we tell our students?. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="http://scottbezek.blogspot.com/2026/10/making-flexible-neon-t-shirt-with-leds.html" target="_blank" rel="noopener">Show HN: Making a flexible &quot;neon&quot; t-shirt with LED filaments</a>
+        </div>
+        <div class="item-takeaway">Show HN: Making a flexible &quot;neon&quot; t-shirt with LED filaments. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-m">M</span>
+          <a href="https://github.com/duckdb/ducklake" target="_blank" rel="noopener">DuckDB Ducklake</a>
+        </div>
+        <div class="item-takeaway">DuckDB's DuckLake repo surfaced on HN. It is a lakehouse table format on DuckDB; no details retrieved. Track if you do analytics on a single node.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-p">P</span>
+          <a href="https://mitchellh.com/writing/program-status-osc7501" target="_blank" rel="noopener">A Terminal Protocol for Program Status (OSC 7501)</a>
+        </div>
+        <div class="item-takeaway">Mitchell Hashimoto proposes an OSC 7501 terminal escape protocol for programs to report status to the terminal. Relevant to CLI agent tooling that wants structured status; adoption depends on terminal support, so watch rather than build on it.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.nature.com/articles/s41586-026-10546-z" target="_blank" rel="noopener">A 5.3M-year-old deep-sea whale necropolis in the Diamantina Zone</a>
+        </div>
+        <div class="item-takeaway">A 5.3M-year-old deep-sea whale necropolis in the Diamantina Zone. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://openrouter.ai/stepfun/step-5-preview" target="_blank" rel="noopener">Step 5 Preview, a 1M-context MoE from StepFun, shows up on OpenRouter</a>
+        </div>
+        <div class="item-takeaway">Duplicate of the Vercel AI Gateway Step 5 Preview item.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://bevy.org/news/bevy-0-20/" target="_blank" rel="noopener">Bevy 0.20</a>
+        </div>
+        <div class="item-takeaway">Bevy 0.20 game engine release; not relevant to the owner's work.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2025.1697900/full" target="_blank" rel="noopener">ADHD as a circadian rhythm disorder: evidence and implications for chronotherapy (2025)</a>
+        </div>
+        <div class="item-takeaway">ADHD as a circadian rhythm disorder: evidence and implications for chronotherapy (2025). Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://twitter.com/danintheory/status/2108065033070789090" target="_blank" rel="noopener">OpenAI withdraws three mathematical results</a>
+        </div>
+        <div class="item-takeaway">OpenAI withdraws three mathematical results. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://orkut.com/" target="_blank" rel="noopener">Orkut.com</a>
+        </div>
+        <div class="item-takeaway">Orkut.com. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://www.smithsonianmag.com/science-nature/archaeologists-are-reconstructing-the-invisible-technologies-of-the-stone-age-from-rope-to-thread-and-twine-180989534/" target="_blank" rel="noopener">Archaeologists Are Reconstructing the 'Invisible' Technologies of the Stone Age</a>
+        </div>
+        <div class="item-takeaway">Archaeologists Are Reconstructing the 'Invisible' Technologies of the Stone Age. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>hn-top</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://bevy.org/news/bevy-0-20/" target="_blank" rel="noopener">Bevy 0.20</a>
+        </div>
+        <div class="item-takeaway">Duplicate of the Bevy 0.20 item.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://casuarina.org/news/ending-the-casuarina-linux-experiment/" target="_blank" rel="noopener">Ending the Casuarina Linux Experiment</a>
+        </div>
+        <div class="item-takeaway">Ending the Casuarina Linux Experiment. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://arxiv.org/abs/2610.08144" target="_blank" rel="noopener">Navier-Stokes lost in translation: Why Lean verification of AI autoformalisation does not guarantee correct natural language proofs</a>
+        </div>
+        <div class="item-takeaway">Navier-Stokes lost in translation: Why Lean verification of AI autoformalisation does not guarantee correct natural language proofs. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <span class="tag tag-r">R</span>
+          <a href="https://mcmah309.github.io/posts/the-missing-piece-in-rust-error-handling/" target="_blank" rel="noopener">The Missing Piece in Rust Error Handling</a>
+        </div>
+        <div class="item-takeaway">The Missing Piece in Rust Error Handling. Off-topic or low relevance for a solo software builder.</div>
+        <div class="item-meta">
+          <span>lobsters</span>
+        </div>
+      </div>
+    </div>
+    <details>
+      <summary>Original markdown</summary>
+      <pre class="raw-report"># Nightly Librarian — Newsletter draft
+
+Run: 3be80412-0b6b-41ec-9716-5d1c951bbbc0
+Started: 2026-10-09T20:06:07.505Z
+Completed: 2026-10-09T20:08:22.182Z
+
+## Worth attention
+
+- **The Pulse: Firebase’s global outage &amp; poor response**
+  https://blog.pragmaticengineer.com/the-pulse-firebases-global-outage-poor-response/
+  A backend change at Google crashed the Firebase iOS SDK, taking down every app using Firebase analytics for roughly 2-6 hours. The status page was not updated and a postmortem arrived four days later. Wrap third-party SDK init defensively and do not rely on vendor status pages for incident detection.
+- **Skip sending request bodies to Routing Middleware**
+  https://vercel.com/changelog/skip-sending-request-bodies-to-routing-middleware
+  Vercel lets you skip sending client request bodies to Routing Middleware via a new config flag. This cuts Fast Origin Transfer usage and can improve time to first byte for large-body requests. If you run middleware on Vercel, enable it for routes that never read the body.
+- **Vercel Sandbox creation now returns a ready sandbox**
+  https://vercel.com/changelog/sandbox-create-waits-until-ready
+  Sandbox.create() in Vercel Sandbox now resolves only after snapshot restoration completes, and startup errors reject at create time instead of on the first command. Relevant if you run agent code execution in Vercel Sandbox; check any retry/wait logic that assumed the old behaviour.
+- **Step 5 Preview now available on AI Gateway**
+  https://vercel.com/changelog/step-5-preview-now-available-on-ai-gateway
+  StepFun's Step 5 Preview (1M-context MoE aimed at agentic coding) is now on Vercel AI Gateway and OpenRouter. No independent evals yet; track for cost versus current coding models.
+- **Whistle: Speech to Text in 16.9 MB**
+  https://cactuscompute.com/blog/whistle
+  Whistle is a speech-to-text model packaged in 16.9 MB, aimed at on-device use. Worth a look for voice-agent work needing tiny local ASR; claims are unverified here, so benchmark accuracy and latency before relying on it.
+- **A Terminal Protocol for Program Status (OSC 7501)**
+  https://mitchellh.com/writing/program-status-osc7501
+  Mitchell Hashimoto proposes an OSC 7501 terminal escape protocol for programs to report status to the terminal. Relevant to CLI agent tooling that wants structured status; adoption depends on terminal support, so watch rather than build on it.
+- **Introducing Falcon ASR**
+  https://huggingface.co/blog/tiiuae/falcon-asr
+  TII announced Falcon ASR on the Hugging Face blog. No content was retrieved beyond the title; revisit if you evaluate open ASR models.
+- **Why isn't the industry freaking out about DeepSeek 4.1 Flash?**
+  https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/
+  An opinion post asks why DeepSeek 4.1 Flash is not getting more attention. It is commentary without reproducible data; check pricing and quality yourself if you use cheap models.
+- **DuckDB Ducklake**
+  https://github.com/duckdb/ducklake
+  DuckDB's DuckLake repo surfaced on HN. It is a lakehouse table format on DuckDB; no details retrieved. Track if you do analytics on a single node.
+
+## Full digest
+
+- [R] [huggingface-blog] The model that didn't exist, so you made it yourself — https://huggingface.co/blog/building-with-ml-intern — The model that didn't exist, so you made it yourself. Off-topic or low relevance for a solo software builder.
+- [M] [huggingface-blog] Introducing Falcon ASR — https://huggingface.co/blog/tiiuae/falcon-asr — TII announced Falcon ASR on the Hugging Face blog. No content was retrieved beyond the title; revisit if you evaluate open ASR models.
+- [P] [pragmatic-engineer] The Pulse: Firebase’s global outage &amp; poor response — https://blog.pragmaticengineer.com/the-pulse-firebases-global-outage-poor-response/ — A backend change at Google crashed the Firebase iOS SDK, taking down every app using Firebase analytics for roughly 2-6 hours. The status page was not updated and a postmortem arrived four days later. Wrap third-party SDK init defensively and do not rely on vendor status pages for incident detection.
+- [R] [cloudflare-blog] Bridging technical depth and usability: The story behind Radar’s redesign — https://blog.cloudflare.com/radar-redesign/ — Bridging technical depth and usability: The story behind Radar’s redesign. Off-topic or low relevance for a solo software builder.
+- [R] [gh-nextjs] v16.5.0-canary.5 — https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.5 — Next.js canary containing only test/deployment-test fixes.
+- [R] [gh-nextjs] v16.5.0-canary.4 — https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.4 — Next.js canary with docs and telemetry fixes only.
+- [P] [vercel-changelog] Skip sending request bodies to Routing Middleware — https://vercel.com/changelog/skip-sending-request-bodies-to-routing-middleware — Vercel lets you skip sending client request bodies to Routing Middleware via a new config flag. This cuts Fast Origin Transfer usage and can improve time to first byte for large-body requests. If you run middleware on Vercel, enable it for routes that never read the body.
+- [P] [vercel-changelog] Vercel Sandbox creation now returns a ready sandbox — https://vercel.com/changelog/sandbox-create-waits-until-ready — Sandbox.create() in Vercel Sandbox now resolves only after snapshot restoration completes, and startup errors reject at create time instead of on the first command. Relevant if you run agent code execution in Vercel Sandbox; check any retry/wait logic that assumed the old behaviour.
+- [R] [vercel-changelog] Grok Imagine Video 1.5 Lite on AI Gateway — https://vercel.com/changelog/grok-imagine-video-1-5-lite-on-ai-gateway — Grok Imagine Video 1.5 Lite added to AI Gateway; video generation not relevant to current work.
+- [M] [vercel-changelog] Step 5 Preview now available on AI Gateway — https://vercel.com/changelog/step-5-preview-now-available-on-ai-gateway — StepFun's Step 5 Preview (1M-context MoE aimed at agentic coding) is now on Vercel AI Gateway and OpenRouter. No independent evals yet; track for cost versus current coding models.
+- [M] [hn-top] Why isn't the industry freaking out about DeepSeek 4.1 Flash? — https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/ — An opinion post asks why DeepSeek 4.1 Flash is not getting more attention. It is commentary without reproducible data; check pricing and quality yourself if you use cheap models.
+- [P] [hn-top] Whistle: Speech to Text in 16.9 MB — https://cactuscompute.com/blog/whistle — Whistle is a speech-to-text model packaged in 16.9 MB, aimed at on-device use. Worth a look for voice-agent work needing tiny local ASR; claims are unverified here, so benchmark accuracy and latency before relying on it.
+- [R] [hn-top] Keyboard differences between Windows and Macs — https://unsung.aresluna.org/deeper-dive-keyboard-differences-between-windows-and-macs/ — Keyboard differences between Windows and Macs. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] Man discovers his parents' coffee machine used 1TB of data in 10 days — https://www.dexerto.com/entertainment/man-discovers-his-parents-coffee-machine-used-1tb-of-data-in-10-days-3416399/ — Man discovers his parents' coffee machine used 1TB of data in 10 days. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] Theranos.world — https://www.theranos.world/ — Theranos.world. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] I hired an illustrator to draw my house. Now it's my Home Assistant dashboard — https://antonfrolov.substack.com/p/i-hired-an-illustrator-to-draw-my — I hired an illustrator to draw my house. Now it's my Home Assistant dashboard. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] Yes, and — https://htmx.org/essays/yes-and/ — Yes, and. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] OpenAI, the Partition Principle, and Mathematics — https://karagila.org/2026/openai-pp/ — OpenAI, the Partition Principle, and Mathematics. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] Show HN: Quake ported to safe Rust, playable in browser — https://quake-srp.pages.dev/ — Show HN: Quake ported to safe Rust, playable in browser. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] The value of not getting to the point (2015) — https://ken.arneson.name/2015/11/the-value-of-not-getting-to-the-point/ — The value of not getting to the point (2015). Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] Reducing undefined behavior in the C language — https://lwn.net/Articles/1095811/ — Reducing undefined behavior in the C language. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] AI-ready biological data: $1.8B global commitment — https://biohub.org/news/virtual-biology-initiative-expansion/ — AI-ready biological data: $1.8B global commitment. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] ETH-68: Ethernet Audio Interface for Linux — https://naturalsystems.io/eth68 — ETH-68: Ethernet Audio Interface for Linux. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] Ask HN: What do you run on a $5 VPS that's worth keeping online 24/7? — https://news.ycombinator.com/item?id=49985548 — Ask HN: What do you run on a $5 VPS that's worth keeping online 24/7?. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] Beauty in DVD Menus — https://vale.rocks/posts/dvd-menus — Beauty in DVD Menus. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] What should we tell our students? — https://terrytao.wordpress.com/2026/10/08/what-should-we-tell-our-students/ — What should we tell our students?. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] Show HN: Making a flexible &quot;neon&quot; t-shirt with LED filaments — http://scottbezek.blogspot.com/2026/10/making-flexible-neon-t-shirt-with-leds.html — Show HN: Making a flexible &quot;neon&quot; t-shirt with LED filaments. Off-topic or low relevance for a solo software builder.
+- [M] [hn-top] DuckDB Ducklake — https://github.com/duckdb/ducklake — DuckDB's DuckLake repo surfaced on HN. It is a lakehouse table format on DuckDB; no details retrieved. Track if you do analytics on a single node.
+- [P] [hn-top] A Terminal Protocol for Program Status (OSC 7501) — https://mitchellh.com/writing/program-status-osc7501 — Mitchell Hashimoto proposes an OSC 7501 terminal escape protocol for programs to report status to the terminal. Relevant to CLI agent tooling that wants structured status; adoption depends on terminal support, so watch rather than build on it.
+- [R] [hn-top] A 5.3M-year-old deep-sea whale necropolis in the Diamantina Zone — https://www.nature.com/articles/s41586-026-10546-z — A 5.3M-year-old deep-sea whale necropolis in the Diamantina Zone. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] Step 5 Preview, a 1M-context MoE from StepFun, shows up on OpenRouter — https://openrouter.ai/stepfun/step-5-preview — Duplicate of the Vercel AI Gateway Step 5 Preview item.
+- [R] [hn-top] Bevy 0.20 — https://bevy.org/news/bevy-0-20/ — Bevy 0.20 game engine release; not relevant to the owner's work.
+- [R] [hn-top] ADHD as a circadian rhythm disorder: evidence and implications for chronotherapy (2025) — https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2025.1697900/full — ADHD as a circadian rhythm disorder: evidence and implications for chronotherapy (2025). Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] OpenAI withdraws three mathematical results — https://twitter.com/danintheory/status/2108065033070789090 — OpenAI withdraws three mathematical results. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] Orkut.com — https://orkut.com/ — Orkut.com. Off-topic or low relevance for a solo software builder.
+- [R] [hn-top] Archaeologists Are Reconstructing the 'Invisible' Technologies of the Stone Age — https://www.smithsonianmag.com/science-nature/archaeologists-are-reconstructing-the-invisible-technologies-of-the-stone-age-from-rope-to-thread-and-twine-180989534/ — Archaeologists Are Reconstructing the 'Invisible' Technologies of the Stone Age. Off-topic or low relevance for a solo software builder.
+- [R] [lobsters] Bevy 0.20 — https://bevy.org/news/bevy-0-20/ — Duplicate of the Bevy 0.20 item.
+- [R] [lobsters] Ending the Casuarina Linux Experiment — https://casuarina.org/news/ending-the-casuarina-linux-experiment/ — Ending the Casuarina Linux Experiment. Off-topic or low relevance for a solo software builder.
+- [R] [lobsters] Navier-Stokes lost in translation: Why Lean verification of AI autoformalisation does not guarantee correct natural language proofs — https://arxiv.org/abs/2610.08144 — Navier-Stokes lost in translation: Why Lean verification of AI autoformalisation does not guarantee correct natural language proofs. Off-topic or low relevance for a solo software builder.
+- [R] [lobsters] The Missing Piece in Rust Error Handling — https://mcmah309.github.io/posts/the-missing-piece-in-rust-error-handling/ — The Missing Piece in Rust Error Handling. Off-topic or low relevance for a solo software builder.</pre>
+    </details>
+  </main>
+  <footer>
+    <span class="footer-brand">The Nightly Librarian</span>
+    <span class="footer-sub">Built for builders, not boardrooms.</span>
+  </footer>
+
+  <script>
+function _nlThemeToggle(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=isDark?'light':'dark';
+  h.setAttribute('data-theme',next);
+  localStorage.setItem('nl-theme',next);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=next==='dark'?'☀':'☾';
+}
+(function(){
+  var h=document.documentElement;
+  var cur=h.getAttribute('data-theme');
+  var isDark=cur==='dark'||(cur!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var btn=document.getElementById('nl-theme-btn');
+  if(btn)btn.textContent=isDark?'☀':'☾';
+})();
+</script>
+</body>
+</html>
